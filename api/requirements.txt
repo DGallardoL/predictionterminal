@@ -1,4 +1,9 @@
-fastapi>=0.116,<0.117
+fastapi>=0.136,<0.137
+# Pin starlette >= 0.49.1 to patch CVE-2025-62727 (DoS via multipart parsing);
+# the old fastapi 0.116 line pulled the vulnerable starlette 0.48.0.
+starlette>=0.49.1
+# Pin idna >= 3.15 to patch CVE-2026-45409 (transitive via requests/httpx).
+idna>=3.15
 uvicorn[standard]>=0.32,<0.33
 # Production WSGI/ASGI manager. Preferred over ``uvicorn --workers`` in
 # production: graceful reloads, max-requests recycling, pre-fork logging.
