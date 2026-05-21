@@ -1,0 +1,191 @@
+{
+  "_meta": {
+    "description": "Hand-curated map of named entities -> candidate factor-id substrings/slugs. Used by pfm.news_tagger to seed entity->factor matches before the keyword scorer runs. Substring matching is case-insensitive against factor.id and factor.slug.",
+    "version": 1
+  },
+  "Trump": [
+    "trump",
+    "trump-2028",
+    "trump-criminal",
+    "trump-tariffs",
+    "trump-impeach",
+    "trump-out"
+  ],
+  "Harris": [
+    "harris",
+    "kamala"
+  ],
+  "Biden": [
+    "biden"
+  ],
+  "Vance": [
+    "vance",
+    "jd-vance"
+  ],
+  "Powell": [
+    "powell",
+    "fed-chair",
+    "powell-out"
+  ],
+  "Lagarde": [
+    "lagarde",
+    "ecb"
+  ],
+  "Putin": [
+    "putin",
+    "russia",
+    "ukraine"
+  ],
+  "Xi": [
+    "xi",
+    "china",
+    "taiwan"
+  ],
+  "Fed": [
+    "fed-cut",
+    "no_fed_cuts",
+    "no-fed-cuts",
+    "fomc",
+    "rate-cut",
+    "fed-hike",
+    "twelve_plus_fed_cuts",
+    "powell"
+  ],
+  "FOMC": [
+    "fomc",
+    "fed-cut",
+    "fed-hike",
+    "rate"
+  ],
+  "ECB": [
+    "ecb",
+    "lagarde"
+  ],
+  "USA": [
+    "us-",
+    "us_",
+    "united-states",
+    "america"
+  ],
+  "China": [
+    "china",
+    "taiwan",
+    "tariff",
+    "xi"
+  ],
+  "Russia": [
+    "russia",
+    "putin",
+    "ukraine"
+  ],
+  "Iran": [
+    "iran",
+    "iran-attack",
+    "iran-strait",
+    "hormuz"
+  ],
+  "Israel": [
+    "israel",
+    "gaza",
+    "hamas"
+  ],
+  "Ukraine": [
+    "ukraine",
+    "russia",
+    "putin"
+  ],
+  "Taiwan": [
+    "taiwan",
+    "china"
+  ],
+  "BTC": [
+    "btc",
+    "bitcoin",
+    "btc-100k",
+    "btc-150k",
+    "btc-ath",
+    "btc-200k"
+  ],
+  "ETH": [
+    "eth",
+    "ethereum",
+    "eth-etf",
+    "eth-5k",
+    "eth-10k"
+  ],
+  "NVDA": [
+    "nvda",
+    "nvidia",
+    "nvda-earnings",
+    "nvda-1t",
+    "nvda-3t",
+    "nvda-5t"
+  ],
+  "AAPL": [
+    "aapl",
+    "apple"
+  ],
+  "TSLA": [
+    "tsla",
+    "tesla",
+    "musk"
+  ],
+  "MSFT": [
+    "msft",
+    "microsoft"
+  ],
+  "META": [
+    "meta",
+    "facebook",
+    "zuckerberg"
+  ],
+  "GOOGL": [
+    "googl",
+    "google",
+    "alphabet"
+  ],
+  "AMZN": [
+    "amzn",
+    "amazon"
+  ],
+  "Oil": [
+    "oil",
+    "crude",
+    "wti",
+    "brent",
+    "opec"
+  ],
+  "Gold": [
+    "gold",
+    "gold-3000",
+    "gold-4000"
+  ],
+  "Recession": [
+    "recession",
+    "us_recession",
+    "k_recession",
+    "us-recession"
+  ],
+  "CPI": [
+    "cpi",
+    "inflation"
+  ],
+  "Election": [
+    "election",
+    "trump-2028",
+    "harris",
+    "midterm"
+  ],
+  "War": [
+    "war",
+    "ukraine",
+    "iran",
+    "israel",
+    "conflict"
+  ],
+  "Tariff": [
+    "tariff",
+    "trump-tariffs",
+    "china-tariff"
+  ]
+}

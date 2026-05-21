@@ -1,8 +1,11 @@
 name: Deploy to Fly.io
 
+# Deploy is intentional only: a manual run (Actions tab -> Run workflow) or a
+# version tag (vX.Y.Z). It does NOT auto-deploy on every push to main — that
+# would require FLY_API_TOKEN and deploy unreviewed commits. CI (ci.yml) still
+# runs on every push as the quality gate.
 on:
   push:
-    branches: [main]
     tags: ['v*']
   workflow_dispatch:
 
@@ -32,6 +35,7 @@ jobs:
         run: PYTHONPATH=src pytest --cov=pfm --cov-report=term-missing --cov-fail-under=70 -q --no-header
         env:
           REDIS_URL: ""   # tests use fakeredis when REDIS_URL is unset/empty
+          PFM_SKIP_PERF_BENCH: "1"  # perf budgets flake on shared CI runners
 
   deploy:
     needs: test

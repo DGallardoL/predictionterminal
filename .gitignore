@@ -45,16 +45,18 @@ ENV/
 *.pid
 *.log
 
-# Data caches (local runs may write here)
-data/
+# Local data-cache dir at the repo root only (NOT web/data or src/pfm/data,
+# which hold committed app data like alpha_strategies.json + entity maps).
+/data/
 .cache/
 
 # Mac specific binary attachments not part of the source
 *.HEIC
 
-# Backup files (e.g. factors.yml.bak.waveN) — never check these in
+# Backup files (e.g. factors.yml.bak.waveN, alpha_strategies.json.bak-preXxx)
 *.bak
 *.bak.*
+*.bak-*
 
 # SQLite scratch DBs — alerts/persisted state used for local runs
 *.db

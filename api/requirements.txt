@@ -20,7 +20,9 @@ pandas>=2.2,<3.0
 numpy>=2.0,<3.0
 yfinance>=0.2.50,<0.3
 redis>=5.2,<6.0
-httpx>=0.27,<0.29
+# [http2] pulls the `h2` package: polymarket_pool.py opens clients with
+# http2=True, which raises ImportError at runtime if h2 isn't installed.
+httpx[http2]>=0.27,<0.29
 pyyaml>=6.0,<7.0
 structlog>=24.4,<25.0
 scikit-learn>=1.4,<2.0

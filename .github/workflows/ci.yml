@@ -86,6 +86,10 @@ jobs:
           pip-audit --requirement api/requirements.txt --strict
       - name: Run pytest with coverage
         working-directory: api
+        env:
+          # Perf benchmarks pin wall-clock budgets that flake on shared CI
+          # runners (slower than dev machines); skip them in CI.
+          PFM_SKIP_PERF_BENCH: "1"
         run: |
           pytest --cov=pfm --cov-report=term-missing --cov-report=xml --cov-fail-under=70 -q
       - name: Upload coverage XML
