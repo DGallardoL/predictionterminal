@@ -1,0 +1,499 @@
+/* ============================================================================
+   strategies-detail-modal.css   (T67 · wave-10)
+   ----------------------------------------------------------------------------
+   Visual hierarchy for the α Hub fullscreen strategy modal opened by
+   openAlphaFullscreen()/`#alphahub-fs-overlay` (web/index.html ~ line 22048).
+
+   The current markup (see _alphaHubRenderRichDetail @ web/index.html:21903)
+   emits four content sections inside `.alphahub-fs-grid`:
+
+     · <section class="alphahub-fs-card"><h4>Trade rule</h4>      → Setup
+     · <section class="alphahub-fs-card"><h4>Risk profile</h4>    → Risk
+     · <section class="alphahub-fs-card alphahub-fs-card-wide">
+         <h4>Theory</h4>                                          → Theory
+     · <section class="alphahub-fs-card alphahub-fs-card-wide">
+         <h4>Live signal · ...</h4>                                → Live signal
+
+   No `.ah-strategy-modal`, `.ah-section--setup`, etc. exist in markup today,
+   so this file ALSO defines forward-compatible selectors using a parent
+   `[data-strategy-modal]` attribute hook plus `.ah-section--setup`,
+   `.ah-section--risk`, `.ah-section--theory`, `.ah-section--live` so that
+   future renderer refactors can drop the alphahub-fs-* legacy names and the
+   styling carries over automatically.
+
+   To take effect on TODAY's markup we match the legacy `.alphahub-fs-card`
+   via `:has(> h4)` content selectors (Safari 15.4+, Chrome 105+, Firefox 121+;
+   all green for prediction-terminal target audience).
+
+   File is CSS-only.  No JS, no HTML changes.  Mounted by the
+   index-html-owner via <link rel="stylesheet" href="css/strategies-detail-modal.css">.
+   ============================================================================ */
+
+
+/* -----------------------------------------------------------------------------
+   0 · MODAL SCOPE
+   Anchor every rule to either the legacy fullscreen overlay
+   (`.alphahub-fs-overlay`) or the planned `[data-strategy-modal]` attribute
+   so we never bleed into the rest of the strategies pane.
+   ---------------------------------------------------------------------------- */
+.alphahub-fs-overlay,
+[data-strategy-modal] {
+  /* re-export the alphahub-premium tokens under modal-local names so this
+     file works even if loaded BEFORE alphahub-premium.css. Fallback to a
+     neutral palette if no tokens are loaded yet. */
+  --sdm-bg:         var(--ah-bg,         #fafafa);
+  --sdm-surface:    var(--ah-surface,    #ffffff);
+  --sdm-surface-2:  var(--ah-surface-2,  #f5f5f7);
+  --sdm-hairline:   var(--ah-hairline,   rgba(15, 15, 25, 0.08));
+  --sdm-hairline-2: var(--ah-hairline-2, rgba(15, 15, 25, 0.16));
+  --sdm-ink:        var(--ah-ink,        #14141a);
+  --sdm-ink-2:      var(--ah-ink-2,      #4a4a55);
+  --sdm-ink-3:      var(--ah-ink-3,      #6b6878);
+  --sdm-ink-4:      var(--ah-ink-4,      #9a97a4);
+  --sdm-orange:     var(--orange,        #f97316);
+  --sdm-orange-2:   var(--orange-2,      #c2410c);
+  --sdm-pos:        var(--pos,           #15803d);
+  --sdm-neg:        var(--neg,           #b91c1c);
+  --sdm-mono:       var(--ah-mono,       'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace);
+  --sdm-serif:      var(--ah-serif,      'Instrument Serif', 'Source Serif 4', Georgia, serif);
+  --sdm-sans:       var(--ah-sans,       'Inter', -apple-system, BlinkMacSystemFont, sans-serif);
+}
+
+
+/* -----------------------------------------------------------------------------
+   1 · SECTION HEADER STYLE
+   11px uppercase eyebrow, tracking 0.08em, `color: var(--ink-2)`, 16px top
+   margin.  We target legacy `<h4>` inside `.alphahub-fs-card` AND the planned
+   `.ah-section__header`.
+   ---------------------------------------------------------------------------- */
+.alphahub-fs-overlay .alphahub-fs-card > h4,
+[data-strategy-modal] .ah-section__header,
+[data-strategy-modal] .ah-section > h4 {
+  font-family: var(--sdm-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sdm-ink-2);
+  margin: 16px 0 10px;
+  padding: 0 0 8px;
+  border-bottom: 1px solid var(--sdm-hairline);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+/* First section gets a smaller top margin so we don't push the card content
+   down too far on initial render. */
+.alphahub-fs-overlay .alphahub-fs-grid > .alphahub-fs-card:first-child > h4,
+[data-strategy-modal] .ah-section:first-child > h4,
+[data-strategy-modal] .ah-section:first-child .ah-section__header {
+  margin-top: 4px;
+}
+
+
+/* -----------------------------------------------------------------------------
+   2 · SETUP TABLE (Trade rule)
+   3-col grid: param | value | unit
+   12px Mono values, right-aligned, tabular-nums.
+   Maps to legacy `<section class="alphahub-fs-card"><h4>Trade rule</h4>...`
+   and the planned `.ah-section--setup`.
+   ---------------------------------------------------------------------------- */
+.alphahub-fs-overlay .alphahub-fs-card:has(> h4) .sdm-setup,
+.alphahub-fs-overlay .ah-section--setup .sdm-setup,
+[data-strategy-modal] .ah-section--setup .ah-setup-table,
+[data-strategy-modal] .sdm-setup {
+  display: grid;
+  grid-template-columns: minmax(80px, max-content) 1fr minmax(28px, max-content);
+  gap: 8px 14px;
+  align-items: baseline;
+  margin: 4px 0 2px;
+}
+
+.alphahub-fs-overlay .sdm-setup .sdm-param,
+[data-strategy-modal] .ah-setup-table .ah-param,
+[data-strategy-modal] .sdm-setup .sdm-param {
+  font-family: var(--sdm-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sdm-ink-3);
+  text-align: left;
+}
+
+.alphahub-fs-overlay .sdm-setup .sdm-value,
+[data-strategy-modal] .ah-setup-table .ah-value,
+[data-strategy-modal] .sdm-setup .sdm-value {
+  font-family: var(--sdm-mono);
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--sdm-ink);
+  text-align: right;
+}
+
+.alphahub-fs-overlay .sdm-setup .sdm-unit,
+[data-strategy-modal] .ah-setup-table .ah-unit,
+[data-strategy-modal] .sdm-setup .sdm-unit {
+  font-family: var(--sdm-mono);
+  font-size: 11px;
+  color: var(--sdm-ink-3);
+  text-align: left;
+  min-width: 24px;
+}
+
+/* Semantic accents (entry/exit/stop) when the row has a data-kind attribute */
+[data-strategy-modal] .ah-setup-table [data-kind="entry"] .ah-value,
+.alphahub-fs-overlay .sdm-setup [data-kind="entry"] .sdm-value { color: var(--sdm-orange-2); }
+[data-strategy-modal] .ah-setup-table [data-kind="exit"] .ah-value,
+.alphahub-fs-overlay .sdm-setup [data-kind="exit"] .sdm-value  { color: var(--sdm-pos); }
+[data-strategy-modal] .ah-setup-table [data-kind="stop"] .ah-value,
+.alphahub-fs-overlay .sdm-setup [data-kind="stop"] .sdm-value  { color: var(--sdm-neg); }
+
+
+/* -----------------------------------------------------------------------------
+   3 · RISK CALLOUT BOX
+   Subtle orange-tinted background + 2px orange left-border.
+   Targets the existing "Risk profile" card via :has(> h4) text content cannot
+   be matched in CSS, so we rely on a (a) `.ah-section--risk` class added by
+   future renderers OR (b) a `data-section="risk"` attribute, with a sensible
+   :has() fallback.
+   ---------------------------------------------------------------------------- */
+.alphahub-fs-overlay .alphahub-fs-card[data-section="risk"],
+.alphahub-fs-overlay .alphahub-fs-card.ah-section--risk,
+[data-strategy-modal] .ah-section--risk,
+[data-strategy-modal] [data-section="risk"] {
+  position: relative;
+  background: rgba(249, 115, 22, 0.05);
+  border-left: 2px solid var(--sdm-orange);
+  border-radius: 0 6px 6px 0;
+  padding: 12px 16px 14px 18px;
+  margin: 4px 0;
+}
+
+/* Slightly darker eyebrow in the risk box for contrast on the orange wash. */
+.alphahub-fs-overlay .alphahub-fs-card[data-section="risk"] > h4,
+.alphahub-fs-overlay .alphahub-fs-card.ah-section--risk > h4,
+[data-strategy-modal] .ah-section--risk > h4,
+[data-strategy-modal] .ah-section--risk .ah-section__header {
+  color: var(--sdm-orange-2);
+  border-bottom-color: rgba(249, 115, 22, 0.18);
+  margin-top: 0;
+}
+
+/* Grid for risk metrics: max DD · capacity · slippage. */
+.alphahub-fs-overlay .alphahub-fs-card[data-section="risk"] .sdm-risk-grid,
+[data-strategy-modal] .ah-section--risk .ah-risk-grid,
+[data-strategy-modal] [data-section="risk"] .sdm-risk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px 18px;
+  margin-top: 6px;
+}
+
+.alphahub-fs-overlay .alphahub-fs-card[data-section="risk"] .sdm-risk-grid > div .lbl,
+[data-strategy-modal] .ah-section--risk .ah-risk-grid > div .lbl {
+  font-family: var(--sdm-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sdm-ink-3);
+  margin-bottom: 2px;
+}
+
+.alphahub-fs-overlay .alphahub-fs-card[data-section="risk"] .sdm-risk-grid > div .val,
+[data-strategy-modal] .ah-section--risk .ah-risk-grid > div .val {
+  font-family: var(--sdm-mono);
+  font-size: 14px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--sdm-ink);
+}
+
+
+/* -----------------------------------------------------------------------------
+   4 · THEORY PARAGRAPH
+   max-width 60ch · line-height 1.55 · Instrument Serif 16px.
+   Today's renderer emits a `<p class="alphahub-fs-rationale">` (top of card)
+   AND inside the Theory card a raw `<p style="...">`.  Both should pick up
+   the new style; the inline style currently sets font-size:14px so we use
+   `!important` on font-size only (to override the inline) and otherwise rely
+   on cascade.  Forward-compatible `.ah-section--theory p` selector also
+   defined.
+   ---------------------------------------------------------------------------- */
+.alphahub-fs-overlay .alphahub-fs-card[data-section="theory"] p,
+.alphahub-fs-overlay .alphahub-fs-card.ah-section--theory p,
+[data-strategy-modal] .ah-section--theory p,
+[data-strategy-modal] [data-section="theory"] p,
+.alphahub-fs-overlay .alphahub-fs-rationale {
+  font-family: var(--sdm-serif);
+  font-size: 16px !important;
+  line-height: 1.55;
+  color: var(--sdm-ink-2);
+  max-width: 60ch;
+  margin: 8px 0 4px;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+/* Citation line (small mono cite under the theory paragraph) */
+[data-strategy-modal] .ah-section--theory .ah-citation,
+.alphahub-fs-overlay .alphahub-fs-card[data-section="theory"] .sdm-citation {
+  display: block;
+  font-family: var(--sdm-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  color: var(--sdm-ink-3);
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--sdm-hairline);
+}
+
+
+/* -----------------------------------------------------------------------------
+   5 · LIVE SIGNAL PULSE DOT
+   8px circle, position next to "Live signal" header, ringing pulse-pin keyframes.
+   Renderer at index.html:21997 produces an inline `<span style="...">` for
+   the as_of date — we provide a `.sdm-pulse-dot` and `.ah-live-pulse` class
+   that future renderers will use.  In the meantime, the keyframes are
+   available and any future inline element can opt-in.
+   ---------------------------------------------------------------------------- */
+.alphahub-fs-overlay .sdm-pulse-dot,
+.alphahub-fs-overlay .ah-live-pulse,
+[data-strategy-modal] .ah-section--live .ah-live-pulse,
+[data-strategy-modal] .sdm-pulse-dot {
+  display: inline-block;
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sdm-pos);
+  vertical-align: middle;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.alphahub-fs-overlay .sdm-pulse-dot::before,
+.alphahub-fs-overlay .ah-live-pulse::before,
+[data-strategy-modal] .ah-section--live .ah-live-pulse::before,
+[data-strategy-modal] .sdm-pulse-dot::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: var(--sdm-pos);
+  opacity: 0.45;
+  animation: pulse-pin 1.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  pointer-events: none;
+}
+
+/* Stale / paused state */
+.alphahub-fs-overlay .sdm-pulse-dot[data-state="stale"],
+[data-strategy-modal] .sdm-pulse-dot[data-state="stale"] { background: var(--sdm-ink-4); }
+.alphahub-fs-overlay .sdm-pulse-dot[data-state="stale"]::before,
+[data-strategy-modal] .sdm-pulse-dot[data-state="stale"]::before { animation: none; opacity: 0; }
+
+@keyframes pulse-pin {
+  0%   { transform: scale(1);   opacity: 0.45; }
+  70%  { transform: scale(3.0); opacity: 0;    }
+  100% { transform: scale(3.0); opacity: 0;    }
+}
+
+/* The header inside the Live signal card gets the pulse dot prepended by
+   the renderer (future).  Until then, providing a hook the JS can use:
+     <h4><span class="sdm-pulse-dot"></span> Live signal · <time>…</time></h4>
+*/
+.alphahub-fs-overlay .alphahub-fs-card[data-section="live"] > h4,
+.alphahub-fs-overlay .alphahub-fs-card.ah-section--live > h4,
+[data-strategy-modal] .ah-section--live > h4 {
+  color: var(--sdm-ink);
+}
+
+.alphahub-fs-overlay .alphahub-fs-card[data-section="live"] .sdm-live-meta,
+[data-strategy-modal] .ah-section--live .ah-live-meta {
+  font-family: var(--sdm-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--sdm-ink-3);
+  letter-spacing: 0.02em;
+  margin-left: auto;
+}
+
+
+/* -----------------------------------------------------------------------------
+   6 · SPREAD CHART HOVER · refined crosshair
+   Plotly emits a `.hoverlayer` SVG group inside its container; we override the
+   default hovertext box and crosshair appearance to match the modal's design
+   language.  Scoped to the spread chart card so we don't mess with other
+   Plotly charts in the modal (sharpe-ci, alloc-gauge, equity).
+   ---------------------------------------------------------------------------- */
+.alphahub-fs-overlay .alphahub-fs-card[data-section="spread"] .js-plotly-plot,
+.alphahub-fs-overlay #ah-fs-spread-chart,
+[data-strategy-modal] .ah-section--spread .js-plotly-plot {
+  cursor: crosshair;
+}
+
+/* Refined crosshair line: 1px dashed, ink-3 with subtle opacity */
+.alphahub-fs-overlay .alphahub-fs-card[data-section="spread"] .hoverlayer .crisp,
+.alphahub-fs-overlay #ah-fs-spread-chart .hoverlayer .crisp,
+[data-strategy-modal] .ah-section--spread .hoverlayer .crisp {
+  stroke: var(--sdm-ink-3) !important;
+  stroke-width: 1px !important;
+  stroke-dasharray: 2 3 !important;
+  opacity: 0.55 !important;
+}
+
+/* Hover text label: monospaced, compact, ink-on-surface card */
+.alphahub-fs-overlay .alphahub-fs-card[data-section="spread"] .hoverlayer .hovertext,
+.alphahub-fs-overlay #ah-fs-spread-chart .hoverlayer .hovertext,
+[data-strategy-modal] .ah-section--spread .hoverlayer .hovertext {
+  font-family: var(--sdm-mono) !important;
+  font-size: 11px !important;
+}
+
+.alphahub-fs-overlay .alphahub-fs-card[data-section="spread"] .hoverlayer .hovertext > path,
+.alphahub-fs-overlay #ah-fs-spread-chart .hoverlayer .hovertext > path,
+[data-strategy-modal] .ah-section--spread .hoverlayer .hovertext > path {
+  fill: var(--sdm-surface) !important;
+  stroke: var(--sdm-hairline-2) !important;
+  stroke-width: 1px !important;
+  filter: drop-shadow(0 2px 6px rgba(15, 15, 25, 0.10));
+}
+
+.alphahub-fs-overlay .alphahub-fs-card[data-section="spread"] .hoverlayer .hovertext text,
+.alphahub-fs-overlay #ah-fs-spread-chart .hoverlayer .hovertext text,
+[data-strategy-modal] .ah-section--spread .hoverlayer .hovertext text {
+  fill: var(--sdm-ink) !important;
+}
+
+
+/* -----------------------------------------------------------------------------
+   7 · TRADE-RULE TABLE · zebra striping
+   13px Mono.  Zebra at 50% alpha hairlines so rows still read as one block.
+   Maps to legacy `<section class="alphahub-fs-card"><h4>Trade rule</h4>` and
+   future `.ah-section--setup .ah-rule-table` (semantic name kept distinct
+   from `.sdm-setup` grid above — table is used when the renderer chooses a
+   real `<table>` instead of a 3-col CSS grid).
+   ---------------------------------------------------------------------------- */
+.alphahub-fs-overlay .alphahub-fs-card[data-section="setup"] table.sdm-rule-table,
+.alphahub-fs-overlay .alphahub-fs-card.ah-section--setup table,
+[data-strategy-modal] .ah-section--setup table,
+[data-strategy-modal] .ah-rule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--sdm-mono);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  margin: 4px 0;
+}
+
+.alphahub-fs-overlay .ah-rule-table thead th,
+[data-strategy-modal] .ah-rule-table thead th,
+[data-strategy-modal] .ah-section--setup table thead th {
+  font-family: var(--sdm-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sdm-ink-3);
+  text-align: left;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--sdm-hairline-2);
+  background: transparent;
+}
+
+.alphahub-fs-overlay .ah-rule-table tbody td,
+[data-strategy-modal] .ah-rule-table tbody td,
+[data-strategy-modal] .ah-section--setup table tbody td {
+  padding: 7px 10px;
+  color: var(--sdm-ink);
+  border-bottom: 1px solid rgba(15, 15, 25, 0.04); /* hairline at 50% alpha */
+  vertical-align: baseline;
+}
+
+.alphahub-fs-overlay .ah-rule-table tbody tr:nth-child(even) td,
+[data-strategy-modal] .ah-rule-table tbody tr:nth-child(even) td,
+[data-strategy-modal] .ah-section--setup table tbody tr:nth-child(even) td {
+  background: var(--sdm-surface-2);
+}
+
+/* Right-align value & unit columns; left-align param column. */
+.alphahub-fs-overlay .ah-rule-table tbody td:not(:first-child),
+[data-strategy-modal] .ah-rule-table tbody td:not(:first-child),
+[data-strategy-modal] .ah-section--setup table tbody td:not(:first-child) {
+  text-align: right;
+}
+
+.alphahub-fs-overlay .ah-rule-table tbody td:first-child,
+[data-strategy-modal] .ah-rule-table tbody td:first-child,
+[data-strategy-modal] .ah-section--setup table tbody td:first-child {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sdm-ink-3);
+}
+
+
+/* -----------------------------------------------------------------------------
+   DARK MODE
+   alphahub-premium.css already swaps tokens via `html[data-theme="dark"]
+   .mode-pane[data-mode-pane="strategies"]`.  Modal overlay sits outside the
+   strategies pane (it's a body-level fixed element) so we redefine the tinted
+   risk-callout and zebra-hairline for dark theme explicitly.
+   ---------------------------------------------------------------------------- */
+html[data-theme="dark"] .alphahub-fs-overlay .alphahub-fs-card[data-section="risk"],
+html[data-theme="dark"] .alphahub-fs-overlay .alphahub-fs-card.ah-section--risk,
+html[data-theme="dark"] [data-strategy-modal] .ah-section--risk,
+html[data-theme="dark"] [data-strategy-modal] [data-section="risk"] {
+  background: rgba(249, 115, 22, 0.08);
+}
+
+html[data-theme="dark"] .alphahub-fs-overlay .ah-rule-table tbody td,
+html[data-theme="dark"] [data-strategy-modal] .ah-rule-table tbody td,
+html[data-theme="dark"] [data-strategy-modal] .ah-section--setup table tbody td {
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+
+/* -----------------------------------------------------------------------------
+   REDUCED MOTION
+   Respect prefers-reduced-motion: turn off the pulse-pin animation entirely.
+   ---------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .alphahub-fs-overlay .sdm-pulse-dot::before,
+  .alphahub-fs-overlay .ah-live-pulse::before,
+  [data-strategy-modal] .sdm-pulse-dot::before,
+  [data-strategy-modal] .ah-live-pulse::before {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+
+/* -----------------------------------------------------------------------------
+   RESPONSIVE
+   Below 640px the Setup 3-col grid collapses to 2 cols (param | value),
+   units sit on the value row as a trailing span.  Theory keeps its 60ch cap
+   (the viewport will shrink ch anyway).
+   ---------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .alphahub-fs-overlay .sdm-setup,
+  [data-strategy-modal] .ah-setup-table,
+  [data-strategy-modal] .sdm-setup {
+    grid-template-columns: minmax(70px, max-content) 1fr;
+  }
+  .alphahub-fs-overlay .sdm-setup .sdm-unit,
+  [data-strategy-modal] .ah-setup-table .ah-unit,
+  [data-strategy-modal] .sdm-setup .sdm-unit {
+    display: none; /* unit-suffix merged into value via JS where present */
+  }
+  .alphahub-fs-overlay .alphahub-fs-card[data-section="risk"] .sdm-risk-grid,
+  [data-strategy-modal] .ah-section--risk .ah-risk-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* ============================================================================
+   END strategies-detail-modal.css
+   ============================================================================ */

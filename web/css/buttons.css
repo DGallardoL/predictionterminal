@@ -1,0 +1,387 @@
+/* ============================================================
+ * buttons.css  (T10, wave-10)
+ *
+ * Universal button system for the Prediction Terminal frontend.
+ * Consumes tokens defined by T01 (web/css/tokens.css) and T68
+ * (web/css/global-refinement.css). Does NOT redefine any token.
+ *
+ * MOUNT ORDER (MANDATORY):
+ *   1. tokens.css                (T01) — brand + ink + surface + radii
+ *   2. global-refinement.css     (T68) — --focus-ring, --t, --ease
+ *   3. buttons.css               (T10) — this file
+ *   4. mode-specific sheets (alphahub-premium.css, terminal-premium.css, ...)
+ *
+ * Class API
+ * ---------
+ *   Variants:
+ *     .btn--primary      orange-500 / white  / hover orange-600
+ *     .btn--secondary    surface    / ink    / hairline border
+ *     .btn--tertiary     transparent / ink   / hover underline
+ *     .btn--ghost        transparent / muted / hover surface-2
+ *     .btn--destructive  red-600    / white
+ *     .btn--success      green-600  / white
+ *
+ *   Sizes:
+ *     .btn--xs  24px h / 11px / padding 0 8px
+ *     .btn--sm  28px h / 12px
+ *     .btn--md  36px h / 14px (DEFAULT — same as bare .btn)
+ *     .btn--lg  44px h / 16px
+ *
+ *   Modifiers:
+ *     .btn--icon       square 36x36, no padding
+ *     .btn--full       width: 100%
+ *     .btn[disabled]   opacity 0.5, cursor not-allowed
+ *     .btn[data-loading="true"]   text hidden, spinner shown
+ *
+ *   Groups:
+ *     .btn-group       flex row, gap 0, children share corners
+ *
+ * Transitions use --t and --ease (from T68).
+ * Focus ring uses --focus-ring (from T68); see :focus-visible.
+ * ============================================================ */
+
+/* ------------------------------------------------------------
+ * Base — .btn
+ * ------------------------------------------------------------ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  box-sizing: border-box;
+
+  height: 36px;
+  padding: 0 16px;
+
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--r-2); /* 6px */
+
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  transition:
+    background-color var(--t) var(--ease),
+    border-color var(--t) var(--ease),
+    color var(--t) var(--ease),
+    box-shadow var(--t) var(--ease),
+    transform var(--t-fast) var(--ease),
+    opacity var(--t) var(--ease);
+}
+
+.btn:focus { outline: none; }
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.btn:active { transform: translateY(1px); }
+
+/* ------------------------------------------------------------
+ * Variants
+ * ------------------------------------------------------------ */
+
+/* Primary — orange brand */
+.btn--primary {
+  background: var(--orange-500);
+  color: #ffffff;
+  border-color: var(--orange-500);
+}
+.btn--primary:hover {
+  background: var(--orange-600);
+  border-color: var(--orange-600);
+}
+.btn--primary:active {
+  background: var(--orange-700, var(--orange-600));
+  transform: translateY(1px);
+}
+
+/* Secondary — surface w/ hairline */
+.btn--secondary {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--hairline);
+}
+.btn--secondary:hover {
+  background: var(--bg-alt);
+  border-color: var(--hairline-strong);
+}
+.btn--secondary:active {
+  background: var(--bg-alt);
+  transform: translateY(1px);
+}
+
+/* Tertiary — transparent, underlined on hover */
+.btn--tertiary {
+  background: transparent;
+  color: var(--ink);
+  border-color: transparent;
+  padding: 0 8px;
+}
+.btn--tertiary:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.btn--tertiary:active { transform: translateY(1px); }
+
+/* Ghost — transparent, muted ink */
+.btn--ghost {
+  background: transparent;
+  color: var(--ink-muted);
+  border-color: transparent;
+}
+.btn--ghost:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+.btn--ghost:active { transform: translateY(1px); }
+
+/* Destructive — red */
+.btn--destructive {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+}
+.btn--destructive:hover {
+  background: #b91c1c;
+  border-color: #b91c1c;
+}
+.btn--destructive:active {
+  background: #991b1b;
+  border-color: #991b1b;
+  transform: translateY(1px);
+}
+
+/* Success — green */
+.btn--success {
+  background: #16a34a;
+  color: #ffffff;
+  border-color: #16a34a;
+}
+.btn--success:hover {
+  background: #15803d;
+  border-color: #15803d;
+}
+.btn--success:active {
+  background: #166534;
+  border-color: #166534;
+  transform: translateY(1px);
+}
+
+/* ------------------------------------------------------------
+ * Sizes
+ * ------------------------------------------------------------ */
+.btn--xs {
+  height: 24px;
+  padding: 0 8px;
+  font-size: 11px;
+  border-radius: var(--r-1); /* 4px */
+  gap: var(--sp-1);
+}
+.btn--sm {
+  height: 28px;
+  padding: 0 12px;
+  font-size: 12px;
+  border-radius: var(--r-2);
+}
+.btn--md {
+  height: 36px;
+  padding: 0 16px;
+  font-size: 14px;
+  border-radius: var(--r-2);
+}
+.btn--lg {
+  height: 44px;
+  padding: 0 20px;
+  font-size: 16px;
+  border-radius: var(--r-3); /* 8px */
+}
+
+/* ------------------------------------------------------------
+ * Modifiers
+ * ------------------------------------------------------------ */
+
+/* Icon-only square button. Honors size modifiers when stacked. */
+.btn--icon {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  flex: 0 0 auto;
+}
+.btn--xs.btn--icon { width: 24px; height: 24px; }
+.btn--sm.btn--icon { width: 28px; height: 28px; }
+.btn--md.btn--icon { width: 36px; height: 36px; }
+.btn--lg.btn--icon { width: 44px; height: 44px; }
+
+.btn--icon > svg,
+.btn--icon > img {
+  width: 1em;
+  height: 1em;
+  display: block;
+}
+
+/* Full-width */
+.btn--full {
+  width: 100%;
+  display: flex;
+}
+
+/* ------------------------------------------------------------
+ * Disabled — reinforces T68 global rule
+ * ------------------------------------------------------------ */
+.btn[disabled],
+.btn[aria-disabled="true"],
+.btn.is-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ------------------------------------------------------------
+ * Button group — share corners between adjacent buttons
+ * ------------------------------------------------------------ */
+.btn-group {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 0;
+  align-items: stretch;
+}
+
+.btn-group > .btn {
+  border-radius: 0;
+  margin: 0;
+}
+
+/* Collapse adjacent borders so the seam is a single hairline */
+.btn-group > .btn + .btn {
+  margin-left: -1px;
+}
+
+/* Lift focused/active button so its border + focus ring win the z-stack */
+.btn-group > .btn:hover,
+.btn-group > .btn:focus-visible,
+.btn-group > .btn:active,
+.btn-group > .btn[aria-pressed="true"],
+.btn-group > .btn.is-active {
+  z-index: 1;
+}
+
+.btn-group > .btn:first-child {
+  border-top-left-radius: var(--r-2);
+  border-bottom-left-radius: var(--r-2);
+}
+.btn-group > .btn:last-child {
+  border-top-right-radius: var(--r-2);
+  border-bottom-right-radius: var(--r-2);
+}
+
+/* When the group contains lg buttons, expand outer radii to match */
+.btn-group:has(> .btn--lg) > .btn:first-child {
+  border-top-left-radius: var(--r-3);
+  border-bottom-left-radius: var(--r-3);
+}
+.btn-group:has(> .btn--lg) > .btn:last-child {
+  border-top-right-radius: var(--r-3);
+  border-bottom-right-radius: var(--r-3);
+}
+
+/* Vertical orientation */
+.btn-group--vertical {
+  flex-direction: column;
+}
+.btn-group--vertical > .btn + .btn {
+  margin-left: 0;
+  margin-top: -1px;
+}
+.btn-group--vertical > .btn:first-child {
+  border-top-left-radius: var(--r-2);
+  border-top-right-radius: var(--r-2);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group--vertical > .btn:last-child {
+  border-bottom-left-radius: var(--r-2);
+  border-bottom-right-radius: var(--r-2);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* ------------------------------------------------------------
+ * Loading state — replace text with spinner
+ *
+ * Markup contract:
+ *   <button class="btn btn--primary" data-loading="true">Save</button>
+ *
+ * The label is hidden via transparent color; a rotating
+ * border pseudo-element is centered over the button.
+ * ------------------------------------------------------------ */
+.btn[data-loading="true"] {
+  color: transparent !important;
+  pointer-events: none;
+  position: relative;
+}
+.btn[data-loading="true"] > * {
+  visibility: hidden;
+}
+.btn[data-loading="true"]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  margin: -0.5em 0 0 -0.5em;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  /* spinner color = the variant's text color (set explicitly per variant below) */
+  color: #ffffff;
+  animation: btn-spin 720ms linear infinite;
+  visibility: visible;
+}
+
+/* Variant-specific spinner color so it stays visible against the bg */
+.btn--secondary[data-loading="true"]::after,
+.btn--tertiary[data-loading="true"]::after,
+.btn--ghost[data-loading="true"]::after {
+  color: var(--ink);
+}
+.btn--primary[data-loading="true"]::after,
+.btn--destructive[data-loading="true"]::after,
+.btn--success[data-loading="true"]::after {
+  color: #ffffff;
+}
+
+@keyframes btn-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+  .btn:active { transform: none; }
+  .btn[data-loading="true"]::after {
+    animation-duration: 2400ms;
+  }
+}
+
+/* ============================================================
+ * End of buttons.css
+ * ============================================================ */

@@ -1,0 +1,1 @@
+- 2026-05-13: Removed 132 dead Polymarket/Kalshi slugs from factors.yml (validated against live APIs). Catalog size: 1360 → 1228.

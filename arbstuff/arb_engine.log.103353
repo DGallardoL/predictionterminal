@@ -1,0 +1,1658 @@
+10:16:01.984 [INFO] Email not configured (missing GMAIL_USER/GMAIL_APP_PASSWORD/EMAIL_RECIPIENT)
+10:16:02.003 [DEBUG] Loaded 904 mapped events from 4 config files
+10:16:02.003 [INFO] [WS] Initializing WebSocket connections...
+10:16:37.114 [INFO] [WS] Discovered 8992 Polymarket tokens
+10:16:37.421 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 1s
+10:16:38.648 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 2s
+10:16:40.881 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 4s
+10:16:45.114 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 8s
+10:16:52.122 [WARNING] [WS-K] Connection timed out (15s)
+10:16:52.471 [INFO] [WS-P] Connected
+10:16:53.344 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 16s
+10:16:56.476 [INFO] [WS] Ready
+10:16:56.478 [INFO] [Discovery] Auto-discovery scheduled every 30 min
+10:16:56.478 [INFO] Arbitrage scanner started | Mode: TEST | Scan: WS | Max: $10 | Config: ['markets_config_reviewed.json', 'markets_config.json']
+10:16:56.502 [DEBUG] Loaded 904 mapped events from 4 config files
+10:16:56.502 [INFO] [WS] Refreshing markets (904 events)
+10:17:09.589 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:17:39.866 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:17:42.363 [INFO] 176 candidates below threshold
+10:17:54.784 [INFO] [ARB] Which bills will become l | FISA Section 702 rea | K_YES+P_NO: 0.560 | Vol:5885 Profit:8.7%
+10:17:54.784 [INFO] ==================================================
+10:17:54.784 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:54.785 [INFO]   Contracts: 26 | K: $0.1900 + $0.52 fee | P: $0.3700
+10:17:54.785 [INFO]   Total: $15.32 | Guaranteed profit: $10.68
+10:17:54.785 [INFO] ==================================================
+10:17:54.785 [INFO] [TEST] Poly: BUY 26 @ $0.3900 (limit) token=7133466488580195…
+10:17:54.785 [INFO] [TEST] Kalshi: YES 26 @ $0.1900 on KXBILLS-FISA
+10:17:54.785 [INFO] TRADE OK: 26 contracts, profit $10.68
+10:17:54.841 [INFO] [PnL] This trade: +$10.68 | Session total: +$30162.35 (3605 trades)
+10:17:54.842 [INFO] [ARB] Who will be arrested befo | James Clapper | K_NO+P_YES: 0.910 | Vol:11 Profit:6.8%
+10:17:54.842 [INFO] ==================================================
+10:17:54.842 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:54.842 [INFO]   Contracts: 11 | K: $0.6900 + $0.22 fee | P: $0.2200
+10:17:54.842 [INFO]   Total: $10.31 | Guaranteed profit: $0.69
+10:17:54.842 [INFO] ==================================================
+10:17:54.842 [INFO] [TEST] Poly: BUY 11 @ $0.2400 (limit) token=7409186972408971…
+10:17:54.842 [INFO] [TEST] Kalshi: NO 11 @ $0.6900 on KXARREST-27JAN-JCLA
+10:17:54.842 [INFO] TRADE OK: 11 contracts, profit $0.69
+10:17:54.870 [INFO] [PnL] This trade: +$0.69 | Session total: +$30163.05 (3606 trades)
+10:17:54.870 [INFO] [ARB] Who will be arrested befo | Letitia James | K_NO+P_YES: 0.930 | Vol:19 Profit:4.4%
+10:17:54.870 [INFO] ==================================================
+10:17:54.870 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:54.870 [INFO]   Contracts: 15 | K: $0.6100 + $0.30 fee | P: $0.3200
+10:17:54.870 [INFO]   Total: $14.38 | Guaranteed profit: $0.62
+10:17:54.870 [INFO] ==================================================
+10:17:54.870 [INFO] [TEST] Poly: BUY 15 @ $0.3400 (limit) token=2821266795352900…
+10:17:54.870 [INFO] [TEST] Kalshi: NO 15 @ $0.6100 on KXARREST-27JAN-LJAM
+10:17:54.870 [INFO] TRADE OK: 15 contracts, profit $0.62
+10:17:54.895 [INFO] [PnL] This trade: +$0.62 | Session total: +$30163.67 (3607 trades)
+10:17:54.895 [INFO] [ARB] What countries will Trump | Japan | K_NO+P_YES: 0.930 | Vol:14 Profit:4.3%
+10:17:54.895 [INFO] ==================================================
+10:17:54.895 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:54.895 [INFO]   Contracts: 14 | K: $0.5600 + $0.28 fee | P: $0.3700
+10:17:54.895 [INFO]   Total: $13.43 | Guaranteed profit: $0.57
+10:17:54.895 [INFO] ==================================================
+10:17:54.895 [INFO] [TEST] Poly: BUY 14 @ $0.3900 (limit) token=4060123401750998…
+10:17:54.895 [INFO] [TEST] Kalshi: NO 14 @ $0.5600 on KXTRUMPCOUNTRIES-27JAN01-JAP
+10:17:54.895 [INFO] TRADE OK: 14 contracts, profit $0.57
+10:17:54.920 [INFO] [PnL] This trade: +$0.57 | Session total: +$30164.24 (3608 trades)
+10:17:54.920 [INFO] [ARB] Who will Donald Trump mee | Vladimir Putin | K_YES+P_NO: 0.930 | Vol:5 Profit:4.2%
+10:17:54.920 [INFO] ==================================================
+10:17:54.920 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:54.920 [INFO]   Contracts: 5 | K: $0.3800 + $0.10 fee | P: $0.5500
+10:17:54.920 [INFO]   Total: $4.80 | Guaranteed profit: $0.20
+10:17:54.920 [INFO] ==================================================
+10:17:54.920 [INFO] [TEST] Poly: BUY 5 @ $0.5700 (limit) token=2182673548121610…
+10:17:54.920 [INFO] [TEST] Kalshi: YES 5 @ $0.3800 on KXTRUMPMEETING-27JAN01-NVPUT
+10:17:54.920 [INFO] TRADE OK: 5 contracts, profit $0.20
+10:17:54.945 [INFO] [PnL] This trade: +$0.20 | Session total: +$30164.44 (3609 trades)
+10:17:54.945 [INFO] [ARB] Which companies will the  | Nvidia | K_YES+P_NO: 0.930 | Vol:18 Profit:5.4%
+10:17:54.945 [INFO] ==================================================
+10:17:54.945 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:54.945 [INFO]   Contracts: 12 | K: $0.1500 + $0.12 fee | P: $0.7800
+10:17:54.945 [INFO]   Total: $11.36 | Guaranteed profit: $0.64
+10:17:54.945 [INFO] ==================================================
+10:17:54.945 [INFO] [TEST] Poly: BUY 12 @ $0.8000 (limit) token=5805394580805719…
+10:17:54.945 [INFO] [TEST] Kalshi: YES 12 @ $0.1500 on KXUSACOMPANYSTAKE-27JAN01-NVDA
+10:17:54.945 [INFO] TRADE OK: 12 contracts, profit $0.64
+10:17:54.970 [INFO] [PnL] This trade: +$0.64 | Session total: +$30165.08 (3610 trades)
+10:17:54.970 [INFO] [ARB] Which companies will the  | GlobalFoundries | K_NO+P_YES: 0.930 | Vol:10 Profit:4.8%
+10:17:54.970 [INFO] ==================================================
+10:17:54.970 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:54.970 [INFO]   Contracts: 10 | K: $0.6900 + $0.20 fee | P: $0.2400
+10:17:54.970 [INFO]   Total: $9.57 | Guaranteed profit: $0.43
+10:17:54.970 [INFO] ==================================================
+10:17:54.970 [INFO] [TEST] Poly: BUY 10 @ $0.2600 (limit) token=1555370690719424…
+10:17:54.970 [INFO] [TEST] Kalshi: NO 10 @ $0.6900 on KXUSACOMPANYSTAKE-27JAN01-GFS
+10:17:54.970 [INFO] TRADE OK: 10 contracts, profit $0.43
+10:17:54.995 [INFO] [PnL] This trade: +$0.43 | Session total: +$30165.50 (3611 trades)
+10:17:54.995 [INFO] [ARB] Which companies will the  | IonQ | K_YES+P_NO: 0.910 | Vol:52 Profit:7.2%
+10:17:54.995 [INFO] ==================================================
+10:17:54.995 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:54.995 [INFO]   Contracts: 13 | K: $0.1700 + $0.13 fee | P: $0.7400
+10:17:54.995 [INFO]   Total: $12.06 | Guaranteed profit: $0.94
+10:17:54.995 [INFO] ==================================================
+10:17:54.995 [INFO] [TEST] Poly: BUY 13 @ $0.7600 (limit) token=8571832241231959…
+10:17:54.995 [INFO] [TEST] Kalshi: YES 13 @ $0.1700 on KXUSACOMPANYSTAKE-27JAN01-IONQ
+10:17:54.995 [INFO] TRADE OK: 13 contracts, profit $0.94
+10:17:55.020 [INFO] [PnL] This trade: +$0.94 | Session total: +$30166.44 (3612 trades)
+10:17:55.020 [INFO] [ARB] CA-06 primary: first plac | Richard Pan | K_YES+P_NO: 0.770 | Vol:52 Profit:19.4%
+10:17:55.020 [INFO] ==================================================
+10:17:55.020 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.020 [INFO]   Contracts: 14 | K: $0.1100 + $0.14 fee | P: $0.6600
+10:17:55.020 [INFO]   Total: $11.05 | Guaranteed profit: $2.95
+10:17:55.021 [INFO] ==================================================
+10:17:55.021 [INFO] [TEST] Poly: BUY 14 @ $0.6799 (limit) token=8672339506915508…
+10:17:55.021 [INFO] [TEST] Kalshi: YES 14 @ $0.1100 on KXCAPRIMARY-06FIRST26-RPAN
+10:17:55.021 [INFO] TRADE OK: 14 contracts, profit $2.95
+10:17:55.046 [INFO] [PnL] This trade: +$2.95 | Session total: +$30169.40 (3613 trades)
+10:17:55.046 [INFO] [NR-ALERT] Brazil Presidential Elect | Flávio Bolsonaro <5% | K_NO+P_YES: 0.740 | Profit:23.9% (no vol)
+10:17:55.046 [INFO] [NR-ALERT] Brazil Presidential Elect | Lula da Silva <5% | K_YES+P_NO: 0.760 | Profit:23.0% (no vol)
+10:17:55.046 [INFO] [NR-ALERT] Minnesota State Senate wi | Democrat | K_YES+P_NO: 0.930 | Profit:5.8% (no vol)
+10:17:55.046 [INFO] [NR-ALERT] Minnesota State Senate wi | Republican | K_NO+P_YES: 0.900 | Profit:8.7% (no vol)
+10:17:55.046 [INFO] [ARB] What will Trump say durin | Fighter | K_YES+P_NO: 0.850 | Vol:215 Profit:10.9%
+10:17:55.046 [INFO] ==================================================
+10:17:55.046 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.046 [INFO]   Contracts: 16 | K: $0.2500 + $0.32 fee | P: $0.6000
+10:17:55.046 [INFO]   Total: $14.07 | Guaranteed profit: $1.93
+10:17:55.046 [INFO] ==================================================
+10:17:55.046 [INFO] [TEST] Poly: BUY 16 @ $0.6200 (limit) token=7231950181265059…
+10:17:55.046 [INFO] [TEST] Kalshi: YES 16 @ $0.2500 on KXTRUMPMENTION-26MAY20C-EIGH
+10:17:55.046 [INFO] TRADE OK: 16 contracts, profit $1.93
+10:17:55.071 [INFO] [PnL] This trade: +$1.93 | Session total: +$30171.32 (3614 trades)
+10:17:55.071 [INFO] [NR-ALERT] Minas Gerais Governor win | Rodrigo Pacheco | K_NO+P_YES: 0.880 | Profit:10.2% (no vol)
+10:17:55.071 [INFO] [NR-ALERT] North Carolina Senate win | Democrat | K_YES+P_NO: 0.810 | Profit:17.0% (no vol)
+10:17:55.071 [INFO] [NR-ALERT] North Carolina Senate win | Republican | K_NO+P_YES: 0.840 | Profit:14.0% (no vol)
+10:17:55.071 [INFO] [NR-ALERT] 2028 Democratic VP nomine | Alexandria Ocasio-Co | K_YES+P_NO: 0.923 | Profit:6.8% (no vol)
+10:17:55.071 [INFO] [NR-ALERT] Who will be Trump's next  | Keith Sonderling | K_YES+P_NO: 0.920 | Profit:5.9% (no vol)
+10:17:55.071 [INFO] [ARB] Who will release a new al | Sabrina Carpenter | K_NO+P_YES: 0.780 | Vol:108 Profit:21.1%
+10:17:55.071 [INFO] [ARB] Who will release a new al | Olivia Rodrigo | K_YES+P_NO: 0.386 | Vol:418 Profit:53.2%
+10:17:55.071 [INFO] [ARB] CA-07 primary: first plac | Ralph Nwobi | K_YES+P_NO: 0.930 | Vol:64 Profit:5.9%
+10:17:55.071 [INFO] ==================================================
+10:17:55.071 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.071 [INFO]   Contracts: 11 | K: $0.0900 + $0.11 fee | P: $0.8400
+10:17:55.071 [INFO]   Total: $10.40 | Guaranteed profit: $0.60
+10:17:55.071 [INFO] ==================================================
+10:17:55.071 [INFO] [TEST] Poly: BUY 11 @ $0.8600 (limit) token=1022746117645499…
+10:17:55.071 [INFO] [TEST] Kalshi: YES 11 @ $0.0900 on KXCAPRIMARY-07FIRST26-RNWO
+10:17:55.071 [INFO] TRADE OK: 11 contracts, profit $0.60
+10:17:55.096 [INFO] [PnL] This trade: +$0.60 | Session total: +$30171.92 (3615 trades)
+10:17:55.096 [INFO] [ARB] CA-07 primary: first plac | Mai Vang | K_YES+P_NO: 0.430 | Vol:400 Profit:43.8%
+10:17:55.096 [INFO] ==================================================
+10:17:55.096 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.096 [INFO]   Contracts: 42 | K: $0.2000 + $0.84 fee | P: $0.2300
+10:17:55.096 [INFO]   Total: $19.20 | Guaranteed profit: $22.80
+10:17:55.096 [INFO] ==================================================
+10:17:55.096 [INFO] [TEST] Poly: BUY 42 @ $0.2499 (limit) token=3729051153394652…
+10:17:55.096 [INFO] [TEST] Kalshi: YES 42 @ $0.2000 on KXCAPRIMARY-07FIRST26-MVAN
+10:17:55.096 [INFO] TRADE OK: 42 contracts, profit $22.80
+10:17:55.122 [INFO] [PnL] This trade: +$22.80 | Session total: +$30194.73 (3616 trades)
+10:17:55.122 [INFO] [ARB] Who will perform at the F | Shakira | K_YES+P_NO: 0.351 | Vol:43 Profit:38.1%
+10:17:55.122 [INFO] ==================================================
+10:17:55.122 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.122 [INFO]   Contracts: 35 | K: $0.0800 + $0.35 fee | P: $0.2710
+10:17:55.122 [INFO]   Total: $12.91 | Guaranteed profit: $22.09
+10:17:55.122 [INFO] ==================================================
+10:17:55.122 [INFO] [TEST] Poly: BUY 35 @ $0.2910 (limit) token=6239504175424671…
+10:17:55.122 [INFO] [TEST] Kalshi: YES 35 @ $0.0800 on KXWORLDCUPHALFTIME-26-SIA
+10:17:55.122 [INFO] TRADE OK: 35 contracts, profit $22.09
+10:17:55.148 [INFO] [PnL] This trade: +$22.09 | Session total: +$30216.82 (3617 trades)
+10:17:55.148 [INFO] [NR-ALERT] Ohio Senate winner? (2028 | Democrat | K_YES+P_NO: 0.780 | Profit:19.6% (no vol)
+10:17:55.148 [INFO] [NR-ALERT] Ohio Senate winner? (2028 | Republican | K_NO+P_YES: 0.820 | Profit:15.6% (no vol)
+10:17:55.148 [INFO] [ARB] CA-34 primary: first plac | Angela Gonzales-Torr | K_YES+P_NO: 0.380 | Vol:400 Profit:20.6%
+10:17:55.148 [INFO] ==================================================
+10:17:55.148 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.148 [INFO]   Contracts: 32 | K: $0.0800 + $0.32 fee | P: $0.3000
+10:17:55.148 [INFO]   Total: $12.75 | Guaranteed profit: $19.25
+10:17:55.148 [INFO] ==================================================
+10:17:55.148 [INFO] [TEST] Poly: BUY 32 @ $0.3200 (limit) token=7397606420967442…
+10:17:55.148 [INFO] [TEST] Kalshi: YES 32 @ $0.0800 on KXCAPRIMARY-34FIRST26-AGON
+10:17:55.148 [INFO] TRADE OK: 32 contracts, profit $19.25
+10:17:55.174 [INFO] [PnL] This trade: +$19.25 | Session total: +$30236.07 (3618 trades)
+10:17:55.174 [INFO] [ARB] What will Trump say this  | Mamdani | K_NO+P_YES: 0.850 | Vol:15 Profit:11.2%
+10:17:55.174 [INFO] ==================================================
+10:17:55.174 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.174 [INFO]   Contracts: 14 | K: $0.1600 + $0.14 fee | P: $0.6900
+10:17:55.174 [INFO]   Total: $12.16 | Guaranteed profit: $1.84
+10:17:55.174 [INFO] ==================================================
+10:17:55.174 [INFO] [TEST] Poly: BUY 14 @ $0.7100 (limit) token=9049349970547596…
+10:17:55.174 [INFO] [TEST] Kalshi: NO 14 @ $0.1600 on KXTRUMPSAY-26MAY25-MELA
+10:17:55.174 [INFO] TRADE OK: 14 contracts, profit $1.84
+10:17:55.199 [INFO] [PnL] This trade: +$1.84 | Session total: +$30237.91 (3619 trades)
+10:17:55.199 [INFO] [ARB] What will Trump say this  | Stupid person | K_YES+P_NO: 0.900 | Vol:166 Profit:4.8%
+10:17:55.199 [INFO] ==================================================
+10:17:55.199 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.199 [INFO]   Contracts: 20 | K: $0.4200 + $0.40 fee | P: $0.4800
+10:17:55.199 [INFO]   Total: $18.60 | Guaranteed profit: $1.40
+10:17:55.199 [INFO] ==================================================
+10:17:55.199 [INFO] [TEST] Poly: BUY 20 @ $0.5000 (limit) token=9823413659203769…
+10:17:55.199 [INFO] [TEST] Kalshi: YES 20 @ $0.4200 on KXTRUMPSAY-26MAY25-STUP
+10:17:55.199 [INFO] TRADE OK: 20 contracts, profit $1.40
+10:17:55.224 [INFO] [PnL] This trade: +$1.40 | Session total: +$30239.31 (3620 trades)
+10:17:55.224 [INFO] [ARB] CA-45 primary: first plac | Chuong Vo | K_YES+P_NO: 0.810 | Vol:334 Profit:18.5%
+10:17:55.224 [INFO] ==================================================
+10:17:55.224 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.224 [INFO]   Contracts: 13 | K: $0.0900 + $0.13 fee | P: $0.7200
+10:17:55.224 [INFO]   Total: $10.76 | Guaranteed profit: $2.24
+10:17:55.224 [INFO] ==================================================
+10:17:55.224 [INFO] [TEST] Poly: BUY 13 @ $0.7400 (limit) token=6395241973560586…
+10:17:55.224 [INFO] [TEST] Kalshi: YES 13 @ $0.0900 on KXCAPRIMARY-45FIRST26-CVO
+10:17:55.224 [INFO] TRADE OK: 13 contracts, profit $2.24
+10:17:55.249 [INFO] [PnL] This trade: +$2.24 | Session total: +$30241.54 (3621 trades)
+10:17:55.249 [INFO] [ARB] CA-41 primary: first plac | Mitch Clemmons | K_YES+P_NO: 0.300 | Vol:400 Profit:63.4%
+10:17:55.249 [INFO] ==================================================
+10:17:55.249 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.249 [INFO]   Contracts: 53 | K: $0.1200 + $0.53 fee | P: $0.1800
+10:17:55.249 [INFO]   Total: $16.74 | Guaranteed profit: $36.26
+10:17:55.249 [INFO] ==================================================
+10:17:55.249 [INFO] [TEST] Poly: BUY 53 @ $0.2000 (limit) token=4003492952108932…
+10:17:55.249 [INFO] [TEST] Kalshi: YES 53 @ $0.1200 on KXCAPRIMARY-41FIRST26-MCLE
+10:17:55.249 [INFO] TRADE OK: 53 contracts, profit $36.26
+10:17:55.274 [INFO] [PnL] This trade: +$36.26 | Session total: +$30277.80 (3622 trades)
+10:17:55.274 [INFO] [ARB] CA-03 primary: first plac | Christine Bish | K_YES+P_NO: 0.890 | Vol:400 Profit:8.7%
+10:17:55.274 [INFO] ==================================================
+10:17:55.274 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.274 [INFO]   Contracts: 12 | K: $0.0900 + $0.12 fee | P: $0.8000
+10:17:55.274 [INFO]   Total: $10.88 | Guaranteed profit: $1.12
+10:17:55.274 [INFO] ==================================================
+10:17:55.274 [INFO] [TEST] Poly: BUY 12 @ $0.8200 (limit) token=7076526911728089…
+10:17:55.274 [INFO] [TEST] Kalshi: YES 12 @ $0.0900 on KXCAPRIMARY-03FIRST26-CBIS
+10:17:55.274 [INFO] TRADE OK: 12 contracts, profit $1.12
+10:17:55.301 [INFO] [PnL] This trade: +$1.12 | Session total: +$30278.92 (3623 trades)
+10:17:55.301 [INFO] [ARB] CA-03 primary: first plac | Robb Tucker | K_YES+P_NO: 0.400 | Vol:400 Profit:47.8%
+10:17:55.301 [INFO] ==================================================
+10:17:55.301 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.301 [INFO]   Contracts: 31 | K: $0.0900 + $0.31 fee | P: $0.3100
+10:17:55.301 [INFO]   Total: $12.98 | Guaranteed profit: $18.02
+10:17:55.301 [INFO] ==================================================
+10:17:55.301 [INFO] [TEST] Poly: BUY 31 @ $0.3300 (limit) token=2264729309769407…
+10:17:55.301 [INFO] [TEST] Kalshi: YES 31 @ $0.0900 on KXCAPRIMARY-03FIRST26-RTUC
+10:17:55.301 [INFO] TRADE OK: 31 contracts, profit $18.02
+10:17:55.326 [INFO] [PnL] This trade: +$18.02 | Session total: +$30296.95 (3624 trades)
+10:17:55.326 [INFO] [NR-ALERT] Will 2026 be the hottest  | 1st hottest | K_NO+P_YES: 0.751 | Profit:23.0% (no vol)
+10:17:55.326 [INFO] [ARB] CA-22 primary: first plac | Jasmeet Bains | K_YES+P_NO: 0.860 | Vol:205 Profit:12.5%
+10:17:55.326 [INFO] ==================================================
+10:17:55.326 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.326 [INFO]   Contracts: 13 | K: $0.1100 + $0.13 fee | P: $0.7500
+10:17:55.326 [INFO]   Total: $11.41 | Guaranteed profit: $1.59
+10:17:55.326 [INFO] ==================================================
+10:17:55.326 [INFO] [TEST] Poly: BUY 13 @ $0.7700 (limit) token=3589788109115145…
+10:17:55.326 [INFO] [TEST] Kalshi: YES 13 @ $0.1100 on KXCAPRIMARY-22FIRST26-JBAI
+10:17:55.326 [INFO] TRADE OK: 13 contracts, profit $1.59
+10:17:55.351 [INFO] [PnL] This trade: +$1.59 | Session total: +$30298.54 (3625 trades)
+10:17:55.351 [INFO] [ARB] CA-22 primary: first plac | Randy Villegas | K_YES+P_NO: 0.760 | Vol:135 Profit:20.5%
+10:17:55.351 [INFO] ==================================================
+10:17:55.351 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.352 [INFO]   Contracts: 15 | K: $0.1100 + $0.15 fee | P: $0.6500
+10:17:55.352 [INFO]   Total: $11.69 | Guaranteed profit: $3.31
+10:17:55.352 [INFO] ==================================================
+10:17:55.352 [INFO] [TEST] Poly: BUY 15 @ $0.6700 (limit) token=9206980243410429…
+10:17:55.352 [INFO] [TEST] Kalshi: YES 15 @ $0.1100 on KXCAPRIMARY-22FIRST26-RVIL
+10:17:55.352 [INFO] TRADE OK: 15 contracts, profit $3.31
+10:17:55.377 [INFO] [PnL] This trade: +$3.31 | Session total: +$30301.85 (3626 trades)
+10:17:55.377 [INFO] [NR-ALERT] GA-01 Democratic nominee? | Amanda Hollowell | K_NO+P_YES: 0.910 | Profit:6.7% (no vol)
+10:17:55.377 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 3-6% | K_NO+P_YES: 0.660 | Profit:31.8% (no vol)
+10:17:55.377 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 9%+ | K_NO+P_YES: 0.900 | Profit:8.1% (no vol)
+10:17:55.377 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein <3% | K_NO+P_YES: 0.930 | Profit:5.7% (no vol)
+10:17:55.377 [INFO] [NR-ALERT] Which party will win the  | Democratic | K_YES+P_NO: 0.930 | Profit:4.5% (no vol)
+10:17:55.377 [INFO] [NR-ALERT] Which party will win the  | Republican | K_NO+P_YES: 0.930 | Profit:4.5% (no vol)
+10:17:55.377 [INFO] [ARB] CA-17 primary: first plac | Ethan Agarwal | K_YES+P_NO: 0.440 | Vol:2526 Profit:20.8%
+10:17:55.377 [INFO] ==================================================
+10:17:55.377 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.377 [INFO]   Contracts: 30 | K: $0.1200 + $0.30 fee | P: $0.3200
+10:17:55.377 [INFO]   Total: $13.76 | Guaranteed profit: $16.24
+10:17:55.377 [INFO] ==================================================
+10:17:55.377 [INFO] [TEST] Poly: BUY 30 @ $0.3399 (limit) token=2942689588945621…
+10:17:55.377 [INFO] [TEST] Kalshi: YES 30 @ $0.1200 on KXCAPRIMARY-17FIRST26-EAGA
+10:17:55.377 [INFO] TRADE OK: 30 contracts, profit $16.24
+10:17:55.403 [INFO] [PnL] This trade: +$16.24 | Session total: +$30318.09 (3627 trades)
+10:17:55.403 [INFO] [ARB] CA-17 primary: first plac | Ha Phan | K_YES+P_NO: 0.920 | Vol:200 Profit:6.8%
+10:17:55.403 [INFO] [NR-ALERT] State of the economy at t | Overheating (Unemplo | K_YES+P_NO: 0.902 | Profit:7.5% (no vol)
+10:17:55.403 [INFO] [ARB] CA-40 primary: first plac | Ken Calvert | K_YES+P_NO: 0.490 | Vol:400 Profit:35.4%
+10:17:55.403 [INFO] ==================================================
+10:17:55.403 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.403 [INFO]   Contracts: 25 | K: $0.1000 + $0.25 fee | P: $0.3900
+10:17:55.403 [INFO]   Total: $12.74 | Guaranteed profit: $12.26
+10:17:55.403 [INFO] ==================================================
+10:17:55.403 [INFO] [TEST] Poly: BUY 25 @ $0.4100 (limit) token=7636095101592286…
+10:17:55.403 [INFO] [TEST] Kalshi: YES 25 @ $0.1000 on KXCAPRIMARY-40FIRST26-KCAL
+10:17:55.403 [INFO] TRADE OK: 25 contracts, profit $12.26
+10:17:55.428 [INFO] [PnL] This trade: +$12.26 | Session total: +$30330.35 (3628 trades)
+10:17:55.428 [INFO] [ARB] CA-40 primary: first plac | Esther Kim Varet | K_YES+P_NO: 0.880 | Vol:200 Profit:8.1%
+10:17:55.428 [INFO] ==================================================
+10:17:55.428 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.428 [INFO]   Contracts: 16 | K: $0.2800 + $0.32 fee | P: $0.6000
+10:17:55.428 [INFO]   Total: $14.55 | Guaranteed profit: $1.45
+10:17:55.428 [INFO] ==================================================
+10:17:55.428 [INFO] [TEST] Poly: BUY 16 @ $0.6200 (limit) token=1067785364927625…
+10:17:55.428 [INFO] [TEST] Kalshi: YES 16 @ $0.2800 on KXCAPRIMARY-40FIRST26-EVAR
+10:17:55.428 [INFO] TRADE OK: 16 contracts, profit $1.45
+10:17:55.455 [INFO] [PnL] This trade: +$1.45 | Session total: +$30331.80 (3629 trades)
+10:17:55.455 [INFO] [NR-ALERT] Which AI company will hav | Anthropic | K_YES+P_NO: 0.705 | Profit:27.6% (no vol)
+10:17:55.455 [INFO] [ARB] Which states will redistr | Utah | K_YES+P_NO: 0.370 | Vol:3897 Profit:11.3%
+10:17:55.455 [INFO] ==================================================
+10:17:55.455 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.455 [INFO]   Contracts: 43 | K: $0.2200 + $0.86 fee | P: $0.1500
+10:17:55.455 [INFO]   Total: $16.99 | Guaranteed profit: $26.01
+10:17:55.455 [INFO] ==================================================
+10:17:55.455 [INFO] [TEST] Poly: BUY 43 @ $0.1700 (limit) token=4095401900377743…
+10:17:55.455 [INFO] [TEST] Kalshi: YES 43 @ $0.2200 on KXREDISTRICTING-26-UTAH
+10:17:55.455 [INFO] TRADE OK: 43 contracts, profit $26.01
+10:17:55.480 [INFO] [PnL] This trade: +$26.01 | Session total: +$30357.81 (3630 trades)
+10:17:55.480 [INFO] [ARB] CA-48 primary: first plac | Ammar Campa-Najjar | K_YES+P_NO: 0.470 | Vol:400 Profit:40.9%
+10:17:55.480 [INFO] ==================================================
+10:17:55.480 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.481 [INFO]   Contracts: 25 | K: $0.0900 + $0.25 fee | P: $0.3800
+10:17:55.481 [INFO]   Total: $12.24 | Guaranteed profit: $12.76
+10:17:55.481 [INFO] ==================================================
+10:17:55.481 [INFO] [TEST] Poly: BUY 25 @ $0.4000 (limit) token=2768157937874120…
+10:17:55.481 [INFO] [TEST] Kalshi: YES 25 @ $0.0900 on KXCAPRIMARY-48FIRST26-ACAM
+10:17:55.481 [INFO] TRADE OK: 25 contracts, profit $12.76
+10:17:55.506 [INFO] [PnL] This trade: +$12.76 | Session total: +$30370.58 (3631 trades)
+10:17:55.506 [INFO] [ARB] CA-48 primary: first plac | Marni von Wilpert | K_YES+P_NO: 0.530 | Vol:400 Profit:26.1%
+10:17:55.506 [INFO] ==================================================
+10:17:55.506 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.506 [INFO]   Contracts: 22 | K: $0.0900 + $0.22 fee | P: $0.4400
+10:17:55.506 [INFO]   Total: $12.10 | Guaranteed profit: $9.90
+10:17:55.506 [INFO] ==================================================
+10:17:55.506 [INFO] [TEST] Poly: BUY 22 @ $0.4599 (limit) token=6999068979732433…
+10:17:55.506 [INFO] [TEST] Kalshi: YES 22 @ $0.0900 on KXCAPRIMARY-48FIRST26-MWIL
+10:17:55.506 [INFO] TRADE OK: 22 contracts, profit $9.90
+10:17:55.531 [INFO] [PnL] This trade: +$9.90 | Session total: +$30380.48 (3632 trades)
+10:17:55.531 [INFO] [ARB] Which companies will have | OpenAI | K_NO+P_YES: 0.920 | Vol:80 Profit:5.2%
+10:17:55.531 [INFO] ==================================================
+10:17:55.531 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.531 [INFO]   Contracts: 19 | K: $0.4900 + $0.38 fee | P: $0.4300
+10:17:55.531 [INFO]   Total: $18.05 | Guaranteed profit: $0.95
+10:17:55.531 [INFO] ==================================================
+10:17:55.531 [INFO] [TEST] Poly: BUY 19 @ $0.4500 (limit) token=7079360144609003…
+10:17:55.531 [INFO] [TEST] Kalshi: NO 19 @ $0.4900 on KXTOPAI-27-JAN01-OPEN
+10:17:55.531 [INFO] TRADE OK: 19 contracts, profit $0.95
+10:17:55.556 [INFO] [PnL] This trade: +$0.95 | Session total: +$30381.43 (3633 trades)
+10:17:55.556 [INFO] [ARB] Who will leave their role | Pete Hegseth | K_NO+P_YES: 0.930 | Vol:2 Profit:4.0%
+10:17:55.556 [INFO] [ARB] Who will leave their role | Howard Lutnick | K_NO+P_YES: 0.920 | Vol:45 Profit:5.1%
+10:17:55.556 [INFO] ==================================================
+10:17:55.556 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.556 [INFO]   Contracts: 20 | K: $0.4500 + $0.40 fee | P: $0.4700
+10:17:55.556 [INFO]   Total: $19.00 | Guaranteed profit: $1.00
+10:17:55.556 [INFO] ==================================================
+10:17:55.556 [INFO] [TEST] Poly: BUY 20 @ $0.4900 (limit) token=4146202523366219…
+10:17:55.556 [INFO] [TEST] Kalshi: NO 20 @ $0.4500 on KXTRUMPADMINLEAVE-26DEC31-HLUT
+10:17:55.556 [INFO] TRADE OK: 20 contracts, profit $1.00
+10:17:55.582 [INFO] [PnL] This trade: +$1.00 | Session total: +$30382.43 (3634 trades)
+10:17:55.582 [INFO] [ARB] What kind of device will  | Glasses | K_YES+P_NO: 0.860 | Vol:526 Profit:9.3%
+10:17:55.582 [INFO] ==================================================
+10:17:55.582 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.582 [INFO]   Contracts: 14 | K: $0.1900 + $0.28 fee | P: $0.6700
+10:17:55.582 [INFO]   Total: $12.44 | Guaranteed profit: $1.56
+10:17:55.582 [INFO] ==================================================
+10:17:55.582 [INFO] [TEST] Poly: BUY 14 @ $0.6900 (limit) token=7860813783788365…
+10:17:55.582 [INFO] [TEST] Kalshi: YES 14 @ $0.1900 on KXOAIHARDWARE-27-GLASSES
+10:17:55.582 [INFO] TRADE OK: 14 contracts, profit $1.56
+10:17:55.607 [INFO] [PnL] This trade: +$1.56 | Session total: +$30383.99 (3635 trades)
+10:17:55.607 [INFO] [ARB] What kind of device will  | Earbuds/Headphones | K_NO+P_YES: 0.910 | Vol:555 Profit:4.6%
+10:17:55.607 [INFO] ==================================================
+10:17:55.608 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.608 [INFO]   Contracts: 16 | K: $0.6000 + $0.32 fee | P: $0.3100
+10:17:55.608 [INFO]   Total: $15.02 | Guaranteed profit: $0.98
+10:17:55.608 [INFO] ==================================================
+10:17:55.608 [INFO] [TEST] Poly: BUY 16 @ $0.3300 (limit) token=1604047017659033…
+10:17:55.608 [INFO] [TEST] Kalshi: NO 16 @ $0.6000 on KXOAIHARDWARE-27-EARBUDS
+10:17:55.608 [INFO] TRADE OK: 16 contracts, profit $0.98
+10:17:55.633 [INFO] [PnL] This trade: +$0.98 | Session total: +$30384.97 (3636 trades)
+10:17:55.633 [INFO] [ARB] CA-04 primary: first plac | Mike Thompson | K_YES+P_NO: 0.490 | Vol:472 Profit:45.8%
+10:17:55.633 [INFO] [ARB] CA-04 primary: first plac | Eric Jones | K_YES+P_NO: 0.691 | Vol:579 Profit:21.2%
+10:17:55.633 [INFO] ==================================================
+10:17:55.633 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.633 [INFO]   Contracts: 16 | K: $0.5900 + $0.32 fee | P: $0.1010
+10:17:55.633 [INFO]   Total: $11.43 | Guaranteed profit: $4.57
+10:17:55.633 [INFO] ==================================================
+10:17:55.633 [INFO] [TEST] Poly: BUY 16 @ $0.1209 (limit) token=2705254663607826…
+10:17:55.633 [INFO] [TEST] Kalshi: YES 16 @ $0.5900 on KXCAPRIMARY-04FIRST26-EJON
+10:17:55.633 [INFO] TRADE OK: 16 contracts, profit $4.57
+10:17:55.658 [INFO] [PnL] This trade: +$4.57 | Session total: +$30389.54 (3637 trades)
+10:17:55.658 [INFO] [NR-ALERT] Who will win the next Arg | Javier Milei | K_NO+P_YES: 0.830 | Profit:14.6% (no vol)
+10:17:55.658 [INFO] [ARB] Who will have a #1 hit th | Rihanna | K_YES+P_NO: 0.899 | Vol:134 Profit:6.8%
+10:17:55.658 [INFO] ==================================================
+10:17:55.658 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.658 [INFO]   Contracts: 13 | K: $0.1700 + $0.13 fee | P: $0.7290
+10:17:55.658 [INFO]   Total: $11.92 | Guaranteed profit: $1.08
+10:17:55.658 [INFO] ==================================================
+10:17:55.658 [INFO] [TEST] Poly: BUY 13 @ $0.7490 (limit) token=8806187002156456…
+10:17:55.658 [INFO] [TEST] Kalshi: YES 13 @ $0.1700 on KX1SONG-DEC2626-RIH
+10:17:55.658 [INFO] TRADE OK: 13 contracts, profit $1.08
+10:17:55.684 [INFO] [PnL] This trade: +$1.08 | Session total: +$30390.62 (3638 trades)
+10:17:55.684 [INFO] [ARB] Who will have a #1 hit th | Kendrick Lamar | K_YES+P_NO: 0.930 | Vol:1 Profit:3.5%
+10:17:55.684 [INFO] [ARB] Who will have a #1 hit th | Morgan Wallen | K_YES+P_NO: 0.900 | Vol:20 Profit:6.2%
+10:17:55.684 [INFO] ==================================================
+10:17:55.684 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.684 [INFO]   Contracts: 14 | K: $0.2100 + $0.28 fee | P: $0.6900
+10:17:55.684 [INFO]   Total: $13.00 | Guaranteed profit: $1.00
+10:17:55.684 [INFO] ==================================================
+10:17:55.684 [INFO] [TEST] Poly: BUY 14 @ $0.7100 (limit) token=5006998993099600…
+10:17:55.684 [INFO] [TEST] Kalshi: YES 14 @ $0.2100 on KX1SONG-DEC2626-MEG
+10:17:55.684 [INFO] TRADE OK: 14 contracts, profit $1.00
+10:17:55.710 [INFO] [PnL] This trade: +$1.00 | Session total: +$30391.62 (3639 trades)
+10:17:55.710 [INFO] [NR-ALERT] Texas House of Representa | Republican Party | K_YES+P_NO: 0.850 | Profit:13.2% (no vol)
+10:17:55.710 [INFO] [NR-ALERT] Texas House of Representa | Democratic Party | K_NO+P_YES: 0.850 | Profit:13.2% (no vol)
+10:17:55.710 [INFO] [ARB] Who will be a Bridesmaid  | Gigi Hadid | K_YES+P_NO: 0.900 | Vol:52 Profit:6.0%
+10:17:55.710 [INFO] ==================================================
+10:17:55.710 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.710 [INFO]   Contracts: 15 | K: $0.6100 + $0.30 fee | P: $0.2900
+10:17:55.710 [INFO]   Total: $13.92 | Guaranteed profit: $1.08
+10:17:55.710 [INFO] ==================================================
+10:17:55.710 [INFO] [TEST] Poly: BUY 15 @ $0.3100 (limit) token=8415704034962917…
+10:17:55.710 [INFO] [TEST] Kalshi: YES 15 @ $0.6100 on KXTAYLORSWIFTWEDDING-30JAN01-GIG
+10:17:55.710 [INFO] TRADE OK: 15 contracts, profit $1.08
+10:17:55.736 [INFO] [PnL] This trade: +$1.08 | Session total: +$30392.70 (3640 trades)
+10:17:55.736 [INFO] [NR-ALERT] Ohio Secretary of State w | Democrat | K_YES+P_NO: 0.760 | Profit:21.9% (no vol)
+10:17:55.736 [INFO] [NR-ALERT] Ohio Secretary of State w | Republican | K_NO+P_YES: 0.770 | Profit:20.9% (no vol)
+10:17:55.736 [INFO] [ARB] Who will Donald Trump tal | Kim Jong Un | K_NO+P_YES: 0.092 | Vol:5501 Profit:58.3%
+10:17:55.736 [INFO] ==================================================
+10:17:55.736 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.736 [INFO]   Contracts: 156 | K: $0.0600 + $1.56 fee | P: $0.0320
+10:17:55.736 [INFO]   Total: $15.91 | Guaranteed profit: $140.09
+10:17:55.736 [INFO] ==================================================
+10:17:55.736 [INFO] [TEST] Poly: BUY 156 @ $0.0520 (limit) token=8069606787969518…
+10:17:55.736 [INFO] [TEST] Kalshi: NO 156 @ $0.0600 on KXTRUMPMEET-26MAY-JTHU
+10:17:55.736 [INFO] TRADE OK: 156 contracts, profit $140.09
+10:17:55.761 [INFO] [PnL] This trade: +$140.09 | Session total: +$30532.78 (3641 trades)
+10:17:55.761 [INFO] [ARB] Who will lead the next qu | Steve Hilton | K_YES+P_NO: 0.580 | Vol:155 Profit:37.4%
+10:17:55.761 [INFO] ==================================================
+10:17:55.761 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.761 [INFO]   Contracts: 27 | K: $0.3500 + $0.54 fee | P: $0.2300
+10:17:55.761 [INFO]   Total: $16.39 | Guaranteed profit: $10.61
+10:17:55.761 [INFO] ==================================================
+10:17:55.761 [INFO] [TEST] Poly: BUY 27 @ $0.2499 (limit) token=4184990669203236…
+10:17:55.761 [INFO] [TEST] Kalshi: YES 27 @ $0.3500 on KXLEADPOLL-CAGOV13MAY26-SHIL
+10:17:55.761 [INFO] TRADE OK: 27 contracts, profit $10.61
+10:17:55.786 [INFO] [PnL] This trade: +$10.61 | Session total: +$30543.39 (3642 trades)
+10:17:55.786 [INFO] [ARB] Who will lead the next qu | Tom Steyer | K_YES+P_NO: 0.870 | Vol:155 Profit:9.2%
+10:17:55.786 [INFO] ==================================================
+10:17:55.786 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.786 [INFO]   Contracts: 15 | K: $0.2200 + $0.30 fee | P: $0.6500
+10:17:55.786 [INFO]   Total: $13.49 | Guaranteed profit: $1.51
+10:17:55.786 [INFO] ==================================================
+10:17:55.786 [INFO] [TEST] Poly: BUY 15 @ $0.6700 (limit) token=1108557541743907…
+10:17:55.786 [INFO] [TEST] Kalshi: YES 15 @ $0.2200 on KXLEADPOLL-CAGOV13MAY26-TSTE
+10:17:55.786 [INFO] TRADE OK: 15 contracts, profit $1.51
+10:17:55.812 [INFO] [PnL] This trade: +$1.51 | Session total: +$30544.91 (3643 trades)
+10:17:55.812 [INFO] [ARB] Who will lead the next qu | Xavier Becerra | K_YES+P_NO: 0.762 | Vol:155 Profit:19.5%
+10:17:55.812 [INFO] ==================================================
+10:17:55.812 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.812 [INFO]   Contracts: 20 | K: $0.4800 + $0.40 fee | P: $0.2820
+10:17:55.812 [INFO]   Total: $15.80 | Guaranteed profit: $4.20
+10:17:55.812 [INFO] ==================================================
+10:17:55.812 [INFO] [TEST] Poly: BUY 20 @ $0.3020 (limit) token=7101828425788224…
+10:17:55.812 [INFO] [TEST] Kalshi: YES 20 @ $0.4800 on KXLEADPOLL-CAGOV13MAY26-XBEC
+10:17:55.812 [INFO] TRADE OK: 20 contracts, profit $4.20
+10:17:55.838 [INFO] [PnL] This trade: +$4.20 | Session total: +$30549.10 (3644 trades)
+10:17:55.838 [INFO] [NR-ALERT] Who will be the next Prim | Andy Burnham | K_NO+P_YES: 0.898 | Profit:7.8% (no vol)
+10:17:55.838 [INFO] [NR-ALERT] How many Senate seats wil | ≤47 | K_YES+P_NO: 0.743 | Profit:24.7% (no vol)
+10:17:55.838 [INFO] [ARB] Peak US National Debt Und | $41 trillion | K_NO+P_YES: 0.790 | Vol:342 Profit:12.2%
+10:17:55.838 [INFO] ==================================================
+10:17:55.838 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.838 [INFO]   Contracts: 16 | K: $0.1900 + $0.32 fee | P: $0.6000
+10:17:55.838 [INFO]   Total: $13.11 | Guaranteed profit: $2.89
+10:17:55.838 [INFO] ==================================================
+10:17:55.838 [INFO] [TEST] Poly: BUY 16 @ $0.6200 (limit) token=3924554927953214…
+10:17:55.838 [INFO] [TEST] Kalshi: NO 16 @ $0.1900 on KXDEBTGROWTH-28DEC31-45
+10:17:55.838 [INFO] TRADE OK: 16 contracts, profit $2.89
+10:17:55.864 [INFO] [PnL] This trade: +$2.89 | Session total: +$30551.99 (3645 trades)
+10:17:55.864 [INFO] [NR-ALERT] How many House seats will | Below 190 | K_YES+P_NO: 0.750 | Profit:23.1% (no vol)
+10:17:55.864 [INFO] [NR-ALERT] How many House seats will | 205-209 | K_NO+P_YES: 0.937 | Profit:5.3% (no vol)
+10:17:55.864 [INFO] [ARB] Where will Waymo operate  | Las Vegas | K_NO+P_YES: 0.470 | Vol:15 Profit:50.3%
+10:17:55.864 [INFO] ==================================================
+10:17:55.864 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.864 [INFO]   Contracts: 15 | K: $0.3900 + $0.30 fee | P: $0.0800
+10:17:55.864 [INFO]   Total: $7.39 | Guaranteed profit: $7.61
+10:17:55.864 [INFO] ==================================================
+10:17:55.864 [INFO] [TEST] Poly: BUY 15 @ $0.1000 (limit) token=1007858579408644…
+10:17:55.864 [INFO] [TEST] Kalshi: NO 15 @ $0.3900 on KXWAYMOCITY-26DEC-LAS
+10:17:55.864 [INFO] TRADE OK: 15 contracts, profit $7.61
+10:17:55.889 [INFO] [PnL] This trade: +$7.61 | Session total: +$30559.60 (3646 trades)
+10:17:55.889 [INFO] [ARB] Where will Waymo operate  | Denver | K_NO+P_YES: 0.471 | Vol:5 Profit:50.8%
+10:17:55.889 [INFO] [ARB] Which countries will norm | Saudi Arabia | K_NO+P_YES: 0.869 | Vol:815 Profit:10.8%
+10:17:55.889 [INFO] [ARB] Which countries will norm | Lebanon | K_NO+P_YES: 0.877 | Vol:178 Profit:10.1%
+10:17:55.889 [INFO] [ARB] Who will run for the Demo | Cory Booker | K_NO+P_YES: 0.460 | Vol:1187 Profit:38.7%
+10:17:55.889 [INFO] ==================================================
+10:17:55.889 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.889 [INFO]   Contracts: 25 | K: $0.3700 + $0.50 fee | P: $0.0900
+10:17:55.889 [INFO]   Total: $12.08 | Guaranteed profit: $12.92
+10:17:55.889 [INFO] ==================================================
+10:17:55.889 [INFO] [TEST] Poly: BUY 25 @ $0.1100 (limit) token=1549514187421656…
+10:17:55.889 [INFO] [TEST] Kalshi: NO 25 @ $0.3700 on KX2028DRUN-28-CBOOK
+10:17:55.889 [INFO] TRADE OK: 25 contracts, profit $12.92
+10:17:55.913 [INFO] [PnL] This trade: +$12.92 | Session total: +$30572.51 (3647 trades)
+10:17:55.914 [INFO] [ARB] Who will run for the Demo | Gavin Newsom | K_NO+P_YES: 0.300 | Vol:4124 Profit:37.6%
+10:17:55.914 [INFO] ==================================================
+10:17:55.914 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.914 [INFO]   Contracts: 62 | K: $0.1500 + $0.62 fee | P: $0.1500
+10:17:55.914 [INFO]   Total: $19.54 | Guaranteed profit: $42.46
+10:17:55.914 [INFO] ==================================================
+10:17:55.914 [INFO] [TEST] Poly: BUY 62 @ $0.1699 (limit) token=1616178100351867…
+10:17:55.914 [INFO] [TEST] Kalshi: NO 62 @ $0.1500 on KX2028DRUN-28-GNEW
+10:17:55.914 [INFO] TRADE OK: 62 contracts, profit $42.46
+10:17:55.939 [INFO] [PnL] This trade: +$42.46 | Session total: +$30614.98 (3648 trades)
+10:17:55.939 [INFO] [ARB] Who will run for the Demo | Josh Shapiro | K_NO+P_YES: 0.320 | Vol:1526 Profit:29.2%
+10:17:55.939 [INFO] ==================================================
+10:17:55.939 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.939 [INFO]   Contracts: 45 | K: $0.2100 + $0.90 fee | P: $0.1100
+10:17:55.939 [INFO]   Total: $15.48 | Guaranteed profit: $29.52
+10:17:55.939 [INFO] ==================================================
+10:17:55.939 [INFO] [TEST] Poly: BUY 45 @ $0.1300 (limit) token=4036642607986874…
+10:17:55.939 [INFO] [TEST] Kalshi: NO 45 @ $0.2100 on KX2028DRUN-28-JSHA
+10:17:55.939 [INFO] TRADE OK: 45 contracts, profit $29.52
+10:17:55.965 [INFO] [PnL] This trade: +$29.52 | Session total: +$30644.50 (3649 trades)
+10:17:55.965 [INFO] [ARB] Who will run for the Demo | Pete Buttigieg | K_NO+P_YES: 0.390 | Vol:2519 Profit:39.2%
+10:17:55.965 [INFO] ==================================================
+10:17:55.965 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.965 [INFO]   Contracts: 47 | K: $0.2000 + $0.94 fee | P: $0.1900
+10:17:55.965 [INFO]   Total: $19.56 | Guaranteed profit: $27.44
+10:17:55.965 [INFO] ==================================================
+10:17:55.965 [INFO] [TEST] Poly: BUY 47 @ $0.2100 (limit) token=8417857546958031…
+10:17:55.965 [INFO] [TEST] Kalshi: NO 47 @ $0.2000 on KX2028DRUN-28-PBUT
+10:17:55.965 [INFO] TRADE OK: 47 contracts, profit $27.44
+10:17:55.990 [INFO] [PnL] This trade: +$27.44 | Session total: +$30671.94 (3650 trades)
+10:17:55.990 [INFO] [ARB] Who will run for the Demo | Gretchen Whitmer | K_NO+P_YES: 0.520 | Vol:1276 Profit:34.5%
+10:17:55.991 [INFO] ==================================================
+10:17:55.991 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:55.991 [INFO]   Contracts: 25 | K: $0.3800 + $0.50 fee | P: $0.1400
+10:17:55.991 [INFO]   Total: $13.62 | Guaranteed profit: $11.38
+10:17:55.991 [INFO] ==================================================
+10:17:55.991 [INFO] [TEST] Poly: BUY 25 @ $0.1600 (limit) token=2602131186579964…
+10:17:55.991 [INFO] [TEST] Kalshi: NO 25 @ $0.3800 on KX2028DRUN-28-GWHI
+10:17:55.991 [INFO] TRADE OK: 25 contracts, profit $11.38
+10:17:56.016 [INFO] [PnL] This trade: +$11.38 | Session total: +$30683.32 (3651 trades)
+10:17:56.016 [INFO] [ARB] Who will run for the Demo | Wes Moore | K_NO+P_YES: 0.570 | Vol:1936 Profit:30.1%
+10:17:56.016 [INFO] ==================================================
+10:17:56.016 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.016 [INFO]   Contracts: 20 | K: $0.4800 + $0.40 fee | P: $0.0900
+10:17:56.016 [INFO]   Total: $11.87 | Guaranteed profit: $8.13
+10:17:56.016 [INFO] ==================================================
+10:17:56.016 [INFO] [TEST] Poly: BUY 20 @ $0.1100 (limit) token=1123939890232501…
+10:17:56.016 [INFO] [TEST] Kalshi: NO 20 @ $0.4800 on KX2028DRUN-28-WMOO
+10:17:56.016 [INFO] TRADE OK: 20 contracts, profit $8.13
+10:17:56.043 [INFO] [PnL] This trade: +$8.13 | Session total: +$30691.46 (3652 trades)
+10:17:56.043 [INFO] [ARB] Who will run for the Demo | Alexandria Ocasio-Co | K_NO+P_YES: 0.670 | Vol:1217 Profit:23.6%
+10:17:56.043 [INFO] ==================================================
+10:17:56.043 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.043 [INFO]   Contracts: 18 | K: $0.5300 + $0.36 fee | P: $0.1400
+10:17:56.043 [INFO]   Total: $12.51 | Guaranteed profit: $5.49
+10:17:56.043 [INFO] ==================================================
+10:17:56.043 [INFO] [TEST] Poly: BUY 18 @ $0.1600 (limit) token=1016976744083925…
+10:17:56.043 [INFO] [TEST] Kalshi: NO 18 @ $0.5300 on KX2028DRUN-28-AOC
+10:17:56.043 [INFO] TRADE OK: 18 contracts, profit $5.49
+10:17:56.068 [INFO] [PnL] This trade: +$5.49 | Session total: +$30696.95 (3653 trades)
+10:17:56.068 [INFO] [ARB] Who will run for the Demo | Kamala Harris | K_NO+P_YES: 0.620 | Vol:713 Profit:31.4%
+10:17:56.068 [INFO] ==================================================
+10:17:56.068 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.068 [INFO]   Contracts: 23 | K: $0.4000 + $0.46 fee | P: $0.2200
+10:17:56.068 [INFO]   Total: $14.88 | Guaranteed profit: $8.12
+10:17:56.068 [INFO] ==================================================
+10:17:56.068 [INFO] [TEST] Poly: BUY 23 @ $0.2400 (limit) token=2189291856647748…
+10:17:56.068 [INFO] [TEST] Kalshi: NO 23 @ $0.4000 on KX2028DRUN-28-KHAR
+10:17:56.068 [INFO] TRADE OK: 23 contracts, profit $8.12
+10:17:56.093 [INFO] [PnL] This trade: +$8.12 | Session total: +$30705.07 (3654 trades)
+10:17:56.093 [INFO] [ARB] Who will run for the Demo | Stephen A. Smith | K_NO+P_YES: 0.910 | Vol:572 Profit:7.4%
+10:17:56.093 [INFO] ==================================================
+10:17:56.094 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.094 [INFO]   Contracts: 12 | K: $0.8000 + $0.24 fee | P: $0.1100
+10:17:56.094 [INFO]   Total: $11.21 | Guaranteed profit: $0.79
+10:17:56.094 [INFO] ==================================================
+10:17:56.094 [INFO] [TEST] Poly: BUY 12 @ $0.1300 (limit) token=4202961430364080…
+10:17:56.094 [INFO] [TEST] Kalshi: NO 12 @ $0.8000 on KX2028DRUN-28-SAS
+10:17:56.094 [INFO] TRADE OK: 12 contracts, profit $0.79
+10:17:56.119 [INFO] [PnL] This trade: +$0.79 | Session total: +$30705.86 (3655 trades)
+10:17:56.119 [INFO] [ARB] Who will run for the Demo | Andy Beshear | K_NO+P_YES: 0.350 | Vol:1608 Profit:39.7%
+10:17:56.119 [INFO] ==================================================
+10:17:56.119 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.119 [INFO]   Contracts: 53 | K: $0.1700 + $0.53 fee | P: $0.1800
+10:17:56.119 [INFO]   Total: $19.39 | Guaranteed profit: $33.61
+10:17:56.119 [INFO] ==================================================
+10:17:56.120 [INFO] [TEST] Poly: BUY 53 @ $0.1999 (limit) token=1065369325550774…
+10:17:56.120 [INFO] [TEST] Kalshi: NO 53 @ $0.1700 on KX2028DRUN-28-ABES
+10:17:56.120 [INFO] TRADE OK: 53 contracts, profit $33.61
+10:17:56.145 [INFO] [PnL] This trade: +$33.61 | Session total: +$30739.47 (3656 trades)
+10:17:56.145 [INFO] [ARB] Who will run for the Demo | J.B. Pritzker | K_NO+P_YES: 0.440 | Vol:1663 Profit:41.1%
+10:17:56.145 [INFO] ==================================================
+10:17:56.145 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.145 [INFO]   Contracts: 38 | K: $0.2500 + $0.76 fee | P: $0.1900
+10:17:56.145 [INFO]   Total: $17.71 | Guaranteed profit: $20.29
+10:17:56.145 [INFO] ==================================================
+10:17:56.145 [INFO] [TEST] Poly: BUY 38 @ $0.2100 (limit) token=7603238540605488…
+10:17:56.145 [INFO] [TEST] Kalshi: NO 38 @ $0.2500 on KX2028DRUN-28-JPRI
+10:17:56.145 [INFO] TRADE OK: 38 contracts, profit $20.29
+10:17:56.170 [INFO] [PnL] This trade: +$20.29 | Session total: +$30759.76 (3657 trades)
+10:17:56.170 [INFO] [ARB] Who will run for the Demo | John Fetterman | K_NO+P_YES: 0.910 | Vol:217 Profit:7.0%
+10:17:56.170 [INFO] ==================================================
+10:17:56.170 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.170 [INFO]   Contracts: 12 | K: $0.7800 + $0.24 fee | P: $0.1300
+10:17:56.170 [INFO]   Total: $11.21 | Guaranteed profit: $0.79
+10:17:56.171 [INFO] ==================================================
+10:17:56.171 [INFO] [TEST] Poly: BUY 12 @ $0.1500 (limit) token=5523712629402030…
+10:17:56.171 [INFO] [TEST] Kalshi: NO 12 @ $0.7800 on KX2028DRUN-28-JFET
+10:17:56.171 [INFO] TRADE OK: 12 contracts, profit $0.79
+10:17:56.196 [INFO] [PnL] This trade: +$0.79 | Session total: +$30760.54 (3658 trades)
+10:17:56.196 [INFO] [ARB] Who will run for the Demo | Mark Cuban | K_NO+P_YES: 0.910 | Vol:230 Profit:5.9%
+10:17:56.196 [INFO] ==================================================
+10:17:56.196 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.196 [INFO]   Contracts: 12 | K: $0.8100 + $0.24 fee | P: $0.1000
+10:17:56.196 [INFO]   Total: $11.20 | Guaranteed profit: $0.80
+10:17:56.196 [INFO] ==================================================
+10:17:56.196 [INFO] [TEST] Poly: BUY 12 @ $0.1200 (limit) token=6896959083344808…
+10:17:56.196 [INFO] [TEST] Kalshi: NO 12 @ $0.8100 on KX2028DRUN-28-MCUB
+10:17:56.196 [INFO] TRADE OK: 12 contracts, profit $0.80
+10:17:56.221 [INFO] [PnL] This trade: +$0.80 | Session total: +$30761.34 (3659 trades)
+10:17:56.221 [INFO] [ARB] Who will run for the Demo | Roy Cooper | K_NO+P_YES: 0.840 | Vol:721 Profit:12.1%
+10:17:56.221 [INFO] [ARB] Who will run for the Demo | Raphael Warnock | K_NO+P_YES: 0.820 | Vol:337 Profit:14.2%
+10:17:56.221 [INFO] ==================================================
+10:17:56.221 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.221 [INFO]   Contracts: 14 | K: $0.6800 + $0.28 fee | P: $0.1400
+10:17:56.221 [INFO]   Total: $11.83 | Guaranteed profit: $2.17
+10:17:56.221 [INFO] ==================================================
+10:17:56.221 [INFO] [TEST] Poly: BUY 14 @ $0.1600 (limit) token=1113482844934470…
+10:17:56.221 [INFO] [TEST] Kalshi: NO 14 @ $0.6800 on KX2028DRUN-28-RWAR
+10:17:56.221 [INFO] TRADE OK: 14 contracts, profit $2.17
+10:17:56.247 [INFO] [PnL] This trade: +$2.17 | Session total: +$30763.51 (3660 trades)
+10:17:56.247 [INFO] [ARB] Who will run for the Demo | Mark Kelly | K_NO+P_YES: 0.500 | Vol:1212 Profit:36.4%
+10:17:56.247 [INFO] ==================================================
+10:17:56.247 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.247 [INFO]   Contracts: 28 | K: $0.3300 + $0.56 fee | P: $0.1700
+10:17:56.247 [INFO]   Total: $14.72 | Guaranteed profit: $13.28
+10:17:56.247 [INFO] ==================================================
+10:17:56.247 [INFO] [TEST] Poly: BUY 28 @ $0.1900 (limit) token=7724165941568693…
+10:17:56.247 [INFO] [TEST] Kalshi: NO 28 @ $0.3300 on KX2028DRUN-28-MKEL
+10:17:56.247 [INFO] TRADE OK: 28 contracts, profit $13.28
+10:17:56.273 [INFO] [PnL] This trade: +$13.28 | Session total: +$30776.79 (3661 trades)
+10:17:56.273 [INFO] [ARB] Who will run for the Demo | Jared Polis | K_NO+P_YES: 0.620 | Vol:1536 Profit:31.0%
+10:17:56.273 [INFO] ==================================================
+10:17:56.273 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.273 [INFO]   Contracts: 18 | K: $0.5100 + $0.36 fee | P: $0.1100
+10:17:56.273 [INFO]   Total: $11.59 | Guaranteed profit: $6.41
+10:17:56.273 [INFO] ==================================================
+10:17:56.273 [INFO] [TEST] Poly: BUY 18 @ $0.1300 (limit) token=1084830995814490…
+10:17:56.273 [INFO] [TEST] Kalshi: NO 18 @ $0.5100 on KX2028DRUN-28-JPOL
+10:17:56.273 [INFO] TRADE OK: 18 contracts, profit $6.41
+10:17:56.298 [INFO] [PnL] This trade: +$6.41 | Session total: +$30783.20 (3662 trades)
+10:17:56.298 [INFO] [ARB] Who will run for the Demo | Jon Stewart | K_NO+P_YES: 0.890 | Vol:193 Profit:8.9%
+10:17:56.298 [INFO] [ARB] Who will run for the Demo | Rahm Emanuel | K_NO+P_YES: 0.610 | Vol:563 Profit:29.5%
+10:17:56.298 [INFO] ==================================================
+10:17:56.298 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.298 [INFO]   Contracts: 27 | K: $0.2600 + $0.54 fee | P: $0.3500
+10:17:56.298 [INFO]   Total: $17.26 | Guaranteed profit: $9.74
+10:17:56.298 [INFO] ==================================================
+10:17:56.298 [INFO] [TEST] Poly: BUY 27 @ $0.3700 (limit) token=3957947772547427…
+10:17:56.298 [INFO] [TEST] Kalshi: NO 27 @ $0.2600 on KX2028DRUN-28-REMA
+10:17:56.298 [INFO] TRADE OK: 27 contracts, profit $9.74
+10:17:56.323 [INFO] [PnL] This trade: +$9.74 | Session total: +$30792.95 (3663 trades)
+10:17:56.323 [INFO] [ARB] Who will run for the Demo | Phil Murphy | K_NO+P_YES: 0.723 | Vol:257 Profit:12.5%
+10:17:56.323 [INFO] [ARB] Who will run for the Demo | Elise Stefanik | K_NO+P_YES: 0.757 | Vol:1507 Profit:14.2%
+10:17:56.323 [INFO] ==================================================
+10:17:56.323 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.323 [INFO]   Contracts: 15 | K: $0.6400 + $0.30 fee | P: $0.1170
+10:17:56.323 [INFO]   Total: $11.72 | Guaranteed profit: $3.28
+10:17:56.323 [INFO] ==================================================
+10:17:56.323 [INFO] [TEST] Poly: BUY 15 @ $0.1370 (limit) token=5840590871025493…
+10:17:56.323 [INFO] [TEST] Kalshi: NO 15 @ $0.6400 on KX2028DRUN-28-ESLO
+10:17:56.323 [INFO] TRADE OK: 15 contracts, profit $3.28
+10:17:56.349 [INFO] [PnL] This trade: +$3.28 | Session total: +$30796.23 (3664 trades)
+10:17:56.349 [INFO] [ARB] Who will run for the Demo | Jon Ossoff | K_NO+P_YES: 0.710 | Vol:598 Profit:25.1%
+10:17:56.349 [INFO] ==================================================
+10:17:56.349 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.349 [INFO]   Contracts: 16 | K: $0.6000 + $0.32 fee | P: $0.1100
+10:17:56.349 [INFO]   Total: $11.74 | Guaranteed profit: $4.26
+10:17:56.349 [INFO] ==================================================
+10:17:56.349 [INFO] [TEST] Poly: BUY 16 @ $0.1300 (limit) token=8263703551808232…
+10:17:56.349 [INFO] [TEST] Kalshi: NO 16 @ $0.6000 on KX2028DRUN-28-JOSS
+10:17:56.349 [INFO] TRADE OK: 16 contracts, profit $4.26
+10:17:56.374 [INFO] [PnL] This trade: +$4.26 | Session total: +$30800.49 (3665 trades)
+10:17:56.374 [INFO] [NR-ALERT] Who will win the next Sen | Chuck Schumer | K_NO+P_YES: 0.750 | Profit:22.7% (no vol)
+10:17:56.374 [INFO] [NR-ALERT] Which bank will take Spac | Goldman Sachs | K_NO+P_YES: 0.930 | Profit:6.3% (no vol)
+10:17:56.374 [INFO] [NR-ALERT] Which bank will take Spac | Morgan Stanley | K_NO+P_YES: 0.190 | Profit:80.3% (no vol)
+10:17:56.374 [INFO] [NR-ALERT] Ann Arbor Democratic mayo | Christopher Beardsle | K_NO+P_YES: 0.252 | Profit:73.5% (no vol)
+10:17:56.374 [INFO] [NR-ALERT] Texas Republican Senate R | Paxton 9%+ | K_YES+P_NO: 0.933 | Profit:5.7% (no vol)
+10:17:56.374 [INFO] [NR-ALERT] Texas Republican Senate R | Cornyn 3–6% | K_NO+P_YES: 0.788 | Profit:19.7% (no vol)
+10:17:56.374 [INFO] [NR-ALERT] NH-01 Republican nominee? | Hollie Noveletsky | K_YES+P_NO: 0.920 | Profit:6.2% (no vol)
+10:17:56.374 [INFO] [NR-ALERT] MI-10 Democratic nominee? | Eric Chung | K_NO+P_YES: 0.930 | Profit:5.0% (no vol)
+10:17:56.374 [INFO] [NR-ALERT] MI-10 Democratic nominee? | Tim Greimel | K_YES+P_NO: 0.920 | Profit:6.5% (no vol)
+10:17:56.374 [INFO] [NR-ALERT] FL-09 Republican nominee? | Thomas Chalifoux | K_NO+P_YES: 0.930 | Profit:4.5% (no vol)
+10:17:56.374 [INFO] [NR-ALERT] MI-07 Democratic nominee? | Bridget Brink | K_YES+P_NO: 0.930 | Profit:4.7% (no vol)
+10:17:56.374 [INFO] [NR-ALERT] Will Zelenskyy and Putin  | No meeting before 20 | K_YES+P_NO: 0.520 | Profit:46.0% (no vol)
+10:17:56.375 [INFO] [ARB] Which companies will be a | Viking Therapeutics | K_YES+P_NO: 0.830 | Vol:828 Profit:13.7%
+10:17:56.375 [INFO] ==================================================
+10:17:56.375 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.375 [INFO]   Contracts: 22 | K: $0.4200 + $0.44 fee | P: $0.4100
+10:17:56.375 [INFO]   Total: $18.91 | Guaranteed profit: $3.09
+10:17:56.375 [INFO] ==================================================
+10:17:56.375 [INFO] [TEST] Poly: BUY 22 @ $0.4300 (limit) token=9024364352226696…
+10:17:56.375 [INFO] [TEST] Kalshi: YES 22 @ $0.4200 on KXACQANNOUNCEANNUAL-27JAN01-ANYVIKI
+10:17:56.375 [INFO] TRADE OK: 22 contracts, profit $3.09
+10:17:56.400 [INFO] [PnL] This trade: +$3.09 | Session total: +$30803.58 (3666 trades)
+10:17:56.400 [INFO] [ARB] Which companies will be a | Pizza Hut | K_YES+P_NO: 0.880 | Vol:730 Profit:8.0%
+10:17:56.400 [INFO] ==================================================
+10:17:56.400 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.400 [INFO]   Contracts: 14 | K: $0.2000 + $0.28 fee | P: $0.6800
+10:17:56.400 [INFO]   Total: $12.72 | Guaranteed profit: $1.28
+10:17:56.400 [INFO] ==================================================
+10:17:56.400 [INFO] [TEST] Poly: BUY 14 @ $0.7000 (limit) token=7704961601412282…
+10:17:56.400 [INFO] [TEST] Kalshi: YES 14 @ $0.2000 on KXACQANNOUNCEANNUAL-27JAN01-ANYPIZZ
+10:17:56.400 [INFO] TRADE OK: 14 contracts, profit $1.28
+10:17:56.426 [INFO] [PnL] This trade: +$1.28 | Session total: +$30804.85 (3667 trades)
+10:17:56.426 [INFO] [ARB] Which companies will be a | BP | K_YES+P_NO: 0.910 | Vol:1806 Profit:7.1%
+10:17:56.426 [INFO] ==================================================
+10:17:56.426 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.426 [INFO]   Contracts: 12 | K: $0.0900 + $0.12 fee | P: $0.8200
+10:17:56.426 [INFO]   Total: $11.11 | Guaranteed profit: $0.89
+10:17:56.426 [INFO] ==================================================
+10:17:56.426 [INFO] [TEST] Poly: BUY 12 @ $0.8400 (limit) token=6745535487941659…
+10:17:56.426 [INFO] [TEST] Kalshi: YES 12 @ $0.0900 on KXACQANNOUNCEANNUAL-27JAN01-ANYBP
+10:17:56.426 [INFO] TRADE OK: 12 contracts, profit $0.89
+10:17:56.451 [INFO] [PnL] This trade: +$0.89 | Session total: +$30805.74 (3668 trades)
+10:17:56.451 [INFO] [NR-ALERT] MN-05 Democratic nominee? | Latonya Reeves | K_YES+P_NO: 0.920 | Profit:7.2% (no vol)
+10:17:56.451 [INFO] [ARB] SpaceX Starship 12th laun | May 21 | K_YES+P_NO: 0.680 | Vol:433 Profit:11.3%
+10:17:56.451 [INFO] [NR-ALERT] Who will be the next Jame | Callum Turner | K_NO+P_YES: 0.824 | Profit:15.5% (no vol)
+10:17:56.451 [INFO] [ARB] Who will advance from the | David Collenberg | K_YES+P_NO: 0.856 | Vol:29 Profit:12.2%
+10:17:56.451 [INFO] [ARB] WA-03 primary: who will a | Brent Hennrich | K_YES+P_NO: 0.930 | Vol:8 Profit:6.0%
+10:17:56.452 [INFO] [ARB] WA-03 primary: who will a | Suzzanna V. Tanner | K_YES+P_NO: 0.930 | Vol:20 Profit:6.0%
+10:17:56.452 [INFO] [ARB] Who will testify in front | Ghislaine Maxwell | K_NO+P_YES: 0.868 | Vol:85 Profit:10.6%
+10:17:56.452 [INFO] [ARB] Who will be named as Xi J | Ding Xuexiang | K_NO+P_YES: 0.871 | Vol:982 Profit:11.2%
+10:17:56.452 [INFO] [ARB] Who will be named as Xi J | Li Qiang | K_NO+P_YES: 0.920 | Vol:5 Profit:7.0%
+10:17:56.452 [INFO] [ARB] Who will be named as Xi J | Li Xi | K_NO+P_YES: 0.858 | Vol:83 Profit:10.2%
+10:17:56.452 [INFO] [ARB] Who will be named as Xi J | Zhao Leji | K_NO+P_YES: 0.921 | Vol:189 Profit:6.9%
+10:17:56.452 [INFO] [NR-ALERT] How many Cabinet members  | 0 | K_NO+P_YES: 0.518 | Profit:46.2% (no vol)
+10:17:56.452 [INFO] [NR-ALERT] Georgia Republican govern | Rick Jackson | K_NO+P_YES: 0.580 | Profit:40.2% (no vol)
+10:17:56.452 [INFO] [NR-ALERT] Georgia Republican govern | Burt Jones | K_YES+P_NO: 0.550 | Profit:43.5% (no vol)
+10:17:56.452 [INFO] [NR-ALERT] Artist with the most mont | Bruno Mars | K_NO+P_YES: 0.930 | Profit:4.5% (no vol)
+10:17:56.452 [INFO] [NR-ALERT] Georgia Republican Senate | Derek Dooley | K_NO+P_YES: 0.500 | Profit:48.1% (no vol)
+10:17:56.452 [INFO] [NR-ALERT] Georgia Republican Senate | Mike Collins | K_YES+P_NO: 0.570 | Profit:42.0% (no vol)
+10:17:56.452 [INFO] [NR-ALERT] Who will win the 2026 Lat | Swedish Social Democ | K_YES+P_NO: 0.143 | Profit:85.1% (no vol)
+10:17:56.452 [INFO] [NR-ALERT] Oscar nominations for Ach | Wild Horse Nine | K_NO+P_YES: 0.638 | Profit:34.1% (no vol)
+10:17:56.452 [INFO] [ARB] Which party will win the  | National Party | K_YES+P_NO: 0.780 | Vol:90 Profit:19.4%
+10:17:56.452 [INFO] ==================================================
+10:17:56.452 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.452 [INFO]   Contracts: 16 | K: $0.1900 + $0.32 fee | P: $0.5900
+10:17:56.452 [INFO]   Total: $12.95 | Guaranteed profit: $3.05
+10:17:56.452 [INFO] ==================================================
+10:17:56.452 [INFO] [TEST] Poly: BUY 16 @ $0.6100 (limit) token=3518357448915052…
+10:17:56.452 [INFO] [TEST] Kalshi: YES 16 @ $0.1900 on KXUKPARTY-29-C
+10:17:56.452 [INFO] TRADE OK: 16 contracts, profit $3.05
+10:17:56.479 [INFO] [PnL] This trade: +$3.05 | Session total: +$30808.79 (3669 trades)
+10:17:56.479 [INFO] [NR-ALERT] Georgia Republican Govern | Burt Jones | K_YES+P_NO: 0.890 | Profit:8.7% (no vol)
+10:17:56.479 [INFO] [NR-ALERT] Annual Return: S&P 500 To | Gold | K_NO+P_YES: 0.880 | Profit:9.5% (no vol)
+10:17:56.479 [INFO] [ARB] Will BTC hit $75,000 befo | ↓ 75,000 | K_NO+P_YES: 0.890 | Vol:734 Profit:8.7%
+10:17:56.479 [INFO] ==================================================
+10:17:56.479 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.479 [INFO]   Contracts: 13 | K: $0.1400 + $0.13 fee | P: $0.7500
+10:17:56.479 [INFO]   Total: $11.80 | Guaranteed profit: $1.20
+10:17:56.479 [INFO] ==================================================
+10:17:56.479 [INFO] [TEST] Poly: BUY 13 @ $0.7700 (limit) token=8525539787323755…
+10:17:56.479 [INFO] [TEST] Kalshi: NO 13 @ $0.1400 on KXBTC75VS100-BTC-26DEC31
+10:17:56.479 [INFO] TRADE OK: 13 contracts, profit $1.20
+10:17:56.485 [INFO] [Discovery] Running auto_discover.py...
+10:17:56.510 [INFO] [PnL] This trade: +$1.20 | Session total: +$30809.99 (3670 trades)
+10:17:56.510 [INFO] [ARB] Who will acquire Pinteres | Amazon | K_NO+P_YES: 0.936 | Vol:18 Profit:5.8%
+10:17:56.510 [INFO] [ARB] Who will receive the Pres | Elon Musk | K_NO+P_YES: 0.910 | Vol:300 Profit:7.3%
+10:17:56.510 [INFO] [ARB] What will NVIDIA say duri | ↑ $240 | K_NO+P_YES: 0.870 | Vol:364 Profit:8.1%
+10:17:56.510 [INFO] ==================================================
+10:17:56.510 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.510 [INFO]   Contracts: 18 | K: $0.5200 + $0.36 fee | P: $0.3500
+10:17:56.510 [INFO]   Total: $16.18 | Guaranteed profit: $1.82
+10:17:56.510 [INFO] ==================================================
+10:17:56.510 [INFO] [TEST] Poly: BUY 18 @ $0.3700 (limit) token=8923517953377502…
+10:17:56.510 [INFO] [TEST] Kalshi: NO 18 @ $0.5200 on KXEARNINGSMENTIONNVDA-26MAY20-H20
+10:17:56.510 [INFO] TRADE OK: 18 contracts, profit $1.82
+10:17:56.538 [INFO] [PnL] This trade: +$1.82 | Session total: +$30811.81 (3671 trades)
+10:17:56.538 [INFO] [NR-ALERT] Florida GOV (primary) [R] | Byron Donalds | K_YES+P_NO: 0.260 | Profit:72.9% (no vol)
+10:17:56.538 [INFO] [NR-ALERT] Florida GOV (primary) [R] | James Fishback | K_NO+P_YES: 0.460 | Profit:52.1% (no vol)
+10:17:56.538 [INFO] [NR-ALERT] Michigan SEN (primary) [D | Abdul El-Sayed | K_YES+P_NO: 0.820 | Profit:15.6% (no vol)
+10:17:56.538 [INFO] [NR-ALERT] Michigan SEN (primary) [D | Haley Stevens | K_NO+P_YES: 0.819 | Profit:16.2% (no vol)
+10:17:56.538 [INFO] [NR-ALERT] California GOV (primary) | Tom Steyer | K_NO+P_YES: 0.850 | Profit:13.0% (no vol)
+10:17:56.538 [INFO] [NR-ALERT] California GOV (primary) | Xavier Becerra | K_YES+P_NO: 0.690 | Profit:29.3% (no vol)
+10:17:56.538 [INFO] [ARB] California GOV (primary) | Tom Steyer | K_YES+P_NO: 0.820 | Vol:316 Profit:15.4%
+10:17:56.538 [INFO] [ARB] California GOV (primary) | Steve Hilton | K_YES+P_NO: 0.700 | Vol:615 Profit:25.5%
+10:17:56.538 [INFO] [ARB] California GOV (primary) | Xavier Becerra | K_YES+P_NO: 0.552 | Vol:424 Profit:38.0%
+10:17:56.538 [INFO] [ARB] California District 13 HO | Kevin Lincoln II | K_YES+P_NO: 0.320 | Vol:400 Profit:46.3%
+10:17:56.538 [INFO] ==================================================
+10:17:56.538 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:17:56.538 [INFO]   Contracts: 45 | K: $0.2100 + $0.90 fee | P: $0.1100
+10:17:56.538 [INFO]   Total: $15.48 | Guaranteed profit: $29.52
+10:17:56.538 [INFO] ==================================================
+10:17:56.538 [INFO] [TEST] Poly: BUY 45 @ $0.1299 (limit) token=8204288834223620…
+10:17:56.538 [INFO] [TEST] Kalshi: YES 45 @ $0.2100 on KXCAPRIMARY-13FIRST26-KLIN
+10:17:56.538 [INFO] TRADE OK: 45 contracts, profit $29.52
+10:17:56.565 [INFO] [PnL] This trade: +$29.52 | Session total: +$30841.33 (3672 trades)
+10:17:56.565 [INFO] Cycle #1 done in 60.1s | 176 candidates | Top: [NR] Who will win the 2026 Lat (85.1%)
+10:18:10.432 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:18:40.656 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:19:10.873 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:19:16.636 [DEBUG] Loaded 904 mapped events from 4 config files
+10:19:16.636 [INFO] [WS] Refreshing markets (904 events)
+10:19:41.116 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:20:01.576 [INFO] 127 candidates below threshold
+10:20:03.954 [INFO] [ARB] Which bills will become l | FISA Section 702 rea | K_YES+P_NO: 0.560 | Vol:5885 Profit:8.7%
+10:20:03.954 [INFO] [ARB] Who will be arrested befo | James Clapper | K_NO+P_YES: 0.910 | Vol:11 Profit:6.8%
+10:20:03.954 [INFO] [ARB] Which companies will the  | GlobalFoundries | K_NO+P_YES: 0.790 | Vol:10 Profit:18.5%
+10:20:03.954 [INFO] [ARB] CA-06 primary: first plac | Richard Pan | K_YES+P_NO: 0.660 | Vol:152 Profit:18.6%
+10:20:03.955 [INFO] [NR-ALERT] Brazil Presidential Elect | Flávio Bolsonaro <5% | K_NO+P_YES: 0.740 | Profit:23.9% (no vol)
+10:20:03.955 [INFO] [NR-ALERT] Brazil Presidential Elect | Lula da Silva <5% | K_YES+P_NO: 0.760 | Profit:23.0% (no vol)
+10:20:03.955 [INFO] [NR-ALERT] Minnesota State Senate wi | Republican | K_NO+P_YES: 0.900 | Profit:8.7% (no vol)
+10:20:03.955 [INFO] [ARB] What will Trump say durin | Fighter | K_YES+P_NO: 0.850 | Vol:215 Profit:10.9%
+10:20:03.955 [INFO] [NR-ALERT] Minas Gerais Governor win | Rodrigo Pacheco | K_NO+P_YES: 0.890 | Profit:9.2% (no vol)
+10:20:03.955 [INFO] [NR-ALERT] North Carolina Senate win | Democrat | K_YES+P_NO: 0.810 | Profit:17.0% (no vol)
+10:20:03.955 [INFO] [NR-ALERT] North Carolina Senate win | Republican | K_NO+P_YES: 0.840 | Profit:14.0% (no vol)
+10:20:03.955 [INFO] [ARB] Who will release a new al | Sabrina Carpenter | K_NO+P_YES: 0.780 | Vol:100 Profit:21.1%
+10:20:03.955 [INFO] [ARB] Who will release a new al | Olivia Rodrigo | K_YES+P_NO: 0.386 | Vol:418 Profit:53.2%
+10:20:03.955 [INFO] [ARB] CA-07 primary: first plac | Mai Vang | K_YES+P_NO: 0.430 | Vol:400 Profit:43.8%
+10:20:03.955 [INFO] [ARB] Who will perform at the F | Shakira | K_YES+P_NO: 0.602 | Vol:28 Profit:38.2%
+10:20:03.955 [INFO] [NR-ALERT] Ohio Senate winner? (2028 | Democrat | K_YES+P_NO: 0.780 | Profit:19.6% (no vol)
+10:20:03.955 [INFO] [NR-ALERT] Ohio Senate winner? (2028 | Republican | K_NO+P_YES: 0.820 | Profit:15.6% (no vol)
+10:20:03.955 [INFO] [ARB] CA-34 primary: first plac | Angela Gonzales-Torr | K_YES+P_NO: 0.380 | Vol:400 Profit:20.6%
+10:20:03.955 [INFO] [ARB] What will Trump say this  | Mamdani | K_NO+P_YES: 0.850 | Vol:10 Profit:13.1%
+10:20:03.955 [INFO] [ARB] What will Trump say this  | Stupid person | K_YES+P_NO: 0.900 | Vol:4 Profit:7.2%
+10:20:03.955 [INFO] [ARB] CA-45 primary: first plac | Chuong Vo | K_YES+P_NO: 0.770 | Vol:400 Profit:16.9%
+10:20:03.955 [INFO] [ARB] CA-41 primary: first plac | Mitch Clemmons | K_YES+P_NO: 0.300 | Vol:400 Profit:63.4%
+10:20:03.955 [INFO] [ARB] CA-03 primary: first plac | Christine Bish | K_YES+P_NO: 0.890 | Vol:200 Profit:9.8%
+10:20:03.955 [INFO] [ARB] CA-03 primary: first plac | Robb Tucker | K_YES+P_NO: 0.400 | Vol:400 Profit:47.8%
+10:20:03.955 [INFO] [NR-ALERT] Will 2026 be the hottest  | 1st hottest | K_NO+P_YES: 0.737 | Profit:24.5% (no vol)
+10:20:03.955 [INFO] [ARB] CA-22 primary: first plac | Jasmeet Bains | K_YES+P_NO: 0.860 | Vol:205 Profit:12.5%
+10:20:03.955 [INFO] [ARB] CA-22 primary: first plac | Randy Villegas | K_YES+P_NO: 0.780 | Vol:140 Profit:20.4%
+10:20:03.955 [INFO] [NR-ALERT] GA-01 Democratic nominee? | Amanda Hollowell | K_NO+P_YES: 0.910 | Profit:6.7% (no vol)
+10:20:03.955 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 3-6% | K_NO+P_YES: 0.690 | Profit:28.7% (no vol)
+10:20:03.955 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 9%+ | K_NO+P_YES: 0.900 | Profit:8.1% (no vol)
+10:20:03.955 [INFO] [ARB] CA-17 primary: first plac | Ethan Agarwal | K_YES+P_NO: 0.440 | Vol:2526 Profit:20.8%
+10:20:03.955 [INFO] [NR-ALERT] State of the economy at t | Overheating (Unemplo | K_YES+P_NO: 0.902 | Profit:7.5% (no vol)
+10:20:03.955 [INFO] [ARB] CA-40 primary: first plac | Ken Calvert | K_YES+P_NO: 0.490 | Vol:400 Profit:35.4%
+10:20:03.955 [INFO] [ARB] CA-40 primary: first plac | Esther Kim Varet | K_YES+P_NO: 0.880 | Vol:100 Profit:9.6%
+10:20:03.955 [INFO] [NR-ALERT] Which AI company will hav | Anthropic | K_YES+P_NO: 0.705 | Profit:27.6% (no vol)
+10:20:03.955 [INFO] [ARB] Which states will redistr | Utah | K_YES+P_NO: 0.370 | Vol:3697 Profit:11.7%
+10:20:03.955 [INFO] [ARB] CA-48 primary: first plac | Ammar Campa-Najjar | K_YES+P_NO: 0.470 | Vol:400 Profit:40.9%
+10:20:03.955 [INFO] [ARB] CA-48 primary: first plac | Marni von Wilpert | K_YES+P_NO: 0.560 | Vol:200 Profit:18.3%
+10:20:03.955 [INFO] [ARB] What kind of device will  | Glasses | K_YES+P_NO: 0.860 | Vol:526 Profit:10.1%
+10:20:03.955 [INFO] [ARB] What kind of device will  | Earbuds/Headphones | K_NO+P_YES: 0.910 | Vol:5 Profit:6.3%
+10:20:03.955 [INFO] [ARB] CA-04 primary: first plac | Mike Thompson | K_YES+P_NO: 0.490 | Vol:472 Profit:45.8%
+10:20:03.955 [INFO] [ARB] CA-04 primary: first plac | Eric Jones | K_YES+P_NO: 0.691 | Vol:404 Profit:27.6%
+10:20:03.955 [INFO] [NR-ALERT] Who will win the next Arg | Javier Milei | K_NO+P_YES: 0.830 | Profit:14.6% (no vol)
+10:20:03.955 [INFO] [ARB] Who will have a #1 hit th | Rihanna | K_YES+P_NO: 0.899 | Vol:30 Profit:8.2%
+10:20:03.955 [INFO] [ARB] Who will have a #1 hit th | Morgan Wallen | K_YES+P_NO: 0.900 | Vol:8 Profit:7.9%
+10:20:03.955 [INFO] [NR-ALERT] Texas House of Representa | Republican Party | K_YES+P_NO: 0.850 | Profit:13.2% (no vol)
+10:20:03.955 [INFO] [NR-ALERT] Texas House of Representa | Democratic Party | K_NO+P_YES: 0.850 | Profit:13.2% (no vol)
+10:20:03.955 [INFO] [ARB] Who will be a Bridesmaid  | Gigi Hadid | K_YES+P_NO: 0.900 | Vol:20 Profit:6.8%
+10:20:03.955 [INFO] [NR-ALERT] Ohio Secretary of State w | Democrat | K_YES+P_NO: 0.760 | Profit:21.9% (no vol)
+10:20:03.955 [INFO] [NR-ALERT] Ohio Secretary of State w | Republican | K_NO+P_YES: 0.770 | Profit:20.9% (no vol)
+10:20:03.955 [INFO] [ARB] Who will Donald Trump tal | Kim Jong Un | K_NO+P_YES: 0.092 | Vol:5501 Profit:58.3%
+10:20:03.955 [INFO] [ARB] Who will lead the next qu | Steve Hilton | K_YES+P_NO: 0.580 | Vol:155 Profit:37.4%
+10:20:03.955 [INFO] [ARB] Who will lead the next qu | Tom Steyer | K_YES+P_NO: 0.870 | Vol:155 Profit:9.2%
+10:20:03.955 [INFO] [ARB] Who will lead the next qu | Xavier Becerra | K_YES+P_NO: 0.761 | Vol:155 Profit:19.5%
+10:20:03.955 [INFO] [NR-ALERT] Who will be the next Prim | Andy Burnham | K_NO+P_YES: 0.898 | Profit:7.8% (no vol)
+10:20:03.955 [INFO] [NR-ALERT] How many Senate seats wil | ≤47 | K_YES+P_NO: 0.743 | Profit:24.7% (no vol)
+10:20:03.955 [INFO] [ARB] Peak US National Debt Und | $41 trillion | K_NO+P_YES: 0.790 | Vol:342 Profit:12.2%
+10:20:03.955 [INFO] [NR-ALERT] How many House seats will | Below 190 | K_YES+P_NO: 0.750 | Profit:23.1% (no vol)
+10:20:03.955 [INFO] [ARB] Where will Waymo operate  | Las Vegas | K_NO+P_YES: 0.470 | Vol:15 Profit:50.3%
+10:20:03.955 [INFO] [ARB] Where will Waymo operate  | Denver | K_NO+P_YES: 0.471 | Vol:5 Profit:50.8%
+10:20:03.955 [INFO] [ARB] Which countries will norm | Saudi Arabia | K_NO+P_YES: 0.869 | Vol:774 Profit:11.1%
+10:20:03.955 [INFO] [ARB] Which countries will norm | Lebanon | K_NO+P_YES: 0.877 | Vol:128 Profit:10.3%
+10:20:03.955 [INFO] [ARB] Who will run for the Demo | Cory Booker | K_NO+P_YES: 0.460 | Vol:1187 Profit:38.7%
+10:20:03.955 [INFO] [ARB] Who will run for the Demo | Gavin Newsom | K_NO+P_YES: 0.300 | Vol:3358 Profit:44.6%
+10:20:03.955 [INFO] [ARB] Who will run for the Demo | Josh Shapiro | K_NO+P_YES: 0.320 | Vol:1526 Profit:28.4%
+10:20:03.955 [INFO] [ARB] Who will run for the Demo | Pete Buttigieg | K_NO+P_YES: 0.390 | Vol:2119 Profit:45.7%
+10:20:03.955 [INFO] [ARB] Who will run for the Demo | Gretchen Whitmer | K_NO+P_YES: 0.520 | Vol:1253 Profit:34.3%
+10:20:03.955 [INFO] [ARB] Who will run for the Demo | Wes Moore | K_NO+P_YES: 0.570 | Vol:1926 Profit:30.3%
+10:20:03.955 [INFO] [ARB] Who will run for the Demo | Alexandria Ocasio-Co | K_NO+P_YES: 0.670 | Vol:1217 Profit:23.6%
+10:20:03.955 [INFO] [ARB] Who will run for the Demo | Kamala Harris | K_NO+P_YES: 0.620 | Vol:713 Profit:31.4%
+10:20:03.955 [INFO] [ARB] Who will run for the Demo | Andy Beshear | K_NO+P_YES: 0.350 | Vol:1608 Profit:39.7%
+10:20:03.955 [INFO] [ARB] Who will run for the Demo | J.B. Pritzker | K_NO+P_YES: 0.440 | Vol:1515 Profit:44.2%
+10:20:03.955 [INFO] [ARB] Who will run for the Demo | Roy Cooper | K_NO+P_YES: 0.840 | Vol:721 Profit:12.1%
+10:20:03.955 [INFO] [ARB] Who will run for the Demo | Raphael Warnock | K_NO+P_YES: 0.820 | Vol:337 Profit:14.2%
+10:20:03.955 [INFO] [ARB] Who will run for the Demo | Mark Kelly | K_NO+P_YES: 0.500 | Vol:1212 Profit:36.4%
+10:20:03.955 [INFO] [ARB] Who will run for the Demo | Jared Polis | K_NO+P_YES: 0.620 | Vol:1536 Profit:31.0%
+10:20:03.955 [INFO] [ARB] Who will run for the Demo | Jon Stewart | K_NO+P_YES: 0.890 | Vol:193 Profit:8.9%
+10:20:03.955 [INFO] [ARB] Who will run for the Demo | Rahm Emanuel | K_NO+P_YES: 0.520 | Vol:558 Profit:28.8%
+10:20:03.956 [INFO] [ARB] Who will run for the Demo | Phil Murphy | K_NO+P_YES: 0.723 | Vol:257 Profit:12.5%
+10:20:03.956 [INFO] [ARB] Who will run for the Demo | Elise Stefanik | K_NO+P_YES: 0.755 | Vol:1507 Profit:14.0%
+10:20:03.956 [INFO] [ARB] Who will run for the Demo | Jon Ossoff | K_NO+P_YES: 0.710 | Vol:598 Profit:25.1%
+10:20:03.956 [INFO] [NR-ALERT] Who will win the next Sen | Chuck Schumer | K_NO+P_YES: 0.750 | Profit:22.7% (no vol)
+10:20:03.956 [INFO] [NR-ALERT] Which bank will take Spac | Morgan Stanley | K_NO+P_YES: 0.190 | Profit:80.3% (no vol)
+10:20:03.956 [INFO] [NR-ALERT] Ann Arbor Democratic mayo | Christopher Beardsle | K_NO+P_YES: 0.252 | Profit:73.5% (no vol)
+10:20:03.956 [INFO] [NR-ALERT] Texas Republican Senate R | Cornyn 3–6% | K_NO+P_YES: 0.788 | Profit:19.7% (no vol)
+10:20:03.956 [INFO] [NR-ALERT] Will Zelenskyy and Putin  | No meeting before 20 | K_YES+P_NO: 0.520 | Profit:46.0% (no vol)
+10:20:03.956 [INFO] [ARB] Which companies will be a | Viking Therapeutics | K_YES+P_NO: 0.830 | Vol:828 Profit:13.7%
+10:20:03.956 [INFO] [ARB] Which companies will be a | Pizza Hut | K_YES+P_NO: 0.880 | Vol:554 Profit:8.7%
+10:20:03.956 [INFO] [NR-ALERT] Who will be the next Jame | Callum Turner | K_NO+P_YES: 0.816 | Profit:16.3% (no vol)
+10:20:03.956 [INFO] [ARB] Who will advance from the | David Collenberg | K_YES+P_NO: 0.856 | Vol:29 Profit:12.2%
+10:20:03.956 [INFO] [ARB] Who will testify in front | Ghislaine Maxwell | K_NO+P_YES: 0.868 | Vol:85 Profit:10.6%
+10:20:03.956 [INFO] [ARB] Who will be named as Xi J | Ding Xuexiang | K_NO+P_YES: 0.871 | Vol:982 Profit:11.2%
+10:20:03.956 [INFO] [ARB] Who will be named as Xi J | Li Xi | K_NO+P_YES: 0.858 | Vol:41 Profit:13.2%
+10:20:03.956 [INFO] [NR-ALERT] How many Cabinet members  | 0 | K_NO+P_YES: 0.518 | Profit:46.2% (no vol)
+10:20:03.956 [INFO] [NR-ALERT] Georgia Republican govern | Rick Jackson | K_NO+P_YES: 0.580 | Profit:40.2% (no vol)
+10:20:03.956 [INFO] [NR-ALERT] Georgia Republican govern | Burt Jones | K_YES+P_NO: 0.550 | Profit:43.5% (no vol)
+10:20:03.956 [INFO] [NR-ALERT] Georgia Republican Senate | Derek Dooley | K_NO+P_YES: 0.500 | Profit:48.1% (no vol)
+10:20:03.956 [INFO] [NR-ALERT] Georgia Republican Senate | Mike Collins | K_YES+P_NO: 0.570 | Profit:42.0% (no vol)
+10:20:03.956 [INFO] [NR-ALERT] Who will win the 2026 Lat | Swedish Social Democ | K_YES+P_NO: 0.143 | Profit:85.1% (no vol)
+10:20:03.956 [INFO] [NR-ALERT] Oscar nominations for Ach | Wild Horse Nine | K_NO+P_YES: 0.609 | Profit:37.1% (no vol)
+10:20:03.956 [INFO] [ARB] Which party will win the  | National Party | K_YES+P_NO: 0.780 | Vol:90 Profit:19.4%
+10:20:03.956 [INFO] [NR-ALERT] Georgia Republican Govern | Burt Jones | K_YES+P_NO: 0.890 | Profit:8.7% (no vol)
+10:20:03.956 [INFO] [NR-ALERT] Annual Return: S&P 500 To | Gold | K_NO+P_YES: 0.880 | Profit:9.5% (no vol)
+10:20:03.956 [INFO] [ARB] Will BTC hit $75,000 befo | ↓ 75,000 | K_NO+P_YES: 0.890 | Vol:734 Profit:8.7%
+10:20:03.956 [INFO] [ARB] What will NVIDIA say duri | ↑ $240 | K_NO+P_YES: 0.860 | Vol:348 Profit:8.5%
+10:20:03.956 [INFO] [NR-ALERT] Florida GOV (primary) [R] | Byron Donalds | K_YES+P_NO: 0.260 | Profit:72.9% (no vol)
+10:20:03.956 [INFO] [NR-ALERT] Florida GOV (primary) [R] | James Fishback | K_NO+P_YES: 0.460 | Profit:52.1% (no vol)
+10:20:03.956 [INFO] [NR-ALERT] Michigan SEN (primary) [D | Abdul El-Sayed | K_YES+P_NO: 0.820 | Profit:15.6% (no vol)
+10:20:03.956 [INFO] [NR-ALERT] Michigan SEN (primary) [D | Haley Stevens | K_NO+P_YES: 0.819 | Profit:16.2% (no vol)
+10:20:03.956 [INFO] [NR-ALERT] California GOV (primary) | Tom Steyer | K_NO+P_YES: 0.850 | Profit:13.0% (no vol)
+10:20:03.956 [INFO] [NR-ALERT] California GOV (primary) | Xavier Becerra | K_YES+P_NO: 0.690 | Profit:29.3% (no vol)
+10:20:03.956 [INFO] [ARB] California GOV (primary) | Tom Steyer | K_YES+P_NO: 0.820 | Vol:316 Profit:15.4%
+10:20:03.956 [INFO] [ARB] California GOV (primary) | Steve Hilton | K_YES+P_NO: 0.700 | Vol:615 Profit:25.5%
+10:20:03.956 [INFO] [ARB] California GOV (primary) | Xavier Becerra | K_YES+P_NO: 0.551 | Vol:424 Profit:36.5%
+10:20:03.956 [INFO] [ARB] California District 13 HO | Kevin Lincoln II | K_YES+P_NO: 0.320 | Vol:400 Profit:46.3%
+10:20:03.956 [INFO] Cycle #2 done in 47.3s | 127 candidates | Top: [NR] Who will win the 2026 Lat (85.1%)
+10:20:11.375 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:20:41.588 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:21:11.795 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:21:19.344 [INFO] [Discovery] Done: 86 matches found (0 HIGH)
+10:21:24.019 [DEBUG] Loaded 897 mapped events from 4 config files
+10:21:24.019 [INFO] [WS] Refreshing markets (897 events)
+10:21:42.058 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:22:09.063 [INFO] 127 candidates below threshold
+10:22:12.281 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:22:12.579 [INFO] [ARB] Which bills will become l | FISA Section 702 rea | K_YES+P_NO: 0.560 | Vol:5885 Profit:8.7%
+10:22:12.579 [INFO] [ARB] Who will be arrested befo | James Clapper | K_NO+P_YES: 0.910 | Vol:11 Profit:6.8%
+10:22:12.579 [INFO] [ARB] Which companies will the  | GlobalFoundries | K_NO+P_YES: 0.790 | Vol:10 Profit:18.5%
+10:22:12.579 [INFO] [ARB] CA-06 primary: first plac | Richard Pan | K_YES+P_NO: 0.660 | Vol:152 Profit:19.6%
+10:22:12.579 [INFO] [NR-ALERT] Brazil Presidential Elect | Flávio Bolsonaro <5% | K_NO+P_YES: 0.740 | Profit:23.9% (no vol)
+10:22:12.579 [INFO] [NR-ALERT] Brazil Presidential Elect | Lula da Silva <5% | K_YES+P_NO: 0.820 | Profit:17.1% (no vol)
+10:22:12.579 [INFO] [NR-ALERT] Minnesota State Senate wi | Republican | K_NO+P_YES: 0.900 | Profit:8.7% (no vol)
+10:22:12.579 [INFO] [ARB] What will Trump say durin | Fighter | K_YES+P_NO: 0.850 | Vol:240 Profit:10.7%
+10:22:12.579 [INFO] [NR-ALERT] Minas Gerais Governor win | Rodrigo Pacheco | K_NO+P_YES: 0.890 | Profit:9.2% (no vol)
+10:22:12.579 [INFO] [NR-ALERT] North Carolina Senate win | Democrat | K_YES+P_NO: 0.810 | Profit:17.0% (no vol)
+10:22:12.580 [INFO] [NR-ALERT] North Carolina Senate win | Republican | K_NO+P_YES: 0.840 | Profit:14.0% (no vol)
+10:22:12.580 [INFO] [NR-ALERT] Who will be Trump's next  | Keith Sonderling | K_YES+P_NO: 0.860 | Profit:11.9% (no vol)
+10:22:12.580 [INFO] [ARB] Who will release a new al | Olivia Rodrigo | K_YES+P_NO: 0.386 | Vol:418 Profit:53.2%
+10:22:12.580 [INFO] [ARB] CA-07 primary: first plac | Mai Vang | K_YES+P_NO: 0.430 | Vol:400 Profit:43.8%
+10:22:12.580 [INFO] [NR-ALERT] Ohio Senate winner? (2028 | Democrat | K_YES+P_NO: 0.780 | Profit:19.6% (no vol)
+10:22:12.580 [INFO] [NR-ALERT] Ohio Senate winner? (2028 | Republican | K_NO+P_YES: 0.820 | Profit:15.6% (no vol)
+10:22:12.580 [INFO] [ARB] CA-34 primary: first plac | Angela Gonzales-Torr | K_YES+P_NO: 0.380 | Vol:400 Profit:20.6%
+10:22:12.580 [INFO] [ARB] What will Trump say this  | Mamdani | K_NO+P_YES: 0.850 | Vol:10 Profit:13.1%
+10:22:12.580 [INFO] [ARB] What will Trump say this  | Stupid person | K_YES+P_NO: 0.900 | Vol:8 Profit:7.2%
+10:22:12.580 [INFO] [ARB] CA-45 primary: first plac | Chuong Vo | K_YES+P_NO: 0.770 | Vol:334 Profit:13.2%
+10:22:12.580 [INFO] [ARB] CA-41 primary: first plac | Mitch Clemmons | K_YES+P_NO: 0.300 | Vol:400 Profit:63.4%
+10:22:12.580 [INFO] [ARB] CA-03 primary: first plac | Christine Bish | K_YES+P_NO: 0.890 | Vol:200 Profit:9.8%
+10:22:12.580 [INFO] [ARB] CA-03 primary: first plac | Robb Tucker | K_YES+P_NO: 0.400 | Vol:400 Profit:47.8%
+10:22:12.580 [INFO] [NR-ALERT] Will 2026 be the hottest  | 1st hottest | K_NO+P_YES: 0.737 | Profit:24.5% (no vol)
+10:22:12.580 [INFO] [ARB] CA-22 primary: first plac | Jasmeet Bains | K_YES+P_NO: 0.860 | Vol:200 Profit:12.6%
+10:22:12.580 [INFO] [ARB] CA-22 primary: first plac | Randy Villegas | K_YES+P_NO: 0.780 | Vol:140 Profit:20.4%
+10:22:12.580 [INFO] [NR-ALERT] GA-01 Democratic nominee? | Amanda Hollowell | K_NO+P_YES: 0.910 | Profit:6.7% (no vol)
+10:22:12.580 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 3-6% | K_NO+P_YES: 0.660 | Profit:31.8% (no vol)
+10:22:12.580 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 6-9% | K_NO+P_YES: 0.900 | Profit:7.6% (no vol)
+10:22:12.580 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 9%+ | K_NO+P_YES: 0.900 | Profit:8.1% (no vol)
+10:22:12.580 [INFO] [ARB] CA-17 primary: first plac | Ethan Agarwal | K_YES+P_NO: 0.440 | Vol:2526 Profit:20.8%
+10:22:12.580 [INFO] [NR-ALERT] State of the economy at t | Overheating (Unemplo | K_YES+P_NO: 0.902 | Profit:7.5% (no vol)
+10:22:12.580 [INFO] [ARB] CA-40 primary: first plac | Ken Calvert | K_YES+P_NO: 0.490 | Vol:400 Profit:35.4%
+10:22:12.580 [INFO] [ARB] CA-40 primary: first plac | Esther Kim Varet | K_YES+P_NO: 0.880 | Vol:100 Profit:9.6%
+10:22:12.580 [INFO] [NR-ALERT] Which AI company will hav | Anthropic | K_YES+P_NO: 0.705 | Profit:27.6% (no vol)
+10:22:12.581 [INFO] [ARB] Which states will redistr | Utah | K_YES+P_NO: 0.370 | Vol:3697 Profit:11.7%
+10:22:12.581 [INFO] [ARB] CA-48 primary: first plac | Ammar Campa-Najjar | K_YES+P_NO: 0.470 | Vol:400 Profit:40.9%
+10:22:12.581 [INFO] [ARB] CA-48 primary: first plac | Marni von Wilpert | K_YES+P_NO: 0.560 | Vol:400 Profit:34.9%
+10:22:12.581 [INFO] [ARB] What kind of device will  | Glasses | K_YES+P_NO: 0.860 | Vol:526 Profit:10.1%
+10:22:12.581 [INFO] [ARB] What kind of device will  | Earbuds/Headphones | K_NO+P_YES: 0.910 | Vol:5 Profit:6.3%
+10:22:12.581 [INFO] [ARB] CA-04 primary: first plac | Mike Thompson | K_YES+P_NO: 0.490 | Vol:472 Profit:45.8%
+10:22:12.581 [INFO] [ARB] CA-04 primary: first plac | Eric Jones | K_YES+P_NO: 0.691 | Vol:404 Profit:27.6%
+10:22:12.581 [INFO] [NR-ALERT] Who will win the next Arg | Javier Milei | K_NO+P_YES: 0.830 | Profit:14.6% (no vol)
+10:22:12.581 [INFO] [ARB] Who will have a #1 hit th | Rihanna | K_YES+P_NO: 0.899 | Vol:30 Profit:8.2%
+10:22:12.581 [INFO] [ARB] Who will have a #1 hit th | Morgan Wallen | K_YES+P_NO: 0.900 | Vol:8 Profit:7.9%
+10:22:12.581 [INFO] [NR-ALERT] Texas House of Representa | Republican Party | K_YES+P_NO: 0.850 | Profit:13.2% (no vol)
+10:22:12.581 [INFO] [NR-ALERT] Texas House of Representa | Democratic Party | K_NO+P_YES: 0.850 | Profit:13.2% (no vol)
+10:22:12.581 [INFO] [ARB] Who will be a Bridesmaid  | Gigi Hadid | K_YES+P_NO: 0.900 | Vol:20 Profit:6.8%
+10:22:12.581 [INFO] [NR-ALERT] Ohio Secretary of State w | Democrat | K_YES+P_NO: 0.760 | Profit:21.9% (no vol)
+10:22:12.581 [INFO] [NR-ALERT] Ohio Secretary of State w | Republican | K_NO+P_YES: 0.770 | Profit:20.9% (no vol)
+10:22:12.581 [INFO] [ARB] Who will Donald Trump tal | Kim Jong Un | K_NO+P_YES: 0.092 | Vol:5501 Profit:58.4%
+10:22:12.581 [INFO] [ARB] Who will lead the next qu | Steve Hilton | K_YES+P_NO: 0.580 | Vol:155 Profit:37.4%
+10:22:12.581 [INFO] [ARB] Who will lead the next qu | Tom Steyer | K_YES+P_NO: 0.870 | Vol:155 Profit:9.2%
+10:22:12.581 [INFO] [ARB] Who will lead the next qu | Xavier Becerra | K_YES+P_NO: 0.761 | Vol:155 Profit:19.5%
+10:22:12.581 [INFO] [NR-ALERT] Who will be the next Prim | Andy Burnham | K_NO+P_YES: 0.898 | Profit:7.8% (no vol)
+10:22:12.581 [INFO] [NR-ALERT] How many Senate seats wil | ≤47 | K_YES+P_NO: 0.743 | Profit:24.7% (no vol)
+10:22:12.581 [INFO] [ARB] Peak US National Debt Und | $41 trillion | K_NO+P_YES: 0.790 | Vol:342 Profit:12.2%
+10:22:12.581 [INFO] [NR-ALERT] How many House seats will | Below 190 | K_YES+P_NO: 0.750 | Profit:23.1% (no vol)
+10:22:12.581 [INFO] [ARB] Where will Waymo operate  | Las Vegas | K_NO+P_YES: 0.470 | Vol:15 Profit:50.3%
+10:22:12.581 [INFO] [ARB] Where will Waymo operate  | Denver | K_NO+P_YES: 0.471 | Vol:5 Profit:50.8%
+10:22:12.581 [INFO] [ARB] Which countries will norm | Saudi Arabia | K_NO+P_YES: 0.869 | Vol:776 Profit:11.7%
+10:22:12.582 [INFO] [ARB] Which countries will norm | Lebanon | K_NO+P_YES: 0.877 | Vol:128 Profit:10.3%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Cory Booker | K_NO+P_YES: 0.460 | Vol:1187 Profit:38.7%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Gavin Newsom | K_NO+P_YES: 0.300 | Vol:3358 Profit:44.6%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Josh Shapiro | K_NO+P_YES: 0.320 | Vol:1526 Profit:28.4%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Pete Buttigieg | K_NO+P_YES: 0.390 | Vol:2119 Profit:45.7%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Gretchen Whitmer | K_NO+P_YES: 0.520 | Vol:1465 Profit:33.3%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Wes Moore | K_NO+P_YES: 0.570 | Vol:1926 Profit:30.3%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Alexandria Ocasio-Co | K_NO+P_YES: 0.670 | Vol:1217 Profit:23.6%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Kamala Harris | K_NO+P_YES: 0.620 | Vol:713 Profit:31.4%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Andy Beshear | K_NO+P_YES: 0.350 | Vol:1608 Profit:39.8%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | J.B. Pritzker | K_NO+P_YES: 0.440 | Vol:1732 Profit:43.3%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Roy Cooper | K_NO+P_YES: 0.840 | Vol:721 Profit:12.1%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Raphael Warnock | K_NO+P_YES: 0.820 | Vol:337 Profit:14.2%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Mark Kelly | K_NO+P_YES: 0.500 | Vol:1212 Profit:36.4%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Jared Polis | K_NO+P_YES: 0.620 | Vol:1536 Profit:31.1%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Jon Stewart | K_NO+P_YES: 0.890 | Vol:193 Profit:8.9%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Rahm Emanuel | K_NO+P_YES: 0.520 | Vol:576 Profit:29.1%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Phil Murphy | K_NO+P_YES: 0.723 | Vol:257 Profit:12.5%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Elise Stefanik | K_NO+P_YES: 0.755 | Vol:1507 Profit:14.0%
+10:22:12.582 [INFO] [ARB] Who will run for the Demo | Jon Ossoff | K_NO+P_YES: 0.710 | Vol:598 Profit:25.1%
+10:22:12.582 [INFO] [NR-ALERT] Who will win the next Sen | Chuck Schumer | K_NO+P_YES: 0.750 | Profit:22.7% (no vol)
+10:22:12.582 [INFO] [NR-ALERT] Which bank will take Spac | Morgan Stanley | K_NO+P_YES: 0.190 | Profit:80.3% (no vol)
+10:22:12.582 [INFO] [NR-ALERT] Ann Arbor Democratic mayo | Christopher Beardsle | K_NO+P_YES: 0.252 | Profit:73.5% (no vol)
+10:22:12.582 [INFO] [NR-ALERT] Texas Republican Senate R | Cornyn 3–6% | K_NO+P_YES: 0.788 | Profit:19.7% (no vol)
+10:22:12.583 [INFO] [ARB] Which companies will be a | Viking Therapeutics | K_YES+P_NO: 0.830 | Vol:828 Profit:13.7%
+10:22:12.583 [INFO] [ARB] Which companies will be a | Pizza Hut | K_YES+P_NO: 0.880 | Vol:485 Profit:8.7%
+10:22:12.583 [INFO] [ARB] SpaceX Starship 12th laun | May 22 | K_NO+P_YES: 0.890 | Vol:250 Profit:7.3%
+10:22:12.583 [INFO] ==================================================
+10:22:12.583 [INFO] EXECUTING ARBITRAGE — TEST MODE
+10:22:12.583 [INFO]   Contracts: 20 | K: $0.4200 + $0.40 fee | P: $0.4700
+10:22:12.583 [INFO]   Total: $18.40 | Guaranteed profit: $1.60
+10:22:12.583 [INFO] ==================================================
+10:22:12.585 [INFO] [TEST] Poly: BUY 20 @ $0.4900 (limit) token=1234857939949002…
+10:22:12.585 [INFO] [TEST] Kalshi: NO 20 @ $0.4200 on KXSPACEXSTARSHIP-12-26MAY21
+10:22:12.585 [INFO] TRADE OK: 20 contracts, profit $1.60
+10:22:12.630 [INFO] [PnL] This trade: +$1.60 | Session total: +$30842.93 (3673 trades)
+10:22:12.630 [INFO] [ARB] Who will testify in front | Ghislaine Maxwell | K_NO+P_YES: 0.868 | Vol:85 Profit:10.6%
+10:22:12.630 [INFO] [ARB] Who will be named as Xi J | Ding Xuexiang | K_NO+P_YES: 0.871 | Vol:982 Profit:11.2%
+10:22:12.630 [INFO] [ARB] Who will be named as Xi J | Li Xi | K_NO+P_YES: 0.858 | Vol:41 Profit:13.2%
+10:22:12.630 [INFO] [NR-ALERT] How many Cabinet members  | 0 | K_NO+P_YES: 0.518 | Profit:46.2% (no vol)
+10:22:12.630 [INFO] [NR-ALERT] Georgia Republican govern | Rick Jackson | K_NO+P_YES: 0.580 | Profit:40.2% (no vol)
+10:22:12.630 [INFO] [NR-ALERT] Georgia Republican govern | Burt Jones | K_YES+P_NO: 0.550 | Profit:43.5% (no vol)
+10:22:12.630 [INFO] [NR-ALERT] Who will advance from the | Saikat Chakrabarti | K_NO+P_YES: 0.824 | Profit:16.0% (no vol)
+10:22:12.630 [INFO] [NR-ALERT] Oscar nominations for Ach | Wild Horse Nine | K_NO+P_YES: 0.609 | Profit:37.1% (no vol)
+10:22:12.630 [INFO] [ARB] Which party will win the  | National Party | K_YES+P_NO: 0.780 | Vol:90 Profit:19.4%
+10:22:12.630 [INFO] [NR-ALERT] Georgia Republican Govern | Burt Jones | K_YES+P_NO: 0.890 | Profit:8.7% (no vol)
+10:22:12.630 [INFO] [NR-ALERT] How many border encounter | 1050–1099 | K_NO+P_YES: 0.820 | Profit:16.6% (no vol)
+10:22:12.630 [INFO] [NR-ALERT] Annual Return: S&P 500 To | Gold | K_NO+P_YES: 0.880 | Profit:9.5% (no vol)
+10:22:12.630 [INFO] [ARB] Will BTC hit $75,000 befo | ↓ 75,000 | K_NO+P_YES: 0.890 | Vol:734 Profit:8.7%
+10:22:12.630 [INFO] [ARB] Who will Trump pardon? | Elon Musk | K_YES+P_NO: 0.507 | Vol:1153 Profit:44.3%
+10:22:12.630 [INFO] [ARB] What will NVIDIA say duri | ↑ $240 | K_NO+P_YES: 0.860 | Vol:364 Profit:8.5%
+10:22:12.630 [INFO] [ARB] What will Trump say durin | Bitcoin | K_YES+P_NO: 0.730 | Vol:381 Profit:17.7%
+10:22:12.630 [INFO] [NR-ALERT] Who will be the next Jame | Callum Turner | K_NO+P_YES: 0.816 | Profit:16.3% (no vol)
+10:22:12.630 [INFO] [NR-ALERT] Florida GOV (primary) [R] | Byron Donalds | K_YES+P_NO: 0.260 | Profit:72.9% (no vol)
+10:22:12.630 [INFO] [NR-ALERT] Florida GOV (primary) [R] | James Fishback | K_NO+P_YES: 0.460 | Profit:52.1% (no vol)
+10:22:12.630 [INFO] [NR-ALERT] Michigan SEN (primary) [D | Abdul El-Sayed | K_YES+P_NO: 0.820 | Profit:15.6% (no vol)
+10:22:12.630 [INFO] [NR-ALERT] Michigan SEN (primary) [D | Haley Stevens | K_NO+P_YES: 0.819 | Profit:16.2% (no vol)
+10:22:12.630 [INFO] [NR-ALERT] California GOV (primary) | Tom Steyer | K_NO+P_YES: 0.850 | Profit:13.0% (no vol)
+10:22:12.630 [INFO] [NR-ALERT] California GOV (primary) | Xavier Becerra | K_YES+P_NO: 0.690 | Profit:29.3% (no vol)
+10:22:12.630 [INFO] [ARB] California GOV (primary) | Tom Steyer | K_YES+P_NO: 0.820 | Vol:316 Profit:15.4%
+10:22:12.630 [INFO] [ARB] California GOV (primary) | Steve Hilton | K_YES+P_NO: 0.700 | Vol:615 Profit:25.5%
+10:22:12.631 [INFO] [ARB] California GOV (primary) | Xavier Becerra | K_YES+P_NO: 0.551 | Vol:424 Profit:36.5%
+10:22:12.631 [INFO] [ARB] California District 13 HO | Kevin Lincoln II | K_YES+P_NO: 0.320 | Vol:400 Profit:46.3%
+10:22:12.631 [INFO] Cycle #3 done in 48.6s | 127 candidates | Top: [NR] Who will win the 2026 Lat (85.1%)
+10:22:42.509 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:23:12.729 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:23:32.680 [DEBUG] Loaded 897 mapped events from 4 config files
+10:23:32.680 [INFO] [WS] Refreshing markets (897 events)
+10:23:42.944 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:24:13.174 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:24:17.750 [INFO] 127 candidates below threshold
+10:24:20.161 [INFO] [ARB] Which bills will become l | FISA Section 702 rea | K_YES+P_NO: 0.560 | Vol:5885 Profit:8.7%
+10:24:20.161 [INFO] [ARB] Who will be arrested befo | James Clapper | K_NO+P_YES: 0.910 | Vol:11 Profit:6.8%
+10:24:20.161 [INFO] [ARB] Which companies will the  | GlobalFoundries | K_NO+P_YES: 0.790 | Vol:10 Profit:18.5%
+10:24:20.162 [INFO] [ARB] CA-06 primary: first plac | Richard Pan | K_YES+P_NO: 0.660 | Vol:173 Profit:18.9%
+10:24:20.162 [INFO] [NR-ALERT] Brazil Presidential Elect | Flávio Bolsonaro <5% | K_NO+P_YES: 0.740 | Profit:23.9% (no vol)
+10:24:20.162 [INFO] [NR-ALERT] Brazil Presidential Elect | Lula da Silva <5% | K_YES+P_NO: 0.820 | Profit:17.1% (no vol)
+10:24:20.162 [INFO] [NR-ALERT] Minnesota State Senate wi | Republican | K_NO+P_YES: 0.900 | Profit:8.7% (no vol)
+10:24:20.162 [INFO] [ARB] What will Trump say durin | Fighter | K_YES+P_NO: 0.850 | Vol:240 Profit:10.7%
+10:24:20.162 [INFO] [NR-ALERT] Minas Gerais Governor win | Rodrigo Pacheco | K_NO+P_YES: 0.890 | Profit:9.2% (no vol)
+10:24:20.162 [INFO] [NR-ALERT] North Carolina Senate win | Democrat | K_YES+P_NO: 0.810 | Profit:17.0% (no vol)
+10:24:20.162 [INFO] [NR-ALERT] North Carolina Senate win | Republican | K_NO+P_YES: 0.840 | Profit:14.0% (no vol)
+10:24:20.162 [INFO] [NR-ALERT] Who will be Trump's next  | Keith Sonderling | K_YES+P_NO: 0.860 | Profit:11.9% (no vol)
+10:24:20.162 [INFO] [ARB] Who will release a new al | Olivia Rodrigo | K_YES+P_NO: 0.386 | Vol:418 Profit:53.2%
+10:24:20.162 [INFO] [ARB] CA-07 primary: first plac | Mai Vang | K_YES+P_NO: 0.430 | Vol:400 Profit:43.8%
+10:24:20.162 [INFO] [NR-ALERT] Ohio Senate winner? (2028 | Democrat | K_YES+P_NO: 0.780 | Profit:19.6% (no vol)
+10:24:20.162 [INFO] [NR-ALERT] Ohio Senate winner? (2028 | Republican | K_NO+P_YES: 0.820 | Profit:15.6% (no vol)
+10:24:20.162 [INFO] [ARB] CA-34 primary: first plac | Angela Gonzales-Torr | K_YES+P_NO: 0.380 | Vol:400 Profit:20.6%
+10:24:20.162 [INFO] [ARB] What will Trump say this  | Mamdani | K_NO+P_YES: 0.850 | Vol:10 Profit:13.1%
+10:24:20.162 [INFO] [ARB] What will Trump say this  | Stupid person | K_YES+P_NO: 0.900 | Vol:8 Profit:7.2%
+10:24:20.162 [INFO] [ARB] CA-45 primary: first plac | Chuong Vo | K_YES+P_NO: 0.650 | Vol:368 Profit:16.9%
+10:24:20.162 [INFO] [ARB] CA-41 primary: first plac | Mitch Clemmons | K_YES+P_NO: 0.300 | Vol:400 Profit:63.4%
+10:24:20.162 [INFO] [ARB] CA-03 primary: first plac | Christine Bish | K_YES+P_NO: 0.890 | Vol:200 Profit:9.8%
+10:24:20.162 [INFO] [ARB] CA-03 primary: first plac | Robb Tucker | K_YES+P_NO: 0.400 | Vol:400 Profit:47.8%
+10:24:20.163 [INFO] [NR-ALERT] Will 2026 be the hottest  | 1st hottest | K_NO+P_YES: 0.737 | Profit:24.5% (no vol)
+10:24:20.163 [INFO] [ARB] CA-22 primary: first plac | Jasmeet Bains | K_YES+P_NO: 0.860 | Vol:212 Profit:12.5%
+10:24:20.163 [INFO] [ARB] CA-22 primary: first plac | Randy Villegas | K_YES+P_NO: 0.780 | Vol:136 Profit:20.5%
+10:24:20.163 [INFO] [NR-ALERT] GA-01 Democratic nominee? | Amanda Hollowell | K_NO+P_YES: 0.910 | Profit:6.7% (no vol)
+10:24:20.163 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 3-6% | K_NO+P_YES: 0.660 | Profit:31.8% (no vol)
+10:24:20.163 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 6-9% | K_NO+P_YES: 0.900 | Profit:7.6% (no vol)
+10:24:20.163 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 9%+ | K_NO+P_YES: 0.900 | Profit:8.1% (no vol)
+10:24:20.163 [INFO] [ARB] CA-17 primary: first plac | Ethan Agarwal | K_YES+P_NO: 0.440 | Vol:2526 Profit:20.8%
+10:24:20.163 [INFO] [NR-ALERT] State of the economy at t | Overheating (Unemplo | K_YES+P_NO: 0.902 | Profit:7.5% (no vol)
+10:24:20.163 [INFO] [ARB] CA-40 primary: first plac | Ken Calvert | K_YES+P_NO: 0.490 | Vol:400 Profit:35.4%
+10:24:20.163 [INFO] [ARB] CA-40 primary: first plac | Esther Kim Varet | K_YES+P_NO: 0.880 | Vol:100 Profit:9.6%
+10:24:20.163 [INFO] [NR-ALERT] Which AI company will hav | Anthropic | K_YES+P_NO: 0.705 | Profit:27.6% (no vol)
+10:24:20.163 [INFO] [ARB] Which states will redistr | Utah | K_YES+P_NO: 0.370 | Vol:3697 Profit:11.7%
+10:24:20.163 [INFO] [ARB] CA-48 primary: first plac | Ammar Campa-Najjar | K_YES+P_NO: 0.470 | Vol:400 Profit:40.9%
+10:24:20.163 [INFO] [ARB] CA-48 primary: first plac | Marni von Wilpert | K_YES+P_NO: 0.560 | Vol:400 Profit:16.2%
+10:24:20.163 [INFO] [ARB] What kind of device will  | Glasses | K_YES+P_NO: 0.860 | Vol:526 Profit:10.1%
+10:24:20.163 [INFO] [ARB] What kind of device will  | Earbuds/Headphones | K_NO+P_YES: 0.910 | Vol:5 Profit:6.3%
+10:24:20.163 [INFO] [ARB] CA-04 primary: first plac | Mike Thompson | K_YES+P_NO: 0.490 | Vol:472 Profit:45.8%
+10:24:20.163 [INFO] [ARB] CA-04 primary: first plac | Eric Jones | K_YES+P_NO: 0.691 | Vol:404 Profit:27.6%
+10:24:20.163 [INFO] [NR-ALERT] Who will win the next Arg | Javier Milei | K_NO+P_YES: 0.830 | Profit:14.6% (no vol)
+10:24:20.163 [INFO] [ARB] Who will have a #1 hit th | Rihanna | K_YES+P_NO: 0.899 | Vol:30 Profit:8.2%
+10:24:20.163 [INFO] [ARB] Who will have a #1 hit th | Morgan Wallen | K_YES+P_NO: 0.900 | Vol:8 Profit:7.9%
+10:24:20.163 [INFO] [NR-ALERT] Texas House of Representa | Republican Party | K_YES+P_NO: 0.850 | Profit:13.2% (no vol)
+10:24:20.164 [INFO] [NR-ALERT] Texas House of Representa | Democratic Party | K_NO+P_YES: 0.850 | Profit:13.2% (no vol)
+10:24:20.164 [INFO] [ARB] Who will be a Bridesmaid  | Gigi Hadid | K_YES+P_NO: 0.900 | Vol:20 Profit:6.8%
+10:24:20.164 [INFO] [NR-ALERT] Ohio Secretary of State w | Democrat | K_YES+P_NO: 0.760 | Profit:21.9% (no vol)
+10:24:20.164 [INFO] [NR-ALERT] Ohio Secretary of State w | Republican | K_NO+P_YES: 0.770 | Profit:20.9% (no vol)
+10:24:20.164 [INFO] [ARB] Who will Donald Trump tal | Kim Jong Un | K_NO+P_YES: 0.092 | Vol:5501 Profit:58.4%
+10:24:20.164 [INFO] [ARB] Who will lead the next qu | Steve Hilton | K_YES+P_NO: 0.580 | Vol:155 Profit:37.4%
+10:24:20.164 [INFO] [ARB] Who will lead the next qu | Tom Steyer | K_YES+P_NO: 0.870 | Vol:155 Profit:9.2%
+10:24:20.164 [INFO] [ARB] Who will lead the next qu | Xavier Becerra | K_YES+P_NO: 0.761 | Vol:155 Profit:19.5%
+10:24:20.164 [INFO] [NR-ALERT] Who will be the next Prim | Andy Burnham | K_NO+P_YES: 0.897 | Profit:7.9% (no vol)
+10:24:20.164 [INFO] [NR-ALERT] How many Senate seats wil | ≤47 | K_YES+P_NO: 0.743 | Profit:24.7% (no vol)
+10:24:20.164 [INFO] [ARB] Peak US National Debt Und | $41 trillion | K_NO+P_YES: 0.790 | Vol:342 Profit:12.2%
+10:24:20.164 [INFO] [NR-ALERT] How many House seats will | Below 190 | K_YES+P_NO: 0.750 | Profit:23.1% (no vol)
+10:24:20.164 [INFO] [ARB] Where will Waymo operate  | Las Vegas | K_NO+P_YES: 0.470 | Vol:15 Profit:50.3%
+10:24:20.164 [INFO] [ARB] Where will Waymo operate  | Denver | K_NO+P_YES: 0.471 | Vol:5 Profit:50.8%
+10:24:20.164 [INFO] [ARB] Which countries will norm | Saudi Arabia | K_NO+P_YES: 0.869 | Vol:776 Profit:11.7%
+10:24:20.164 [INFO] [ARB] Which countries will norm | Lebanon | K_NO+P_YES: 0.877 | Vol:128 Profit:10.3%
+10:24:20.164 [INFO] [ARB] Who will run for the Demo | Cory Booker | K_NO+P_YES: 0.460 | Vol:1187 Profit:38.7%
+10:24:20.164 [INFO] [ARB] Who will run for the Demo | Gavin Newsom | K_NO+P_YES: 0.300 | Vol:3358 Profit:44.6%
+10:24:20.164 [INFO] [ARB] Who will run for the Demo | Josh Shapiro | K_NO+P_YES: 0.320 | Vol:1526 Profit:28.4%
+10:24:20.164 [INFO] [ARB] Who will run for the Demo | Pete Buttigieg | K_NO+P_YES: 0.390 | Vol:2119 Profit:45.7%
+10:24:20.165 [INFO] [ARB] Who will run for the Demo | Gretchen Whitmer | K_NO+P_YES: 0.520 | Vol:1253 Profit:34.3%
+10:24:20.165 [INFO] [ARB] Who will run for the Demo | Wes Moore | K_NO+P_YES: 0.570 | Vol:1926 Profit:30.3%
+10:24:20.165 [INFO] [ARB] Who will run for the Demo | Alexandria Ocasio-Co | K_NO+P_YES: 0.670 | Vol:1217 Profit:23.6%
+10:24:20.165 [INFO] [ARB] Who will run for the Demo | Kamala Harris | K_NO+P_YES: 0.620 | Vol:713 Profit:31.4%
+10:24:20.165 [INFO] [ARB] Who will run for the Demo | Andy Beshear | K_NO+P_YES: 0.350 | Vol:1608 Profit:38.5%
+10:24:20.165 [INFO] [ARB] Who will run for the Demo | J.B. Pritzker | K_NO+P_YES: 0.440 | Vol:1515 Profit:44.2%
+10:24:20.165 [INFO] [ARB] Who will run for the Demo | Roy Cooper | K_NO+P_YES: 0.840 | Vol:721 Profit:12.1%
+10:24:20.165 [INFO] [ARB] Who will run for the Demo | Raphael Warnock | K_NO+P_YES: 0.820 | Vol:337 Profit:14.2%
+10:24:20.165 [INFO] [ARB] Who will run for the Demo | Mark Kelly | K_NO+P_YES: 0.500 | Vol:1212 Profit:36.4%
+10:24:20.165 [INFO] [ARB] Who will run for the Demo | Jared Polis | K_NO+P_YES: 0.620 | Vol:1536 Profit:31.1%
+10:24:20.165 [INFO] [ARB] Who will run for the Demo | Jon Stewart | K_NO+P_YES: 0.890 | Vol:193 Profit:8.9%
+10:24:20.165 [INFO] [ARB] Who will run for the Demo | Rahm Emanuel | K_NO+P_YES: 0.520 | Vol:601 Profit:30.0%
+10:24:20.165 [INFO] [ARB] Who will run for the Demo | Phil Murphy | K_NO+P_YES: 0.723 | Vol:257 Profit:12.5%
+10:24:20.165 [INFO] [ARB] Who will run for the Demo | Elise Stefanik | K_NO+P_YES: 0.755 | Vol:1507 Profit:14.0%
+10:24:20.165 [INFO] [ARB] Who will run for the Demo | Jon Ossoff | K_NO+P_YES: 0.710 | Vol:598 Profit:25.1%
+10:24:20.165 [INFO] [NR-ALERT] Who will win the next Sen | Chuck Schumer | K_NO+P_YES: 0.750 | Profit:22.7% (no vol)
+10:24:20.165 [INFO] [NR-ALERT] Which bank will take Spac | Morgan Stanley | K_NO+P_YES: 0.190 | Profit:80.3% (no vol)
+10:24:20.165 [INFO] [NR-ALERT] Ann Arbor Democratic mayo | Christopher Beardsle | K_NO+P_YES: 0.252 | Profit:73.5% (no vol)
+10:24:20.165 [INFO] [NR-ALERT] Texas Republican Senate R | Cornyn 3–6% | K_NO+P_YES: 0.788 | Profit:19.7% (no vol)
+10:24:20.165 [INFO] [ARB] Which companies will be a | Viking Therapeutics | K_YES+P_NO: 0.830 | Vol:828 Profit:13.7%
+10:24:20.165 [INFO] [ARB] Which companies will be a | Pizza Hut | K_YES+P_NO: 0.880 | Vol:554 Profit:8.7%
+10:24:20.165 [INFO] [ARB] SpaceX Starship 12th laun | May 22 | K_NO+P_YES: 0.890 | Vol:250 Profit:7.3%
+10:24:20.165 [INFO] [ARB] Who will testify in front | Ghislaine Maxwell | K_NO+P_YES: 0.868 | Vol:85 Profit:10.6%
+10:24:20.165 [INFO] [ARB] Who will be named as Xi J | Ding Xuexiang | K_NO+P_YES: 0.871 | Vol:982 Profit:11.2%
+10:24:20.165 [INFO] [ARB] Who will be named as Xi J | Li Xi | K_NO+P_YES: 0.858 | Vol:41 Profit:13.2%
+10:24:20.165 [INFO] [NR-ALERT] How many Cabinet members  | 0 | K_NO+P_YES: 0.518 | Profit:46.2% (no vol)
+10:24:20.165 [INFO] [NR-ALERT] Georgia Republican govern | Rick Jackson | K_NO+P_YES: 0.580 | Profit:40.2% (no vol)
+10:24:20.165 [INFO] [NR-ALERT] Georgia Republican govern | Burt Jones | K_YES+P_NO: 0.550 | Profit:43.5% (no vol)
+10:24:20.166 [INFO] [NR-ALERT] Who will advance from the | Saikat Chakrabarti | K_NO+P_YES: 0.814 | Profit:17.0% (no vol)
+10:24:20.166 [INFO] [NR-ALERT] Oscar nominations for Ach | Wild Horse Nine | K_NO+P_YES: 0.609 | Profit:37.1% (no vol)
+10:24:20.166 [INFO] [ARB] Which party will win the  | National Party | K_YES+P_NO: 0.780 | Vol:90 Profit:19.4%
+10:24:20.166 [INFO] [NR-ALERT] Georgia Republican Govern | Burt Jones | K_YES+P_NO: 0.890 | Profit:8.7% (no vol)
+10:24:20.166 [INFO] [NR-ALERT] How many border encounter | 1050–1099 | K_NO+P_YES: 0.820 | Profit:16.6% (no vol)
+10:24:20.166 [INFO] [NR-ALERT] Annual Return: S&P 500 To | Gold | K_NO+P_YES: 0.880 | Profit:9.5% (no vol)
+10:24:20.166 [INFO] [ARB] Will BTC hit $75,000 befo | ↓ 75,000 | K_NO+P_YES: 0.890 | Vol:734 Profit:8.7%
+10:24:20.166 [INFO] [ARB] Who will Trump pardon? | Elon Musk | K_YES+P_NO: 0.507 | Vol:1153 Profit:44.3%
+10:24:20.166 [INFO] [ARB] What will NVIDIA say duri | ↑ $240 | K_NO+P_YES: 0.850 | Vol:364 Profit:8.4%
+10:24:20.166 [INFO] [ARB] What will Trump say durin | Bitcoin | K_YES+P_NO: 0.730 | Vol:381 Profit:17.7%
+10:24:20.166 [INFO] [NR-ALERT] Who will be the next Jame | Callum Turner | K_NO+P_YES: 0.830 | Profit:14.9% (no vol)
+10:24:20.166 [INFO] [NR-ALERT] Florida GOV (primary) [R] | Byron Donalds | K_YES+P_NO: 0.260 | Profit:72.9% (no vol)
+10:24:20.166 [INFO] [NR-ALERT] Florida GOV (primary) [R] | James Fishback | K_NO+P_YES: 0.460 | Profit:52.1% (no vol)
+10:24:20.166 [INFO] [NR-ALERT] Michigan SEN (primary) [D | Abdul El-Sayed | K_YES+P_NO: 0.820 | Profit:15.6% (no vol)
+10:24:20.166 [INFO] [NR-ALERT] Michigan SEN (primary) [D | Haley Stevens | K_NO+P_YES: 0.819 | Profit:16.2% (no vol)
+10:24:20.166 [INFO] [NR-ALERT] California GOV (primary) | Tom Steyer | K_NO+P_YES: 0.850 | Profit:13.0% (no vol)
+10:24:20.166 [INFO] [NR-ALERT] California GOV (primary) | Xavier Becerra | K_YES+P_NO: 0.690 | Profit:29.3% (no vol)
+10:24:20.166 [INFO] [ARB] California GOV (primary) | Tom Steyer | K_YES+P_NO: 0.820 | Vol:316 Profit:15.4%
+10:24:20.166 [INFO] [ARB] California GOV (primary) | Steve Hilton | K_YES+P_NO: 0.700 | Vol:615 Profit:25.5%
+10:24:20.166 [INFO] [ARB] California GOV (primary) | Xavier Becerra | K_YES+P_NO: 0.551 | Vol:424 Profit:36.5%
+10:24:20.166 [INFO] [ARB] California District 13 HO | Kevin Lincoln II | K_YES+P_NO: 0.320 | Vol:400 Profit:46.3%
+10:24:20.167 [INFO] Cycle #4 done in 47.5s | 127 candidates | Top: [NR] Who will win the 2026 Lat (85.1%)
+10:24:43.414 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:25:13.717 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:25:40.256 [DEBUG] Loaded 897 mapped events from 4 config files
+10:25:40.257 [INFO] [WS] Refreshing markets (897 events)
+10:25:43.945 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:26:14.170 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:26:24.918 [INFO] 127 candidates below threshold
+10:26:27.377 [INFO] [ARB] Which bills will become l | FISA Section 702 rea | K_YES+P_NO: 0.560 | Vol:5885 Profit:8.7%
+10:26:27.377 [INFO] [ARB] Who will be arrested befo | James Clapper | K_NO+P_YES: 0.910 | Vol:11 Profit:6.8%
+10:26:27.377 [INFO] [ARB] Which companies will the  | GlobalFoundries | K_NO+P_YES: 0.790 | Vol:10 Profit:18.5%
+10:26:27.377 [INFO] [ARB] CA-06 primary: first plac | Richard Pan | K_YES+P_NO: 0.710 | Vol:118 Profit:26.7%
+10:26:27.377 [INFO] [NR-ALERT] Brazil Presidential Elect | Flávio Bolsonaro <5% | K_NO+P_YES: 0.740 | Profit:23.9% (no vol)
+10:26:27.378 [INFO] [NR-ALERT] Brazil Presidential Elect | Lula da Silva <5% | K_YES+P_NO: 0.820 | Profit:17.1% (no vol)
+10:26:27.378 [INFO] [NR-ALERT] Minnesota State Senate wi | Republican | K_NO+P_YES: 0.900 | Profit:8.7% (no vol)
+10:26:27.378 [INFO] [ARB] What will Trump say durin | Fighter | K_YES+P_NO: 0.850 | Vol:240 Profit:10.7%
+10:26:27.378 [INFO] [NR-ALERT] Minas Gerais Governor win | Rodrigo Pacheco | K_NO+P_YES: 0.890 | Profit:9.2% (no vol)
+10:26:27.378 [INFO] [NR-ALERT] North Carolina Senate win | Democrat | K_YES+P_NO: 0.810 | Profit:17.0% (no vol)
+10:26:27.378 [INFO] [NR-ALERT] North Carolina Senate win | Republican | K_NO+P_YES: 0.840 | Profit:14.0% (no vol)
+10:26:27.378 [INFO] [NR-ALERT] Who will be Trump's next  | Keith Sonderling | K_YES+P_NO: 0.860 | Profit:11.9% (no vol)
+10:26:27.378 [INFO] [ARB] Who will release a new al | Olivia Rodrigo | K_YES+P_NO: 0.386 | Vol:418 Profit:53.2%
+10:26:27.378 [INFO] [ARB] CA-07 primary: first plac | Mai Vang | K_YES+P_NO: 0.430 | Vol:400 Profit:43.8%
+10:26:27.378 [INFO] [NR-ALERT] Ohio Senate winner? (2028 | Democrat | K_YES+P_NO: 0.780 | Profit:19.6% (no vol)
+10:26:27.378 [INFO] [NR-ALERT] Ohio Senate winner? (2028 | Republican | K_NO+P_YES: 0.820 | Profit:15.6% (no vol)
+10:26:27.378 [INFO] [ARB] CA-34 primary: first plac | Angela Gonzales-Torr | K_YES+P_NO: 0.380 | Vol:400 Profit:20.6%
+10:26:27.378 [INFO] [ARB] What will Trump say this  | Mamdani | K_NO+P_YES: 0.850 | Vol:10 Profit:13.1%
+10:26:27.378 [INFO] [ARB] What will Trump say this  | Stupid person | K_YES+P_NO: 0.900 | Vol:8 Profit:7.2%
+10:26:27.378 [INFO] [ARB] CA-45 primary: first plac | Chuong Vo | K_YES+P_NO: 0.650 | Vol:334 Profit:19.3%
+10:26:27.378 [INFO] [ARB] CA-41 primary: first plac | Mitch Clemmons | K_YES+P_NO: 0.300 | Vol:400 Profit:63.4%
+10:26:27.378 [INFO] [ARB] CA-03 primary: first plac | Christine Bish | K_YES+P_NO: 0.890 | Vol:200 Profit:9.8%
+10:26:27.378 [INFO] [ARB] CA-03 primary: first plac | Robb Tucker | K_YES+P_NO: 0.400 | Vol:400 Profit:47.8%
+10:26:27.378 [INFO] [NR-ALERT] Will 2026 be the hottest  | 1st hottest | K_NO+P_YES: 0.735 | Profit:24.7% (no vol)
+10:26:27.378 [INFO] [ARB] CA-22 primary: first plac | Jasmeet Bains | K_YES+P_NO: 0.860 | Vol:200 Profit:12.6%
+10:26:27.378 [INFO] [ARB] CA-22 primary: first plac | Randy Villegas | K_YES+P_NO: 0.770 | Vol:33 Profit:20.8%
+10:26:27.378 [INFO] [NR-ALERT] GA-01 Democratic nominee? | Amanda Hollowell | K_NO+P_YES: 0.910 | Profit:6.7% (no vol)
+10:26:27.378 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 3-6% | K_NO+P_YES: 0.660 | Profit:31.8% (no vol)
+10:26:27.378 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 6-9% | K_NO+P_YES: 0.830 | Profit:14.7% (no vol)
+10:26:27.378 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 9%+ | K_NO+P_YES: 0.900 | Profit:8.1% (no vol)
+10:26:27.379 [INFO] [ARB] CA-17 primary: first plac | Ethan Agarwal | K_YES+P_NO: 0.440 | Vol:2526 Profit:20.8%
+10:26:27.379 [INFO] [NR-ALERT] State of the economy at t | Overheating (Unemplo | K_YES+P_NO: 0.902 | Profit:7.5% (no vol)
+10:26:27.379 [INFO] [ARB] CA-40 primary: first plac | Ken Calvert | K_YES+P_NO: 0.490 | Vol:400 Profit:35.4%
+10:26:27.379 [INFO] [ARB] CA-40 primary: first plac | Esther Kim Varet | K_YES+P_NO: 0.880 | Vol:100 Profit:9.6%
+10:26:27.379 [INFO] [NR-ALERT] Which AI company will hav | Anthropic | K_YES+P_NO: 0.705 | Profit:27.6% (no vol)
+10:26:27.379 [INFO] [ARB] Which states will redistr | Utah | K_YES+P_NO: 0.370 | Vol:3697 Profit:11.7%
+10:26:27.379 [INFO] [ARB] CA-48 primary: first plac | Ammar Campa-Najjar | K_YES+P_NO: 0.470 | Vol:400 Profit:40.9%
+10:26:27.379 [INFO] [ARB] CA-48 primary: first plac | Marni von Wilpert | K_YES+P_NO: 0.530 | Vol:400 Profit:12.2%
+10:26:27.379 [INFO] [ARB] What kind of device will  | Glasses | K_YES+P_NO: 0.860 | Vol:526 Profit:10.1%
+10:26:27.379 [INFO] [ARB] What kind of device will  | Earbuds/Headphones | K_NO+P_YES: 0.910 | Vol:5 Profit:6.3%
+10:26:27.379 [INFO] [ARB] CA-04 primary: first plac | Mike Thompson | K_YES+P_NO: 0.490 | Vol:472 Profit:45.8%
+10:26:27.379 [INFO] [ARB] CA-04 primary: first plac | Eric Jones | K_YES+P_NO: 0.691 | Vol:404 Profit:27.6%
+10:26:27.379 [INFO] [NR-ALERT] Who will win the next Arg | Javier Milei | K_NO+P_YES: 0.830 | Profit:14.6% (no vol)
+10:26:27.379 [INFO] [ARB] Who will have a #1 hit th | Rihanna | K_YES+P_NO: 0.899 | Vol:30 Profit:8.2%
+10:26:27.379 [INFO] [ARB] Who will have a #1 hit th | Morgan Wallen | K_YES+P_NO: 0.900 | Vol:8 Profit:7.9%
+10:26:27.379 [INFO] [NR-ALERT] Texas House of Representa | Republican Party | K_YES+P_NO: 0.850 | Profit:13.2% (no vol)
+10:26:27.379 [INFO] [NR-ALERT] Texas House of Representa | Democratic Party | K_NO+P_YES: 0.850 | Profit:13.2% (no vol)
+10:26:27.379 [INFO] [ARB] Who will be a Bridesmaid  | Gigi Hadid | K_YES+P_NO: 0.900 | Vol:20 Profit:6.8%
+10:26:27.379 [INFO] [NR-ALERT] Ohio Secretary of State w | Democrat | K_YES+P_NO: 0.760 | Profit:21.9% (no vol)
+10:26:27.379 [INFO] [NR-ALERT] Ohio Secretary of State w | Republican | K_NO+P_YES: 0.770 | Profit:20.9% (no vol)
+10:26:27.379 [INFO] [ARB] Who will Donald Trump tal | Kim Jong Un | K_NO+P_YES: 0.092 | Vol:5501 Profit:58.4%
+10:26:27.379 [INFO] [ARB] Who will lead the next qu | Steve Hilton | K_YES+P_NO: 0.580 | Vol:155 Profit:37.4%
+10:26:27.379 [INFO] [ARB] Who will lead the next qu | Tom Steyer | K_YES+P_NO: 0.870 | Vol:155 Profit:9.2%
+10:26:27.379 [INFO] [ARB] Who will lead the next qu | Xavier Becerra | K_YES+P_NO: 0.761 | Vol:155 Profit:9.6%
+10:26:27.379 [INFO] [NR-ALERT] Who will be the next Prim | Andy Burnham | K_NO+P_YES: 0.897 | Profit:7.9% (no vol)
+10:26:27.379 [INFO] [NR-ALERT] How many Senate seats wil | ≤47 | K_YES+P_NO: 0.733 | Profit:25.7% (no vol)
+10:26:27.379 [INFO] [ARB] Peak US National Debt Und | $41 trillion | K_NO+P_YES: 0.790 | Vol:342 Profit:12.2%
+10:26:27.379 [INFO] [NR-ALERT] How many House seats will | Below 190 | K_YES+P_NO: 0.750 | Profit:23.1% (no vol)
+10:26:27.379 [INFO] [ARB] Where will Waymo operate  | Las Vegas | K_NO+P_YES: 0.470 | Vol:15 Profit:50.3%
+10:26:27.380 [INFO] [ARB] Where will Waymo operate  | Denver | K_NO+P_YES: 0.471 | Vol:5 Profit:50.8%
+10:26:27.380 [INFO] [ARB] Which countries will norm | Saudi Arabia | K_NO+P_YES: 0.867 | Vol:776 Profit:11.7%
+10:26:27.380 [INFO] [ARB] Which countries will norm | Lebanon | K_NO+P_YES: 0.877 | Vol:148 Profit:10.4%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Cory Booker | K_NO+P_YES: 0.460 | Vol:1187 Profit:38.7%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Gavin Newsom | K_NO+P_YES: 0.300 | Vol:3358 Profit:44.6%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Josh Shapiro | K_NO+P_YES: 0.320 | Vol:1526 Profit:28.4%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Pete Buttigieg | K_NO+P_YES: 0.390 | Vol:2119 Profit:45.7%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Gretchen Whitmer | K_NO+P_YES: 0.520 | Vol:1468 Profit:33.2%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Wes Moore | K_NO+P_YES: 0.570 | Vol:1926 Profit:30.3%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Alexandria Ocasio-Co | K_NO+P_YES: 0.670 | Vol:1217 Profit:23.6%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Kamala Harris | K_NO+P_YES: 0.620 | Vol:713 Profit:31.4%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Andy Beshear | K_NO+P_YES: 0.350 | Vol:1608 Profit:40.1%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | J.B. Pritzker | K_NO+P_YES: 0.440 | Vol:1732 Profit:43.3%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Roy Cooper | K_NO+P_YES: 0.840 | Vol:721 Profit:12.1%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Raphael Warnock | K_NO+P_YES: 0.820 | Vol:357 Profit:14.1%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Mark Kelly | K_NO+P_YES: 0.500 | Vol:1192 Profit:36.3%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Jared Polis | K_NO+P_YES: 0.620 | Vol:1536 Profit:31.1%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Jon Stewart | K_NO+P_YES: 0.890 | Vol:213 Profit:8.8%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Rahm Emanuel | K_NO+P_YES: 0.580 | Vol:573 Profit:29.7%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Phil Murphy | K_NO+P_YES: 0.723 | Vol:257 Profit:12.5%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Elise Stefanik | K_NO+P_YES: 0.756 | Vol:1507 Profit:14.0%
+10:26:27.380 [INFO] [ARB] Who will run for the Demo | Jon Ossoff | K_NO+P_YES: 0.710 | Vol:598 Profit:25.1%
+10:26:27.380 [INFO] [NR-ALERT] Who will win the next Sen | Chuck Schumer | K_NO+P_YES: 0.750 | Profit:22.7% (no vol)
+10:26:27.380 [INFO] [NR-ALERT] Which bank will take Spac | Morgan Stanley | K_NO+P_YES: 0.190 | Profit:80.3% (no vol)
+10:26:27.380 [INFO] [NR-ALERT] Ann Arbor Democratic mayo | Christopher Beardsle | K_NO+P_YES: 0.252 | Profit:73.5% (no vol)
+10:26:27.380 [INFO] [NR-ALERT] Texas Republican Senate R | Cornyn 3–6% | K_NO+P_YES: 0.788 | Profit:19.7% (no vol)
+10:26:27.380 [INFO] [ARB] Which companies will be a | Viking Therapeutics | K_YES+P_NO: 0.830 | Vol:828 Profit:13.7%
+10:26:27.380 [INFO] [ARB] Which companies will be a | Pizza Hut | K_YES+P_NO: 0.880 | Vol:574 Profit:8.8%
+10:26:27.380 [INFO] [ARB] SpaceX Starship 12th laun | May 21 | K_YES+P_NO: 0.680 | Vol:288 Profit:19.3%
+10:26:27.380 [INFO] [ARB] Who will testify in front | Ghislaine Maxwell | K_NO+P_YES: 0.868 | Vol:85 Profit:10.6%
+10:26:27.380 [INFO] [ARB] Who will be named as Xi J | Ding Xuexiang | K_NO+P_YES: 0.871 | Vol:982 Profit:11.2%
+10:26:27.380 [INFO] [ARB] Who will be named as Xi J | Li Xi | K_NO+P_YES: 0.858 | Vol:41 Profit:13.2%
+10:26:27.380 [INFO] [NR-ALERT] How many Cabinet members  | 0 | K_NO+P_YES: 0.518 | Profit:46.2% (no vol)
+10:26:27.380 [INFO] [NR-ALERT] Georgia Republican govern | Rick Jackson | K_NO+P_YES: 0.580 | Profit:40.2% (no vol)
+10:26:27.380 [INFO] [NR-ALERT] Georgia Republican govern | Burt Jones | K_YES+P_NO: 0.550 | Profit:43.5% (no vol)
+10:26:27.380 [INFO] [NR-ALERT] Who will advance from the | Saikat Chakrabarti | K_NO+P_YES: 0.814 | Profit:17.0% (no vol)
+10:26:27.380 [INFO] [NR-ALERT] Oscar nominations for Ach | Wild Horse Nine | K_NO+P_YES: 0.629 | Profit:35.1% (no vol)
+10:26:27.381 [INFO] [ARB] Which party will win the  | National Party | K_YES+P_NO: 0.780 | Vol:90 Profit:19.4%
+10:26:27.381 [INFO] [NR-ALERT] How many border encounter | 1050–1099 | K_NO+P_YES: 0.820 | Profit:16.6% (no vol)
+10:26:27.381 [INFO] [NR-ALERT] Annual Return: S&P 500 To | Gold | K_NO+P_YES: 0.880 | Profit:9.5% (no vol)
+10:26:27.381 [INFO] [ARB] Will BTC hit $75,000 befo | ↓ 75,000 | K_NO+P_YES: 0.890 | Vol:734 Profit:8.7%
+10:26:27.381 [INFO] [ARB] Who will Trump pardon? | Elon Musk | K_YES+P_NO: 0.507 | Vol:1153 Profit:44.3%
+10:26:27.381 [INFO] [ARB] What will NVIDIA say duri | ↑ $240 | K_NO+P_YES: 0.850 | Vol:338 Profit:8.3%
+10:26:27.381 [INFO] [ARB] What will Trump say durin | Bitcoin | K_YES+P_NO: 0.730 | Vol:381 Profit:17.7%
+10:26:27.381 [INFO] [NR-ALERT] Who will be the next Jame | Callum Turner | K_NO+P_YES: 0.830 | Profit:14.9% (no vol)
+10:26:27.381 [INFO] [NR-ALERT] Florida GOV (primary) [R] | Byron Donalds | K_YES+P_NO: 0.260 | Profit:72.9% (no vol)
+10:26:27.381 [INFO] [NR-ALERT] Florida GOV (primary) [R] | James Fishback | K_NO+P_YES: 0.460 | Profit:52.1% (no vol)
+10:26:27.381 [INFO] [NR-ALERT] Michigan SEN (primary) [D | Abdul El-Sayed | K_YES+P_NO: 0.820 | Profit:15.6% (no vol)
+10:26:27.381 [INFO] [NR-ALERT] Michigan SEN (primary) [D | Haley Stevens | K_NO+P_YES: 0.819 | Profit:16.2% (no vol)
+10:26:27.381 [INFO] [NR-ALERT] California GOV (primary) | Tom Steyer | K_NO+P_YES: 0.850 | Profit:13.0% (no vol)
+10:26:27.381 [INFO] [NR-ALERT] California GOV (primary) | Xavier Becerra | K_YES+P_NO: 0.690 | Profit:29.3% (no vol)
+10:26:27.381 [INFO] [ARB] California GOV (primary) | Tom Steyer | K_YES+P_NO: 0.820 | Vol:316 Profit:15.4%
+10:26:27.381 [INFO] [ARB] California GOV (primary) | Steve Hilton | K_YES+P_NO: 0.700 | Vol:615 Profit:25.5%
+10:26:27.381 [INFO] [ARB] California GOV (primary) | Xavier Becerra | K_YES+P_NO: 0.551 | Vol:380 Profit:27.3%
+10:26:27.381 [INFO] [ARB] California District 13 HO | Kevin Lincoln II | K_YES+P_NO: 0.320 | Vol:400 Profit:46.3%
+10:26:27.382 [INFO] Cycle #5 done in 47.1s | 127 candidates | Top: [NR] Who will win the 2026 Lat (85.1%)
+10:26:44.480 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:27:14.697 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:27:44.912 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:27:47.479 [DEBUG] Loaded 897 mapped events from 4 config files
+10:27:47.479 [INFO] [WS] Refreshing markets (897 events)
+10:28:15.204 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:28:32.730 [INFO] 128 candidates below threshold
+10:28:35.541 [INFO] [ARB] Which bills will become l | FISA Section 702 rea | K_YES+P_NO: 0.560 | Vol:5885 Profit:8.7%
+10:28:35.541 [INFO] [ARB] Who will be arrested befo | James Clapper | K_NO+P_YES: 0.910 | Vol:11 Profit:6.8%
+10:28:35.541 [INFO] [ARB] Which companies will the  | GlobalFoundries | K_NO+P_YES: 0.790 | Vol:10 Profit:18.5%
+10:28:35.541 [INFO] [ARB] CA-06 primary: first plac | Richard Pan | K_YES+P_NO: 0.710 | Vol:144 Profit:21.2%
+10:28:35.542 [INFO] [NR-ALERT] Brazil Presidential Elect | Flávio Bolsonaro <5% | K_NO+P_YES: 0.740 | Profit:23.9% (no vol)
+10:28:35.542 [INFO] [NR-ALERT] Brazil Presidential Elect | Lula da Silva <5% | K_YES+P_NO: 0.760 | Profit:23.0% (no vol)
+10:28:35.542 [INFO] [NR-ALERT] Minnesota State Senate wi | Republican | K_NO+P_YES: 0.900 | Profit:8.7% (no vol)
+10:28:35.542 [INFO] [ARB] What will Trump say durin | Fighter | K_YES+P_NO: 0.850 | Vol:240 Profit:10.7%
+10:28:35.542 [INFO] [NR-ALERT] Minas Gerais Governor win | Rodrigo Pacheco | K_NO+P_YES: 0.890 | Profit:9.2% (no vol)
+10:28:35.542 [INFO] [NR-ALERT] North Carolina Senate win | Democrat | K_YES+P_NO: 0.810 | Profit:17.0% (no vol)
+10:28:35.542 [INFO] [NR-ALERT] North Carolina Senate win | Republican | K_NO+P_YES: 0.840 | Profit:14.0% (no vol)
+10:28:35.542 [INFO] [ARB] Who will release a new al | Olivia Rodrigo | K_YES+P_NO: 0.386 | Vol:418 Profit:53.2%
+10:28:35.542 [INFO] [ARB] CA-07 primary: first plac | Mai Vang | K_YES+P_NO: 0.430 | Vol:400 Profit:43.8%
+10:28:35.542 [INFO] [NR-ALERT] Ohio Senate winner? (2028 | Democrat | K_YES+P_NO: 0.780 | Profit:19.6% (no vol)
+10:28:35.542 [INFO] [NR-ALERT] Ohio Senate winner? (2028 | Republican | K_NO+P_YES: 0.820 | Profit:15.6% (no vol)
+10:28:35.542 [INFO] [ARB] CA-34 primary: first plac | Angela Gonzales-Torr | K_YES+P_NO: 0.380 | Vol:400 Profit:20.6%
+10:28:35.542 [INFO] [ARB] What will Trump say this  | Mamdani | K_NO+P_YES: 0.850 | Vol:10 Profit:13.1%
+10:28:35.542 [INFO] [ARB] What will Trump say this  | Stupid person | K_YES+P_NO: 0.900 | Vol:8 Profit:7.2%
+10:28:35.542 [INFO] [NR-ALERT] Texas Republican Senate n | John Cornyn | K_YES+P_NO: 0.900 | Profit:7.7% (no vol)
+10:28:35.542 [INFO] [ARB] CA-45 primary: first plac | Chuong Vo | K_YES+P_NO: 0.650 | Vol:334 Profit:12.2%
+10:28:35.542 [INFO] [ARB] CA-41 primary: first plac | Mitch Clemmons | K_YES+P_NO: 0.300 | Vol:400 Profit:63.4%
+10:28:35.542 [INFO] [ARB] CA-03 primary: first plac | Christine Bish | K_YES+P_NO: 0.890 | Vol:200 Profit:9.8%
+10:28:35.542 [INFO] [ARB] CA-03 primary: first plac | Robb Tucker | K_YES+P_NO: 0.400 | Vol:400 Profit:47.8%
+10:28:35.542 [INFO] [NR-ALERT] Will 2026 be the hottest  | 1st hottest | K_NO+P_YES: 0.735 | Profit:24.7% (no vol)
+10:28:35.542 [INFO] [ARB] CA-22 primary: first plac | Jasmeet Bains | K_YES+P_NO: 0.860 | Vol:214 Profit:12.5%
+10:28:35.542 [INFO] [ARB] CA-22 primary: first plac | Randy Villegas | K_YES+P_NO: 0.770 | Vol:33 Profit:20.8%
+10:28:35.542 [INFO] [NR-ALERT] GA-01 Democratic nominee? | Amanda Hollowell | K_NO+P_YES: 0.910 | Profit:6.7% (no vol)
+10:28:35.542 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 3-6% | K_NO+P_YES: 0.660 | Profit:31.8% (no vol)
+10:28:35.543 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 6-9% | K_NO+P_YES: 0.830 | Profit:14.7% (no vol)
+10:28:35.543 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 9%+ | K_NO+P_YES: 0.900 | Profit:8.1% (no vol)
+10:28:35.543 [INFO] [ARB] CA-17 primary: first plac | Ethan Agarwal | K_YES+P_NO: 0.440 | Vol:2526 Profit:20.8%
+10:28:35.543 [INFO] [NR-ALERT] State of the economy at t | Overheating (Unemplo | K_YES+P_NO: 0.902 | Profit:7.5% (no vol)
+10:28:35.543 [INFO] [ARB] CA-40 primary: first plac | Ken Calvert | K_YES+P_NO: 0.490 | Vol:400 Profit:35.4%
+10:28:35.543 [INFO] [ARB] CA-40 primary: first plac | Esther Kim Varet | K_YES+P_NO: 0.880 | Vol:100 Profit:9.6%
+10:28:35.543 [INFO] [NR-ALERT] Which AI company will hav | Anthropic | K_YES+P_NO: 0.705 | Profit:27.6% (no vol)
+10:28:35.543 [INFO] [ARB] Which states will redistr | Utah | K_YES+P_NO: 0.370 | Vol:3697 Profit:11.7%
+10:28:35.543 [INFO] [ARB] CA-48 primary: first plac | Ammar Campa-Najjar | K_YES+P_NO: 0.470 | Vol:400 Profit:40.9%
+10:28:35.543 [INFO] [ARB] CA-48 primary: first plac | Marni von Wilpert | K_YES+P_NO: 0.530 | Vol:400 Profit:27.0%
+10:28:35.543 [INFO] [ARB] What kind of device will  | Glasses | K_YES+P_NO: 0.860 | Vol:526 Profit:10.1%
+10:28:35.543 [INFO] [ARB] What kind of device will  | Earbuds/Headphones | K_NO+P_YES: 0.910 | Vol:5 Profit:6.3%
+10:28:35.543 [INFO] [ARB] CA-04 primary: first plac | Mike Thompson | K_YES+P_NO: 0.490 | Vol:472 Profit:45.8%
+10:28:35.543 [INFO] [ARB] CA-04 primary: first plac | Eric Jones | K_YES+P_NO: 0.691 | Vol:404 Profit:27.6%
+10:28:35.543 [INFO] [NR-ALERT] Who will win the next Arg | Javier Milei | K_NO+P_YES: 0.830 | Profit:14.6% (no vol)
+10:28:35.543 [INFO] [ARB] Who will have a #1 hit th | Rihanna | K_YES+P_NO: 0.899 | Vol:30 Profit:8.2%
+10:28:35.543 [INFO] [NR-ALERT] Texas House of Representa | Republican Party | K_YES+P_NO: 0.850 | Profit:13.2% (no vol)
+10:28:35.543 [INFO] [NR-ALERT] Texas House of Representa | Democratic Party | K_NO+P_YES: 0.850 | Profit:13.2% (no vol)
+10:28:35.543 [INFO] [ARB] Who will be a Bridesmaid  | Gigi Hadid | K_YES+P_NO: 0.900 | Vol:20 Profit:6.8%
+10:28:35.543 [INFO] [NR-ALERT] Ohio Secretary of State w | Democrat | K_YES+P_NO: 0.760 | Profit:21.9% (no vol)
+10:28:35.543 [INFO] [NR-ALERT] Ohio Secretary of State w | Republican | K_NO+P_YES: 0.770 | Profit:20.9% (no vol)
+10:28:35.543 [INFO] [ARB] Who will Donald Trump tal | Kim Jong Un | K_NO+P_YES: 0.092 | Vol:5501 Profit:58.4%
+10:28:35.543 [INFO] [ARB] Who will lead the next qu | Steve Hilton | K_YES+P_NO: 0.580 | Vol:155 Profit:37.4%
+10:28:35.543 [INFO] [ARB] Who will lead the next qu | Tom Steyer | K_YES+P_NO: 0.870 | Vol:155 Profit:9.2%
+10:28:35.543 [INFO] [ARB] Who will lead the next qu | Xavier Becerra | K_YES+P_NO: 0.761 | Vol:55 Profit:15.9%
+10:28:35.543 [INFO] [NR-ALERT] Who will be the next Prim | Andy Burnham | K_NO+P_YES: 0.896 | Profit:8.0% (no vol)
+10:28:35.544 [INFO] [NR-ALERT] How many Senate seats wil | ≤47 | K_YES+P_NO: 0.733 | Profit:25.7% (no vol)
+10:28:35.544 [INFO] [ARB] Peak US National Debt Und | $41 trillion | K_NO+P_YES: 0.790 | Vol:342 Profit:12.2%
+10:28:35.544 [INFO] [NR-ALERT] How many House seats will | Below 190 | K_YES+P_NO: 0.750 | Profit:23.1% (no vol)
+10:28:35.544 [INFO] [ARB] Where will Waymo operate  | Las Vegas | K_NO+P_YES: 0.470 | Vol:15 Profit:50.3%
+10:28:35.544 [INFO] [ARB] Where will Waymo operate  | Denver | K_NO+P_YES: 0.471 | Vol:5 Profit:50.8%
+10:28:35.544 [INFO] [ARB] Which countries will norm | Saudi Arabia | K_NO+P_YES: 0.867 | Vol:776 Profit:11.7%
+10:28:35.544 [INFO] [ARB] Which countries will norm | Lebanon | K_NO+P_YES: 0.877 | Vol:168 Profit:10.4%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Cory Booker | K_NO+P_YES: 0.460 | Vol:1187 Profit:38.7%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Gavin Newsom | K_NO+P_YES: 0.300 | Vol:3364 Profit:44.6%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Josh Shapiro | K_NO+P_YES: 0.320 | Vol:1526 Profit:28.4%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Pete Buttigieg | K_NO+P_YES: 0.390 | Vol:2119 Profit:45.7%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Gretchen Whitmer | K_NO+P_YES: 0.520 | Vol:1465 Profit:33.3%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Wes Moore | K_NO+P_YES: 0.570 | Vol:1926 Profit:30.3%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Alexandria Ocasio-Co | K_NO+P_YES: 0.670 | Vol:1217 Profit:23.6%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Kamala Harris | K_NO+P_YES: 0.620 | Vol:713 Profit:31.4%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Andy Beshear | K_NO+P_YES: 0.350 | Vol:1608 Profit:34.8%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | J.B. Pritzker | K_NO+P_YES: 0.440 | Vol:1740 Profit:43.1%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Roy Cooper | K_NO+P_YES: 0.840 | Vol:721 Profit:12.1%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Raphael Warnock | K_NO+P_YES: 0.820 | Vol:357 Profit:14.1%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Mark Kelly | K_NO+P_YES: 0.500 | Vol:1192 Profit:36.3%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Jared Polis | K_NO+P_YES: 0.620 | Vol:1536 Profit:31.1%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Jon Stewart | K_NO+P_YES: 0.890 | Vol:213 Profit:8.8%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Rahm Emanuel | K_NO+P_YES: 0.580 | Vol:558 Profit:28.8%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Phil Murphy | K_NO+P_YES: 0.723 | Vol:257 Profit:12.5%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Elise Stefanik | K_NO+P_YES: 0.756 | Vol:1507 Profit:14.2%
+10:28:35.544 [INFO] [ARB] Who will run for the Demo | Jon Ossoff | K_NO+P_YES: 0.710 | Vol:618 Profit:25.1%
+10:28:35.544 [INFO] [NR-ALERT] Who will win the next Sen | Chuck Schumer | K_NO+P_YES: 0.750 | Profit:22.7% (no vol)
+10:28:35.545 [INFO] [NR-ALERT] Which bank will take Spac | Morgan Stanley | K_NO+P_YES: 0.190 | Profit:80.3% (no vol)
+10:28:35.545 [INFO] [NR-ALERT] Ann Arbor Democratic mayo | Christopher Beardsle | K_NO+P_YES: 0.252 | Profit:73.5% (no vol)
+10:28:35.545 [INFO] [NR-ALERT] Texas Republican Senate R | Cornyn 3–6% | K_NO+P_YES: 0.788 | Profit:19.7% (no vol)
+10:28:35.545 [INFO] [ARB] Which companies will be a | Viking Therapeutics | K_YES+P_NO: 0.830 | Vol:828 Profit:13.7%
+10:28:35.545 [INFO] [ARB] Which companies will be a | Pizza Hut | K_YES+P_NO: 0.880 | Vol:574 Profit:8.8%
+10:28:35.545 [INFO] [ARB] SpaceX Starship 12th laun | May 21 | K_YES+P_NO: 0.680 | Vol:288 Profit:19.3%
+10:28:35.545 [INFO] [ARB] Who will testify in front | Ghislaine Maxwell | K_NO+P_YES: 0.868 | Vol:85 Profit:10.6%
+10:28:35.545 [INFO] [ARB] Who will be named as Xi J | Ding Xuexiang | K_NO+P_YES: 0.871 | Vol:982 Profit:11.2%
+10:28:35.545 [INFO] [ARB] Who will be named as Xi J | Li Xi | K_NO+P_YES: 0.858 | Vol:41 Profit:13.2%
+10:28:35.545 [INFO] [NR-ALERT] How many Cabinet members  | 0 | K_NO+P_YES: 0.518 | Profit:46.2% (no vol)
+10:28:35.545 [INFO] [NR-ALERT] Georgia Republican govern | Rick Jackson | K_NO+P_YES: 0.580 | Profit:40.2% (no vol)
+10:28:35.545 [INFO] [NR-ALERT] Georgia Republican govern | Burt Jones | K_YES+P_NO: 0.550 | Profit:43.5% (no vol)
+10:28:35.545 [INFO] [NR-ALERT] Who will advance from the | Saikat Chakrabarti | K_NO+P_YES: 0.814 | Profit:17.0% (no vol)
+10:28:35.545 [INFO] [NR-ALERT] Oscar nominations for Ach | Wild Horse Nine | K_NO+P_YES: 0.629 | Profit:35.1% (no vol)
+10:28:35.545 [INFO] [ARB] Which party will win the  | National Party | K_YES+P_NO: 0.770 | Vol:90 Profit:19.4%
+10:28:35.545 [INFO] [NR-ALERT] How many border encounter | 1050–1099 | K_NO+P_YES: 0.820 | Profit:16.6% (no vol)
+10:28:35.545 [INFO] [NR-ALERT] Annual Return: S&P 500 To | Gold | K_NO+P_YES: 0.880 | Profit:9.5% (no vol)
+10:28:35.545 [INFO] [ARB] Will BTC hit $75,000 befo | ↓ 75,000 | K_NO+P_YES: 0.890 | Vol:734 Profit:10.7%
+10:28:35.545 [INFO] [ARB] Who will Trump pardon? | Elon Musk | K_YES+P_NO: 0.507 | Vol:1153 Profit:44.3%
+10:28:35.545 [INFO] [ARB] What will NVIDIA say duri | ↑ $240 | K_NO+P_YES: 0.850 | Vol:317 Profit:8.2%
+10:28:35.545 [INFO] [ARB] What will Trump say durin | Bitcoin | K_YES+P_NO: 0.730 | Vol:381 Profit:17.7%
+10:28:35.545 [INFO] [NR-ALERT] Who will be the next Jame | Callum Turner | K_NO+P_YES: 0.830 | Profit:14.9% (no vol)
+10:28:35.545 [INFO] [NR-ALERT] Florida GOV (primary) [R] | Byron Donalds | K_YES+P_NO: 0.260 | Profit:72.9% (no vol)
+10:28:35.545 [INFO] [NR-ALERT] Florida GOV (primary) [R] | James Fishback | K_NO+P_YES: 0.460 | Profit:52.1% (no vol)
+10:28:35.545 [INFO] [NR-ALERT] Michigan SEN (primary) [D | Abdul El-Sayed | K_YES+P_NO: 0.820 | Profit:15.6% (no vol)
+10:28:35.545 [INFO] [NR-ALERT] Michigan SEN (primary) [D | Haley Stevens | K_NO+P_YES: 0.819 | Profit:16.2% (no vol)
+10:28:35.545 [INFO] [NR-ALERT] California GOV (primary) | Tom Steyer | K_NO+P_YES: 0.850 | Profit:13.0% (no vol)
+10:28:35.545 [INFO] [NR-ALERT] California GOV (primary) | Xavier Becerra | K_YES+P_NO: 0.690 | Profit:29.3% (no vol)
+10:28:35.546 [INFO] [ARB] California GOV (primary) | Tom Steyer | K_YES+P_NO: 0.820 | Vol:316 Profit:15.4%
+10:28:35.546 [INFO] [ARB] California GOV (primary) | Steve Hilton | K_YES+P_NO: 0.700 | Vol:615 Profit:25.5%
+10:28:35.546 [INFO] [ARB] California GOV (primary) | Xavier Becerra | K_YES+P_NO: 0.551 | Vol:395 Profit:26.7%
+10:28:35.546 [INFO] [ARB] California District 13 HO | Kevin Lincoln II | K_YES+P_NO: 0.320 | Vol:400 Profit:46.3%
+10:28:35.546 [INFO] Cycle #6 done in 48.1s | 128 candidates | Top: [NR] Who will win the 2026 Lat (85.1%)
+10:28:45.442 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:29:15.808 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:29:46.035 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:29:55.620 [DEBUG] Loaded 897 mapped events from 4 config files
+10:29:55.621 [INFO] [WS] Refreshing markets (897 events)
+10:30:16.251 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:30:39.866 [INFO] 127 candidates below threshold
+10:30:42.294 [INFO] [ARB] Which bills will become l | FISA Section 702 rea | K_YES+P_NO: 0.560 | Vol:5885 Profit:8.7%
+10:30:42.294 [INFO] [ARB] Who will be arrested befo | James Clapper | K_NO+P_YES: 0.910 | Vol:11 Profit:6.8%
+10:30:42.294 [INFO] [ARB] Which companies will the  | GlobalFoundries | K_NO+P_YES: 0.790 | Vol:10 Profit:18.5%
+10:30:42.294 [INFO] [ARB] CA-06 primary: first plac | Richard Pan | K_YES+P_NO: 0.710 | Vol:153 Profit:27.5%
+10:30:42.294 [INFO] [NR-ALERT] Brazil Presidential Elect | Flávio Bolsonaro <5% | K_NO+P_YES: 0.740 | Profit:23.9% (no vol)
+10:30:42.294 [INFO] [NR-ALERT] Brazil Presidential Elect | Lula da Silva <5% | K_YES+P_NO: 0.760 | Profit:23.0% (no vol)
+10:30:42.294 [INFO] [NR-ALERT] Minnesota State Senate wi | Republican | K_NO+P_YES: 0.900 | Profit:8.7% (no vol)
+10:30:42.294 [INFO] [ARB] What will Trump say durin | Fighter | K_YES+P_NO: 0.850 | Vol:240 Profit:10.7%
+10:30:42.295 [INFO] [NR-ALERT] Minas Gerais Governor win | Rodrigo Pacheco | K_NO+P_YES: 0.890 | Profit:9.2% (no vol)
+10:30:42.295 [INFO] [NR-ALERT] North Carolina Senate win | Democrat | K_YES+P_NO: 0.810 | Profit:17.0% (no vol)
+10:30:42.295 [INFO] [NR-ALERT] North Carolina Senate win | Republican | K_NO+P_YES: 0.840 | Profit:14.0% (no vol)
+10:30:42.295 [INFO] [ARB] Who will release a new al | Olivia Rodrigo | K_YES+P_NO: 0.386 | Vol:418 Profit:53.2%
+10:30:42.295 [INFO] [ARB] CA-07 primary: first plac | Mai Vang | K_YES+P_NO: 0.430 | Vol:400 Profit:43.8%
+10:30:42.295 [INFO] [NR-ALERT] Ohio Senate winner? (2028 | Democrat | K_YES+P_NO: 0.780 | Profit:19.6% (no vol)
+10:30:42.295 [INFO] [NR-ALERT] Ohio Senate winner? (2028 | Republican | K_NO+P_YES: 0.820 | Profit:15.6% (no vol)
+10:30:42.295 [INFO] [ARB] CA-34 primary: first plac | Angela Gonzales-Torr | K_YES+P_NO: 0.380 | Vol:400 Profit:20.6%
+10:30:42.295 [INFO] [ARB] What will Trump say this  | Mamdani | K_NO+P_YES: 0.850 | Vol:10 Profit:13.1%
+10:30:42.295 [INFO] [ARB] What will Trump say this  | Stupid person | K_YES+P_NO: 0.900 | Vol:8 Profit:7.2%
+10:30:42.295 [INFO] [NR-ALERT] Texas Republican Senate n | John Cornyn | K_YES+P_NO: 0.860 | Profit:11.8% (no vol)
+10:30:42.295 [INFO] [ARB] CA-45 primary: first plac | Chuong Vo | K_YES+P_NO: 0.610 | Vol:334 Profit:16.1%
+10:30:42.295 [INFO] [ARB] CA-41 primary: first plac | Mitch Clemmons | K_YES+P_NO: 0.300 | Vol:400 Profit:63.4%
+10:30:42.295 [INFO] [ARB] CA-03 primary: first plac | Christine Bish | K_YES+P_NO: 0.890 | Vol:200 Profit:9.8%
+10:30:42.295 [INFO] [ARB] CA-03 primary: first plac | Robb Tucker | K_YES+P_NO: 0.400 | Vol:400 Profit:47.8%
+10:30:42.295 [INFO] [NR-ALERT] Will 2026 be the hottest  | 1st hottest | K_NO+P_YES: 0.759 | Profit:22.2% (no vol)
+10:30:42.295 [INFO] [ARB] CA-22 primary: first plac | Jasmeet Bains | K_YES+P_NO: 0.860 | Vol:208 Profit:12.5%
+10:30:42.295 [INFO] [ARB] CA-22 primary: first plac | Randy Villegas | K_YES+P_NO: 0.770 | Vol:33 Profit:20.8%
+10:30:42.295 [INFO] [NR-ALERT] GA-01 Democratic nominee? | Amanda Hollowell | K_NO+P_YES: 0.910 | Profit:6.7% (no vol)
+10:30:42.295 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 3-6% | K_NO+P_YES: 0.650 | Profit:32.8% (no vol)
+10:30:42.296 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 6-9% | K_NO+P_YES: 0.840 | Profit:13.7% (no vol)
+10:30:42.296 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 9%+ | K_NO+P_YES: 0.900 | Profit:8.1% (no vol)
+10:30:42.296 [INFO] [ARB] CA-17 primary: first plac | Ethan Agarwal | K_YES+P_NO: 0.440 | Vol:2526 Profit:20.8%
+10:30:42.296 [INFO] [NR-ALERT] State of the economy at t | Overheating (Unemplo | K_YES+P_NO: 0.902 | Profit:7.5% (no vol)
+10:30:42.296 [INFO] [ARB] CA-40 primary: first plac | Ken Calvert | K_YES+P_NO: 0.490 | Vol:400 Profit:35.4%
+10:30:42.296 [INFO] [ARB] CA-40 primary: first plac | Esther Kim Varet | K_YES+P_NO: 0.880 | Vol:100 Profit:9.6%
+10:30:42.296 [INFO] [NR-ALERT] Which AI company will hav | Anthropic | K_YES+P_NO: 0.705 | Profit:27.6% (no vol)
+10:30:42.296 [INFO] [ARB] Which states will redistr | Utah | K_YES+P_NO: 0.370 | Vol:3697 Profit:11.7%
+10:30:42.296 [INFO] [ARB] CA-48 primary: first plac | Ammar Campa-Najjar | K_YES+P_NO: 0.470 | Vol:400 Profit:40.9%
+10:30:42.296 [INFO] [ARB] CA-48 primary: first plac | Marni von Wilpert | K_YES+P_NO: 0.530 | Vol:400 Profit:25.1%
+10:30:42.296 [INFO] [ARB] What kind of device will  | Glasses | K_YES+P_NO: 0.860 | Vol:526 Profit:10.1%
+10:30:42.296 [INFO] [ARB] What kind of device will  | Earbuds/Headphones | K_NO+P_YES: 0.910 | Vol:5 Profit:6.3%
+10:30:42.296 [INFO] [ARB] CA-04 primary: first plac | Mike Thompson | K_YES+P_NO: 0.490 | Vol:472 Profit:45.8%
+10:30:42.296 [INFO] [ARB] CA-04 primary: first plac | Eric Jones | K_YES+P_NO: 0.691 | Vol:404 Profit:27.6%
+10:30:42.296 [INFO] [NR-ALERT] Who will win the next Arg | Javier Milei | K_NO+P_YES: 0.830 | Profit:14.6% (no vol)
+10:30:42.296 [INFO] [ARB] Who will have a #1 hit th | Rihanna | K_YES+P_NO: 0.899 | Vol:30 Profit:8.2%
+10:30:42.296 [INFO] [NR-ALERT] Texas House of Representa | Republican Party | K_YES+P_NO: 0.850 | Profit:13.2% (no vol)
+10:30:42.296 [INFO] [NR-ALERT] Texas House of Representa | Democratic Party | K_NO+P_YES: 0.850 | Profit:13.2% (no vol)
+10:30:42.296 [INFO] [ARB] Who will be a Bridesmaid  | Gigi Hadid | K_YES+P_NO: 0.900 | Vol:20 Profit:6.8%
+10:30:42.297 [INFO] [NR-ALERT] Ohio Secretary of State w | Democrat | K_YES+P_NO: 0.760 | Profit:21.9% (no vol)
+10:30:42.297 [INFO] [NR-ALERT] Ohio Secretary of State w | Republican | K_NO+P_YES: 0.770 | Profit:20.9% (no vol)
+10:30:42.297 [INFO] [ARB] Who will Donald Trump tal | Kim Jong Un | K_NO+P_YES: 0.092 | Vol:5501 Profit:58.3%
+10:30:42.297 [INFO] [ARB] Who will lead the next qu | Steve Hilton | K_YES+P_NO: 0.580 | Vol:155 Profit:37.4%
+10:30:42.297 [INFO] [ARB] Who will lead the next qu | Tom Steyer | K_YES+P_NO: 0.870 | Vol:155 Profit:8.2%
+10:30:42.297 [INFO] [ARB] Who will lead the next qu | Xavier Becerra | K_YES+P_NO: 0.763 | Vol:55 Profit:15.9%
+10:30:42.297 [INFO] [NR-ALERT] 2026 Texas Senate matchup | Talarico & Paxton | K_NO+P_YES: 0.890 | Profit:8.7% (no vol)
+10:30:42.297 [INFO] [NR-ALERT] 2026 Texas Senate matchup | Talarico & Cornyn | K_YES+P_NO: 0.870 | Profit:10.7% (no vol)
+10:30:42.297 [INFO] [NR-ALERT] Who will be the next Prim | Andy Burnham | K_NO+P_YES: 0.896 | Profit:8.0% (no vol)
+10:30:42.297 [INFO] [NR-ALERT] How many Senate seats wil | ≤47 | K_YES+P_NO: 0.733 | Profit:25.7% (no vol)
+10:30:42.297 [INFO] [ARB] Peak US National Debt Und | $41 trillion | K_NO+P_YES: 0.790 | Vol:342 Profit:12.2%
+10:30:42.297 [INFO] [NR-ALERT] How many House seats will | Below 190 | K_YES+P_NO: 0.850 | Profit:13.2% (no vol)
+10:30:42.297 [INFO] [ARB] Where will Waymo operate  | Las Vegas | K_NO+P_YES: 0.470 | Vol:15 Profit:50.3%
+10:30:42.297 [INFO] [ARB] Where will Waymo operate  | Denver | K_NO+P_YES: 0.471 | Vol:5 Profit:50.8%
+10:30:42.297 [INFO] [ARB] Which countries will norm | Saudi Arabia | K_NO+P_YES: 0.867 | Vol:776 Profit:11.7%
+10:30:42.297 [INFO] [ARB] Which countries will norm | Lebanon | K_NO+P_YES: 0.877 | Vol:168 Profit:10.4%
+10:30:42.297 [INFO] [ARB] Who will run for the Demo | Cory Booker | K_NO+P_YES: 0.460 | Vol:1187 Profit:38.7%
+10:30:42.297 [INFO] [ARB] Who will run for the Demo | Gavin Newsom | K_NO+P_YES: 0.300 | Vol:3364 Profit:44.6%
+10:30:42.297 [INFO] [ARB] Who will run for the Demo | Josh Shapiro | K_NO+P_YES: 0.320 | Vol:1526 Profit:28.4%
+10:30:42.297 [INFO] [ARB] Who will run for the Demo | Pete Buttigieg | K_NO+P_YES: 0.390 | Vol:2119 Profit:45.7%
+10:30:42.298 [INFO] [ARB] Who will run for the Demo | Gretchen Whitmer | K_NO+P_YES: 0.520 | Vol:1465 Profit:33.3%
+10:30:42.298 [INFO] [ARB] Who will run for the Demo | Wes Moore | K_NO+P_YES: 0.570 | Vol:1926 Profit:30.3%
+10:30:42.298 [INFO] [ARB] Who will run for the Demo | Alexandria Ocasio-Co | K_NO+P_YES: 0.670 | Vol:1217 Profit:23.6%
+10:30:42.298 [INFO] [ARB] Who will run for the Demo | Kamala Harris | K_NO+P_YES: 0.620 | Vol:713 Profit:31.4%
+10:30:42.298 [INFO] [ARB] Who will run for the Demo | Andy Beshear | K_NO+P_YES: 0.330 | Vol:1608 Profit:33.7%
+10:30:42.298 [INFO] [ARB] Who will run for the Demo | J.B. Pritzker | K_NO+P_YES: 0.440 | Vol:1740 Profit:43.1%
+10:30:42.298 [INFO] [ARB] Who will run for the Demo | Roy Cooper | K_NO+P_YES: 0.840 | Vol:721 Profit:12.1%
+10:30:42.298 [INFO] [ARB] Who will run for the Demo | Raphael Warnock | K_NO+P_YES: 0.820 | Vol:357 Profit:14.1%
+10:30:42.298 [INFO] [ARB] Who will run for the Demo | Mark Kelly | K_NO+P_YES: 0.500 | Vol:1192 Profit:36.3%
+10:30:42.298 [INFO] [ARB] Who will run for the Demo | Jared Polis | K_NO+P_YES: 0.620 | Vol:1536 Profit:31.1%
+10:30:42.298 [INFO] [ARB] Who will run for the Demo | Jon Stewart | K_NO+P_YES: 0.890 | Vol:213 Profit:8.8%
+10:30:42.298 [INFO] [ARB] Who will run for the Demo | Rahm Emanuel | K_NO+P_YES: 0.510 | Vol:573 Profit:29.1%
+10:30:42.298 [INFO] [ARB] Who will run for the Demo | Phil Murphy | K_NO+P_YES: 0.723 | Vol:257 Profit:12.5%
+10:30:42.298 [INFO] [ARB] Who will run for the Demo | Elise Stefanik | K_NO+P_YES: 0.752 | Vol:1507 Profit:14.2%
+10:30:42.298 [INFO] [ARB] Who will run for the Demo | Jon Ossoff | K_NO+P_YES: 0.710 | Vol:618 Profit:25.1%
+10:30:42.298 [INFO] [NR-ALERT] Who will win the next Sen | Chuck Schumer | K_NO+P_YES: 0.750 | Profit:22.7% (no vol)
+10:30:42.298 [INFO] [NR-ALERT] Which bank will take Spac | Morgan Stanley | K_NO+P_YES: 0.190 | Profit:80.3% (no vol)
+10:30:42.298 [INFO] [NR-ALERT] Ann Arbor Democratic mayo | Christopher Beardsle | K_NO+P_YES: 0.252 | Profit:73.5% (no vol)
+10:30:42.298 [INFO] [NR-ALERT] Texas Republican Senate R | Cornyn 3–6% | K_NO+P_YES: 0.788 | Profit:19.7% (no vol)
+10:30:42.298 [INFO] [ARB] Which companies will be a | Viking Therapeutics | K_YES+P_NO: 0.830 | Vol:828 Profit:13.7%
+10:30:42.298 [INFO] [ARB] Which companies will be a | Pizza Hut | K_YES+P_NO: 0.880 | Vol:574 Profit:8.8%
+10:30:42.298 [INFO] [ARB] SpaceX Starship 12th laun | May 21 | K_YES+P_NO: 0.680 | Vol:350 Profit:20.7%
+10:30:42.299 [INFO] [ARB] Who will testify in front | Ghislaine Maxwell | K_NO+P_YES: 0.868 | Vol:85 Profit:10.6%
+10:30:42.299 [INFO] [ARB] Who will be named as Xi J | Ding Xuexiang | K_NO+P_YES: 0.871 | Vol:982 Profit:11.2%
+10:30:42.299 [INFO] [ARB] Who will be named as Xi J | Li Xi | K_NO+P_YES: 0.858 | Vol:41 Profit:13.2%
+10:30:42.299 [INFO] [NR-ALERT] How many Cabinet members  | 0 | K_NO+P_YES: 0.518 | Profit:46.2% (no vol)
+10:30:42.299 [INFO] [NR-ALERT] Georgia Republican govern | Rick Jackson | K_NO+P_YES: 0.580 | Profit:40.2% (no vol)
+10:30:42.299 [INFO] [NR-ALERT] Georgia Republican govern | Burt Jones | K_YES+P_NO: 0.550 | Profit:43.5% (no vol)
+10:30:42.299 [INFO] [NR-ALERT] Who will advance from the | Saikat Chakrabarti | K_NO+P_YES: 0.842 | Profit:14.1% (no vol)
+10:30:42.299 [INFO] [NR-ALERT] Oscar nominations for Ach | Wild Horse Nine | K_NO+P_YES: 0.660 | Profit:31.9% (no vol)
+10:30:42.299 [INFO] [ARB] Which party will win the  | National Party | K_YES+P_NO: 0.770 | Vol:90 Profit:19.4%
+10:30:42.299 [INFO] [NR-ALERT] How many border encounter | 1050–1099 | K_NO+P_YES: 0.820 | Profit:16.6% (no vol)
+10:30:42.299 [INFO] [NR-ALERT] Annual Return: S&P 500 To | Gold | K_NO+P_YES: 0.880 | Profit:9.5% (no vol)
+10:30:42.299 [INFO] [ARB] Will BTC hit $75,000 befo | ↓ 75,000 | K_NO+P_YES: 0.890 | Vol:734 Profit:10.7%
+10:30:42.299 [INFO] [ARB] Who will Trump pardon? | Elon Musk | K_YES+P_NO: 0.507 | Vol:1153 Profit:44.3%
+10:30:42.299 [INFO] [ARB] What will NVIDIA say duri | ↑ $240 | K_NO+P_YES: 0.860 | Vol:322 Profit:8.2%
+10:30:42.299 [INFO] [ARB] What will Trump say durin | Bitcoin | K_YES+P_NO: 0.730 | Vol:381 Profit:17.7%
+10:30:42.299 [INFO] [NR-ALERT] Who will be the next Jame | Callum Turner | K_NO+P_YES: 0.830 | Profit:14.9% (no vol)
+10:30:42.299 [INFO] [NR-ALERT] Florida GOV (primary) [R] | Byron Donalds | K_YES+P_NO: 0.260 | Profit:72.9% (no vol)
+10:30:42.299 [INFO] [NR-ALERT] Florida GOV (primary) [R] | James Fishback | K_NO+P_YES: 0.460 | Profit:52.1% (no vol)
+10:30:42.299 [INFO] [NR-ALERT] Michigan SEN (primary) [D | Abdul El-Sayed | K_YES+P_NO: 0.820 | Profit:15.6% (no vol)
+10:30:42.299 [INFO] [NR-ALERT] Michigan SEN (primary) [D | Haley Stevens | K_NO+P_YES: 0.819 | Profit:16.2% (no vol)
+10:30:42.299 [INFO] [NR-ALERT] California GOV (primary) | Tom Steyer | K_NO+P_YES: 0.850 | Profit:13.0% (no vol)
+10:30:42.299 [INFO] [NR-ALERT] California GOV (primary) | Xavier Becerra | K_YES+P_NO: 0.690 | Profit:29.3% (no vol)
+10:30:42.299 [INFO] [ARB] California GOV (primary) | Tom Steyer | K_YES+P_NO: 0.820 | Vol:316 Profit:14.5%
+10:30:42.300 [INFO] [ARB] California GOV (primary) | Steve Hilton | K_YES+P_NO: 0.700 | Vol:615 Profit:25.5%
+10:30:42.300 [INFO] [ARB] California GOV (primary) | Xavier Becerra | K_YES+P_NO: 0.553 | Vol:395 Profit:26.7%
+10:30:42.300 [INFO] [ARB] California District 13 HO | Kevin Lincoln II | K_YES+P_NO: 0.320 | Vol:400 Profit:46.3%
+10:30:42.300 [INFO] Cycle #7 done in 46.7s | 127 candidates | Top: [NR] Who will win the 2026 Lat (85.1%)
+10:30:46.558 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:31:16.785 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:31:47.018 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:32:02.379 [DEBUG] Loaded 897 mapped events from 4 config files
+10:32:02.379 [INFO] [WS] Refreshing markets (897 events)
+10:32:09.175 [WARNING] [WS-P] Disconnected: no close frame received or sent. Retry in 1s
+10:32:10.555 [INFO] [WS-P] Connected
+10:32:17.247 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:32:46.732 [INFO] 126 candidates below threshold
+10:32:47.479 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:32:49.238 [INFO] [ARB] Which bills will become l | FISA Section 702 rea | K_YES+P_NO: 0.560 | Vol:5885 Profit:8.7%
+10:32:49.238 [INFO] [ARB] Who will be arrested befo | James Clapper | K_NO+P_YES: 0.910 | Vol:11 Profit:6.8%
+10:32:49.239 [INFO] [ARB] Which companies will the  | GlobalFoundries | K_NO+P_YES: 0.790 | Vol:10 Profit:18.5%
+10:32:49.239 [INFO] [ARB] CA-06 primary: first plac | Richard Pan | K_YES+P_NO: 0.830 | Vol:153 Profit:16.2%
+10:32:49.239 [INFO] [NR-ALERT] Brazil Presidential Elect | Flávio Bolsonaro <5% | K_NO+P_YES: 0.740 | Profit:23.9% (no vol)
+10:32:49.239 [INFO] [NR-ALERT] Brazil Presidential Elect | Lula da Silva <5% | K_YES+P_NO: 0.760 | Profit:23.0% (no vol)
+10:32:49.239 [INFO] [NR-ALERT] Minnesota State Senate wi | Republican | K_NO+P_YES: 0.900 | Profit:8.7% (no vol)
+10:32:49.239 [INFO] [ARB] What will Trump say durin | Fighter | K_YES+P_NO: 0.850 | Vol:240 Profit:10.7%
+10:32:49.239 [INFO] [NR-ALERT] Minas Gerais Governor win | Rodrigo Pacheco | K_NO+P_YES: 0.890 | Profit:9.2% (no vol)
+10:32:49.239 [INFO] [NR-ALERT] North Carolina Senate win | Democrat | K_YES+P_NO: 0.810 | Profit:17.0% (no vol)
+10:32:49.239 [INFO] [NR-ALERT] North Carolina Senate win | Republican | K_NO+P_YES: 0.840 | Profit:14.0% (no vol)
+10:32:49.239 [INFO] [ARB] Who will release a new al | Olivia Rodrigo | K_YES+P_NO: 0.386 | Vol:418 Profit:53.2%
+10:32:49.239 [INFO] [ARB] CA-07 primary: first plac | Mai Vang | K_YES+P_NO: 0.430 | Vol:400 Profit:43.8%
+10:32:49.239 [INFO] [NR-ALERT] Ohio Senate winner? (2028 | Democrat | K_YES+P_NO: 0.780 | Profit:19.6% (no vol)
+10:32:49.239 [INFO] [NR-ALERT] Ohio Senate winner? (2028 | Republican | K_NO+P_YES: 0.820 | Profit:15.6% (no vol)
+10:32:49.239 [INFO] [ARB] CA-34 primary: first plac | Angela Gonzales-Torr | K_YES+P_NO: 0.380 | Vol:400 Profit:20.6%
+10:32:49.239 [INFO] [ARB] What will Trump say this  | Mamdani | K_NO+P_YES: 0.850 | Vol:15 Profit:12.5%
+10:32:49.239 [INFO] [ARB] What will Trump say this  | Stupid person | K_YES+P_NO: 0.900 | Vol:2 Profit:7.2%
+10:32:49.239 [INFO] [NR-ALERT] Texas Republican Senate n | John Cornyn | K_YES+P_NO: 0.648 | Profit:33.9% (no vol)
+10:32:49.239 [INFO] [NR-ALERT] Texas Republican Senate n | Ken Paxton | K_NO+P_YES: 0.720 | Profit:26.7% (no vol)
+10:32:49.240 [INFO] [ARB] CA-45 primary: first plac | Chuong Vo | K_YES+P_NO: 0.610 | Vol:334 Profit:19.7%
+10:32:49.240 [INFO] [ARB] CA-41 primary: first plac | Mitch Clemmons | K_YES+P_NO: 0.300 | Vol:400 Profit:63.4%
+10:32:49.240 [INFO] [ARB] CA-03 primary: first plac | Christine Bish | K_YES+P_NO: 0.890 | Vol:200 Profit:9.8%
+10:32:49.240 [INFO] [ARB] CA-03 primary: first plac | Robb Tucker | K_YES+P_NO: 0.400 | Vol:400 Profit:47.8%
+10:32:49.240 [INFO] [NR-ALERT] Will 2026 be the hottest  | 1st hottest | K_NO+P_YES: 0.759 | Profit:22.2% (no vol)
+10:32:49.240 [INFO] [ARB] CA-22 primary: first plac | Jasmeet Bains | K_YES+P_NO: 0.850 | Vol:208 Profit:12.5%
+10:32:49.240 [INFO] [ARB] CA-22 primary: first plac | Randy Villegas | K_YES+P_NO: 0.770 | Vol:28 Profit:20.7%
+10:32:49.240 [INFO] [NR-ALERT] GA-01 Democratic nominee? | Amanda Hollowell | K_NO+P_YES: 0.900 | Profit:7.7% (no vol)
+10:32:49.240 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 3-6% | K_NO+P_YES: 0.630 | Profit:34.8% (no vol)
+10:32:49.240 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 6-9% | K_NO+P_YES: 0.870 | Profit:10.8% (no vol)
+10:32:49.240 [INFO] [NR-ALERT] Kentucky's 4th District P | Gallrein 9%+ | K_NO+P_YES: 0.900 | Profit:8.1% (no vol)
+10:32:49.240 [INFO] [ARB] CA-17 primary: first plac | Ethan Agarwal | K_YES+P_NO: 0.440 | Vol:2484 Profit:21.2%
+10:32:49.240 [INFO] [NR-ALERT] State of the economy at t | Overheating (Unemplo | K_YES+P_NO: 0.902 | Profit:7.5% (no vol)
+10:32:49.240 [INFO] [ARB] CA-40 primary: first plac | Ken Calvert | K_YES+P_NO: 0.490 | Vol:400 Profit:35.4%
+10:32:49.240 [INFO] [ARB] CA-40 primary: first plac | Esther Kim Varet | K_YES+P_NO: 0.880 | Vol:100 Profit:9.6%
+10:32:49.240 [INFO] [NR-ALERT] Which AI company will hav | Anthropic | K_YES+P_NO: 0.705 | Profit:27.6% (no vol)
+10:32:49.240 [INFO] [ARB] Which states will redistr | Utah | K_YES+P_NO: 0.370 | Vol:3697 Profit:11.7%
+10:32:49.240 [INFO] [ARB] CA-48 primary: first plac | Ammar Campa-Najjar | K_YES+P_NO: 0.470 | Vol:400 Profit:40.9%
+10:32:49.240 [INFO] [ARB] CA-48 primary: first plac | Marni von Wilpert | K_YES+P_NO: 0.550 | Vol:400 Profit:27.0%
+10:32:49.240 [INFO] [ARB] What kind of device will  | Glasses | K_YES+P_NO: 0.860 | Vol:526 Profit:10.1%
+10:32:49.240 [INFO] [ARB] What kind of device will  | Earbuds/Headphones | K_NO+P_YES: 0.910 | Vol:5 Profit:6.3%
+10:32:49.240 [INFO] [ARB] CA-04 primary: first plac | Mike Thompson | K_YES+P_NO: 0.490 | Vol:472 Profit:45.8%
+10:32:49.240 [INFO] [ARB] CA-04 primary: first plac | Eric Jones | K_YES+P_NO: 0.691 | Vol:404 Profit:27.6%
+10:32:49.241 [INFO] [NR-ALERT] Who will win the next Arg | Javier Milei | K_NO+P_YES: 0.830 | Profit:14.6% (no vol)
+10:32:49.241 [INFO] [ARB] Who will have a #1 hit th | Rihanna | K_YES+P_NO: 0.899 | Vol:30 Profit:8.2%
+10:32:49.241 [INFO] [NR-ALERT] Texas House of Representa | Republican Party | K_YES+P_NO: 0.850 | Profit:13.2% (no vol)
+10:32:49.241 [INFO] [NR-ALERT] Texas House of Representa | Democratic Party | K_NO+P_YES: 0.850 | Profit:13.2% (no vol)
+10:32:49.241 [INFO] [ARB] Who will be a Bridesmaid  | Gigi Hadid | K_YES+P_NO: 0.900 | Vol:20 Profit:6.8%
+10:32:49.241 [INFO] [NR-ALERT] Ohio Secretary of State w | Democrat | K_YES+P_NO: 0.760 | Profit:21.9% (no vol)
+10:32:49.241 [INFO] [NR-ALERT] Ohio Secretary of State w | Republican | K_NO+P_YES: 0.770 | Profit:20.9% (no vol)
+10:32:49.241 [INFO] [ARB] Who will Donald Trump tal | Kim Jong Un | K_NO+P_YES: 0.092 | Vol:5501 Profit:57.6%
+10:32:49.241 [INFO] [ARB] Who will lead the next qu | Steve Hilton | K_YES+P_NO: 0.580 | Vol:155 Profit:37.4%
+10:32:49.241 [INFO] [ARB] Who will lead the next qu | Xavier Becerra | K_YES+P_NO: 0.763 | Vol:45 Profit:17.1%
+10:32:49.241 [INFO] [NR-ALERT] 2026 Texas Senate matchup | Talarico & Paxton | K_NO+P_YES: 0.710 | Profit:27.7% (no vol)
+10:32:49.241 [INFO] [NR-ALERT] 2026 Texas Senate matchup | Talarico & Cornyn | K_YES+P_NO: 0.798 | Profit:19.0% (no vol)
+10:32:49.241 [INFO] [NR-ALERT] Who will be the next Prim | Andy Burnham | K_NO+P_YES: 0.896 | Profit:8.0% (no vol)
+10:32:49.241 [INFO] [NR-ALERT] How many Senate seats wil | ≤47 | K_YES+P_NO: 0.723 | Profit:26.7% (no vol)
+10:32:49.241 [INFO] [ARB] Peak US National Debt Und | $41 trillion | K_NO+P_YES: 0.790 | Vol:342 Profit:12.2%
+10:32:49.241 [INFO] [NR-ALERT] How many House seats will | Below 190 | K_YES+P_NO: 0.850 | Profit:13.2% (no vol)
+10:32:49.241 [INFO] [ARB] Where will Waymo operate  | Las Vegas | K_NO+P_YES: 0.470 | Vol:15 Profit:50.3%
+10:32:49.242 [INFO] [ARB] Where will Waymo operate  | Denver | K_NO+P_YES: 0.471 | Vol:5 Profit:50.8%
+10:32:49.242 [INFO] [ARB] Which countries will norm | Saudi Arabia | K_NO+P_YES: 0.867 | Vol:776 Profit:11.7%
+10:32:49.242 [INFO] [ARB] Which countries will norm | Lebanon | K_NO+P_YES: 0.877 | Vol:168 Profit:10.4%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Cory Booker | K_NO+P_YES: 0.460 | Vol:1187 Profit:38.7%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Gavin Newsom | K_NO+P_YES: 0.300 | Vol:3364 Profit:44.6%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Josh Shapiro | K_NO+P_YES: 0.320 | Vol:1526 Profit:28.4%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Pete Buttigieg | K_NO+P_YES: 0.390 | Vol:2119 Profit:45.7%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Gretchen Whitmer | K_NO+P_YES: 0.520 | Vol:1465 Profit:33.3%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Wes Moore | K_NO+P_YES: 0.570 | Vol:1926 Profit:30.3%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Alexandria Ocasio-Co | K_NO+P_YES: 0.670 | Vol:1217 Profit:23.6%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Kamala Harris | K_NO+P_YES: 0.620 | Vol:713 Profit:31.4%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Andy Beshear | K_NO+P_YES: 0.330 | Vol:1608 Profit:40.1%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | J.B. Pritzker | K_NO+P_YES: 0.440 | Vol:1740 Profit:43.1%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Roy Cooper | K_NO+P_YES: 0.840 | Vol:721 Profit:12.1%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Raphael Warnock | K_NO+P_YES: 0.820 | Vol:357 Profit:14.1%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Mark Kelly | K_NO+P_YES: 0.500 | Vol:1192 Profit:36.3%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Jared Polis | K_NO+P_YES: 0.620 | Vol:1536 Profit:31.1%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Jon Stewart | K_NO+P_YES: 0.890 | Vol:213 Profit:8.8%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Rahm Emanuel | K_NO+P_YES: 0.510 | Vol:573 Profit:29.1%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Phil Murphy | K_NO+P_YES: 0.723 | Vol:257 Profit:12.5%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Elise Stefanik | K_NO+P_YES: 0.752 | Vol:1507 Profit:14.2%
+10:32:49.242 [INFO] [ARB] Who will run for the Demo | Jon Ossoff | K_NO+P_YES: 0.710 | Vol:618 Profit:25.1%
+10:32:49.242 [INFO] [NR-ALERT] Who will win the next Sen | Chuck Schumer | K_NO+P_YES: 0.750 | Profit:22.7% (no vol)
+10:32:49.242 [INFO] [NR-ALERT] Which bank will take Spac | Morgan Stanley | K_NO+P_YES: 0.190 | Profit:80.3% (no vol)
+10:32:49.242 [INFO] [NR-ALERT] Ann Arbor Democratic mayo | Christopher Beardsle | K_NO+P_YES: 0.252 | Profit:73.5% (no vol)
+10:32:49.242 [INFO] [NR-ALERT] Texas Republican Senate R | Cornyn 3–6% | K_NO+P_YES: 0.788 | Profit:19.7% (no vol)
+10:32:49.243 [INFO] [ARB] Which companies will be a | Viking Therapeutics | K_YES+P_NO: 0.830 | Vol:828 Profit:13.7%
+10:32:49.243 [INFO] [ARB] Which companies will be a | Pizza Hut | K_YES+P_NO: 0.880 | Vol:574 Profit:8.8%
+10:32:49.243 [INFO] [ARB] Who will testify in front | Ghislaine Maxwell | K_NO+P_YES: 0.868 | Vol:85 Profit:10.6%
+10:32:49.243 [INFO] [ARB] Who will be named as Xi J | Ding Xuexiang | K_NO+P_YES: 0.871 | Vol:982 Profit:11.2%
+10:32:49.243 [INFO] [ARB] Who will be named as Xi J | Li Xi | K_NO+P_YES: 0.858 | Vol:41 Profit:13.2%
+10:32:49.243 [INFO] [NR-ALERT] How many Cabinet members  | 0 | K_NO+P_YES: 0.518 | Profit:46.2% (no vol)
+10:32:49.243 [INFO] [NR-ALERT] Georgia Republican govern | Rick Jackson | K_NO+P_YES: 0.580 | Profit:40.2% (no vol)
+10:32:49.243 [INFO] [NR-ALERT] Georgia Republican govern | Burt Jones | K_YES+P_NO: 0.550 | Profit:43.5% (no vol)
+10:32:49.243 [INFO] [NR-ALERT] Who will advance from the | Saikat Chakrabarti | K_NO+P_YES: 0.852 | Profit:13.2% (no vol)
+10:32:49.243 [INFO] [NR-ALERT] Oscar nominations for Ach | Wild Horse Nine | K_NO+P_YES: 0.660 | Profit:31.9% (no vol)
+10:32:49.243 [INFO] [ARB] Which party will win the  | National Party | K_YES+P_NO: 0.770 | Vol:90 Profit:19.4%
+10:32:49.243 [INFO] [NR-ALERT] How many border encounter | 1050–1099 | K_NO+P_YES: 0.820 | Profit:16.6% (no vol)
+10:32:49.243 [INFO] [NR-ALERT] Annual Return: S&P 500 To | Gold | K_NO+P_YES: 0.880 | Profit:9.5% (no vol)
+10:32:49.243 [INFO] [ARB] Will BTC hit $75,000 befo | ↓ 75,000 | K_NO+P_YES: 0.890 | Vol:734 Profit:10.7%
+10:32:49.243 [INFO] [ARB] Who will Trump pardon? | Elon Musk | K_YES+P_NO: 0.507 | Vol:1153 Profit:44.3%
+10:32:49.243 [INFO] [ARB] What will NVIDIA say duri | ↑ $240 | K_NO+P_YES: 0.860 | Vol:322 Profit:8.2%
+10:32:49.243 [INFO] [ARB] What will Trump say durin | Bitcoin | K_YES+P_NO: 0.720 | Vol:381 Profit:18.8%
+10:32:49.243 [INFO] [NR-ALERT] Who will be the next Jame | Callum Turner | K_NO+P_YES: 0.830 | Profit:14.9% (no vol)
+10:32:49.243 [INFO] [NR-ALERT] Florida GOV (primary) [R] | Byron Donalds | K_YES+P_NO: 0.260 | Profit:72.9% (no vol)
+10:32:49.243 [INFO] [NR-ALERT] Florida GOV (primary) [R] | James Fishback | K_NO+P_YES: 0.460 | Profit:52.1% (no vol)
+10:32:49.243 [INFO] [NR-ALERT] Michigan SEN (primary) [D | Abdul El-Sayed | K_YES+P_NO: 0.820 | Profit:15.6% (no vol)
+10:32:49.243 [INFO] [NR-ALERT] Michigan SEN (primary) [D | Haley Stevens | K_NO+P_YES: 0.819 | Profit:16.2% (no vol)
+10:32:49.243 [INFO] [NR-ALERT] California GOV (primary) | Tom Steyer | K_NO+P_YES: 0.850 | Profit:13.0% (no vol)
+10:32:49.243 [INFO] [NR-ALERT] California GOV (primary) | Xavier Becerra | K_YES+P_NO: 0.690 | Profit:29.3% (no vol)
+10:32:49.243 [INFO] [ARB] California GOV (primary) | Steve Hilton | K_YES+P_NO: 0.700 | Vol:615 Profit:25.5%
+10:32:49.244 [INFO] [ARB] California GOV (primary) | Xavier Becerra | K_YES+P_NO: 0.553 | Vol:405 Profit:25.2%
+10:32:49.244 [INFO] [ARB] California District 13 HO | Kevin Lincoln II | K_YES+P_NO: 0.320 | Vol:400 Profit:46.3%
+10:32:49.244 [INFO] Cycle #8 done in 46.9s | 126 candidates | Top: [NR] Who will win the 2026 Lat (85.1%)
+10:33:17.792 [WARNING] [WS-K] Disconnected: server rejected WebSocket connection: HTTP 401. Retry in 30s
+10:33:44.730 [INFO] Shutting down...

@@ -1,0 +1,284 @@
+/* =============================================================================
+   typography-final.css — W13-UX-6
+   Final typography polish layered on top of typography.css (T02).
+   MUST be loaded AFTER typography.css to win cascade ties.
+   Consumes tokens from tokens.css only — does NOT redefine any --token.
+   Scoped to body for universal inheritance; uses light specificity bumps
+   (body h1, body .num, etc.) so it reliably overrides T02 defaults without
+   resorting to !important except where explicitly noted.
+   ========================================================================== */
+
+/* -----------------------------------------------------------------------------
+   1. Body — slightly higher contrast + sans line-height 1.55
+   -------------------------------------------------------------------------- */
+body {
+  /* Bump contrast: body text should sit on --ink, not --ink-2 */
+  color: var(--ink, #0b0b0c);
+  line-height: 1.55;
+}
+
+body p,
+body li,
+body dd,
+body figcaption {
+  line-height: 1.55;
+  color: var(--ink, #0b0b0c);
+}
+
+/* Reduce inter-paragraph spacing slightly — was likely 1em, now ~0.75em */
+body p + p,
+body p + ul,
+body p + ol,
+body ul + p,
+body ol + p {
+  margin-top: 0.75em;
+}
+
+/* -----------------------------------------------------------------------------
+   2. Display headings — Instrument Serif 500, tighter tracking on h1
+   -------------------------------------------------------------------------- */
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body .h1, body .h2, body .h3, body .h4, body .h5, body .h6,
+body .display-lg,
+body .display-md {
+  font-family: var(--serif-display, "Instrument Serif", "Times New Roman",
+    Georgia, serif);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--ink, #0b0b0c);
+}
+
+/* Override default block line-height 1.4 for tightly-set display sizes */
+body h1, body .h1,
+body .display-lg,
+body .display-md {
+  line-height: 1.15;
+}
+
+body h2, body .h2 { line-height: 1.18; }
+body h3, body .h3 { line-height: 1.22; }
+
+/* h1 gets the tighter letter-spacing called out in the spec */
+body h1,
+body .h1 {
+  letter-spacing: -0.022em;
+}
+
+body h2, body .h2 { letter-spacing: -0.02em; }
+body h3, body .h3 { letter-spacing: -0.018em; }
+
+/* Variable-font axis: ensure we sit at 500, not bolder */
+@supports (font-variation-settings: normal) {
+  body h1, body h2, body h3, body h4, body h5, body h6,
+  body .h1, body .h2, body .h3, body .h4, body .h5, body .h6,
+  body .display-lg,
+  body .display-md {
+    font-variation-settings: "wght" 500;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   3. Serif content blocks — 1.4 line-height, per spec
+   The spec asks for serif paragraphs at 1.4 line-height (tighter than sans).
+   We target .lead and any serif-flagged prose, NOT body p (sans default 1.55).
+   -------------------------------------------------------------------------- */
+body .lead,
+body .serif,
+body .prose-serif,
+body [data-typeface="serif"] p,
+body article.serif p,
+body article.serif li {
+  font-family: var(--serif-display, "Instrument Serif", Georgia, serif);
+  line-height: 1.4;
+  color: var(--ink, #0b0b0c);
+}
+
+/* -----------------------------------------------------------------------------
+   4. Tabular numerics — applied universally to numeric displays
+   Targets: .num, .num-mono, [data-numeric], <output>, <meter>, <data>,
+   table cells flagged numeric, and the common ".value" / ".price" hooks.
+   -------------------------------------------------------------------------- */
+body .num,
+body .num-mono,
+body [data-numeric],
+body [data-numeric="true"],
+body output,
+body meter,
+body data,
+body td.num,
+body td[data-numeric],
+body th.num,
+body th[data-numeric],
+body .value,
+body .price,
+body .pnl,
+body .metric-value,
+body .tabular {
+  font-variant-numeric: tabular-nums slashed-zero;
+  font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+/* JetBrains Mono everywhere it appears: tabular-nums slashed-zero baseline */
+body .num-mono,
+body code,
+body .code,
+body pre,
+body pre code,
+body kbd,
+body samp,
+body [data-font="mono"] {
+  font-family: var(--mono, "JetBrains Mono", "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace);
+  font-variant-numeric: tabular-nums slashed-zero;
+  font-feature-settings: "tnum" 1, "zero" 1, "ss01" 1;
+}
+
+/* -----------------------------------------------------------------------------
+   5. Block quotes — Instrument Serif italic, orange-soft left rail
+   -------------------------------------------------------------------------- */
+body blockquote,
+body .blockquote {
+  font-family: var(--serif-display, "Instrument Serif", Georgia, serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--ink, #0b0b0c);
+  margin: 1.25em 0;
+  padding: 0.25em 0 0.25em 1em;
+  border-left: 4px solid var(--orange-soft, var(--orange, #f08a4b));
+  background: transparent;
+}
+
+body blockquote p,
+body .blockquote p {
+  font-family: inherit;
+  font-style: inherit;
+  line-height: 1.4;
+  margin: 0 0 0.5em 0;
+}
+
+body blockquote p:last-child,
+body .blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Cite line inside blockquote — small sans, dimmed */
+body blockquote cite,
+body .blockquote cite {
+  display: block;
+  margin-top: 0.5em;
+  font-family: var(--sans, "Inter", system-ui, sans-serif);
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink-3, #6b6b70);
+}
+
+/* -----------------------------------------------------------------------------
+   6. Code blocks — 13px Mono, surface-2 bg, 12px pad, 6px radius
+   Inline <code> keeps its existing pill from T02; we only restyle <pre>.
+   -------------------------------------------------------------------------- */
+body pre,
+body .codeblock {
+  font-family: var(--mono, "JetBrains Mono", "SF Mono", Menlo, Consolas,
+    monospace);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink, #0b0b0c);
+  background: var(--surface-2, #f4f4f5);
+  padding: 12px;
+  border-radius: 6px;
+  margin: 1em 0;
+  overflow-x: auto;
+  font-variant-numeric: tabular-nums slashed-zero;
+  font-feature-settings: "tnum" 1, "zero" 1, "ss01" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+body pre code,
+body .codeblock code {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+  white-space: pre;
+}
+
+/* -----------------------------------------------------------------------------
+   7. Math display — centered, 16px (KaTeX / MathJax rendered output)
+   Targets the wrappers each library produces for display-mode equations.
+   -------------------------------------------------------------------------- */
+body .math-display,
+body .katex-display,
+body mjx-container[display="true"],
+body .MathJax_Display,
+body [data-math-display="true"] {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 1em 0;
+  overflow-x: auto;
+  color: var(--ink, #0b0b0c);
+}
+
+/* Inline math inherits surrounding size — keep at 1em so it sits on the line */
+body .math-inline,
+body .katex:not(.katex-display .katex),
+body mjx-container:not([display="true"]) {
+  font-size: 1em;
+}
+
+/* -----------------------------------------------------------------------------
+   8. Drop caps — explicitly DISABLED (caused issues on mobile)
+   Force off any T02 / article-level ::first-letter drop-cap rules.
+   -------------------------------------------------------------------------- */
+body p::first-letter,
+body .lead::first-letter,
+body .prose p:first-of-type::first-letter,
+body article p:first-of-type::first-letter,
+body .dropcap::first-letter,
+body [data-dropcap]::first-letter {
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  float: none;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+body .dropcap,
+body [data-dropcap] {
+  /* Remove any class-level drop-cap padding shifts */
+  text-indent: 0;
+}
+
+/* -----------------------------------------------------------------------------
+   9. Small print — keep T02 .small at 12px but lift to --ink-2 for legibility
+   -------------------------------------------------------------------------- */
+body small,
+body .small {
+  color: var(--ink-2, var(--ink, #0b0b0c));
+}
+
+/* -----------------------------------------------------------------------------
+   10. Reduced-motion safety — no transitions added here, but if downstream
+       CSS animates font-variation-settings we honor the user's pref.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    transition: none !important;
+  }
+}

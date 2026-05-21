@@ -1,0 +1,307 @@
+/* W12-42 — Mobile factor bottom-sheet
+ *
+ * Replaces a desktop dropdown/select with a tap-to-open bottom-sheet at <768px.
+ * Hidden by default on wider viewports (display:none, no layout cost).
+ *
+ * Token usage (do NOT redeclare; see web/css/tokens.css):
+ *   --surface, --bg, --ink, --ink-2, --ink-3, --hairline, --orange, --orange-50,
+ *   --sp-1..--sp-6, --r-3, --r-4, --sans, --mono.
+ *
+ * State classes:
+ *   .pfm-mfs-trigger        — button that replaces the original input
+ *   .pfm-mfs                — root portal element (one per attach)
+ *   .pfm-mfs[data-open=true]— animates backdrop + sheet in
+ *   .pfm-mfs-sheet          — the slide-up panel
+ *   .pfm-mfs-backdrop       — dim layer
+ *   .pfm-mfs-handle         — drag affordance (::before)
+ *   .pfm-mfs-search         — search input
+ *   .pfm-mfs-list           — scrollable factor list
+ *   .pfm-mfs-row            — single factor row
+ *   .pfm-mfs-row.is-active  — highlighted (keyboard / pointer)
+ *   .pfm-mfs-chip           — theme chip in row
+ *   .pfm-mfs-actions        — bottom button row (44px tap targets)
+ *
+ * Above 768px the trigger button is hidden so the original control shows through.
+ */
+
+/* The trigger button. Only visible on small screens; original input takes
+ * over again on wider viewports so the desktop experience is unchanged. */
+.pfm-mfs-trigger {
+  display: none;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 14px;
+  background: var(--surface, #fff);
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.12));
+  border-radius: var(--r-3, 8px);
+  color: var(--ink, #0f172a);
+  font: 15px/1.2 var(--sans, Inter, system-ui, sans-serif);
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pfm-mfs-trigger:hover,
+.pfm-mfs-trigger:focus-visible {
+  border-color: var(--orange, #f97316);
+  outline: none;
+}
+
+.pfm-mfs-trigger[data-empty="true"] {
+  color: var(--ink-3, #64748b);
+}
+
+.pfm-mfs-trigger-caret {
+  float: right;
+  color: var(--ink-3, #64748b);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Root portal is always in DOM (when attached) but only renders <768px. */
+.pfm-mfs {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2147483600; /* above modal.css's z-index */
+  pointer-events: none;
+}
+
+.pfm-mfs[data-open="true"] {
+  pointer-events: auto;
+}
+
+.pfm-mfs-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.42);
+  opacity: 0;
+  transition: opacity 180ms ease-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pfm-mfs[data-open="true"] .pfm-mfs-backdrop {
+  opacity: 1;
+}
+
+.pfm-mfs-sheet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface, #fff);
+  color: var(--ink, #0f172a);
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 -12px 32px rgba(15, 23, 42, 0.18);
+  padding: 8px 16px env(safe-area-inset-bottom, 12px) 16px;
+  transform: translateY(100%);
+  transition: transform 220ms cubic-bezier(0.32, 0.72, 0, 1);
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  /* gutter is the 16px horizontal padding above; do not redeclare via vars */
+}
+
+.pfm-mfs[data-open="true"] .pfm-mfs-sheet {
+  transform: translateY(0);
+}
+
+.pfm-mfs-sheet::before {
+  /* Drag handle */
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  margin: 6px auto 10px;
+  border-radius: 999px;
+  background: var(--hairline-strong, rgba(15, 23, 42, 0.18));
+}
+
+.pfm-mfs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-bottom: 8px;
+}
+
+.pfm-mfs-title {
+  font: 600 15px/1.2 var(--sans, Inter, system-ui, sans-serif);
+  color: var(--ink, #0f172a);
+  margin: 0;
+}
+
+.pfm-mfs-count {
+  font: 12px/1 var(--mono, ui-monospace, Menlo, monospace);
+  color: var(--ink-3, #64748b);
+}
+
+.pfm-mfs-search {
+  width: 100%;
+  min-height: 40px;
+  padding: 10px 12px;
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.12));
+  border-radius: var(--r-3, 8px);
+  background: var(--bg-alt, #f4f4f5);
+  color: var(--ink, #0f172a);
+  font: 15px/1.2 var(--sans, Inter, system-ui, sans-serif);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.pfm-mfs-search:focus {
+  outline: none;
+  border-color: var(--orange, #f97316);
+  background: var(--surface, #fff);
+}
+
+.pfm-mfs-list {
+  flex: 1 1 auto;
+  margin: 10px -4px 8px;
+  padding: 0 4px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+.pfm-mfs-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 8px;
+  min-height: 56px;
+  border-bottom: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pfm-mfs-row:last-child {
+  border-bottom: 0;
+}
+
+.pfm-mfs-row.is-active,
+.pfm-mfs-row[aria-selected="true"] {
+  background: var(--orange-50, #fff8f1);
+  border-radius: var(--r-3, 8px);
+  border-bottom-color: transparent;
+}
+
+.pfm-mfs-row-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.pfm-mfs-label {
+  font: 500 14px/1.25 var(--sans, Inter, system-ui, sans-serif);
+  color: var(--ink, #0f172a);
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pfm-mfs-slug {
+  font: 11px/1 var(--mono, ui-monospace, Menlo, monospace);
+  color: var(--ink-3, #64748b);
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pfm-mfs-chip {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: var(--bg-alt, #f4f4f5);
+  color: var(--ink-2, #334155);
+  font: 11px/1 var(--sans, Inter, system-ui, sans-serif);
+  text-transform: capitalize;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.pfm-mfs-empty {
+  padding: 32px 12px;
+  text-align: center;
+  color: var(--ink-3, #64748b);
+  font: 14px/1.4 var(--sans, Inter, system-ui, sans-serif);
+}
+
+.pfm-mfs-actions {
+  display: flex;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+}
+
+.pfm-mfs-btn {
+  flex: 1 1 0;
+  min-height: 44px;
+  border-radius: var(--r-3, 8px);
+  border: 1px solid var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  background: var(--surface, #fff);
+  color: var(--ink, #0f172a);
+  font: 600 15px/1 var(--sans, Inter, system-ui, sans-serif);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pfm-mfs-btn:active {
+  transform: translateY(1px);
+}
+
+.pfm-mfs-btn--primary {
+  background: var(--orange, #f97316);
+  border-color: var(--orange, #f97316);
+  color: #fff;
+}
+
+.pfm-mfs-btn--primary[disabled] {
+  background: var(--ink-4, #94a3b8);
+  border-color: var(--ink-4, #94a3b8);
+  cursor: not-allowed;
+}
+
+/* Activate the sheet only on small screens. */
+@media (max-width: 767.98px) {
+  .pfm-mfs-trigger {
+    display: block;
+  }
+  .pfm-mfs {
+    display: block;
+  }
+  /* When sheet is attached, hide the original control so only the trigger
+   * button is visible. JS adds [data-pfm-mfs-hidden] to the original input. */
+  [data-pfm-mfs-hidden="true"] {
+    display: none !important;
+  }
+}
+
+/* Reduced motion: skip slide / fade animations. */
+@media (prefers-reduced-motion: reduce) {
+  .pfm-mfs-backdrop,
+  .pfm-mfs-sheet {
+    transition: none !important;
+  }
+}
+
+/* Dark-mode harmony — only override colors, keep tokens elsewhere. */
+@media (prefers-color-scheme: dark) {
+  html[data-theme="dark"] .pfm-mfs-sheet,
+  html[data-theme="dark"] .pfm-mfs-trigger {
+    background: var(--surface, #0f172a);
+    color: var(--ink, #e2e8f0);
+  }
+  html[data-theme="dark"] .pfm-mfs-search {
+    background: var(--bg-alt, #1e293b);
+    color: var(--ink, #e2e8f0);
+  }
+}

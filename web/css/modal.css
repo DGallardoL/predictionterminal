@@ -1,0 +1,590 @@
+/* ============================================================
+ * modal.css  (T12, wave-10)
+ *
+ * Modal / sheet / drawer system for the Prediction Terminal
+ * frontend. CSS-only — focus-trap behaviour is handled by
+ * existing JS (MutationObserver hook in web/index.html). This
+ * sheet provides the visuals + animations + responsive
+ * variants only.
+ *
+ * MOUNT ORDER:
+ *   AFTER tokens.css and global-refinement.css (consumes
+ *   --surface, --ink, --hairline, --shadow-3, --r-4, --sp-*,
+ *   --ease, --t).
+ *
+ * STRUCTURE (ARIA-friendly):
+ *   <div class="modal-backdrop" role="presentation">
+ *     <div class="modal" role="dialog" aria-modal="true"
+ *          data-modal-depth="1">
+ *       <span class="modal__focus-trap" tabindex="0"></span>
+ *       <header class="modal__header"> ... </header>
+ *       <div class="modal__body"> ... </div>
+ *       <footer class="modal__footer"> ... </footer>
+ *       <span class="modal__focus-trap" tabindex="0"></span>
+ *     </div>
+ *   </div>
+ *
+ * VARIANTS:
+ *   .modal--lg          max-width 880px
+ *   .modal--xl          max-width 1100px
+ *   .modal--fullscreen  fills viewport (16px margins)
+ *   .sheet              slides up from bottom (mobile auto)
+ *   .drawer             slides in from right (max-w 380px)
+ *   .drawer--left       slides in from left
+ *
+ * STACKING:
+ *   data-modal-depth="N" -> z-index = 1000 + N*10. Default 1.
+ *
+ * MOTION:
+ *   Honours @media (prefers-reduced-motion: reduce) — disables
+ *   slide/scale transforms; keeps fade only.
+ * ============================================================ */
+
+/* ------------------------------------------------------------
+ * Backdrop
+ * ------------------------------------------------------------ */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: pfm-modal-fade-in 180ms var(--ease, cubic-bezier(0.4, 0, 0.2, 1)) forwards;
+  padding: var(--sp-4, 16px);
+}
+
+.modal-backdrop[data-modal-depth="1"] { z-index: 1010; }
+.modal-backdrop[data-modal-depth="2"] { z-index: 1020; }
+.modal-backdrop[data-modal-depth="3"] { z-index: 1030; }
+.modal-backdrop[data-modal-depth="4"] { z-index: 1040; }
+.modal-backdrop[data-modal-depth="5"] { z-index: 1050; }
+.modal-backdrop[data-modal-depth="6"] { z-index: 1060; }
+
+.modal-backdrop.is-leaving {
+  animation: pfm-modal-fade-out 160ms var(--ease, cubic-bezier(0.4, 0, 0.2, 1)) forwards;
+}
+
+/* ------------------------------------------------------------
+ * Base modal container
+ * ------------------------------------------------------------ */
+.modal {
+  position: relative;
+  background: var(--surface, #ffffff);
+  color: var(--ink, #0f172a);
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  border-radius: var(--r-4, 12px);
+  box-shadow: var(--shadow-3, 0 12px 32px rgba(15, 23, 42, 0.08));
+  max-width: 640px;
+  width: 90vw;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* Centered by the backdrop's flex; transform-origin keeps
+     the entrance scale from looking off-center. */
+  transform-origin: center center;
+  animation: pfm-modal-pop-in 200ms var(--ease, cubic-bezier(0.4, 0, 0.2, 1)) forwards;
+  z-index: 1;
+}
+
+.modal.is-leaving {
+  animation: pfm-modal-pop-out 160ms var(--ease, cubic-bezier(0.4, 0, 0.2, 1)) forwards;
+}
+
+/* Size variants */
+.modal--lg { max-width: 880px; }
+.modal--xl { max-width: 1100px; }
+
+.modal--fullscreen {
+  max-width: none;
+  max-height: none;
+  width: calc(100vw - 32px);
+  height: calc(100vh - 32px);
+  margin: 16px;
+  border-radius: var(--r-4, 12px);
+}
+
+/* ------------------------------------------------------------
+ * Header
+ * ------------------------------------------------------------ */
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3, 12px);
+  padding: var(--sp-4, 16px) var(--sp-5, 20px);
+  border-bottom: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  flex: 0 0 auto;
+  background: var(--surface, #ffffff);
+}
+
+.modal__header h1,
+.modal__header h2,
+.modal__header .modal__title {
+  margin: 0;
+  font-family: var(--serif-display, "Instrument Serif", Georgia, serif);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.25;
+  letter-spacing: 0.005em;
+  color: var(--ink, #0f172a);
+}
+
+@media (min-width: 768px) {
+  .modal__header h1,
+  .modal__header h2,
+  .modal__header .modal__title {
+    font-size: 18px;
+  }
+}
+
+.modal__close {
+  appearance: none;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--r-2, 6px);
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-3, #64748b);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  transition: background var(--t-fast, 120ms) var(--ease, ease),
+              color var(--t-fast, 120ms) var(--ease, ease),
+              border-color var(--t-fast, 120ms) var(--ease, ease);
+  flex: 0 0 auto;
+}
+
+.modal__close:hover {
+  background: var(--bg-alt, #f4f4f5);
+  color: var(--ink, #0f172a);
+}
+
+.modal__close:focus-visible {
+  outline: none;
+  border-color: var(--orange, #f97316);
+  box-shadow: var(--focus-ring, 0 0 0 3px rgba(249, 115, 22, 0.35));
+}
+
+/* ------------------------------------------------------------
+ * Body — scrollable region
+ * ------------------------------------------------------------ */
+.modal__body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: var(--sp-5, 20px) var(--sp-5, 20px);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ink-4, #94a3b8) transparent;
+}
+
+@media (min-width: 768px) {
+  .modal__body {
+    padding: var(--sp-6, 24px);
+  }
+}
+
+.modal__body::-webkit-scrollbar { width: 8px; }
+.modal__body::-webkit-scrollbar-thumb {
+  background: var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  border-radius: 4px;
+}
+.modal__body::-webkit-scrollbar-track { background: transparent; }
+
+/* ------------------------------------------------------------
+ * Footer — sticky bottom action row
+ * ------------------------------------------------------------ */
+.modal__footer {
+  flex: 0 0 auto;
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: var(--sp-2, 8px);
+  padding: var(--sp-3, 12px) var(--sp-5, 20px);
+  border-top: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  background: var(--surface, #ffffff);
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .modal__footer {
+    padding: var(--sp-4, 16px) var(--sp-5, 20px);
+  }
+}
+
+/* Optional left-aligned helper (e.g. "Don't show again") */
+.modal__footer .modal__footer-secondary {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* ------------------------------------------------------------
+ * Focus-trap sentinels (invisible but tab-focusable)
+ * JS in web/index.html observes these via MutationObserver
+ * and re-routes focus to keep tab order inside the modal.
+ * ------------------------------------------------------------ */
+.modal__focus-trap {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------
+ * Sheet variant — slides up from bottom (desktop opt-in)
+ * ------------------------------------------------------------ */
+.sheet,
+.modal.sheet {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  top: auto;
+  transform: translate(-50%, 0);
+  width: min(640px, 100vw);
+  max-width: 100vw;
+  max-height: 92vh;
+  border-radius: 16px 16px 0 0;
+  animation: pfm-sheet-slide-up 220ms var(--ease, cubic-bezier(0.4, 0, 0.2, 1)) forwards;
+}
+
+.sheet.is-leaving,
+.modal.sheet.is-leaving {
+  animation: pfm-sheet-slide-down 180ms var(--ease, cubic-bezier(0.4, 0, 0.2, 1)) forwards;
+}
+
+/* Tap-handle dragger pseudo-element */
+.sheet::before,
+.modal.sheet::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  pointer-events: none;
+  z-index: 2;
+}
+
+.sheet .modal__header,
+.modal.sheet .modal__header {
+  padding-top: calc(var(--sp-4, 16px) + 12px);
+}
+
+/* When a sheet sits inside a backdrop, anchor the backdrop's
+   flex to the bottom so the sheet hugs the viewport bottom. */
+.modal-backdrop:has(.sheet),
+.modal-backdrop:has(.modal.sheet) {
+  align-items: flex-end;
+  padding: 0;
+}
+
+/* ------------------------------------------------------------
+ * Drawer variant — slides in from right (default)
+ * ------------------------------------------------------------ */
+.drawer,
+.modal.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  margin: 0;
+  width: 100%;
+  max-width: 380px;
+  height: 100vh;
+  max-height: 100vh;
+  border-radius: 0;
+  border-left: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  animation: pfm-drawer-slide-in-right 220ms var(--ease, cubic-bezier(0.4, 0, 0.2, 1)) forwards;
+  transform-origin: right center;
+}
+
+.drawer.is-leaving,
+.modal.drawer.is-leaving {
+  animation: pfm-drawer-slide-out-right 180ms var(--ease, cubic-bezier(0.4, 0, 0.2, 1)) forwards;
+}
+
+.drawer--left,
+.modal.drawer--left {
+  right: auto;
+  left: 0;
+  border-left: none;
+  border-right: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  animation: pfm-drawer-slide-in-left 220ms var(--ease, cubic-bezier(0.4, 0, 0.2, 1)) forwards;
+  transform-origin: left center;
+}
+
+.drawer--left.is-leaving,
+.modal.drawer--left.is-leaving {
+  animation: pfm-drawer-slide-out-left 180ms var(--ease, cubic-bezier(0.4, 0, 0.2, 1)) forwards;
+}
+
+/* Backdrop containing a drawer should not center it. */
+.modal-backdrop:has(.drawer),
+.modal-backdrop:has(.modal.drawer) {
+  align-items: stretch;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.modal-backdrop:has(.drawer--left),
+.modal-backdrop:has(.modal.drawer--left) {
+  justify-content: flex-start;
+}
+
+/* ------------------------------------------------------------
+ * Mobile: every .modal becomes a bottom sheet automatically
+ * (unless explicitly a .drawer or .modal--fullscreen).
+ * ------------------------------------------------------------ */
+@media (max-width: 640px) {
+  .modal:not(.drawer):not(.modal--fullscreen) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    transform: none;
+    width: 100vw;
+    max-width: 100vw;
+    max-height: 92vh;
+    border-radius: 16px 16px 0 0;
+    margin: 0;
+    animation: pfm-sheet-slide-up 220ms var(--ease, cubic-bezier(0.4, 0, 0.2, 1)) forwards;
+  }
+
+  .modal:not(.drawer):not(.modal--fullscreen).is-leaving {
+    animation: pfm-sheet-slide-down 180ms var(--ease, cubic-bezier(0.4, 0, 0.2, 1)) forwards;
+  }
+
+  .modal:not(.drawer):not(.modal--fullscreen)::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--hairline-strong, rgba(15, 23, 42, 0.14));
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .modal:not(.drawer):not(.modal--fullscreen) .modal__header {
+    padding-top: calc(var(--sp-4, 16px) + 12px);
+  }
+
+  .modal-backdrop:not(:has(.drawer)) {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .modal--fullscreen {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  /* Drawers fill the screen on small viewports */
+  .drawer,
+  .modal.drawer,
+  .drawer--left,
+  .modal.drawer--left {
+    max-width: 100vw;
+    width: 100vw;
+  }
+}
+
+/* ------------------------------------------------------------
+ * Reduced-motion: disable slide/scale transforms; keep fade
+ * ------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  .modal,
+  .modal.is-leaving,
+  .sheet,
+  .modal.sheet,
+  .sheet.is-leaving,
+  .modal.sheet.is-leaving,
+  .drawer,
+  .modal.drawer,
+  .drawer.is-leaving,
+  .modal.drawer.is-leaving,
+  .drawer--left,
+  .modal.drawer--left,
+  .drawer--left.is-leaving,
+  .modal.drawer--left.is-leaving {
+    animation: pfm-modal-fade-in 140ms linear forwards;
+    transform: none;
+  }
+
+  .modal.is-leaving,
+  .sheet.is-leaving,
+  .modal.sheet.is-leaving,
+  .drawer.is-leaving,
+  .modal.drawer.is-leaving,
+  .drawer--left.is-leaving,
+  .modal.drawer--left.is-leaving {
+    animation: pfm-modal-fade-out 140ms linear forwards;
+  }
+
+  .modal-backdrop,
+  .modal-backdrop.is-leaving {
+    animation-duration: 140ms;
+  }
+}
+
+/* ------------------------------------------------------------
+ * Dark-mode hairline + scrollbar nudges
+ * ------------------------------------------------------------ */
+@media (prefers-color-scheme: dark) {
+  .modal-backdrop {
+    background: rgba(2, 6, 12, 0.55);
+  }
+}
+
+[data-theme="dark"] .modal-backdrop {
+  background: rgba(2, 6, 12, 0.55);
+}
+
+/* ------------------------------------------------------------
+ * Keyframes
+ * ------------------------------------------------------------ */
+@keyframes pfm-modal-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes pfm-modal-fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes pfm-modal-pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes pfm-modal-pop-out {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.98) translateY(4px);
+  }
+}
+
+@keyframes pfm-sheet-slide-up {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 100%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes pfm-sheet-slide-down {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, 100%);
+  }
+}
+
+@keyframes pfm-drawer-slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pfm-drawer-slide-out-right {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pfm-drawer-slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pfm-drawer-slide-out-left {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+/* On mobile sheet auto-conversion, override the desktop-sheet
+   keyframes so the translate(-50%) origin doesn't fight the
+   left/right:0 anchoring. */
+@media (max-width: 640px) {
+  @keyframes pfm-sheet-slide-up {
+    from { opacity: 0; transform: translateY(100%); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pfm-sheet-slide-down {
+    from { opacity: 1; transform: translateY(0); }
+    to   { opacity: 0; transform: translateY(100%); }
+  }
+}
+
+/* ============================================================
+ * End of modal.css
+ * ============================================================ */

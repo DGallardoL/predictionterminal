@@ -1,0 +1,335 @@
+/* copy-as-curl.css - "Copy as cURL" icon-button + recent-request dropdown
+ *                    + "Copied" toast badge. (Task W11-08, wave-11.)
+ *
+ * Mounted by web/js/copy-as-curl.js (script auto-injects DOM).
+ * Scoped under .pfm-curl-* to avoid bleeding into the rest of the UI.
+ *
+ * Tokens consumed (with defensive fallbacks):
+ *   --orange, --orange-soft, --ah-bg, --ah-surface, --ink, --hairline
+ *
+ * Position contract:
+ *   The 24x24 icon-button is placed top-right INSIDE the host panel
+ *   (`.dc-card` or `.chart-card`) via `position: absolute; top: 8px;
+ *   right: 8px;`. The host receives `position: relative` from the JS
+ *   when it would otherwise be static, so this anchoring is reliable.
+ */
+
+:root {
+  --pfm-curl-orange: var(--orange, #f97316);
+  --pfm-curl-orange-soft: var(--orange-soft, rgba(249, 115, 22, 0.14));
+  --pfm-curl-bg: var(--ah-bg, #0a0a0c);
+  --pfm-curl-surface: var(--ah-surface, #131318);
+  --pfm-curl-surface-2: #1a1a20;
+  --pfm-curl-border: rgba(255, 255, 255, 0.10);
+  --pfm-curl-border-strong: rgba(255, 255, 255, 0.20);
+  --pfm-curl-text: #e8e8ec;
+  --pfm-curl-text-dim: rgba(232, 232, 236, 0.62);
+  --pfm-curl-text-mute: rgba(232, 232, 236, 0.40);
+  --pfm-curl-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo,
+                   Consolas, monospace;
+  --pfm-curl-shadow: 0 10px 32px rgba(0, 0, 0, 0.55);
+  --pfm-curl-z: 9500;
+}
+
+/* =====================================================================
+ * Icon button (24x24, ghost variant, top-right of panel)
+ * ===================================================================== */
+.pfm-curl-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--pfm-curl-text-dim);
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 140ms ease,
+              border-color 140ms ease,
+              color 140ms ease,
+              transform 140ms ease;
+  /* Force buttons to ignore inherited line-height shifts inside cards. */
+  line-height: 1;
+}
+.pfm-curl-btn:hover,
+.pfm-curl-btn:focus-visible {
+  background: var(--pfm-curl-orange-soft);
+  border-color: var(--pfm-curl-border-strong);
+  color: var(--pfm-curl-orange);
+  outline: none;
+}
+.pfm-curl-btn:active {
+  transform: scale(0.94);
+}
+.pfm-curl-btn svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+/* Ensure host panels (with our auto-injected `position: relative`) clip
+ * a hovering button on top of charts cleanly. */
+.dc-card,
+.chart-card {
+  /* Defensive: cards in some panels are still static. JS will switch
+   * to relative on-demand, but apply here too so first paint is correct. */
+  position: relative;
+}
+
+/* =====================================================================
+ * Floating launcher (bottom-right) -- "Recent requests" entry point
+ * ===================================================================== */
+.pfm-curl-launcher {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 10px 0 8px;
+  font: 600 11px/1 var(--pfm-curl-mono);
+  color: var(--pfm-curl-text-dim);
+  background: var(--pfm-curl-surface);
+  border: 1px solid var(--pfm-curl-border);
+  border-radius: 999px;
+  cursor: pointer;
+  z-index: calc(var(--pfm-curl-z) - 10);
+  box-shadow: var(--pfm-curl-shadow);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 140ms ease,
+              border-color 140ms ease,
+              background-color 140ms ease;
+}
+.pfm-curl-launcher:hover,
+.pfm-curl-launcher:focus-visible {
+  color: var(--pfm-curl-orange);
+  border-color: var(--pfm-curl-orange);
+  background: var(--pfm-curl-surface-2);
+  outline: none;
+}
+.pfm-curl-launcher svg {
+  width: 12px;
+  height: 12px;
+}
+.pfm-curl-launcher-label {
+  display: inline-block;
+}
+
+/* =====================================================================
+ * Dropdown of recent requests (280px, mono 11px, max-height 240px)
+ * ===================================================================== */
+.pfm-curl-dropdown {
+  position: absolute;
+  width: 280px;
+  max-height: 240px;
+  overflow-y: auto;
+  background: var(--pfm-curl-surface);
+  border: 1px solid var(--pfm-curl-border-strong);
+  border-radius: 8px;
+  box-shadow: var(--pfm-curl-shadow);
+  font: 11px/1.35 var(--pfm-curl-mono);
+  color: var(--pfm-curl-text);
+  z-index: var(--pfm-curl-z);
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 140ms ease, transform 140ms ease;
+  padding: 4px 0;
+}
+.pfm-curl-dropdown.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.pfm-curl-dropdown-head {
+  padding: 8px 12px 6px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--pfm-curl-text-mute);
+  border-bottom: 1px solid var(--pfm-curl-border);
+  margin-bottom: 4px;
+}
+
+.pfm-curl-dropdown-empty {
+  padding: 14px 12px;
+  color: var(--pfm-curl-text-mute);
+  font-style: italic;
+}
+
+/* Scrollbar tightening */
+.pfm-curl-dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+.pfm-curl-dropdown::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 4px;
+}
+.pfm-curl-dropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Row inside dropdown */
+.pfm-curl-row {
+  display: grid;
+  grid-template-columns: 44px 1fr 18px;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 10px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  text-align: left;
+  cursor: pointer;
+  color: var(--pfm-curl-text);
+  font: inherit;
+  transition: background-color 100ms ease;
+}
+.pfm-curl-row:hover,
+.pfm-curl-row:focus-visible {
+  background: var(--pfm-curl-orange-soft);
+  outline: none;
+}
+.pfm-curl-row + .pfm-curl-row {
+  border-top: 1px solid var(--pfm-curl-border);
+}
+
+.pfm-curl-row-method {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2px 4px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--pfm-curl-text-dim);
+  line-height: 1;
+}
+.pfm-curl-m-get    { color: #5aa6ff; background: rgba(90, 166, 255, 0.14); }
+.pfm-curl-m-post   { color: #4cc38a; background: rgba(76, 195, 138, 0.14); }
+.pfm-curl-m-put    { color: #d6a85f; background: rgba(214, 168, 95, 0.14); }
+.pfm-curl-m-delete { color: #f56565; background: rgba(245, 101, 101, 0.14); }
+.pfm-curl-m-patch  { color: #c084fc; background: rgba(192, 132, 252, 0.14); }
+
+.pfm-curl-row-url {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--pfm-curl-text);
+  direction: rtl; /* keep the path-end visible when truncated */
+  text-align: left;
+}
+
+.pfm-curl-row-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pfm-curl-text-mute);
+  width: 18px;
+  height: 18px;
+}
+.pfm-curl-row:hover .pfm-curl-row-copy,
+.pfm-curl-row:focus-visible .pfm-curl-row-copy {
+  color: var(--pfm-curl-orange);
+}
+
+/* =====================================================================
+ * "Copied" badge - orange-tinted, 11px, fade-out animation
+ * ===================================================================== */
+.pfm-curl-badge {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 4px 9px;
+  font: 600 11px/1 var(--pfm-curl-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pfm-curl-orange);
+  background: var(--pfm-curl-orange-soft);
+  border: 1px solid var(--pfm-curl-orange);
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  z-index: calc(var(--pfm-curl-z) + 10);
+  transition: opacity 180ms ease, transform 180ms ease;
+  white-space: nowrap;
+}
+.pfm-curl-badge.is-visible {
+  opacity: 1;
+  animation: pfm-curl-badge-pop 180ms ease-out;
+}
+.pfm-curl-badge.is-fading {
+  opacity: 0;
+  transition: opacity 240ms ease;
+}
+
+@keyframes pfm-curl-badge-pop {
+  0%   { transform: translate(-50%, -90%) scale(0.92); opacity: 0; }
+  60%  { transform: translate(-50%, -100%) scale(1.04); opacity: 1; }
+  100% { transform: translate(-50%, -100%) scale(1.00); opacity: 1; }
+}
+
+/* =====================================================================
+ * Light theme overrides
+ * ===================================================================== */
+@media (prefers-color-scheme: light) {
+  :root {
+    --pfm-curl-bg: #ffffff;
+    --pfm-curl-surface: #ffffff;
+    --pfm-curl-surface-2: #f7f7f9;
+    --pfm-curl-border: rgba(15, 23, 42, 0.10);
+    --pfm-curl-border-strong: rgba(15, 23, 42, 0.20);
+    --pfm-curl-text: #0f172a;
+    --pfm-curl-text-dim: rgba(15, 23, 42, 0.62);
+    --pfm-curl-text-mute: rgba(15, 23, 42, 0.40);
+    --pfm-curl-shadow: 0 10px 32px rgba(15, 23, 42, 0.18);
+  }
+}
+[data-theme="light"] {
+  --pfm-curl-bg: #ffffff;
+  --pfm-curl-surface: #ffffff;
+  --pfm-curl-surface-2: #f7f7f9;
+  --pfm-curl-border: rgba(15, 23, 42, 0.10);
+  --pfm-curl-border-strong: rgba(15, 23, 42, 0.20);
+  --pfm-curl-text: #0f172a;
+  --pfm-curl-text-dim: rgba(15, 23, 42, 0.62);
+  --pfm-curl-text-mute: rgba(15, 23, 42, 0.40);
+  --pfm-curl-shadow: 0 10px 32px rgba(15, 23, 42, 0.18);
+}
+[data-theme="dark"] {
+  --pfm-curl-bg: #0a0a0c;
+  --pfm-curl-surface: #131318;
+  --pfm-curl-surface-2: #1a1a20;
+  --pfm-curl-border: rgba(255, 255, 255, 0.10);
+  --pfm-curl-border-strong: rgba(255, 255, 255, 0.20);
+  --pfm-curl-text: #e8e8ec;
+  --pfm-curl-text-dim: rgba(232, 232, 236, 0.62);
+  --pfm-curl-text-mute: rgba(232, 232, 236, 0.40);
+  --pfm-curl-shadow: 0 10px 32px rgba(0, 0, 0, 0.55);
+}
+
+/* =====================================================================
+ * Reduced-motion: disable badge pop animation
+ * ===================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .pfm-curl-btn,
+  .pfm-curl-launcher,
+  .pfm-curl-dropdown,
+  .pfm-curl-badge {
+    transition: none;
+    animation: none;
+  }
+}

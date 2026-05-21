@@ -1,0 +1,200 @@
+/* ============================================================
+ * tokens.css  (T01, wave-10)
+ *
+ * Foundational design tokens for the Prediction Terminal frontend.
+ * Brand color ramps, type stacks, spacing scale, radii, and
+ * semantic/ink/surface palettes consumed by every mode pane
+ * (Regression, Strategies / alpha Hub, Terminal) and by every
+ * downstream stylesheet (alphahub-premium, terminal-premium,
+ * regression-clarity, strategies-layout, etc.).
+ *
+ * MOUNT ORDER (MANDATORY):
+ *   tokens.css MUST be the FIRST <link rel="stylesheet"> in
+ *   <head>, BEFORE global-refinement.css and BEFORE every
+ *   mode-specific sheet. Downstream sheets reference these
+ *   variables as `var(--orange)`, `var(--ink)`, `var(--sp-3)`,
+ *   etc. and must not redefine them.
+ *
+ * COORDINATION:
+ *   - This file is the SOLE owner of the brand/semantic/ink/
+ *     surface/spacing/radii/type-stack tokens listed below.
+ *   - T68 (global-refinement.css) owns: --shadow-1/2/3,
+ *     --focus-ring, --ease, --t, --t-fast, --t-slow.
+ *     Those tokens are NOT defined here — DO NOT redefine.
+ *   - Hairlines (--hairline, --hairline-strong) are defined
+ *     here defensively; downstream sheets may locally override
+ *     via custom-property cascade but must not redefine on
+ *     :root.
+ *
+ * DARK MODE:
+ *   Two activation paths are supported simultaneously:
+ *     1. OS preference: @media (prefers-color-scheme: dark)
+ *        — automatic for users whose OS is dark.
+ *     2. Explicit toggle: [data-theme="dark"] on <html> or
+ *        <body> — wired by T05's theme toggle JS. The explicit
+ *        selector always wins (it appears later in source).
+ *   A `[data-theme="light"]` selector is also provided so the
+ *   toggle can force light mode regardless of OS preference.
+ * ============================================================ */
+
+:root {
+  /* ---- Brand color ramp (orange) ---- */
+  --orange-50: #fff8f1;
+  --orange-100: #ffedd5;
+  --orange-400: #fb923c;
+  --orange-500: #f97316;
+  --orange-600: #ea580c;
+  --orange-700: #c2410c;
+  --orange: var(--orange-500);
+  --orange-2: var(--orange-600);
+  --orange-soft: var(--orange-50);
+
+  /* ---- Semantic colors ---- */
+  --pos: #16a34a;
+  --neg: #dc2626;
+  --warn: #f59e0b;
+  --info: #2563eb;
+
+  /* ---- Ink (text) ramp ---- */
+  --ink: #0f172a;
+  --ink-2: #334155;
+  --ink-3: #64748b;
+  --ink-4: #94a3b8;
+  --ink-muted: var(--ink-3);
+
+  /* ---- Surfaces ---- */
+  --bg: #fafafa;
+  --bg-alt: #f4f4f5;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+
+  /* ---- Hairlines (defensive: downstream may locally override) ---- */
+  --hairline: rgba(15, 23, 42, 0.08);
+  --hairline-strong: rgba(15, 23, 42, 0.14);
+
+  /* ---- Type stacks ---- */
+  --serif-display: "Instrument Serif", "EB Garamond", Georgia, serif;
+  --serif: var(--serif-display);
+  --sans: Inter, "SF Pro Text", system-ui, sans-serif;
+  --mono: "JetBrains Mono", "Fira Code", ui-monospace, Menlo, monospace;
+
+  /* ---- Spacing scale (4-px base) ---- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-12: 48px;
+
+  /* ---- Radii ---- */
+  --r-1: 4px;
+  --r-2: 6px;
+  --r-3: 8px;
+  --r-4: 12px;
+  --r-pill: 999px;
+
+  /* ---- Legacy alias retained for older selectors ---- */
+  --ah-bg: var(--bg);
+}
+
+/* ============================================================
+ * Dark mode (OS preference)
+ *
+ * Re-tint background, surface, ink, and hairlines. Orange brand
+ * ramp stays the same hue but the alias --orange-soft shifts to
+ * a darker tint to remain legible on dark surfaces. Semantic
+ * colors brighten slightly to maintain WCAG-AA contrast on a
+ * near-black background.
+ * ============================================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0d12;
+    --bg-alt: #11141b;
+    --surface: #14171f;
+    --surface-2: #1a1e28;
+
+    --ink: #f8fafc;
+    --ink-2: #cbd5e1;
+    --ink-3: #94a3b8;
+    --ink-4: #64748b;
+    --ink-muted: var(--ink-3);
+
+    --hairline: rgba(248, 250, 252, 0.10);
+    --hairline-strong: rgba(248, 250, 252, 0.18);
+
+    --orange-soft: #2a1809;
+
+    --pos: #22c55e;
+    --neg: #ef4444;
+    --warn: #fbbf24;
+    --info: #3b82f6;
+
+    --ah-bg: var(--bg);
+  }
+}
+
+/* ============================================================
+ * Explicit theme override — wins over OS preference.
+ *
+ * T05's theme toggle sets [data-theme="dark"] (or "light") on
+ * <html>. Because these selectors appear AFTER the @media block
+ * in source order and carry equal specificity, they take
+ * precedence when present.
+ * ============================================================ */
+
+[data-theme="dark"] {
+  --bg: #0b0d12;
+  --bg-alt: #11141b;
+  --surface: #14171f;
+  --surface-2: #1a1e28;
+
+  --ink: #f8fafc;
+  --ink-2: #cbd5e1;
+  --ink-3: #94a3b8;
+  --ink-4: #64748b;
+  --ink-muted: var(--ink-3);
+
+  --hairline: rgba(248, 250, 252, 0.10);
+  --hairline-strong: rgba(248, 250, 252, 0.18);
+
+  --orange-soft: #2a1809;
+
+  --pos: #22c55e;
+  --neg: #ef4444;
+  --warn: #fbbf24;
+  --info: #3b82f6;
+
+  --ah-bg: var(--bg);
+}
+
+[data-theme="light"] {
+  --bg: #fafafa;
+  --bg-alt: #f4f4f5;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+
+  --ink: #0f172a;
+  --ink-2: #334155;
+  --ink-3: #64748b;
+  --ink-4: #94a3b8;
+  --ink-muted: var(--ink-3);
+
+  --hairline: rgba(15, 23, 42, 0.08);
+  --hairline-strong: rgba(15, 23, 42, 0.14);
+
+  --orange-soft: #fff8f1;
+
+  --pos: #16a34a;
+  --neg: #dc2626;
+  --warn: #f59e0b;
+  --info: #2563eb;
+
+  --ah-bg: var(--bg);
+}
+
+/* ============================================================
+ * End of tokens.css
+ * ============================================================ */

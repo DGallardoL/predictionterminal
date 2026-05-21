@@ -1,0 +1,70 @@
+{% extends "_base.html.j2" %}
+{% block title %}Market — {{ data.slug | default("(unknown)") }}{% endblock %}
+{% block content %}
+  <h1>Market: {{ data.slug | default("(unknown)") }}</h1>
+  {% if data.meta and data.meta.question %}
+    <p class="muted">{{ data.meta.question }}</p>
+  {% endif %}
+
+  <h2>Live</h2>
+  <table class="pfm-tbl">
+    <thead>
+      <tr><th>Field</th><th>Value</th></tr>
+    </thead>
+    <tbody>
+      {% set live = data.live or {} %}
+      {% for k, v in live.items() %}
+        <tr><td>{{ k }}</td><td>{{ v }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% if data.stats %}
+    <h2>Stats</h2>
+    <table class="pfm-tbl">
+      <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+      <tbody>
+        {% for k, v in data.stats.items() %}
+          <tr><td>{{ k }}</td><td>{{ v }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+
+  {% if data.peers %}
+    <h2>Peers (top {{ data.peers | length }})</h2>
+    <table class="pfm-tbl">
+      <thead>
+        <tr>
+          <th>Peer</th><th>OOS Sharpe</th><th>Half-life</th><th>Verdict</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in data.peers %}
+          <tr>
+            <td>{{ p.peer_id | default(p.peer_slug | default("?")) }}</td>
+            <td>{{ "%.3f" | format(p.oos_sharpe | default(0.0) | float) }}</td>
+            <td>{{ "%.1f" | format(p.half_life_days | default(0.0) | float) }}</td>
+            <td>{{ p.verdict | default("?") }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+
+  {% set hist = data.history | default([]) %}
+  {% if hist %}
+    <h2>Recent History (last {{ hist[-30:] | length }} bars)</h2>
+    <table class="pfm-tbl">
+      <thead><tr><th>t</th><th>p</th></tr></thead>
+      <tbody>
+        {% for row in hist[-30:] %}
+          <tr>
+            <td>{{ row.t | default("") }}</td>
+            <td>{{ "%.4f" | format(row.p | default(0.0) | float) }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+{% endblock %}

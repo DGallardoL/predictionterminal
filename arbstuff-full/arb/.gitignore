@@ -1,0 +1,28 @@
+# --- Secrets / personal data (NEVER commit) ---
+.env
+.env.local
+*.pem
+*.key
+kalshi_private_key*
+
+# --- Runtime state / logs ---
+*.log
+arb_engine.log
+arb_pnl_log.json
+arb_detection_history.json
+dashboard_state.json
+crypto_jump_log.jsonl
+trades.db
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

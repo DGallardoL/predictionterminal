@@ -1,0 +1,5639 @@
+{
+  "poll_interval": 8,
+  "threshold": 0.94,
+  "min_alert_profit": 1.0,
+  "events": [
+    {
+      "name": "New Hampshire GOV",
+      "kalshi_ticker": "GOVPARTYNH-28",
+      "poly_slug": "new-hampshire-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Florida SEN 2028",
+      "kalshi_ticker": "SENATEFL-28",
+      "poly_slug": "florida-senate-election-winner",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Florida GOV (primary) [R]",
+      "kalshi_ticker": "KXPRIMARYPLACE-KXGOVFLNOMR-2",
+      "poly_slug": "republican-nominee-for-florida-governor",
+      "mapping": {
+        "jcol": "Jay Collins",
+        "bdon": "Byron Donalds",
+        "jfis": "James Fishback",
+        "cdes": "Casey DeSantis"
+      }
+    },
+    {
+      "name": "Michigan SEN (primary) [D]",
+      "kalshi_ticker": "KXPRIMARYPLACE-SENATEMID26-2",
+      "poly_slug": "michigan-democratic-senate-primary-winner",
+      "mapping": {
+        "mmcm": "Mallory McMorrow",
+        "aels": "Abdul El-Sayed",
+        "hste": "Haley Stevens"
+      }
+    },
+    {
+      "name": "New York District 12 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXPRIMARYPLACE-NY12D26-2",
+      "poly_slug": "who-will-be-the-democratic-nominee-for-ny-12",
+      "mapping": {
+        "mlas": "Micah Lasher",
+        "abor": "Alex Bores",
+        "jsch": "Jack Schlossberg",
+        "gcon": "George Conway"
+      }
+    },
+    {
+      "name": "California GOV (primary)",
+      "kalshi_ticker": "KXCAGOV3RD-26JUN02-3",
+      "poly_slug": "california-governor-primary-election-first-place",
+      "mapping": {
+        "tste": "Tom Steyer",
+        "shil": "Steve Hilton",
+        "mmah": "Matt Mahan",
+        "kpor": "Katie Porter",
+        "cbia": "Chad Bianco",
+        "avil": "Antonio Villaraigosa",
+        "xbec": "Xavier Becerra"
+      }
+    },
+    {
+      "name": "California GOV (primary)",
+      "kalshi_ticker": "KXCAGOV2ND-26JUN02-2",
+      "poly_slug": "who-will-advance-from-the-california-governor-primary",
+      "mapping": {
+        "eswa": "Eric Swalwell",
+        "tste": "Tom Steyer",
+        "shil": "Steve Hilton",
+        "mmah": "Matt Mahan",
+        "kpor": "Katie Porter",
+        "cbia": "Chad Bianco",
+        "cahn": "Ché Ahn",
+        "avil": "Antonio Villaraigosa",
+        "bwar": "Butch Ware",
+        "xbec": "Xavier Becerra"
+      }
+    },
+    {
+      "name": "Louisiana SEN",
+      "kalshi_ticker": "KXLASEN1R-26MAY16",
+      "poly_slug": "louisiana-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "South Carolina GOV",
+      "kalshi_ticker": "GOVPARTYSC-26",
+      "poly_slug": "south-carolina-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Texas GOV",
+      "kalshi_ticker": "GOVPARTYTX-26",
+      "poly_slug": "texas-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Alabama GOV",
+      "kalshi_ticker": "GOVPARTYAL-26",
+      "poly_slug": "alabama-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Tennessee GOV",
+      "kalshi_ticker": "GOVPARTYTN-26",
+      "poly_slug": "tennessee-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Maryland GOV",
+      "kalshi_ticker": "GOVPARTYMD-26",
+      "poly_slug": "maryland-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Pennsylvania GOV",
+      "kalshi_ticker": "GOVPARTYPA-26",
+      "poly_slug": "pennsylvania-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Oklahoma GOV",
+      "kalshi_ticker": "GOVPARTYOK-26",
+      "poly_slug": "oklahoma-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Ohio GOV",
+      "kalshi_ticker": "GOVPARTYOH-26",
+      "poly_slug": "ohio-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Kansas GOV",
+      "kalshi_ticker": "GOVPARTYKS-27",
+      "poly_slug": "kansas-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Illinois GOV",
+      "kalshi_ticker": "GOVPARTYIL-26",
+      "poly_slug": "illinois-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Iowa GOV",
+      "kalshi_ticker": "GOVPARTYIA-26",
+      "poly_slug": "iowa-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Georgia GOV",
+      "kalshi_ticker": "GOVPARTYGA-26",
+      "poly_slug": "georgia-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Connecticut GOV",
+      "kalshi_ticker": "GOVPARTYCT-26",
+      "poly_slug": "connecticut-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "South Dakota GOV",
+      "kalshi_ticker": "GOVPARTYSD-26",
+      "poly_slug": "south-dakota-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Florida GOV",
+      "kalshi_ticker": "GOVPARTYFL-26",
+      "poly_slug": "florida-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Wyoming GOV",
+      "kalshi_ticker": "GOVPARTYWY-26",
+      "poly_slug": "wyoming-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Idaho GOV",
+      "kalshi_ticker": "GOVPARTYID-26",
+      "poly_slug": "idaho-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Rhode Island GOV",
+      "kalshi_ticker": "GOVPARTYRI-26",
+      "poly_slug": "rhode-island-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Vermont GOV",
+      "kalshi_ticker": "GOVPARTYVT-26",
+      "poly_slug": "vermont-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Massachusetts GOV",
+      "kalshi_ticker": "GOVPARTYMA-26",
+      "poly_slug": "massachusetts-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "West Virginia District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-WV02-26",
+      "poly_slug": "wv-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "West Virginia District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-WV01-26",
+      "poly_slug": "wv-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Wisconsin District 8 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-WI08-26",
+      "poly_slug": "wi-08-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Wisconsin District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-WI07-26",
+      "poly_slug": "wi-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Wisconsin District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-WI06-26",
+      "poly_slug": "wi-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Wisconsin District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-WI05-26",
+      "poly_slug": "wi-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Wisconsin District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-WI04-26",
+      "poly_slug": "wi-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Wisconsin District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-WI02-26",
+      "poly_slug": "wi-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Washington District 10 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-WA10-26",
+      "poly_slug": "wa-10-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Washington District 9 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-WA09-26",
+      "poly_slug": "wa-09-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Washington District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-WA07-26",
+      "poly_slug": "wa-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Washington District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-WA06-26",
+      "poly_slug": "wa-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Washington District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-WA05-26",
+      "poly_slug": "wa-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Washington District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-WA04-26",
+      "poly_slug": "wa-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Washington District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-WA02-26",
+      "poly_slug": "wa-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Washington District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-WA01-26",
+      "poly_slug": "wa-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Virginia District 11 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-VA11-26",
+      "poly_slug": "va-11-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Virginia District 9 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-VA09-26",
+      "poly_slug": "va-09-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Virginia District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-VA06-26",
+      "poly_slug": "va-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Virginia District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-VA05-26",
+      "poly_slug": "va-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Virginia District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-VA04-26",
+      "poly_slug": "va-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Utah District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-UT04-26",
+      "poly_slug": "ut-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 38 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX38-26",
+      "poly_slug": "tx-38-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 37 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX37-26",
+      "poly_slug": "tx-37-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 33 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX33-26",
+      "poly_slug": "tx-33-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 31 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX31-26",
+      "poly_slug": "tx-31-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 30 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX30-26",
+      "poly_slug": "tx-30-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 29 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX29-26",
+      "poly_slug": "tx-29-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 27 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX27-26",
+      "poly_slug": "tx-27-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 26 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX26-26",
+      "poly_slug": "tx-26-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 25 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX25-26",
+      "poly_slug": "tx-25-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 24 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX24-26",
+      "poly_slug": "tx-24-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 23 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX23-26",
+      "poly_slug": "tx-23-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 22 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX22-26",
+      "poly_slug": "tx-22-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 21 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX21-26",
+      "poly_slug": "tx-21-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 20 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX20-26",
+      "poly_slug": "tx-20-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 19 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX19-26",
+      "poly_slug": "tx-19-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 18 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX18-26",
+      "poly_slug": "tx-18-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 17 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX17-26",
+      "poly_slug": "tx-17-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 16 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX16-26",
+      "poly_slug": "tx-16-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 14 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX14-26",
+      "poly_slug": "tx-14-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 13 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX13-26",
+      "poly_slug": "tx-13-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 12 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX12-26",
+      "poly_slug": "tx-12-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 11 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX11-26",
+      "poly_slug": "tx-11-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 10 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX10-26",
+      "poly_slug": "tx-10-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 8 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX08-26",
+      "poly_slug": "tx-08-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX07-26",
+      "poly_slug": "tx-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX06-26",
+      "poly_slug": "tx-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX05-26",
+      "poly_slug": "tx-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX04-26",
+      "poly_slug": "tx-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX03-26",
+      "poly_slug": "tx-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX02-26",
+      "poly_slug": "tx-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TX01-26",
+      "poly_slug": "tx-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Tennessee District 9 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TN09-26",
+      "poly_slug": "tn-09-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Tennessee District 8 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TN08-26",
+      "poly_slug": "tn-08-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Tennessee District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TN07-26",
+      "poly_slug": "tn-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Tennessee District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TN06-26",
+      "poly_slug": "tn-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Tennessee District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TN04-26",
+      "poly_slug": "tn-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Tennessee District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TN03-26",
+      "poly_slug": "tn-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Tennessee District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TN02-26",
+      "poly_slug": "tn-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Tennessee District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-TN01-26",
+      "poly_slug": "tn-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "South Carolina District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-SC07-26",
+      "poly_slug": "sc-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "South Carolina District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-SC06-26",
+      "poly_slug": "sc-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "South Carolina District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-SC05-26",
+      "poly_slug": "sc-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "South Carolina District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-SC04-26",
+      "poly_slug": "sc-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "South Carolina District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-SC03-26",
+      "poly_slug": "sc-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "South Carolina District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-SC01-26",
+      "poly_slug": "sc-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Rhode Island District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-RI01-26",
+      "poly_slug": "ri-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Pennsylvania District 15 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-PA15-26",
+      "poly_slug": "pa-15-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Pennsylvania District 14 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-PA14-26",
+      "poly_slug": "pa-14-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Pennsylvania District 13 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-PA13-26",
+      "poly_slug": "pa-13-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Pennsylvania District 12 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-PA12-26",
+      "poly_slug": "pa-12-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Pennsylvania District 11 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-PA11-26",
+      "poly_slug": "pa-11-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Pennsylvania District 9 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-PA09-26",
+      "poly_slug": "pa-09-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Pennsylvania District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-PA05-26",
+      "poly_slug": "pa-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Pennsylvania District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-PA04-26",
+      "poly_slug": "pa-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Pennsylvania District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-PA03-26",
+      "poly_slug": "pa-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Oregon District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OR06-26",
+      "poly_slug": "or-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Oregon District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OR04-26",
+      "poly_slug": "or-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Oregon District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OR03-26",
+      "poly_slug": "or-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Oregon District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OR02-26",
+      "poly_slug": "or-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Oregon District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OR01-26",
+      "poly_slug": "or-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Oklahoma District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OK05-26",
+      "poly_slug": "ok-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Oklahoma District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OK04-26",
+      "poly_slug": "ok-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Oklahoma District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OK03-26",
+      "poly_slug": "ok-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Ohio District 14 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OH14-26",
+      "poly_slug": "oh-14-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Ohio District 12 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OH12-26",
+      "poly_slug": "oh-12-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Ohio District 11 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OH11-26",
+      "poly_slug": "oh-11-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Ohio District 10 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OH10-26",
+      "poly_slug": "oh-10-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Ohio District 8 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OH08-26",
+      "poly_slug": "oh-08-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Ohio District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OH07-26",
+      "poly_slug": "oh-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Ohio District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OH06-26",
+      "poly_slug": "oh-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Ohio District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OH05-26",
+      "poly_slug": "oh-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Ohio District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OH04-26",
+      "poly_slug": "oh-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Ohio District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OH03-26",
+      "poly_slug": "oh-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Ohio District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-OH02-26",
+      "poly_slug": "oh-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 26 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NY26-26",
+      "poly_slug": "ny-26-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 25 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NY25-26",
+      "poly_slug": "ny-25-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 24 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NY24-26",
+      "poly_slug": "ny-24-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 23 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NY23-26",
+      "poly_slug": "ny-23-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 21 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NY21-26",
+      "poly_slug": "ny-21-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 20 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NY20-26",
+      "poly_slug": "ny-20-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 14 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NY14-26",
+      "poly_slug": "ny-14-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 13 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NY13-26",
+      "poly_slug": "ny-13-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 11 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NY11-26",
+      "poly_slug": "ny-11-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 10 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NY10-26",
+      "poly_slug": "ny-10-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 9 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NY09-26",
+      "poly_slug": "ny-09-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 8 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NY08-26",
+      "poly_slug": "ny-08-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NY07-26",
+      "poly_slug": "ny-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NY05-26",
+      "poly_slug": "ny-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NY02-26",
+      "poly_slug": "ny-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NY01-26",
+      "poly_slug": "ny-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Nevada District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NV02-26",
+      "poly_slug": "nv-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New Mexico District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NM03-26",
+      "poly_slug": "nm-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New Mexico District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NM01-26",
+      "poly_slug": "nm-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New Jersey District 12 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NJ12-26",
+      "poly_slug": "nj-12-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New Jersey District 11 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NJ11-26",
+      "poly_slug": "nj-11-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New Jersey District 10 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NJ10-26",
+      "poly_slug": "nj-10-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New Jersey District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NJ06-26",
+      "poly_slug": "nj-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New Jersey District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NJ03-26",
+      "poly_slug": "nj-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New Jersey District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NJ02-26",
+      "poly_slug": "nj-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New Jersey District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NJ01-26",
+      "poly_slug": "nj-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New Hampshire District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NH02-26",
+      "poly_slug": "nh-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Nebraska District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NE03-26",
+      "poly_slug": "ne-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Nebraska District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NE01-26",
+      "poly_slug": "ne-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "North Carolina District 13 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NC13-26",
+      "poly_slug": "nc-13-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "North Carolina District 12 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NC12-26",
+      "poly_slug": "nc-12-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "North Carolina District 10 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NC10-26",
+      "poly_slug": "nc-10-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "North Carolina District 9 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NC09-26",
+      "poly_slug": "nc-09-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "North Carolina District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NC07-26",
+      "poly_slug": "nc-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "North Carolina District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NC06-26",
+      "poly_slug": "nc-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "North Carolina District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NC05-26",
+      "poly_slug": "nc-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "North Carolina District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NC04-26",
+      "poly_slug": "nc-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "North Carolina District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NC03-26",
+      "poly_slug": "nc-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "North Carolina District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-NC02-26",
+      "poly_slug": "nc-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Mississippi District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MS04-26",
+      "poly_slug": "ms-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Mississippi District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MS03-26",
+      "poly_slug": "ms-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Mississippi District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MS02-26",
+      "poly_slug": "ms-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Mississippi District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MS01-26",
+      "poly_slug": "ms-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Missouri District 8 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MO08-26",
+      "poly_slug": "mo-08-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Missouri District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MO07-26",
+      "poly_slug": "mo-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Missouri District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MO06-26",
+      "poly_slug": "mo-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Missouri District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MO04-26",
+      "poly_slug": "mo-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Missouri District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MO03-26",
+      "poly_slug": "mo-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Missouri District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MO02-26",
+      "poly_slug": "mo-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Missouri District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MO01-26",
+      "poly_slug": "mo-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Minnesota District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MN07-26",
+      "poly_slug": "mn-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Minnesota District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MN06-26",
+      "poly_slug": "mn-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Minnesota District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MN05-26",
+      "poly_slug": "mn-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Minnesota District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MN04-26",
+      "poly_slug": "mn-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Minnesota District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MN03-26",
+      "poly_slug": "mn-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Minnesota District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MN01-26",
+      "poly_slug": "mn-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Michigan District 13 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MI13-26",
+      "poly_slug": "mi-13-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Michigan District 12 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MI12-26",
+      "poly_slug": "mi-12-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Michigan District 11 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MI11-26",
+      "poly_slug": "mi-11-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Michigan District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MI06-26",
+      "poly_slug": "mi-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Michigan District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MI01-26",
+      "poly_slug": "mi-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Maryland District 8 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MD08-26",
+      "poly_slug": "md-08-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Maryland District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MD07-26",
+      "poly_slug": "md-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Maryland District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MD06-26",
+      "poly_slug": "md-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Maryland District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MD05-26",
+      "poly_slug": "md-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Maryland District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MD04-26",
+      "poly_slug": "md-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Maryland District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MD03-26",
+      "poly_slug": "md-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Maryland District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MD01-26",
+      "poly_slug": "md-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Massachusetts District 8 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MA08-26",
+      "poly_slug": "ma-08-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Massachusetts District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MA07-26",
+      "poly_slug": "ma-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Massachusetts District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MA06-26",
+      "poly_slug": "ma-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Massachusetts District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MA05-26",
+      "poly_slug": "ma-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Massachusetts District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MA04-26",
+      "poly_slug": "ma-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Massachusetts District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MA03-26",
+      "poly_slug": "ma-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Massachusetts District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-MA02-26",
+      "poly_slug": "ma-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Louisiana District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-LA06-26",
+      "poly_slug": "la-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Louisiana District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-LA05-26",
+      "poly_slug": "la-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Louisiana District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-LA04-26",
+      "poly_slug": "la-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Louisiana District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-LA03-26",
+      "poly_slug": "la-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Louisiana District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-LA02-26",
+      "poly_slug": "la-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Kentucky District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-KY06-26",
+      "poly_slug": "ky-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Kentucky District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-KY05-26",
+      "poly_slug": "ky-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Kentucky District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-KY04-26",
+      "poly_slug": "ky-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Kentucky District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-KY02-26",
+      "poly_slug": "ky-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Kentucky District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-KY01-26",
+      "poly_slug": "ky-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Kansas District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-KS04-26",
+      "poly_slug": "ks-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Kansas District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-KS03-26",
+      "poly_slug": "ks-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Kansas District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-KS02-26",
+      "poly_slug": "ks-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Kansas District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-KS01-26",
+      "poly_slug": "ks-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Indiana District 9 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IN09-26",
+      "poly_slug": "in-09-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Indiana District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IN06-26",
+      "poly_slug": "in-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Indiana District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IN05-26",
+      "poly_slug": "in-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Indiana District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IN04-26",
+      "poly_slug": "in-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Indiana District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IN03-26",
+      "poly_slug": "in-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Illinois District 16 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IL16-26",
+      "poly_slug": "il-16-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Illinois District 15 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IL15-26",
+      "poly_slug": "il-15-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Illinois District 14 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IL14-26",
+      "poly_slug": "il-14-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Illinois District 13 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IL13-26",
+      "poly_slug": "il-13-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Illinois District 12 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IL12-26",
+      "poly_slug": "il-12-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Illinois District 11 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IL11-26",
+      "poly_slug": "il-11-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Illinois District 10 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IL10-26",
+      "poly_slug": "il-10-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Illinois District 9 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IL09-26",
+      "poly_slug": "il-09-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Illinois District 8 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IL08-26",
+      "poly_slug": "il-08-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Illinois District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IL06-26",
+      "poly_slug": "il-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Illinois District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IL04-26",
+      "poly_slug": "il-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Illinois District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IL03-26",
+      "poly_slug": "il-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Illinois District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IL02-26",
+      "poly_slug": "il-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Illinois District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IL01-26",
+      "poly_slug": "il-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Idaho District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-ID02-26",
+      "poly_slug": "id-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Idaho District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-ID01-26",
+      "poly_slug": "id-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Iowa District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IA04-26",
+      "poly_slug": "ia-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Iowa District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-IA02-26",
+      "poly_slug": "ia-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Hawaii District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-HI02-26",
+      "poly_slug": "hi-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Hawaii District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-HI01-26",
+      "poly_slug": "hi-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Georgia District 14 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-GA14-26",
+      "poly_slug": "ga-14-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Georgia District 13 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-GA13-26",
+      "poly_slug": "ga-13-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Georgia District 12 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-GA12-26",
+      "poly_slug": "ga-12-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Georgia District 11 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-GA11-26",
+      "poly_slug": "ga-11-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Georgia District 10 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-GA10-26",
+      "poly_slug": "ga-10-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Georgia District 9 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-GA09-26",
+      "poly_slug": "ga-09-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Georgia District 8 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-GA08-26",
+      "poly_slug": "ga-08-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Georgia District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-GA07-26",
+      "poly_slug": "ga-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Georgia District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-GA06-26",
+      "poly_slug": "ga-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Georgia District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-GA05-26",
+      "poly_slug": "ga-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Georgia District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-GA04-26",
+      "poly_slug": "ga-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Georgia District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-GA03-26",
+      "poly_slug": "ga-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Georgia District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-GA02-26",
+      "poly_slug": "ga-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Georgia District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-GA01-26",
+      "poly_slug": "ga-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 28 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL28-26",
+      "poly_slug": "fl-28-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 27 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL27-26",
+      "poly_slug": "fl-27-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 26 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL26-26",
+      "poly_slug": "fl-26-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 25 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL25-26",
+      "poly_slug": "fl-25-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 24 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL24-26",
+      "poly_slug": "fl-24-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 22 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL22-26",
+      "poly_slug": "fl-22-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 21 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL21-26",
+      "poly_slug": "fl-21-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 19 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL19-26",
+      "poly_slug": "fl-19-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 18 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL18-26",
+      "poly_slug": "fl-18-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 17 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL17-26",
+      "poly_slug": "fl-17-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 15 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL15-26",
+      "poly_slug": "fl-15-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 14 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL14-26",
+      "poly_slug": "fl-14-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 12 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL12-26",
+      "poly_slug": "fl-12-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 9 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL09-26",
+      "poly_slug": "fl-09-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 8 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL08-26",
+      "poly_slug": "fl-08-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL07-26",
+      "poly_slug": "fl-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL06-26",
+      "poly_slug": "fl-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL05-26",
+      "poly_slug": "fl-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL04-26",
+      "poly_slug": "fl-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL03-26",
+      "poly_slug": "fl-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL02-26",
+      "poly_slug": "fl-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-FL01-26",
+      "poly_slug": "fl-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Connecticut District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CT03-26",
+      "poly_slug": "ct-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Connecticut District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CT02-26",
+      "poly_slug": "ct-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Colorado District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CO06-26",
+      "poly_slug": "co-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Colorado District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CO05-26",
+      "poly_slug": "co-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Colorado District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CO04-26",
+      "poly_slug": "co-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 52 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA52-26",
+      "poly_slug": "ca-52-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 50 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA50-26",
+      "poly_slug": "ca-50-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 46 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA46-26",
+      "poly_slug": "ca-46-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 44 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA44-26",
+      "poly_slug": "ca-44-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 42 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA42-26",
+      "poly_slug": "ca-42-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 39 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA39-26",
+      "poly_slug": "ca-39-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 38 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA38-26",
+      "poly_slug": "ca-38-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 37 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA37-26",
+      "poly_slug": "ca-37-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 36 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA36-26",
+      "poly_slug": "ca-36-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 35 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA35-26",
+      "poly_slug": "ca-35-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 34 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA34-26",
+      "poly_slug": "ca-34-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 33 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA33-26",
+      "poly_slug": "ca-33-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 32 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA32-26",
+      "poly_slug": "ca-32-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 31 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA31-26",
+      "poly_slug": "ca-31-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 30 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA30-26",
+      "poly_slug": "ca-30-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 29 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA29-26",
+      "poly_slug": "ca-29-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 28 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA28-26",
+      "poly_slug": "ca-28-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 25 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA25-26",
+      "poly_slug": "ca-25-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 24 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA24-26",
+      "poly_slug": "ca-24-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 23 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA23-26",
+      "poly_slug": "ca-23-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 20 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA20-26",
+      "poly_slug": "ca-20-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 18 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA18-26",
+      "poly_slug": "ca-18-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 17 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA17-26",
+      "poly_slug": "ca-17-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 16 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA16-26",
+      "poly_slug": "ca-16-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 15 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA15-26",
+      "poly_slug": "ca-15-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 14 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA14-26",
+      "poly_slug": "ca-14-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 12 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA12-26",
+      "poly_slug": "ca-12-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 11 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA11-26",
+      "poly_slug": "ca-11-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 10 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA10-26",
+      "poly_slug": "ca-10-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA07-26",
+      "poly_slug": "ca-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA06-26",
+      "poly_slug": "ca-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA05-26",
+      "poly_slug": "ca-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA02-26",
+      "poly_slug": "ca-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-CA01-26",
+      "poly_slug": "ca-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Arizona District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-AZ07-26",
+      "poly_slug": "az-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Arizona District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-AZ05-26",
+      "poly_slug": "az-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Arizona District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-AZ04-26",
+      "poly_slug": "az-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Arizona District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-AZ03-26",
+      "poly_slug": "az-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Arkansas District 4 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-AR04-26",
+      "poly_slug": "ar-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Arkansas District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-AR03-26",
+      "poly_slug": "ar-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Arkansas District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-AR02-26",
+      "poly_slug": "ar-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Arkansas District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-AR01-26",
+      "poly_slug": "ar-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Alabama District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-AL07-26",
+      "poly_slug": "al-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Alabama District 6 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-AL06-26",
+      "poly_slug": "al-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Alabama District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-AL03-26",
+      "poly_slug": "al-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Alabama District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSERACE-AL02-26",
+      "poly_slug": "al-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Wyoming SEN",
+      "kalshi_ticker": "SENATEWY-26",
+      "poly_slug": "wyoming-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Virginia SEN",
+      "kalshi_ticker": "SENATEWV-26",
+      "poly_slug": "virginia-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Virginia SEN",
+      "kalshi_ticker": "SENATEVA-26",
+      "poly_slug": "west-virginia-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Tennessee SEN",
+      "kalshi_ticker": "SENATETN-26",
+      "poly_slug": "tennessee-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "South Dakota SEN",
+      "kalshi_ticker": "SENATESD-26",
+      "poly_slug": "south-dakota-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "South Carolina SEN",
+      "kalshi_ticker": "SENATESC-26",
+      "poly_slug": "south-carolina-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Rhode Island SEN",
+      "kalshi_ticker": "SENATERI-26",
+      "poly_slug": "rhode-island-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Oklahoma SEN",
+      "kalshi_ticker": "SENATEOK-26",
+      "poly_slug": "oklahoma-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "New Mexico SEN",
+      "kalshi_ticker": "SENATENM-26",
+      "poly_slug": "new-mexico-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "New Jersey SEN",
+      "kalshi_ticker": "SENATENJ-26",
+      "poly_slug": "new-jersey-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "New Hampshire SEN",
+      "kalshi_ticker": "SENATENH-26",
+      "poly_slug": "new-hampshire-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Nebraska SEN",
+      "kalshi_ticker": "SENATENE-26",
+      "poly_slug": "nebraska-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "North Carolina SEN",
+      "kalshi_ticker": "SENATENC-26",
+      "poly_slug": "north-carolina-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Mississippi SEN",
+      "kalshi_ticker": "SENATEMS-26",
+      "poly_slug": "mississippi-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Minnesota SEN",
+      "kalshi_ticker": "SENATEMN-26",
+      "poly_slug": "minnesota-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Michigan SEN",
+      "kalshi_ticker": "SENATEMI-26",
+      "poly_slug": "michigan-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Maine SEN",
+      "kalshi_ticker": "SENATEME-26",
+      "poly_slug": "maine-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Kansas SEN",
+      "kalshi_ticker": "SENATEKS-26",
+      "poly_slug": "kansas-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Illinois SEN",
+      "kalshi_ticker": "SENATEIL-26",
+      "poly_slug": "illinois-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Idaho SEN",
+      "kalshi_ticker": "SENATEID-26",
+      "poly_slug": "idaho-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Iowa SEN",
+      "kalshi_ticker": "SENATEIA-26",
+      "poly_slug": "iowa-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Georgia SEN",
+      "kalshi_ticker": "SENATEGA-26",
+      "poly_slug": "georgia-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Colorado SEN",
+      "kalshi_ticker": "SENATECO-26",
+      "poly_slug": "colorado-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Arkansas SEN",
+      "kalshi_ticker": "SENATEAR-26",
+      "poly_slug": "arkansas-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Alabama SEN",
+      "kalshi_ticker": "SENATEAL-26",
+      "poly_slug": "alabama-senate-election-winner-154",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "Washington District 8 HOUSE",
+      "kalshi_ticker": "KXHOUSEWA8-26",
+      "poly_slug": "wa-08-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Virginia District 10 HOUSE",
+      "kalshi_ticker": "KXHOUSEVA10-26",
+      "poly_slug": "va-10-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Utah District 3 HOUSE",
+      "kalshi_ticker": "KXHOUSEUT03-26",
+      "poly_slug": "ut-03-house-election-winner",
+      "mapping": {
+        "r": "Republican Party",
+        "d": "Democratic Party"
+      }
+    },
+    {
+      "name": "Utah District 2 HOUSE",
+      "kalshi_ticker": "KXHOUSEUT02-26",
+      "poly_slug": "ut-02-house-election-winner",
+      "mapping": {
+        "r": "Republican Party",
+        "d": "Democratic Party"
+      }
+    },
+    {
+      "name": "Utah District 1 HOUSE",
+      "kalshi_ticker": "KXHOUSEUT01-26",
+      "poly_slug": "ut-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 9 HOUSE",
+      "kalshi_ticker": "KXHOUSETX9-26",
+      "poly_slug": "tx-09-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 35 HOUSE",
+      "kalshi_ticker": "KXHOUSETX35-26",
+      "poly_slug": "tx-35-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 32 HOUSE",
+      "kalshi_ticker": "KXHOUSETX32-26",
+      "poly_slug": "tx-32-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "North Carolina District 11 HOUSE",
+      "kalshi_ticker": "KXHOUSENC11-26",
+      "poly_slug": "nc-11-house-election-winner",
+      "mapping": {
+        "dem": "Democratic Party"
+      }
+    },
+    {
+      "name": "Missouri District 5 HOUSE",
+      "kalshi_ticker": "KXHOUSEMO5-26",
+      "poly_slug": "mo-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Indiana District 7 HOUSE",
+      "kalshi_ticker": "KXHOUSEIN7-26",
+      "poly_slug": "in-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Wisconsin District 3 HOUSE",
+      "kalshi_ticker": "HOUSEWI3-26",
+      "poly_slug": "wi-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Wisconsin District 1 HOUSE",
+      "kalshi_ticker": "HOUSEWI1-26",
+      "poly_slug": "wi-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Washington District 3 HOUSE",
+      "kalshi_ticker": "HOUSEWA3-26",
+      "poly_slug": "wa-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Virginia District 7 HOUSE",
+      "kalshi_ticker": "HOUSEVA7-26",
+      "poly_slug": "va-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Virginia District 2 HOUSE",
+      "kalshi_ticker": "HOUSEVA2-26",
+      "poly_slug": "va-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Virginia District 1 HOUSE",
+      "kalshi_ticker": "HOUSEVA1-26",
+      "poly_slug": "va-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 34 HOUSE",
+      "kalshi_ticker": "HOUSETX34-26",
+      "poly_slug": "tx-34-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 28 HOUSE",
+      "kalshi_ticker": "HOUSETX28-26",
+      "poly_slug": "tx-28-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Texas District 15 HOUSE",
+      "kalshi_ticker": "HOUSETX15-26",
+      "poly_slug": "tx-15-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Pennsylvania District 8 HOUSE",
+      "kalshi_ticker": "HOUSEPA8-26",
+      "poly_slug": "pa-08-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Pennsylvania District 7 HOUSE",
+      "kalshi_ticker": "HOUSEPA7-26",
+      "poly_slug": "pa-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Pennsylvania District 17 HOUSE",
+      "kalshi_ticker": "HOUSEPA17-26",
+      "poly_slug": "pa-17-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Pennsylvania District 1 HOUSE",
+      "kalshi_ticker": "HOUSEPA1-26",
+      "poly_slug": "pa-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Pennsylvania District 10 HOUSE",
+      "kalshi_ticker": "HOUSEPA10-26",
+      "poly_slug": "pa-10-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Oregon District 5 HOUSE",
+      "kalshi_ticker": "HOUSEOR5-26",
+      "poly_slug": "or-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Ohio District 9 HOUSE",
+      "kalshi_ticker": "HOUSEOH9-26",
+      "poly_slug": "oh-09-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Ohio District 13 HOUSE",
+      "kalshi_ticker": "HOUSEOH13-26",
+      "poly_slug": "oh-13-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Ohio District 1 HOUSE",
+      "kalshi_ticker": "HOUSEOH1-26",
+      "poly_slug": "oh-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 4 HOUSE",
+      "kalshi_ticker": "HOUSENY4-26",
+      "poly_slug": "ny-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 3 HOUSE",
+      "kalshi_ticker": "HOUSENY3-26",
+      "poly_slug": "ny-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 22 HOUSE",
+      "kalshi_ticker": "HOUSENY22-26",
+      "poly_slug": "ny-22-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 19 HOUSE",
+      "kalshi_ticker": "HOUSENY19-26",
+      "poly_slug": "ny-19-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 18 HOUSE",
+      "kalshi_ticker": "HOUSENY18-26",
+      "poly_slug": "ny-18-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New York District 17 HOUSE",
+      "kalshi_ticker": "HOUSENY17-26",
+      "poly_slug": "ny-17-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Nevada District 4 HOUSE",
+      "kalshi_ticker": "HOUSENV4-26",
+      "poly_slug": "nv-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Nevada District 3 HOUSE",
+      "kalshi_ticker": "HOUSENV3-26",
+      "poly_slug": "nv-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Nevada District 1 HOUSE",
+      "kalshi_ticker": "HOUSENV1-26",
+      "poly_slug": "nv-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New Mexico District 2 HOUSE",
+      "kalshi_ticker": "HOUSENM2-26",
+      "poly_slug": "nm-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New Jersey District 9 HOUSE",
+      "kalshi_ticker": "HOUSENJ9-26",
+      "poly_slug": "nj-09-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New Jersey District 7 HOUSE",
+      "kalshi_ticker": "HOUSENJ7-26",
+      "poly_slug": "nj-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New Jersey District 5 HOUSE",
+      "kalshi_ticker": "HOUSENJ5-26",
+      "poly_slug": "nj-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "New Hampshire District 1 HOUSE",
+      "kalshi_ticker": "HOUSENH1-26",
+      "poly_slug": "nh-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Nebraska District 2 HOUSE",
+      "kalshi_ticker": "HOUSENE2-26",
+      "poly_slug": "ne-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "North Carolina District 1 HOUSE",
+      "kalshi_ticker": "HOUSENC1-26",
+      "poly_slug": "nc-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Montana District 1 HOUSE",
+      "kalshi_ticker": "HOUSEMT1-26",
+      "poly_slug": "mt-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Minnesota District 2 HOUSE",
+      "kalshi_ticker": "HOUSEMN2-26",
+      "poly_slug": "mn-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Michigan District 8 HOUSE",
+      "kalshi_ticker": "HOUSEMI8-26",
+      "poly_slug": "mi-08-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Michigan District 7 HOUSE",
+      "kalshi_ticker": "HOUSEMI7-26",
+      "poly_slug": "mi-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Michigan District 4 HOUSE",
+      "kalshi_ticker": "HOUSEMI4-26",
+      "poly_slug": "mi-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Michigan District 3 HOUSE",
+      "kalshi_ticker": "HOUSEMI3-26",
+      "poly_slug": "mi-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Michigan District 10 HOUSE",
+      "kalshi_ticker": "HOUSEMI10-26",
+      "poly_slug": "mi-10-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Indiana District 1 HOUSE",
+      "kalshi_ticker": "HOUSEIN1-26",
+      "poly_slug": "in-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Illinois District 17 HOUSE",
+      "kalshi_ticker": "HOUSEIL17-26",
+      "poly_slug": "il-17-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Iowa District 3 HOUSE",
+      "kalshi_ticker": "HOUSEIA3-26",
+      "poly_slug": "ia-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Iowa District 1 HOUSE",
+      "kalshi_ticker": "HOUSEIA1-26",
+      "poly_slug": "ia-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 23 HOUSE",
+      "kalshi_ticker": "HOUSEFL23-26",
+      "poly_slug": "fl-23-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Florida District 13 HOUSE",
+      "kalshi_ticker": "HOUSEFL13-26",
+      "poly_slug": "fl-13-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Connecticut District 5 HOUSE",
+      "kalshi_ticker": "HOUSECT5-26",
+      "poly_slug": "ct-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Colorado District 8 HOUSE",
+      "kalshi_ticker": "HOUSECO8-26",
+      "poly_slug": "co-08-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Colorado District 3 HOUSE",
+      "kalshi_ticker": "HOUSECO3-26",
+      "poly_slug": "co-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 49 HOUSE",
+      "kalshi_ticker": "HOUSECA49-26",
+      "poly_slug": "ca-49-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 47 HOUSE",
+      "kalshi_ticker": "HOUSECA47-26",
+      "poly_slug": "ca-47-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 45 HOUSE",
+      "kalshi_ticker": "HOUSECA45-26",
+      "poly_slug": "ca-45-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 41 HOUSE",
+      "kalshi_ticker": "HOUSECA41-26",
+      "poly_slug": "ca-41-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 3 HOUSE",
+      "kalshi_ticker": "HOUSECA3-26",
+      "poly_slug": "ca-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 27 HOUSE",
+      "kalshi_ticker": "HOUSECA27-26",
+      "poly_slug": "which-party-will-win-the-house-race-for-the-ca-27-seat",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 22 HOUSE",
+      "kalshi_ticker": "HOUSECA22-26",
+      "poly_slug": "which-party-will-win-the-house-race-for-the-ca-22-seat",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 21 HOUSE",
+      "kalshi_ticker": "HOUSECA21-26",
+      "poly_slug": "ca-21-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "California District 13 HOUSE",
+      "kalshi_ticker": "HOUSECA13-26",
+      "poly_slug": "ca-13-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Arizona District 6 HOUSE",
+      "kalshi_ticker": "HOUSEAZ6-26",
+      "poly_slug": "az-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Arizona District 2 HOUSE",
+      "kalshi_ticker": "HOUSEAZ2-26",
+      "poly_slug": "az-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Arizona District 1 HOUSE",
+      "kalshi_ticker": "HOUSEAZ1-26",
+      "poly_slug": "az-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "Nevada GOV",
+      "kalshi_ticker": "GOVPARTYNV-26",
+      "poly_slug": "nevada-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Maine GOV",
+      "kalshi_ticker": "GOVPARTYME-26",
+      "poly_slug": "maine-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Arizona GOV",
+      "kalshi_ticker": "GOVPARTYAZ-26",
+      "poly_slug": "arizona-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "New York GOV",
+      "kalshi_ticker": "GOVPARTYNY-26",
+      "poly_slug": "new-york-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "New Mexico GOV",
+      "kalshi_ticker": "GOVPARTYNM-26",
+      "poly_slug": "new-mexico-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Michigan GOV",
+      "kalshi_ticker": "GOVPARTYMI-26",
+      "poly_slug": "michigan-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "New York GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVNYNOMR-26",
+      "poly_slug": "new-york-governor-republican-primary-winner",
+      "mapping": {
+        "este": "Elise Stefanik",
+        "bbla": "Bruce Blakeman"
+      }
+    },
+    {
+      "name": "Hawaii GOV",
+      "kalshi_ticker": "GOVPARTYHI-26",
+      "poly_slug": "hawaii-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "Virginia District 2 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXVA2D-26",
+      "poly_slug": "va-02-democratic-primary-winner",
+      "mapping": {
+        "elur": "Elaine Luria",
+        "josy": "James Osyf",
+        "mstr": "Matt Strickler",
+        "ndev": "Nila Devanath",
+        "pmos": "Patrick Mosolf",
+        "nsle": "Nicolaus Sleister",
+        "bstr": "Burk Stringfellow"
+      }
+    },
+    {
+      "name": "Utah District 1 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXUT1D-26",
+      "poly_slug": "ut-01-democratic-primary-winner",
+      "mapping": {
+        "bmca": "Ben McAdams",
+        "krie": "Kathleen Riebe",
+        "nblo": "Nate Blouin",
+        "cgle": "Caroline Gleich",
+        "kwes": "Kael Weston",
+        "emen": "Erin Mendenhall",
+        "jwil": "Jenny Wilson",
+        "bkin": "Brian King",
+        "lesc": "Luz Escamilla"
+      }
+    },
+    {
+      "name": "Texas District 38 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXTXPRIMARY-38R26",
+      "poly_slug": "tx-38-republican-primary-winner",
+      "mapping": {
+        "aaye": "Avery Ayers",
+        "jbon": "Jon Bonck",
+        "sdez": "Shelly deZevallos",
+        "cgor": "Craig Goralski",
+        "bmcn": "Barrett McNabb",
+        "mpra": "Michael Pratt",
+        "lrub": "Larry Rubin",
+        "jsun": "Jennifer Sundt",
+        "jyun": "Jeff Yuna"
+      }
+    },
+    {
+      "name": "Texas District 30 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXTXPRIMARY-30R26",
+      "poly_slug": "tx-30-republican-primary-winner",
+      "mapping": {
+        "sdan": "Sholdon Daniels",
+        "ghei": "Gregor Heise",
+        "ejac": "Everett Jackson",
+        "nwal": "Nils Walker"
+      }
+    },
+    {
+      "name": "Texas District 19 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXTXPRIMARY-19R26",
+      "poly_slug": "tx-19-republican-primary-winner",
+      "mapping": {
+        "jbar": "James Barbee",
+        "jcor": "Jason Corley",
+        "aenr": "Abraham Enriquez",
+        "dmay": "Donald May",
+        "tsel": "Tom Sell",
+        "rzin": "Ryan Zink"
+      }
+    },
+    {
+      "name": "Texas District 33 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXTX33D-26",
+      "poly_slug": "tx-33-democratic-primary-winner",
+      "mapping": {
+        "call": "Colin Allred",
+        "jjoh": "Julie Johnson",
+        "zhaf": "Zeeshan Hafeez"
+      }
+    },
+    {
+      "name": "Tennessee District 9 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXTNPRIMARY-09D26",
+      "poly_slug": "tn-09-democratic-primary-winner",
+      "mapping": {
+        "scoh": "Steve Cohen",
+        "jpea": "Justin Pearson"
+      }
+    },
+    {
+      "name": "Texas SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATETXR-26",
+      "poly_slug": "texas-republican-senate-primary-winner",
+      "mapping": {
+        "jc": "John Cornyn",
+        "kp": "Ken Paxton",
+        "db": "Dawn Buckingham",
+        "bvd": "Beth Van Duyne",
+        "whun": "Wesley Hunt"
+      }
+    },
+    {
+      "name": "Oklahoma SEN (primary) [D]",
+      "kalshi_ticker": "KXSENATEOKD-26",
+      "poly_slug": "oklahoma-democratic-senate-primary-winner",
+      "mapping": {
+        "rlav": "Rebekah LaVann",
+        "jpri": "Jim Priest"
+      }
+    },
+    {
+      "name": "Ohio SEN (primary) [D]",
+      "kalshi_ticker": "KXSENATEOHSD-26",
+      "poly_slug": "ohio-democratic-senate-primary-winner",
+      "mapping": {
+        "tr": "Tim Ryan",
+        "sb": "Sherrod Brown",
+        "gl": "Greg Landsman",
+        "ar": "Allison Russo"
+      }
+    },
+    {
+      "name": "New Hampshire SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATENHR-26",
+      "poly_slug": "new-hampshire-republican-senate-primary-winner-296",
+      "mapping": {
+        "sb": "Scott Brown",
+        "jsun": "John E. Sununu",
+        "cs": "Chris Sununu",
+        "dinn": "Dan Innis"
+      }
+    },
+    {
+      "name": "New Hampshire SEN (primary) [D]",
+      "kalshi_ticker": "KXSENATENHD-26",
+      "poly_slug": "new-hampshire-democratic-senate-primary-winner",
+      "mapping": {
+        "cpap": "Chris Pappas",
+        "kman": "Karishma Manzur"
+      }
+    },
+    {
+      "name": "Nebraska SEN (primary) [D]",
+      "kalshi_ticker": "KXSENATENED-26",
+      "poly_slug": "nebraska-democratic-senate-primary-winner",
+      "mapping": {
+        "cbur": "Cindy Burbank",
+        "wfor": "William Forbes"
+      }
+    },
+    {
+      "name": "Minnesota SEN (primary) [D]",
+      "kalshi_ticker": "KXSENATEMND-26",
+      "poly_slug": "minnesota-democratic-senate-primary-winner",
+      "mapping": {
+        "pfla": "Peggy Flanagan",
+        "mlop": "Melisa López Franzen",
+        "acra": "Angie Craig",
+        "kell": "Keith Ellison",
+        "ioma": "Ilhan Omar",
+        "jfre": "Jacob Frey",
+        "bmcc": "Betty McCollum",
+        "ssim": "Steve Simon",
+        "dwel": "David Wellstone"
+      }
+    },
+    {
+      "name": "Louisiana SEN (primary) [D]",
+      "kalshi_ticker": "KXSENATELAD-26",
+      "poly_slug": "louisiana-democratic-senate-primary-winner",
+      "mapping": {
+        "nalb": "Nick Albares",
+        "gcro": "Gary Crockett",
+        "jdav": "Jamie Davis Jr."
+      }
+    },
+    {
+      "name": "Kentucky SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATEKYR-26",
+      "poly_slug": "kentucky-republican-senate-primary-winner",
+      "mapping": {
+        "dcam": "Daniel Cameron",
+        "abar": "Andy Barr",
+        "nmor": "Nate Morris"
+      }
+    },
+    {
+      "name": "Kansas SEN (primary) [D]",
+      "kalshi_ticker": "KXSENATEKSD-26",
+      "poly_slug": "kansas-democratic-senate-primary-winner",
+      "mapping": {
+        "sdav": "Sharice Davids",
+        "cdav": "Christy Davis",
+        "apar": "Anne Parelkar",
+        "sneu": "Sandy Spidel Neumann",
+        "msoe": "Michael Soetaert",
+        "psch": "Patrick Schmidt"
+      }
+    },
+    {
+      "name": "Georgia SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATEGAR-26",
+      "poly_slug": "georgia-republican-senate-primary-winner",
+      "mapping": {
+        "ddoo": "Derek Dooley",
+        "rb": "Reagan Box",
+        "mcol": "Mike Collins"
+      }
+    },
+    {
+      "name": "Florida SEN (primary) [D]",
+      "kalshi_ticker": "KXSENATEFLD-26",
+      "poly_slug": "florida-democratic-senate-primary-winner",
+      "mapping": {
+        "jm": "Jared Moskowitz",
+        "cc": "Charlie Crist",
+        "jwei": "Josh Weil",
+        "avin": "Alexander Vindman",
+        "jatk": "Joey Atkins",
+        "anix": "Angie Nixon",
+        "jjen": "Jennifer Jenkins"
+      }
+    },
+    {
+      "name": "Delaware SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATEDER-26",
+      "poly_slug": "delaware-republican-senate-primary-winner",
+      "mapping": {
+        "mkat": "Michael Katz",
+        "jshu": "John Shulli"
+      }
+    },
+    {
+      "name": "Colorado SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATECOR-26",
+      "poly_slug": "colorado-republican-senate-primary-winner",
+      "mapping": {
+        "jjos": "Janak Joshi",
+        "gwm": "George Washington Markert",
+        "djon": "Dathan Jones",
+        "mbai": "Mark Baisley"
+      }
+    },
+    {
+      "name": "Pennsylvania District 10 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXPAPRIMARY-10D26",
+      "poly_slug": "pa-10-democratic-primary-winner-877",
+      "mapping": {
+        "jste": "Janelle Stelson",
+        "jdou": "Justin Douglas"
+      }
+    },
+    {
+      "name": "Ohio District 7 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXOHPRIMARY-07D26",
+      "poly_slug": "oh-07-democratic-primary-winner",
+      "mapping": {
+        "meis": "Michael Eisner",
+        "efit": "Ed FitzGerald",
+        "bpoi": "Brian Poindexter",
+        "jbut": "John Butchko",
+        "adon": "Ann Marie Donegan",
+        "kmun": "Keith Mundy",
+        "lrod": "Laura Rodriguez-Carbone",
+        "ssch": "Scott Schulz"
+      }
+    },
+    {
+      "name": "Ohio District 1 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXOHPRIMARY-01R26",
+      "poly_slug": "oh-01-republican-primary-winner",
+      "mapping": {
+        "econ": "Eric Conroy",
+        "serb": "Steven Erbeck",
+        "rogl": "Rosemary Oglesby-Henry",
+        "hada": "Holly Adams"
+      }
+    },
+    {
+      "name": "New York District 8 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXNY8D-26",
+      "poly_slug": "ny-8-democratic-primary-winner",
+      "mapping": {
+        "hjef": "Hakeem Jeffries",
+        "coss": "Chi Ossé",
+        "vbos": "Vance Bostic"
+      }
+    },
+    {
+      "name": "New York District 7 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXNY7D-26",
+      "poly_slug": "ny-07-democratic-primary-winner",
+      "mapping": {
+        "arey": "Antonio Reynoso",
+        "jsal": "Julia Salazar",
+        "kgon": "Kristen Gonzalez",
+        "jwon": "Julie Won",
+        "snur": "Sandy Nurse",
+        "lres": "Lincoln Restler",
+        "tcab": "Tiffany Cabán",
+        "cval": "Claire Valdez"
+      }
+    },
+    {
+      "name": "New York District 17 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXNY17D-26",
+      "poly_slug": "who-will-be-the-democratic-nominee-for-ny-17",
+      "mapping": {
+        "ccon": "Cait Conley",
+        "bdav": "Beth Davidson",
+        "ephi": "Effie Phillips-Staley",
+        "jrei": "Jessica Reinmann",
+        "msac": "Mike Sacks",
+        "jsul": "John Sullivan",
+        "jcap": "John Cappello",
+        "pcha": "Peter Chatzky"
+      }
+    },
+    {
+      "name": "New York District 15 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXNY15D-26",
+      "poly_slug": "ny-15-democratic-primary-winner",
+      "mapping": {
+        "rtor": "Ritchie Torres",
+        "mbla": "Michael Blake"
+      }
+    },
+    {
+      "name": "New York District 10 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXNY10D-26",
+      "poly_slug": "ny-10-democratic-primary-winner",
+      "mapping": {
+        "dgol": "Dan Goldman",
+        "aavi": "Alexa Avilés",
+        "blan": "Brad Lander",
+        "ynio": "Yuh-Line Niou",
+        "ckas": "Cameron Kasky"
+      }
+    },
+    {
+      "name": "New Jersey District 12 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXNJPRIMARY-12D26",
+      "poly_slug": "nj-12-democratic-primary-winner-651",
+      "mapping": {
+        "bcoh": "Brad Cohen",
+        "edix": "Elijah Dixon",
+        "aham": "Adam Hamawy",
+        "klit": "Kyle Little",
+        "amap": "Adrian Mapp",
+        "vrey": "Verlina Reynolds-Jackson"
+      }
+    },
+    {
+      "name": "Montana District 1 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXMTPRIMARY-01R26",
+      "poly_slug": "mt-01-republican-primary-winner",
+      "mapping": {
+        "aols": "Albert Olszewski",
+        "cjac": "Christi Jacobsen",
+        "afli": "Aaron Flint",
+        "rcur": "Ray Curtis"
+      }
+    },
+    {
+      "name": "Missouri District 1 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXMO01D-26",
+      "poly_slug": "mo-01-democratic-primary-winner",
+      "mapping": {
+        "wbel": "Wesley Bell",
+        "cbus": "Cori Bush"
+      }
+    },
+    {
+      "name": "Michigan District 13 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXMI13D-26",
+      "poly_slug": "mi-13-democratic-primary-winner",
+      "mapping": {
+        "stha": "Shri Thanedar",
+        "dmck": "Donavan McKinney",
+        "nhas": "Nazmul Hassan",
+        "scam": "Shelby Campbell",
+        "acar": "Anthony Carbonaro"
+      }
+    },
+    {
+      "name": "Maine District 2 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXME02D-26",
+      "poly_slug": "who-will-be-the-democratic-nominee-for-me-02",
+      "mapping": {
+        "jgol": "Jared Golden",
+        "mdun": "Matthew Dunlap",
+        "jbal": "Joe Baldacci",
+        "jwoo": "Jordan Wood"
+      }
+    },
+    {
+      "name": "Maryland District 5 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXMDPRIMARY-05D26",
+      "poly_slug": "md-05-democratic-primary-winner",
+      "mapping": {
+        "marn": "Mark Kenneth Arness",
+        "rbak": "Rushern Baker III",
+        "qbar": "Quincy Bareebe",
+        "wble": "Wala Blegay",
+        "aboa": "Adrian Boafo",
+        "rcol": "Reuben Collins II",
+        "ecol": "Ellis Colvin",
+        "hdun": "Harry Dunn",
+        "aell": "Arthur Ellis",
+        "eeng": "Elldwnia English",
+        "tjac": "Terry Jackson",
+        "hjar": "Harry Jarin",
+        "wkir": "Walter Kirkland",
+        "jlig": "Jerry Lightfoot",
+        "hlup": "Heather Luper",
+        "jmak": "James Makle Jr.",
+        "lmes": "Leigha Messick",
+        "ksal": "Keith Salkowski",
+        "ksim": "Kenneth Simons",
+        "asol": "Alexis Solis",
+        "tsta": "Tracy Starr",
+        "dsun": "Dave Sundberg",
+        "htol": "Harold Tolbert",
+        "nwil": "Nicole Williams"
+      }
+    },
+    {
+      "name": "Louisiana District 5 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXLAPRIMARY-05R26",
+      "poly_slug": "la-05-republican-primary-winner",
+      "mapping": {
+        "mcor": "Misti Cordell",
+        "mech": "Michael Echols",
+        "redm": "Rick Edmonds",
+        "amag": "Austin Magee",
+        "mmeb": "Michael Mebruer",
+        "bmig": "Blake Miguez"
+      }
+    },
+    {
+      "name": "Kentucky District 6 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXKYPRIMARY-06R26",
+      "poly_slug": "ky-06-republican-primary-winner",
+      "mapping": {
+        "ralv": "Ralph Alvarado",
+        "aarq": "Adam Perez Arquette",
+        "rdot": "Ryan Dotson",
+        "gplu": "Greg Plucinski"
+      }
+    },
+    {
+      "name": "Indiana District 7 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXINPRIMARY-07D26",
+      "poly_slug": "in-07-democratic-primary-winner",
+      "mapping": {
+        "dhat": "Denise Paul Hatch",
+        "ghor": "George Hornedo"
+      }
+    },
+    {
+      "name": "Indiana District 4 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXINPRIMARY-04R26",
+      "poly_slug": "in-04-republican-primary-winner",
+      "mapping": {
+        "jbai": "Jim Baird",
+        "chag": "Craig Haggard",
+        "jpip": "John Piper"
+      }
+    },
+    {
+      "name": "Iowa District 2 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXIAPRIMARY-02D26",
+      "poly_slug": "ia-02-democratic-primary-winner-845",
+      "mapping": {
+        "kdol": "Kathy Dolter",
+        "ljam": "Lindsay James",
+        "ctwe": "Clint Twedt-Ball"
+      }
+    },
+    {
+      "name": "Iowa District 1 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXIAPRIMARY-01D26",
+      "poly_slug": "ia-01-democratic-primary-winner-418",
+      "mapping": {
+        "cboh": "Christina Bohannan",
+        "tter": "Travis Terrell"
+      }
+    },
+    {
+      "name": "Wisconsin GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVWINOMR-26",
+      "poly_slug": "wisconsin-governor-republican-primary-winner",
+      "mapping": {
+        "js": "Josh Schoemann",
+        "tt": "Tom Tiffany",
+        "eh": "Eric Hovde",
+        "rk": "Rebecca Kleefisch",
+        "ttho": "Tommy Thompson"
+      }
+    },
+    {
+      "name": "Vermont GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVVTNOMR-262",
+      "poly_slug": "vermont-governor-republican-primary-winner",
+      "mapping": {
+        "psco": "Phil Scott",
+        "jrod": "John Rodgers"
+      }
+    },
+    {
+      "name": "Vermont GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVVTNOMD-26",
+      "poly_slug": "vermont-governor-democratic-primary-winner",
+      "mapping": {
+        "echa": "Esther Charlestin",
+        "mpie": "Mike Pieciak",
+        "ccla": "Charity Clark"
+      }
+    },
+    {
+      "name": "South Carolina GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVSCNOMR-26",
+      "poly_slug": "south-carolina-governor-republican-primary-winner-784",
+      "mapping": {
+        "jkim": "Josh Kimbrell",
+        "nmac": "Nancy Mace",
+        "rnor": "Ralph Norman",
+        "awil": "Alan Wilson",
+        "peve": "Pamela Evette"
+      }
+    },
+    {
+      "name": "South Carolina GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVSCNOMD-26",
+      "poly_slug": "south-carolina-governor-democratic-primary-winner",
+      "mapping": {
+        "jjoh": "Jermaine Johnson",
+        "mmcl": "Mullins McLeod",
+        "bweb": "Billy Webster"
+      }
+    },
+    {
+      "name": "Pennsylvania GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVPANOMR-26",
+      "poly_slug": "pennsylvania-governor-republican-primary-winner",
+      "mapping": {
+        "sgar": "Stacy Garrity",
+        "dmas": "Doug Mastriano"
+      }
+    },
+    {
+      "name": "Oregon GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVORNOMR-26",
+      "poly_slug": "oregon-governor-republican-primary-winner",
+      "mapping": {
+        "cdra": "Christine Drazan",
+        "kduc": "Kyle Duyck",
+        "dbet": "Danielle Bethell",
+        "cson": "Chael Sonnen",
+        "cdud": "Chris Dudley",
+        "rneu": "Robert Neuman",
+        "edie": "Ed Diehl",
+        "dmed": "David Medina"
+      }
+    },
+    {
+      "name": "Ohio GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVOHNOMR-26",
+      "poly_slug": "ohio-governor-republican-primary-winner",
+      "mapping": {
+        "vr": "Vivek Ramaswamy",
+        "cput": "Casey Putsch",
+        "pfun": "Philip Funderburg"
+      }
+    },
+    {
+      "name": "Ohio GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVOHNOMD-26",
+      "poly_slug": "ohio-governor-democratic-primary-winner",
+      "mapping": {
+        "aact": "Amy Acton",
+        "jchi": "Jacob Chiara"
+      }
+    },
+    {
+      "name": "New Mexico GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVNMNOMD-26",
+      "poly_slug": "new-mexico-governor-democratic-primary-winner",
+      "mapping": {
+        "dhaa": "Deb Haaland",
+        "kmiy": "Ken Miyagishima",
+        "sbre": "Sam Bregman"
+      }
+    },
+    {
+      "name": "New Hampshire GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVNHNOMD-26",
+      "poly_slug": "new-hampshire-governor-democratic-primary-winner",
+      "mapping": {
+        "tshe": "Tom Sherman",
+        "dmce": "Deaglan McEachern",
+        "cwar": "Cinde Warmington",
+        "dfen": "Donovan Fenton"
+      }
+    },
+    {
+      "name": "Minnesota GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVMNNOMR-26",
+      "poly_slug": "minnesota-governor-republican-primary-winner",
+      "mapping": {
+        "sjen": "Scott Jensen",
+        "krob": "Kristin Robbins",
+        "kqua": "Kendall Qualls",
+        "cmad": "Chris Madel",
+        "mlin": "Mike Lindell",
+        "ldem": "Lisa Demuth",
+        "bkoh": "Brad Kohler"
+      }
+    },
+    {
+      "name": "Michigan GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVMINOMR-26",
+      "poly_slug": "michigan-governor-republican-primary-winner",
+      "mapping": {
+        "an": "Aric Nesbitt",
+        "mc": "Mike Cox",
+        "jj": "John James",
+        "pj": "Perry Johnson",
+        "tl": "Tom Leonard"
+      }
+    },
+    {
+      "name": "Michigan GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVMINOMD-26",
+      "poly_slug": "michigan-governor-democratic-primary-winner",
+      "mapping": {
+        "gg": "Garlin Gilchrist",
+        "jb": "Jocelyn Benson",
+        "cs": "Chris Swanson"
+      }
+    },
+    {
+      "name": "Maine GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVMENOMR-26",
+      "poly_slug": "maine-governor-republican-primary-winner",
+      "mapping": {
+        "rwes": "Robert Wessels",
+        "jbus": "Jonathan Bush",
+        "rcha": "Robert Charles",
+        "jlib": "James Libby",
+        "omcc": "Owen McCarthy",
+        "djon": "David Jones"
+      }
+    },
+    {
+      "name": "Maine GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVMENOMD-26",
+      "poly_slug": "maine-governor-democratic-primary-winner",
+      "mapping": {
+        "sbel": "Shenna Bellows",
+        "tjac": "Troy Jackson",
+        "akin": "Angus King III",
+        "hpin": "Hannah Pingree",
+        "nsha": "Nirav Shah"
+      }
+    },
+    {
+      "name": "Maryland GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVMDNOMR-26",
+      "poly_slug": "maryland-governor-republican-primary-winner",
+      "mapping": {
+        "sher": "Steve Hershey",
+        "cbou": "Christopher Bouchat",
+        "lhog": "Larry Hogan",
+        "dcox": "Dan Cox",
+        "ehal": "Ed Hale",
+        "kwed": "Kurt Wedekind",
+        "jmyr": "John Myrick",
+        "cbru": "Carl Brunner"
+      }
+    },
+    {
+      "name": "Massachusetts GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVMANOMR-26",
+      "poly_slug": "massachusetts-governor-republican-primary-winner",
+      "mapping": {
+        "mken": "Mike Kennealy",
+        "mmin": "Michael Minogue",
+        "bsho": "Brian Shortsleeve"
+      }
+    },
+    {
+      "name": "Kansas GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVKSNOMR-26",
+      "poly_slug": "kansas-governor-republican-primary-winner",
+      "mapping": {
+        "ss": "Scott Schwab",
+        "jc": "Jeff Colyer",
+        "vs": "Vicki Schmidt",
+        "tm": "Ty Masterson",
+        "ps": "Philip Sarnecki",
+        "coha": "Charlotte O’Hara"
+      }
+    },
+    {
+      "name": "Kansas GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVKSNOMD-26",
+      "poly_slug": "kansas-governor-democratic-primary-winner",
+      "mapping": {
+        "ch": "Cindy Holscher",
+        "ec": "Ethan Corson"
+      }
+    },
+    {
+      "name": "Iowa GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVIANOMD-26",
+      "poly_slug": "iowa-governor-democratic-primary-winner",
+      "mapping": {
+        "rsan": "Rob Sand",
+        "jsta": "Julie Stauch",
+        "pdah": "Paul Dahl"
+      }
+    },
+    {
+      "name": "Georgia GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVGANOMR-26",
+      "poly_slug": "georgia-governor-republican-primary-winner",
+      "mapping": {
+        "cc": "Chris Carr",
+        "bj": "Burt Jones",
+        "br": "Brad Raffensperger",
+        "rjac": "Rick Jackson",
+        "kyas": "Ken Yasger",
+        "cdea": "Clark Dean"
+      }
+    },
+    {
+      "name": "Georgia GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVGANOMD-26",
+      "poly_slug": "georgia-governor-democratic-primary-winner",
+      "mapping": {
+        "gdun": "Geoff Duncan",
+        "rrom": "Ruwa Romman",
+        "ob": "Olujimi Brown",
+        "klb": "Keisha Lance Bottoms",
+        "jest": "Jason Esteves"
+      }
+    },
+    {
+      "name": "Florida GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVFLNOMD-26",
+      "poly_slug": "democratic-nominee-for-florida-governor",
+      "mapping": {
+        "fdri": "Fentrice Driskell",
+        "djol": "David Jolly",
+        "jdem": "Jerry Demings",
+        "sjon": "Shevrin Jones",
+        "jpiz": "Jason Pizzo",
+        "dlev": "Daniella Levine Cava",
+        "ggra": "Gwen Graham",
+        "anix": "Angie Nixon"
+      }
+    },
+    {
+      "name": "Connecticut GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVCTNOMR-26",
+      "poly_slug": "connecticut-governor-republican-primary-winner",
+      "mapping": {
+        "este": "Erin Stewart",
+        "rfaz": "Ryan Fazio",
+        "bmcc": "Betsy McCaughey"
+      }
+    },
+    {
+      "name": "Colorado GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVCONOMR-26",
+      "poly_slug": "colorado-governor-republican-primary-winner",
+      "mapping": {
+        "bkir": "Barbara Kirkmeyer",
+        "glop": "Greg Lopez",
+        "mbai": "Mark Baisley",
+        "sbot": "Scott Bottoms",
+        "vmar": "Victor Marx",
+        "jmik": "Jason Mikesell",
+        "jgri": "Joshua Griffin"
+      }
+    },
+    {
+      "name": "Colorado GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVCONOMD-26",
+      "poly_slug": "colorado-governor-democratic-primary-winner",
+      "mapping": {
+        "mben": "Michael Bennet",
+        "pwei": "Phil Weiser"
+      }
+    },
+    {
+      "name": "Arizona GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVAZNOMR-26",
+      "poly_slug": "arizona-governor-republican-primary-winner",
+      "mapping": {
+        "ab": "Andy Biggs",
+        "ktr": "Karrin Taylor Robson"
+      }
+    },
+    {
+      "name": "Georgia District 5 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXGAPRIMARY-05D26",
+      "poly_slug": "ga-05-democratic-primary-winner-539",
+      "mapping": {
+        "nwil": "Nikema Williams",
+        "abea": "Arnetress Beatty"
+      }
+    },
+    {
+      "name": "Florida District 23 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXFLPRIMARY-23D26",
+      "poly_slug": "fl-23-democratic-primary-winner",
+      "mapping": {
+        "jmos": "Jared Moskowitz"
+      }
+    },
+    {
+      "name": "Colorado District 1 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXCOPRIMARY-01D26",
+      "poly_slug": "co-01-democratic-primary-winner",
+      "mapping": {
+        "ddeg": "Diana DeGette",
+        "mkir": "Melat Kiros",
+        "wjam": "Wanda James"
+      }
+    },
+    {
+      "name": "California District 48 HOUSE (primary)",
+      "kalshi_ticker": "KXCAPRIMARY-48FIRST26",
+      "poly_slug": "ca-48-primary-winners",
+      "mapping": {
+        "acam": "Ammar Campa-Najjar",
+        "acha": "Abel Chavez",
+        "scle": "Stephen Clemons",
+        "ccon": "Corinna Contreras",
+        "jdes": "Jim Desmond",
+        "kone": "Kevin O'Neil",
+        "fpor": "Ferguson Porter",
+        "lrey": "Luis Reyna",
+        "brik": "Brandon Riker",
+        "msch": "Mike Schaefer",
+        "esha": "Eric Shaw",
+        "mwil": "Marni von Wilpert"
+      }
+    },
+    {
+      "name": "California District 45 HOUSE (primary)",
+      "kalshi_ticker": "KXCAPRIMARY-45FIRST26",
+      "poly_slug": "ca-45-primary-winners",
+      "mapping": {
+        "dtra": "Derek Tran",
+        "mleo": "Mark Leonard",
+        "cngu": "Chi Charlie Nguyen",
+        "cvo": "Chuong Vo",
+        "tvo": "Tom Vo",
+        "awes": "Amy Phan West"
+      }
+    },
+    {
+      "name": "California District 41 HOUSE (primary)",
+      "kalshi_ticker": "KXCAPRIMARY-41FIRST26",
+      "poly_slug": "ca-41-primary-winners",
+      "mapping": {
+        "mcle": "Mitch Clemmons",
+        "htor": "Hector De La Torre",
+        "swil": "Shonique Williams"
+      }
+    },
+    {
+      "name": "California District 40 HOUSE (primary)",
+      "kalshi_ticker": "KXCAPRIMARY-40FIRST26",
+      "poly_slug": "ca-40-primary-winners",
+      "mapping": {
+        "kcal": "Ken Calvert",
+        "fhof": "Francis Hoffman",
+        "ckei": "Claude Keissieh",
+        "jker": "Joe Kerr",
+        "evar": "Esther Kim Varet",
+        "ykim": "Young Kim",
+        "nlin": "Nina Linh",
+        "lram": "Lisa Ramirez"
+      }
+    },
+    {
+      "name": "California District 34 HOUSE (primary)",
+      "kalshi_ticker": "KXCAPRIMARY-34FIRST26",
+      "poly_slug": "ca-34-primary-winners",
+      "mapping": {
+        "jgom": "Jimmy Gomez",
+        "lcol": "Loren Colin",
+        "adix": "Arthur Dixon",
+        "agon": "Angela Gonzales-Torres",
+        "clee": "Calvin Lee"
+      }
+    },
+    {
+      "name": "California District 22 HOUSE (primary)",
+      "kalshi_ticker": "KXCAPRIMARY-22FIRST26",
+      "poly_slug": "ca-22-primary-winners",
+      "mapping": {
+        "dval": "David Valadao",
+        "jbai": "Jasmeet Bains",
+        "rvil": "Randy Villegas"
+      }
+    },
+    {
+      "name": "California District 17 HOUSE (primary)",
+      "kalshi_ticker": "KXCAPRIMARY-17FIRST26",
+      "poly_slug": "ca-17-primary-winners",
+      "mapping": {
+        "rkha": "Ro Khanna",
+        "eaga": "Ethan Agarwal",
+        "jpha": "Ha Phan",
+        "rtan": "Ritesh Tandon"
+      }
+    },
+    {
+      "name": "California District 13 HOUSE (primary)",
+      "kalshi_ticker": "KXCAPRIMARY-13FIRST26",
+      "poly_slug": "ca-13-primary-winners",
+      "mapping": {
+        "agra": "Adam Gray",
+        "klin": "Kevin Lincoln II",
+        "vkru": "Vin Kruttiventi"
+      }
+    },
+    {
+      "name": "California District 11 HOUSE (primary)",
+      "kalshi_ticker": "KXCAPRIMARY-11FIRST26",
+      "poly_slug": "who-will-place-first-in-the-primary-for-nancy-pelosis-congressional-seat-ca-11",
+      "mapping": {
+        "scha": "Saikat Chakrabarti",
+        "ccha": "Connie Chan",
+        "dgan": "David Ganezer",
+        "swie": "Scott Wiener",
+        "jxio": "Jingchao Xiong"
+      }
+    },
+    {
+      "name": "California District 7 HOUSE (primary)",
+      "kalshi_ticker": "KXCAPRIMARY-07FIRST26",
+      "poly_slug": "ca-07-primary-winners",
+      "mapping": {
+        "dmat": "Doris Matsui",
+        "rmor": "Robert Morin",
+        "enaz": "Enayat Nazhat",
+        "rnwo": "Ralph Nwobi",
+        "mvan": "Mai Vang",
+        "zwoo": "Zachariah Wooden"
+      }
+    },
+    {
+      "name": "California District 6 HOUSE (primary)",
+      "kalshi_ticker": "KXCAPRIMARY-06FIRST26",
+      "poly_slug": "ca-06-primary-winners",
+      "mapping": {
+        "kkil": "Kevin Kiley",
+        "ltom": "Lauren Babb Tomlinson",
+        "mgue": "Martha Guerrero",
+        "tho": "Thien Ho",
+        "rpan": "Richard Pan",
+        "msta": "Michael Stansfield",
+        "tvan": "Tyler Vandenberg"
+      }
+    },
+    {
+      "name": "California District 4 HOUSE (primary)",
+      "kalshi_ticker": "KXCAPRIMARY-04FIRST26",
+      "poly_slug": "ca-04-primary-winners",
+      "mapping": {
+        "mtho": "Mike Thompson",
+        "ejon": "Eric Jones",
+        "sbro": "Sharon Brown",
+        "mghu": "Mandy Ghusar"
+      }
+    },
+    {
+      "name": "California District 3 HOUSE (primary)",
+      "kalshi_ticker": "KXCAPRIMARY-03FIRST26",
+      "poly_slug": "ca-03-primary-winners",
+      "mapping": {
+        "aber": "Ami Bera",
+        "cbis": "Christine Bish",
+        "lcer": "Lyndon Cervantes",
+        "hhal": "Heidi Hall",
+        "lkos": "Laura Koscki",
+        "cric": "Chris Richardson",
+        "rtuc": "Robb Tucker"
+      }
+    },
+    {
+      "name": "Arizona District 1 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXAZ01R-26",
+      "poly_slug": "az-01-republican-primary-winner",
+      "mapping": {
+        "mgre": "Matt Gress",
+        "jdue": "Jason Duey",
+        "jcha": "Joseph Chaplik",
+        "gswo": "Gina Swoboda",
+        "tgra": "Todd Graham",
+        "klak": "Kari Lake",
+        "jfee": "Jay Feely"
+      }
+    },
+    {
+      "name": "Alabama District 1 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXALPRIMARY-01R26",
+      "poly_slug": "al-01-republican-primary-winner",
+      "mapping": {
+        "jcar": "Jerry Carl",
+        "rmar": "Rhett Marques",
+        "jmck": "Joshua McKee",
+        "asid": "Austin Sidwell",
+        "jmil": "John Mills",
+        "jric": "James Richardson"
+      }
+    },
+    {
+      "name": "Massachusetts SEN (primary) [D]",
+      "kalshi_ticker": "KXSENATEMAD-26",
+      "poly_slug": "massachusetts-democratic-senate-primary-winner",
+      "mapping": {
+        "emar": "Ed Markey",
+        "arik": "Alexander Rikleen",
+        "smou": "Seth Moulton",
+        "apre": "Ayanna Pressley"
+      }
+    },
+    {
+      "name": "Rhode Island SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATERIR-26",
+      "poly_slug": "rhode-island-republican-senate-primary-winner",
+      "mapping": {
+        "rmck": "Raymond McKay",
+        "awat": "Allen Waters"
+      }
+    },
+    {
+      "name": "Rhode Island SEN (primary) [D]",
+      "kalshi_ticker": "KXSENATERID-26",
+      "poly_slug": "rhode-island-democratic-senate-primary-winner",
+      "mapping": {
+        "jree": "Jack Reed",
+        "cbur": "Connor Burbridge"
+      }
+    },
+    {
+      "name": "Massachusetts District 6 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXMA6D-26",
+      "poly_slug": "ma-06-democratic-primary-winner",
+      "mapping": {
+        "smou": "Seth Moulton",
+        "dkoh": "Dan Koh",
+        "tngu": "Tram Nguyen",
+        "band": "Beth Andres-Beck",
+        "jbec": "John Beccia",
+        "rjak": "Rick Jakious",
+        "dpan": "Dominick Pangallo"
+      }
+    },
+    {
+      "name": "Rhode Island GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVRINOMR-26",
+      "poly_slug": "rhode-island-governor-republican-primary-winner",
+      "mapping": {
+        "aguc": "Aaron Guckian",
+        "epel": "Elaine Pelino",
+        "rrai": "Robert Raimondo"
+      }
+    },
+    {
+      "name": "Rhode Island GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVRINOMD-26",
+      "poly_slug": "rhode-island-governor-democratic-primary-winner",
+      "mapping": {
+        "dmck": "Dan McKee",
+        "hfou": "Helena Foulkes",
+        "gste": "Gregory Stevens"
+      }
+    },
+    {
+      "name": "Wyoming GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVWYNOMR-26",
+      "poly_slug": "wyoming-governor-republican-primary-winner",
+      "mapping": {
+        "bbie": "Brent Bien",
+        "hhag": "Harriet Hageman",
+        "cgra": "Chuck Gray",
+        "mdeg": "Megan Degenfelder",
+        "ebar": "Eric Barlow"
+      }
+    },
+    {
+      "name": "Wisconsin GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVWINOMD-26",
+      "poly_slug": "wisconsin-governor-democratic-primary-winner",
+      "mapping": {
+        "mbar": "Mandela Barnes",
+        "fhon": "Francesca Hong",
+        "mhug": "Missy Hughes",
+        "bhul": "Brett Hulsey",
+        "kroy": "Kelda Roys",
+        "srod": "Sara Rodriguez",
+        "dcro": "David Crowley",
+        "jbre": "Joel Brennan"
+      }
+    },
+    {
+      "name": "Tennessee GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVTNNOMR-2-26",
+      "poly_slug": "tennessee-governor-republican-primary-winner",
+      "mapping": {
+        "jros": "John Rose",
+        "mbla": "Marsha Blackburn"
+      }
+    },
+    {
+      "name": "Connecticut GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVCTNOMD-26",
+      "poly_slug": "connecticut-governor-democratic-primary-winner",
+      "mapping": {
+        "nlam": "Ned Lamont",
+        "jell": "Josh Elliott"
+      }
+    },
+    {
+      "name": "Alaska GOV (primary)",
+      "kalshi_ticker": "KXGOVAKPRIMARY-26",
+      "poly_slug": "who-will-advance-from-the-alaska-governor-primary",
+      "mapping": {
+        "cbis": "Click Bishop",
+        "ndah": "Nancy Dahlstrom",
+        "edev": "Edna DeVries",
+        "bwil": "Bernadette Wilson",
+        "acru": "Adam Crum",
+        "ttay": "Treg Taylor",
+        "tbeg": "Tom Begich",
+        "dbro": "Dave Bronson",
+        "shug": "Shelley Hughes",
+        "mhei": "Matt Heilala",
+        "jkre": "Jonathan Kreiss-Tomkins"
+      }
+    },
+    {
+      "name": "Arizona District 5 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXAZ5R-26",
+      "poly_slug": "az-05-republican-primary-winner",
+      "mapping": {
+        "tgra": "Travis Grantham",
+        "mlam": "Mark Lamb",
+        "jfee": "Jay Feely"
+      }
+    },
+    {
+      "name": "Minnesota GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVMNNOMD-26",
+      "poly_slug": "minnesota-governor-democratic-primary-winner",
+      "mapping": {
+        "twal": "Tim Walz",
+        "aklo": "Amy Klobuchar",
+        "bgat": "Bill Gates Jr.",
+        "ssim": "Steve Simon"
+      }
+    },
+    {
+      "name": "Florida District 19 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXFL19R-26",
+      "poly_slug": "fl-19-republican-primary-winner",
+      "mapping": {
+        "mcaw": "Madison Cawthorn",
+        "brom": "Bob Rommel",
+        "sroa": "Spencer Roach",
+        "jobe": "Jim Oberweis",
+        "clau": "Catalina Lauf",
+        "jsch": "Jim Schwartzel"
+      }
+    },
+    {
+      "name": "Minnesota SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATEMNR-26",
+      "poly_slug": "minnesota-republican-senate-primary-winner",
+      "mapping": {
+        "rwhi": "Royce White",
+        "jcol": "Julia Coleman",
+        "krob": "Kristin Robbins",
+        "dhan": "David Hann",
+        "asch": "Adam Schwarze",
+        "twei": "Tom Weiler",
+        "agru": "Alycia Gruenhagen",
+        "mtaf": "Michele Tafoya"
+      }
+    },
+    {
+      "name": "Minnesota District 2 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXMN2D-26",
+      "poly_slug": "who-will-be-the-democratic-nominee-for-mn-02",
+      "mapping": {
+        "mkle": "Matt Klein",
+        "mlit": "Matt Little",
+        "kber": "Kaela Berg"
+      }
+    },
+    {
+      "name": "Tennessee GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVTNNOMD-26",
+      "poly_slug": "tennessee-governor-democratic-primary-winner",
+      "mapping": {
+        "catw": "Carnita Atwater",
+        "tcyr": "Tim Cyr",
+        "jgre": "Jerri Green",
+        "akur": "Adam Kurtz"
+      }
+    },
+    {
+      "name": "Michigan SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATEMIR-26",
+      "poly_slug": "michigan-republican-senate-primary-winner-954",
+      "mapping": {
+        "mrog": "Mike Rogers",
+        "bsmi": "Bernadette Smith",
+        "kben": "Kent Benham",
+        "gsco": "Genevieve Scott"
+      }
+    },
+    {
+      "name": "New Hampshire District 1 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXNH1D-26",
+      "poly_slug": "nh-01-democratic-primary-winner",
+      "mapping": {
+        "msul": "Maura Sullivan",
+        "ssha": "Stefany Shaheen",
+        "cber": "Carleigh Beriont"
+      }
+    },
+    {
+      "name": "Michigan District 11 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXMI11D-26",
+      "poly_slug": "mi-11-democratic-primary-winner",
+      "mapping": {
+        "jmos": "Jeremy Moss",
+        "alev": "Andy Levin",
+        "dwoo": "Dave Woodward",
+        "afar": "Aisha Farooqi"
+      }
+    },
+    {
+      "name": "Colorado District 3 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXCO03R-26",
+      "poly_slug": "co-03-republican-primary-winner",
+      "mapping": {
+        "jhur": "Jeff Hurd",
+        "hsch": "Hope Scheppelman"
+      }
+    },
+    {
+      "name": "Colorado SEN (primary) [D]",
+      "kalshi_ticker": "KXSENATECOD-26",
+      "poly_slug": "colorado-democratic-senate-primary-winner",
+      "mapping": {
+        "jhic": "John Hickenlooper",
+        "kbre": "Karen Breslin",
+        "nmin": "Nichole Miner",
+        "jgon": "Julie Gonzales"
+      }
+    },
+    {
+      "name": "New York District 13 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXNY13D-26",
+      "poly_slug": "ny-13-democratic-primary-winner",
+      "mapping": {
+        "aesp": "Adriano Espaillat",
+        "dche": "Darializa Avila Chevalier",
+        "orom": "Oscar Romero",
+        "tchi": "Theo Chino-Tavarez",
+        "jkei": "James Felton Keith",
+        "mmil": "Matt Miller",
+        "mrod": "Megan Rodriguez"
+      }
+    },
+    {
+      "name": "South Dakota GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVSDNOMR-26",
+      "poly_slug": "south-dakota-governor-republican-primary-winner",
+      "mapping": {
+        "lrho": "Larry Rhoden",
+        "jhan": "Jon Hansen",
+        "djoh": "Dusty Johnson",
+        "tdoe": "Toby Doeden"
+      }
+    },
+    {
+      "name": "Oklahoma GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVOKNOMR-26",
+      "poly_slug": "oklahoma-governor-republican-primary-winner",
+      "mapping": {
+        "cmac": "Charles McCall",
+        "mmaz": "Mike Mazzei",
+        "jmer": "Jake Merrick",
+        "rwal": "Ryan Walters",
+        "mpin": "Matt Pinnell",
+        "ckea": "Chip Keating"
+      }
+    },
+    {
+      "name": "Nevada GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVNVNOMD-26",
+      "poly_slug": "nevada-governor-democratic-primary-winner",
+      "mapping": {
+        "afor": "Aaron Ford",
+        "ahil": "Alexis Hill"
+      }
+    },
+    {
+      "name": "New Mexico GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVNMNOMR-26",
+      "poly_slug": "new-mexico-governor-republican-primary-winner",
+      "mapping": {
+        "bcil": "Brian Cillessen",
+        "drod": "Duke Rodriguez",
+        "mmur": "Mark Murphy",
+        "jnak": "Judith Nakamura",
+        "slan": "Steve Lanier",
+        "smar": "Susana Martinez",
+        "jsan": "John Sanchez"
+      }
+    },
+    {
+      "name": "Alabama GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVALNOMR-26",
+      "poly_slug": "alabama-governor-republican-primary-winner",
+      "mapping": {
+        "ttub": "Tommy Tuberville",
+        "kmcf": "Ken McFeeters"
+      }
+    },
+    {
+      "name": "Colorado District 8 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXCO8D-26",
+      "poly_slug": "co-08-democratic-primary-winner",
+      "mapping": {
+        "ycar": "Yadira Caraveo",
+        "mrut": "Manny Rutinel",
+        "abac": "Amie Baca-Oehlert",
+        "sbir": "Shannon Bird",
+        "jsze": "John Szemler",
+        "dyou": "Dave Young"
+      }
+    },
+    {
+      "name": "Oklahoma SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATEOKR-26",
+      "poly_slug": "oklahoma-republican-senate-primary-winner",
+      "mapping": {
+        "nhan": "Nick Hankins",
+        "rmei": "Ron Meinhardt",
+        "wwas": "Wayne Lonny Washington",
+        "sbic": "Stephanie Bice",
+        "kher": "Kevin Hern"
+      }
+    },
+    {
+      "name": "South Carolina District 1 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXSC01R-26",
+      "poly_slug": "sc-01-republican-primary-winner",
+      "mapping": {
+        "msmi": "Mark Smith",
+        "jbya": "Jay Byars",
+        "lcun": "Logan Cunningham",
+        "jhon": "Jenny Costa Honeycutt",
+        "smcc": "Sam McCown",
+        "jmye": "Justin Myers",
+        "apel": "Alex Pelbath"
+      }
+    },
+    {
+      "name": "South Dakota SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATESDR-26",
+      "poly_slug": "south-dakota-republican-senate-primary-winner",
+      "mapping": {
+        "mrou": "Mike Rounds",
+        "jmcn": "Justin McNeal",
+        "knoe": "Kristi Noem"
+      }
+    },
+    {
+      "name": "South Carolina SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATESCR-26",
+      "poly_slug": "south-carolina-republican-senate-primary-winner",
+      "mapping": {
+        "pdans": "Paul Dans",
+        "lgra": "Lindsey Graham",
+        "mlyn": "Mark Lynch",
+        "tmur": "Thomas Murphy"
+      }
+    },
+    {
+      "name": "South Carolina SEN (primary) [D]",
+      "kalshi_ticker": "KXSENATESCD-26",
+      "poly_slug": "south-carolina-democratic-senate-primary-winner",
+      "mapping": {
+        "aand": "Annie Andrews",
+        "cfle": "Catherine Fleming Bruce",
+        "kfre": "Kyle Freeman"
+      }
+    },
+    {
+      "name": "New Jersey SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATENJR-26",
+      "poly_slug": "new-jersey-republican-senate-primary-winner",
+      "mapping": {
+        "jmur": "Justin Murphy",
+        "vbra": "Vinnie Brand",
+        "ahab": "Alina Habba",
+        "azda": "Alex Zdan",
+        "rtab": "Richard Tabor",
+        "nriv": "Natalie Rivera"
+      }
+    },
+    {
+      "name": "New Jersey District 7 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXNJ07D-26",
+      "poly_slug": "nj-07-democratic-primary-winner",
+      "mapping": {
+        "rben": "Rebecca Bennett",
+        "mrot": "Michael Roth",
+        "tsha": "Tina Shah",
+        "bvar": "Brian Varela"
+      }
+    },
+    {
+      "name": "Montana District 1 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXMT01D-26",
+      "poly_slug": "mt-01-democratic-primary-winner",
+      "mapping": {
+        "mrai": "Matt Rains",
+        "rcle": "Russell Cleveland",
+        "rbus": "Ryan Busse"
+      }
+    },
+    {
+      "name": "Montana SEN (primary) [D]",
+      "kalshi_ticker": "KXSENATEMTD-26",
+      "poly_slug": "montana-democratic-senate-primary-winner",
+      "mapping": {
+        "mhum": "Michael Hummert",
+        "rnei": "Reilly Neill",
+        "aban": "Alani Bankhead"
+      }
+    },
+    {
+      "name": "Iowa SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATEIAR-26",
+      "poly_slug": "iowa-republican-senate-primary-winner",
+      "mapping": {
+        "jcar": "Jim Carlin",
+        "jsmi": "Joshua Smith",
+        "ahin": "Ashley Hinson"
+      }
+    },
+    {
+      "name": "Iowa SEN (primary) [D]",
+      "kalshi_ticker": "KXKXSENATEIAD-26",
+      "poly_slug": "iowa-democratic-senate-primary-winner",
+      "mapping": {
+        "nsag": "Nathan Sage",
+        "jtur": "Josh Turek",
+        "zwah": "Zach Wahls"
+      }
+    },
+    {
+      "name": "Iowa District 2 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXIA02R-26",
+      "poly_slug": "ia-02-republican-primary-winner",
+      "mapping": {
+        "slun": "Shannon Lundgren",
+        "cmcc": "Charlie McClintock",
+        "jmit": "Joe Mitchell"
+      }
+    },
+    {
+      "name": "Iowa GOV (primary) [R]",
+      "kalshi_ticker": "KXGOVIANOMR-26",
+      "poly_slug": "iowa-governor-republican-primary-winner",
+      "mapping": {
+        "eand": "Eddie Andrews",
+        "bshe": "Brad Sherman",
+        "rfee": "Randy Feenstra",
+        "aste": "Adam Steen",
+        "zlah": "Zach Lahn"
+      }
+    },
+    {
+      "name": "Pennsylvania District 3 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXPA3D-26",
+      "poly_slug": "pa-03-democratic-primary-winner",
+      "mapping": {
+        "gcac": "Gabriel Caceres",
+        "doxm": "David Oxman",
+        "rtol": "Robin Toldens",
+        "sstr": "Sharif Street",
+        "mcep": "Morgan Cephas",
+        "crab": "Chris Rabb",
+        "asta": "Ala Stanford"
+      }
+    },
+    {
+      "name": "Pennsylvania District 7 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXPA07D-26",
+      "poly_slug": "pa-07-democratic-primary-winner",
+      "mapping": {
+        "bbro": "Bob Brooks",
+        "coba": "Carol Obando-Derstine",
+        "lmcc": "Lamont McClure",
+        "rcro": "Ryan Crosswell"
+      }
+    },
+    {
+      "name": "Alabama GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVALNOMD-26",
+      "poly_slug": "alabama-governor-democratic-primary-winner",
+      "mapping": {
+        "wboy": "Will Boyd",
+        "yflo": "Yolanda Flowers",
+        "djon": "Doug Jones",
+        "cmar": "Chad Chig Martin"
+      }
+    },
+    {
+      "name": "Alabama SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATEALR-26",
+      "poly_slug": "alabama-republican-senate-primary-winner",
+      "mapping": {
+        "bmoo": "Barry Moore",
+        "jhud": "Jared Hudson",
+        "smar": "Steve Marshall",
+        "mmur": "Morgan Murphy"
+      }
+    },
+    {
+      "name": "Oregon SEN (primary) [D]",
+      "kalshi_ticker": "KXSENATEORD-26",
+      "poly_slug": "oregon-democratic-senate-primary-winner",
+      "mapping": {
+        "jmer": "Jeff Merkley",
+        "jrya": "Jacob Ryan"
+      }
+    },
+    {
+      "name": "Kentucky SEN (primary) [D]",
+      "kalshi_ticker": "KXSENATEKYD-26",
+      "poly_slug": "kentucky-democratic-senate-primary-winner",
+      "mapping": {
+        "pste": "Pamela Stevenson",
+        "amcg": "Amy McGrath",
+        "cboo": "Charles Booker",
+        "jran": "Jared Randall"
+      }
+    },
+    {
+      "name": "Idaho SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATEIDR-26",
+      "poly_slug": "idaho-republican-senate-primary-winner",
+      "mapping": {
+        "jris": "Jim Risch",
+        "jeva": "Joe Evans"
+      }
+    },
+    {
+      "name": "Kentucky District 4 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXKY4R-26",
+      "poly_slug": "ky-04-republican-primary-winner",
+      "mapping": {
+        "rwel": "Robert Wells Jr.",
+        "tmas": "Thomas Massie",
+        "nlee": "Nicole Lee Ethington",
+        "egal": "Ed Gallrein"
+      }
+    },
+    {
+      "name": "Georgia District 11 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXGAPRIMARY-11R26",
+      "poly_slug": "ga-11-republican-primary-winner",
+      "mapping": {
+        "radk": "Rob Adkerson",
+        "wbro": "William Brown",
+        "lcar": "Lisa Carlquist",
+        "jcow": "John Cowan",
+        "jhob": "John Hobbs",
+        "ukam": "Uloma Ekpete Kama",
+        "cmor": "Chris Mora",
+        "tpri": "Tricia Pridemore"
+      }
+    },
+    {
+      "name": "Georgia District 9 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXGAPRIMARY-09R26",
+      "poly_slug": "ga-09-republican-primary-winner",
+      "mapping": {
+        "acly": "Andrew Clyde",
+        "scou": "Sam Couvillon",
+        "gpoo": "Gregg Poole"
+      }
+    },
+    {
+      "name": "Georgia District 1 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXGAPRIMARY-01R26",
+      "poly_slug": "ga-01-republican-primary-winner",
+      "mapping": {
+        "pfar": "Patrick Farrell",
+        "jkin": "James Kingston",
+        "bmon": "Brian Montgomery",
+        "kpen": "Krista Penn",
+        "ktay": "Kandiss Taylor",
+        "eyu": "Eugene Yu"
+      }
+    },
+    {
+      "name": "Louisiana SEN (primary) [R]",
+      "kalshi_ticker": "KXLARSENR1-26MAY16",
+      "poly_slug": "louisiana-republican-senate-primary-winner-889",
+      "mapping": {
+        "jlet": "Julia Letlow",
+        "jfle": "John Fleming",
+        "bcas": "Bill Cassidy"
+      }
+    },
+    {
+      "name": "Nebraska SEN (primary) [R]",
+      "kalshi_ticker": "KXSENATENER-26",
+      "poly_slug": "nebraska-republican-senate-primary-winner",
+      "mapping": {
+        "pric": "Pete Ricketts",
+        "edun": "Edward Dunn"
+      }
+    },
+    {
+      "name": "Ohio District 9 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXOH9R-26",
+      "poly_slug": "oh-09-republican-primary-winner",
+      "mapping": {
+        "dmer": "Derek Merrin",
+        "anad": "Alea Nadeem",
+        "mshe": "Madison Sheahan",
+        "jwil": "Josh Williams",
+        "acam": "Anthony Campbell"
+      }
+    },
+    {
+      "name": "Nebraska District 2 HOUSE (primary) [R]",
+      "kalshi_ticker": "KXNE2R-26",
+      "poly_slug": "ne-02-republican-primary-winner",
+      "mapping": {
+        "blin": "Brett Lindstrom",
+        "bhar": "Brinker Harding",
+        "dfre": "Dan Frei"
+      }
+    },
+    {
+      "name": "Nebraska District 2 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXNE2D-26",
+      "poly_slug": "ne-02-democratic-primary-winner",
+      "mapping": {
+        "jcav": "John Cavanaugh",
+        "mjoh": "Mark Johnston",
+        "earg": "Evangelos Argyrakis",
+        "dpow": "Denise Powell"
+      }
+    },
+    {
+      "name": "Georgia District 13 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXGAPRIMARY-13D262",
+      "poly_slug": "ga-13-democratic-primary-winner",
+      "mapping": {
+        "pwha": "Pierre Whatley",
+        "ebla": "Everton Blair Jr.",
+        "jcla": "Jasmine Clark",
+        "jfau": "Jeffree Fauntleroy Sr.",
+        "ejon": "Emanuel Jones",
+        "hkim": "Heavenly Kimes",
+        "jles": "Joe Lester"
+      }
+    },
+    {
+      "name": "Texas District 18 HOUSE (primary) [D]",
+      "kalshi_ticker": "KXTX18D-26",
+      "poly_slug": "tx-18-democratic-primary-winner",
+      "mapping": {
+        "agre": "Al Green",
+        "cmen": "Christian Menefee",
+        "aedw": "Amanda Edwards",
+        "gbro": "Gretchen Brown"
+      }
+    },
+    {
+      "name": "Alabama SEN (primary) [D]",
+      "kalshi_ticker": "KXSENATEALD-26",
+      "poly_slug": "alabama-democratic-senate-primary-winner",
+      "mapping": {
+        "mwhe": "Mark Wheeler",
+        "kswe": "Kyle Sweetser",
+        "dlar": "Dakarai Larriett"
+      }
+    },
+    {
+      "name": "Texas AG (primary) [R]",
+      "kalshi_ticker": "KXAGNOMTXR-26",
+      "poly_slug": "texas-attorney-general-republican-primary-runoff-winner",
+      "mapping": {
+        "croy": "Chip Roy",
+        "mmid": "Mayes Middleton"
+      }
+    },
+    {
+      "name": "Nebraska GOV",
+      "kalshi_ticker": "GOVPARTYNE-26",
+      "poly_slug": "nebraska-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "New York GOV (primary) [D]",
+      "kalshi_ticker": "KXGOVNYNOMD-25",
+      "poly_slug": "new-york-democratic-governor-primary-winner",
+      "mapping": {
+        "kh": "Kathy Hochul",
+        "ad": "Antonio Delgado"
+      }
+    }
+  ]
+}

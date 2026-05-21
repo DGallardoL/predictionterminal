@@ -1,0 +1,32 @@
+{
+  "_dict": {
+    "total": "int",
+    "n_returned": "int",
+    "offset": "int",
+    "limit": "int",
+    "sort": "str",
+    "order": "str",
+    "items": {
+      "_list": {
+        "_dict": {
+          "pair_id": "str",
+          "tier": "str",
+          "theme_a": "str",
+          "theme_b": "str",
+          "category": "str",
+          "oos_sharpe": "float",
+          "full_sharpe": "float",
+          "max_dd": "float",
+          "half_life_days": "float",
+          "beta_hedge": "float",
+          "n_obs": "int",
+          "suggested_allocation": "float",
+          "risk_grade": "str",
+          "fdr_status": "str",
+          "bootstrap_robust": "bool"
+        }
+      },
+      "_size_class": "many"
+    }
+  }
+}

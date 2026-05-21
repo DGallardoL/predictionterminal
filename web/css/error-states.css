@@ -1,0 +1,402 @@
+/* ============================================================
+ * error-states.css  (T07, wave-10)
+ *
+ * Friendly error banner system. Calm, helpful — not red-shouty.
+ *
+ * Scoped to a single root container `.pfm-eb-root` (fixed top-right
+ * stack) plus inline variant `.pfm-eb-inline`. All component
+ * classes namespaced `.pfm-eb-*` so they cannot collide with
+ * existing alphahub / terminal / regression styles.
+ *
+ * MOUNT ORDER:
+ *   Load AFTER tokens.css. Order vs other feature sheets doesn't
+ *   matter — selectors are fully namespaced.
+ *
+ * COORDINATION:
+ *   File owner: T07-error-states. Pairs with web/js/error-banner.js
+ *   which constructs DOM with these class names.
+ * ============================================================ */
+
+/* ---- Fixed top-right stack container ---- */
+
+.pfm-eb-root {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 360px;
+  max-width: calc(100vw - 32px);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none; /* allow click-through between banners */
+}
+
+.pfm-eb-root > * {
+  pointer-events: auto; /* but banners themselves are clickable */
+}
+
+/* ---- Banner card ---- */
+
+.pfm-eb-banner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  grid-column-gap: 10px;
+  align-items: start;
+  padding: 12px 14px;
+  background: var(--orange-soft, #fff8f1);
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  color: var(--ink, #0f172a);
+  transform: translateX(380px);
+  opacity: 0;
+  animation: pfm-eb-slide-in 200ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.pfm-eb-banner.pfm-eb-leaving {
+  animation: pfm-eb-slide-out 180ms cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+@keyframes pfm-eb-slide-in {
+  from {
+    transform: translateX(380px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pfm-eb-slide-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(380px);
+    opacity: 0;
+  }
+}
+
+/* ---- Kind variants (calm — never bright red) ---- */
+
+.pfm-eb-banner[data-kind="info"] {
+  background: #f1f5fb;
+  border-color: rgba(37, 99, 235, 0.18);
+}
+
+.pfm-eb-banner[data-kind="warn"] {
+  background: #fffaf0;
+  border-color: rgba(245, 158, 11, 0.22);
+}
+
+.pfm-eb-banner[data-kind="error"] {
+  /* deliberately NOT red: warm sand with orange icon */
+  background: var(--orange-soft, #fff8f1);
+  border-color: rgba(234, 88, 12, 0.22);
+}
+
+/* ---- Icon ---- */
+
+.pfm-eb-icon {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  font-family: var(--mono, ui-monospace, Menlo, monospace);
+  font-weight: 600;
+  user-select: none;
+}
+
+.pfm-eb-banner[data-kind="info"] .pfm-eb-icon {
+  color: var(--info, #2563eb);
+}
+
+.pfm-eb-banner[data-kind="warn"] .pfm-eb-icon {
+  color: var(--warn, #f59e0b);
+}
+
+.pfm-eb-banner[data-kind="error"] .pfm-eb-icon {
+  color: var(--orange-600, #ea580c); /* orange, NOT red */
+}
+
+/* ---- Body (title + message) ---- */
+
+.pfm-eb-body {
+  grid-column: 2;
+  min-width: 0; /* allow wrap */
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pfm-eb-title {
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  color: var(--ink, #0f172a);
+  margin: 0;
+}
+
+.pfm-eb-message {
+  font-family: var(--serif, "Instrument Serif", Georgia, serif);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink-2, #334155);
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* ---- Action row (Action button + Copy trace ID) ---- */
+
+.pfm-eb-actions {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.pfm-eb-actions:empty {
+  display: none;
+}
+
+.pfm-eb-action-btn,
+.pfm-eb-trace-btn {
+  appearance: none;
+  border: 1px solid var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  background: var(--surface, #ffffff);
+  color: var(--ink, #0f172a);
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  padding: 5px 9px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.pfm-eb-action-btn:hover,
+.pfm-eb-trace-btn:hover {
+  background: var(--bg-alt, #f4f4f5);
+  border-color: var(--ink-4, #94a3b8);
+}
+
+.pfm-eb-action-btn:focus-visible,
+.pfm-eb-trace-btn:focus-visible {
+  outline: 2px solid var(--orange-500, #f97316);
+  outline-offset: 1px;
+}
+
+.pfm-eb-action-btn {
+  background: var(--orange-500, #f97316);
+  border-color: var(--orange-600, #ea580c);
+  color: #ffffff;
+}
+
+.pfm-eb-action-btn:hover {
+  background: var(--orange-600, #ea580c);
+  border-color: var(--orange-700, #c2410c);
+  color: #ffffff;
+}
+
+.pfm-eb-trace-btn[data-copied="true"] {
+  background: var(--pos, #16a34a);
+  border-color: var(--pos, #16a34a);
+  color: #ffffff;
+}
+
+/* ---- Dismiss × button ---- */
+
+.pfm-eb-dismiss {
+  grid-column: 3;
+  grid-row: 1;
+  appearance: none;
+  border: none;
+  background: transparent;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  margin: -2px -4px 0 0;
+  color: var(--ink-3, #64748b);
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  font-size: 16px;
+  line-height: 1;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.pfm-eb-dismiss:hover {
+  background: rgba(15, 23, 42, 0.06);
+  color: var(--ink, #0f172a);
+}
+
+.pfm-eb-dismiss:focus-visible {
+  outline: 2px solid var(--orange-500, #f97316);
+  outline-offset: 1px;
+}
+
+/* ---- Inline variant (rendered into a target element) ---- */
+
+.pfm-eb-inline {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  grid-column-gap: 10px;
+  align-items: start;
+  padding: 10px 12px;
+  background: var(--orange-soft, #fff8f1);
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  border-radius: 8px;
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  color: var(--ink, #0f172a);
+  margin: 8px 0;
+}
+
+.pfm-eb-inline[data-kind="info"] {
+  background: #f1f5fb;
+  border-color: rgba(37, 99, 235, 0.18);
+}
+
+.pfm-eb-inline[data-kind="warn"] {
+  background: #fffaf0;
+  border-color: rgba(245, 158, 11, 0.22);
+}
+
+.pfm-eb-inline[data-kind="error"] {
+  background: var(--orange-soft, #fff8f1);
+  border-color: rgba(234, 88, 12, 0.22);
+}
+
+/* ---- Mobile: full-width with 12px margins ---- */
+
+@media (max-width: 480px) {
+  .pfm-eb-root {
+    top: 12px;
+    right: 12px;
+    left: 12px;
+    width: auto;
+    max-width: none;
+  }
+
+  .pfm-eb-banner {
+    animation-name: pfm-eb-slide-in-mobile;
+  }
+
+  .pfm-eb-banner.pfm-eb-leaving {
+    animation-name: pfm-eb-slide-out-mobile;
+  }
+
+  @keyframes pfm-eb-slide-in-mobile {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes pfm-eb-slide-out-mobile {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+  }
+}
+
+/* ---- Reduced motion ---- */
+
+@media (prefers-reduced-motion: reduce) {
+  .pfm-eb-banner,
+  .pfm-eb-banner.pfm-eb-leaving {
+    animation-duration: 1ms !important;
+  }
+}
+
+/* ---- Dark mode harmonisation ---- */
+
+@media (prefers-color-scheme: dark) {
+  .pfm-eb-banner,
+  .pfm-eb-inline {
+    background: var(--surface-2, #1a1e28);
+    border-color: var(--hairline, rgba(248, 250, 252, 0.10));
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .pfm-eb-banner[data-kind="info"],
+  .pfm-eb-inline[data-kind="info"] {
+    background: #15202e;
+    border-color: rgba(59, 130, 246, 0.32);
+  }
+
+  .pfm-eb-banner[data-kind="warn"],
+  .pfm-eb-inline[data-kind="warn"] {
+    background: #2a200d;
+    border-color: rgba(251, 191, 36, 0.32);
+  }
+
+  .pfm-eb-banner[data-kind="error"],
+  .pfm-eb-inline[data-kind="error"] {
+    background: #2a1809;
+    border-color: rgba(251, 146, 60, 0.34);
+  }
+
+  .pfm-eb-action-btn,
+  .pfm-eb-trace-btn {
+    background: var(--surface, #14171f);
+    border-color: var(--hairline-strong, rgba(248, 250, 252, 0.18));
+    color: var(--ink, #f8fafc);
+  }
+
+  .pfm-eb-action-btn {
+    background: var(--orange-500, #f97316);
+    border-color: var(--orange-600, #ea580c);
+    color: #ffffff;
+  }
+
+  .pfm-eb-dismiss:hover {
+    background: rgba(248, 250, 252, 0.08);
+    color: var(--ink, #f8fafc);
+  }
+}
+
+[data-theme="dark"] .pfm-eb-banner,
+[data-theme="dark"] .pfm-eb-inline {
+  background: var(--surface-2, #1a1e28);
+  border-color: var(--hairline, rgba(248, 250, 252, 0.10));
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .pfm-eb-action-btn,
+[data-theme="dark"] .pfm-eb-trace-btn {
+  background: var(--surface, #14171f);
+  border-color: var(--hairline-strong, rgba(248, 250, 252, 0.18));
+  color: var(--ink, #f8fafc);
+}
+
+[data-theme="dark"] .pfm-eb-action-btn {
+  background: var(--orange-500, #f97316);
+  border-color: var(--orange-600, #ea580c);
+  color: #ffffff;
+}
+
+/* ============================================================
+ * End of error-states.css
+ * ============================================================ */

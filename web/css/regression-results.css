@@ -1,0 +1,359 @@
+/* ============================================================
+   regression-results.css — T61 (Track H)
+   Sticky summary card surfaced immediately after a /fit completes.
+   Sits below the /fit form inside [data-mode-pane="regression"].
+
+   Token strategy:
+     - Prefer T01's web/css/tokens.css names (--orange-500, --hairline,
+       --mono, --serif-display, --ink, --surface).
+     - Fall back to the legacy index.html-embedded names that already
+       ship today (--orange, --hairline, --mono, --serif).
+     - Hardcode last-resort literals so the card works even when no
+       stylesheet defines either set (e.g. inside a Storybook iframe).
+
+   Scope: all selectors are namespaced under [data-mode-pane="regression"]
+   or under #pfm-fit-summary-stack so we never bleed into Terminal/Strategies.
+   ============================================================ */
+
+[data-mode-pane="regression"] #pfm-fit-summary-stack {
+  position: sticky;
+  top: 64px;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 12px 0 18px;
+  pointer-events: none; /* let clicks pass through gaps */
+}
+[data-mode-pane="regression"] #pfm-fit-summary-stack > .pfm-fs-card {
+  pointer-events: auto;
+}
+
+/* ────────── Card shell ────────── */
+.pfm-fs-card {
+  --fs-bg:        var(--surface, #ffffff);
+  --fs-ink:       var(--ink, #111114);
+  --fs-muted:     var(--ink-muted, #6b6b74);
+  --fs-hairline:  var(--hairline, #ececef);
+  --fs-orange:    var(--orange-500, var(--orange, #f97316));
+  --fs-orange-2:  var(--orange-600, var(--orange-2, #ea580c));
+  --fs-orange-soft: var(--orange-soft, #fff1e6);
+  --fs-mono:      var(--mono, "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace);
+  --fs-serif:     var(--serif-display, var(--serif, "Instrument Serif", "Source Serif 4", Georgia, serif));
+  --fs-sans:      var(--sans, "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif);
+  --fs-shadow:    0 1px 0 rgba(17, 17, 20, 0.04),
+                  0 8px 24px -12px rgba(17, 17, 20, 0.10);
+
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px 18px;
+  align-items: stretch;
+  padding: 14px 16px 14px 18px;
+
+  background: var(--fs-bg);
+  color: var(--fs-ink);
+  border: 1px solid var(--fs-hairline);
+  border-left: 3px solid var(--fs-orange);
+  border-radius: 10px;
+  box-shadow: var(--fs-shadow);
+  font-family: var(--fs-sans);
+
+  transform: translateY(-4px);
+  opacity: 0;
+  animation: pfm-fs-pop 220ms cubic-bezier(.22,.61,.36,1) forwards;
+}
+@keyframes pfm-fs-pop {
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Collapsed prior fits (stacked below newest) */
+.pfm-fs-card[data-collapsed="true"] {
+  grid-template-columns: 1fr auto;
+  padding: 8px 14px;
+  opacity: 0.72;
+  border-left-width: 2px;
+}
+.pfm-fs-card[data-collapsed="true"] .pfm-fs-metrics,
+.pfm-fs-card[data-collapsed="true"] .pfm-fs-verdict,
+.pfm-fs-card[data-collapsed="true"] .pfm-fs-jump { display: none; }
+.pfm-fs-card[data-collapsed="true"] .pfm-fs-header {
+  font-size: 11px;
+  color: var(--fs-muted);
+}
+
+/* ────────── Header row ────────── */
+.pfm-fs-header {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 2px;
+}
+.pfm-fs-title {
+  font-family: var(--fs-serif);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--fs-ink);
+}
+.pfm-fs-title .pfm-fs-ticker {
+  color: var(--fs-orange-2);
+  font-weight: 500;
+}
+.pfm-fs-meta {
+  font-family: var(--fs-mono);
+  font-size: 10.5px;
+  color: var(--fs-muted);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.pfm-fs-meta .pfm-fs-dot {
+  display: inline-block;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--fs-hairline);
+  margin: 0 6px;
+  vertical-align: 2px;
+}
+
+/* ────────── Hero metrics (3 boxes) ────────── */
+.pfm-fs-metrics {
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding: 4px 0 2px;
+  border-top: 1px solid var(--fs-hairline);
+}
+.pfm-fs-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 10px;
+  min-width: 0;
+}
+.pfm-fs-metric-label {
+  font-family: var(--fs-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fs-muted);
+}
+.pfm-fs-metric-value {
+  font-family: var(--fs-mono);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--fs-ink);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.005em;
+}
+.pfm-fs-metric-sub {
+  font-family: var(--fs-mono);
+  font-size: 10.5px;
+  color: var(--fs-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* R² color coding */
+.pfm-fs-metric[data-grade="strong"] .pfm-fs-metric-value { color: var(--fs-orange-2); }
+.pfm-fs-metric[data-grade="ok"]     .pfm-fs-metric-value { color: var(--fs-ink); }
+.pfm-fs-metric[data-grade="weak"]   .pfm-fs-metric-value { color: var(--fs-muted); }
+
+/* Significance pill inside metric-sub */
+.pfm-fs-sig {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-family: var(--fs-mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-left: 4px;
+  vertical-align: 1px;
+}
+.pfm-fs-sig[data-sig="strong"] {
+  background: var(--fs-orange-soft);
+  color: var(--fs-orange-2);
+}
+.pfm-fs-sig[data-sig="weak"] {
+  background: #f4f4f6;
+  color: var(--fs-muted);
+}
+
+/* ────────── Right column: verdict + jump link ────────── */
+.pfm-fs-right {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 180px;
+  max-width: 280px;
+}
+
+.pfm-fs-verdict {
+  grid-column: 1 / -1;
+  margin-top: 4px;
+  padding: 10px 12px;
+  background: var(--fs-orange-soft);
+  border: 1px solid color-mix(in srgb, var(--fs-orange) 18%, transparent);
+  border-radius: 6px;
+  font-family: var(--fs-sans);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--fs-ink);
+}
+.pfm-fs-verdict strong { font-weight: 600; }
+.pfm-fs-verdict.is-weak {
+  background: #f6f6f8;
+  border-color: var(--fs-hairline);
+  color: var(--fs-muted);
+}
+
+.pfm-fs-jump {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  font-family: var(--fs-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--fs-orange-2);
+  background: transparent;
+  border: 1px solid var(--fs-hairline);
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 140ms ease, border-color 140ms ease, transform 140ms ease;
+}
+.pfm-fs-jump:hover {
+  background: var(--fs-orange-soft);
+  border-color: color-mix(in srgb, var(--fs-orange) 25%, var(--fs-hairline));
+  transform: translateY(-1px);
+}
+.pfm-fs-jump:focus-visible {
+  outline: 2px solid var(--fs-orange);
+  outline-offset: 2px;
+}
+.pfm-fs-jump .pfm-fs-arrow {
+  font-family: var(--fs-mono);
+  font-size: 12px;
+  line-height: 1;
+}
+
+.pfm-fs-close {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 4px 6px;
+  font-family: var(--fs-mono);
+  font-size: 12px;
+  color: var(--fs-muted);
+  cursor: pointer;
+  border-radius: 4px;
+}
+.pfm-fs-close:hover { color: var(--fs-ink); background: var(--fs-hairline); }
+.pfm-fs-close:focus-visible {
+  outline: 2px solid var(--fs-orange);
+  outline-offset: 1px;
+}
+
+/* ────────── Verdict pill (single-word fit-quality) ────────── */
+.pfm-fs-quality {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-family: var(--fs-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid var(--fs-hairline);
+  background: #fafafb;
+  color: var(--fs-muted);
+}
+.pfm-fs-quality[data-q="well_specified"] {
+  background: var(--fs-orange-soft);
+  border-color: color-mix(in srgb, var(--fs-orange) 25%, transparent);
+  color: var(--fs-orange-2);
+}
+.pfm-fs-quality[data-q="weak_fit"],
+.pfm-fs-quality[data-q="underpowered"] {
+  background: #f4f4f6;
+  color: var(--fs-muted);
+}
+.pfm-fs-quality[data-q="collinear"] {
+  background: #fff5e6;
+  color: #b75509;
+  border-color: #f1c89a;
+}
+
+/* ────────── Mobile: bottom sheet ────────── */
+@media (max-width: 720px) {
+  [data-mode-pane="regression"] #pfm-fit-summary-stack {
+    position: fixed;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, var(--surface, #fff) 30%);
+    z-index: 80;
+    gap: 6px;
+  }
+  .pfm-fs-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -8px 24px -12px rgba(17, 17, 20, 0.18);
+    transform: translateY(8px);
+    animation: pfm-fs-slide-up 240ms cubic-bezier(.22,.61,.36,1) forwards;
+  }
+  @keyframes pfm-fs-slide-up {
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .pfm-fs-right {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: none;
+    min-width: 0;
+  }
+  .pfm-fs-metrics { gap: 8px; }
+  .pfm-fs-metric-value { font-size: 16px; }
+  .pfm-fs-title { font-size: 16px; }
+  /* Only the freshest card is visible on mobile to avoid eating screen */
+  .pfm-fs-card[data-collapsed="true"] { display: none; }
+}
+
+/* ────────── Dark-mode passthrough (T05 will wire toggle) ────────── */
+@media (prefers-color-scheme: dark) {
+  .pfm-fs-card {
+    --fs-bg:        var(--surface, #14141a);
+    --fs-ink:       var(--ink, #f4f4f6);
+    --fs-muted:     var(--ink-muted, #8b8b96);
+    --fs-hairline:  var(--hairline, #2a2a32);
+    --fs-orange-soft: rgba(249, 115, 22, 0.10);
+  }
+  .pfm-fs-verdict.is-weak { background: #1d1d24; }
+  .pfm-fs-quality { background: #1d1d24; }
+}
+
+/* ────────── Reduced motion ────────── */
+@media (prefers-reduced-motion: reduce) {
+  .pfm-fs-card,
+  .pfm-fs-jump { animation: none !important; transition: none !important; }
+  .pfm-fs-card { transform: none; opacity: 1; }
+}

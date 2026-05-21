@@ -1,0 +1,5743 @@
+{
+  "accepted": {
+    "KXFEDCHAIRCONFIRM": {
+      "k_title": "Who will be confirmed as Fed chair?",
+      "p_slug": "who-will-be-confirmed-as-fed-chair",
+      "p_title": "Who will be confirmed as Fed Chair?",
+      "score": 1,
+      "mapping": {
+        "jshe": "Judy Shelton",
+        "khas": "Kevin Hassett",
+        "kwar": "Kevin Warsh",
+        "rrie": "Rick Reider"
+      }
+    },
+    "KXBIGBROTHERBRAZIL-27JAN01": {
+      "k_title": "Who will win Big Brother Brasil 26?",
+      "p_slug": "who-will-win-big-brother-brasil-26",
+      "p_title": "Who will win Big Brother Brasil 26?",
+      "score": 1,
+      "mapping": {
+        "ana": "Ana Paula Renault",
+        "bab": "Babu Santana",
+        "bre": "Breno Corã",
+        "bri": "Brigido Neto",
+        "cha": "Chaiany Andrade",
+        "gab": "Gabriela Saporito",
+        "jon": "Jonas Sulzbach",
+        "jor": "Jordana Morais",
+        "jul": "Juliano Floss",
+        "lea": "Leandro Rocha",
+        "mar": "Marcelo Alves",
+        "marc": "Marciele Albuquerque",
+        "mat": "Matheus Moreira",
+        "max": "Maxiane Rodrigues",
+        "mil": "Milena Moreira",
+        "pau": "Paulo Augusto Carvalhaes",
+        "sam": "Samira Sagr",
+        "sar": "Sarah Andrade",
+        "sol": "Sol Vega",
+        "sola": "Solange Couto",
+        "edi": "Edílson Capetinha"
+      }
+    },
+    "KXHOUSENJ11SPECIAL-26": {
+      "k_title": "NJ-11 Special Election winner?",
+      "p_slug": "nj-11-special-election-winner",
+      "p_title": "NJ-11 Special Election Winner",
+      "score": 1,
+      "mapping": {
+        "dem": "Analilia Mejia",
+        "gop": "Joe Hathaway"
+      }
+    },
+    "KXTAYLORSWIFTWEDDINGATTEND-28DEC31": {
+      "k_title": "Who will attend Taylor Swift and Travis Kelce's Wedding?",
+      "p_slug": "who-will-attend-taylor-swift-and-travis-kelces-wedding",
+      "p_title": "Who will attend Taylor Swift and Travis Kelce's wedding?",
+      "score": 1,
+      "mapping": {
+        "sel": "Selena Gomez",
+        "bla": "Blake Lively",
+        "pho": "Phoebe Bridgers",
+        "est": "Este Haim",
+        "dan": "Danielle Haim",
+        "ala": "Alana Haim",
+        "gra": "Gracie Abrams",
+        "sab": "Sabrina Carpenter",
+        "bri": "Brittany Mahomes",
+        "pat": "Patrick Mahomes",
+        "lan": "Lana Del Rey",
+        "jac": "Jack Antonoff",
+        "max": "Max Martin",
+        "jar": "Jared Goff"
+      }
+    },
+    "KXBILLS": {
+      "k_title": "Which bills will become law in 2026?",
+      "p_slug": "which-bills-will-become-law-in-2026",
+      "p_title": "Which bills will become law in 2026?",
+      "score": 1,
+      "mapping": {
+        "ccr": "Credit-card routing competition",
+        "aio": "AI-chip export licensing",
+        "min": "Critical-minerals stockpile",
+        "chip": "Export-control chip security",
+        "tv": "Film/TV production expensing",
+        "show": "SHOWER Act",
+        "smith": "Smithsonian Women’s History Museum",
+        "defy": "DEFIANCE Act",
+        "airp": "Trump Airport",
+        "hous": "Housing for the 21st Century Act",
+        "250c": "$2.50 Coin",
+        "drive": "SELF DRIVE Act",
+        "data": "Data center utility cost protection"
+      }
+    },
+    "KXF1-26": {
+      "k_title": "F1 Drivers Champion",
+      "p_slug": "2026-f1-drivers-champion",
+      "p_title": "F1 Drivers' Champion",
+      "score": 1,
+      "mapping": {
+        "ln": "Lando Norris",
+        "mv": "Max Verstappen",
+        "cl": "Charles Leclerc",
+        "lh": "Lewis Hamilton",
+        "op": "Oscar Piastri",
+        "gr": "George Russell",
+        "ka": "Kimi Antonelli",
+        "al": "Arvid Lindblad",
+        "fa": "Fernando Alonso",
+        "pg": "Pierre Gasly",
+        "cs": "Carlos Sainz Jr.",
+        "ob": "Oliver Bearman",
+        "eo": "Esteban Ocon",
+        "aa": "Alexander Albon",
+        "ih": "Isack Hadjar",
+        "fc": "Franco Colapinto",
+        "nh": "Nico Hülkenberg",
+        "gb": "Gabriel Bortoleto",
+        "ls": "Lance Stroll",
+        "ll": "Liam Lawson",
+        "sp": "Sergio Pérez",
+        "vb": "Valtteri Bottas"
+      }
+    },
+    "KXF1CONSTRUCTORS-26": {
+      "k_title": "F1 Constructors Champion",
+      "p_slug": "f1-constructors-champion",
+      "p_title": "F1 Constructors' Champion",
+      "score": 1,
+      "mapping": {
+        "red": "Red Bull Racing",
+        "haa": "Haas",
+        "aud": "Audi",
+        "alp": "Alpine",
+        "rac": "Racing Bulls",
+        "wil": "Williams",
+        "fer": "Ferrari",
+        "ast": "Aston Martin",
+        "cad": "Cadillac",
+        "mcl": "McLaren",
+        "mer": "Mercedes"
+      }
+    },
+    "KXNWSLGAME-26APR03BOSSAN": {
+      "k_title": "Boston Legacy FC vs San Diego Wave FC",
+      "p_slug": "nwsl-bos-wav-2026-04-03",
+      "p_title": "Boston Legacy FC vs. San Diego Wave FC",
+      "score": 1,
+      "mapping": {
+        "bos": "Boston Legacy FC",
+        "san": "San Diego Wave FC"
+      }
+    },
+    "KXNWSLGAME-26APR04NCCPTH": {
+      "k_title": "North Carolina Courage vs Portland Thorns",
+      "p_slug": "nwsl-cou-tho-2026-04-04",
+      "p_title": "North Carolina Courage vs. Portland Thorns FC",
+      "score": 0.965,
+      "mapping": {
+        "ncc": "North Carolina Courage",
+        "pth": "Portland Thorns FC"
+      }
+    },
+    "KXCHNSLGAME-26APR04SHTDAL": {
+      "k_title": "Shandong Taishan vs Dalian Yingbo FC",
+      "p_slug": "chi-sha-ygb-2026-04-04",
+      "p_title": "Shandong Taishan FC vs. Dalian Yingbo FC",
+      "score": 0.96,
+      "mapping": {
+        "sht": "Shandong Taishan FC",
+        "dal": "Dalian Yingbo FC"
+      }
+    },
+    "KXUPONLY-01": {
+      "k_title": "Which guests will appear on the UpOnly podcast by 2027?",
+      "p_slug": "which-guests-will-appear-on-the-uponly-podcast-before-2027",
+      "p_title": "Which guests will appear on the UpOnly podcast before 2027?",
+      "score": 0.946,
+      "mapping": {
+        "jeff": "Jeff Yan",
+        "gcr": "GCR",
+        "jess": "Jesse Pollak",
+        "bria": "Brian Armstrong",
+        "arth": "Arthur Hayes",
+        "anse": "Ansem",
+        "mart": "Martin Shkreli"
+      }
+    },
+    "KXSUPERLIGGAME-26APR04TRAGAL": {
+      "k_title": "Trabzonspor vs Galatasaray",
+      "p_slug": "tur-tra-gal-2026-04-04",
+      "p_title": "Trabzonspor vs. Galatasaray SK",
+      "score": 0.945,
+      "mapping": {
+        "tra": "Trabzonspor",
+        "gal": "Galatasaray SK"
+      }
+    },
+    "KXMCGREGORFIGHTNEXT-28": {
+      "k_title": "Who will Conor McGregor fight next?",
+      "p_slug": "ufc-who-will-conor-mcgregor-fight-next",
+      "p_title": "UFC: Who will Conor McGregor fight next?",
+      "score": 0.944,
+      "mapping": {
+        "mcha": "Michael Chandler",
+        "ndia": "Nate Diaz",
+        "jmas": "Jorge Masvidal",
+        "mhol": "Max Holloway"
+      }
+    },
+    "KXEGYPLGAME-26APR04MODDEG": {
+      "k_title": "Modern vs Wadi Degla SC",
+      "p_slug": "egy1-mos-wds-2026-04-04",
+      "p_title": "Modern SC vs. Wadi Degla SC",
+      "score": 0.939,
+      "mapping": {
+        "mod": "Modern SC",
+        "deg": "Wadi Degla SC"
+      }
+    },
+    "KXSUPERLIGGAME-26APR04GAZALA": {
+      "k_title": "Gaziantep vs Alanyaspor",
+      "p_slug": "tur-gfk-ala-2026-04-04",
+      "p_title": "Gaziantep FK vs. Alanyaspor",
+      "score": 0.939,
+      "mapping": {
+        "gaz": "Gaziantep FK",
+        "ala": "Alanyaspor"
+      }
+    },
+    "KXARGPREMDIVGAME-26APR03SLAELP": {
+      "k_title": "San Lorenzo de Almagro vs Estudiantes La Plata",
+      "p_slug": "arg-slo-est-2026-04-03",
+      "p_title": "CA San Lorenzo de Almagro vs. Estudiantes de La Plata",
+      "score": 0.939,
+      "mapping": {
+        "sla": "CA San Lorenzo de Almagro",
+        "elp": "Estudiantes de La Plata"
+      }
+    },
+    "KXUCLGAME-26APR07SPOARS": {
+      "k_title": "Sporting CP vs Arsenal",
+      "p_slug": "ucl-spo1-ars-2026-04-07",
+      "p_title": "Sporting CP vs. Arsenal FC",
+      "score": 0.936,
+      "mapping": {
+        "spo": "Sporting CP",
+        "ars": "Arsenal FC"
+      }
+    },
+    "KXALEAGUEGAME-26APR04MELWES": {
+      "k_title": "Melbourne City vs Western Sydney Wanderers",
+      "p_slug": "aus-mct-wsw-2026-04-04",
+      "p_title": "Melbourne City FC vs. Western Sydney Wanderers FC",
+      "score": 0.933,
+      "mapping": {
+        "mel": "Melbourne City FC",
+        "wes": "Western Sydney Wanderers FC"
+      }
+    },
+    "KXNBAMIMP-26": {
+      "k_title": "Most Improved Player Winner",
+      "p_slug": "nba-2025-26-most-improved-player",
+      "p_title": "NBA Most Improved Player Winner",
+      "score": 0.931,
+      "mapping": {
+        "davd": "Deni Avdija",
+        "anem": "Andrew Nembhard",
+        "bmat": "Bennedict Mathurin",
+        "jkum": "Jonathan Kuminga",
+        "amtho": "Amen Thompson",
+        "shen": "Scoot Henderson",
+        "ssha": "Shaedon Sharpe",
+        "bmil": "Brandon Miller",
+        "jive": "Jaden Ivey",
+        "atho": "Ausar Thompson",
+        "jjoh": "Jalen Johnson",
+        "jwel": "Jalen Duren",
+        "jgid": "Josh Giddey",
+        "tmur": "Trey Murphy III",
+        "mbuz": "Matas Buzelis",
+        "dwhi": "Derrick White",
+        "mpor": "Michael Porter Jr.",
+        "chol": "Chet Holmgren",
+        "njov": "Nikola Jovic",
+        "vweb": "Victor Wembanyama",
+        "rrol": "Ryan Rollins",
+        "kpor": "Kevin Porter",
+        "kfil": "Kyle Filipowski",
+        "rshe": "Reed Sheppard",
+        "kgeo": "Keyonte George",
+        "ccar": "Carlton Carrington",
+        "kwar": "Kel'el Ware",
+        "nale": "Nickeil Alexander-Walker"
+      }
+    },
+    "KXLALIGATOP4-26": {
+      "k_title": "La Liga Top 4 Finishers",
+      "p_slug": "la-liga-top-4-finish",
+      "p_title": "La Liga - Top 4 Finish ",
+      "score": 0.93,
+      "mapping": {
+        "rma": "Real Madrid",
+        "bar": "Barcelona",
+        "atm": "Atletico Madrid",
+        "vil": "Villarreal",
+        "ath": "Athletic Bilbao",
+        "rbb": "Betis",
+        "rso": "Real Sociedad",
+        "gir": "Girona",
+        "rcc": "Celta Vigo",
+        "vcf": "Valencia",
+        "sev": "Sevilla",
+        "get": "Getafe",
+        "esp": "Espanyol",
+        "osa": "Osasuna",
+        "ala": "Alaves",
+        "mal": "Mallorca",
+        "lev": "Levante",
+        "rvc": "Rayo Vallecano",
+        "elc": "Elche",
+        "ovi": "Oviedo"
+      }
+    },
+    "KXLIGUE1TOP4-26": {
+      "k_title": "Ligue 1 Top 4 Finishers",
+      "p_slug": "ligue-1-top-4-finish",
+      "p_title": "Ligue 1 - Top 4 Finish ",
+      "score": 0.93,
+      "mapping": {
+        "psg": "PSG",
+        "lil": "Lille",
+        "asm": "Monaco",
+        "ol": "Lyon",
+        "rcs": "Strasbourg",
+        "ren": "Rennes",
+        "om": "Marseille",
+        "rcl": "Lens",
+        "nic": "Nice",
+        "tfc": "Toulouse",
+        "par": "Paris FC",
+        "ang": "Angers",
+        "hac": "Le Havre",
+        "fcn": "Nantes",
+        "aux": "Auxerre",
+        "fcl": "Lorient",
+        "fcm": "Metz"
+      }
+    },
+    "KXEPLGAME-26APR13MUNLEE": {
+      "k_title": "Manchester United vs Leeds United",
+      "p_slug": "epl-mun-lee-2026-04-13",
+      "p_title": "Manchester United FC vs. Leeds United FC",
+      "score": 0.917,
+      "mapping": {
+        "mun": "Manchester United FC",
+        "lee": "Leeds United FC"
+      }
+    },
+    "KXCHNSLGAME-26APR04LITBJG": {
+      "k_title": "Liaoning Tieren vs Beijing Guoan",
+      "p_slug": "chi-tie-bgu-2026-04-04",
+      "p_title": "Liaoning Tieren FC vs. Beijing Guoan FC",
+      "score": 0.914,
+      "mapping": {
+        "lit": "Liaoning Tieren FC",
+        "bjg": "Beijing Guoan FC"
+      }
+    },
+    "KXFACUPGAME-26APR04MCILFC": {
+      "k_title": "Manchester City vs Liverpool",
+      "p_slug": "efa-mnc-liv-2026-04-04",
+      "p_title": "Manchester City FC vs. Liverpool FC",
+      "score": 0.903,
+      "mapping": {
+        "mci": "Manchester City FC",
+        "lfc": "Liverpool FC"
+      }
+    },
+    "KXUCL-26": {
+      "k_title": "Champions League Winner",
+      "p_slug": "uefa-champions-league-winner",
+      "p_title": "UEFA Champions League Winner ",
+      "score": 0.902,
+      "mapping": {
+        "aja": "Ajax",
+        "ars": "Arsenal",
+        "ata": "Atalanta",
+        "atm": "Atletico Madrid",
+        "bvb": "Dortmund",
+        "bar": "Barcelona",
+        "bmu": "Bayern Munich",
+        "ben": "Benfica",
+        "bog": "Bodo Glimt",
+        "che": "Chelsea",
+        "bru": "Club Brugge",
+        "sge": "Eintracht Frankfurt",
+        "gal": "Galatasaray",
+        "int": "Inter",
+        "juv": "Juventus",
+        "lev": "Leverkusen",
+        "lfc": "Liverpool",
+        "mci": "Man City",
+        "om": "Marseille",
+        "asm": "Monaco",
+        "nap": "Napoli",
+        "new": "Newcastle",
+        "oly": "Olympiakos",
+        "psg": "PSG",
+        "rma": "Real Madrid",
+        "sla": "Slavia Pragu",
+        "spo": "Sporting",
+        "tot": "Tottenham",
+        "usg": "Union Saint-Gilloise",
+        "vil": "Villarreal"
+      }
+    },
+    "KXSTARMERMENTIONB-26APR15": {
+      "k_title": "What will Keir Starmer say during the next Prime Minister's Questions?",
+      "p_slug": "what-will-keir-starmer-say-at-the-next-prime-ministers-questions-event-564",
+      "p_title": "What will Keir Starmer say at the next Prime Minister's Questions event?",
+      "score": 0.9,
+      "mapping": {
+        "trum": "Trump",
+        "nucl": "Nuclear"
+      }
+    },
+    "KXMRBEASTMENTION-26APR04": {
+      "k_title": "What will MrBeast say during his next Youtube Video?",
+      "p_slug": "what-will-mrbeast-say-during-his-next-youtube-video-391",
+      "p_title": "What will MrBeast say during his next YouTube video?",
+      "score": 1,
+      "mapping": {
+        "cont": "Contestant",
+        "priz": "Prize",
+        "ai": "AI / Artificial Intelligence",
+        "spon": "Sponsor / Sponsored"
+      }
+    },
+    "KXPERUPRES2ND-26MAR25-2": {
+      "k_title": "Peru presidential election: first round second place?",
+      "p_slug": "peru-presidential-election-first-round-2nd-place",
+      "p_title": "Peru Presidential Election First Round: 2nd Place",
+      "score": 0.949,
+      "mapping": {
+        "rali": "Rafael López Aliaga",
+        "kfuj": "Keiko Fujimori",
+        "acha": "Alfonso López Chau",
+        "jnie": "Jorge Nieto",
+        "rpal": "Roberto Sánchez Palomino",
+        "wgro": "Wolfgang Grozo",
+        "gfor": "George Forsyth",
+        "calv": "Carlos Álvarez"
+      }
+    },
+    "KXCOLOMBIAPRESR1-26MAY31": {
+      "k_title": "Colombian presidential election first round winner?",
+      "p_slug": "colombia-presidential-election-1st-round-winner",
+      "p_title": " Colombia Presidential Election 1st round winner?",
+      "score": 0.948,
+      "mapping": {
+        "icas": "Iván Cepeda Castro",
+        "aesp": "Abelardo de la Espriella",
+        "pval": "Paloma Valencia",
+        "dqui": "Daniel Quintero",
+        "sfaj": "Sergio Fajardo"
+      }
+    },
+    "KXDCMAYORD-26": {
+      "k_title": "Who will win the 2026 DC Democratic Mayoral Primary?",
+      "p_slug": "who-will-win-the-2026-democratic-dc-mayoral-primary",
+      "p_title": "Who will win the 2026 Democratic D.C. Mayoral Primary?",
+      "score": 0.932,
+      "mapping": {
+        "mbow": "Muriel Bowser",
+        "rwhi": "Robert White Jr.",
+        "jgeo": "Janeese Lewis George",
+        "bnad": "Brianne K. Nadeau",
+        "kmcd": "Kenyan McDuffie",
+        "ggoo": "Gary Goodweather",
+        "krac": "Karl Racine",
+        "chen": "Christina Henderson",
+        "zpar": "Zachary Parker",
+        "pmen": "Phil Mendelson",
+        "bpin": "Brooke Pinto",
+        "bsch": "Brian Schwalb"
+      }
+    },
+    "KXFOWOMEN-26": {
+      "k_title": "Women's French Open Winner",
+      "p_slug": "2026-womens-french-open-winner",
+      "p_title": "2026 Women's French Open Winner",
+      "score": 0.912,
+      "mapping": {
+        "swi": "Iga Świątek",
+        "sab": "Aryna Sabalenka",
+        "gau": "Coco Gauff",
+        "and": "Mirra Andreeva",
+        "ryb": "Elena Rybakina",
+        "svi": "Elina Svitolina",
+        "zhe": "Qinwen Zheng",
+        "ani": "Amanda Anisimova",
+        "key": "Madison Keys",
+        "pao": "Jasmine Paolini",
+        "muc": "Karolína Muchová",
+        "peg": "Jessica Pegula",
+        "kre": "Barbora Krejčíková",
+        "nav": "Emma Navarro",
+        "osa": "Naomi Osaka",
+        "bad": "Paula Badosa",
+        "mbo": "Victoria Mboko",
+        "kos": "Marta Kostyuk",
+        "ost": "Jelena Ostapenko"
+      }
+    },
+    "KXFARRERBYELECTION-26DEC31": {
+      "k_title": "2026 Farrer by-election winner?",
+      "p_slug": "farrer-by-election-winner",
+      "p_title": "Farrer By-Election Winner",
+      "score": 0.909,
+      "mapping": {
+        "ffp": "Rebecca Scriven",
+        "mmil": "Michelle Milthorpe",
+        "hdal": "Helen Dalton"
+      }
+    },
+    "KXFOMEN-26": {
+      "k_title": "Men's French Open Winner",
+      "p_slug": "2026-mens-french-open-winner",
+      "p_title": "2026 Men's French Open Winner",
+      "score": 0.906,
+      "mapping": {
+        "alc": "Carlos Alcaraz",
+        "sin": "Jannik Sinner",
+        "djo": "Novak Djokovic",
+        "zve": "Alexander Zverev",
+        "fon": "Joao Fonseca",
+        "dra": "Jack Draper",
+        "mus": "Lorenzo Musetti",
+        "fil": "Arthur Fils",
+        "she": "Ben Shelton",
+        "de": "Alex De Minaur",
+        "nor": "Cameron Norrie",
+        "tsi": "Stefanos Tsitsipas",
+        "kha": "Karen Khachanov",
+        "kor": "Sebastian Korda",
+        "hur": "Hubert Hurkacz",
+        "med": "Daniil Medvedev",
+        "cer": "Francisco Cerundolo",
+        "fri": "Taylor Fritz",
+        "rub": "Andrey Rublev",
+        "str": "Jan-Lennard Struff",
+        "pau": "Tommy Paul",
+        "ruu": "Casper Ruud",
+        "bub": "Alexander Bublik",
+        "tia": "Frances Tiafoe",
+        "men": "Jakub Mensik"
+      }
+    },
+    "KXNHLRICHARD-26": {
+      "k_title": "NHL Maurice \"Rocket\" Richard Trophy",
+      "p_slug": "nhl-2025-26-rocket-richard-trophy",
+      "p_title": "NHL Maurice 'Rocket' Richard Trophy Winner",
+      "score": 0.904,
+      "mapping": {
+        "ldra": "Leon Draisaitl",
+        "amat": "Auston Matthews",
+        "kkap": "Kirill Kaprizov",
+        "dpas": "David Pastrnak",
+        "cmcd": "Connor McDavid",
+        "wnyl": "William Nylander",
+        "ttho": "Tage Thompson",
+        "mran": "Mikko Rantanen",
+        "nmac": "Nathan MacKinnon",
+        "jhug": "Jack Hughes",
+        "srei": "Sam Reinhart",
+        "aove": "Alex Ovechkin",
+        "nkuc": "Nikita Kucherov",
+        "jgue": "Jake Guentzel",
+        "ffor": "Filip Forsberg",
+        "ccau": "Cole Caufield",
+        "kcon": "Kyle Connor",
+        "wjoh": "Wyatt Johnston",
+        "jrob": "Jason Robertson",
+        "jeic": "Jack Eichel",
+        "btka": "Brady Tkachuk",
+        "adeb": "Alex DeBrincat",
+        "mcel": "Macklin Celebrini",
+        "cbed": "Connor Bedard",
+        "apan": "Artemi Panarin"
+      }
+    },
+    "KXNHLNORRIS-26": {
+      "k_title": "NHL James Norris Memorial Trophy",
+      "p_slug": "nhl-2025-26-james-norris-memorial-trophy",
+      "p_title": "NHL James Norris Memorial Trophy Winner",
+      "score": 0.901,
+      "mapping": {
+        "cmak": "Cale Makar",
+        "qhug": "Quinn Hughes",
+        "zwer": "Zach Werenski",
+        "afox": "Adam Fox",
+        "rdah": "Rasmus Dahlin",
+        "ebou": "Evan Bouchard",
+        "lhut": "Lane Hutson",
+        "rjos": "Roman Josi",
+        "jmor": "Josh Morrissey",
+        "mhei": "Miro Heiskanen",
+        "vhed": "Victor Hedman",
+        "thar": "Thomas Harley",
+        "sthe": "Shea Theodore",
+        "jsan": "Jake Sanderson",
+        "bfab": "Brock Faber",
+        "jsla": "Jaccob Slavin",
+        "ndob": "Noah Dobson",
+        "cmca": "Charlie McAvoy",
+        "jlac": "Jackson LaCombe",
+        "lhug": "Luke Hughes",
+        "ekar": "Erik Karlsson",
+        "mser": "Mikhail Sergachev",
+        "rsan": "Rasmus Sandin",
+        "npio": "Neal Pionk",
+        "mrie": "Morgan Rielly",
+        "mmat": "Mike Matheson",
+        "cfow": "Cam Fowler",
+        "pbro": "Philip Broberg",
+        "dham": "Dougie Hamilton",
+        "jspu": "Jared Spurgeon"
+      }
+    },
+    "KXFOMCDISSENTCOUNT-26APR": {
+      "k_title": "How many dissenting votes at the next Fed meeting?",
+      "p_slug": "how-many-dissent-at-the-next-fed-meeting-113",
+      "p_title": "How many dissent at the next Fed meeting?",
+      "score": 0.899,
+      "mapping": {
+        "0": "0",
+        "1": "1",
+        "2": "2",
+        "3": "3"
+      }
+    },
+    "KXEPLGAME-26APR12CFCMCI": {
+      "k_title": "Chelsea vs Manchester City",
+      "p_slug": "epl-che-mac-2026-04-12",
+      "p_title": "Chelsea FC vs. Manchester City FC",
+      "score": 0.897,
+      "mapping": {
+        "cfc": "Chelsea FC",
+        "mci": "Manchester City FC"
+      }
+    },
+    "KXUSACOMPANYSTAKE-27JAN01": {
+      "k_title": "Which companies will the US take a stake in this year?",
+      "p_slug": "which-companies-will-the-us-take-a-stake-in",
+      "p_title": "Which companies will the US take a stake in?",
+      "score": 0.896,
+      "mapping": {
+        "ttok": "TikTok US / Bytedance",
+        "oai": "OpenAI",
+        "anth": "Anthropic",
+        "andu": "Anduril",
+        "pltr": "Palantir",
+        "tsm": "TSMC",
+        "nvda": "Nvidia",
+        "mu": "Micron",
+        "gfs": "GlobalFoundries",
+        "lmt": "Lockheed Martin",
+        "ba": "Boeing",
+        "ionq": "IonQ",
+        "rgti": "Rigetti",
+        "qbts": "D-Wave",
+        "fcx": "Freeport-McMoRan",
+        "lly": "Eli Lilly",
+        "pfe": "Pfizer"
+      }
+    },
+    "KXMLSGAME-26APR04CHINSH": {
+      "k_title": "Chicago Fire vs Nashville",
+      "p_slug": "mls-chi-nas-2026-04-04",
+      "p_title": "Chicago Fire FC vs. Nashville SC",
+      "score": 0.893,
+      "mapping": {
+        "chi": "Chicago Fire FC",
+        "nsh": "Nashville SC"
+      }
+    },
+    "KXBRASILEIROGAME-26APR04VDGBOT": {
+      "k_title": "Vasco da Gama vs Botafogo",
+      "p_slug": "bra-vas-bot-2026-04-04",
+      "p_title": "CR Vasco da Gama vs. Botafogo FR",
+      "score": 0.893,
+      "mapping": {
+        "vdg": "CR Vasco da Gama",
+        "bot": "Botafogo FR"
+      }
+    },
+    "KXEFLCHAMPIONSHIPGAME-26APR03MIDMIL": {
+      "k_title": "Middlesbrough vs Millwall",
+      "p_slug": "elc-mid-mil-2026-04-03",
+      "p_title": "Middlesbrough FC vs. Millwall FC",
+      "score": 0.893,
+      "mapping": {
+        "mid": "Middlesbrough FC",
+        "mil": "Millwall FC"
+      }
+    },
+    "KXSCOTTISHPREMGAME-26APR04RFCDUU": {
+      "k_title": "Rangers vs Dundee United",
+      "p_slug": "scop-ran-dun-2026-04-04",
+      "p_title": "Rangers FC vs. Dundee United FC",
+      "score": 0.889,
+      "mapping": {
+        "rfc": "Rangers FC",
+        "duu": "Dundee United FC"
+      }
+    },
+    "KXNWSLGAME-26APR03OPRANG": {
+      "k_title": "Orlando vs Angel City FC",
+      "p_slug": "nwsl-pri-ang-2026-04-03",
+      "p_title": "Orlando Pride vs. Angel City FC",
+      "score": 0.889,
+      "mapping": {
+        "opr": "Orlando Pride",
+        "ang": "Angel City FC"
+      }
+    },
+    "KXCHLLDPGAME-26APR02UCPAL": {
+      "k_title": "Universidad Catolica vs Palestino",
+      "p_slug": "chi1-cuc-cdp-2026-04-02",
+      "p_title": "CD Universidad Católica vs. CD Palestino",
+      "score": 0.889,
+      "mapping": {
+        "uc": "CD Universidad Católica",
+        "pal": "CD Palestino"
+      }
+    },
+    "KXSERIEAGAME-26APR04VERFIO": {
+      "k_title": "Hellas Verona vs Fiorentina",
+      "p_slug": "sea-ver-fio-2026-04-04",
+      "p_title": "Hellas Verona FC vs. ACF Fiorentina",
+      "score": 0.885,
+      "mapping": {
+        "ver": "Hellas Verona FC",
+        "fio": "ACF Fiorentina"
+      }
+    },
+    "KXSCOTTISHPREMGAME-26APR04HIBKIL": {
+      "k_title": "Hibernian vs Kilmarnock",
+      "p_slug": "scop-hib-kil-2026-04-04",
+      "p_title": "Hibernian FC vs. Kilmarnock FC",
+      "score": 0.885,
+      "mapping": {
+        "hib": "Hibernian FC",
+        "kil": "Kilmarnock FC"
+      }
+    },
+    "KXCHNSLGAME-26APR04QINHEN": {
+      "k_title": "Qingdao Hainiu vs Henan",
+      "p_slug": "chi-hai-hen-2026-04-04",
+      "p_title": "Qingdao Hainiu FC vs. Henan FC",
+      "score": 0.885,
+      "mapping": {
+        "qin": "Qingdao Hainiu FC",
+        "hen": "Henan FC"
+      }
+    },
+    "KXNHLCALDER-26": {
+      "k_title": "NHL Calder Memorial Trophy",
+      "p_slug": "nhl-2025-26-calder-memorial-trophy",
+      "p_title": "NHL Calder Memorial Trophy Winner",
+      "score": 0.881,
+      "mapping": {
+        "idem": "Ivan Demidov",
+        "msch": "Matthew Schaefer",
+        "mmis": "Michael Misa",
+        "zbui": "Zeev Buium",
+        "ihow": "Isaac Howard",
+        "jsnu": "Jimmy Snuggerud",
+        "anik": "Alexander Nikishin",
+        "zpar": "Zayne Parekh",
+        "msha": "Maxim Shabanov",
+        "rleo": "Ryan Leonard",
+        "yask": "Yaroslav Askarov",
+        "gper": "Gabe Perreault",
+        "msav": "Matthew Savoie",
+        "asan": "Axel Sandin-Pellikka",
+        "bnad": "Bradly Nadeau",
+        "jwal": "Jesper Wallstedt",
+        "rmcg": "Rutger McGroarty",
+        "sdic": "Sam Dickinson",
+        "srin": "Sam Rinzel",
+        "vkoi": "Ville Koivunen",
+        "alev": "Artyom Levshunov",
+        "ecow": "Easton Cowan",
+        "agri": "Arseniy Gritsyuk",
+        "bsen": "Beckett Sennecke",
+        "crit": "Calum Ritchie",
+        "jlek": "Jonathan Lekkerimaki",
+        "bcat": "Berkly Catton",
+        "dyur": "Danila Yurov",
+        "lmer": "Levi Merilainen",
+        "abum": "Alex Bump"
+      }
+    },
+    "KXFACUPGAME-26APR04SOUARS": {
+      "k_title": "Southampton vs Arsenal",
+      "p_slug": "efa-sot-ars-2026-04-04",
+      "p_title": "Southampton FC vs. Arsenal FC",
+      "score": 0.88,
+      "mapping": {
+        "sou": "Southampton FC",
+        "ars": "Arsenal FC"
+      }
+    },
+    "KXDIMAYORGAME-26APR01SFELLA": {
+      "k_title": "Independ. Santa Fe vs Llaneros",
+      "p_slug": "col1-isf-llf-2026-04-01",
+      "p_title": "Independiente Santa Fe vs. Llaneros FC",
+      "score": 0.879,
+      "mapping": {
+        "sfe": "Independiente Santa Fe",
+        "lla": "Llaneros FC"
+      }
+    },
+    "KXTRUMPMENTIONB-26APR01": {
+      "k_title": "What will Trump say during the White House Easter Egg Roll?",
+      "p_slug": "what-will-trump-say-during-white-house-easter-egg-roll-on-april-6",
+      "p_title": "What will Trump say during White House Easter Egg Roll on April 6? ",
+      "score": 0.878,
+      "mapping": {
+        "iran": "Iran",
+        "movi": "Movie star",
+        "ball": "Ballroom"
+      }
+    },
+    "KXSECPRESSMENTION-26APR30": {
+      "k_title": "What will Karoline Leavitt say in the next press briefing?",
+      "p_slug": "what-will-karoline-leavitt-say-during-the-next-white-house-press-briefing-718",
+      "p_title": "What will Karoline Leavitt say during the next White House press briefing?",
+      "score": 0.877,
+      "mapping": {
+        "tsa": "TSA",
+        "fbi": "FBI",
+        "epic": "Epic Fury",
+        "frau": "Fraud"
+      }
+    },
+    "KXLIGUE1GAME-26APR04RCSNIC": {
+      "k_title": "Strasbourg Alsace vs Nice",
+      "p_slug": "cde-str-ogc-2026-04-22",
+      "p_title": "RC Strasbourg Alsace vs. OGC Nice",
+      "score": 0.877,
+      "mapping": {
+        "rcs": "RC Strasbourg Alsace",
+        "nic": "OGC Nice"
+      }
+    },
+    "KXBRASILEIROGAME-26APR01CTBVDG": {
+      "k_title": "Coritiba vs Vasco da Gama",
+      "p_slug": "bra-cor-vas-2026-04-01",
+      "p_title": "Coritiba FBC vs. CR Vasco da Gama",
+      "score": 0.877,
+      "mapping": {
+        "ctb": "Coritiba FBC",
+        "vdg": "CR Vasco da Gama"
+      }
+    },
+    "KXSCOTTISHPREMGAME-26APR04MOTFAL": {
+      "k_title": "Motherwell vs Falkirk",
+      "p_slug": "scop-mot-fal-2026-04-04",
+      "p_title": "Motherwell FC vs. Falkirk FC",
+      "score": 0.875,
+      "mapping": {
+        "fal": "Falkirk FC"
+      }
+    },
+    "KXSCOTTISHPREMGAME-26APR04MIRABE": {
+      "k_title": "St. Mirren vs Aberdeen",
+      "p_slug": "scop-stm-abe-2026-04-04",
+      "p_title": "St Mirren FC vs. Aberdeen FC",
+      "score": 0.875,
+      "mapping": {
+        "mir": "St Mirren FC",
+        "abe": "Aberdeen FC"
+      }
+    },
+    "KXNWSLGAME-26APR03HDARAC": {
+      "k_title": "Houston vs Racing Louisville",
+      "p_slug": "nwsl-das-rac-2026-04-03",
+      "p_title": "Houston Dash vs. Racing Louisville FC",
+      "score": 0.875,
+      "mapping": {
+        "hda": "Houston Dash",
+        "rac": "Racing Louisville FC"
+      }
+    },
+    "KXLALIGA2GAME-26APR02LPAGCF": {
+      "k_title": "Las Palmas vs Granada",
+      "p_slug": "es2-lpm-gra-2026-04-02",
+      "p_title": "UD Las Palmas vs. Granada CF",
+      "score": 0.875,
+      "mapping": {
+        "lpa": "UD Las Palmas",
+        "gcf": "Granada CF"
+      }
+    },
+    "KXNHLHART-26": {
+      "k_title": "NHL Hart Memorial Trophy",
+      "p_slug": "nhl-2025-26-hart-memorial-trophy",
+      "p_title": "NHL Hart Memorial Trophy Winner",
+      "score": 0.873,
+      "mapping": {
+        "cmcd": "Connor McDavid",
+        "nmac": "Nathan MacKinnon",
+        "kkap": "Kirill Kaprizov",
+        "ldra": "Leon Draisaitl",
+        "kkuc": "Nikita Kucherov",
+        "amat": "Auston Matthews",
+        "dpas": "David Pastrnak",
+        "jeic": "Jack Eichel",
+        "chel": "Connor Hellebuyck",
+        "jhug": "Jack Hughes",
+        "cmak": "Cale Makar",
+        "mmar": "Mitchell Marner",
+        "qhug": "Quinn Hughes",
+        "mran": "Miro Heiskanen",
+        "apan": "Artemi Panarin",
+        "ishe": "Igor Shesterkin",
+        "kcon": "Kyle Connor",
+        "mtka": "Matthew Tkachuk",
+        "wnyl": "William Nylander",
+        "avas": "Andrei Vasilevskiy",
+        "btka": "Brady Tkachuk",
+        "cbed": "Connor Bedard",
+        "dwol": "Dustin Wolf",
+        "mcel": "Macklin Celebrini",
+        "nsuz": "Nick Suzuki",
+        "afox": "Adam Fox",
+        "akem": "Adrian Kempe",
+        "adeb": "Alex DeBrincat",
+        "aove": "Alexander Ovechkin",
+        "anik": "Alexander Nikishin"
+      }
+    },
+    "KXRECOGPALESTINE-27": {
+      "k_title": "Who will recognize Palestine before 2027?",
+      "p_slug": "which-countries-will-recognize-palestine-before-2027",
+      "p_title": "Which countries will recognize Palestine before 2027?",
+      "score": 0.87,
+      "mapping": {
+        "ita": "Italy",
+        "gre": "Greece",
+        "fin": "Finland",
+        "jap": "Japan",
+        "nz": "New Zealand",
+        "ger": "Germany",
+        "dut": "The Netherlands"
+      }
+    },
+    "KXEPLGAME-26APR11BREEVE": {
+      "k_title": "Brentford vs Everton",
+      "p_slug": "epl-bre-eve-2026-04-11",
+      "p_title": "Brentford FC vs. Everton FC",
+      "score": 0.87,
+      "mapping": {
+        "bre": "Brentford FC",
+        "eve": "Everton FC"
+      }
+    },
+    "KXLALIGAGAME-26APR06GIRVIL": {
+      "k_title": "Girona vs Villarreal",
+      "p_slug": "lal-gir-vil-2026-04-06",
+      "p_title": "Girona FC vs. Villarreal CF",
+      "score": 0.87,
+      "mapping": {
+        "gir": "Girona FC",
+        "vil": "Villarreal CF"
+      }
+    },
+    "KXFACUPGAME-26APR04CFCPVA": {
+      "k_title": "Chelsea vs Port Vale",
+      "p_slug": "efa-cfc-pvl-2026-04-04",
+      "p_title": "Chelsea FC vs. Port Vale FC",
+      "score": 0.87,
+      "mapping": {
+        "cfc": "Chelsea FC",
+        "pva": "Port Vale FC"
+      }
+    },
+    "KXBRASILEIROGAME-26APR01BOTMIR": {
+      "k_title": "Botafogo vs Mirassol",
+      "p_slug": "bra-bot-mir-2026-04-01",
+      "p_title": "Botafogo FR vs. Mirassol FC",
+      "score": 0.87,
+      "mapping": {
+        "bot": "Botafogo FR",
+        "mir": "Mirassol FC"
+      }
+    },
+    "KXHNLGAME-26APR04SLARIJ": {
+      "k_title": "Slaven Belupo vs Rijeka",
+      "p_slug": "hr1-sla-rij-2026-04-04",
+      "p_title": "NK Slaven Belupo vs. HNK Rijeka",
+      "score": 0.868,
+      "mapping": {
+        "sla": "NK Slaven Belupo",
+        "rij": "HNK Rijeka"
+      }
+    },
+    "KXLALIGAGAME-26APR04MALRMA": {
+      "k_title": "Mallorca vs Real Madrid",
+      "p_slug": "lal-mal-rea-2026-04-04",
+      "p_title": "RCD Mallorca vs. Real Madrid CF",
+      "score": 0.868,
+      "mapping": {
+        "mal": "RCD Mallorca",
+        "rma": "Real Madrid CF"
+      }
+    },
+    "KXHNLGAME-26APR04DINOSI": {
+      "k_title": "Dinamo Zagreb vs Osijek",
+      "p_slug": "hr1-din-osi-2026-04-04",
+      "p_title": "GNK Dinamo Zagreb vs. NK Osijek",
+      "score": 0.868,
+      "mapping": {
+        "din": "GNK Dinamo Zagreb",
+        "osi": "NK Osijek"
+      }
+    },
+    "KXDIMAYORGAME-26APR02AMEBUC": {
+      "k_title": "America Cali vs Bucaramanga",
+      "p_slug": "col1-ad1-cab-2026-04-02",
+      "p_title": "América de Cali vs. CA Bucaramanga",
+      "score": 0.867,
+      "mapping": {
+        "ame": "América de Cali",
+        "buc": "CA Bucaramanga"
+      }
+    },
+    "GOVPARTYNH-28": {
+      "k_title": "New Hampshire Governor winner?",
+      "p_slug": "new-hampshire-governor-winner-2026",
+      "p_title": "New Hampshire Governor Election Winner",
+      "score": 0.866,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "GOVPARTYMA-26": {
+      "k_title": "Massachusetts Governor winner?",
+      "p_slug": "massachusetts-governor-winner-2026",
+      "p_title": "Massachusetts Governor Election Winner",
+      "score": 0.866,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "KXTRUMPMENTION-26APR01": {
+      "k_title": "What will Trump say during his Address to the Nation?",
+      "p_slug": "what-will-trump-say-during-address-to-the-nation-on-april-1",
+      "p_title": "What will Trump say during Address to the Nation on April 1? ",
+      "score": 0.865,
+      "mapping": {
+        "cryp": "Crypto / Bitcoin",
+        "fake": "Fake News",
+        "horm": "Hormuz",
+        "nucl": "Nuclear",
+        "nato": "NATO"
+      }
+    },
+    "KXEPLGAME-26APR11LFCFUL": {
+      "k_title": "Liverpool vs Fulham",
+      "p_slug": "epl-liv-ful-2026-04-11",
+      "p_title": "Liverpool FC vs. Fulham FC",
+      "score": 0.864,
+      "mapping": {
+        "lfc": "Liverpool FC",
+        "ful": "Fulham FC"
+      }
+    },
+    "KXLIGUE1GAME-26APR05HACAUX": {
+      "k_title": "Le Havre vs Auxerre",
+      "p_slug": "fl1-hac-aja-2026-04-05",
+      "p_title": "Le Havre AC vs. AJ Auxerre",
+      "score": 0.864,
+      "mapping": {
+        "hac": "Le Havre AC",
+        "aux": "AJ Auxerre"
+      }
+    },
+    "KXLIGAPORTUGALGAME-26APR04MORBRA": {
+      "k_title": "Moreirense vs Braga",
+      "p_slug": "por-mor-scb-2026-04-04",
+      "p_title": "Moreirense FC vs. SC Braga",
+      "score": 0.864,
+      "mapping": {
+        "mor": "Moreirense FC",
+        "bra": "SC Braga"
+      }
+    },
+    "KXBRASILEIROGAME-26APR01BAHCAP": {
+      "k_title": "Bahia vs Paranaense",
+      "p_slug": "bra-bah-cap-2026-04-01",
+      "p_title": "EC Bahia vs. CA Paranaense",
+      "score": 0.864,
+      "mapping": {
+        "bah": "EC Bahia",
+        "cap": "CA Paranaense"
+      }
+    },
+    "KXEPLGAME-26APR11ARSBOU": {
+      "k_title": "Arsenal vs Bournemouth",
+      "p_slug": "epl-ars-bou-2026-04-11",
+      "p_title": "Arsenal FC vs. AFC Bournemouth",
+      "score": 0.863,
+      "mapping": {
+        "ars": "Arsenal FC",
+        "bou": "AFC Bournemouth"
+      }
+    },
+    "KXBRASILEIROGAME-26APR04CTBFLU": {
+      "k_title": "Coritiba vs Fluminense",
+      "p_slug": "bra-cor-flu-2026-04-04",
+      "p_title": "Coritiba FBC vs. Fluminense FC",
+      "score": 0.863,
+      "mapping": {
+        "ctb": "Coritiba FBC",
+        "flu": "Fluminense FC"
+      }
+    },
+    "KXSUPERLIGGAME-26APR04KASKAY": {
+      "k_title": "Kasimpasa vs Kayserispor",
+      "p_slug": "tur-kas-kay-2026-04-04",
+      "p_title": "Kasımpaşa SK vs. Kayserispor",
+      "score": 0.863,
+      "mapping": {
+        "kas": "Kasımpaşa SK",
+        "kay": "Kayserispor"
+      }
+    },
+    "KXBRASILEIROGAME-26APR01INTSPA": {
+      "k_title": "Internacional vs Sao Paulo",
+      "p_slug": "bra-int-sao-2026-04-01",
+      "p_title": "SC Internacional vs. São Paulo FC",
+      "score": 0.862,
+      "mapping": {
+        "int": "SC Internacional",
+        "spa": "São Paulo FC"
+      }
+    },
+    "KXPUTINDJTLOCATION-29": {
+      "k_title": "Where will Trump and Putin next meet?",
+      "p_slug": "where-will-trump-and-putin-meet-next-584",
+      "p_title": "Where will Trump and Putin meet next?",
+      "score": 0.861,
+      "mapping": {
+        "tur": "Turkey",
+        "prc": "China",
+        "rus": "Russia"
+      }
+    },
+    "KXKLEAGUEGAME-26APR04POHDAJ": {
+      "k_title": "Pohang Steelers vs Daejeon Citizen",
+      "p_slug": "kor-poh-dae1-2026-04-04",
+      "p_title": "Pohang Steelers FC vs. Daejeon Hana Citizen FC",
+      "score": 0.861,
+      "mapping": {
+        "poh": "Pohang Steelers FC",
+        "daj": "Daejeon Hana Citizen FC"
+      }
+    },
+    "KXCHESSCANDIDATES-26": {
+      "k_title": "FIDE Candidates Chess Tournament Winner",
+      "p_slug": "2026-fide-candidates-tournament-winner",
+      "p_title": "2026 FIDE Candidates Tournament: Winner",
+      "score": 0.857,
+      "mapping": {
+        "fcar": "Fabiano Caruana",
+        "agir": "Anish Giri",
+        "mblu": "Matthias Bluebaum",
+        "jsin": "Javokhir Sindarov",
+        "wyi": "Wei Yi",
+        "aesi": "Andrey Esipenko",
+        "pram": "Praggnanandhaa R",
+        "hnak": "Hikaru Nakamura"
+      }
+    },
+    "KXBRASILEIROGAME-26APR05BAHPAL": {
+      "k_title": "Bahia vs Palmeiras",
+      "p_slug": "bra-bah-pal-2026-04-05",
+      "p_title": "EC Bahia vs. SE Palmeiras",
+      "score": 0.857,
+      "mapping": {
+        "bah": "EC Bahia",
+        "pal": "SE Palmeiras"
+      }
+    },
+    "KXBRASILEIROGAME-26APR05FLASAN": {
+      "k_title": "Flamengo vs Santos",
+      "p_slug": "bra-fla-san-2026-04-05",
+      "p_title": "CR Flamengo vs. Santos FC",
+      "score": 0.857,
+      "mapping": {
+        "fla": "CR Flamengo",
+        "san": "Santos FC"
+      }
+    },
+    "KXLIGAPORTUGALGAME-26APR04RAVALV": {
+      "k_title": "Rio Ave vs Alverca",
+      "p_slug": "por-rio-alv-2026-04-04",
+      "p_title": "Rio Ave FC vs. FC Alverca",
+      "score": 0.857,
+      "mapping": {
+        "rav": "Rio Ave FC",
+        "alv": "FC Alverca"
+      }
+    },
+    "KXLIGAPORTUGALGAME-26APR04CDNESA": {
+      "k_title": "Nacional vs Estrela Amadora",
+      "p_slug": "por-nac-ama-2026-04-04",
+      "p_title": "CD Nacional vs. CF Estrela da Amadora",
+      "score": 0.857,
+      "mapping": {
+        "cdn": "CD Nacional",
+        "esa": "CF Estrela da Amadora"
+      }
+    },
+    "KXKLEAGUEGAME-26APR04GAWGWA": {
+      "k_title": "Gangwon vs Gwangju",
+      "p_slug": "kor-gwo-gwa-2026-04-04",
+      "p_title": "Gangwon FC vs. Gwangju FC",
+      "score": 0.857,
+      "mapping": {
+        "gaw": "Gangwon FC",
+        "gwa": "Gwangju FC"
+      }
+    },
+    "KXARGLNBGAME-26APR032200PLAACC": {
+      "k_title": "CA Platense vs IA Central Cordoba",
+      "p_slug": "arg-lan-cac-2026-04-24",
+      "p_title": "CA Lanús vs. CA Central Córdoba",
+      "score": 0.857,
+      "mapping": {
+        "acc": "CA Central Córdoba",
+        "pla": "CA Lanús"
+      }
+    },
+    "KXLEADERNBA3PT-26": {
+      "k_title": "Pro Basketball Three Pointers Made Per Game Leader",
+      "p_slug": "nba-2025-26-3pm-leader",
+      "p_title": "NBA Three Pointers Made Per Game Leader",
+      "score": 0.854,
+      "mapping": {
+        "scur": "Stephen Curry",
+        "tmax": "Tyrese Maxey",
+        "dmit": "Donovan Mitchell",
+        "gal": "Brandon Miller",
+        "jhar": "James Harden",
+        "kknu": "Kon Knueppel",
+        "smer": "Sam Hauser",
+        "lmar": "Lauri Markkanen",
+        "ldon": "Luka Doncic",
+        "mpjr": "Michael Porter Jr.",
+        "aedw": "Anthony Edwards",
+        "lbal": "LaMelo Ball"
+      }
+    },
+    "KXTRUMPADMINLEAVE-26DEC31": {
+      "k_title": "Who will leave the Trump administration in 2026?",
+      "p_slug": "who-will-leave-trump-administration-before-2027",
+      "p_title": "Who will leave Trump Administration before 2027?",
+      "score": 0.851,
+      "mapping": {
+        "kpat": "Kash Patel",
+        "dbon": "Dan Bongino",
+        "pbon": "Pam Bondi",
+        "pheg": "Pete Hegseth",
+        "tgab": "Tulsi Gabbard",
+        "rfk": "Robert F. Kennedy Jr.",
+        "swil": "Susie Wiles",
+        "hlut": "Howard Lutnick",
+        "sbes": "Scott Bessent",
+        "klea": "Karoline Leavitt",
+        "thom": "Tom Homan",
+        "mrub": "Marco Rubio",
+        "lzel": "Lee Zeldin",
+        "knoe": "Kristi Noem",
+        "rvou": "Russell Vought",
+        "smil": "Stephen Miller",
+        "jrat": "John Ratcliffe",
+        "dsac": "David Sacks"
+      }
+    },
+    "KXSERIEAGAME-26APR06LECATA": {
+      "k_title": "Lecce vs Atalanta",
+      "p_slug": "sea-lec-ata-2026-04-04",
+      "p_title": "US Lecce vs. Atalanta BC",
+      "score": 0.85,
+      "mapping": {
+        "lec": "US Lecce",
+        "ata": "Atalanta BC"
+      }
+    },
+    "GOVPARTYWI-26": {
+      "k_title": "Wisconsin Governor winner?",
+      "p_slug": "wisconsin-governor-winner-2026",
+      "p_title": "Wisconsin Governor Election Winner",
+      "score": 0.847,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "SENATEMS-26": {
+      "k_title": "Mississippi Senate winner?",
+      "p_slug": "mississippi-senate-election-winner",
+      "p_title": "Mississippi Senate Election Winner",
+      "score": 0.847,
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    "KXSENATENHR-26": {
+      "k_title": "New Hampshire Republican Senate nominee?",
+      "p_slug": "new-hampshire-republican-senate-primary-winner-296",
+      "p_title": "New Hampshire Republican Senate Primary Winner",
+      "score": 0.847,
+      "mapping": {
+        "sb": "Scott Brown",
+        "jsun": "John E. Sununu",
+        "cs": "Chris Sununu",
+        "dinn": "Dan Innis"
+      }
+    },
+    "KXSENATENHD-26": {
+      "k_title": "New Hampshire Democratic Senate nominee?",
+      "p_slug": "new-hampshire-democratic-senate-primary-winner",
+      "p_title": "New Hampshire Democratic Senate Primary Winner",
+      "score": 0.847,
+      "mapping": {
+        "cpap": "Chris Pappas",
+        "kman": "Karishma Manzur"
+      }
+    },
+    "KXSENATEMAD-26": {
+      "k_title": "Massachusetts Democratic Senate nominee?",
+      "p_slug": "massachusetts-democratic-senate-primary-winner",
+      "p_title": "Massachusetts Democratic Senate Primary Winner",
+      "score": 0.847,
+      "mapping": {
+        "emar": "Ed Markey",
+        "arik": "Alexander Rikleen",
+        "smou": "Seth Moulton",
+        "apre": "Ayanna Pressley"
+      }
+    },
+    "KXSENATEWVD-26": {
+      "k_title": "West Virginia Democratic Senate nominee?",
+      "p_slug": "west-virginia-democratic-senate-primary-winner",
+      "p_title": "West Virginia Democratic Senate Primary Winner",
+      "score": 0.847,
+      "mapping": {
+        "rand": "Rachel Anderson",
+        "tcoo": "Thornton Cooper",
+        "jkes": "Jeffrey Kessler",
+        "rphi": "Rio Phillips",
+        "zshr": "Zachary Shrewsbury"
+      }
+    },
+    "KXMLSGAME-26APR04CLTPHI": {
+      "k_title": "Charlotte vs Philadelphia",
+      "p_slug": "mls-clt-phi-2026-04-04",
+      "p_title": "Charlotte FC vs. Philadelphia Union",
+      "score": 0.847,
+      "mapping": {
+        "clt": "Charlotte FC",
+        "phi": "Philadelphia Union"
+      }
+    },
+    "KXMLBNLCPOTY-26": {
+      "k_title": "NL Comeback Player of the Year Winner?",
+      "p_slug": "mlb-nl-comeback-player-of-the-year",
+      "p_title": "MLB: NL Comeback Player of the Year",
+      "score": 0.845,
+      "mapping": {
+        "salc": "Sandy Alcantara",
+        "zwhe": "Zack Wheeler",
+        "bwoo": "Brandon Woodruff",
+        "mhar": "Michael Harris II",
+        "tsco": "Tanner Scott",
+        "sima": "Shota Imanaga",
+        "etov": "Ezequiel Tovar",
+        "ocru": "O'Neil Cruz",
+        "sman": "Sean Manaea",
+        "phod": "Porter Hodge"
+      }
+    },
+    "KXMLBALCPOTY-26": {
+      "k_title": "AL Comeback Player of the Year Winner?",
+      "p_slug": "mlb-al-comeback-player-of-the-year",
+      "p_title": "MLB: AL Comeback Player of the Year",
+      "score": 0.845,
+      "mapping": {
+        "gcol": "Gerrit Cole",
+        "yalv": "Yordan Alvarez",
+        "mtro": "Mike Trout",
+        "arut": "Adley Rutschman",
+        "avol": "Anthony Volpe",
+        "jind": "Jonathan India",
+        "asan": "Anthony Santander",
+        "kcam": "Kristian Campbell",
+        "zgel": "Zack Gelof"
+      }
+    },
+    "KXVENFUTVEGAME-26APR04APCTAC": {
+      "k_title": "Academia Puerto Cabello vs Tachira",
+      "p_slug": "sud-apc-cam-2026-04-08",
+      "p_title": "Academia Puerto Cabello vs. CA Mineiro",
+      "score": 0.845,
+      "mapping": {
+        "apc": "Academia Puerto Cabello"
+      }
+    },
+    "KXNHLROSS-26": {
+      "k_title": "NHL Art Ross Trophy",
+      "p_slug": "nhl-2025-26-art-ross-trophy",
+      "p_title": "NHL Art Ross Trophy Winner",
+      "score": 0.844,
+      "mapping": {
+        "cmcd": "Connor McDavid",
+        "nmac": "Nathan MacKinnon",
+        "nkuc": "Nikita Kucherov",
+        "ldra": "Leon Draisaitl",
+        "mcel": "Macklin Celebrini",
+        "kkap": "Kirill Kaprizov",
+        "dpas": "David Pastrnak",
+        "jeic": "Jack Eichel",
+        "mmar": "Mitchell Marner",
+        "jhug": "Jack Hughes",
+        "amat": "Auston Matthews",
+        "mran": "Mikko Rantanen",
+        "apan": "Artemi Panarin",
+        "cmak": "Cale Makar",
+        "ckel": "Clayton Keller",
+        "wnyl": "William Nylander",
+        "jbra": "Jesper Bratt",
+        "kcon": "Kyle Connor",
+        "mtka": "Matthew Tkachuk",
+        "nsuz": "Nick Suzuki",
+        "rtho": "Robert Thomas",
+        "scro": "Sidney Crosby",
+        "tstu": "Tim Stutzle",
+        "bpoi": "Brayden Point",
+        "qhug": "Quinn Hughes",
+        "jrob": "Jason Robertson"
+      }
+    },
+    "KXMLSGAME-26APR04DCUDAL": {
+      "k_title": "DC United vs Dallas",
+      "p_slug": "mls-dcu-dal-2026-04-04",
+      "p_title": "D.C. United SC vs. FC Dallas",
+      "score": 0.844,
+      "mapping": {
+        "dcu": "D.C. United SC",
+        "dal": "FC Dallas"
+      }
+    },
+    "KXSENATESDR-26": {
+      "k_title": "South Dakota Republican Senate nominee?",
+      "p_slug": "south-dakota-republican-senate-primary-winner",
+      "p_title": "South Dakota Republican Senate Primary Winner",
+      "score": 0.843,
+      "mapping": {
+        "mrou": "Mike Rounds",
+        "jmcn": "Justin McNeal",
+        "knoe": "Kristi Noem"
+      }
+    },
+    "GOVPARTYMD-26": {
+      "k_title": "Maryland Governor winner?",
+      "p_slug": "maryland-governor-winner-2026",
+      "p_title": "Maryland Governor Election Winner",
+      "score": 0.842,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "GOVPARTYOK-26": {
+      "k_title": "Oklahoma Governor winner?",
+      "p_slug": "oklahoma-governor-winner-2026",
+      "p_title": "Oklahoma Governor Election Winner",
+      "score": 0.842,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "GOVPARTYIL-26": {
+      "k_title": "Illinois Governor winner?",
+      "p_slug": "illinois-governor-winner-2026",
+      "p_title": "Illinois Governor Election Winner",
+      "score": 0.842,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "GOVPARTYCO-26": {
+      "k_title": "Colorado Governor winner?",
+      "p_slug": "colorado-governor-winner-2026",
+      "p_title": "Colorado Governor Election Winner",
+      "score": 0.842,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "GOVPARTYNY-26": {
+      "k_title": "New York Governor winner?",
+      "p_slug": "new-york-governor-winner-2026",
+      "p_title": "New York Governor Election Winner",
+      "score": 0.842,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "GOVPARTYMI-26": {
+      "k_title": "Michigan Governor winner?",
+      "p_slug": "michigan-governor-winner-2026",
+      "p_title": "Michigan Governor Election Winner",
+      "score": 0.842,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "KXMLBNL-26": {
+      "k_title": "National League Champion",
+      "p_slug": "mlb-2026-national-league-champion",
+      "p_title": "MLB: 2026 National League Champion",
+      "score": 0.842,
+      "mapping": {
+        "mil": "Milwaukee Brewers",
+        "col": "Colorado Rockies",
+        "chc": "Chicago Cubs",
+        "wsh": "Washington Nationals",
+        "lad": "Los Angeles Dodgers",
+        "pit": "Pittsburgh Pirates",
+        "stl": "St. Louis Cardinals",
+        "sd": "San Diego Padres",
+        "mia": "Miami Marlins",
+        "atl": "Atlanta Braves",
+        "phi": "Philadelphia Phillies",
+        "nym": "New York Mets",
+        "sf": "San Francisco Giants",
+        "cin": "Cincinnati Reds"
+      }
+    },
+    "KXLIGUE1GAME-26APR05FCLPAR": {
+      "k_title": "Lorient vs Paris",
+      "p_slug": "fl1-lor-pfc-2026-04-05",
+      "p_title": "FC Lorient vs. Paris FC",
+      "score": 0.842,
+      "mapping": {
+        "fcl": "FC Lorient",
+        "par": "Paris FC"
+      }
+    },
+    "KXMLSGAME-26APR04LAFCORL": {
+      "k_title": "Los Angeles F vs Orlando",
+      "p_slug": "mls-laf-orl-2026-04-04",
+      "p_title": "Los Angeles FC vs. Orlando City SC",
+      "score": 0.842,
+      "mapping": {
+        "lafc": "Los Angeles FC",
+        "orl": "Orlando City SC"
+      }
+    },
+    "KXPGATOUR-VATO26": {
+      "k_title": "Valero Texas Open Winner",
+      "p_slug": "2026-valero-texas-open-winner",
+      "p_title": "PGA Tour: Valero Texas Open Winner",
+      "score": 0.842,
+      "mapping": {
+        "labe": "Ludvig Aberg",
+        "zbau": "Zach Bauchou",
+        "dber": "Daniel Berger",
+        "cbez": "Christiaan Bezuidenhout",
+        "cbla": "Chandler Blanchet",
+        "dbro": "Daniel Brown",
+        "rcam": "Rafael Campos",
+        "rcas": "Ricky Castillo",
+        "bcau": "Bud Cauley",
+        "dcha": "Davis Chatfield",
+        "lcla": "Luke Clanton",
+        "ecol": "Eric Cole",
+        "pcoo": "Pierceson Coody",
+        "zdou": "Ze-Cheng Dou",
+        "adum": "Adrien Dumont De Chassart",
+        "ndun": "Nick Dunlap",
+        "aeck": "Austin Eckroat",
+        "aewa": "A.J. Ewart",
+        "tfin": "Tony Finau",
+        "pfis": "Patrick Fishburn",
+        "sfis": "Steven Fisk",
+        "tfle": "Tommy Fleetwood",
+        "dfor": "David Ford",
+        "rfow": "Rickie Fowler",
+        "bgar": "Brice Garnett",
+        "dghi": "Doug Ghim",
+        "lglo": "Lucas Glover",
+        "egri": "Emiliano Grillo",
+        "bhar": "Brian Harman",
+        "rhen": "Russell Henley",
+        "ghig": "Garrick Higgo",
+        "jhig": "Joe Highsmith",
+        "khir": "Kensei Hirata",
+        "rhis": "Ryo Hisatsune",
+        "lhod": "Lee Hodges",
+        "rhoe": "Rico Hoey",
+        "chof": "Charley Hoffman",
+        "thog": "Tom Hoge",
+        "nhoj": "Nicolai Hojgaard",
+        "mhom": "Max Homa",
+        "bhor": "Billy Horschel",
+        "bhos": "Beau Hossler",
+        "mhub": "Mark Hubbard",
+        "mhug": "Mackenzie Hughes",
+        "sjae": "Stephan Jaeger",
+        "tkan": "Takumi Kanaya",
+        "jkan": "Jeffrey Kang",
+        "jkee": "Johnny Keefer",
+        "skim": "Seong-Hyeon Kim",
+        "wkim": "Si Woo Kim",
+        "tkim": "Tom Kim",
+        "mkim": "Michael Kim",
+        "ckir": "Chris Kirk",
+        "pkiz": "Patton Kizzire",
+        "mkuc": "Matt McCarty",
+        "clam": "Christo Lamprecht",
+        "hleb": "Henry Lebioda",
+        "klee": "Kyoung-Hoon Lee",
+        "hli": "Hao-Tong Li",
+        "dlip": "David Lipsky",
+        "jlow": "Austin Smotherman",
+        "rmac": "Robert MacIntyre",
+        "pmal": "Peter Malnati",
+        "hmat": "Hideki Matsuyama",
+        "dmcc": "Denny McCarthy",
+        "mmcc": "Matthieu Pavon",
+        "mmcg": "Max McGreevy",
+        "mmcn": "Maverick McNealy",
+        "mmei": "Mac Meissner",
+        "kmit": "Keith Mitchell",
+        "cmor": "Collin Morikawa",
+        "wmou": "William Mouw",
+        "anor": "Alexander Noren",
+        "anov": "Andrew Novak",
+        "pnyh": "Pontus Nyholm",
+        "tole": "Thorbjorn Olesen",
+        "jpar": "John Parry",
+        "mpen": "Marco Penge",
+        "cphi": "Chandler Phillips",
+        "jpos": "JT Poston",
+        "spow": "Seamus Power",
+        "aput": "Andrew Putnam",
+        "cram": "Chad Ramey",
+        "krei": "Kristoffer Reitan",
+        "prod": "Patrick Rodgers",
+        "kroy": "Kevin Roy",
+        "mroz": "Marcelo Rozo",
+        "asad": "Adrien Saddier",
+        "gsar": "Gordon Sargent",
+        "asch": "Adam Schenk",
+        "msch": "Matthias Schmid",
+        "nshi": "Neal Shipley",
+        "wsim": "Webb Simpson",
+        "asma": "Alex Smalley",
+        "jsmi": "Jordan L. Smith",
+        "bsne": "Brandt Snedeker",
+        "jspa": "J.J. Spaun",
+        "jspi": "Jordan Spieth",
+        "sval": "Isaiah Salinda",
+        "rpal": "Ryan Gerard"
+      }
+    },
+    "KXNHLPRES-26": {
+      "k_title": "NHL President's Trophy",
+      "p_slug": "nhl-2025-26-presidents-trophy-winner",
+      "p_title": "NHL Presidents' Trophy Winner",
+      "score": 0.84,
+      "mapping": {
+        "ana": "Anaheim Ducks",
+        "uta": "Utah Mammoth",
+        "bos": "Boston Bruins",
+        "buf": "Buffalo Sabres",
+        "cgy": "Calgary Flames",
+        "car": "Carolina Hurricanes",
+        "chi": "Chicago Blackhawks",
+        "col": "Colorado Avalanche",
+        "cbj": "Columbus Blue Jackets",
+        "dal": "Dallas Stars",
+        "det": "Detroit Red Wings",
+        "edm": "Edmonton Oilers",
+        "fla": "Florida Panthers",
+        "la": "Los Angeles Kings",
+        "min": "Minnesota Wild",
+        "mtl": "Montreal Canadiens",
+        "nsh": "Nashville Predators",
+        "nj": "New Jersey Devils",
+        "nyi": "New York Islanders",
+        "nyr": "New York Rangers",
+        "ott": "Ottawa Senators",
+        "phi": "Philadelphia Flyers",
+        "pit": "Pittsburgh Penguins",
+        "sj": "San Jose Sharks",
+        "sea": "Seattle Kraken",
+        "stl": "St. Louis Blues",
+        "tb": "Tampa Bay Lightning",
+        "tor": "Toronto Maple Leafs",
+        "van": "Vancouver Canucks",
+        "vgk": "Vegas Golden Knights",
+        "wsh": "Washington Capitals",
+        "wpg": "Winnipeg Jets"
+      }
+    },
+    "KXSERIEAGAME-26APR04LAZPAR": {
+      "k_title": "Lazio vs Parma Calcio",
+      "p_slug": "sea-laz-par-2026-04-04",
+      "p_title": "SS Lazio vs. Parma Calcio 1913",
+      "score": 0.84,
+      "mapping": {
+        "laz": "SS Lazio",
+        "par": "Parma Calcio 1913"
+      }
+    },
+    "KXALEAGUEGAME-26APR02BRRSYD": {
+      "k_title": "Brisbane vs Sydney FC",
+      "p_slug": "aus-bri-syd-2026-04-02",
+      "p_title": "Brisbane Roar FC vs. Sydney FC",
+      "score": 0.84,
+      "mapping": {
+        "brr": "Brisbane Roar FC",
+        "syd": "Sydney FC"
+      }
+    },
+    "KXLIGAPORTUGALGAME-26APR03SPOSCL": {
+      "k_title": "Sporting CP vs Santa Clara Azores",
+      "p_slug": "por-spo-cds-2026-04-03",
+      "p_title": "Sporting CP vs. CD Santa Clara",
+      "score": 0.839,
+      "mapping": {
+        "spo": "Sporting CP",
+        "scl": "CD Santa Clara"
+      }
+    },
+    "CONTROLS-2026": {
+      "k_title": "Which party will win the U.S. Senate?",
+      "p_slug": "which-party-will-win-the-senate-in-2026",
+      "p_title": "Which party will win the Senate in 2026?",
+      "score": 0.838,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXUCLWGAME-26APR01CFCARS": {
+      "k_title": "Chelsea vs Arsenal",
+      "p_slug": "uwcl-che-ars-2026-04-01",
+      "p_title": "Chelsea FC vs. Arsenal WFC",
+      "score": 0.837,
+      "mapping": {
+        "cfc": "Chelsea FC",
+        "ars": "Arsenal WFC"
+      }
+    },
+    "GOVPARTYFL-26": {
+      "k_title": "Florida Governor winner?",
+      "p_slug": "florida-governor-winner-2026",
+      "p_title": "Florida Governor Election Winner",
+      "score": 0.836,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "GOVPARTYAZ-26": {
+      "k_title": "Arizona Governor winner?",
+      "p_slug": "arizona-governor-winner-2026",
+      "p_title": "Arizona Governor Election Winner",
+      "score": 0.836,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "KXEFLCHAMPIONSHIPGAME-26APR03STKSHW": {
+      "k_title": "Stoke vs Sheffield Wednesday",
+      "p_slug": "elc-sto-swe-2026-04-03",
+      "p_title": "Stoke City FC vs. Sheffield Wednesday FC",
+      "score": 0.836,
+      "mapping": {
+        "stk": "Stoke City FC",
+        "shw": "Sheffield Wednesday FC"
+      }
+    },
+    "KXSENATENJR-26": {
+      "k_title": "New Jersey Republican Senate nominee?",
+      "p_slug": "new-jersey-republican-senate-primary-winner",
+      "p_title": "New Jersey Republican Senate Primary Winner",
+      "score": 0.835,
+      "mapping": {
+        "jmur": "Justin Murphy",
+        "vbra": "Vinnie Brand",
+        "ahab": "Alina Habba",
+        "azda": "Alex Zdan",
+        "rtab": "Richard Tabor",
+        "nriv": "Natalie Rivera"
+      }
+    },
+    "KXGOVNYNOMD-25": {
+      "k_title": "New York Democratic Governor nominee?",
+      "p_slug": "new-york-democratic-governor-primary-winner",
+      "p_title": "New York Democratic Governor Primary Winner",
+      "score": 0.835,
+      "mapping": {
+        "kh": "Kathy Hochul",
+        "ad": "Antonio Delgado"
+      }
+    },
+    "KXHOUSEPOPVOTEMARGIN-27NOV03": {
+      "k_title": "2026 2026 Midterms: House popular vote margin of victory? (Generic ballot)",
+      "p_slug": "2026-midterms-house-popular-vote-margin-of-victory-224",
+      "p_title": "2026 Midterms: House Popular Vote Margin of Victory",
+      "score": 0.833,
+      "mapping": {
+        "b3": "Democrats 2-4%",
+        "b5": "Democrats 4-6%",
+        "b7": "Democrats 6-8%",
+        "b9": "Democrats 8-10%",
+        "b11": "Democrats 10-12%",
+        "b13": "Democrats 12-14%",
+        "b15": "Democrats 14-16%",
+        "b58": "Democrats 16%+",
+        "b1": "Democrats 0-2%"
+      }
+    },
+    "KXBRASILEIROGAME-26APR04SPACRU": {
+      "k_title": "Sao Paulo vs Cruzeiro",
+      "p_slug": "bra-sao-cru-2026-04-04",
+      "p_title": "São Paulo FC vs. Cruzeiro EC",
+      "score": 0.833,
+      "mapping": {
+        "spa": "São Paulo FC",
+        "cru": "Cruzeiro EC"
+      }
+    },
+    "KXEREDIVISIEGAME-26APR04TELGRO": {
+      "k_title": "Telstar vs Groningen",
+      "p_slug": "ere-tel-gro-2026-04-04",
+      "p_title": "Telstar 1963 vs. FC Groningen",
+      "score": 0.833,
+      "mapping": {
+        "tel": "Telstar 1963",
+        "gro": "FC Groningen"
+      }
+    },
+    "KXSENATELAD-26": {
+      "k_title": "Louisiana Democratic Senate nominee?",
+      "p_slug": "louisiana-democratic-senate-primary-winner",
+      "p_title": "Louisiana Democratic Senate Primary Winner",
+      "score": 0.831,
+      "mapping": {
+        "nalb": "Nick Albares",
+        "gcro": "Gary Crockett",
+        "jdav": "Jamie Davis Jr."
+      }
+    },
+    "GOVPARTYKS-27": {
+      "k_title": "Kansas Governor winner?",
+      "p_slug": "kansas-governor-winner-2026",
+      "p_title": "Kansas Governor Election Winner",
+      "score": 0.83,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "GOVPARTYOR-26": {
+      "k_title": "Oregon Governor winner?",
+      "p_slug": "oregon-governor-winner-2026",
+      "p_title": "Oregon Governor Election Winner",
+      "score": 0.83,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "SENATEMI-26": {
+      "k_title": "Michigan Senate winner?",
+      "p_slug": "michigan-senate-election-winner",
+      "p_title": "Michigan Senate Election Winner",
+      "score": 0.83,
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    "SENATELA-26": {
+      "k_title": "Kentucky Senate winner?",
+      "p_slug": "kentucky-senate-election-winner",
+      "p_title": "Kentucky Senate Election Winner",
+      "score": 0.83,
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    "SENATEDE-26": {
+      "k_title": "Delaware Senate winner?",
+      "p_slug": "delaware-senate-election-winner",
+      "p_title": "Delaware Senate Election Winner",
+      "score": 0.83,
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    "GOVPARTYNV-26": {
+      "k_title": "Nevada Governor winner?",
+      "p_slug": "nevada-governor-winner-2026",
+      "p_title": "Nevada Governor Election Winner",
+      "score": 0.83,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "GOVPARTYHI-26": {
+      "k_title": "Hawaii Governor winner?",
+      "p_slug": "hawaii-governor-winner-2026",
+      "p_title": "Hawaii Governor Election Winner",
+      "score": 0.83,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "KXLALIGAGAME-26APR05VCFRCC": {
+      "k_title": "Valencia vs Celta Vigo",
+      "p_slug": "lal-val-cel-2026-04-05",
+      "p_title": "Valencia CF vs. RC Celta de Vigo",
+      "score": 0.83,
+      "mapping": {
+        "vcf": "Valencia CF",
+        "rcc": "RC Celta de Vigo"
+      }
+    },
+    "KXNHLVEZINA-26": {
+      "k_title": "NHL Vezina Trophy",
+      "p_slug": "nhl-2025-26-vezina-trophy",
+      "p_title": "NHL Vezina Trophy Winner",
+      "score": 0.829,
+      "mapping": {
+        "chel": "Connor Hellebuyck",
+        "ishe": "Igor Shesterkin",
+        "avas": "Andrei Vasilevskiy",
+        "joet": "Jake Oettinger",
+        "dwol": "Dustin Wolf",
+        "isor": "Ilya Sorokin",
+        "ltho": "Logan Thompson",
+        "asto": "Anthony Stolarz",
+        "jmar": "Jacob Markstrom",
+        "sbob": "Sergei Bobrovsky",
+        "mbla": "Mackenzie Blackwood",
+        "dkue": "Darcy Kuemper",
+        "fgus": "Filip Gustavsson",
+        "jswa": "Jeremy Swayman",
+        "ldos": "Lukas Dostal",
+        "ahil": "Adin Hill",
+        "jsar": "Juuse Saros",
+        "lull": "Linus Ullmark",
+        "smon": "Sam Montembeault",
+        "tdem": "Thatcher Demko",
+        "jbin": "Jordan Binnington",
+        "jdac": "Joey Daccord",
+        "fand": "Frederik Andersen",
+        "jwol": "Joseph Woll",
+        "kvej": "Karel Vejmelka",
+        "pkoc": "Pyotr Kochetkov",
+        "skni": "Spencer Knight",
+        "yask": "Yaroslav Askarov",
+        "jgre": "Jet Greaves",
+        "sski": "Stuart Skinner"
+      }
+    },
+    "KXSERIEAGAME-26APR06JUVGEN": {
+      "k_title": "Juventus vs Genoa",
+      "p_slug": "sea-juv-gen-2026-04-06",
+      "p_title": "Juventus FC vs. Genoa CFC",
+      "score": 0.829,
+      "mapping": {
+        "juv": "Juventus FC",
+        "gen": "Genoa CFC"
+      }
+    },
+    "KXIPL-26": {
+      "k_title": "IPL Champion",
+      "p_slug": "2026-ipl-champion",
+      "p_title": "2026 IPL Champion",
+      "score": 0.828,
+      "mapping": {
+        "csk": "Chennai Super Kings",
+        "dc": "Delhi Capitals",
+        "gt": "Gujarat Titans",
+        "kkr": "Kolkata Knight Riders",
+        "lsg": "Lucknow Super Giants",
+        "mi": "Mumbai Indians",
+        "pbks": "Punjab Kings",
+        "rr": "Rajasthan Royals",
+        "rcb": "Royal Challengers Bengaluru",
+        "srh": "Sunrisers Hyderabad"
+      }
+    },
+    "KXSENATEOKD-26": {
+      "k_title": "Oklahoma Democratic Senate nominee?",
+      "p_slug": "oklahoma-democratic-senate-primary-winner",
+      "p_title": "Oklahoma Democratic Senate Primary Winner",
+      "score": 0.827,
+      "mapping": {
+        "tgre": "Troy Green",
+        "rlav": "Rebekah LaVann",
+        "jpri": "Jim Priest",
+        "ntho": "N’Kiyla “Jasmine” Thomas"
+      }
+    },
+    "KXSENATEMID-26": {
+      "k_title": "Michigan Democratic Senate nominee?",
+      "p_slug": "michigan-democratic-senate-primary-winner",
+      "p_title": "Michigan Democratic Senate Primary Winner",
+      "score": 0.827,
+      "mapping": {
+        "mmcm": "Mallory McMorrow",
+        "sant": "Sarah Anthony",
+        "aels": "Abdul El-Sayed",
+        "dnes": "Dana Nessel",
+        "kmcd": "Kristen McDonald Rivet",
+        "hste": "Haley Stevens",
+        "alev": "Andy Levin",
+        "msah": "Matt Sahr",
+        "rtla": "Rashida Tlaib"
+      }
+    },
+    "KXSENATEKYR-26": {
+      "k_title": "Kentucky Republican Senate nominee?",
+      "p_slug": "kentucky-republican-senate-primary-winner",
+      "p_title": "Kentucky Republican Senate Primary Winner",
+      "score": 0.827,
+      "mapping": {
+        "dcam": "Daniel Cameron",
+        "abar": "Andy Barr",
+        "nmor": "Nate Morris"
+      }
+    },
+    "KXSENATEDER-26": {
+      "k_title": "Delaware Republican Senate nominee?",
+      "p_slug": "delaware-republican-senate-primary-winner",
+      "p_title": "Delaware Republican Senate Primary Winner",
+      "score": 0.827,
+      "mapping": {
+        "mkat": "Michael Katz",
+        "jshu": "John Shulli"
+      }
+    },
+    "KXSENATECOR-26": {
+      "k_title": "Colorado Republican Senate nominee?",
+      "p_slug": "colorado-republican-senate-primary-winner",
+      "p_title": "Colorado Republican Senate Primary Winner",
+      "score": 0.827,
+      "mapping": {
+        "jjos": "Janak Joshi",
+        "gwm": "George Washington Markert",
+        "djon": "Dathan Jones",
+        "mbai": "Mark Baisley"
+      }
+    },
+    "KXSENATEMIR-26": {
+      "k_title": "Michigan Republican Senate nominee?",
+      "p_slug": "michigan-republican-senate-primary-winner-954",
+      "p_title": "Michigan Republican Senate Primary Winner",
+      "score": 0.827,
+      "mapping": {
+        "mrog": "Mike Rogers",
+        "bsmi": "Bernadette Smith",
+        "kben": "Kent Benham",
+        "fheu": "Fred Heurtebise",
+        "gsco": "Genevieve Scott"
+      }
+    },
+    "KXSENATECOD-26": {
+      "k_title": "Colorado Democratic Senate nominee?",
+      "p_slug": "colorado-democratic-senate-primary-winner",
+      "p_title": "Colorado Democratic Senate Primary Winner",
+      "score": 0.827,
+      "mapping": {
+        "jhic": "John Hickenlooper",
+        "kbre": "Karen Breslin",
+        "nmin": "Nichole Miner",
+        "jgon": "Julie Gonzales"
+      }
+    },
+    "KXSENATEOKR-26": {
+      "k_title": "Oklahoma Republican Senate nominee?",
+      "p_slug": "oklahoma-republican-senate-primary-winner",
+      "p_title": "Oklahoma Republican Senate Primary Winner",
+      "score": 0.827,
+      "mapping": {
+        "nhan": "Nick Hankins",
+        "rmei": "Ron Meinhardt",
+        "wwas": "Wayne Lonny Washington",
+        "ksti": "Kevin Hern",
+        "sbic": "Stephanie Bice"
+      }
+    },
+    "KXSENATEKYD-26": {
+      "k_title": "Kentucky Democratic Senate nominee?",
+      "p_slug": "kentucky-democratic-senate-primary-winner",
+      "p_title": "Kentucky Democratic Senate Primary Winner",
+      "score": 0.827,
+      "mapping": {
+        "pste": "Pamela Stevenson",
+        "amcg": "Amy McGrath",
+        "cboo": "Charles Booker",
+        "jran": "Jared Randall"
+      }
+    },
+    "KXBUNDESLIGAGAME-26APR04HSVFCA": {
+      "k_title": "Hamburg vs Augsburg",
+      "p_slug": "bun-hsv-aug-2026-04-04",
+      "p_title": "Hamburger SV vs. FC Augsburg",
+      "score": 0.826,
+      "mapping": {
+        "hsv": "Hamburger SV",
+        "fca": "FC Augsburg"
+      }
+    },
+    "KXUCLGAME-26APR07RMABMU": {
+      "k_title": "Real Madrid vs Bayern Munich",
+      "p_slug": "ucl-rma1-bay1-2026-04-07",
+      "p_title": "Real Madrid CF vs. FC Bayern München",
+      "score": 0.825,
+      "mapping": {
+        "rma": "Real Madrid CF",
+        "bmu": "FC Bayern München"
+      }
+    },
+    "GOVPARTYTX-26": {
+      "k_title": "Texas Governor winner?",
+      "p_slug": "texas-governor-winner-2026",
+      "p_title": "Texas Governor Election Winner",
+      "score": 0.824,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "GOVPARTYID-26": {
+      "k_title": "Idaho Governor winner?",
+      "p_slug": "idaho-governor-winner-2026",
+      "p_title": "Idaho Governor Election Winner",
+      "score": 0.824,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "SENATEWY-26": {
+      "k_title": "Wyoming Senate winner?",
+      "p_slug": "wyoming-senate-election-winner",
+      "p_title": "Wyoming Senate Election Winner",
+      "score": 0.824,
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    "SENATEMT-26": {
+      "k_title": "Montana Senate winner?",
+      "p_slug": "montana-senate-election-winner",
+      "p_title": "Montana Senate Election Winner",
+      "score": 0.824,
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    "GOVPARTYME-26": {
+      "k_title": "Maine Governor winner?",
+      "p_slug": "maine-governor-winner-2026",
+      "p_title": "Maine Governor Election Winner",
+      "score": 0.824,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "KXSERIEAGAME-26APR05PISTOR": {
+      "k_title": "Pisa vs Torino",
+      "p_slug": "sea-pis-tor-2026-04-05",
+      "p_title": "Pisa SC vs. Torino FC",
+      "score": 0.824,
+      "mapping": {
+        "pis": "Pisa SC",
+        "tor": "Torino FC"
+      }
+    },
+    "KXLIGUE1GAME-26APR05FCMFCN": {
+      "k_title": "Metz vs Nantes",
+      "p_slug": "fl1-met-nan-2026-04-05",
+      "p_title": "FC Metz vs. FC Nantes",
+      "score": 0.824,
+      "mapping": {
+        "fcm": "FC Metz",
+        "fcn": "FC Nantes"
+      }
+    },
+    "KXSENATEGAR-26": {
+      "k_title": "Georgia Republican Senate nominee?",
+      "p_slug": "georgia-republican-senate-primary-winner",
+      "p_title": "Georgia Republican Senate Primary Winner",
+      "score": 0.822,
+      "mapping": {
+        "ddoo": "Derek Dooley",
+        "bc": "Earl Carter",
+        "bk": "Rick Temple",
+        "rb": "Reagan Box",
+        "mcol": "Mike Collins"
+      }
+    },
+    "KXSENATEFLR-26": {
+      "k_title": "Florida Republican Senate nominee?",
+      "p_slug": "florida-republican-senate-primary-winner",
+      "p_title": "Florida Republican Senate Primary Winner",
+      "score": 0.822,
+      "mapping": {
+        "am": "Ashley B. Moody"
+      }
+    },
+    "KXSENATEFLD-26": {
+      "k_title": "Florida Democratic Senate nominee?",
+      "p_slug": "florida-democratic-senate-primary-winner",
+      "p_title": "Florida Democratic Senate Primary Winner",
+      "score": 0.822,
+      "mapping": {
+        "jm": "Jared Moskowitz",
+        "cc": "Charlie Crist",
+        "jwei": "Josh Weil",
+        "avin": "Alexander Vindman",
+        "jatk": "Joey Atkins",
+        "anix": "Angie Nixon",
+        "jjen": "Jennifer Jenkins"
+      }
+    },
+    "KXSENATEMTD-26": {
+      "k_title": "Montana Democratic Senate nominee?",
+      "p_slug": "montana-democratic-senate-primary-winner",
+      "p_title": "Montana Democratic Senate Primary Winner",
+      "score": 0.822,
+      "mapping": {
+        "mhum": "Michael Hummert",
+        "rnei": "Reilly Neill",
+        "mwol": "Michael BlackWolf",
+        "aban": "Alani Bankhead"
+      }
+    },
+    "KXEFLCHAMPIONSHIPGAME-26APR03SHUSWA": {
+      "k_title": "Sheffield United vs Swansea",
+      "p_slug": "elc-she-swa-2026-04-03",
+      "p_title": "Sheffield United FC vs. Swansea City AFC",
+      "score": 0.818,
+      "mapping": {
+        "shu": "Sheffield United FC",
+        "swa": "Swansea City AFC"
+      }
+    },
+    "KXBRASILEIROGAME-26APR01CRUVIT": {
+      "k_title": "Cruzeiro vs Vitoria",
+      "p_slug": "bra-cru-vit-2026-04-01",
+      "p_title": "Cruzeiro EC vs. EC Vitória",
+      "score": 0.818,
+      "mapping": {
+        "cru": "Cruzeiro EC",
+        "vit": "EC Vitória"
+      }
+    },
+    "KXFIELDS-26": {
+      "k_title": "Who will win the Fields Medal in 2026?",
+      "p_slug": "who-will-win-the-2026-fields-medal",
+      "p_title": "Who will win the 2026 Fields Medal?",
+      "score": 0.817,
+      "mapping": {
+        "hwan": "Hong Wang",
+        "jtsi": "Jacob Tsimerman",
+        "yden": "Yu Deng",
+        "jtho": "Jack Thorne",
+        "jpar": "John Pardon",
+        "sras": "Sam Raskin",
+        "jsah": "Julian Sahasrabudhe",
+        "wsaw": "Will Sawin",
+        "alog": "Aleksandr Logunov",
+        "aefi": "Alexander Efimov"
+      }
+    },
+    "KXSENATEKSD-26": {
+      "k_title": "Kansas Democratic Senate nominee?",
+      "p_slug": "kansas-democratic-senate-primary-winner",
+      "p_title": "Kansas Democratic Senate Primary Winner",
+      "score": 0.817,
+      "mapping": {
+        "sdav": "Sharice Davids",
+        "cdav": "Christy Davis",
+        "apar": "Anne Parelkar",
+        "sneu": "Sandy Spidel Neumann",
+        "msoe": "Michael Soetaert",
+        "psch": "Patrick Schmidt"
+      }
+    },
+    "KXSENATEORD-26": {
+      "k_title": "Oregon Democratic Senate nominee?",
+      "p_slug": "oregon-democratic-senate-primary-winner",
+      "p_title": "Oregon Democratic Senate Primary Winner",
+      "score": 0.817,
+      "mapping": {
+        "jmer": "Jeff Merkley",
+        "jrya": "Jacob Ryan"
+      }
+    },
+    "GOVPARTYOH-26": {
+      "k_title": "Ohio Governor winner?",
+      "p_slug": "ohio-governor-winner-2026",
+      "p_title": "Ohio Governor Election Winner",
+      "score": 0.816,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "KXNHL-26": {
+      "k_title": "Stanley Cup® Champion?",
+      "p_slug": "2026-nhl-stanley-cup-champion",
+      "p_title": "2026 NHL Stanley Cup Champion ",
+      "score": 0.816,
+      "mapping": {
+        "ana": "Anaheim Ducks",
+        "uta": "Utah Mammoth",
+        "bos": "Boston Bruins",
+        "buf": "Buffalo Sabres",
+        "cgy": "Calgary Flames",
+        "car": "Carolina Hurricanes",
+        "chi": "Chicago Blackhawks",
+        "col": "Colorado Avalanche",
+        "cbj": "Columbus Blue Jackets",
+        "dal": "Dallas Stars",
+        "det": "Detroit Red Wings",
+        "edm": "Edmonton Oilers",
+        "fla": "Florida Panthers",
+        "la": "Los Angeles Kings",
+        "min": "Minnesota Wild",
+        "mtl": "Montreal Canadiens",
+        "nsh": "Nashville Predators",
+        "nj": "New Jersey Devils",
+        "nyi": "New York Islanders",
+        "nyr": "New York Rangers",
+        "ott": "Ottawa Senators",
+        "phi": "Philadelphia Flyers",
+        "pit": "Pittsburgh Penguins",
+        "sj": "San Jose Sharks",
+        "sea": "Seattle Kraken",
+        "stl": "St. Louis Blues",
+        "tb": "Tampa Bay Lightning",
+        "tor": "Toronto Maple Leafs",
+        "van": "Vancouver Canucks",
+        "vgk": "Vegas Golden Knights",
+        "wsh": "Washington Capitals",
+        "wpg": "Winnipeg Jets"
+      }
+    },
+    "KXALBUMRELEASE-26": {
+      "k_title": "Who will release a new album in 2026?",
+      "p_slug": "which-artists-will-release-new-albums-in-2026",
+      "p_title": "Which artists will release new albums in 2026?",
+      "score": 0.815,
+      "mapping": {
+        "dra": "Drake",
+        "tay": "Taylor Swift",
+        "bad": "Bad Bunny",
+        "jus": "Justin Bieber",
+        "ari": "Sabrina Carpenter",
+        "tra": "Travis Scott",
+        "emi": "Eminem",
+        "kan": "Kanye West",
+        "rih": "Rihanna",
+        "bil": "Billie Eilish",
+        "ken": "Kendrick Lamar",
+        "lan": "Lana Del Rey",
+        "bey": "Beyoncé",
+        "fra": "Frank Ocean",
+        "luk": "Luke Combs",
+        "oli": "Olivia Rodrigo",
+        "pla": "Playboi Carti",
+        "har": "Harry Styles",
+        "jay": "Jay Z"
+      }
+    },
+    "KXSENATETXR-26": {
+      "k_title": "Texas Republican Senate nominee?",
+      "p_slug": "texas-republican-senate-primary-winner",
+      "p_title": "Texas Republican Senate Primary Winner",
+      "score": 0.812,
+      "mapping": {
+        "jc": "John Cornyn",
+        "kp": "Ken Paxton",
+        "db": "Dawn Buckingham",
+        "bvd": "Beth Van Duyne",
+        "whun": "Wesley Hunt"
+      }
+    },
+    "KXSENATEMED-26": {
+      "k_title": "Maine Democratic Senate nominee?",
+      "p_slug": "maine-democratic-senate-primary-winner",
+      "p_title": "Maine Democratic Senate Primary Winner",
+      "score": 0.812,
+      "mapping": {
+        "jg": "Jared Golden",
+        "tj": "Troy Jackson",
+        "jm": "Janet Mills",
+        "dkleb": "Dan Kleban",
+        "cp": "Chellie Pingree",
+        "jwoo": "Jordan Wood",
+        "gra": "Graham Platner"
+      }
+    },
+    "KXSENATEIDR-26": {
+      "k_title": "Idaho Republican Senate nominee?",
+      "p_slug": "idaho-republican-senate-primary-winner",
+      "p_title": "Idaho Republican Senate Primary Winner",
+      "score": 0.812,
+      "mapping": {
+        "jris": "Jim Risch",
+        "jeva": "Joe Evans"
+      }
+    },
+    "KXDIMAYORGAME-26APR02OCDIM": {
+      "k_title": "Once Caldas vs Ind. Medellin",
+      "p_slug": "col1-onc-inm-2026-04-02",
+      "p_title": "Once Caldas vs. Independiente Medellín",
+      "score": 0.812,
+      "mapping": {
+        "oc": "Once Caldas",
+        "dim": "Independiente Medellín"
+      }
+    },
+    "KXSERIEAGAME-26APR06NAPACM": {
+      "k_title": "Napoli vs Milan",
+      "p_slug": "sea-nap-mil-2026-04-06",
+      "p_title": "SSC Napoli vs. AC Milan",
+      "score": 0.811,
+      "mapping": {
+        "nap": "SSC Napoli",
+        "acm": "AC Milan"
+      }
+    },
+    "KXLALIGAGAME-26APR05OVISEV": {
+      "k_title": "Oviedo vs Sevilla",
+      "p_slug": "lal-ovi-sev-2026-04-05",
+      "p_title": "Real Oviedo vs. Sevilla FC",
+      "score": 0.81,
+      "mapping": {
+        "ovi": "Real Oviedo",
+        "sev": "Sevilla FC"
+      }
+    },
+    "KXLIGAPORTUGALGAME-26APR04FCPFAM": {
+      "k_title": "Porto vs Famalicao",
+      "p_slug": "por-por-fam-2026-04-04",
+      "p_title": "FC Porto vs. FC Famalicão",
+      "score": 0.81,
+      "mapping": {
+        "fcp": "FC Porto",
+        "fam": "FC Famalicão"
+      }
+    },
+    "SENATETX-26": {
+      "k_title": "Texas Senate winner?",
+      "p_slug": "texas-senate-election-winner",
+      "p_title": "Texas Senate Election Winner",
+      "score": 0.809,
+      "mapping": {
+        "r": "Republican"
+      }
+    },
+    "SENATEME-26": {
+      "k_title": "Maine Senate winner?",
+      "p_slug": "maine-senate-election-winner",
+      "p_title": "Maine Senate Election Winner",
+      "score": 0.809,
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    "KXBUNDESLIGA2GAME-26APR04FCMBOC": {
+      "k_title": "Magdeburg vs Bochum",
+      "p_slug": "bl2-fcm-boc-2026-04-04",
+      "p_title": "1. FC Magdeburg vs. VfL Bochum",
+      "score": 0.809,
+      "mapping": {
+        "fcm": "1. FC Magdeburg",
+        "boc": "VfL Bochum"
+      }
+    },
+    "KXBRASILEIROGAME-26APR05ATLCAP": {
+      "k_title": "Atletico Mineiro vs Paranaense",
+      "p_slug": "bra-cam-cap-2026-04-05",
+      "p_title": "CA Mineiro vs. CA Paranaense",
+      "score": 0.807,
+      "mapping": {
+        "atl": "CA Mineiro",
+        "cap": "CA Paranaense"
+      }
+    },
+    "KXBUNDESLIGAGAME-26APR04SCFBMU": {
+      "k_title": "Freiburg vs Bayern Munich",
+      "p_slug": "bun-fre-bay-2026-04-04",
+      "p_title": "SC Freiburg vs. FC Bayern München",
+      "score": 0.807,
+      "mapping": {
+        "scf": "SC Freiburg",
+        "bmu": "FC Bayern München"
+      }
+    },
+    "KXSENATEOHSD-26": {
+      "k_title": "Ohio Democratic Senate nominee?",
+      "p_slug": "ohio-democratic-senate-primary-winner",
+      "p_title": "Ohio Democratic Senate Primary Winner",
+      "score": 0.806,
+      "mapping": {
+        "tr": "Tim Ryan",
+        "sb": "Sherrod Brown",
+        "gl": "Greg Landsman",
+        "ar": "Allison Russo"
+      }
+    },
+    "KXTRUMPMEET-26APR": {
+      "k_title": "Who will Donald Trump talk to in Apr 2026?",
+      "p_slug": "who-will-trump-talk-to-in-april",
+      "p_title": "Who will Trump talk to in April?",
+      "score": 0.806,
+      "mapping": {
+        "ksta": "Keir Starmer",
+        "xjin": "Xi Jinping",
+        "vzel": "Volodymyr Zelenskyy",
+        "rpah": "Reza Pahlavi",
+        "mcm": "Maria Corina Machado",
+        "vput": "Vladimir Putin",
+        "mcar": "Mark Carney"
+      }
+    },
+    "KXLEADERNBAREB-26": {
+      "k_title": "Pro Basketball Rebounds Per Game Leader",
+      "p_slug": "nba-2025-26-rpg-leader",
+      "p_title": "NBA Rebounds Per Game Leader",
+      "score": 0.806,
+      "mapping": {
+        "njok": "Nikola Jokic",
+        "vwem": "Victor Wembanyama",
+        "kato": "Karl-Anthony Towns",
+        "izub": "Ivica Zubac",
+        "jdur": "Jalen Duren",
+        "ihar": "Isaiah Hartenstein",
+        "gant": "Giannis Antetokounmpo",
+        "adru": "Deandre Ayton",
+        "kwar": "Kel'el Ware",
+        "rgob": "Rudy Gobert",
+        "dcli": "Donovan Clingan"
+      }
+    },
+    "KXEPLGAME-26APR12CRYNEW": {
+      "k_title": "Crystal Palace vs Newcastle",
+      "p_slug": "epl-cry-new-2026-04-12",
+      "p_title": "Crystal Palace FC vs. Newcastle United FC",
+      "score": 0.806,
+      "mapping": {
+        "cry": "Crystal Palace FC",
+        "new": "Newcastle United FC"
+      }
+    },
+    "KXCHLLDPGAME-26APR04DEPULC": {
+      "k_title": "Deportes Limache vs Union La Calera",
+      "p_slug": "chi1-cdl-cul-2026-04-04",
+      "p_title": "CD Limache vs. CD Unión La Calera",
+      "score": 0.806,
+      "mapping": {
+        "dep": "CD Limache",
+        "ulc": "CD Unión La Calera"
+      }
+    },
+    "KXSEXYMAN-26": {
+      "k_title": "Who will be People's Sexiest Man Alive in 2026?",
+      "p_slug": "peoples-sexiest-man-alive-2026",
+      "p_title": "People's Sexiest Man Alive 2026",
+      "score": 0.805,
+      "mapping": {
+        "mic": "Michael B. Jordan",
+        "rya": "Ryan Gosling",
+        "bad": "Bad Bunny",
+        "tim": "Timothée Chalamet"
+      }
+    },
+    "KXVOTEFEDCHAIR-27": {
+      "k_title": "Which Senators will vote for Kevin Warsh as Fed chair?",
+      "p_slug": "who-will-vote-to-confirm-kevin-warsh-as-fed-chair",
+      "p_title": "Who will vote to confirm Kevin Warsh as Fed Chair?",
+      "score": 0.804,
+      "mapping": {
+        "lmur": "Lisa Murkowski",
+        "jhic": "John Kennedy",
+        "ttil": "Thom Tillis",
+        "kcra": "Kevin Cramer"
+      }
+    },
+    "KXMLBNLMOTY-26": {
+      "k_title": "NL Manager of the Year Winner?",
+      "p_slug": "mlb-nl-manager-of-the-year",
+      "p_title": "MLB: NL Manager of the Year",
+      "score": 0.8,
+      "mapping": {
+        "tlov": "Torey Lovullo",
+        "wwei": "Walt Weiss",
+        "ccou": "Craig Counsell",
+        "tfra": "Terry Francona",
+        "wsch": "Warren Schaeffer",
+        "drob": "Dave Roberts",
+        "cmcc": "Clayton McCullough",
+        "pmur": "Pat Murphy",
+        "cmen": "Carlos Mendoza",
+        "rtho": "Rob Thomson",
+        "dkel": "Don Kelly",
+        "omar": "Oliver Marmol",
+        "csta": "Craig Stammen",
+        "tvit": "Tony Vitello",
+        "bbut": "Blake Butera"
+      }
+    },
+    "KXMLBNLCY-26": {
+      "k_title": "NL Cy Young Winner?",
+      "p_slug": "mlb-2026-nl-cy-young-winner",
+      "p_title": "MLB: 2026 NL Cy Young Winner",
+      "score": 0.8,
+      "mapping": {
+        "pske": "Paul Skenes",
+        "yyam": "Yoshinobu Yamamoto",
+        "csan": "Cristopher Sanchez",
+        "hgre": "Hunter Greene",
+        "csal": "Chris Sale",
+        "bsne": "Blake Snell",
+        "fper": "Freddy Peralta",
+        "zwhe": "Zack Wheeler",
+        "lweb": "Logan Webb",
+        "sstr": "Spencer Strider",
+        "bwoo": "Brandon Woodruff",
+        "jmis": "Jacob Misiorowski",
+        "ssch": "Spencer Schwellenbach",
+        "tgas": "Tyler Glasnow",
+        "jluz": "Jesus Luzardo",
+        "npiv": "Nick Pivetta",
+        "nmcl": "Nolan McLean",
+        "eper": "Eury Perez",
+        "nlod": "Nick Lodolo",
+        "soht": "Shohei Ohtani",
+        "mikel": "Mitch Keller"
+      }
+    },
+    "KXMLBALMOTY-26": {
+      "k_title": "AL Manager of the Year Winner?",
+      "p_slug": "mlb-al-manager-of-the-year",
+      "p_title": "MLB: AL Manager of the Year",
+      "score": 0.8,
+      "mapping": {
+        "mkot": "Mark Kotsay",
+        "calb": "Craig Albernaz",
+        "acor": "Alex Cora",
+        "wven": "Will Venable",
+        "svog": "Stephen Vogt",
+        "ahin": "A.J. Hinch",
+        "jesp": "Joe Espada",
+        "mqua": "Matt Quatraro",
+        "ksuz": "Kurt Suzuki",
+        "dshe": "Derek Shelton",
+        "aboo": "Aaron Boone",
+        "dwil": "Dan Wilson",
+        "kcas": "Kevin Cash",
+        "ssch": "Skip Schumaker",
+        "jsch": "John Schneider"
+      }
+    },
+    "KXMLBALCY-26": {
+      "k_title": "AL Cy Young Winner?",
+      "p_slug": "mlb-2026-al-cy-young-winner",
+      "p_title": "MLB: 2026 AL Cy Young Winner",
+      "score": 0.8,
+      "mapping": {
+        "tsku": "Tarik Skubal",
+        "gcro": "Garrett Crochet",
+        "jdeg": "Jacob deGrom",
+        "crag": "Cole Ragans",
+        "hbro": "Hunter Brown",
+        "mfri": "Max Fried",
+        "bwoo": "Bryan Woo",
+        "lgilb": "Logan Gilbert",
+        "crod": "Carlos Rodón",
+        "dcea": "Dylan Cease",
+        "gkir": "George Kirby",
+        "gwil": "Gavin Williams",
+        "jrya": "Joe Ryan",
+        "kgau": "Kevin Gausman",
+        "neov": "Nathan Eovaldi",
+        "rsua": "Ranger Suarez",
+        "kbra": "Kyle Bradish",
+        "mgor": "MacKenzie Gore",
+        "plop": "Pablo Lopez",
+        "csch": "Cam Schlittler",
+        "jsor": "Jose Soriano",
+        "bmil": "Bryce Miller",
+        "gcol": "Gerrit Cole"
+      }
+    },
+    "KXLEADERNBAAST-26": {
+      "k_title": "Pro Basketball Assists Per Game Leader",
+      "p_slug": "nba-2025-26-apg-leader",
+      "p_title": "NBA Assists Per Game Leader",
+      "score": 0.8,
+      "mapping": {
+        "njok": "Nikola Jokic",
+        "ccun": "Cade Cunningham",
+        "jgid": "Josh Giddey",
+        "ldon": "Luka Doncic",
+        "jhar": "James Harden",
+        "tmax": "Tyrese Maxey",
+        "tyou": "Trae Young",
+        "lbal": "LaMelo Ball"
+      }
+    },
+    "KXMLSGAME-26APR04SJSD": {
+      "k_title": "San Jose vs San Diego FC",
+      "p_slug": "mls-sje-sdg-2026-04-04",
+      "p_title": "San Jose Earthquakes vs. San Diego FC",
+      "score": 0.8,
+      "mapping": {
+        "sj": "San Jose Earthquakes",
+        "sd": "San Diego FC"
+      }
+    },
+    "KXMLSGAME-26APR04NYRBCIN": {
+      "k_title": "New York vs Cincinnati",
+      "p_slug": "mls-nyc-fcc-2026-04-22",
+      "p_title": "New York City FC vs. FC Cincinnati",
+      "score": 0.8,
+      "mapping": {
+        "nyrb": "New York City FC",
+        "cin": "FC Cincinnati"
+      }
+    },
+    "KXLIGUE1GAME-26APR04STBREN": {
+      "k_title": "Stade Brest vs Stade Rennais",
+      "p_slug": "fl1-sbr-ren-2026-04-04",
+      "p_title": "Stade Brestois 29 vs. Stade Rennais FC 1901",
+      "score": 0.8,
+      "mapping": {
+        "stb": "Stade Brestois 29",
+        "ren": "Stade Rennais FC 1901"
+      }
+    },
+    "KXARGPREMDIVGAME-26APR01LANPLA": {
+      "k_title": "Lanus vs Platense",
+      "p_slug": "arg-lan-pla-2026-04-01",
+      "p_title": "CA Lanús vs. CA Platense",
+      "score": 0.8,
+      "mapping": {
+        "lan": "CA Lanús",
+        "pla": "CA Platense"
+      }
+    },
+    "SENATENH-28": {
+      "k_title": "New Hampshire Senate winner? (2028)",
+      "p_slug": "new-hampshire-senate-election-winner",
+      "p_title": "New Hampshire Senate Election Winner",
+      "score": 0.794,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "KXLEADERNBASTL-26": {
+      "k_title": "Pro Basketball Steals Per Game Leader",
+      "p_slug": "nba-2025-26-spg-leader",
+      "p_title": "NBA Steals Per Game Leader",
+      "score": 0.794,
+      "mapping": {
+        "cwal": "Cason Wallace",
+        "ddan": "Dyson Daniels",
+        "mbri": "Mikal Bridges",
+        "ldon": "Luka Doncic",
+        "oanu": "OG Anunoby",
+        "tjon": "Herbert Jones",
+        "jbut": "Jimmy Butler",
+        "atho": "Ausar Thompson",
+        "acar": "Alex Caruso",
+        "jjoh": "Jaren Jackson Jr.",
+        "tmax": "Tyrese Maxey",
+        "kleo": "Kawhi Leonard",
+        "kpor": "Kelly Oubre Jr."
+      }
+    },
+    "KXLEADERNBAPTS-26": {
+      "k_title": "Pro Basketball Points Per Game Leader",
+      "p_slug": "nba-2025-26-ppg-leader",
+      "p_title": "NBA Points Per Game Leader",
+      "score": 0.794,
+      "mapping": {
+        "ldon": "Luka Doncic",
+        "tmax": "Tyrese Maxey",
+        "sgal": "Shai Gilgeous-Alexander",
+        "gant": "Giannis Antetokounmpo",
+        "dmit": "Donovan Mitchell",
+        "lmar": "Lauri Markkanen",
+        "scur": "Stephen Curry",
+        "jbru": "Jalen Brunson",
+        "jbro": "Jaylen Brown",
+        "njok": "Nikola Jokic",
+        "jhar": "James Harden",
+        "ccun": "Cade Cunningham",
+        "aedw": "Anthony Edwards",
+        "ljam": "LeBron James"
+      }
+    },
+    "KXLEADERNBABLK-26": {
+      "k_title": "Pro Basketball Blocks Per Game Leader",
+      "p_slug": "nba-2025-26-bpg-leader",
+      "p_title": "NBA Blocks Per Game Leader",
+      "score": 0.794,
+      "mapping": {
+        "vwem": "Victor Wembanyama",
+        "iste": "Isaiah Stewart",
+        "jhuf": "Jay Huff",
+        "asar": "Alexandre Sarr",
+        "rgob": "Rudy Gobert",
+        "jjac": "Jaren Jackson Jr.",
+        "emob": "Evan Mobley",
+        "mtur": "Myles Turner"
+      }
+    },
+    "KXEPLGAME-26APR12NFOAVL": {
+      "k_title": "Nottingham vs Aston Villa",
+      "p_slug": "epl-not-ast-2026-04-12",
+      "p_title": "Nottingham Forest FC vs. Aston Villa FC",
+      "score": 0.794,
+      "mapping": {
+        "nfo": "Nottingham Forest FC",
+        "avl": "Aston Villa FC"
+      }
+    },
+    "KXMLBNLROTY-26": {
+      "k_title": "NL Rookie of the Year Winner?",
+      "p_slug": "mlb-nl-rookie-of-the-year",
+      "p_title": "MLB: NL Rookie of the Year",
+      "score": 0.792,
+      "mapping": {
+        "nmcl": "Nolan McLean",
+        "sste": "Sal Stewart",
+        "jwet": "JJ Wetherholt",
+        "mbal": "Moises Ballesteros",
+        "bcha": "Bubba Chandler",
+        "jcra": "Justin Crawford",
+        "beld": "Bryce Eldridge",
+        "kgri": "Konnor Griffin",
+        "ocai": "Owen Caissie",
+        "jton": "Jonah Tong",
+        "cben": "Carson Benge",
+        "rlow": "Rhett Lowder",
+        "apai": "Andrew Painter",
+        "jwil": "Jett Williams",
+        "rsne": "Robby Snelling",
+        "ccon": "Charlie Condon",
+        "zvee": "Zac Veen",
+        "rwal": "Ryan Waldschmidt"
+      }
+    },
+    "KXMLBALROTY-26": {
+      "k_title": "AL Rookie of the Year Winner?",
+      "p_slug": "mlb-al-rookie-of-the-year",
+      "p_title": "MLB: AL Rookie of the Year",
+      "score": 0.792,
+      "mapping": {
+        "tyes": "Trey Yesavage",
+        "mmur": "Munetaka Murakami",
+        "koka": "Kazuma Okamoto",
+        "tima": "Tatsuya Imai",
+        "kmcg": "Kevin McGonigle",
+        "cjen": "Carter Jensen",
+        "sbas": "Samuel Basallo",
+        "cear": "Connelly Early",
+        "cdel": "Chase DeLauter",
+        "wjen": "Walker Jenkins",
+        "tbaz": "Travis Bazzana",
+        "ceme": "Colt Emerson",
+        "ptol": "Payton Tolle",
+        "bmat": "Brice Matthews",
+        "sjon": "Spencer Jones",
+        "cwil": "Carson Williams",
+        "mcla": "Max Clark"
+      }
+    },
+    "KXEPL1H-26APR13MUNLEE": {
+      "k_title": "Manchester United vs Leeds United: First Half Winner",
+      "p_slug": "epl-mun-lee-2026-04-13-halftime-result",
+      "p_title": "Manchester United FC vs. Leeds United FC - Halftime Result",
+      "score": 0.792,
+      "mapping": {
+        "mun": "Manchester United FC",
+        "lee": "Leeds United FC"
+      }
+    },
+    "KXALEAGUESPREAD-26APR04MELWES": {
+      "k_title": "Western Sydney Wanderers at Melbourne City: Spreads",
+      "p_slug": "aus-wsw-vic-2026-04-25",
+      "p_title": "Western Sydney Wanderers FC vs. Melbourne Victory FC",
+      "score": 0.792,
+      "mapping": {
+        "wes1": "Western Sydney Wanderers FC",
+        "wes2": "Draw (Western Sydney Wanderers FC vs. Melbourne Victory FC)"
+      }
+    },
+    "KXJLEAGUEGAME-26APR04GAMKYO": {
+      "k_title": "Gamba vs Kyoto Sanga",
+      "p_slug": "j1100-gam-kyo-2026-04-04",
+      "p_title": "Gamba Ōsaka vs. Kyōto Sanga FC",
+      "score": 0.792,
+      "mapping": {
+        "gam": "Gamba Ōsaka",
+        "kyo": "Kyōto Sanga FC"
+      }
+    },
+    "KXEFLCHAMPIONSHIPGAME-26APR03NORPOR": {
+      "k_title": "Norwich vs Portsmouth",
+      "p_slug": "elc-nor-por-2026-04-03",
+      "p_title": "Norwich City FC vs. Portsmouth FC",
+      "score": 0.792,
+      "mapping": {
+        "nor": "Norwich City FC",
+        "por": "Portsmouth FC"
+      }
+    },
+    "KXBRASILEIROGAME-26APR05CORINT": {
+      "k_title": "Corinthians vs Internacional",
+      "p_slug": "bra-cor1-int-2026-04-05",
+      "p_title": "SC Corinthians Paulista vs. SC Internacional",
+      "score": 0.789,
+      "mapping": {
+        "cor": "SC Corinthians Paulista",
+        "int": "SC Internacional"
+      }
+    },
+    "SENATESD-28": {
+      "k_title": "South Dakota Senate winner? (2028)",
+      "p_slug": "south-dakota-senate-election-winner",
+      "p_title": "South Dakota Senate Election Winner",
+      "score": 0.788,
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    "KXBUNDESLIGAGAME-26APR05UNISTP": {
+      "k_title": "Union Berlin vs St. Pauli",
+      "p_slug": "bun-uni-pau-2026-04-05",
+      "p_title": "1. FC Union Berlin vs. FC St. Pauli 1910",
+      "score": 0.787,
+      "mapping": {
+        "uni": "1. FC Union Berlin",
+        "stp": "FC St. Pauli 1910"
+      }
+    },
+    "KXLALIGAGAME-26APR04RSOLEV": {
+      "k_title": "Real Sociedad vs Levante",
+      "p_slug": "lal-rso-lev-2026-04-04",
+      "p_title": "Real Sociedad de Fútbol vs. Levante UD",
+      "score": 0.787,
+      "mapping": {
+        "rso": "Real Sociedad de Fútbol",
+        "lev": "Levante UD"
+      }
+    },
+    "KXLALIGA2GAME-26APR02RSOEIB": {
+      "k_title": "Real Sociedad B vs Eibar",
+      "p_slug": "es2-rso-eib-2026-04-02",
+      "p_title": "Real Sociedad de Fútbol B vs. SD Eibar",
+      "score": 0.787,
+      "mapping": {
+        "rso": "Real Sociedad de Fútbol B",
+        "eib": "SD Eibar"
+      }
+    },
+    "KXBRASILEIROGAME-26APR05MIRRBB": {
+      "k_title": "Mirassol vs Bragantino",
+      "p_slug": "bra-mir-bra-2026-04-05",
+      "p_title": "Mirassol FC vs. Red Bull Bragantino",
+      "score": 0.786,
+      "mapping": {
+        "mir": "Mirassol FC",
+        "rbb": "Red Bull Bragantino"
+      }
+    },
+    "KXNWSLGAME-26APR03UROCHI": {
+      "k_title": "Utah Royals vs Chicago",
+      "p_slug": "nwsl-roy-chi-2026-04-03",
+      "p_title": "Utah Royals FC vs. Chicago Stars FC",
+      "score": 0.786,
+      "mapping": {
+        "uro": "Utah Royals FC",
+        "chi": "Chicago Stars FC"
+      }
+    },
+    "KXCHNSLGAME-26APR03CHRQWC": {
+      "k_title": "Chengdu Rongcheng vs Qingdao West Coast FC",
+      "p_slug": "chi-ron-qin-2026-04-03",
+      "p_title": "Chengdu Rongcheng FC vs. Qingdao Xihaian FC",
+      "score": 0.786,
+      "mapping": {
+        "chr": "Chengdu Rongcheng FC",
+        "qwc": "Qingdao Xihaian FC"
+      }
+    },
+    "KXBRASILEIROGAME-26APR02RBBFLA": {
+      "k_title": "Bragantino vs Flamengo",
+      "p_slug": "bra-bra-fla-2026-04-02",
+      "p_title": "Red Bull Bragantino vs. CR Flamengo",
+      "score": 0.786,
+      "mapping": {
+        "rbb": "Red Bull Bragantino",
+        "fla": "CR Flamengo"
+      }
+    },
+    "KXSERIEAGAME-26APR05CREBFC": {
+      "k_title": "Cremonese vs Bologna",
+      "p_slug": "sea-cre-bol-2026-04-05",
+      "p_title": "US Cremonese vs. Bologna FC 1909",
+      "score": 0.784,
+      "mapping": {
+        "cre": "US Cremonese",
+        "bfc": "Bologna FC 1909"
+      }
+    },
+    "KXBRASILEIROGAME-26APR02PALGPA": {
+      "k_title": "Palmeiras vs Gremio",
+      "p_slug": "bra-pal-gre-2026-04-02",
+      "p_title": "SE Palmeiras vs. Grêmio FBPA",
+      "score": 0.783,
+      "mapping": {
+        "pal": "SE Palmeiras",
+        "gpa": "Grêmio FBPA"
+      }
+    },
+    "KXLALIGA2GAME-26APR02LEGZAR": {
+      "k_title": "Leganes vs Zaragoza",
+      "p_slug": "es2-leg-zar-2026-04-02",
+      "p_title": "CD Leganés vs. Real Zaragoza",
+      "score": 0.783,
+      "mapping": {
+        "leg": "CD Leganés",
+        "zar": "Real Zaragoza"
+      }
+    },
+    "KXMLSGAME-26APR04NYCSTL": {
+      "k_title": "New York City vs Saint Louis",
+      "p_slug": "mls-nyc-stl-2026-04-04",
+      "p_title": "New York City FC vs. St. Louis City SC",
+      "score": 0.781,
+      "mapping": {
+        "nyc": "New York City FC",
+        "stl": "St. Louis City SC"
+      }
+    },
+    "KXDENSUPERLIGAGAME-26APR04FCMSON": {
+      "k_title": "Midtjylland vs Soenderjyske",
+      "p_slug": "den-mid-sjs-2026-04-04",
+      "p_title": "FC Midtjylland vs. Sønderjyske Fodbold",
+      "score": 0.781,
+      "mapping": {
+        "fcm": "FC Midtjylland",
+        "son": "Sønderjyske Fodbold"
+      }
+    },
+    "KXBUNDESLIGAGAME-26APR04LEVWOB": {
+      "k_title": "Leverkusen vs Wolfsburg",
+      "p_slug": "bun-b04-wol-2026-04-04",
+      "p_title": "Bayer 04 Leverkusen vs. VfL Wolfsburg",
+      "score": 0.78,
+      "mapping": {
+        "lev": "Bayer 04 Leverkusen",
+        "wob": "VfL Wolfsburg"
+      }
+    },
+    "KXBUNDESLIGAGAME-26APR05SGEKOE": {
+      "k_title": "Frankfurt vs FC Köln",
+      "p_slug": "bun-ein-koe-2026-04-05",
+      "p_title": "Eintracht Frankfurt vs. 1. FC Köln",
+      "score": 0.769,
+      "mapping": {
+        "sge": "Eintracht Frankfurt",
+        "koe": "1. FC Köln"
+      }
+    },
+    "KXCHLLDPGAME-26APR03COQCOB": {
+      "k_title": "Coquimbo vs Cobresal",
+      "p_slug": "chi1-ccu-cdc-2026-04-03",
+      "p_title": "CD Coquimbo Unido vs. CD Cobresal",
+      "score": 0.769,
+      "mapping": {
+        "coq": "CD Coquimbo Unido",
+        "cob": "CD Cobresal"
+      }
+    },
+    "KXBRASILEIROGAME-26APR01FLUCOR": {
+      "k_title": "Fluminense vs Corinthians",
+      "p_slug": "bra-flu-cor1-2026-04-01",
+      "p_title": "Fluminense FC vs. SC Corinthians Paulista",
+      "score": 0.769,
+      "mapping": {
+        "flu": "Fluminense FC",
+        "cor": "SC Corinthians Paulista"
+      }
+    },
+    "KXDIMAYORGAME-26APR01ALIPAS": {
+      "k_title": "Alianza FC Valledupar vs Pasto",
+      "p_slug": "col1-alf-adp-2026-04-01",
+      "p_title": "Alianza FC vs. AD Pasto",
+      "score": 0.769,
+      "mapping": {
+        "ali": "Draw (Alianza FC vs. AD Pasto)",
+        "pas": "AD Pasto"
+      }
+    },
+    "KXLALIGA2GAME-26APR01BURCEU": {
+      "k_title": "Burgos vs Ceuta",
+      "p_slug": "es2-bur-ceu-2026-04-01",
+      "p_title": "Burgos CF vs. AD Ceuta FC",
+      "score": 0.769,
+      "mapping": {
+        "bur": "Burgos CF",
+        "ceu": "AD Ceuta FC"
+      }
+    },
+    "KXLALIGA2GAME-26APR04ALBBUR": {
+      "k_title": "Albacete vs Burgos",
+      "p_slug": "es2-alb-bur-2026-04-04",
+      "p_title": "Albacete Balompié vs. Burgos CF",
+      "score": 0.766,
+      "mapping": {
+        "alb": "Albacete Balompié",
+        "bur": "Burgos CF"
+      }
+    },
+    "KXKLEAGUEGAME-26APR04JEJBUC": {
+      "k_title": "Jeju SK vs Bucheon",
+      "p_slug": "kor-jej-bch-2026-04-04",
+      "p_title": "Jeju SK FC vs. Bucheon FC 1995",
+      "score": 0.766,
+      "mapping": {
+        "jej": "Jeju SK FC",
+        "buc": "Bucheon FC 1995"
+      }
+    },
+    "KXGOVCA-26": {
+      "k_title": "California Governor winner? (Person)",
+      "p_slug": "california-governor-election-2026",
+      "p_title": "California Governor Election Winner",
+      "score": 0.765,
+      "mapping": {
+        "tatk": "Toni Atkins",
+        "klan": "Kyle Langford",
+        "xbec": "Xavier Becerra",
+        "rcar": "Rick Caruso",
+        "cbia": "Chad Bianco",
+        "avil": "Antonio Villaraigosa",
+        "sclo": "Stephen Cloobeck",
+        "shil": "Steve Hilton",
+        "ekou": "Eleni Kounalakis",
+        "dmer": "Daniel Mercuri",
+        "kpor": "Katie Porter",
+        "tthu": "Tony Thurmond",
+        "bwar": "Butch Ware",
+        "byee": "Betty Yee",
+        "myou": "Michael Younger",
+        "lzac": "Leo Zacky",
+        "nic": "Nicole Shanahan",
+        "alex": "Alex Padilla",
+        "khar": "Kamala Harris",
+        "tste": "Tom Steyer",
+        "eswa": "Eric Swalwell",
+        "mmah": "Matt Mahan"
+      }
+    },
+    "KXUCL1H-26APR07SPOARS": {
+      "k_title": "Sporting CP vs Arsenal: First Half Winner",
+      "p_slug": "ucl-spo1-ars-2026-04-07-halftime-result",
+      "p_title": "Sporting CP vs. Arsenal FC - Halftime Result",
+      "score": 0.765,
+      "mapping": {
+        "spo": "Sporting CP",
+        "ars": "Arsenal FC"
+      }
+    },
+    "KXNY12D-26": {
+      "k_title": "NY-12 Democratic nominee?",
+      "p_slug": "who-will-be-the-democratic-nominee-for-ny-12",
+      "p_title": "NY-12 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "mlas": "Micah Lasher",
+        "ebot": "Erik Bottcher",
+        "jmen": "Julie Menin",
+        "abor": "Alex Bores",
+        "lelk": "Liam Elkind",
+        "cmal": "Carolyn Maloney",
+        "lkha": "Lina Khan",
+        "jsch": "Jack Schlossberg",
+        "ckas": "Cameron Kasky",
+        "gcon": "George Conway",
+        "bhoy": "Brad Hoylman-Sigal",
+        "sstr": "Scott Stringer",
+        "kpow": "Keith Powers",
+        "lkru": "Liz Krueger",
+        "gbre": "Gale Brewer",
+        "ccli": "Chelsea Clinton",
+        "acuo": "Andrew Cuomo",
+        "cnix": "Cynthia Nixon",
+        "blan": "Brad Lander"
+      }
+    },
+    "KXUT1D-26": {
+      "k_title": "UT-01 Democratic nominee?",
+      "p_slug": "ut-01-democratic-primary-winner",
+      "p_title": "UT-01 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "bmca": "Ben McAdams",
+        "krie": "Kathleen Riebe",
+        "nblo": "Nate Blouin",
+        "cgle": "Caroline Gleich",
+        "kwes": "Kael Weston",
+        "emen": "Erin Mendenhall",
+        "jwil": "Jenny Wilson",
+        "bkin": "Brian King",
+        "lesc": "Luz Escamilla"
+      }
+    },
+    "KXTXPRIMARY-38R26": {
+      "k_title": "TX-38 Republican nominee?",
+      "p_slug": "tx-38-republican-primary-winner",
+      "p_title": "TX-38 Republican Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "aaye": "Avery Ayers",
+        "jbon": "Jon Bonck",
+        "sdez": "Shelly deZevallos",
+        "cgor": "Craig Goralski",
+        "bmcn": "Barrett McNabb",
+        "cmon": "Carmen Montiel",
+        "mpra": "Michael Pratt",
+        "lrub": "Larry Rubin",
+        "jsun": "Jennifer Sundt",
+        "jyun": "Jeff Yuna"
+      }
+    },
+    "KXTX33D-26": {
+      "k_title": "TX-33 Democratic nominee?",
+      "p_slug": "tx-33-democratic-primary-winner",
+      "p_title": "TX-33 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "call": "Colin Allred",
+        "jjoh": "Julie Johnson",
+        "zhaf": "Zeeshan Hafeez"
+      }
+    },
+    "KXTNPRIMARY-09D26": {
+      "k_title": "TN-09 Democratic nominee?",
+      "p_slug": "tn-09-democratic-primary-winner",
+      "p_title": "TN-09 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "scoh": "Steve Cohen",
+        "jpea": "Justin Pearson"
+      }
+    },
+    "KXPAPRIMARY-10D26": {
+      "k_title": "PA-10 Democratic nominee?",
+      "p_slug": "pa-10-democratic-primary-winner-877",
+      "p_title": "PA-10 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "jste": "Janelle Stelson",
+        "jdou": "Justin Douglas"
+      }
+    },
+    "KXOHPRIMARY-01R26": {
+      "k_title": "OH-01 Republican nominee?",
+      "p_slug": "oh-01-republican-primary-winner",
+      "p_title": "OH-01 Republican Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "econ": "Eric Conroy",
+        "serb": "Steven Erbeck",
+        "rogl": "Rosemary Oglesby-Henry",
+        "hada": "Holly Adams"
+      }
+    },
+    "KXNY8D-26": {
+      "k_title": "NY-08 Democratic nominee?",
+      "p_slug": "ny-8-democratic-primary-winner",
+      "p_title": "NY-08 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "hjef": "Hakeem Jeffries",
+        "coss": "Chi Ossé",
+        "vbos": "Vance Bostic"
+      }
+    },
+    "KXNY7D-26": {
+      "k_title": "NY-07 Democratic nominee?",
+      "p_slug": "ny-07-democratic-primary-winner",
+      "p_title": "NY-07 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "arey": "Antonio Reynoso",
+        "jsal": "Julia Salazar",
+        "kgon": "Kristen Gonzalez",
+        "jgut": "Jennifer Gútierrez",
+        "jwon": "Julie Won",
+        "snur": "Sandy Nurse",
+        "lres": "Lincoln Restler",
+        "tcab": "Tiffany Cabán",
+        "cval": "Claire Valdez"
+      }
+    },
+    "KXNY17D-26": {
+      "k_title": "NY-17 Democratic nominee?",
+      "p_slug": "who-will-be-the-democratic-nominee-for-ny-17",
+      "p_title": "NY-17 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "ccon": "Cait Conley",
+        "bdav": "Beth Davidson",
+        "ephi": "Effie Phillips-Staley",
+        "jrei": "Jessica Reinmann",
+        "msac": "Mike Sacks",
+        "jsul": "John Sullivan",
+        "jcap": "John Cappello",
+        "pcha": "Peter Chatzky"
+      }
+    },
+    "KXNY15D-26": {
+      "k_title": "NY-15 Democratic nominee?",
+      "p_slug": "ny-15-democratic-primary-winner",
+      "p_title": "NY-15 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "rtor": "Ritchie Torres",
+        "mbla": "Michael Blake"
+      }
+    },
+    "KXNY10D-26": {
+      "k_title": "NY-10 Democratic nominee?",
+      "p_slug": "ny-10-democratic-primary-winner",
+      "p_title": "NY-10 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "dgol": "Dan Goldman",
+        "aavi": "Alexa Avilés",
+        "blan": "Brad Lander",
+        "ynio": "Yuh-Line Niou",
+        "ckas": "Cameron Kasky"
+      }
+    },
+    "KXMO01D-26": {
+      "k_title": "MO-01 Democratic nominee?",
+      "p_slug": "mo-01-democratic-primary-winner",
+      "p_title": "MO-01 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "wbel": "Wesley Bell",
+        "cbus": "Cori Bush"
+      }
+    },
+    "KXME02D-26": {
+      "k_title": "ME-02 Democratic nominee?",
+      "p_slug": "who-will-be-the-democratic-nominee-for-me-02",
+      "p_title": "ME-02 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "jgol": "Jared Golden",
+        "mdun": "Matthew Dunlap",
+        "jbal": "Joe Baldacci",
+        "jwoo": "Jordan Wood"
+      }
+    },
+    "KXLAPRIMARY-05R26": {
+      "k_title": "LA-05 Republican nominee?",
+      "p_slug": "la-05-republican-primary-winner",
+      "p_title": "LA-05 Republican Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "mcor": "Misti Cordell",
+        "mech": "Michael Echols",
+        "redm": "Rick Edmonds",
+        "amag": "Austin Magee",
+        "mmeb": "Michael Mebruer",
+        "bmig": "Blake Miguez",
+        "swya": "Samuel Wyatt"
+      }
+    },
+    "KXKYPRIMARY-06R26": {
+      "k_title": "KY-06 Republican nominee?",
+      "p_slug": "ky-06-republican-primary-winner",
+      "p_title": "KY-06 Republican Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "ralv": "Ralph Alvarado",
+        "aarq": "Adam Perez Arquette",
+        "rdot": "Ryan Dotson",
+        "gplu": "Greg Plucinski"
+      }
+    },
+    "KXINPRIMARY-07D26": {
+      "k_title": "IN-07 Democratic nominee?",
+      "p_slug": "in-07-democratic-primary-winner",
+      "p_title": "IN-07 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "acar": "André Carson",
+        "dwel": "Destiny Scott Wells",
+        "dhat": "Denise Paul Hatch",
+        "ghor": "George Hornedo"
+      }
+    },
+    "KXINPRIMARY-04R26": {
+      "k_title": "IN-04 Republican nominee?",
+      "p_slug": "in-04-republican-primary-winner",
+      "p_title": "IN-04 Republican Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "jbai": "Jim Baird",
+        "chag": "Craig Haggard",
+        "jpip": "John Piper"
+      }
+    },
+    "KXGAPRIMARY-05D26": {
+      "k_title": "GA-05 Democratic nominee?",
+      "p_slug": "ga-05-democratic-primary-winner-539",
+      "p_title": "GA-05 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "nwil": "Nikema Williams",
+        "abea": "Arnetress Beatty"
+      }
+    },
+    "KXFLPRIMARY-23D26": {
+      "k_title": "FL-23 Democratic nominee?",
+      "p_slug": "fl-23-democratic-primary-winner",
+      "p_title": "FL-23 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "jmos": "Jared Moskowitz",
+        "olar": "Oliver Adams Larkin"
+      }
+    },
+    "KXAZ01R-26": {
+      "k_title": "AZ-01 Republican nominee?",
+      "p_slug": "az-01-republican-primary-winner",
+      "p_title": "AZ-01 Republican Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "mgre": "Matt Gress",
+        "jdue": "Jason Duey",
+        "jcha": "Joseph Chaplik",
+        "gswo": "Gina Swoboda",
+        "muge": "Muchelle Ugenti-Rita",
+        "tgra": "Todd Graham",
+        "mbrn": "Mark Brnovich",
+        "klak": "Kari Lake",
+        "jfee": "Jay Feely"
+      }
+    },
+    "KXALPRIMARY-01R26": {
+      "k_title": "AL-01 Republican nominee?",
+      "p_slug": "al-01-republican-primary-winner",
+      "p_title": "AL-01 Republican Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "jcar": "Jerry Carl",
+        "jdee": "James Dees",
+        "rmar": "Rhett Marques",
+        "jmck": "Joshua McKee",
+        "asid": "Austin Sidwell",
+        "jmil": "John Mills",
+        "jric": "James Richardson"
+      }
+    },
+    "KXMA6D-26": {
+      "k_title": "MA-06 Democratic nominee?",
+      "p_slug": "ma-06-democratic-primary-winner",
+      "p_title": "MA-06 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "smou": "Seth Moulton",
+        "dkoh": "Dan Koh",
+        "tngu": "Tram Nguyen",
+        "band": "Beth Andres-Beck",
+        "jbec": "John Beccia",
+        "jbel": "Jamie Zahlaway Belsito",
+        "rjak": "Rick Jakious",
+        "dpan": "Dominick Pangallo"
+      }
+    },
+    "KXAZ5R-26": {
+      "k_title": "AZ-05 Republican nominee?",
+      "p_slug": "az-05-republican-primary-winner",
+      "p_title": "AZ-05 Republican Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "tgra": "Travis Grantham",
+        "mlam": "Mark Lamb",
+        "jfee": "Jay Feely"
+      }
+    },
+    "KXFL19R-26": {
+      "k_title": "FL-19 Republican nominee?",
+      "p_slug": "fl-19-republican-primary-winner",
+      "p_title": "FL-19 Republican Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "mcaw": "Madison Cawthorn",
+        "brom": "Bob Rommel",
+        "sroa": "Spencer Roach",
+        "jobe": "Jim Oberweis",
+        "clau": "Catalina Lauf"
+      }
+    },
+    "KXMN2D-26": {
+      "k_title": "MN-02 Democratic nominee?",
+      "p_slug": "who-will-be-the-democratic-nominee-for-mn-02",
+      "p_title": "MN-02 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "mkle": "Matt Klein",
+        "mlit": "Matt Little",
+        "kber": "Kaela Berg"
+      }
+    },
+    "KXNH1D-26": {
+      "k_title": "NH-01 Democratic nominee?",
+      "p_slug": "nh-01-democratic-primary-winner",
+      "p_title": "NH-01 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "msul": "Maura Sullivan",
+        "ssha": "Stefany Shaheen",
+        "cber": "Carleigh Beriont"
+      }
+    },
+    "KXMI11D-26": {
+      "k_title": "MI-11 Democratic nominee?",
+      "p_slug": "mi-11-democratic-primary-winner",
+      "p_title": "MI-11 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "jmos": "Jeremy Moss",
+        "alev": "Andy Levin",
+        "dwoo": "Dave Woodward",
+        "afar": "Aisha Farooqi"
+      }
+    },
+    "KXCO03R-26": {
+      "k_title": "CO-03 Republican nominee?",
+      "p_slug": "co-03-republican-primary-winner",
+      "p_title": "CO-03 Republican Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "jhur": "Jeff Hurd",
+        "hsch": "Hope Scheppelman"
+      }
+    },
+    "KXCO8D-26": {
+      "k_title": "CO-08 Democratic nominee?",
+      "p_slug": "co-08-democratic-primary-winner",
+      "p_title": "CO-08 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "ycar": "Yadira Caraveo",
+        "mrut": "Manny Rutinel",
+        "abac": "Amie Baca-Oehlert",
+        "sbir": "Shannon Bird",
+        "jsze": "John Szemler",
+        "dyou": "Dave Young"
+      }
+    },
+    "KXSC01R-26": {
+      "k_title": "SC-01 Republican nominee?",
+      "p_slug": "sc-01-republican-primary-winner",
+      "p_title": "SC-01 Republican Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "msmi": "Mark Smith",
+        "jbya": "Jay Byars",
+        "lcun": "Logan Cunningham",
+        "jhon": "Jenny Costa Honeycutt",
+        "smcc": "Sam McCown",
+        "jmye": "Justin Myers",
+        "apel": "Alex Pelbath"
+      }
+    },
+    "KXPA3D-26": {
+      "k_title": "PA-03 Democratic nominee?",
+      "p_slug": "pa-03-democratic-primary-winner",
+      "p_title": "PA-03 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "gcac": "Gabriel Caceres",
+        "doxm": "David Oxman",
+        "rtol": "Robin Toldens",
+        "sstr": "Sharif Street",
+        "mcep": "Morgan Cephas",
+        "crab": "Chris Rabb",
+        "asta": "Ala Stanford"
+      }
+    },
+    "KXPA07D-26": {
+      "k_title": "PA-07 Democratic nominee?",
+      "p_slug": "pa-07-democratic-primary-winner",
+      "p_title": "PA-07 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "bbro": "Bob Brooks",
+        "coba": "Carol Obando-Derstine",
+        "lmcc": "Lamont McClure",
+        "rcro": "Ryan Crosswell"
+      }
+    },
+    "KXKY4R-26": {
+      "k_title": "KY-04 Republican nominee?",
+      "p_slug": "ky-04-republican-primary-winner",
+      "p_title": "KY-04 Republican Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "rwel": "Robert Wells Jr.",
+        "tmas": "Thomas Massie",
+        "nlee": "Nicole Lee Ethington",
+        "egal": "Ed Gallrein"
+      }
+    },
+    "KXGAPRIMARY-13D26": {
+      "k_title": "GA-13 Democratic nominee?",
+      "p_slug": "ga-13-democratic-primary-winner",
+      "p_title": "GA-13 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "dsco": "David Scott",
+        "ebla": "Everton Blair Jr.",
+        "jcla": "Jasmine Clark",
+        "jfau": "Jeffree Fauntleroy Sr.",
+        "ejon": "Emanuel Jones",
+        "hkim": "Heavenly Kimes",
+        "jles": "Joe Lester",
+        "pwha": "Pierre Whatley"
+      }
+    },
+    "KXGAPRIMARY-09R26": {
+      "k_title": "GA-09 Republican nominee?",
+      "p_slug": "ga-09-republican-primary-winner",
+      "p_title": "GA-09 Republican Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "acly": "Andrew Clyde",
+        "scou": "Sam Couvillon",
+        "gpoo": "Gregg Poole"
+      }
+    },
+    "KXGAPRIMARY-01R26": {
+      "k_title": "GA-01 Republican nominee?",
+      "p_slug": "ga-01-republican-primary-winner",
+      "p_title": "GA-01 Republican Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "pfar": "Patrick Farrell",
+        "jkin": "James Kingston",
+        "bmon": "Brian Montgomery",
+        "kpen": "Krista Penn",
+        "ktay": "Kandiss Taylor",
+        "eyu": "Eugene Yu"
+      }
+    },
+    "KXOH9R-26": {
+      "k_title": "OH-09 Republican nominee?",
+      "p_slug": "oh-09-republican-primary-winner",
+      "p_title": "OH-09 Republican Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "dmer": "Derek Merrin",
+        "anad": "Alea Nadeem",
+        "mshe": "Madison Sheahan",
+        "jwil": "Josh Williams",
+        "acam": "Anthony Campbell"
+      }
+    },
+    "KXTX18D-26": {
+      "k_title": "TX-18 Democratic nominee?",
+      "p_slug": "tx-18-democratic-primary-winner",
+      "p_title": "TX-18 Democratic Primary Winner",
+      "score": 0.764,
+      "mapping": {
+        "agre": "Al Green",
+        "cmen": "Christian Menefee",
+        "aedw": "Amanda Edwards",
+        "gbro": "Gretchen Brown"
+      }
+    },
+    "KXNEXTISRAELPM-45JAN01": {
+      "k_title": "Who will be the next new Prime Minister of Israel?",
+      "p_slug": "who-will-be-the-next-prime-minister-of-israel-after-the-next-election",
+      "p_title": "Who will be the next Prime Minister of Israel after the next election?",
+      "score": 0.763,
+      "mapping": {
+        "nben": "Naftali Bennett",
+        "ygal": "Yair Golan",
+        "ylev": "Yariv Levin",
+        "bgan": "Benny Gantz",
+        "ylap": "Yair Lapid",
+        "geis": "Gadi Eizenkot",
+        "ycoh": "Yossi Cohen",
+        "alie": "Avigdor Lieberman",
+        "iben": "Itamar Ben Gvir"
+      }
+    },
+    "KXEFLCHAMPIONSHIPGAME-26APR03CHABRC": {
+      "k_title": "Charlton vs Bristol City",
+      "p_slug": "elc-cha-bri-2026-04-03",
+      "p_title": "Charlton Athletic FC vs. Bristol City FC",
+      "score": 0.762,
+      "mapping": {
+        "cha": "Charlton Athletic FC",
+        "brc": "Bristol City FC"
+      }
+    },
+    "KXUCLWGAME-26APR02BARRMA": {
+      "k_title": "Barcelona vs Real Madrid",
+      "p_slug": "uwcl-fcb-rma-2026-04-02",
+      "p_title": "FC Barcelona vs. Real Madrid CF Femenino",
+      "score": 0.762,
+      "mapping": {
+        "bar": "FC Barcelona",
+        "rma": "Real Madrid CF Femenino"
+      }
+    },
+    "KXEPL1H-26APR12CFCMCI": {
+      "k_title": "Chelsea vs Manchester City: First Half Winner",
+      "p_slug": "epl-che-mac-2026-04-12-halftime-result",
+      "p_title": "Chelsea FC vs. Manchester City FC - Halftime Result",
+      "score": 0.761,
+      "mapping": {
+        "cfc": "Chelsea FC",
+        "mci": "Manchester City FC"
+      }
+    },
+    "KXUCLGAME-26APR15ARSSPO": {
+      "k_title": "Arsenal vs Sporting CP",
+      "p_slug": "fpd-pun-spo-2026-04-19",
+      "p_title": "Puntarenas FC vs. Sporting FC",
+      "score": 0.76,
+      "mapping": {
+        "spo": "Sporting FC"
+      }
+    },
+    "SENATEOK-28": {
+      "k_title": "Oklahoma Senate winner? (2028)",
+      "p_slug": "oklahoma-senate-election-winner",
+      "p_title": "Oklahoma Senate Election Winner",
+      "score": 0.759,
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    "SENATEIL-28": {
+      "k_title": "Illinois Senate winner? (2028)",
+      "p_slug": "illinois-senate-election-winner",
+      "p_title": "Illinois Senate Election Winner",
+      "score": 0.759,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "SENATECO-28": {
+      "k_title": "Colorado Senate winner? (2028)",
+      "p_slug": "colorado-senate-election-winner",
+      "p_title": "Colorado Senate Election Winner",
+      "score": 0.759,
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    "SENATEAR-28": {
+      "k_title": "Arkansas Senate winner? (2028)",
+      "p_slug": "arkansas-senate-election-winner",
+      "p_title": "Arkansas Senate Election Winner",
+      "score": 0.759,
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    "KXMLBNLRELOTY-26": {
+      "k_title": "NL Reliever of the Year Winner?",
+      "p_slug": "nba-2025-26-clutch-player-of-the-year",
+      "p_title": "NBA Clutch Player of the Year Winner",
+      "score": 0.758,
+      "mapping": {
+        "jdur": "Kevin Durant",
+        "rwal": "Franz Wagner",
+        "kgin": "Devin Booker"
+      }
+    },
+    "KXTOPAI-27": {
+      "k_title": "Which companies will have a top-ranked AI model this year?",
+      "p_slug": "which-companies-will-have-a-1-ai-model-by-june-30",
+      "p_title": "Which companies will have a #1 AI model by June 30?",
+      "score": 0.755,
+      "mapping": {
+        "anth": "Anthropic",
+        "meta": "Meta",
+        "nvid": "Nvidia",
+        "xai": "xAI",
+        "mist": "Mistral",
+        "depp": "DeepSeek",
+        "alib": "Alibaba",
+        "open": "OpenAI",
+        "baid": "Baidu",
+        "zai": "Z.ai"
+      }
+    },
+    "KXEGYPLGAME-26APR04PHAGHA": {
+      "k_title": "Pharco vs El Mahallah",
+      "p_slug": "egy1-phf-gem-2026-04-04",
+      "p_title": "Pharco FC vs. Ghazl El Mahalla SC",
+      "score": 0.755,
+      "mapping": {
+        "pha": "Pharco FC",
+        "gha": "Ghazl El Mahalla SC"
+      }
+    },
+    "KXALEAGUEGAME-26APR03ADUAUC": {
+      "k_title": "Adelaide vs Auckland",
+      "p_slug": "aus-ade-auc-2026-04-03",
+      "p_title": "Adelaide United FC vs. Auckland FC",
+      "score": 0.755,
+      "mapping": {
+        "adu": "Adelaide United FC",
+        "auc": "Auckland FC"
+      }
+    },
+    "KXWCGAME-26JUN27JORARG": {
+      "k_title": "Jordan vs Argentina",
+      "p_slug": "fifwc-jor-arg-2026-06-27",
+      "p_title": "Jordan vs. Argentina",
+      "score": 1,
+      "mapping": {
+        "jor": "Jordan",
+        "arg": "Argentina"
+      }
+    },
+    "KXWCGAME-26JUN27DZAAUT": {
+      "k_title": "Algeria vs Austria",
+      "p_slug": "fifwc-alg-aut-2026-06-27",
+      "p_title": "Algeria vs. Austria",
+      "score": 1,
+      "mapping": {
+        "dza": "Algeria",
+        "aut": "Austria"
+      }
+    },
+    "KXWCGAME-26JUN27COLPOR": {
+      "k_title": "Colombia vs Portugal",
+      "p_slug": "fifwc-col-prt-2026-06-27",
+      "p_title": "Colombia vs. Portugal",
+      "score": 1,
+      "mapping": {
+        "col": "Colombia",
+        "por": "Portugal"
+      }
+    },
+    "KXWCGAME-26JUN27PANENG": {
+      "k_title": "Panama vs England",
+      "p_slug": "fifwc-pan-eng-2026-06-27",
+      "p_title": "Panama vs. England",
+      "score": 1,
+      "mapping": {
+        "pan": "Panama",
+        "eng": "England"
+      }
+    },
+    "KXWCGAME-26JUN27CROGHA": {
+      "k_title": "Croatia vs Ghana",
+      "p_slug": "fifwc-hrv-gha-2026-06-27",
+      "p_title": "Croatia vs. Ghana",
+      "score": 1,
+      "mapping": {
+        "cro": "Croatia",
+        "gha": "Ghana"
+      }
+    },
+    "KXWCGAME-26JUN26NZLBEL": {
+      "k_title": "New Zealand vs Belgium",
+      "p_slug": "fifwc-nzl-bel-2026-06-26",
+      "p_title": "New Zealand vs. Belgium",
+      "score": 1,
+      "mapping": {
+        "nzl": "New Zealand",
+        "bel": "Belgium"
+      }
+    },
+    "KXWCGAME-26JUN26EGYIRI": {
+      "k_title": "Egypt vs IR Iran",
+      "p_slug": "fifwc-egy-irn-2026-06-26",
+      "p_title": "Egypt vs. IR Iran",
+      "score": 1,
+      "mapping": {
+        "egy": "Egypt",
+        "iri": "IR Iran"
+      }
+    },
+    "KXWCGAME-26JUN26URUESP": {
+      "k_title": "Uruguay vs Spain",
+      "p_slug": "fifwc-ury-esp-2026-06-26",
+      "p_title": "Uruguay vs. Spain",
+      "score": 1,
+      "mapping": {
+        "uru": "Uruguay",
+        "esp": "Spain"
+      }
+    },
+    "KXWCGAME-26JUN26NORFRA": {
+      "k_title": "Norway vs France",
+      "p_slug": "fifwc-nor-fra-2026-06-26",
+      "p_title": "Norway vs. France",
+      "score": 1,
+      "mapping": {
+        "nor": "Norway",
+        "fra": "France"
+      }
+    },
+    "KXWCGAME-26JUN25PARAUS": {
+      "k_title": "Paraguay vs Australia",
+      "p_slug": "fifwc-par-aus-2026-06-25",
+      "p_title": "Paraguay vs. Australia",
+      "score": 1,
+      "mapping": {
+        "par": "Paraguay",
+        "aus": "Australia"
+      }
+    },
+    "KXWCGAME-26JUN25TUNNED": {
+      "k_title": "Tunisia vs Netherlands",
+      "p_slug": "fifwc-tun-nld-2026-06-25",
+      "p_title": "Tunisia vs. Netherlands",
+      "score": 1,
+      "mapping": {
+        "tun": "Tunisia",
+        "ned": "Netherlands"
+      }
+    },
+    "KXWCGAME-26JUN25ECUGER": {
+      "k_title": "Ecuador vs Germany",
+      "p_slug": "fifwc-ecu-ger-2026-06-25",
+      "p_title": "Ecuador vs. Germany",
+      "score": 1,
+      "mapping": {
+        "ecu": "Ecuador",
+        "ger": "Germany"
+      }
+    },
+    "KXWCGAME-26JUN24RSAKOR": {
+      "k_title": "South Africa vs Korea Republic",
+      "p_slug": "fifwc-rsa-kr-2026-06-24",
+      "p_title": "South Africa vs. Korea Republic",
+      "score": 1,
+      "mapping": {
+        "rsa": "South Africa",
+        "kor": "Korea Republic"
+      }
+    },
+    "KXWCGAME-26JUN24SCOBRA": {
+      "k_title": "Scotland vs Brazil",
+      "p_slug": "fifwc-sco-bra-2026-06-24",
+      "p_title": "Scotland vs. Brazil",
+      "score": 1,
+      "mapping": {
+        "sco": "Scotland",
+        "bra": "Brazil"
+      }
+    },
+    "KXWCGAME-26JUN24MARHTI": {
+      "k_title": "Morocco vs Haiti",
+      "p_slug": "fifwc-mar-hai-2026-06-24",
+      "p_title": "Morocco vs. Haiti",
+      "score": 1,
+      "mapping": {
+        "mar": "Morocco",
+        "hti": "Haiti"
+      }
+    },
+    "KXWCGAME-26JUN24SUICAN": {
+      "k_title": "Switzerland vs Canada",
+      "p_slug": "fifwc-che-can-2026-06-24",
+      "p_title": "Switzerland vs. Canada",
+      "score": 1,
+      "mapping": {
+        "sui": "Switzerland",
+        "can": "Canada"
+      }
+    },
+    "KXWCGAME-26JUN23PANCRO": {
+      "k_title": "Panama vs Croatia",
+      "p_slug": "fifwc-pan-hrv-2026-06-23",
+      "p_title": "Panama vs. Croatia",
+      "score": 1,
+      "mapping": {
+        "pan": "Panama",
+        "cro": "Croatia"
+      }
+    },
+    "KXWCGAME-26JUN23ENGGHA": {
+      "k_title": "England vs Ghana",
+      "p_slug": "fifwc-eng-gha-2026-06-23",
+      "p_title": "England vs. Ghana",
+      "score": 1,
+      "mapping": {
+        "eng": "England",
+        "gha": "Ghana"
+      }
+    },
+    "KXWCGAME-26JUN23PORUZB": {
+      "k_title": "Portugal vs Uzbekistan",
+      "p_slug": "fifwc-prt-uzb-2026-06-23",
+      "p_title": "Portugal vs. Uzbekistan",
+      "score": 1,
+      "mapping": {
+        "por": "Portugal",
+        "uzb": "Uzbekistan"
+      }
+    },
+    "KXWCGAME-26JUN22JORDZA": {
+      "k_title": "Jordan vs Algeria",
+      "p_slug": "fifwc-jor-alg-2026-06-22",
+      "p_title": "Jordan vs. Algeria",
+      "score": 1,
+      "mapping": {
+        "jor": "Jordan",
+        "dza": "Algeria"
+      }
+    },
+    "KXWCGAME-26JUN22NORSEN": {
+      "k_title": "Norway vs Senegal",
+      "p_slug": "fifwc-nor-sen-2026-06-22",
+      "p_title": "Norway vs. Senegal",
+      "score": 1,
+      "mapping": {
+        "nor": "Norway",
+        "sen": "Senegal"
+      }
+    },
+    "KXWCGAME-26JUN22ARGAUT": {
+      "k_title": "Argentina vs Austria",
+      "p_slug": "fifwc-arg-aut-2026-06-22",
+      "p_title": "Argentina vs. Austria",
+      "score": 1,
+      "mapping": {
+        "arg": "Argentina",
+        "aut": "Austria"
+      }
+    },
+    "KXWCGAME-26JUN21NZLEGY": {
+      "k_title": "New Zealand vs Egypt",
+      "p_slug": "fifwc-nzl-egy-2026-06-21",
+      "p_title": "New Zealand vs. Egypt",
+      "score": 1,
+      "mapping": {
+        "nzl": "New Zealand",
+        "egy": "Egypt"
+      }
+    },
+    "KXWCGAME-26JUN21BELIRI": {
+      "k_title": "Belgium vs IR Iran",
+      "p_slug": "fifwc-bel-irn-2026-06-21",
+      "p_title": "Belgium vs. IR Iran",
+      "score": 1,
+      "mapping": {
+        "bel": "Belgium",
+        "iri": "IR Iran"
+      }
+    },
+    "KXWCGAME-26JUN21ESPKSA": {
+      "k_title": "Spain vs Saudi Arabia",
+      "p_slug": "fifwc-esp-ksa-2026-06-21",
+      "p_title": "Spain vs. Saudi Arabia",
+      "score": 1,
+      "mapping": {
+        "esp": "Spain",
+        "ksa": "Saudi Arabia"
+      }
+    },
+    "KXWCGAME-26JUN21TUNJPN": {
+      "k_title": "Tunisia vs Japan",
+      "p_slug": "fifwc-tun-jpn-2026-06-21",
+      "p_title": "Tunisia vs. Japan",
+      "score": 1,
+      "mapping": {
+        "tun": "Tunisia",
+        "jpn": "Japan"
+      }
+    },
+    "KXWCGAME-26JUN19BRAHTI": {
+      "k_title": "Brazil vs Haiti",
+      "p_slug": "fifwc-bra-hai-2026-06-19",
+      "p_title": "Brazil vs. Haiti",
+      "score": 1,
+      "mapping": {
+        "bra": "Brazil",
+        "hti": "Haiti"
+      }
+    },
+    "KXWCGAME-26JUN19SCOMAR": {
+      "k_title": "Scotland vs Morocco",
+      "p_slug": "fifwc-sco-mar-2026-06-19",
+      "p_title": "Scotland vs. Morocco",
+      "score": 1,
+      "mapping": {
+        "sco": "Scotland",
+        "mar": "Morocco"
+      }
+    },
+    "KXWCGAME-26JUN18MEXKOR": {
+      "k_title": "Mexico vs Korea Republic",
+      "p_slug": "fifwc-mex-kr-2026-06-18",
+      "p_title": "Mexico vs. Korea Republic",
+      "score": 1,
+      "mapping": {
+        "mex": "Mexico",
+        "kor": "Korea Republic"
+      }
+    },
+    "KXWCGAME-26JUN18CANQAT": {
+      "k_title": "Canada vs Qatar",
+      "p_slug": "fifwc-can-qat-2026-06-18",
+      "p_title": "Canada vs. Qatar",
+      "score": 1,
+      "mapping": {
+        "can": "Canada",
+        "qat": "Qatar"
+      }
+    },
+    "KXWCGAME-26JUN17UZBCOL": {
+      "k_title": "Uzbekistan vs Colombia",
+      "p_slug": "fifwc-uzb-col-2026-06-17",
+      "p_title": "Uzbekistan vs. Colombia",
+      "score": 1,
+      "mapping": {
+        "uzb": "Uzbekistan",
+        "col": "Colombia"
+      }
+    },
+    "KXWCGAME-26JUN17GHAPAN": {
+      "k_title": "Ghana vs Panama",
+      "p_slug": "fifwc-gha-pan-2026-06-17",
+      "p_title": "Ghana vs. Panama",
+      "score": 1,
+      "mapping": {
+        "gha": "Ghana",
+        "pan": "Panama"
+      }
+    },
+    "KXWCGAME-26JUN17ENGCRO": {
+      "k_title": "England vs Croatia",
+      "p_slug": "fifwc-eng-hrv-2026-06-17",
+      "p_title": "England vs. Croatia",
+      "score": 1,
+      "mapping": {
+        "eng": "England",
+        "cro": "Croatia"
+      }
+    },
+    "KXWCGAME-26JUN17AUTJOR": {
+      "k_title": "Austria vs Jordan",
+      "p_slug": "fifwc-aut-jor-2026-06-17",
+      "p_title": "Austria vs. Jordan",
+      "score": 1,
+      "mapping": {
+        "aut": "Austria",
+        "jor": "Jordan"
+      }
+    },
+    "KXWCGAME-26JUN16ARGDZA": {
+      "k_title": "Argentina vs Algeria",
+      "p_slug": "fifwc-arg-alg-2026-06-16",
+      "p_title": "Argentina vs. Algeria",
+      "score": 1,
+      "mapping": {
+        "arg": "Argentina",
+        "dza": "Algeria"
+      }
+    },
+    "KXWCGAME-26JUN16FRASEN": {
+      "k_title": "France vs Senegal",
+      "p_slug": "fifwc-fra-sen-2026-06-16",
+      "p_title": "France vs. Senegal",
+      "score": 1,
+      "mapping": {
+        "fra": "France",
+        "sen": "Senegal"
+      }
+    },
+    "KXWCGAME-26JUN15IRINZL": {
+      "k_title": "IR Iran vs New Zealand",
+      "p_slug": "fifwc-irn-nzl-2026-06-15",
+      "p_title": "IR Iran vs. New Zealand",
+      "score": 1,
+      "mapping": {
+        "iri": "IR Iran",
+        "nzl": "New Zealand"
+      }
+    },
+    "KXWCGAME-26JUN15KSAURU": {
+      "k_title": "Saudi Arabia vs Uruguay",
+      "p_slug": "fifwc-ksa-ury-2026-06-15",
+      "p_title": "Saudi Arabia vs. Uruguay",
+      "score": 1,
+      "mapping": {
+        "ksa": "Saudi Arabia",
+        "uru": "Uruguay"
+      }
+    },
+    "KXWCGAME-26JUN15BELEGY": {
+      "k_title": "Belgium vs Egypt",
+      "p_slug": "fifwc-bel-egy-2026-06-15",
+      "p_title": "Belgium vs. Egypt",
+      "score": 1,
+      "mapping": {
+        "bel": "Belgium",
+        "egy": "Egypt"
+      }
+    },
+    "KXWCGAME-26JUN14NEDJPN": {
+      "k_title": "Netherlands vs Japan",
+      "p_slug": "fifwc-nld-jpn-2026-06-14",
+      "p_title": "Netherlands vs. Japan",
+      "score": 1,
+      "mapping": {
+        "ned": "Netherlands",
+        "jpn": "Japan"
+      }
+    },
+    "KXWCGAME-26JUN13HTISCO": {
+      "k_title": "Haiti vs Scotland",
+      "p_slug": "fifwc-hai-sco-2026-06-13",
+      "p_title": "Haiti vs. Scotland",
+      "score": 1,
+      "mapping": {
+        "hti": "Haiti",
+        "sco": "Scotland"
+      }
+    },
+    "KXWCGAME-26JUN13BRAMAR": {
+      "k_title": "Brazil vs Morocco",
+      "p_slug": "fifwc-bra-mar-2026-06-13",
+      "p_title": "Brazil vs. Morocco",
+      "score": 1,
+      "mapping": {
+        "bra": "Brazil",
+        "mar": "Morocco"
+      }
+    },
+    "KXWCGAME-26JUN13QATSUI": {
+      "k_title": "Qatar vs Switzerland",
+      "p_slug": "fifwc-qat-che-2026-06-13",
+      "p_title": "Qatar vs. Switzerland",
+      "score": 1,
+      "mapping": {
+        "qat": "Qatar",
+        "sui": "Switzerland"
+      }
+    },
+    "KXWCGAME-26JUN11MEXRSA": {
+      "k_title": "Mexico vs South Africa",
+      "p_slug": "fifwc-mex-rsa-2026-06-11",
+      "p_title": "Mexico vs. South Africa",
+      "score": 1,
+      "mapping": {
+        "mex": "Mexico",
+        "rsa": "South Africa"
+      }
+    },
+    "KXCHNSLGAME-26APR22LITDAL": {
+      "k_title": "Liaoning Tieren vs Dalian Yingbo FC",
+      "p_slug": "chi-tie-ygb-2026-04-22",
+      "p_title": "Liaoning Tieren FC vs. Dalian Yingbo FC",
+      "score": 0.959,
+      "mapping": {
+        "lit": "Liaoning Tieren FC",
+        "dal": "Dalian Yingbo FC"
+      }
+    },
+    "KXWCGAME-26JUN20ECUCUW": {
+      "k_title": "Ecuador vs Curacao",
+      "p_slug": "fifwc-ecu-kor-2026-06-20",
+      "p_title": "Ecuador vs. Curaçao",
+      "score": 0.944,
+      "mapping": {
+        "ecu": "Ecuador",
+        "cuw": "Curaçao"
+      }
+    },
+    "KXWCGAME-26JUN14GERCUW": {
+      "k_title": "Germany vs Curacao",
+      "p_slug": "fifwc-ger-kor-2026-06-14",
+      "p_title": "Germany vs. Curaçao",
+      "score": 0.944,
+      "mapping": {
+        "ger": "Germany",
+        "cuw": "Curaçao"
+      }
+    },
+    "KXSUPERLIGGAME-26APR20GAZKAY": {
+      "k_title": "Gaziantep vs Kayserispor",
+      "p_slug": "tur-gfk-kay-2026-04-20",
+      "p_title": "Gaziantep FK vs. Kayserispor",
+      "score": 0.941,
+      "mapping": {
+        "gaz": "Gaziantep FK",
+        "kay": "Kayserispor"
+      }
+    },
+    "KXBUNDESLIGATOP4-26": {
+      "k_title": "Bundesliga Top 4 Finishers",
+      "p_slug": "bundesliga-top-4-finish",
+      "p_title": "Bundesliga - Top 4 Finish ",
+      "score": 0.939,
+      "mapping": {
+        "bmu": "Bayern Munich",
+        "bvb": "Dortmund",
+        "koe": "FC Koln",
+        "stp": "St Pauli",
+        "sge": "Eintracht Frankfurt",
+        "tsg": "Hoffenheim",
+        "rbl": "RB Leipzig",
+        "wob": "VfL Wolfsburg",
+        "svw": "Werder Bremen",
+        "lev": "Leverkusen",
+        "fca": "FC Augsburg",
+        "vfb": "Stuttgart",
+        "scf": "Freiburg",
+        "uni": "Union Berlin",
+        "m05": "Mainz",
+        "bmg": "Mgladbach",
+        "hsv": "Hamburger SV",
+        "fch": "FC Heidenheim"
+      }
+    },
+    "KXPERLIGA1GAME-26APR22CUSCAJ": {
+      "k_title": "Cusco vs FC Cajamarca",
+      "p_slug": "per1-cuf-fcc-2026-04-22",
+      "p_title": "Cusco FC vs. FC Cajamarca",
+      "score": 0.933,
+      "mapping": {
+        "cus": "Cusco FC",
+        "caj": "FC Cajamarca"
+      }
+    },
+    "KXKLEAGUEGAME-26APR22ANYULS": {
+      "k_title": "FC Anyang vs Ulsan HD",
+      "p_slug": "kor-any-uls-2026-04-22",
+      "p_title": "FC Anyang vs. Ulsan HD FC",
+      "score": 0.933,
+      "mapping": {
+        "any": "FC Anyang",
+        "uls": "Ulsan HD FC"
+      }
+    },
+    "KXHOUSERACE-WYAL-26": {
+      "k_title": "WY-AL House winner?",
+      "p_slug": "wy-al-house-election-winner",
+      "p_title": "WY-AL House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXSERIEATOP4-26": {
+      "k_title": "Serie A Top 4 Finishers",
+      "p_slug": "serie-a-top-4-finish",
+      "p_title": "Serie A - Top 4 Finish ",
+      "score": 0.93,
+      "mapping": {
+        "nap": "Napoli",
+        "juv": "Juventus",
+        "acm": "AC Milan",
+        "pis": "Pisa",
+        "cre": "US Cremonese",
+        "udi": "Udinese",
+        "rom": "Roma",
+        "ata": "Atalanta",
+        "cag": "Cagliari",
+        "com": "Como",
+        "tor": "Torino",
+        "int": "Inter",
+        "laz": "Lazio",
+        "bfc": "Bologna",
+        "sas": "Sassuolo",
+        "gen": "Genoa",
+        "fio": "Fiorentina",
+        "ver": "Verona",
+        "par": "Parma",
+        "lec": "Lecce"
+      }
+    },
+    "KXTACAPORTGAME-26APR22FCPSPO": {
+      "k_title": "Porto vs Sporting CP",
+      "p_slug": "ptc-por-scp-2026-04-22",
+      "p_title": "FC Porto vs. Sporting CP",
+      "score": 0.93,
+      "mapping": {
+        "fcp": "FC Porto",
+        "spo": "Sporting CP"
+      }
+    },
+    "KXDIMAYORGAME-26APR20CANBUC": {
+      "k_title": "Atletico Nacional vs Bucaramanga",
+      "p_slug": "col1-atn-cab-2026-04-20",
+      "p_title": "Atlético Nacional vs. CA Bucaramanga",
+      "score": 0.925,
+      "mapping": {
+        "can": "Atlético Nacional",
+        "buc": "CA Bucaramanga"
+      }
+    },
+    "KXWCGAME-26JUN26CPVKSA": {
+      "k_title": "Cape Verde vs Saudi Arabia",
+      "p_slug": "fifwc-cvi-ksa-2026-06-26",
+      "p_title": "Cabo Verde vs. Saudi Arabia",
+      "score": 0.923,
+      "mapping": {
+        "cpv": "Cabo Verde",
+        "ksa": "Saudi Arabia"
+      }
+    },
+    "KXEFLCHAMPIONSHIPGAME-26APR22MIDSHW": {
+      "k_title": "Middlesbrough vs Sheffield Wednesday",
+      "p_slug": "elc-mid-swe-2026-04-21",
+      "p_title": "Middlesbrough FC vs. Sheffield Wednesday FC",
+      "score": 0.923,
+      "mapping": {
+        "mid": "Middlesbrough FC",
+        "shw": "Sheffield Wednesday FC"
+      }
+    },
+    "KXHOUSERACE-WV02-26": {
+      "k_title": "WV-02 House winner?",
+      "p_slug": "wv-02-house-election-winner",
+      "p_title": "WV-02 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXCHNSLGAME-26APR22SHSQIN": {
+      "k_title": "Shanghai Shenhua vs Qingdao Hainiu",
+      "p_slug": "chi-sgr-hai-2026-04-22",
+      "p_title": "Shanghai Shenhua FC vs. Qingdao Hainiu FC",
+      "score": 0.919,
+      "mapping": {
+        "shs": "Shanghai Shenhua FC",
+        "qin": "Qingdao Hainiu FC"
+      }
+    },
+    "KXCHNSLGAME-26APR21CHRYUN": {
+      "k_title": "Chengdu Rongcheng vs Yunnan Yukun",
+      "p_slug": "chi-ron-yun-2026-04-21",
+      "p_title": "Chengdu Rongcheng FC vs. Yunnan Yukun FC",
+      "score": 0.917,
+      "mapping": {
+        "chr": "Chengdu Rongcheng FC",
+        "yun": "Yunnan Yukun FC"
+      }
+    },
+    "KXHOUSERACE-WV01-26": {
+      "k_title": "WV-01 House winner?",
+      "p_slug": "wv-01-house-election-winner",
+      "p_title": "WV-01 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-WI08-26": {
+      "k_title": "WI-08 House winner?",
+      "p_slug": "wi-08-house-election-winner",
+      "p_title": "WI-08 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-WI07-26": {
+      "k_title": "WI-07 House winner?",
+      "p_slug": "wi-07-house-election-winner",
+      "p_title": "WI-07 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-WI06-26": {
+      "k_title": "WI-06 House winner?",
+      "p_slug": "wi-06-house-election-winner",
+      "p_title": "WI-06 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-WI05-26": {
+      "k_title": "WI-05 House winner?",
+      "p_slug": "wi-05-house-election-winner",
+      "p_title": "WI-05 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXARGPREMDIVGAME-26APR20SLAVEL": {
+      "k_title": "San Lorenzo de Almagro vs Velez Sarsfield",
+      "p_slug": "arg-slo-vel-2026-04-20",
+      "p_title": "CA San Lorenzo de Almagro vs. CA Vélez Sarsfield",
+      "score": 0.909,
+      "mapping": {
+        "sla": "CA San Lorenzo de Almagro",
+        "vel": "CA Vélez Sarsfield"
+      }
+    },
+    "KXWCGAME-26JUN21URUCPV": {
+      "k_title": "Uruguay vs Cape Verde",
+      "p_slug": "fifwc-ury-cvi-2026-06-21",
+      "p_title": "Uruguay vs. Cabo Verde",
+      "score": 0.905,
+      "mapping": {
+        "uru": "Uruguay",
+        "cpv": "Cabo Verde"
+      }
+    },
+    "KXLIGUE1GAME-26APR26FCLRCS": {
+      "k_title": "Lorient vs Strasbourg Alsace",
+      "p_slug": "fl1-lor-str-2026-04-26",
+      "p_title": "FC Lorient vs. RC Strasbourg Alsace",
+      "score": 0.903,
+      "mapping": {
+        "fcl": "FC Lorient",
+        "rcs": "RC Strasbourg Alsace"
+      }
+    },
+    "KXPGATOUR-PGC26": {
+      "k_title": "PGA Championship Winner",
+      "p_slug": "2026-tour-championship-winner",
+      "p_title": "PGA TOUR Championship: Winner",
+      "score": 0.902,
+      "mapping": {
+        "labe": "Ludvig Åberg",
+        "abha": "Akshay Bhatia",
+        "jbri": "Jacob Bridgeman",
+        "sbur": "Sam Burns",
+        "acab": "Daniel Berger",
+        "nech": "Nico Echavarria",
+        "mfit": "Matt Fitzpatrick",
+        "tfle": "Tommy Fleetwood",
+        "rger": "Ryan Gerard",
+        "cgot": "Chris Gotterup",
+        "rhen": "Russell Henley",
+        "rhoj": "Nicolai Højgaard",
+        "wkim": "Si Woo Kim",
+        "rmac": "Robert MacIntyre",
+        "rmci": "Rory McIlroy",
+        "cmor": "Collin Morikawa",
+        "jros": "Justin Rose",
+        "xsch": "Xander Schauffele",
+        "ssch": "Scottie Scheffler",
+        "asch": "Adam Scott",
+        "csmi": "Cameron Young",
+        "jspa": "J.J. Spaun",
+        "sstr": "Sepp Straka",
+        "gwoo": "Gary Woodland"
+      }
+    },
+    "KXEPLGAME-26APR25LFCCRY": {
+      "k_title": "Liverpool vs Crystal Palace",
+      "p_slug": "epl-liv-cry-2026-04-25",
+      "p_title": "Liverpool FC vs. Crystal Palace FC",
+      "score": 0.9,
+      "mapping": {
+        "lfc": "Liverpool FC",
+        "cry": "Crystal Palace FC"
+      }
+    },
+    "KXMLSGAME-26APR22NYCCIN": {
+      "k_title": "New York City vs Cincinnati",
+      "p_slug": "mls-nyc-fcc-2026-04-22",
+      "p_title": "New York City FC vs. FC Cincinnati",
+      "score": 0.9,
+      "mapping": {
+        "nyc": "New York City FC",
+        "cin": "FC Cincinnati"
+      }
+    },
+    "KXEFLCHAMPIONSHIPGAME-26APR21SOUBRC": {
+      "k_title": "Southampton vs Bristol City",
+      "p_slug": "elc-sot-bri-2026-04-21",
+      "p_title": "Southampton FC vs. Bristol City FC",
+      "score": 0.9,
+      "mapping": {
+        "sou": "Southampton FC",
+        "brc": "Bristol City FC"
+      }
+    },
+    "KXARGPREMDIVGAME-26APR19RIVBOC": {
+      "k_title": "River Plate vs Boca Juniors",
+      "p_slug": "arg-riv-boc-2026-04-19",
+      "p_title": "CA River Plate vs. CA Boca Juniors",
+      "score": 0.9,
+      "mapping": {
+        "riv": "CA River Plate",
+        "boc": "CA Boca Juniors"
+      }
+    },
+    "KXCA14SWINNER-26": {
+      "k_title": "CA-14 special election winner",
+      "p_slug": "ca-14-special-election-winner",
+      "p_title": "CA-14 Special Election Winner?",
+      "score": 1,
+      "mapping": {
+        "awah": "Aisha Wahab",
+        "mher": "Melissa Hernandez",
+        "mort": "Matt Ortega",
+        "vagu": "Victor Aguilar Jr.",
+        "rsin": "Rakhi Israni Singh",
+        "cela": "Carin Elam",
+        "whua": "Wendy Huang"
+      }
+    },
+    "KXKLEAGUEGAME-26APR22POHGWA": {
+      "k_title": "Pohang Steelers vs Gwangju",
+      "p_slug": "kor-poh-gwa-2026-04-22",
+      "p_title": "Pohang Steelers FC vs. Gwangju FC",
+      "score": 0.897,
+      "mapping": {
+        "poh": "Pohang Steelers FC",
+        "gwa": "Gwangju FC"
+      }
+    },
+    "KXHOUSERACE-WI04-26": {
+      "k_title": "WI-04 House winner?",
+      "p_slug": "wi-04-house-election-winner",
+      "p_title": "WI-04 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-WI02-26": {
+      "k_title": "WI-02 House winner?",
+      "p_slug": "wi-02-house-election-winner",
+      "p_title": "WI-02 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-WA02-26": {
+      "k_title": "WA-02 House winner?",
+      "p_slug": "wa-02-house-election-winner",
+      "p_title": "WA-02 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-VA11-26": {
+      "k_title": "VA-11 House winner?",
+      "p_slug": "va-11-house-election-winner",
+      "p_title": "VA-11 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-VA09-26": {
+      "k_title": "VA-09 House winner?",
+      "p_slug": "va-09-house-election-winner",
+      "p_title": "VA-09 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-VA06-26": {
+      "k_title": "VA-06 House winner?",
+      "p_slug": "va-06-house-election-winner",
+      "p_title": "VA-06 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-VA08-26": {
+      "k_title": "VA-08 House winner?",
+      "p_slug": "va-08-house-election-winner",
+      "p_title": "VA-08 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-VA04-26": {
+      "k_title": "VA-04 House winner?",
+      "p_slug": "va-04-house-election-winner",
+      "p_title": "VA-04 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-VA05-26": {
+      "k_title": "VA-05 House winner?",
+      "p_slug": "va-05-house-election-winner",
+      "p_title": "VA-05 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-UT04-26": {
+      "k_title": "UT-04 House winner?",
+      "p_slug": "ut-04-house-election-winner",
+      "p_title": "UT-04 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-VA03-26": {
+      "k_title": "VA-03 House winner?",
+      "p_slug": "va-03-house-election-winner",
+      "p_title": "VA-03 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX38-26": {
+      "k_title": "TX-38 House winner?",
+      "p_slug": "tx-38-house-election-winner",
+      "p_title": "TX-38 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX37-26": {
+      "k_title": "TX-37 House winner?",
+      "p_slug": "tx-37-house-election-winner",
+      "p_title": "TX-37 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX36-26": {
+      "k_title": "TX-36 House winner?",
+      "p_slug": "tx-36-house-election-winner",
+      "p_title": "TX-36 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXKLEAGUEGAME-26APR21GISGAW": {
+      "k_title": "Gimcheon Sangmu vs Gangwon",
+      "p_slug": "kor-san-gwo-2026-04-21",
+      "p_title": "Gimcheon Sangmu FC vs. Gangwon FC",
+      "score": 0.897,
+      "mapping": {
+        "gis": "Gimcheon Sangmu FC",
+        "gaw": "Gangwon FC"
+      }
+    },
+    "KXHOUSERACE-TX33-26": {
+      "k_title": "TX-33 House winner?",
+      "p_slug": "tx-33-house-election-winner",
+      "p_title": "TX-33 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX31-26": {
+      "k_title": "TX-31 House winner?",
+      "p_slug": "tx-31-house-election-winner",
+      "p_title": "TX-31 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX30-26": {
+      "k_title": "TX-30 House winner?",
+      "p_slug": "tx-30-house-election-winner",
+      "p_title": "TX-30 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX29-26": {
+      "k_title": "TX-29 House winner?",
+      "p_slug": "tx-29-house-election-winner",
+      "p_title": "TX-29 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX27-26": {
+      "k_title": "TX-27 House winner?",
+      "p_slug": "tx-27-house-election-winner",
+      "p_title": "TX-27 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX26-26": {
+      "k_title": "TX-26 House winner?",
+      "p_slug": "tx-26-house-election-winner",
+      "p_title": "TX-26 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX25-26": {
+      "k_title": "TX-25 House winner?",
+      "p_slug": "tx-25-house-election-winner",
+      "p_title": "TX-25 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX24-26": {
+      "k_title": "TX-24 House winner?",
+      "p_slug": "tx-24-house-election-winner",
+      "p_title": "TX-24 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX23-26": {
+      "k_title": "TX-23 House winner?",
+      "p_slug": "tx-23-house-election-winner",
+      "p_title": "TX-23 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX22-26": {
+      "k_title": "TX-22 House winner?",
+      "p_slug": "tx-22-house-election-winner",
+      "p_title": "TX-22 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX20-26": {
+      "k_title": "TX-20 House winner?",
+      "p_slug": "tx-20-house-election-winner",
+      "p_title": "TX-20 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX21-26": {
+      "k_title": "TX-21 House winner?",
+      "p_slug": "tx-21-house-election-winner",
+      "p_title": "TX-21 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX19-26": {
+      "k_title": "TX-19 House winner?",
+      "p_slug": "tx-19-house-election-winner",
+      "p_title": "TX-19 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX18-26": {
+      "k_title": "TX-18 House winner?",
+      "p_slug": "tx-18-house-election-winner",
+      "p_title": "TX-18 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX17-26": {
+      "k_title": "TX-17 House winner?",
+      "p_slug": "tx-17-house-election-winner",
+      "p_title": "TX-17 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX16-26": {
+      "k_title": "TX-16 House winner?",
+      "p_slug": "tx-16-house-election-winner",
+      "p_title": "TX-16 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX14-26": {
+      "k_title": "TX-14 House winner?",
+      "p_slug": "tx-14-house-election-winner",
+      "p_title": "TX-14 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX12-26": {
+      "k_title": "TX-12 House winner?",
+      "p_slug": "tx-12-house-election-winner",
+      "p_title": "TX-12 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX13-26": {
+      "k_title": "TX-13 House winner?",
+      "p_slug": "tx-13-house-election-winner",
+      "p_title": "TX-13 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX08-26": {
+      "k_title": "TX-08 House winner?",
+      "p_slug": "tx-08-house-election-winner",
+      "p_title": "TX-08 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX11-26": {
+      "k_title": "TX-11 House winner?",
+      "p_slug": "tx-11-house-election-winner",
+      "p_title": "TX-11 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX10-26": {
+      "k_title": "TX-10 House winner?",
+      "p_slug": "tx-10-house-election-winner",
+      "p_title": "TX-10 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX07-26": {
+      "k_title": "TX-07 House winner?",
+      "p_slug": "tx-07-house-election-winner",
+      "p_title": "TX-07 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX06-26": {
+      "k_title": "TX-06 House winner?",
+      "p_slug": "tx-06-house-election-winner",
+      "p_title": "TX-06 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX05-26": {
+      "k_title": "TX-05 House winner?",
+      "p_slug": "tx-05-house-election-winner",
+      "p_title": "TX-05 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX04-26": {
+      "k_title": "TX-04 House winner?",
+      "p_slug": "tx-04-house-election-winner",
+      "p_title": "TX-04 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX03-26": {
+      "k_title": "TX-03 House winner?",
+      "p_slug": "tx-03-house-election-winner",
+      "p_title": "TX-03 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX02-26": {
+      "k_title": "TX-02 House winner?",
+      "p_slug": "tx-02-house-election-winner",
+      "p_title": "TX-02 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-TX01-26": {
+      "k_title": "TX-01 House winner?",
+      "p_slug": "tx-01-house-election-winner",
+      "p_title": "TX-01 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    "KXHOUSERACE-OH08-26": {
+      "k_title": "OH-08 House winner?",
+      "p_slug": "oh-08-house-election-winner",
+      "p_title": "OH-08 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXCAGOVPRIMARY1ST-26JUN02-1ST": {
+      "k_title": "California Governor primary: 1st place",
+      "p_slug": "california-governor-primary-election-first-place",
+      "p_title": "California Governor Primary Election: First Place",
+      "score": 0.847,
+      "mapping": {
+        "mmah": "Matt Mahan",
+        "cbia": "Chad Bianco",
+        "shil": "Steve Hilton",
+        "tste": "Tom Steyer",
+        "kpor": "Katie Porter",
+        "xbec": "Xavier Becerra",
+        "avil": "Antonio Villaraigosa"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXPRIMARYPLACE-NY12D26-2": {
+      "k_title": "NY-12 Democratic primary: 2nd place",
+      "p_slug": "who-will-be-the-democratic-nominee-for-ny-12",
+      "p_title": "NY-12 Democratic Primary Winner",
+      "score": 0.831,
+      "mapping": {
+        "mlas": "Micah Lasher",
+        "abor": "Alex Bores",
+        "jsch": "Jack Schlossberg",
+        "gcon": "George Conway"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXSENATENED-26": {
+      "k_title": "Nebraska Democratic Senate nominee?",
+      "p_slug": "nebraska-democratic-senate-primary-winner",
+      "p_title": "Nebraska Democratic Senate Primary Winner",
+      "score": 0.827,
+      "mapping": {
+        "cbur": "Cindy Burbank",
+        "wfor": "William Forbes"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-TN09-26": {
+      "k_title": "TN-09 House winner?",
+      "p_slug": "tn-09-house-election-winner",
+      "p_title": "TN-09 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-TN08-26": {
+      "k_title": "TN-08 House winner?",
+      "p_slug": "tn-08-house-election-winner",
+      "p_title": "TN-08 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-TN07-26": {
+      "k_title": "TN-07 House winner?",
+      "p_slug": "tn-07-house-election-winner",
+      "p_title": "TN-07 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-TN06-26": {
+      "k_title": "TN-06 House winner?",
+      "p_slug": "tn-06-house-election-winner",
+      "p_title": "TN-06 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-TN05-26": {
+      "k_title": "TN-05 House winner?",
+      "p_slug": "tn-05-house-election-winner",
+      "p_title": "TN-05 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-TN04-26": {
+      "k_title": "TN-04 House winner?",
+      "p_slug": "tn-04-house-election-winner",
+      "p_title": "TN-04 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-TN03-26": {
+      "k_title": "TN-03 House winner?",
+      "p_slug": "tn-03-house-election-winner",
+      "p_title": "TN-03 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-TN02-26": {
+      "k_title": "TN-02 House winner?",
+      "p_slug": "tn-02-house-election-winner",
+      "p_title": "TN-02 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-SDAL-26": {
+      "k_title": "SD-AL House winner?",
+      "p_slug": "sd-al-house-election-winner",
+      "p_title": "SD-AL House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-SC07-26": {
+      "k_title": "SC-07 House winner?",
+      "p_slug": "sc-07-house-election-winner",
+      "p_title": "SC-07 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-TN01-26": {
+      "k_title": "TN-01 House winner?",
+      "p_slug": "tn-01-house-election-winner",
+      "p_title": "TN-01 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-SC06-26": {
+      "k_title": "SC-06 House winner?",
+      "p_slug": "sc-06-house-election-winner",
+      "p_title": "SC-06 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-SC05-26": {
+      "k_title": "SC-05 House winner?",
+      "p_slug": "sc-05-house-election-winner",
+      "p_title": "SC-05 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-SC04-26": {
+      "k_title": "SC-04 House winner?",
+      "p_slug": "sc-04-house-election-winner",
+      "p_title": "SC-04 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-SC03-26": {
+      "k_title": "SC-03 House winner?",
+      "p_slug": "sc-03-house-election-winner",
+      "p_title": "SC-03 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-SC02-26": {
+      "k_title": "SC-02 House winner?",
+      "p_slug": "sc-02-house-election-winner",
+      "p_title": "SC-02 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-SC01-26": {
+      "k_title": "SC-01 House winner?",
+      "p_slug": "sc-01-house-election-winner",
+      "p_title": "SC-01 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-RI02-26": {
+      "k_title": "RI-02 House winner?",
+      "p_slug": "ri-02-house-election-winner",
+      "p_title": "RI-02 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-RI01-26": {
+      "k_title": "RI-01 House winner?",
+      "p_slug": "ri-01-house-election-winner",
+      "p_title": "RI-01 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-PA16-26": {
+      "k_title": "PA-16 House winner?",
+      "p_slug": "pa-16-house-election-winner",
+      "p_title": "PA-16 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-PA15-26": {
+      "k_title": "PA-15 House winner?",
+      "p_slug": "pa-15-house-election-winner",
+      "p_title": "PA-15 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-PA14-26": {
+      "k_title": "PA-14 House winner?",
+      "p_slug": "pa-14-house-election-winner",
+      "p_title": "PA-14 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-PA13-26": {
+      "k_title": "PA-13 House winner?",
+      "p_slug": "pa-13-house-election-winner",
+      "p_title": "PA-13 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-PA12-26": {
+      "k_title": "PA-12 House winner?",
+      "p_slug": "pa-12-house-election-winner",
+      "p_title": "PA-12 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-PA11-26": {
+      "k_title": "PA-11 House winner?",
+      "p_slug": "pa-11-house-election-winner",
+      "p_title": "PA-11 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-PA09-26": {
+      "k_title": "PA-09 House winner?",
+      "p_slug": "pa-09-house-election-winner",
+      "p_title": "PA-09 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-PA06-26": {
+      "k_title": "PA-06 House winner?",
+      "p_slug": "pa-06-house-election-winner",
+      "p_title": "PA-06 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:05"
+    },
+    "KXHOUSERACE-PA03-26": {
+      "k_title": "PA-03 House winner?",
+      "p_slug": "pa-03-house-election-winner",
+      "p_title": "PA-03 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-PA05-26": {
+      "k_title": "PA-05 House winner?",
+      "p_slug": "pa-05-house-election-winner",
+      "p_title": "PA-05 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-PA02-26": {
+      "k_title": "PA-02 House winner?",
+      "p_slug": "pa-02-house-election-winner",
+      "p_title": "PA-02 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-OR06-26": {
+      "k_title": "OR-06 House winner?",
+      "p_slug": "or-06-house-election-winner",
+      "p_title": "OR-06 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-OR04-26": {
+      "k_title": "OR-04 House winner?",
+      "p_slug": "or-04-house-election-winner",
+      "p_title": "OR-04 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-OR03-26": {
+      "k_title": "OR-03 House winner?",
+      "p_slug": "or-03-house-election-winner",
+      "p_title": "OR-03 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-OR02-26": {
+      "k_title": "OR-02 House winner?",
+      "p_slug": "or-02-house-election-winner",
+      "p_title": "OR-02 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-OR01-26": {
+      "k_title": "OR-01 House winner?",
+      "p_slug": "or-01-house-election-winner",
+      "p_title": "OR-01 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-OK05-26": {
+      "k_title": "OK-05 House winner?",
+      "p_slug": "ok-05-house-election-winner",
+      "p_title": "OK-05 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-OK04-26": {
+      "k_title": "OK-04 House winner?",
+      "p_slug": "ok-04-house-election-winner",
+      "p_title": "OK-04 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-OK03-26": {
+      "k_title": "OK-03 House winner?",
+      "p_slug": "ok-03-house-election-winner",
+      "p_title": "OK-03 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-OK02-26": {
+      "k_title": "OK-02 House winner?",
+      "p_slug": "ok-02-house-election-winner",
+      "p_title": "OK-02 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-OK01-26": {
+      "k_title": "OK-01 House winner?",
+      "p_slug": "ok-01-house-election-winner",
+      "p_title": "OK-01 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-OH15-26": {
+      "k_title": "OH-15 House winner?",
+      "p_slug": "oh-15-house-election-winner",
+      "p_title": "OH-15 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-OH14-26": {
+      "k_title": "OH-14 House winner?",
+      "p_slug": "oh-14-house-election-winner",
+      "p_title": "OH-14 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-OH12-26": {
+      "k_title": "OH-12 House winner?",
+      "p_slug": "oh-12-house-election-winner",
+      "p_title": "OH-12 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-OH11-26": {
+      "k_title": "OH-11 House winner?",
+      "p_slug": "oh-11-house-election-winner",
+      "p_title": "OH-11 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    },
+    "KXHOUSERACE-OH10-26": {
+      "k_title": "OH-10 House winner?",
+      "p_slug": "oh-10-house-election-winner",
+      "p_title": "OH-10 House Election Winner",
+      "score": 0.8,
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      },
+      "accepted_at": "2026-04-19T20:31:06"
+    }
+  },
+  "rejected": {
+    "KXBTCMAX150-25": {
+      "k_title": "When will Bitcoin hit $150k?",
+      "p_slug": "when-will-bitcoin-hit-150k"
+    },
+    "KXVTBGAME-26APR031300MBALOK": {
+      "k_title": "MBA Moscow vs BC Lokomotiv Kuban",
+      "p_slug": "bkvtb-csk-lok-2026-04-07"
+    },
+    "KXPRESPERSON-28": {
+      "k_title": "2028 U.S. Presidential Election winner?",
+      "p_slug": "presidential-election-winner-2028"
+    },
+    "KXGDPYEAR-26": {
+      "k_title": "GDP growth in 2026?",
+      "p_slug": "gdp-growth-in-2026"
+    },
+    "KXAHLGAME-26APR011900PROUTI": {
+      "k_title": "Providence Bruins vs Utica Comets",
+      "p_slug": "ahl-pro-uti-2026-04-01"
+    },
+    "KXAHLGAME-26APR012000CHIIOW": {
+      "k_title": "Chicago Wolves vs Iowa Wild",
+      "p_slug": "ahl-chi-iow-2026-04-02"
+    },
+    "KXKBOGAME-26APR040400LGKIW": {
+      "k_title": "LG Twins vs Kiwoom Heroes",
+      "p_slug": "kbo-lg-kiw-2026-04-04"
+    },
+    "KXKBOGAME-26APR030530LGKIW": {
+      "k_title": "LG Twins vs Kiwoom Heroes",
+      "p_slug": "kbo-lg-kiw-2026-04-03"
+    },
+    "KXKBOGAME-26APR020530LOTNCD": {
+      "k_title": "Lotte Giants vs NC Dinos",
+      "p_slug": "kbo-lot-nc-2026-04-01"
+    },
+    "KXKBOGAME-26APR040400SAMKTW": {
+      "k_title": "Samsung Lions vs KT Wiz",
+      "p_slug": "kbo-sam-kt-2026-04-04"
+    },
+    "KXKBOGAME-26APR030530SAMKTW": {
+      "k_title": "Samsung Lions vs KT Wiz",
+      "p_slug": "kbo-sam-kt-2026-04-03"
+    },
+    "KXNCAAWBMOP-26": {
+      "k_title": "Women's College Basketball Tournament Most Outstanding Player",
+      "p_slug": "ncaa-tournament-most-outstanding-player"
+    },
+    "KXFEDMENTION-26APR": {
+      "k_title": "What will Powell say during his April press conference?",
+      "p_slug": "what-will-powell-say-during-april-press-conference"
+    }
+  }
+}

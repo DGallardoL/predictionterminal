@@ -1,0 +1,197 @@
+/* =============================================================================
+   typography.css — T02
+   Refined type system for Prediction Terminal.
+   Consumes tokens from tokens.css (T01) with safe fallbacks; does NOT redefine.
+   Tokens consumed: --serif-display, --sans, --mono, --ink, --ink-2, --ink-3,
+                    --ink-muted, --surface-2.
+   ========================================================================== */
+
+/* -----------------------------------------------------------------------------
+   1. Body & root defaults
+   -------------------------------------------------------------------------- */
+body {
+  font-family: var(--sans, "Inter", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink, #0b0b0c);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@media (min-width: 1024px) {
+  body { font-size: 15px; }
+}
+
+/* Variable-font axes only when supported */
+@supports (font-variation-settings: normal) {
+  body {
+    font-variation-settings: "wght" 420, "slnt" 0;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   2. Heading defaults — Instrument Serif display family
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--serif-display, "Instrument Serif", "Times New Roman",
+    Georgia, serif);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.018em;
+  color: var(--ink, #0b0b0c);
+  margin: 0 0 0.5em 0;
+  font-display: swap;
+}
+
+h1, .h1 { font-size: clamp(28px, 4vw, 44px); }
+h2, .h2 { font-size: clamp(22px, 3vw, 32px); }
+h3, .h3 { font-size: clamp(18px, 1.6vw, 22px); }
+h4, .h4 { font-size: 16px; }
+h5, .h5 { font-size: 14px; letter-spacing: -0.01em; }
+h6, .h6 { font-size: 12px; letter-spacing: 0; }
+
+/* -----------------------------------------------------------------------------
+   3. Display classes — oversized serif moments
+   -------------------------------------------------------------------------- */
+.display-lg {
+  font-family: var(--serif-display, "Instrument Serif", Georgia, serif);
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.022em;
+  color: var(--ink, #0b0b0c);
+  font-display: swap;
+}
+
+.display-md {
+  font-family: var(--serif-display, "Instrument Serif", Georgia, serif);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ink, #0b0b0c);
+  font-display: swap;
+}
+
+/* -----------------------------------------------------------------------------
+   4. Monospaced numerics — JetBrains Mono with tabular & slashed-zero
+   -------------------------------------------------------------------------- */
+.num-mono {
+  font-family: var(--mono, "JetBrains Mono", "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace);
+  font-variant-numeric: tabular-nums slashed-zero;
+  font-feature-settings: "tnum" 1, "zero" 1, "ss01" 1;
+  letter-spacing: -0.005em;
+  color: var(--ink, #0b0b0c);
+  font-display: swap;
+}
+
+.num-mono.lg { font-size: 24px; line-height: 1.2; }
+.num-mono.md { font-size: 16px; line-height: 1.3; }
+.num-mono.sm { font-size: 12px; line-height: 1.35; }
+
+@supports (font-variation-settings: normal) {
+  .num-mono { font-variation-settings: "wght" 450; }
+}
+
+/* -----------------------------------------------------------------------------
+   5. Eyebrow — section antetitle
+   -------------------------------------------------------------------------- */
+.eyebrow {
+  font-family: var(--sans, "Inter", system-ui, sans-serif);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted, var(--ink-3, #6b6b70));
+  font-display: swap;
+}
+
+/* -----------------------------------------------------------------------------
+   6. Kicker — small bold lead-in
+   -------------------------------------------------------------------------- */
+.kicker {
+  font-family: var(--sans, "Inter", system-ui, sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: var(--ink-2, var(--ink, #0b0b0c));
+  font-display: swap;
+}
+
+/* -----------------------------------------------------------------------------
+   7. Lead paragraph — large serif intro
+   -------------------------------------------------------------------------- */
+.lead {
+  font-family: var(--serif-display, "Instrument Serif", Georgia, serif);
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  color: var(--ink-2, var(--ink, #0b0b0c));
+  font-display: swap;
+}
+
+@media (min-width: 768px) {
+  .lead { font-size: 18px; }
+}
+
+/* -----------------------------------------------------------------------------
+   8. Inline code — JetBrains Mono pill
+   -------------------------------------------------------------------------- */
+code,
+.code {
+  font-family: var(--mono, "JetBrains Mono", "SF Mono", Menlo, Consolas,
+    monospace);
+  font-size: 13px;
+  line-height: 1.45;
+  padding: 1px 4px;
+  background: var(--surface-2, #f4f4f5);
+  border-radius: 3px;
+  color: var(--ink, #0b0b0c);
+  font-feature-settings: "ss01" 1, "zero" 1;
+  font-display: swap;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Avoid double-padding when nested inside <pre> blocks */
+pre code,
+pre .code {
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  font-size: inherit;
+}
+
+/* -----------------------------------------------------------------------------
+   9. <small> defaults — captions / footnotes
+   -------------------------------------------------------------------------- */
+small,
+.small {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--ink-3, #6b6b70);
+}
+
+/* -----------------------------------------------------------------------------
+   10. Utility weights — keep this list tight; prefer semantic classes above
+   -------------------------------------------------------------------------- */
+.weight-regular  { font-weight: 400; }
+.weight-medium   { font-weight: 500; }
+.weight-semibold { font-weight: 600; }
+.weight-bold     { font-weight: 700; }
+
+/* -----------------------------------------------------------------------------
+   11. Tabular numerics utility — non-mono fonts can still align columns
+   -------------------------------------------------------------------------- */
+.tabular {
+  font-variant-numeric: tabular-nums slashed-zero;
+  font-feature-settings: "tnum" 1, "zero" 1;
+}

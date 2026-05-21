@@ -1,0 +1,542 @@
+/* ============================================================
+ * connection-status.css  (T60, wave-10)
+ *
+ * Hardened connection-status pill for the Prediction Terminal
+ * frontend. Replaces the older `.pfm-conn-status` indicator
+ * that flickered "Degraded" because the first heartbeat fired
+ * before detectApi() resolved. This sheet is paired with
+ * web/js/connection-status.js which implements the tri-state
+ * machine (live / slow / offline), exponential debouncing,
+ * and the diagnostics drawer.
+ *
+ * MOUNT ORDER:
+ *   AFTER tokens.css, modal.css, dark-mode.css (consumes
+ *   --surface, --ink, --hairline, --pos, --warn, --neg,
+ *   --r-pill, --r-4, --sp-*, --t, --ease, --mono, --shadow-2).
+ *
+ * COORDINATION:
+ *   - Owns the `.pfm-conn-pill*` and `.pfm-conn-drawer*`
+ *     namespaces only. Does NOT touch the legacy
+ *     `.pfm-conn-status` selectors that still live in
+ *     web/index.html — those will be removed by index-html-owner
+ *     once this module is mounted.
+ *   - Positioned at top:12px right:60px to clear the T05
+ *     theme-toggle pill (which sits at top-right ~16/16).
+ *
+ * STRUCTURE (built by JS, kept here for reference):
+ *   <button class="pfm-conn-pill" data-state="live"
+ *           aria-live="polite" aria-label="Connection status">
+ *     <span class="pfm-conn-pill__dot"></span>
+ *     <span class="pfm-conn-pill__label">Live</span>
+ *   </button>
+ *
+ *   <div class="pfm-conn-drawer" role="dialog" aria-modal="true">
+ *     <header class="pfm-conn-drawer__head"> ... </header>
+ *     <section class="pfm-conn-drawer__body"> ... </section>
+ *   </div>
+ * ============================================================ */
+
+/* ------------------------------------------------------------
+ * Pill — fixed top-right (cleared past theme toggle)
+ * ------------------------------------------------------------ */
+.pfm-conn-pill {
+  position: fixed;
+  top: 12px;
+  right: 60px;
+  z-index: 950;
+
+  /* Wave-7 (2026-05-19): demoted badge — smaller, informational. The
+     previous 80x24 / 11px size made the "Slow" state read like an error.
+     Now: 9.5px label, 2px 6px padding so the pill is unobtrusive. */
+  min-width: 0;
+  height: auto;
+  max-width: 160px;
+  padding: 2px 6px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  background: var(--surface, #ffffff);
+  color: var(--ink-3, #64748b);
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  border-radius: var(--r-pill, 999px);
+  box-shadow: var(--shadow-2, 0 4px 12px rgba(15, 23, 42, 0.05));
+
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  font-size: 9.5px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  appearance: none;
+  outline: none;
+
+  transition:
+    background var(--t-fast, 120ms) var(--ease, cubic-bezier(0.4, 0, 0.2, 1)),
+    border-color var(--t-fast, 120ms) var(--ease, cubic-bezier(0.4, 0, 0.2, 1)),
+    transform var(--t-fast, 120ms) var(--ease, cubic-bezier(0.4, 0, 0.2, 1)),
+    box-shadow var(--t-fast, 120ms) var(--ease, cubic-bezier(0.4, 0, 0.2, 1));
+}
+
+.pfm-conn-pill:hover {
+  background: var(--bg-alt, #f4f4f5);
+  border-color: var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-3, 0 8px 18px rgba(15, 23, 42, 0.08));
+}
+
+.pfm-conn-pill:focus-visible {
+  border-color: var(--orange, #f97316);
+  box-shadow: var(--focus-ring, 0 0 0 3px rgba(249, 115, 22, 0.35));
+}
+
+.pfm-conn-pill:active {
+  transform: translateY(0);
+}
+
+/* During the initial detect-API phase the pill is hidden to
+   prevent the very flicker this module exists to eliminate. */
+.pfm-conn-pill[data-state="init"],
+.pfm-conn-pill[hidden] {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+}
+
+/* ------------------------------------------------------------
+ * Dot + label
+ * ------------------------------------------------------------ */
+.pfm-conn-pill__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  background: var(--ink-4, #94a3b8);
+  box-shadow: 0 0 0 0 currentColor;
+  transition:
+    background var(--t-fast, 120ms) ease,
+    box-shadow var(--t-fast, 120ms) ease;
+}
+
+.pfm-conn-pill__label {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ------------------------------------------------------------
+ * State variants
+ *   live    -> green dot with subtle pulse
+ *   slow    -> orange dot, no pulse
+ *   offline -> red dot, no pulse
+ * ------------------------------------------------------------ */
+.pfm-conn-pill[data-state="live"] .pfm-conn-pill__dot {
+  background: var(--pos, #16a34a);
+  animation: pfm-conn-pulse 2200ms ease-out infinite;
+}
+
+.pfm-conn-pill[data-state="live"] .pfm-conn-pill__label {
+  /* Wave-7 demote: informational, not accent. */
+  color: var(--ink-3, #64748b);
+}
+
+.pfm-conn-pill[data-state="slow"] .pfm-conn-pill__dot {
+  background: var(--warn, #f59e0b);
+  animation: none;
+}
+
+.pfm-conn-pill[data-state="slow"] .pfm-conn-pill__label {
+  /* Wave-7 demote: was --ink-2 (too prominent). Now --ink-3 to match
+     the live state — pill is informational, not an alert. */
+  color: var(--ink-3, #64748b);
+}
+
+.pfm-conn-pill[data-state="offline"] .pfm-conn-pill__dot {
+  background: var(--neg, #dc2626);
+  animation: none;
+}
+
+.pfm-conn-pill[data-state="offline"] .pfm-conn-pill__label {
+  color: var(--neg, #dc2626);
+}
+
+/* While a heartbeat is in-flight the dot dims very slightly so
+   the user gets a hint of activity without overpowering the
+   2.2s pulse. */
+.pfm-conn-pill[data-checking="1"] .pfm-conn-pill__dot {
+  filter: brightness(1.15);
+}
+
+/* ------------------------------------------------------------
+ * Pulse keyframe (only used in `live` state)
+ * Respects prefers-reduced-motion.
+ * ------------------------------------------------------------ */
+@keyframes pfm-conn-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.45);
+  }
+  60% {
+    box-shadow: 0 0 0 6px rgba(22, 163, 74, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pfm-conn-pill[data-state="live"] .pfm-conn-pill__dot {
+    animation: none;
+  }
+  .pfm-conn-pill {
+    transition: none;
+  }
+}
+
+/* ------------------------------------------------------------
+ * Diagnostics drawer (slides in from right; piggybacks on T12
+ * drawer animations if available, otherwise uses local fallback)
+ * ------------------------------------------------------------ */
+.pfm-conn-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 380px;
+  background: var(--surface, #ffffff);
+  color: var(--ink, #0f172a);
+  border-left: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  box-shadow: -12px 0 32px rgba(15, 23, 42, 0.08);
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateX(100%);
+  transition: transform 220ms var(--ease, cubic-bezier(0.4, 0, 0.2, 1));
+}
+
+.pfm-conn-drawer.is-open {
+  transform: translateX(0);
+}
+
+.pfm-conn-drawer__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.35);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  z-index: 1090;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms var(--ease, cubic-bezier(0.4, 0, 0.2, 1));
+}
+
+.pfm-conn-drawer__backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.pfm-conn-drawer__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  flex: 0 0 auto;
+}
+
+.pfm-conn-drawer__title {
+  margin: 0;
+  font-family: var(--serif-display, "Instrument Serif", Georgia, serif);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--ink, #0f172a);
+}
+
+.pfm-conn-drawer__close {
+  appearance: none;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-3, #64748b);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.pfm-conn-drawer__close:hover {
+  background: var(--bg-alt, #f4f4f5);
+  color: var(--ink, #0f172a);
+}
+
+.pfm-conn-drawer__close:focus-visible {
+  outline: none;
+  border-color: var(--orange, #f97316);
+  box-shadow: var(--focus-ring, 0 0 0 3px rgba(249, 115, 22, 0.35));
+}
+
+.pfm-conn-drawer__body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 16px 20px 20px;
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  font-size: 13px;
+  color: var(--ink-2, #334155);
+}
+
+/* Summary row at the top of the drawer */
+.pfm-conn-drawer__summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border-radius: var(--r-3, 8px);
+  background: var(--bg-alt, #f4f4f5);
+  font-size: 12px;
+}
+
+.pfm-conn-drawer__summary-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.pfm-conn-drawer__summary[data-state="live"] .pfm-conn-drawer__summary-dot { background: var(--pos, #16a34a); }
+.pfm-conn-drawer__summary[data-state="slow"] .pfm-conn-drawer__summary-dot { background: var(--warn, #f59e0b); }
+.pfm-conn-drawer__summary[data-state="offline"] .pfm-conn-drawer__summary-dot { background: var(--neg, #dc2626); }
+
+.pfm-conn-drawer__summary-meta {
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  color: var(--ink-3, #64748b);
+  font-size: 11px;
+  margin-left: auto;
+}
+
+/* Per-source list */
+.pfm-conn-drawer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pfm-conn-drawer__row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: var(--r-2, 6px);
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  background: var(--surface, #ffffff);
+}
+
+.pfm-conn-drawer__row-name {
+  font-weight: 500;
+  color: var(--ink, #0f172a);
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.pfm-conn-drawer__row-latency {
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 11px;
+  color: var(--ink-3, #64748b);
+  font-variant-numeric: tabular-nums;
+}
+
+.pfm-conn-drawer__row-badge {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: var(--r-pill, 999px);
+  background: var(--bg-alt, #f4f4f5);
+  color: var(--ink-3, #64748b);
+}
+
+.pfm-conn-drawer__row[data-ok="1"] .pfm-conn-drawer__row-badge {
+  background: rgba(22, 163, 74, 0.12);
+  color: var(--pos, #16a34a);
+}
+
+.pfm-conn-drawer__row[data-ok="0"] .pfm-conn-drawer__row-badge {
+  background: rgba(220, 38, 38, 0.12);
+  color: var(--neg, #dc2626);
+}
+
+.pfm-conn-drawer__row-error {
+  grid-column: 1 / -1;
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 10.5px;
+  color: var(--neg, #dc2626);
+  padding-top: 4px;
+  border-top: 1px dashed var(--hairline, rgba(15, 23, 42, 0.08));
+  margin-top: 6px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.pfm-conn-drawer__empty {
+  font-size: 12px;
+  color: var(--ink-3, #64748b);
+  padding: 12px 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.pfm-conn-drawer__footer {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  font-size: 11px;
+  color: var(--ink-3, #64748b);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pfm-conn-drawer__refresh {
+  align-self: flex-start;
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  border-radius: var(--r-2, 6px);
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink, #0f172a);
+  cursor: pointer;
+  font-family: inherit;
+  margin-top: 10px;
+}
+
+.pfm-conn-drawer__refresh:hover {
+  background: var(--bg-alt, #f4f4f5);
+  border-color: var(--orange, #f97316);
+  color: var(--orange-2, #ea580c);
+}
+
+.pfm-conn-drawer__refresh:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ------------------------------------------------------------
+ * Dark mode — system preference + explicit toggle
+ * ------------------------------------------------------------ */
+@media (prefers-color-scheme: dark) {
+  .pfm-conn-pill {
+    background: rgba(15, 23, 42, 0.85);
+    color: #e2e8f0;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  }
+  .pfm-conn-pill:hover {
+    background: rgba(30, 41, 59, 0.95);
+    border-color: rgba(255, 255, 255, 0.16);
+  }
+  /* Wave-7 demote: muted slate so the pill is informational. */
+  .pfm-conn-pill[data-state="live"] .pfm-conn-pill__label { color: #94a3b8; }
+  .pfm-conn-pill[data-state="slow"] .pfm-conn-pill__label { color: #94a3b8; }
+  .pfm-conn-pill[data-state="offline"] .pfm-conn-pill__label { color: #fca5a5; }
+
+  .pfm-conn-drawer {
+    background: #0f172a;
+    color: #e2e8f0;
+    border-left-color: rgba(255, 255, 255, 0.08);
+    box-shadow: -12px 0 32px rgba(0, 0, 0, 0.55);
+  }
+  .pfm-conn-drawer__summary { background: rgba(255, 255, 255, 0.04); }
+  .pfm-conn-drawer__row {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+  .pfm-conn-drawer__row-name { color: #f1f5f9; }
+  .pfm-conn-drawer__row-badge { background: rgba(255, 255, 255, 0.06); color: #cbd5e1; }
+  .pfm-conn-drawer__refresh {
+    color: #f1f5f9;
+    border-color: rgba(255, 255, 255, 0.16);
+  }
+  .pfm-conn-drawer__refresh:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+}
+
+[data-theme="dark"] .pfm-conn-pill {
+  background: rgba(15, 23, 42, 0.85);
+  color: #e2e8f0;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+[data-theme="dark"] .pfm-conn-pill:hover {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+/* Wave-7 demote: muted slate. */
+[data-theme="dark"] .pfm-conn-pill[data-state="live"] .pfm-conn-pill__label { color: #94a3b8; }
+[data-theme="dark"] .pfm-conn-pill[data-state="slow"] .pfm-conn-pill__label { color: #94a3b8; }
+[data-theme="dark"] .pfm-conn-pill[data-state="offline"] .pfm-conn-pill__label { color: #fca5a5; }
+
+[data-theme="dark"] .pfm-conn-drawer {
+  background: #0f172a;
+  color: #e2e8f0;
+  border-left-color: rgba(255, 255, 255, 0.08);
+  box-shadow: -12px 0 32px rgba(0, 0, 0, 0.55);
+}
+[data-theme="dark"] .pfm-conn-drawer__summary { background: rgba(255, 255, 255, 0.04); }
+[data-theme="dark"] .pfm-conn-drawer__row {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+[data-theme="dark"] .pfm-conn-drawer__row-name { color: #f1f5f9; }
+[data-theme="dark"] .pfm-conn-drawer__row-badge { background: rgba(255, 255, 255, 0.06); color: #cbd5e1; }
+[data-theme="dark"] .pfm-conn-drawer__refresh {
+  color: #f1f5f9;
+  border-color: rgba(255, 255, 255, 0.16);
+}
+[data-theme="dark"] .pfm-conn-drawer__refresh:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ------------------------------------------------------------
+ * Mobile (≤640px): drop label, keep dot; nudge corner.
+ * ------------------------------------------------------------ */
+@media (max-width: 640px) {
+  .pfm-conn-pill {
+    top: 10px;
+    right: 56px;
+    min-width: 0;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    justify-content: center;
+  }
+  .pfm-conn-pill__label {
+    display: none;
+  }
+  .pfm-conn-drawer {
+    max-width: 100vw;
+  }
+}
+
+/* ============================================================
+ * End of connection-status.css
+ * ============================================================ */

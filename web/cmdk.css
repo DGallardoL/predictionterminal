@@ -1,0 +1,254 @@
+/* ─────────────────────────────────────────────────────────────────────
+   cmdk.css — Command palette (Cmd+K / Ctrl+K)
+   Uses only CSS variables defined in index.html :root and the
+   html[data-theme="dark"] override block so it auto-adapts.
+   ───────────────────────────────────────────────────────────────────── */
+
+/* ── Backdrop ───────────────────────────────────────────────────────── */
+.pfm-cmdk-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  opacity: 0;
+  transition: opacity var(--t-fast);
+  /* anchor the modal: 12vh from top, centered horizontally */
+  padding: 12vh var(--sp-4) var(--sp-4);
+  justify-content: center;
+  align-items: flex-start;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+.pfm-cmdk-backdrop[data-open="true"] {
+  display: flex;
+  opacity: 1;
+}
+
+/* ── Modal shell ────────────────────────────────────────────────────── */
+.pfm-cmdk-modal {
+  width: 640px;
+  max-width: calc(100vw - var(--sp-6));
+  max-height: 70vh;
+  background: var(--bg);
+  border: 1px solid var(--hairline-2);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: scale(0.97);
+  opacity: 0;
+  transition:
+    transform 180ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: var(--sans);
+  color: var(--ink);
+}
+.pfm-cmdk-backdrop[data-open="true"] .pfm-cmdk-modal {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* ── Input row ──────────────────────────────────────────────────────── */
+.pfm-cmdk-input-row {
+  display: flex;
+  align-items: center;
+  padding: var(--sp-2) var(--sp-4);
+  gap: var(--sp-3);
+}
+.pfm-cmdk-input {
+  flex: 1 1 auto;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--fs-lg);
+  line-height: 18px;
+  padding: var(--sp-3) 0;
+  letter-spacing: -0.005em;
+  width: 100%;
+}
+/* placeholder uses serif for the on-brand feel; typed text stays sans */
+.pfm-cmdk-input::placeholder {
+  font-family: var(--serif);
+  color: var(--ink-3);
+  font-style: italic;
+  font-size: var(--fs-lg);
+}
+.pfm-cmdk-input:focus { outline: 0; box-shadow: none; }
+
+.pfm-cmdk-kbdhint {
+  font-family: var(--mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+  padding: 2px 6px;
+  border: 1px solid var(--hairline-2);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: var(--surface);
+  flex: 0 0 auto;
+  user-select: none;
+}
+
+.pfm-cmdk-sep {
+  height: 1px;
+  background: var(--hairline);
+  width: 100%;
+  flex: 0 0 1px;
+}
+
+/* ── Results list ───────────────────────────────────────────────────── */
+.pfm-cmdk-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1 1 auto;
+  /* 8 visible rows * 56px */
+  max-height: calc(56px * 8);
+}
+
+/* section header */
+.pfm-cmdk-section {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding: var(--sp-3) var(--sp-4) var(--sp-1);
+  background: var(--bg);
+  user-select: none;
+}
+
+/* result row */
+.pfm-cmdk-row {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  align-items: center;
+  column-gap: var(--sp-3);
+  padding: 10px var(--sp-4);
+  height: 56px;
+  border-bottom: 1px solid var(--hairline);
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  background: transparent;
+  transition: background var(--t-fast), border-color var(--t-fast);
+  user-select: none;
+}
+.pfm-cmdk-row:last-child { border-bottom: 0; }
+.pfm-cmdk-row:hover { background: var(--surface); }
+.pfm-cmdk-row[aria-selected="true"] {
+  background: var(--surface);
+  border-left: 3px solid var(--orange);
+}
+
+.pfm-cmdk-icon {
+  font-family: var(--mono);
+  font-size: var(--fs-lg);
+  color: var(--ink-3);
+  text-align: center;
+  width: 24px;
+  line-height: 1;
+}
+
+.pfm-cmdk-text {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.pfm-cmdk-title {
+  font-family: var(--sans);
+  font-size: var(--fs-base);
+  color: var(--ink);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.005em;
+}
+.pfm-cmdk-sub {
+  font-family: var(--mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pfm-cmdk-pill {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding: 2px 6px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-pill);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.pfm-cmdk-pill[data-accent="orange"] {
+  color: var(--orange);
+  border-color: var(--orange);
+  background: var(--orange-soft);
+}
+
+/* ── Empty / loading states ─────────────────────────────────────────── */
+.pfm-cmdk-empty {
+  padding: var(--sp-6) var(--sp-4);
+  text-align: center;
+  color: var(--ink-3);
+  font-family: var(--sans);
+  font-size: var(--fs-sm);
+}
+.pfm-cmdk-loading {
+  padding: var(--sp-3) var(--sp-4);
+  font-family: var(--mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+  text-align: center;
+}
+
+/* ── Footer hint row ────────────────────────────────────────────────── */
+.pfm-cmdk-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: 6px var(--sp-4);
+  border-top: 1px solid var(--hairline);
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-4);
+  user-select: none;
+  background: var(--bg-alt);
+}
+.pfm-cmdk-footer span { white-space: nowrap; }
+.pfm-cmdk-footer kbd {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 1px 4px;
+  border: 1px solid var(--hairline-2);
+  border-radius: 3px;
+  background: var(--surface);
+  color: var(--ink-3);
+  margin: 0 2px;
+}
+
+/* ── Small screens ──────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .pfm-cmdk-backdrop { padding: 8vh var(--sp-2) var(--sp-2); }
+  .pfm-cmdk-modal { width: 100%; max-height: 80vh; }
+  .pfm-cmdk-list { max-height: calc(56px * 6); }
+}
+
+/* ── Reduced motion ─────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .pfm-cmdk-backdrop,
+  .pfm-cmdk-modal,
+  .pfm-cmdk-row { transition: none !important; }
+}

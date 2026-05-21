@@ -1,0 +1,273 @@
+<!--
+  Reverse Factor Finder + Prediction-Driven Alpha Scanner — self-contained
+  UI component. Drop-in include from index.html via:
+
+      <iframe src="components/reverse_finder.html" ...></iframe>
+                              — or —
+      fetch("components/reverse_finder.html").then(r => r.text())
+        .then(html => document.querySelector("#rff-mount").innerHTML = html);
+
+  Talks to the FastAPI backend at the path set in window.PFM_API_BASE
+  (defaults to "" — same origin). All CSS is scoped under .rff-* so styles
+  don't leak. Plotly is loaded from CDN if not already present.
+-->
+<div class="rff-root">
+  <style>
+    .rff-root {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1f2937;
+      padding: 16px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .rff-root h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 4px;
+    }
+    .rff-root .rff-sub {
+      font-size: 12px;
+      color: #6b7280;
+      margin-bottom: 14px;
+    }
+    .rff-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: flex-end;
+      margin-bottom: 12px;
+      padding: 12px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+    }
+    .rff-field { display: flex; flex-direction: column; gap: 2px; }
+    .rff-field label {
+      font-size: 11px;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .rff-field input, .rff-field select {
+      padding: 6px 8px;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      font-size: 13px;
+      background: white;
+    }
+    .rff-button {
+      padding: 7px 14px;
+      background: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .rff-button:disabled { background: #9ca3af; cursor: not-allowed; }
+    .rff-status {
+      font-size: 12px;
+      color: #6b7280;
+      margin-bottom: 8px;
+      min-height: 16px;
+    }
+    .rff-status.rff-error { color: #dc2626; }
+    .rff-results { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    .rff-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .rff-table th, .rff-table td {
+      padding: 6px 8px;
+      text-align: right;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .rff-table th:first-child, .rff-table td:first-child { text-align: left; }
+    .rff-table thead th {
+      background: #f3f4f6;
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #4b5563;
+    }
+    .rff-pos { color: #16a34a; }
+    .rff-neg { color: #dc2626; }
+    .rff-summary {
+      font-size: 12px;
+      color: #4b5563;
+      margin-top: 6px;
+    }
+    .rff-chart { width: 100%; height: 320px; }
+  </style>
+
+  <h2>Reverse Factor Finder</h2>
+  <div class="rff-sub">
+    Input a ticker. Returns the top-k Polymarket / Kalshi markets that best
+    explain its returns (forward stepwise on R²).
+  </div>
+
+  <form class="rff-form" id="rff-form">
+    <div class="rff-field">
+      <label>Ticker</label>
+      <input id="rff-ticker" type="text" value="NVDA" maxlength="10" required />
+    </div>
+    <div class="rff-field">
+      <label>Start</label>
+      <input id="rff-start" type="date" value="2024-06-01" required />
+    </div>
+    <div class="rff-field">
+      <label>End</label>
+      <input id="rff-end" type="date" value="2025-12-31" required />
+    </div>
+    <div class="rff-field">
+      <label>k</label>
+      <input id="rff-k" type="number" value="5" min="1" max="10" />
+    </div>
+    <div class="rff-field">
+      <label>Return type</label>
+      <select id="rff-rtype">
+        <option value="log">log</option>
+        <option value="simple">simple</option>
+      </select>
+    </div>
+    <button type="submit" class="rff-button" id="rff-submit">Find factors</button>
+  </form>
+
+  <div class="rff-status" id="rff-status"></div>
+
+  <div class="rff-results" id="rff-results" style="display:none;">
+    <div id="rff-chart" class="rff-chart"></div>
+    <table class="rff-table" id="rff-table">
+      <thead>
+        <tr>
+          <th>Factor</th>
+          <th>ΔR²</th>
+          <th>β</th>
+          <th>t-stat</th>
+          <th>VIF</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="rff-summary" id="rff-summary"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  const root = document.currentScript.previousElementSibling;
+  const $ = (id) => root.querySelector("#" + id);
+  const apiBase = (window.PFM_API_BASE || "").replace(/\/$/, "");
+
+  function ensurePlotly(cb) {
+    if (window.Plotly) return cb();
+    const s = document.createElement("script");
+    s.src = "https://cdn.plot.ly/plotly-2.35.2.min.js";
+    s.onload = cb;
+    document.head.appendChild(s);
+  }
+
+  function fmt(n, d = 4) {
+    if (n === null || n === undefined || Number.isNaN(n)) return "—";
+    return Number(n).toFixed(d);
+  }
+
+  function setStatus(msg, isError = false) {
+    const el = $("rff-status");
+    el.textContent = msg || "";
+    el.classList.toggle("rff-error", !!isError);
+  }
+
+  function renderTable(rows) {
+    const tbody = $("rff-table").querySelector("tbody");
+    tbody.innerHTML = "";
+    rows.forEach((r) => {
+      const tr = document.createElement("tr");
+      const betaCls = r.beta >= 0 ? "rff-pos" : "rff-neg";
+      tr.innerHTML = `
+        <td><strong>${r.factor_name || r.factor_id}</strong>
+            <div style="font-size:11px;color:#6b7280;">${r.factor_id}</div></td>
+        <td>${fmt(r.delta_r_squared)}</td>
+        <td class="${betaCls}">${fmt(r.beta)}</td>
+        <td>${fmt(r.t_stat, 2)}</td>
+        <td>${fmt(r.vif, 2)}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  function renderChart(rows) {
+    if (!window.Plotly) return;
+    const xs = rows.map((r) => r.factor_name || r.factor_id);
+    const ys = rows.map((r) => r.delta_r_squared);
+    const colors = rows.map((r) => (r.beta >= 0 ? "#16a34a" : "#dc2626"));
+    const trace = {
+      x: xs,
+      y: ys,
+      type: "bar",
+      marker: { color: colors },
+      hovertemplate: "%{x}<br>ΔR² = %{y:.4f}<extra></extra>",
+    };
+    const layout = {
+      title: { text: "Marginal ΔR² per factor", font: { size: 14 } },
+      margin: { l: 50, r: 20, t: 40, b: 80 },
+      xaxis: { tickangle: -30, automargin: true },
+      yaxis: { title: "ΔR²" },
+      paper_bgcolor: "white",
+      plot_bgcolor: "white",
+      font: { family: "-apple-system, sans-serif", size: 11 },
+    };
+    Plotly.newPlot($("rff-chart"), [trace], layout, {
+      displaylogo: false,
+      responsive: true,
+    });
+  }
+
+  $("rff-form").addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    const btn = $("rff-submit");
+    btn.disabled = true;
+    setStatus("Fitting…");
+    $("rff-results").style.display = "none";
+
+    const body = {
+      ticker: $("rff-ticker").value.trim().toUpperCase(),
+      start: $("rff-start").value,
+      end: $("rff-end").value,
+      k: parseInt($("rff-k").value, 10) || 5,
+      return_type: $("rff-rtype").value,
+    };
+
+    try {
+      const r = await fetch(apiBase + "/reverse-finder", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      if (!r.ok) {
+        const detail = await r.text();
+        throw new Error(`HTTP ${r.status}: ${detail}`);
+      }
+      const data = await r.json();
+      if (!data.top_factors || data.top_factors.length === 0) {
+        setStatus(data.note || "No factors selected.", true);
+        return;
+      }
+      setStatus("");
+      $("rff-results").style.display = "grid";
+      renderTable(data.top_factors);
+      $("rff-summary").textContent =
+        `Total R² = ${fmt(data.total_r_squared)} on n=${data.n_obs} obs ` +
+        `(${data.rejected ? data.rejected.length : 0} candidates rejected).`;
+      ensurePlotly(() => renderChart(data.top_factors));
+    } catch (e) {
+      setStatus(String(e && e.message ? e.message : e), true);
+    } finally {
+      btn.disabled = false;
+    }
+  });
+})();
+</script>

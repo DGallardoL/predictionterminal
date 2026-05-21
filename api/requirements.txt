@@ -1,0 +1,39 @@
+fastapi>=0.116,<0.117
+uvicorn[standard]>=0.32,<0.33
+# Production WSGI/ASGI manager. Preferred over ``uvicorn --workers`` in
+# production: graceful reloads, max-requests recycling, pre-fork logging.
+# The Dockerfile CMD uses ``gunicorn -k uvicorn.workers.UvicornWorker``.
+gunicorn>=23.0,<27.0
+# Brotli compression middleware. ~30 % smaller than gzip for the 1.2 MB
+# index.html (251 KB vs 268 KB on the wire). Falls back to gzip via the
+# stacked GZipMiddleware when the client doesn't advertise ``br``.
+brotli-asgi>=1.4,<2.0
+pydantic>=2.9,<3.0
+pydantic-settings>=2.6,<3.0
+statsmodels>=0.14.4,<0.15
+pandas>=2.2,<3.0
+numpy>=2.0,<3.0
+yfinance>=0.2.50,<0.3
+redis>=5.2,<6.0
+httpx>=0.27,<0.29
+pyyaml>=6.0,<7.0
+structlog>=24.4,<25.0
+scikit-learn>=1.4,<2.0
+prometheus-client>=0.20
+sentry-sdk[fastapi]>=2.0
+jinja2>=3.1,<4.0
+matplotlib>=3.8,<4.0
+weasyprint>=62
+
+# Type stubs for static analysis. Runtime is unaffected; mypy reads these
+# during CI/dev. Keeping them in the main requirements file (rather than a
+# separate requirements-dev.txt) matches the existing single-file layout.
+types-pyyaml>=6.0
+types-requests>=2.31
+pandas-stubs>=2.0
+
+# Property-based testing & golden-file regression. Hypothesis drives random
+# inputs through math-core invariants (logit/HAC/OLS); golden-file checks pin
+# stable endpoint shapes against a snapshot in tests/golden/. See
+# tests/test_property_based.py and tests/test_golden_endpoints.py.
+hypothesis>=6.100,<7.0

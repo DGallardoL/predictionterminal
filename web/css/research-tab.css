@@ -1,0 +1,431 @@
+/* ============================================================
+ * research-tab.css  (T57, wave-research-tab)
+ *
+ * Styles for the α Hub → Research sub-tab. Mounts inside
+ * [data-spane="research-reports"]. Backed by JS module
+ * web/js/research-tab.js (window.PFM.research).
+ *
+ * DEPENDENCIES (token contracts, do NOT redefine):
+ *   - tokens.css: --ink, --ink-2, --ink-muted, --surface,
+ *     --surface-2, --bg-alt, --hairline, --hairline-strong,
+ *     --orange-500, --orange-soft, --pos, --neg, --warn,
+ *     --serif-display, --sans, --mono, --sp-*, --r-2, --r-3,
+ *     --r-pill, --t-fast, --ease.
+ *   - data-cards.css (T06): consumes .dc-card primitives.
+ *   - modal.css (T12): consumes .modal / .modal-backdrop.
+ *   - skeletons.css (T04): consumes .skel primitives.
+ *
+ * Scoped under `.pfm-research` so styles never leak.
+ * ============================================================ */
+
+.pfm-research {
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  color: var(--ink, #0f172a);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3, 12px);
+}
+
+/* ---------- Header (title + refresh + sort) ------------- */
+.pfm-research__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3, 12px);
+  flex-wrap: wrap;
+  padding-bottom: var(--sp-2, 8px);
+  border-bottom: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+}
+
+.pfm-research__title {
+  flex: 1 1 auto;
+  font-family: var(--serif-display, "Instrument Serif", Georgia, serif);
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--ink, #0f172a);
+  margin: 0;
+}
+
+.pfm-research__controls {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2, 8px);
+}
+
+.pfm-research__sort {
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--surface, #fff);
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  color: var(--ink-2, #334155);
+  padding: 4px 22px 4px 10px;
+  border-radius: var(--r-2, 6px);
+  font: 11px/1.4 var(--mono, "JetBrains Mono", ui-monospace, monospace);
+  cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink-muted, #64748b) 50%),
+                    linear-gradient(135deg, var(--ink-muted, #64748b) 50%, transparent 50%);
+  background-position: calc(100% - 12px) 50%, calc(100% - 8px) 50%;
+  background-size: 4px 4px, 4px 4px;
+  background-repeat: no-repeat;
+  transition: border-color var(--t-fast, 120ms) var(--ease, ease);
+}
+
+.pfm-research__sort:hover {
+  border-color: var(--hairline-strong, rgba(15, 23, 42, 0.14));
+}
+
+.pfm-research__sort:focus-visible {
+  outline: var(--focus-ring, 2px solid rgba(249, 115, 22, 0.55));
+  outline-offset: 2px;
+}
+
+.pfm-research__refresh {
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  color: var(--ink-2, #334155);
+  width: 28px;
+  height: 28px;
+  border-radius: var(--r-2, 6px);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background var(--t-fast, 120ms) var(--ease, ease),
+              border-color var(--t-fast, 120ms) var(--ease, ease),
+              color var(--t-fast, 120ms) var(--ease, ease);
+}
+
+.pfm-research__refresh:hover {
+  background: var(--bg-alt, #f4f4f5);
+  border-color: var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  color: var(--ink, #0f172a);
+}
+
+.pfm-research__refresh:focus-visible {
+  outline: var(--focus-ring, 2px solid rgba(249, 115, 22, 0.55));
+  outline-offset: 2px;
+}
+
+.pfm-research__refresh svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+.pfm-research__refresh.is-spinning svg {
+  animation: pfm-research-spin 700ms linear infinite;
+}
+
+@keyframes pfm-research-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pfm-research__refresh.is-spinning svg {
+    animation: none;
+  }
+}
+
+/* ---------- Grid of cards ------------------------------- */
+.pfm-research__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Card overrides (extends .dc-card) ----------- */
+.pfm-research-card {
+  /* Inherits .dc-card base. We add report-specific layout: a
+     summary block and a counts footer with a hairline above. */
+  cursor: pointer;
+  text-align: left;
+  gap: var(--sp-2, 8px);
+  min-height: 168px;
+}
+
+.pfm-research-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-2, 8px);
+}
+
+.pfm-research-card__title {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--serif-display, "Instrument Serif", Georgia, serif);
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  color: var(--ink, #0f172a);
+  margin: 0;
+  /* allow 2-line wrap for long titles */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.pfm-research-card__version {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--r-pill, 999px);
+  background: var(--orange-soft, rgba(249, 115, 22, 0.12));
+  color: var(--orange-500, #f97316);
+  font: 600 10px/1.4 var(--mono, "JetBrains Mono", ui-monospace, monospace);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pfm-research-card__date {
+  font: 10px/1.4 var(--mono, "JetBrains Mono", ui-monospace, monospace);
+  color: var(--ink-muted, #64748b);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.pfm-research-card__summary {
+  font: 12px/1.45 var(--sans, Inter, system-ui, sans-serif);
+  color: var(--ink-2, #334155);
+  margin: 0;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Hairline separator between summary and counts. */
+.pfm-research-card__counts {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3, 12px);
+  padding-top: var(--sp-2, 8px);
+  border-top: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, monospace);
+  font-size: 11px;
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+.pfm-research-card__count {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.pfm-research-card__count-value {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink, #0f172a);
+}
+
+.pfm-research-card__count-value.is-pos { color: var(--pos, #16a34a); }
+.pfm-research-card__count-value.is-neg { color: var(--neg, #dc2626); }
+
+.pfm-research-card__count-label {
+  color: var(--ink-muted, #64748b);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Empty state --------------------------------- */
+.pfm-research__empty {
+  padding: var(--sp-6, 32px) var(--sp-4, 16px);
+  text-align: center;
+  background: var(--surface-2, #f8fafc);
+  border: 1px dashed var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  border-radius: var(--r-3, 8px);
+  color: var(--ink-muted, #64748b);
+}
+
+.pfm-research__empty-title {
+  font-family: var(--serif-display, "Instrument Serif", Georgia, serif);
+  font-size: 16px;
+  color: var(--ink-2, #334155);
+  margin: 0 0 4px;
+}
+
+.pfm-research__empty-body {
+  font: 12px/1.45 var(--sans, Inter, system-ui, sans-serif);
+  color: var(--ink-muted, #64748b);
+  margin: 0;
+}
+
+/* ---------- Skeleton placeholders ----------------------- */
+.pfm-research__skel-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 168px;
+  padding: var(--sp-4, 16px);
+  background: var(--surface, #fff);
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  border-radius: var(--r-3, 8px);
+}
+
+.pfm-research__skel-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* ---------- Modal body (markdown rendering) ------------- */
+.pfm-research-modal__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3, 12px);
+  padding: var(--sp-2, 8px) 0 var(--sp-3, 12px);
+  font: 11px/1.4 var(--mono, "JetBrains Mono", ui-monospace, monospace);
+  color: var(--ink-muted, #64748b);
+  border-bottom: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  margin-bottom: var(--sp-3, 12px);
+}
+
+.pfm-research-modal__meta strong {
+  color: var(--ink, #0f172a);
+  font-weight: 500;
+}
+
+.pfm-research-modal__body {
+  font-family: var(--serif-display, "Instrument Serif", Georgia, serif);
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ink, #0f172a);
+  /* The body comes pre-rendered from /research/reports/{v}?format=html.
+     We constrain a few common elements so prose reads nicely. */
+}
+
+.pfm-research-modal__body h1,
+.pfm-research-modal__body h2,
+.pfm-research-modal__body h3 {
+  font-family: var(--serif-display, "Instrument Serif", Georgia, serif);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink, #0f172a);
+  margin-top: 1.4em;
+  margin-bottom: 0.4em;
+}
+
+.pfm-research-modal__body h1 { font-size: 24px; }
+.pfm-research-modal__body h2 { font-size: 19px; }
+.pfm-research-modal__body h3 { font-size: 16px; }
+
+.pfm-research-modal__body p {
+  margin: 0 0 0.9em;
+}
+
+.pfm-research-modal__body code,
+.pfm-research-modal__body pre {
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, monospace);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.pfm-research-modal__body pre {
+  padding: var(--sp-3, 12px);
+  background: var(--surface-2, #f8fafc);
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  border-radius: var(--r-2, 6px);
+  overflow-x: auto;
+  margin: 0.8em 0;
+}
+
+.pfm-research-modal__body :not(pre) > code {
+  padding: 1px 6px;
+  background: var(--bg-alt, #f4f4f5);
+  border-radius: 4px;
+}
+
+.pfm-research-modal__body blockquote {
+  margin: 0.8em 0;
+  padding: 8px 14px;
+  border-left: 3px solid var(--orange-500, #f97316);
+  background: var(--orange-soft, rgba(249, 115, 22, 0.06));
+  color: var(--ink-2, #334155);
+  font-style: italic;
+}
+
+.pfm-research-modal__body ul,
+.pfm-research-modal__body ol {
+  margin: 0 0 1em;
+  padding-left: 1.4em;
+}
+
+.pfm-research-modal__body li {
+  margin: 0.2em 0;
+}
+
+.pfm-research-modal__body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.9em 0;
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, monospace);
+  font-size: 12px;
+}
+
+.pfm-research-modal__body th,
+.pfm-research-modal__body td {
+  text-align: left;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+}
+
+.pfm-research-modal__body th {
+  font-weight: 500;
+  background: var(--surface-2, #f8fafc);
+}
+
+.pfm-research-modal__body hr {
+  border: 0;
+  border-top: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  margin: 1.4em 0;
+}
+
+.pfm-research-modal__body a {
+  color: var(--orange-500, #f97316);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.pfm-research-modal__loading {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: var(--sp-4, 16px) 0;
+}
+
+/* ---------- Dark-mode adjustments ----------------------- */
+@media (prefers-color-scheme: dark) {
+  .pfm-research__empty {
+    background: rgba(248, 250, 252, 0.03);
+  }
+  .pfm-research-modal__body :not(pre) > code {
+    background: rgba(248, 250, 252, 0.08);
+  }
+}
+
+[data-theme="dark"] .pfm-research__empty {
+  background: rgba(248, 250, 252, 0.03);
+}
+
+[data-theme="dark"] .pfm-research-modal__body :not(pre) > code {
+  background: rgba(248, 250, 252, 0.08);
+}
+
+/* ============================================================
+ * End of research-tab.css
+ * ============================================================ */

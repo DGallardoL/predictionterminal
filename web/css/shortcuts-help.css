@@ -1,0 +1,303 @@
+/* =============================================================================
+   shortcuts-help.css — T15
+   Modal help sheet for the global keyboard-shortcuts manager.
+   Scoped under .pfm-shortcuts-help namespace; consumes existing CSS tokens
+   from web/css/tokens.css with safe fallbacks. Does NOT redefine variables.
+   ========================================================================== */
+
+/* -----------------------------------------------------------------------------
+   1. Modal shell
+   -------------------------------------------------------------------------- */
+.pfm-shortcuts-help {
+  position: fixed;
+  inset: 0;
+  z-index: 99998;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 12vh;
+  font-family: var(--sans, "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif);
+  color: var(--ink, #0a0a0c);
+  pointer-events: none;
+}
+
+.pfm-shortcuts-help[data-open="true"] {
+  display: flex;
+  pointer-events: auto;
+}
+
+/* -----------------------------------------------------------------------------
+   2. Backdrop
+   -------------------------------------------------------------------------- */
+.pfm-shortcuts-help__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 9, 12, 0.55);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  opacity: 0;
+  transition: opacity 140ms ease-out;
+}
+
+.pfm-shortcuts-help[data-open="true"] .pfm-shortcuts-help__backdrop {
+  opacity: 1;
+}
+
+/* -----------------------------------------------------------------------------
+   3. Sheet (centered card, T12 .modal-pattern compatible)
+   -------------------------------------------------------------------------- */
+.pfm-shortcuts-help__sheet {
+  position: relative;
+  width: min(640px, calc(100vw - 32px));
+  max-height: calc(76vh);
+  display: flex;
+  flex-direction: column;
+  background: var(--surface, #ffffff);
+  border: 1px solid var(--hairline, rgba(0, 0, 0, 0.08));
+  border-radius: 12px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.22), 0 1px 2px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transform: translateY(8px) scale(0.98);
+  opacity: 0;
+  transition: transform 140ms ease-out, opacity 140ms ease-out;
+}
+
+.pfm-shortcuts-help[data-open="true"] .pfm-shortcuts-help__sheet {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* -----------------------------------------------------------------------------
+   4. Header
+   -------------------------------------------------------------------------- */
+.pfm-shortcuts-help__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px 12px 18px;
+  border-bottom: 1px solid var(--hairline, rgba(0, 0, 0, 0.06));
+  background: var(--surface, #fff);
+}
+
+.pfm-shortcuts-help__title {
+  margin: 0;
+  font-family: var(--serif-display, "Instrument Serif", "Times New Roman", Georgia, serif);
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.012em;
+  color: var(--ink, #0a0a0c);
+}
+
+.pfm-shortcuts-help__close {
+  appearance: none;
+  border: 1px solid var(--hairline, rgba(0, 0, 0, 0.08));
+  background: var(--surface-2, #f6f6f7);
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--ink-2, #3a3a40);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 100ms ease;
+}
+
+.pfm-shortcuts-help__close:hover {
+  background: var(--surface-3, #ececee);
+  color: var(--ink, #0a0a0c);
+}
+
+.pfm-shortcuts-help__close:focus-visible {
+  outline: 2px solid var(--accent, #ff7a1f);
+  outline-offset: 1px;
+}
+
+/* -----------------------------------------------------------------------------
+   5. Body — scrollable grid container
+   -------------------------------------------------------------------------- */
+.pfm-shortcuts-help__body {
+  padding: 14px 18px 14px 18px;
+  overflow-y: auto;
+  flex: 1 1 auto;
+}
+
+.pfm-shortcuts-help__grid {
+  display: grid;
+  grid-template-columns: minmax(160px, max-content) 1fr;
+  gap: 6px 18px;
+  align-items: center;
+}
+
+@media (min-width: 720px) {
+  .pfm-shortcuts-help__grid {
+    grid-template-columns: minmax(200px, max-content) 1fr;
+  }
+}
+
+.pfm-shortcuts-help__row {
+  display: contents;
+}
+
+.pfm-shortcuts-help__row:hover .pfm-shortcuts-help__label,
+.pfm-shortcuts-help__row:hover .pfm-shortcuts-help__keys {
+  background: var(--surface-2, #f6f6f7);
+}
+
+.pfm-shortcuts-help__keys {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+  font-size: 13px;
+  color: var(--ink, #0a0a0c);
+  transition: background 80ms ease;
+}
+
+.pfm-shortcuts-help__label {
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-family: var(--sans, "Inter", -apple-system, sans-serif);
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--ink, #0a0a0c);
+  transition: background 80ms ease;
+}
+
+.pfm-shortcuts-help__sep,
+.pfm-shortcuts-help__plus {
+  font-family: var(--sans, "Inter", -apple-system, sans-serif);
+  font-size: 11px;
+  color: var(--ink-3, #7a7a82);
+  text-transform: lowercase;
+  padding: 0 2px;
+}
+
+.pfm-shortcuts-help__plus {
+  font-weight: 600;
+}
+
+/* -----------------------------------------------------------------------------
+   6. <kbd> styling — 11px Mono, 1px hairline, 6px radius, 2px padding,
+   surface-2 background, inset shadow
+   -------------------------------------------------------------------------- */
+.pfm-shortcuts-help kbd {
+  display: inline-block;
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 500;
+  color: var(--ink, #0a0a0c);
+  background: var(--surface-2, #f6f6f7);
+  border: 1px solid var(--hairline, rgba(0, 0, 0, 0.12));
+  border-radius: 6px;
+  padding: 2px 6px;
+  min-width: 16px;
+  text-align: center;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* -----------------------------------------------------------------------------
+   7. Footer
+   -------------------------------------------------------------------------- */
+.pfm-shortcuts-help__footer {
+  padding: 10px 18px 12px 18px;
+  border-top: 1px solid var(--hairline, rgba(0, 0, 0, 0.06));
+  background: var(--surface-2, #fafafb);
+}
+
+.pfm-shortcuts-help__hint {
+  font-family: var(--sans, "Inter", -apple-system, sans-serif);
+  font-size: 11px;
+  color: var(--ink-3, #6a6a72);
+  letter-spacing: 0.005em;
+}
+
+.pfm-shortcuts-help__hint kbd {
+  font-size: 10px;
+  padding: 1px 5px;
+}
+
+/* -----------------------------------------------------------------------------
+   8. Dark-mode compatibility (token-driven; T05 sets --surface/--ink etc)
+   Provides a fallback only when prefers-color-scheme says dark AND
+   tokens have not been overridden by T05.
+   -------------------------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  .pfm-shortcuts-help {
+    color: var(--ink, #f3f3f5);
+  }
+  .pfm-shortcuts-help__sheet {
+    background: var(--surface, #14161a);
+    border-color: var(--hairline, rgba(255, 255, 255, 0.08));
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55), 0 1px 2px rgba(0, 0, 0, 0.30);
+  }
+  .pfm-shortcuts-help__header {
+    background: var(--surface, #14161a);
+    border-bottom-color: var(--hairline, rgba(255, 255, 255, 0.06));
+  }
+  .pfm-shortcuts-help__footer {
+    background: var(--surface-2, #1a1c20);
+    border-top-color: var(--hairline, rgba(255, 255, 255, 0.06));
+  }
+  .pfm-shortcuts-help__close {
+    background: var(--surface-2, #1a1c20);
+    border-color: var(--hairline, rgba(255, 255, 255, 0.10));
+    color: var(--ink-2, #c0c0c8);
+  }
+  .pfm-shortcuts-help__close:hover {
+    background: var(--surface-3, #23262b);
+    color: var(--ink, #ffffff);
+  }
+  .pfm-shortcuts-help kbd {
+    background: var(--surface-2, #1f2226);
+    border-color: var(--hairline, rgba(255, 255, 255, 0.14));
+    color: var(--ink, #f3f3f5);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+  .pfm-shortcuts-help__row:hover .pfm-shortcuts-help__label,
+  .pfm-shortcuts-help__row:hover .pfm-shortcuts-help__keys {
+    background: var(--surface-2, #1a1c20);
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   9. Reduced motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .pfm-shortcuts-help__backdrop,
+  .pfm-shortcuts-help__sheet {
+    transition: none;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   10. Mobile fallback
+   -------------------------------------------------------------------------- */
+@media (max-width: 520px) {
+  .pfm-shortcuts-help {
+    padding-top: 6vh;
+  }
+  .pfm-shortcuts-help__sheet {
+    width: calc(100vw - 24px);
+    max-height: 86vh;
+  }
+  .pfm-shortcuts-help__grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .pfm-shortcuts-help__keys {
+    padding-bottom: 0;
+  }
+  .pfm-shortcuts-help__label {
+    padding-top: 0;
+    color: var(--ink-2, #4a4a52);
+  }
+}

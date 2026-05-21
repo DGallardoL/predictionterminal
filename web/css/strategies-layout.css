@@ -1,0 +1,321 @@
+/* ============================================================================
+ * strategies-layout.css — T66
+ * α Hub (Strategies mode) layout refinement.
+ * ALL rules scoped under [data-mode-pane="strategies"] so other modes stay
+ * untouched. Coordinates with existing `.strat-section.active` rule already
+ * defined in web/index.html (line ~617) — we extend, not override.
+ *
+ * Owner: T66 (Wave-10).  Do not redefine tokens here — pull from tokens.css.
+ * ===========================================================================*/
+
+/* ────────────────────────────────────────────────────────────────────────
+ * 1.  CARD GRID — consistent breakpoint ladder for α Hub cards.
+ *     Default mobile is 1-up; we step up to 4-up on wide displays.
+ * ───────────────────────────────────────────────────────────────────── */
+[data-mode-pane="strategies"] #alphahub-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+@media (min-width: 700px) {
+  [data-mode-pane="strategies"] #alphahub-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  [data-mode-pane="strategies"] #alphahub-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  [data-mode-pane="strategies"] #alphahub-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Ensure cards stretch to equal height for clean grid alignment.
+ * Forces flex column so card internals (head, body, mini-row) flow predictably
+ * and the live-signal block always anchors to the bottom of the card. */
+[data-mode-pane="strategies"] .alphahub-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+[data-mode-pane="strategies"] .alphahub-card > :last-child {
+  margin-top: auto;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+ * 2.  TIER-PILL refinement.
+ *     The A-tier rainbow chip felt heavy.  Slimmer label, 6px vertical
+ *     padding, soft gradient backdrop.  Maintains AA contrast.
+ * ───────────────────────────────────────────────────────────────────── */
+[data-mode-pane="strategies"] .alphahub-card .ah-tier {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.045em;
+  padding: 6px 9px;
+  border-radius: 5px;
+  line-height: 1;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+  backdrop-filter: saturate(120%);
+}
+
+/* A_GOLD — refined warm gradient, replaces flat solid */
+[data-mode-pane="strategies"] .alphahub-card[data-tier="A_GOLD"] .ah-tier {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 55%, #fbbf24 100%);
+  color: #3a2400;
+}
+
+/* A_STRUCTURAL — deeper amber-to-orange gradient */
+[data-mode-pane="strategies"] .alphahub-card[data-tier="A_STRUCTURAL"] .ah-tier {
+  background: linear-gradient(135deg, #fed7aa 0%, #fb923c 60%, #c2410c 100%);
+  color: #431407;
+}
+
+/* B/C tiers — softer wash, same gradient treatment for visual consistency */
+[data-mode-pane="strategies"] .alphahub-card[data-tier="B_VALIDATED"] .ah-tier {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 55%, #6ee7b7 100%);
+  color: #052e16;
+}
+
+[data-mode-pane="strategies"] .alphahub-card[data-tier="B_FDR_ONLY"] .ah-tier {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 55%, #93c5fd 100%);
+  color: #082f49;
+}
+
+[data-mode-pane="strategies"] .alphahub-card[data-tier="C_TENTATIVE"] .ah-tier {
+  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 55%, #a5b4fc 100%);
+  color: #1e1b4b;
+}
+
+[data-mode-pane="strategies"] .alphahub-card[data-tier="D_RAW"] .ah-tier {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  color: #111827;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+ * 3.  DEPLOYMENT PARAMS — 2-col grid label/value, mono values, copy on hover.
+ *     Targets the detail modal's deployment block.  Compatible with both
+ *     class names found in the codebase (.ah-deploy and .ah-deployment).
+ * ───────────────────────────────────────────────────────────────────── */
+[data-mode-pane="strategies"] .ah-deploy-grid,
+[data-mode-pane="strategies"] .alphahub-detail .ah-deploy,
+[data-mode-pane="strategies"] .alphahub-fs-body .ah-deploy,
+[data-mode-pane="strategies"] [data-section="deployment"] .ah-deploy {
+  display: grid;
+  grid-template-columns: minmax(0, max-content) minmax(0, 1fr);
+  column-gap: 18px;
+  row-gap: 8px;
+  align-items: baseline;
+  font-size: 12.5px;
+  margin: 12px 0 4px;
+}
+
+[data-mode-pane="strategies"] .ah-deploy-grid .deploy-key,
+[data-mode-pane="strategies"] .alphahub-detail .ah-deploy .key,
+[data-mode-pane="strategies"] .alphahub-fs-body .ah-deploy .key {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-family: var(--sans);
+  white-space: nowrap;
+}
+
+[data-mode-pane="strategies"] .ah-deploy-grid .deploy-val,
+[data-mode-pane="strategies"] .alphahub-detail .ah-deploy .val,
+[data-mode-pane="strategies"] .alphahub-fs-body .ah-deploy .val {
+  font-family: "JetBrains Mono", var(--mono);
+  font-size: 12.5px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  position: relative;
+  padding-right: 22px;
+  word-break: break-word;
+  cursor: copy;
+}
+
+[data-mode-pane="strategies"] .ah-deploy-grid .deploy-val::after,
+[data-mode-pane="strategies"] .alphahub-detail .ah-deploy .val::after,
+[data-mode-pane="strategies"] .alphahub-fs-body .ah-deploy .val::after {
+  /* Inline SVG copy icon, fades in on row hover */
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='9' y='9' width='13' height='13' rx='2' ry='2'/><path d='M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  transition: opacity 160ms ease;
+  pointer-events: none;
+}
+
+[data-mode-pane="strategies"] .ah-deploy-grid .deploy-val:hover::after,
+[data-mode-pane="strategies"] .alphahub-detail .ah-deploy .val:hover::after,
+[data-mode-pane="strategies"] .alphahub-fs-body .ah-deploy .val:hover::after {
+  opacity: 1;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+ * 4.  THEORY REFERENCE — italic Instrument Serif, max-width 56ch,
+ *     hanging indent for citation.
+ * ───────────────────────────────────────────────────────────────────── */
+[data-mode-pane="strategies"] .ah-theory,
+[data-mode-pane="strategies"] .alphahub-detail .theory-ref,
+[data-mode-pane="strategies"] .alphahub-fs-body .theory-ref,
+[data-mode-pane="strategies"] [data-section="theory"] .ref {
+  font-family: "Instrument Serif", var(--serif-display, Georgia), serif;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 56ch;
+  padding-left: 1.4em;
+  text-indent: -1.4em;
+  letter-spacing: 0.005em;
+}
+
+[data-mode-pane="strategies"] .ah-theory cite,
+[data-mode-pane="strategies"] .alphahub-detail .theory-ref cite {
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: 11.5px;
+  letter-spacing: 0.02em;
+  color: var(--ink-3);
+  display: inline-block;
+  margin-left: 2px;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+ * 5.  EQUITY CURVE — locked aspect-ratio, max-height, no overflow.
+ * ───────────────────────────────────────────────────────────────────── */
+[data-mode-pane="strategies"] .ah-equity,
+[data-mode-pane="strategies"] .alphahub-detail .equity-curve,
+[data-mode-pane="strategies"] .alphahub-fs-body .equity-curve,
+[data-mode-pane="strategies"] [data-section="equity"] .plot,
+[data-mode-pane="strategies"] #pairs-equity-chart {
+  aspect-ratio: 16 / 7;
+  max-height: 280px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+[data-mode-pane="strategies"] .ah-equity > .js-plotly-plot,
+[data-mode-pane="strategies"] .alphahub-detail .equity-curve > .js-plotly-plot,
+[data-mode-pane="strategies"] .alphahub-fs-body .equity-curve > .js-plotly-plot,
+[data-mode-pane="strategies"] #pairs-equity-chart > .js-plotly-plot {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+ * 6.  HAIRLINE SECTION SEPARATORS — 24px vertical spacing between
+ *     Setup / Risk / Theory / Live sections inside the detail modal.
+ * ───────────────────────────────────────────────────────────────────── */
+[data-mode-pane="strategies"] .alphahub-detail [data-section],
+[data-mode-pane="strategies"] .alphahub-fs-body [data-section],
+[data-mode-pane="strategies"] .alphahub-detail .ah-section,
+[data-mode-pane="strategies"] .alphahub-fs-body .ah-section {
+  padding: 24px 0;
+  border-top: 1px solid var(--hairline);
+}
+
+[data-mode-pane="strategies"] .alphahub-detail [data-section]:first-child,
+[data-mode-pane="strategies"] .alphahub-fs-body [data-section]:first-child,
+[data-mode-pane="strategies"] .alphahub-detail .ah-section:first-child,
+[data-mode-pane="strategies"] .alphahub-fs-body .ah-section:first-child {
+  border-top: 0;
+  padding-top: 8px;
+}
+
+[data-mode-pane="strategies"] .alphahub-detail [data-section]:last-child,
+[data-mode-pane="strategies"] .alphahub-fs-body [data-section]:last-child {
+  padding-bottom: 8px;
+}
+
+/* Section headers inside the modal — consistent type, no all-caps shouting */
+[data-mode-pane="strategies"] .alphahub-detail [data-section] > h4,
+[data-mode-pane="strategies"] .alphahub-fs-body [data-section] > h4,
+[data-mode-pane="strategies"] .alphahub-detail .ah-section > h4,
+[data-mode-pane="strategies"] .alphahub-fs-body .ah-section > h4 {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 12px;
+  font-family: var(--sans);
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+ * 7.  ACTIVE SUB-SECTION INDICATOR — subtle 2px orange left-border on
+ *     active section pill.  EXTENDS the existing `.strat-section.active`
+ *     rule (web/index.html ~617) which sets `border-color: var(--ink)`
+ *     and `::before { background: var(--ink); }`.  We narrow scope to
+ *     `[data-mode-pane="strategies"]` so we don't fight global selector,
+ *     and re-color the existing 2px ::before bar to orange.
+ * ───────────────────────────────────────────────────────────────────── */
+[data-mode-pane="strategies"] .strat-section.active::before {
+  background: var(--orange-500, var(--orange, #ea580c));
+  width: 2px;
+}
+
+/* Tint the active section label slightly toward orange-700 — keeps the
+ * indicator visually consistent without changing the ink hierarchy. */
+[data-mode-pane="strategies"] .strat-section.active .ss-lbl {
+  color: var(--ink);
+}
+
+[data-mode-pane="strategies"] .strat-section.active {
+  border-left-color: var(--orange-500, var(--orange, #ea580c));
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+ * 8.  HOVER STATE — cards lift 2px on hover with soft shadow.
+ *     Tighter, more refined than the existing 1px translate.
+ * ───────────────────────────────────────────────────────────────────── */
+[data-mode-pane="strategies"] .alphahub-card {
+  transition:
+    transform 180ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 180ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 180ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-mode-pane="strategies"] .alphahub-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+[data-mode-pane="strategies"] .alphahub-card:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Honor users' motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  [data-mode-pane="strategies"] .alphahub-card,
+  [data-mode-pane="strategies"] .alphahub-card:hover,
+  [data-mode-pane="strategies"] .alphahub-card:active {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+ * END strategies-layout.css
+ * ───────────────────────────────────────────────────────────────────── */

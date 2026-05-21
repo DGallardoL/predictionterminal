@@ -1,0 +1,152 @@
+{
+  "_dict": {
+    "pair_id": "str",
+    "a_id": "str",
+    "b_id": "str",
+    "a_name": "str",
+    "b_name": "str",
+    "a_slug": "str",
+    "b_slug": "str",
+    "theme_a": "str",
+    "theme_b": "str",
+    "category": "str",
+    "tier": "str",
+    "fdr_status": "str",
+    "bootstrap_robust": "bool",
+    "sharpe_ci_lo": "float",
+    "sharpe_ci_hi": "float",
+    "is_strike_family": "bool",
+    "oos_sharpe": "float",
+    "full_sharpe": "float",
+    "perm_p": "float",
+    "adf_pvalue": "float",
+    "half_life_days": "float",
+    "beta_hedge": "float",
+    "n_obs": "int",
+    "rationale": "str",
+    "rule_window": "int",
+    "rule_entry_z": "float",
+    "rule_exit_z": "float",
+    "rule_stop_z": "float",
+    "suggested_allocation": "float",
+    "theory_reference": "str",
+    "expected_holding_days": "int",
+    "min_capital_usd": "int",
+    "expected_trades_per_year": "int",
+    "worst_drawdown_observed": "float",
+    "risk_grade": "str",
+    "best_market_conditions": "str",
+    "worst_market_conditions": "str",
+    "correlated_with_strategies": {
+      "_list": "str",
+      "_size_class": "many"
+    },
+    "last_updated_iso": "str",
+    "deploy_signal_logic": {
+      "_dict": {
+        "spread_definition": "str",
+        "zscore_window_days": "int",
+        "entry": "str",
+        "exit": "str",
+        "stop_loss": "str",
+        "side": "str"
+      }
+    },
+    "kill_switch_rules": {
+      "_list": "str",
+      "_size_class": "many"
+    },
+    "monitoring_frequency": "str",
+    "previous_tier": "str",
+    "tier_change_reason": "str",
+    "tier_before_v22": "str",
+    "v22_lenient_pass": "bool",
+    "v22_marker": "str",
+    "joint_calendar_days_v22": "int",
+    "joint_obs_metric_note": "str",
+    "equity_curve": {
+      "_list": {
+        "_dict": {
+          "date": "str",
+          "equity": "float"
+        }
+      },
+      "_size_class": "many"
+    },
+    "equity_curve_is_synthetic": "bool",
+    "spread_series": {
+      "_list": {
+        "_dict": {
+          "date": "str",
+          "p_a": "float",
+          "p_b": "float",
+          "spread": "float",
+          "z_score": "float"
+        }
+      },
+      "_size_class": "many"
+    },
+    "spread_series_is_synthetic": "bool",
+    "rule": {
+      "_dict": {
+        "window": "int",
+        "entry_z": "float",
+        "exit_z": "float",
+        "stop_z": "float"
+      }
+    },
+    "risk": {
+      "_dict": {
+        "grade": "str",
+        "max_dd": "float",
+        "best_conditions": "str",
+        "worst_conditions": "str"
+      }
+    },
+    "deployment": {
+      "_dict": {
+        "min_capital_usd": "int",
+        "expected_holding_days": "int",
+        "expected_trades_per_year": "int",
+        "monitoring_frequency": "str",
+        "deploy_signal_logic": {
+          "_dict": {
+            "spread_definition": "str",
+            "zscore_window_days": "int",
+            "entry": "str",
+            "exit": "str",
+            "stop_loss": "str",
+            "side": "str"
+          }
+        },
+        "kill_switch_rules": {
+          "_list": "str",
+          "_size_class": "many"
+        }
+      }
+    },
+    "recent_signal": {
+      "_dict": {
+        "pair_id": "str",
+        "a_id": "str",
+        "b_id": "str",
+        "as_of": "str",
+        "n_obs": "int",
+        "beta_hedge": "float",
+        "current_spread": "float",
+        "current_z": "float",
+        "current_a_price": "float",
+        "current_b_price": "float",
+        "action": "str",
+        "reason": "str",
+        "mu_window": "float",
+        "sigma_window": "float"
+      }
+    },
+    "correlated_with": {
+      "_list": "str",
+      "_size_class": "many"
+    },
+    "updated_at": "str"
+  }
+}

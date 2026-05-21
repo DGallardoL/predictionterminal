@@ -1,0 +1,117 @@
+{
+  "cause_filter": "all",
+  "entries": [
+    {
+      "cause": "regime",
+      "claimed_sharpe": 1.8,
+      "could_resurrect_if": "Need \u22654 quarters of stable risk-off regime AND a residualized signal that controls for SPX trend; otherwise treat as a macro overlay only.",
+      "death_certificate_md": "docs/graveyard/recession_odds.md",
+      "killed_in_wave": 3,
+      "killed_iso": "2025-04-15",
+      "lesson": "Backtest dominated by Q4-2024 risk-off regime. Sign flipped in Q1-2025 when recession-odds kept rising but defensives underperformed alongside a broad-market melt-up. Pure regime trade with no structural carry \u2014 the prediction-market signal added zero alpha once the regime turned.",
+      "name": "Recession-odds \u2192 Defensive-sector long",
+      "pair_id": "recession_odds_defensive_long",
+      "post_mortem_sharpe": -0.3,
+      "tags": [
+        "regime-driven",
+        "macro",
+        "wave-3"
+      ],
+      "thesis_original": "When Polymarket recession probability rises, defensive sectors (XLU, XLP, XLV) outperform cyclicals as institutional flows rotate to safety; long XLU/short SPY conditional on a 3-day rise in recession-odds."
+    },
+    {
+      "cause": "single-episode",
+      "claimed_sharpe": 2.4,
+      "could_resurrect_if": "Only revisit if a future ETF-decision cycle produces a fresh, fully out-of-sample sample with \u22653 distinct decision events.",
+      "death_certificate_md": "docs/graveyard/crypto_etf_drift.md",
+      "killed_in_wave": 4,
+      "killed_iso": "2025-06-02",
+      "lesson": "All of the gross PnL came from the January-2024 BTC ETF approval window. Out-of-sample on the May-2024 ETH approval and the 2025 ETF-extension dates the signal had no predictive power. Backtest is a survivorship illusion built on a single one-time event.",
+      "name": "Crypto-ETF approval drift",
+      "pair_id": "crypto_etf_approval_drift",
+      "post_mortem_sharpe": 0.1,
+      "tags": [
+        "single-episode",
+        "crypto",
+        "wave-4"
+      ],
+      "thesis_original": "Long BTC and ETH spot when Polymarket spot-ETF-approval odds drift up by \u22655pp over 5 sessions; the prediction market leads SEC-decision news and front-runs institutional flows into crypto."
+    },
+    {
+      "cause": "single-episode",
+      "claimed_sharpe": 1.5,
+      "could_resurrect_if": "Need at least three distinct election cycles with comparable Senate-control concentration AND a vol-regime control; one cycle is not a sample.",
+      "death_certificate_md": "docs/graveyard/senate_control_vol.md",
+      "killed_in_wave": 5,
+      "killed_iso": "2025-08-20",
+      "lesson": "The 2024 election cycle drove essentially the entire backtest PnL \u2014 a single multi-month episode dominating ~95% of trade days flagged. Out-of-sample, OOS Sharpe collapsed below 0.2 across 2025 mid-cycle Senate odds with no realized-vol response.",
+      "name": "Senate-control short-vol",
+      "pair_id": "senate_control_short_vol",
+      "post_mortem_sharpe": 0.18,
+      "tags": [
+        "single-episode",
+        "vol",
+        "politics",
+        "wave-5"
+      ],
+      "thesis_original": "When Polymarket Senate-control odds become decisively one-sided (>80% on either side), realized SPX vol compresses as political-uncertainty premium unwinds; short VIX futures into the resolution window."
+    },
+    {
+      "cause": "TC",
+      "claimed_sharpe": 1.1,
+      "could_resurrect_if": "Only resurrect with execution via a brent-WTI calendar spread or an oil-equity proxy (XOP) that has lower TC; never with outright WTI futures.",
+      "death_certificate_md": "docs/graveyard/geopolitical_oil.md",
+      "killed_in_wave": 6,
+      "killed_iso": "2025-10-10",
+      "lesson": "Direction-correct: gross PnL was positive across 4 quarters and 11 distinct escalation episodes. But entry/exit always coincided with widened bid-ask spreads on WTI futures and shallow size at the touch \u2014 modeled transaction costs eat \u2265110% of gross PnL even at $5M notional. Net edge is negative once realistic slippage is applied.",
+      "name": "Geopolitical-conflict \u2192 Oil long",
+      "pair_id": "geopolitical_conflict_oil_long",
+      "post_mortem_sharpe": -0.05,
+      "tags": [
+        "transaction-costs",
+        "macro",
+        "geopolitics",
+        "wave-6"
+      ],
+      "thesis_original": "When Polymarket conflict-escalation odds (Middle East, Russia-Ukraine, Taiwan Strait) rise sharply over 48 hours, long front-month WTI futures captures the geopolitical risk premium before spot oil reprices."
+    },
+    {
+      "cause": "non-portable",
+      "claimed_sharpe": 3.6,
+      "could_resurrect_if": "Do not re-explore unless a new angle is added \u2014 rolling-\u03c3-conditioned latency, orderbook-imbalance lead, or a different venue pair. Vanilla midpoint lag is dead.",
+      "death_certificate_md": "docs/graveyard/btc_latency_arb.md",
+      "killed_in_wave": 7,
+      "killed_iso": "2026-05-02",
+      "lesson": "An 8-agent investigation on 2026-05-02 measured the actual midpoint latency across 11 weeks of synchronized PM and Coinbase tick data. The apparent edge was an artifact of unsynchronized clocks in the original study; once timestamps were aligned to NTP, the median lag was 12ms with no exploitable persistence. Net of fees and PM-side fill probability the strategy is flat.",
+      "name": "BTC latency arbitrage (PM \u2194 spot)",
+      "pair_id": "btc_latency_arb",
+      "post_mortem_sharpe": 0.2,
+      "tags": [
+        "non-portable",
+        "microstructure",
+        "crypto",
+        "wave-7"
+      ],
+      "thesis_original": "Polymarket BTC-price binary contracts lag the BTC spot midpoint by 200-800ms during high-flow periods; lean against the PM mid when spot deviates by \u22651bp and capture the convergence within seconds."
+    },
+    {
+      "cause": "regime",
+      "claimed_sharpe": 1.4,
+      "could_resurrect_if": "Reinstate to A_GOLD only after 2026Q3 paper-trading shows live OOS Sharpe \u2265 0.8 across \u22653 disjoint contract-categories.",
+      "death_certificate_md": "docs/graveyard/favorites_bias.md",
+      "killed_in_wave": 5,
+      "killed_iso": "2026-04-28",
+      "lesson": "Wave-5 stress tests over four disjoint quarters showed a Q4-2024 Sharpe of 2.1 collapsing to 0.3 in Q1-2025 and 0.1 in Q2-2025 as PM market-makers tightened heavy-favorite spreads. Effect was real but regime-driven: it was a function of immature PM liquidity, not a structural mispricing. Downgraded A_GOLD \u2192 B_VALIDATED, allocation halved to 5%, paper-only until 2026Q3 confirms.",
+      "name": "Favorites-bias (heavy-favorite under-pricing)",
+      "pair_id": "favorites_bias",
+      "post_mortem_sharpe": 0.4,
+      "tags": [
+        "regime-driven",
+        "wave-5",
+        "downgraded"
+      ],
+      "thesis_original": "Heavy favorites (PM probability \u226585%) systematically resolve at a higher rate than implied; long the favorite at entry, hold to resolution. Equivalent to selling longshot premium across binary contracts."
+    }
+  ],
+  "n_entries": 6
+}

@@ -1,0 +1,294 @@
+/* ============================================================
+ * global-refinement.css  (T68, wave-10)
+ *
+ * Universal design-system polish. Applies to every mode pane
+ * (Regression, Strategies / alpha Hub, Terminal).
+ *
+ * Mount order: include EARLY in <head>, BEFORE mode-specific
+ * stylesheets (alphahub-premium.css, terminal-premium.css,
+ * terminal-layout.css, regression-clarity.css, etc.). Mode
+ * sheets may override these tokens locally if they need to;
+ * they should not redefine the variables themselves.
+ *
+ * Per PROTOCOL-V2: this file DOES NOT redefine any token
+ * already owned by web/css/tokens.css (e.g. --ah-bg, --orange,
+ * --sp-*). All variables here are NEW names: --shadow-*,
+ * --focus-ring, --ease, --t, --t-fast, --t-slow.
+ * ============================================================ */
+
+:root {
+  /* ---- Shadow scale (slate-tinted, designed for white & near-white surfaces) ---- */
+  --shadow-1: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-2: 0 4px 12px rgba(15, 23, 42, 0.06);
+  --shadow-3: 0 12px 32px rgba(15, 23, 42, 0.08);
+
+  /* ---- Focus ring (orange brand-tinted, WCAG-friendly thickness) ---- */
+  --focus-ring: 0 0 0 3px rgba(249, 115, 22, 0.28);
+
+  /* ---- Motion: easing + timing scale ---- */
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --t-fast: 120ms;
+  --t: 180ms;
+  --t-slow: 280ms;
+}
+
+/* ============================================================
+ * 1) Card / modal / dropdown elevation
+ *    Apply the shadow scale to the common elevation surfaces
+ *    used across all three modes. Targets are intentionally
+ *    broad (class-name fragments and common ARIA roles) so
+ *    that mode-specific sheets benefit without per-pane work.
+ * ============================================================ */
+
+.card,
+.tm-card,
+.term-card,
+.term-mini-card,
+.term-side-card,
+.term-strip-block,
+.alphahub-card,
+.alphahub-detail,
+.alphahub-top-panel,
+.strat-card,
+.kpi-card,
+.panel,
+[data-elevation="1"] {
+  box-shadow: var(--shadow-1);
+}
+
+.modal,
+.modal-dialog,
+.dialog,
+.popover,
+.alphahub-fs-card,
+.dropdown-menu,
+[role="menu"],
+[role="dialog"],
+[role="tooltip"],
+[data-elevation="2"] {
+  box-shadow: var(--shadow-2);
+}
+
+.fullscreen-modal,
+.drawer,
+.arblive-drawer,
+[data-elevation="3"] {
+  box-shadow: var(--shadow-3);
+}
+
+/* ============================================================
+ * 2) Focus ring — keyboard-only, never on mouse click.
+ *    Uses :focus-visible so it doesn't fire on click for
+ *    buttons/inputs on most browsers. Layered shadow keeps
+ *    any pre-existing box-shadow visible.
+ * ============================================================ */
+
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 4px;
+}
+
+/* Inputs/buttons that already define box-shadow should layer
+ * the focus ring on top via an alpha border instead. */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[role="button"]:focus-visible,
+[role="tab"]:focus-visible,
+[tabindex]:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* ============================================================
+ * 3) Transition timing — replace ad-hoc 0.2s/0.3s with tokens.
+ *    Universal default transition for interactive elements.
+ *    Mode sheets that need finer-grained control can override.
+ * ============================================================ */
+
+a,
+button,
+input,
+textarea,
+select,
+[role="button"],
+[role="tab"],
+.tab,
+.chip,
+.pill,
+.badge,
+.btn,
+.term-tab,
+.strat-section,
+.alphahub-card {
+  transition:
+    background-color var(--t) var(--ease),
+    color var(--t) var(--ease),
+    border-color var(--t) var(--ease),
+    box-shadow var(--t) var(--ease),
+    transform var(--t-fast) var(--ease),
+    opacity var(--t) var(--ease);
+}
+
+/* ============================================================
+ * 4) Typography — letter-spacing for serif headers; mono = 0.
+ * ============================================================ */
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.018em;
+}
+
+h4,
+h5,
+h6 {
+  letter-spacing: -0.012em;
+}
+
+code,
+pre,
+kbd,
+samp,
+.mono,
+.tabular,
+.numeric,
+[data-numeric],
+.term-num,
+.alphahub-num,
+.kpi-value {
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* ============================================================
+ * 5) Body rhythm — line-height + antialiased rendering.
+ * ============================================================ */
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ============================================================
+ * 6) Selection — orange brand-tinted, low alpha so contrast
+ *    survives on both light and dark surfaces.
+ * ============================================================ */
+
+::selection {
+  background: rgba(249, 115, 22, 0.18);
+  color: inherit;
+}
+
+::-moz-selection {
+  background: rgba(249, 115, 22, 0.18);
+  color: inherit;
+}
+
+/* ============================================================
+ * 7) Scrollbar style — thin (10px), hairline thumb, no track.
+ *    Works on Webkit (Chrome/Safari) + Firefox.
+ * ============================================================ */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(15, 23, 42, 0.22) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(15, 23, 42, 0.22);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(15, 23, 42, 0.36);
+  background-clip: content-box;
+  border: 2px solid transparent;
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* ============================================================
+ * 8) Disabled state — uniform opacity + cursor across native
+ *    inputs and ARIA-disabled custom controls.
+ * ============================================================ */
+
+[aria-disabled="true"],
+[disabled],
+:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Keep tooltips clickable even on disabled buttons by allowing
+ * a labelling wrapper to capture events. */
+[aria-disabled="true"][data-allow-pointer],
+[disabled][data-allow-pointer] {
+  pointer-events: auto;
+}
+
+/* ============================================================
+ * 9) Hover lift utility — opt-in via .lift-on-hover.
+ *    Use on cards/tiles where a subtle physical response is
+ *    desired (alpha cards, KPI tiles, market rows).
+ * ============================================================ */
+
+.lift-on-hover {
+  transition:
+    transform var(--t) var(--ease),
+    box-shadow var(--t) var(--ease);
+  will-change: transform;
+}
+
+.lift-on-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+}
+
+.lift-on-hover:active {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-1);
+}
+
+/* ============================================================
+ * 10) Reduce motion — kill all animation/transition for users
+ *     who request it via OS preference. Hard override.
+ * ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+ * End of global-refinement.css
+ * ============================================================ */

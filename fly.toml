@@ -1,0 +1,131 @@
+# Fly.io manifest for Prediction Terminal.
+#
+# Architecture: single Fly Machine running gunicorn with 4 UvicornWorker
+# processes (configured in api/Dockerfile CMD). Redis is provisioned
+# separately via `flyctl redis create`; the connection string is injected
+# at deploy time as the REDIS_URL secret.
+#
+# Deploy: see DEPLOYMENT.md for the full step-by-step.
+
+app = "pfm-prod"
+primary_region = "iad"
+kill_signal = "SIGINT"
+kill_timeout = "30s"      # match gunicorn --graceful-timeout
+
+[build]
+dockerfile = "api/Dockerfile"
+
+# --- non-secret env baked into every deploy --------------------------------
+# Secrets (CORS_ORIGINS, REDIS_URL, SENTRY_DSN, PFM_ADMIN_TOKEN, …) go via
+# `flyctl secrets set …` so they don't land in the git-tracked toml.
+[env]
+LOG_LEVEL = "INFO"
+ENV = "production"
+CACHE_TTL_SECONDS = "3600"
+POLYMARKET_GAMMA_URL = "https://gamma-api.polymarket.com"
+POLYMARKET_CLOB_URL = "https://clob.polymarket.com"
+PFM_ALERTS_DRY_RUN = "1"
+
+# Performance toggles — see api/src/pfm/main.py for the full list. Defaults
+# below match a 2-vCPU shared machine; bump TOP_N if you bump VM size.
+GUNICORN_WORKERS = "4"
+PFM_FACTOR_PREWARM_ENABLED = "1"
+PFM_FACTOR_PREWARM_TOP_N = "500"
+PFM_FACTOR_PREWARM_CONCURRENCY = "20"
+PFM_FACTOR_PREWARM_LOOKBACK_DAYS = "180"
+PFM_GAMMA_PRICE_TTL_S = "300"
+PFM_GAMMA_PRICE_REFRESH_S = "60"
+PFM_ARB_FALLBACK_MIN_SPREAD = "0.5"
+PFM_ARB_FALLBACK_TOP_N = "50"
+PFM_ARB_STREAM_TICK_S = "5.0"
+PFM_ARB_STREAM_SCAN_LOG_MAX = "30"
+# Run the cross-venue arb engine LIVE inside the container. main.py's lifespan
+# spawns arbstuff/arb_engine.py (test mode, REST polling) as a subprocess so
+# the Strategies → Cross-venue Arb panel streams the engine's own
+# dashboard_state.json instead of the arb_scanner fallback. The engine writes
+# to /arbstuff (owned by the app user — see api/Dockerfile). A Redis leader
+# lock (needs REDIS_URL) elects exactly one gunicorn worker to spawn it; with
+# REDIS_URL UNSET every worker spawns its own copy (see report), so REDIS_URL
+# MUST be set in prod — it already is, via `flyctl secrets set REDIS_URL=…`.
+PFM_ARB_ENGINE_AUTOSTART = "1"
+# Disable the 30-min auto_discover.py subprocess: auto_discover.py is NOT baked
+# into the image and discovery contends with the scan loop. Continuous scan
+# only — keeps dashboard_state.json fresh.
+PFM_ARB_NO_DISCOVERY = "1"
+# REST poll cadence (seconds) for the engine scan loop.
+PFM_ARB_POLL_INTERVAL = "60"
+# --- NEW: in-process discovery loop (pfm.arb.* modules) ------------------
+# Distinct from the engine scan loop above and from the old auto_discover.py
+# subprocess (which PFM_ARB_NO_DISCOVERY=1 disables). This is the resumable,
+# unlimited, newest-first cross-venue CRAWLER: main.py's lifespan runs
+# pfm.arb.discovery_pipeline.run_discovery_step in a thread, alternating
+# 'new' (fresh-market) and 'sweep' (full-universe, checkpoint-resumable)
+# steps, fee-aware price-checking matches and persisting every seen arb to
+# the durable confirmed store (arbstuff/confirmed_arbs.json). Gated to the
+# Redis-elected leader (or a single worker) so only ONE copy runs. Surfaced
+# in the UI under Strategies → Cross-venue Arb → Discovery. Enable in prod:
+PFM_ARB_DISCOVERY_LOOP = "1"
+# Seconds between discovery steps (300 = 5 min; each step is bounded).
+PFM_ARB_DISCOVERY_INTERVAL_S = "300"
+# Every Nth step is a full-universe 'sweep' instead of a 'new' step.
+PFM_ARB_DISCOVERY_SWEEP_EVERY = "6"
+# Pages per venue per step (step-by-step; the checkpoint advances each sweep).
+PFM_ARB_DISCOVERY_MAX_PAGES = "2"
+# Freshness window (hours) for 'new' steps.
+PFM_ARB_DISCOVERY_WINDOW_H = "48"
+# Crypto WS engine is opt-in — uncomment to enable Binance live signal
+# capture. Adds ~100 MB RAM and ~5% CPU. Worth it if the demo flow uses the
+# Strategies → Crypto Micro live-events feed.
+# PFM_CRYPTO_WS_ENABLED = "1"
+# Crypto 5min model-vs-market background workers (sampler + prewarmer).
+# Default OFF so tests don't accumulate tasks; enable in prod so the
+# Strategies → Crypto Micro section's spot-buffer is always warm and the
+# /5min/compare cache hit rate stays at ~100%. Cost: ~1 Binance REST call
+# per second + ~3s prewarmer fanout. Worth enabling for any deployment
+# that exposes the Crypto Micro panel.
+# PFM_CRYPTO_5MIN_ENABLED = "1"
+
+# --- HTTP service ---------------------------------------------------------
+[http_service]
+internal_port = 8000
+force_https = true
+auto_stop_machines = "stop"      # scale to zero between requests
+auto_start_machines = true
+min_machines_running = 1          # keep one warm for sub-100ms first hit
+processes = ["app"]
+
+[http_service.concurrency]
+# Soft / hard limits before Fly starts a new machine. With 4 gunicorn
+# workers each handling many async tasks, 200 concurrent is comfortable.
+type = "requests"
+soft_limit = 150
+hard_limit = 200
+
+# Healthcheck — gunicorn boot + first factor prewarm takes ~6 s on a cold
+# machine, so grace_period is generous. Once up, /health is ~5 ms.
+[[http_service.checks]]
+grace_period = "30s"
+interval = "15s"
+method = "GET"
+path = "/health"
+protocol = "http"
+timeout = "5s"
+
+# --- machine size --------------------------------------------------------
+# 2 shared vCPUs + 1 GB RAM fits 4 gunicorn workers (each ~250 MB after
+# prewarm) plus Polymarket/Kalshi/Binance HTTP buffers. Bump to
+# `cpu_kind = "performance"` and `cpus = 2`, `memory_mb = 2048` for
+# heavier production traffic.
+[[vm]]
+cpu_kind = "shared"
+cpus = 2
+memory_mb = 1024
+
+# --- mounts (for arb engine state, factor pickle caches) ------------------
+# Optional persistent volume for the strat7 factor-history pickle and
+# alpha-hunter cache. If you skip the volume, the app degrades gracefully
+# (factor-clusters returns 503, peers run in degraded mode).
+[[mounts]]
+source = "pfm_data"
+destination = "/data"
+initial_size = "1gb"

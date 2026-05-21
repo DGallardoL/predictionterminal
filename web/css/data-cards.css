@@ -1,0 +1,588 @@
+/* ============================================================
+ * data-cards.css  (T06, wave-10)
+ *
+ * Bloomberg-style data-dense card system.
+ *
+ * UTILITY-class kit (NOT scoped to a mode pane) used by Regression,
+ * Strategies / alpha Hub, and Terminal for metric tiles, ticker
+ * rows, KPI grids, and similar dense readouts.
+ *
+ * DEPENDENCIES (token contracts):
+ *   - tokens.css owns: --ink, --ink-2, --ink-muted, --surface,
+ *     --surface-2, --bg-alt, --hairline, --hairline-strong,
+ *     --pos, --neg, --warn, --orange-500, --orange-soft,
+ *     --serif-display, --sans, --mono, --sp-1..--sp-8,
+ *     --r-2, --r-3, --r-pill.
+ *   - global-refinement.css (T68) owns: --shadow-1, --shadow-2,
+ *     --focus-ring, --t, --t-fast, --ease. Defensive fallbacks
+ *     are inlined below in case T68 has not loaded yet.
+ *   - skeletons.css (T04) owns the .skeleton / .skeleton--text
+ *     primitives consumed inside .dc-card[data-state="loading"].
+ *
+ * MOUNT ORDER:
+ *   After tokens.css and global-refinement.css. Order vs
+ *   skeletons.css is not load-bearing — selectors are namespaced.
+ *
+ * DO NOT redefine tokens listed above. Local custom-property
+ * overrides on .dc-card are fine and used for variants.
+ * ============================================================ */
+
+/* ---------- Base card ---------- */
+.dc-card {
+  /* Local custom-prop surface so variants can rebind without
+     touching the global token. */
+  --dc-pad: var(--sp-3);
+  --dc-pad-y: var(--sp-3);
+  --dc-metric-size: var(--num-lg, 28px);
+  --dc-radius: var(--r-3, 8px);
+  --dc-bg: var(--surface, #ffffff);
+  --dc-border: var(--hairline, rgba(15, 23, 42, 0.08));
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2, 8px);
+
+  padding: var(--dc-pad-y) var(--dc-pad);
+  background: var(--dc-bg);
+  border: 1px solid var(--dc-border);
+  border-radius: var(--dc-radius);
+
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  color: var(--ink, #0f172a);
+
+  transition: transform var(--t-fast, 120ms) var(--ease, ease),
+              box-shadow var(--t-fast, 120ms) var(--ease, ease),
+              border-color var(--t-fast, 120ms) var(--ease, ease);
+  will-change: transform;
+}
+
+/* Use 16px padding when the card is given more room (cards
+   inside .dc-card-grid that wrap to full-width). */
+@media (min-width: 720px) {
+  .dc-card {
+    --dc-pad: var(--sp-4, 16px);
+    --dc-pad-y: var(--sp-4, 16px);
+  }
+}
+
+/* ---------- Header ---------- */
+.dc-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2, 8px);
+  min-height: 20px;
+}
+
+.dc-card__title {
+  flex: 1 1 auto;
+  min-width: 0;
+
+  font-family: var(--serif-display, "Instrument Serif", Georgia, serif);
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--ink, #0f172a);
+  letter-spacing: 0;
+
+  /* Truncate long instrument names cleanly. */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dc-card__actions {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1, 4px);
+}
+
+.dc-card__actions > button,
+.dc-card__actions > a,
+.dc-card__actions > .dc-card__action {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 2px var(--sp-1, 4px);
+  font: inherit;
+  font-size: 11px;
+  color: var(--ink-muted, #64748b);
+  border-radius: var(--r-2, 6px);
+  cursor: pointer;
+  transition: background var(--t-fast, 120ms) var(--ease, ease),
+              color var(--t-fast, 120ms) var(--ease, ease);
+}
+
+.dc-card__actions > button:hover,
+.dc-card__actions > a:hover,
+.dc-card__actions > .dc-card__action:hover {
+  background: var(--bg-alt, #f4f4f5);
+  color: var(--ink, #0f172a);
+}
+
+.dc-card__actions > button:focus-visible,
+.dc-card__actions > a:focus-visible {
+  outline: var(--focus-ring, 2px solid rgba(249, 115, 22, 0.55));
+  outline-offset: 2px;
+}
+
+/* ---------- Main metric ---------- */
+.dc-card__metric {
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, monospace);
+  font-size: var(--dc-metric-size);
+  line-height: 1.0;
+  font-weight: 500;
+  color: var(--ink, #0f172a);
+
+  /* Tabular numerics keep digits aligned when values update. */
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+
+  /* Numeric values read right-aligned in a tile context so the
+     decimal columns line up across a dc-card-grid. The .dc-card--row
+     variant overrides this with explicit text-align. */
+  text-align: right;
+
+  /* Never wrap a price across two lines. */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- Delta chip ---------- */
+.dc-card__delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  padding: 2px var(--sp-2, 8px);
+  border-radius: var(--r-pill, 999px);
+
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, monospace);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+
+  /* Neutral default — color provided by .dc-delta--up / --down. */
+  background: var(--bg-alt, #f4f4f5);
+  color: var(--ink-2, #334155);
+
+  white-space: nowrap;
+  user-select: none;
+}
+
+.dc-card__delta::before {
+  /* Glyph slot — populated by the up/down modifier. Keeps
+     non-directional default deltas (flat) visually balanced. */
+  content: "·";
+  font-size: 12px;
+  line-height: 1;
+  opacity: 0.6;
+}
+
+.dc-delta--up {
+  background: color-mix(in srgb, var(--pos, #16a34a) 10%, transparent);
+  color: var(--pos, #16a34a);
+}
+
+.dc-delta--up::before {
+  content: "\25B2";  /* BLACK UP-POINTING TRIANGLE */
+  font-size: 9px;
+  opacity: 1;
+}
+
+.dc-delta--down {
+  background: color-mix(in srgb, var(--neg, #dc2626) 10%, transparent);
+  color: var(--neg, #dc2626);
+}
+
+.dc-delta--down::before {
+  content: "\25BC";  /* BLACK DOWN-POINTING TRIANGLE */
+  font-size: 9px;
+  opacity: 1;
+}
+
+.dc-delta--flat {
+  background: var(--bg-alt, #f4f4f5);
+  color: var(--ink-muted, #64748b);
+}
+
+.dc-delta--flat::before {
+  content: "\2192";  /* RIGHTWARDS ARROW */
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* ---------- Sub label ---------- */
+.dc-card__sub {
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  font-size: 11px;
+  line-height: 1.3;
+  font-weight: 400;
+  color: var(--ink-muted, #64748b);
+
+  /* Truncate by default. Multi-line sub labels can opt out
+     via .dc-card__sub.is-wrap. */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dc-card__sub.is-wrap {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* Numeric sub labels (e.g. "Vol 1.2M", "VWAP 174.83") align
+   right and use tabular nums to track the main metric. */
+.dc-card__sub.num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  text-align: right;
+}
+
+/* ---------- Footer row (metric + delta on one line) ---------- */
+.dc-card__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-2, 8px);
+}
+
+/* ---------- Sparkline slot ---------- */
+.dc-card__spark {
+  display: inline-block;
+  width: 80px;
+  height: 28px;
+  vertical-align: middle;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.dc-card__spark > svg,
+.dc-card__spark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Compact variant ---------- */
+.dc-card--compact {
+  --dc-pad: var(--sp-2, 10px);
+  --dc-pad-y: var(--sp-2, 10px);
+  --dc-metric-size: 18px;
+  gap: 6px;
+}
+
+.dc-card--compact .dc-card__title {
+  font-size: 12px;
+}
+
+.dc-card--compact .dc-card__sub {
+  font-size: 10px;
+}
+
+.dc-card--compact .dc-card__delta {
+  font-size: 10px;
+  padding: 1px 6px;
+}
+
+.dc-card--compact .dc-card__spark {
+  width: 64px;
+  height: 22px;
+}
+
+/* Slightly tighter padding on small viewports. */
+@media (max-width: 480px) {
+  .dc-card--compact {
+    --dc-pad: 10px;
+    --dc-pad-y: 10px;
+  }
+}
+
+/* ---------- Row variant (label LEFT, metric RIGHT) ---------- */
+.dc-card--row {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--sp-3, 12px);
+}
+
+.dc-card--row .dc-card__header {
+  flex: 1 1 auto;
+  min-width: 0;
+  align-items: center;
+}
+
+.dc-card--row .dc-card__title {
+  font-size: 12px;
+}
+
+.dc-card--row .dc-card__metric {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.dc-card--row .dc-card__sub {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.dc-card--row .dc-card__delta {
+  flex: 0 0 auto;
+}
+
+.dc-card--row .dc-card__spark {
+  flex: 0 0 auto;
+}
+
+/* ---------- Grid container ---------- */
+.dc-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--sp-3, 12px);
+
+  /* Reset list semantics when the grid is rendered as <ul>. */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dc-card-grid.is-dense {
+  /* Allow consumers to opt into smaller minimum-track for
+     denser tile walls (e.g. Terminal mode KPI strips). */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--sp-2, 8px);
+}
+
+.dc-card-grid.is-wide {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* ---------- Hover (subtle lift + shadow-1) ---------- */
+@media (hover: hover) and (pointer: fine) {
+  .dc-card:hover {
+    transform: translateY(-1px);
+    box-shadow: var(
+      --shadow-1,
+      0 1px 2px rgba(15, 23, 42, 0.04),
+      0 4px 12px rgba(15, 23, 42, 0.06)
+    );
+    border-color: var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  }
+}
+
+/* Keyboard focus mirrors hover styling. */
+.dc-card:focus-within {
+  box-shadow: var(
+    --shadow-1,
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 4px 12px rgba(15, 23, 42, 0.06)
+  );
+  border-color: var(--hairline-strong, rgba(15, 23, 42, 0.14));
+}
+
+/* Interactive cards (rendered as <button> or with role=button)
+   get a pointer cursor and an explicit active state. */
+.dc-card[role="button"],
+.dc-card.is-interactive,
+button.dc-card,
+a.dc-card {
+  cursor: pointer;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+}
+
+.dc-card[role="button"]:active,
+.dc-card.is-interactive:active,
+button.dc-card:active,
+a.dc-card:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ---------- Loading state (consumes T04 skeletons.css) ---------- */
+.dc-card[data-state="loading"] {
+  /* Soften the surface during load so the skeleton lines breathe. */
+  background: var(--surface-2, #f8fafc);
+  pointer-events: none;
+}
+
+.dc-card[data-state="loading"] .dc-card__title,
+.dc-card[data-state="loading"] .dc-card__metric,
+.dc-card[data-state="loading"] .dc-card__sub,
+.dc-card[data-state="loading"] .dc-card__delta {
+  /* Hide real text while skeleton lines are rendered. */
+  color: transparent;
+  background: transparent;
+}
+
+.dc-card[data-state="loading"] .dc-card__delta::before {
+  content: "";
+}
+
+/* Built-in skeleton lines for consumers that don't render
+   their own .skeleton elements inside the card. These piggy-
+   back on T04's .skeleton primitive when present, and fall
+   back to a plain shimmer otherwise. */
+.dc-card[data-state="loading"] .dc-card__title::after,
+.dc-card[data-state="loading"] .dc-card__metric::after,
+.dc-card[data-state="loading"] .dc-card__sub::after {
+  content: "";
+  display: block;
+  height: 0.8em;
+  border-radius: var(--r-2, 6px);
+  background: linear-gradient(
+    90deg,
+    var(--bg-alt, #f4f4f5) 0%,
+    var(--surface, #ffffff) 50%,
+    var(--bg-alt, #f4f4f5) 100%
+  );
+  background-size: 200% 100%;
+  animation: dc-card-shimmer 1.2s linear infinite;
+}
+
+.dc-card[data-state="loading"] .dc-card__metric::after {
+  height: 1.2em;
+  width: 70%;
+  margin-left: auto;
+}
+
+.dc-card[data-state="loading"] .dc-card__title::after {
+  width: 60%;
+}
+
+.dc-card[data-state="loading"] .dc-card__sub::after {
+  width: 45%;
+  height: 0.7em;
+}
+
+@keyframes dc-card-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dc-card[data-state="loading"] .dc-card__title::after,
+  .dc-card[data-state="loading"] .dc-card__metric::after,
+  .dc-card[data-state="loading"] .dc-card__sub::after {
+    animation: none;
+    background: var(--bg-alt, #f4f4f5);
+  }
+}
+
+/* When the consumer mounts T04 .skeleton primitives directly
+   inside the card, suppress the built-in pseudo lines to avoid
+   double rendering. */
+.dc-card[data-state="loading"]:has(.skeleton) .dc-card__title::after,
+.dc-card[data-state="loading"]:has(.skeleton) .dc-card__metric::after,
+.dc-card[data-state="loading"]:has(.skeleton) .dc-card__sub::after {
+  content: none;
+}
+
+/* ---------- Error state ---------- */
+.dc-card[data-state="error"] {
+  /* Orange-tinted left border (uses T68 shadow + orange token). */
+  border-left: 3px solid var(--warn, #f59e0b);
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--warn, #f59e0b) 6%, var(--surface, #ffffff)) 0%,
+    var(--surface, #ffffff) 40%
+  );
+}
+
+.dc-card[data-state="error"] .dc-card__header::after {
+  /* Error chip auto-injected in header right-edge. Consumers
+     can opt out by adding .dc-card--silent-error. */
+  content: "error";
+
+  flex: 0 0 auto;
+  margin-left: var(--sp-2, 8px);
+
+  padding: 1px 8px;
+  border-radius: var(--r-pill, 999px);
+  background: color-mix(in srgb, var(--warn, #f59e0b) 14%, transparent);
+  color: var(--warn, #f59e0b);
+
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.dc-card--silent-error[data-state="error"] .dc-card__header::after {
+  content: none;
+}
+
+/* Custom error label via [data-error-label="…"]. */
+.dc-card[data-state="error"][data-error-label]
+  .dc-card__header::after {
+  content: attr(data-error-label);
+}
+
+/* ---------- Empty state (defensive — pairs with T08) ---------- */
+.dc-card[data-state="empty"] {
+  background: var(--surface-2, #f8fafc);
+}
+
+.dc-card[data-state="empty"] .dc-card__metric {
+  color: var(--ink-4, #94a3b8);
+}
+
+/* ---------- Dark-mode adjustments ---------- */
+@media (prefers-color-scheme: dark) {
+  .dc-card[data-state="loading"] .dc-card__title::after,
+  .dc-card[data-state="loading"] .dc-card__metric::after,
+  .dc-card[data-state="loading"] .dc-card__sub::after {
+    background: linear-gradient(
+      90deg,
+      rgba(248, 250, 252, 0.06) 0%,
+      rgba(248, 250, 252, 0.12) 50%,
+      rgba(248, 250, 252, 0.06) 100%
+    );
+    background-size: 200% 100%;
+  }
+}
+
+[data-theme="dark"] .dc-card[data-state="loading"] .dc-card__title::after,
+[data-theme="dark"] .dc-card[data-state="loading"] .dc-card__metric::after,
+[data-theme="dark"] .dc-card[data-state="loading"] .dc-card__sub::after {
+  background: linear-gradient(
+    90deg,
+    rgba(248, 250, 252, 0.06) 0%,
+    rgba(248, 250, 252, 0.12) 50%,
+    rgba(248, 250, 252, 0.06) 100%
+  );
+  background-size: 200% 100%;
+}
+
+/* ---------- Print ---------- */
+@media print {
+  .dc-card {
+    box-shadow: none !important;
+    transform: none !important;
+    border-color: rgba(0, 0, 0, 0.25);
+  }
+
+  .dc-card[data-state="loading"]::after,
+  .dc-card[data-state="loading"] .dc-card__title::after,
+  .dc-card[data-state="loading"] .dc-card__metric::after,
+  .dc-card[data-state="loading"] .dc-card__sub::after {
+    animation: none;
+  }
+}
+
+/* ============================================================
+ * End of data-cards.css
+ * ============================================================ */

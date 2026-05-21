@@ -1,0 +1,394 @@
+/* =========================================================================
+ * web/css/print.css
+ * -------------------------------------------------------------------------
+ * Print stylesheet for Prediction Terminal regression reports.
+ *
+ * Goal: when the user prints (or saves-as-PDF), strip away the live-app
+ * chrome (nav, tabs, sidebars, command palette, toasts, tour, theme toggle,
+ * action buttons) and present a clean, paginated regression report on
+ * A4 paper. The regression result detail (#results) is the focus; the
+ * input form, mode tabs, and other modes' panes are hidden.
+ *
+ * Scope: rules live inside `@media print { ... }` so they are inert on
+ * screen. Where colours are forced, `!important` is used to override the
+ * dark/light theme tokens defined in tokens.css.
+ *
+ * No dependencies on JS. A static CSS-generated header sits above the
+ * content via `body::before` (the spec allows for a JS-set
+ * `data-print-date`, but we degrade gracefully when it is absent).
+ *
+ * Mount: index-html-owner should add
+ *   <link rel="stylesheet" href="css/print.css" media="print">
+ * (the `media="print"` attribute also keeps the file out of the screen
+ * paint critical path).
+ * ========================================================================= */
+
+@media print {
+
+  /* -----------------------------------------------------------------------
+   * Page setup
+   * Margins are generous on the left/right (14 mm) so long coefficient
+   * tables breathe, slightly larger at the bottom (18 mm) to leave room
+   * for page numbers.
+   * --------------------------------------------------------------------- */
+  @page {
+    size: A4 portrait;
+    margin: 14mm 14mm 18mm 14mm;
+
+    @bottom-right {
+      content: counter(page) " / " counter(pages);
+      font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace;
+      font-size: 9pt;
+      color: #555;
+    }
+
+    @bottom-left {
+      content: "Prediction Terminal";
+      font-family: "Inter", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-size: 8.5pt;
+      color: #777;
+    }
+  }
+
+  /* First page can omit the small footer-left brand (page number stays). */
+  @page :first {
+    @bottom-left { content: ""; }
+  }
+
+  /* -----------------------------------------------------------------------
+   * Reset: force a paper-friendly white-on-black palette regardless of
+   * the active screen theme (light/dark/system). We override tokens.css
+   * variables to neutral values so derived components inherit correctly.
+   * --------------------------------------------------------------------- */
+  :root,
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+
+    /* Neutralise common theme tokens that downstream CSS reads. */
+    --bg: #ffffff !important;
+    --bg-elev: #ffffff !important;
+    --bg-soft: #ffffff !important;
+    --fg: #000000 !important;
+    --fg-soft: #222222 !important;
+    --fg-muted: #444444 !important;
+    --ink: #000000 !important;
+    --hairline: rgba(0, 0, 0, 0.18) !important;
+    --orange: #b85a00 !important; /* keep accent legible on paper */
+  }
+
+  body {
+    font-family: "Source Serif Pro", "Georgia", "Times New Roman", serif;
+    font-size: 10.5pt;
+    line-height: 1.42;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Numerics, code, and tabular values: monospaced for alignment. */
+  code, pre, kbd, samp,
+  .num, .num-lg, .num-md, .num-sm,
+  .mono, .tx-num,
+  table.coef td, table.coef th,
+  #coef-table td, #coef-table th,
+  .coef-row, .coef-vif-cell,
+  .residual-stats, .r2-gauge {
+    font-family: "JetBrains Mono", "SF Mono", "Menlo",
+                 "Consolas", monospace !important;
+    font-size: 9pt !important;
+  }
+
+  /* Headings: tighter, smaller, ink-black, no bold-italic combos. */
+  h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+    page-break-after: avoid;
+    break-after: avoid;
+    font-family: "Inter", "Helvetica Neue", "Arial", sans-serif;
+    font-weight: 600;
+  }
+  h1 { font-size: 16pt; margin: 0 0 6pt 0; }
+  h2 { font-size: 13pt; margin: 10pt 0 4pt 0; }
+  h3 { font-size: 11pt; margin: 8pt 0 3pt 0; }
+  h4, h5, h6 { font-size: 10pt; margin: 6pt 0 2pt 0; }
+
+  /* -----------------------------------------------------------------------
+   * Hide live-app chrome that has no place on paper.
+   * --------------------------------------------------------------------- */
+  nav,
+  header,
+  .nav,
+  .nav.top,
+  nav.top,
+  .top-bar,
+  .pfm-theme-toggle,
+  #pfm-cmdk,
+  #pfm-cmdk-backdrop,
+  .modal-backdrop,
+  .modal:not(#results .modal),
+  .toast,
+  .toast-container,
+  .tour-card,
+  .pfm-tour,
+  .pfm-tour-backdrop,
+  .pfm-rxl,                   /* loading dots (regression-loading.css)   */
+  #pfm-regression-loading,
+  .pfm-rxp-toggle,            /* explainer plain/expert toggle pill      */
+  .floating-pin-button,
+  .pin-drawer,
+  .ah-section-buttons,
+  .strat-section,
+  .strat-pane:not(.active),
+  .term-side,
+  .tm-sidebar,
+  .pfm-homepage-tabs,
+  .tm-section-nav,
+  .term-breaking-ticker,
+  .action-bar,
+  .actions,
+  .btn,
+  button,
+  .pfm-btn,
+  .copy-btn,
+  .download-btn,
+  .share-btn,
+  .clipboard-btn,
+  [role="button"],
+  [data-print-hide],
+  .no-print {
+    display: none !important;
+  }
+
+  /* Error/empty banners disappear from print (they're transient UI). */
+  .error-banner,
+  .empty-state,
+  #pfm-error-banner,
+  .pfm-empty {
+    display: none !important;
+  }
+
+  /* -----------------------------------------------------------------------
+   * Regression mode focus
+   * When printing from the regression pane, hide the input form and any
+   * non-result panels; show the result detail prominently.
+   * --------------------------------------------------------------------- */
+  [data-mode-pane="regression"] form,
+  [data-mode-pane="regression"] .form-card,
+  [data-mode-pane="regression"] .input-card,
+  [data-mode-pane="regression"] #factor-builder,
+  [data-mode-pane="regression"] #factor-search,
+  [data-mode-pane="regression"] .hero,
+  [data-mode-pane="regression"] .wow-hero {
+    display: none !important;
+  }
+
+  [data-mode-pane="regression"] #results,
+  [data-mode-pane="regression"] .results,
+  [data-mode-pane="regression"] [data-results] {
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* When user is on a non-regression mode (Strategies / Terminal), hide
+     those panes entirely — paper is for the regression report. */
+  [data-mode-pane="strategies"],
+  [data-mode-pane="terminal"] {
+    display: none !important;
+  }
+
+  /* -----------------------------------------------------------------------
+   * Cards and content blocks
+   * Avoid orphans across page breaks. Strip shadows/rounded corners that
+   * print as ugly grey blurs.
+   * --------------------------------------------------------------------- */
+  .dc-card,
+  .chart-card,
+  .modal,
+  .alphahub-card,
+  .term-card,
+  .term-mini-card,
+  .pfm-rxp-card,
+  .result-card,
+  #results > section,
+  #results > div {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid rgba(0, 0, 0, 0.22) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin: 0 0 8pt 0 !important;
+    padding: 8pt 10pt !important;
+  }
+
+  /* Section dividers: a single hairline rule rather than gradient bars. */
+  hr, .rc-divider, .ah-divider, .term-divider {
+    border: none !important;
+    border-top: 0.5pt solid rgba(0, 0, 0, 0.35) !important;
+    margin: 6pt 0 !important;
+    height: 0 !important;
+    background: transparent !important;
+  }
+
+  /* -----------------------------------------------------------------------
+   * Tables (coefficient tables, residuals, diagnostics)
+   * Lighten the rules, kill alternating-row fills, keep header on each
+   * page when a table spans a break.
+   * --------------------------------------------------------------------- */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    background: transparent !important;
+    page-break-inside: auto;
+  }
+  table thead {
+    display: table-header-group; /* repeats header on each printed page */
+  }
+  table tfoot { display: table-footer-group; }
+  table tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    background: transparent !important;
+  }
+  table th,
+  table td {
+    border: 0.5pt solid rgba(0, 0, 0, 0.30) !important;
+    background: transparent !important;
+    color: #000000 !important;
+    padding: 2.5pt 5pt !important;
+    text-align: left;
+    vertical-align: top;
+  }
+  table th {
+    font-weight: 600;
+    background: #f4f4f4 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Numeric columns right-aligned. */
+  table td.num,
+  table td[data-num],
+  .coef-row td:not(:first-child),
+  #coef-table td:not(:first-child) {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* p-value chips: render as plain text on paper. */
+  .p-chip,
+  .vif-chip,
+  .ah-tier-pill,
+  .tm-pill,
+  .tm-delta {
+    background: transparent !important;
+    color: #000000 !important;
+    border: 0.5pt solid rgba(0, 0, 0, 0.35) !important;
+    padding: 0 3pt !important;
+    border-radius: 2pt !important;
+    box-shadow: none !important;
+  }
+
+  /* -----------------------------------------------------------------------
+   * Charts (Plotly)
+   * Plotly's own SVG output prints fine; we just need to ensure the
+   * container does not exceed the printable width and does not get
+   * cropped across page breaks.
+   * --------------------------------------------------------------------- */
+  .chart,
+  .chart-card .plotly,
+  .js-plotly-plot,
+  .plotly,
+  .plot-container,
+  .main-svg {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .js-plotly-plot .modebar,
+  .plotly .modebar,
+  .modebar-container {
+    display: none !important; /* hide Plotly's interactive toolbar */
+  }
+
+  /* -----------------------------------------------------------------------
+   * Hyperlinks
+   * Convert in-line links to footnote-style "(href)" so that the printed
+   * page is self-contained. Mailto / tel / anchors are kept silent.
+   * --------------------------------------------------------------------- */
+  a, a:link, a:visited {
+    color: #000000 !important;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5pt;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-family: "JetBrains Mono", "SF Mono", monospace;
+    font-size: 8.5pt;
+    color: #444 !important;
+    word-break: break-all;
+  }
+  /* Don't append the (href) for in-page anchors, javascript:, or empty hrefs. */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after,
+  a[href=""]::after,
+  a[href^="mailto:"]::after,
+  a[href^="tel:"]::after,
+  a.no-print-href::after,
+  nav a::after {
+    content: "" !important;
+  }
+
+  /* -----------------------------------------------------------------------
+   * Static print header
+   * Rendered once at the very top of the first printed page via
+   * `body::before`. If JS sets `data-print-date` on <body>, that value
+   * is appended; otherwise the line ends at "Regression Report".
+   *
+   * Note: we use `position: running()` style only via a top-of-body
+   * pseudo-element, which prints once at document start. Repeating
+   * headers on every page would require `@page { @top-left { ... } }`
+   * with a string-set token, which lacks broad browser support.
+   * --------------------------------------------------------------------- */
+  body::before {
+    display: block;
+    content: "Prediction Terminal · Regression Report" " " attr(data-print-date);
+    font-family: "Inter", "Helvetica Neue", "Arial", sans-serif;
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: #000000;
+    padding: 0 0 4pt 0;
+    margin: 0 0 8pt 0;
+    border-bottom: 0.75pt solid rgba(0, 0, 0, 0.45);
+    letter-spacing: 0.02em;
+  }
+
+  /* -----------------------------------------------------------------------
+   * Typography fine-tuning
+   * --------------------------------------------------------------------- */
+  p, li, dd, dt, td, th, span, div {
+    orphans: 3;
+    widows: 3;
+  }
+  blockquote, pre {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  img, svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* -----------------------------------------------------------------------
+   * Defensive: ensure the body actually renders even if a screen-only
+   * `display:none` was applied to wrappers by JS.
+   * --------------------------------------------------------------------- */
+  html, body { display: block !important; }
+}

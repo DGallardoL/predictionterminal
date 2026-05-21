@@ -1,0 +1,610 @@
+/* ============================================================
+ * charts.css  (T09, wave-10)
+ *
+ * Plotly chart container styling + Plotly visual refinement.
+ *
+ * SCOPE
+ *   - Container utilities: .chart (+ size variants) and .chart-card
+ *     wrapper with header (h4 title + actions) + footer (caption).
+ *   - .chart-axis / .chart-legend for hand-rolled (non-Plotly)
+ *     mini-charts.
+ *   - Plotly default-tooltip / modebar / axis-tick refinement via
+ *     `.plotly` descendant selectors (cssclass-stable since Plotly
+ *     5.x).
+ *   - data-state="loading" / "empty" hooks that defer the visual
+ *     to T04 skeletons.css and T08 empty-states.css.
+ *   - .chart-crosshair fake-hover dashed crosshair overlay.
+ *
+ * MOUNT ORDER
+ *   AFTER tokens.css, AFTER global-refinement.css, BEFORE any
+ *   mode-specific premium sheets that style chart containers.
+ *
+ * AUTHORING RULES
+ *   - Reuse tokens (--ink, --ink-3, --surface, --hairline, --r-3,
+ *     --mono, --sans, --sp-*). DO NOT redefine.
+ *   - The aspect-ratio lock is what prevents layout shift while
+ *     Plotly renders. Use the variants for the right shape.
+ *   - Plotly element selectors (.plotly .hovertext, .plotly
+ *     .modebar, .plotly .axis text) must use a global descendant
+ *     selector — Plotly mounts at the chart node, so we keep
+ *     specificity low and let downstream sheets override if
+ *     needed.
+ *
+ * DARK MODE
+ *   Two paths supported (mirrors tokens.css):
+ *     @media (prefers-color-scheme: dark)  &  [data-theme="dark"]
+ *   Hovertext darkens, modebar lightens, axis ticks lift to
+ *   ink-3 brighter.
+ * ============================================================ */
+
+/* ---------- 1. Container: .chart + size variants ---------- */
+
+.chart {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  aspect-ratio: 16 / 9;
+  background: var(--surface, #ffffff);
+  border-radius: var(--r-3, 8px);
+  overflow: hidden;
+  isolation: isolate; /* keep hover/crosshair pseudos contained */
+}
+
+.chart--sm {
+  min-height: 220px;
+  aspect-ratio: 16 / 9;
+}
+
+.chart--md {
+  min-height: 320px;
+  aspect-ratio: 16 / 9;
+}
+
+.chart--lg {
+  min-height: 440px;
+  aspect-ratio: 16 / 9;
+}
+
+.chart--square {
+  aspect-ratio: 1 / 1;
+}
+
+.chart--wide {
+  aspect-ratio: 21 / 9;
+}
+
+/* When the host explicitly sets a pixel height (e.g. legacy markup
+ * targeting a fixed plot rect), defer to that height and disable
+ * the aspect-ratio constraint. Mark with [data-fixed-height]. */
+.chart[data-fixed-height] {
+  aspect-ratio: auto;
+}
+
+/* ---------- 2. .chart-card wrapper (header + chart + footer) -- */
+
+.chart-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface, #ffffff);
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  border-radius: var(--r-3, 8px);
+  overflow: hidden;
+}
+
+.chart-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3, 12px);
+  padding: var(--sp-3, 12px) var(--sp-4, 16px);
+  border-bottom: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+}
+
+.chart-card__header h4,
+.chart-card__title {
+  margin: 0;
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink, #0f172a);
+  line-height: 1.3;
+}
+
+.chart-card__actions {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2, 8px);
+  color: var(--ink-3, #64748b);
+  font-size: 11px;
+}
+
+.chart-card__actions > * {
+  font-size: inherit;
+  color: inherit;
+}
+
+.chart-card__body {
+  position: relative;
+  padding: 0;
+  background: var(--surface, #ffffff);
+}
+
+.chart-card__body > .chart {
+  border-radius: 0;
+}
+
+.chart-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3, 12px);
+  padding: var(--sp-2, 8px) var(--sp-4, 16px);
+  border-top: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  font-size: 11px;
+  color: var(--ink-3, #64748b);
+  line-height: 1.35;
+}
+
+.chart-card__caption {
+  margin: 0;
+  font-size: 11px;
+  color: var(--ink-3, #64748b);
+}
+
+/* ---------- 3. Non-Plotly axis + legend helpers ---------- */
+
+.chart-axis {
+  display: block;
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, monospace);
+  font-size: 11px;
+  color: var(--ink-3, #64748b);
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+
+.chart-axis__line {
+  display: block;
+  height: 1px;
+  background: var(--hairline, rgba(15, 23, 42, 0.08));
+}
+
+.chart-axis__tick {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-3, #64748b);
+}
+
+.chart-axis__label {
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  font-size: 11px;
+  color: var(--ink-2, #334155);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-3, 12px) var(--sp-4, 16px);
+  padding: var(--sp-2, 8px) 0;
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  font-size: 11px;
+  color: var(--ink-2, #334155);
+}
+
+.chart-legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.2;
+}
+
+.chart-legend__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor; /* colored via inline style or .chart-legend__dot--<name> */
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+/* Common series-color helpers (extend via inline `style="color: ..."`
+ * on the legend item to flip the dot color). */
+.chart-legend__item--orange { color: var(--orange, #f97316); }
+.chart-legend__item--pos    { color: var(--pos, #16a34a); }
+.chart-legend__item--neg    { color: var(--neg, #dc2626); }
+.chart-legend__item--info   { color: var(--info, #2563eb); }
+.chart-legend__item--ink    { color: var(--ink-2, #334155); }
+
+/* ---------- 4. Plotly default refinement ---------- */
+
+/* Tooltip / hovertext */
+.plotly .hovertext {
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, monospace) !important;
+  font-size: 12px !important;
+  line-height: 1.35 !important;
+}
+
+.plotly .hovertext path,
+.plotly .hovertext rect {
+  fill: var(--surface, #ffffff) !important;
+  stroke: var(--hairline-strong, rgba(15, 23, 42, 0.14)) !important;
+  stroke-width: 1px !important;
+  filter: none !important;
+  rx: 6px;
+  ry: 6px;
+}
+
+.plotly .hovertext text,
+.plotly .hovertext tspan {
+  fill: var(--ink, #0f172a) !important;
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, monospace) !important;
+}
+
+/* Drop Plotly's default drop-shadow filter on hover boxes (we use a
+ * crisp hairline border instead). */
+.plotly .hoverlayer .hovertext {
+  filter: none !important;
+}
+
+/* Modebar (top-right toolbar) */
+.plotly .modebar {
+  top: 4px !important;
+  right: 6px !important;
+  opacity: 0.4 !important;
+  transition: opacity 180ms ease;
+}
+
+.plotly:hover .modebar,
+.plotly .modebar:hover,
+.plotly .modebar:focus-within {
+  opacity: 0.8 !important;
+}
+
+.plotly .modebar-btn path {
+  fill: var(--ink-3, #64748b) !important;
+}
+
+.plotly .modebar-btn:hover path,
+.plotly .modebar-btn.active path {
+  fill: var(--ink, #0f172a) !important;
+}
+
+/* Axis ticks + axis text */
+.plotly .axis text,
+.plotly .xaxislayer-above text,
+.plotly .yaxislayer-above text,
+.plotly .xtick text,
+.plotly .ytick text {
+  font-family: var(--sans, Inter, system-ui, sans-serif) !important;
+  font-size: 11px !important;
+  fill: var(--ink-3, #64748b) !important;
+  letter-spacing: 0.01em;
+}
+
+/* Axis title labels (xtitle / ytitle) sit one level above ticks. */
+.plotly .g-xtitle text,
+.plotly .g-ytitle text {
+  font-family: var(--sans, Inter, system-ui, sans-serif) !important;
+  font-size: 11px !important;
+  fill: var(--ink-2, #334155) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Hairline tick marks */
+.plotly .xtick > path,
+.plotly .ytick > path {
+  stroke: var(--hairline-strong, rgba(15, 23, 42, 0.14)) !important;
+  stroke-width: 1px !important;
+}
+
+/* Plot grid lines: lighter hairline so the data dominates */
+.plotly .gridlayer path {
+  stroke: var(--hairline, rgba(15, 23, 42, 0.08)) !important;
+  stroke-width: 1px !important;
+}
+
+/* Zero line: ink-4 hairline-strong */
+.plotly .zerolinelayer path {
+  stroke: var(--hairline-strong, rgba(15, 23, 42, 0.14)) !important;
+  stroke-width: 1px !important;
+}
+
+/* Legend (Plotly's built-in) — keep close to our .chart-legend */
+.plotly .legendtext {
+  font-family: var(--sans, Inter, system-ui, sans-serif) !important;
+  font-size: 11px !important;
+  fill: var(--ink-2, #334155) !important;
+}
+
+.plotly .legend rect.bg {
+  fill: transparent !important;
+  stroke: transparent !important;
+}
+
+/* ---------- 5. State hooks (loading / empty) ---------- */
+
+/* When data is loading, defer the actual skeleton paint to T04's
+ * skeletons.css. We just reserve the box, hide any Plotly residue,
+ * and add a small overlay hook so T04 can target
+ * .chart[data-state="loading"] > .chart__skeleton via its own
+ * selectors. */
+.chart[data-state="loading"] {
+  background: var(--surface-2, #f8fafc);
+}
+
+.chart[data-state="loading"] > .plotly,
+.chart[data-state="loading"] > .plotly-graph-div {
+  visibility: hidden;
+}
+
+.chart[data-state="loading"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--surface-2, #f8fafc);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Mount slot for T04 skeleton element if injected by JS. */
+.chart[data-state="loading"] > .chart__skeleton {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+/* Empty state — defers to T08 empty-states.css for the actual
+ * illustration + copy. We just reserve a centered slot. */
+.chart[data-state="empty"] > .plotly,
+.chart[data-state="empty"] > .plotly-graph-div {
+  display: none;
+}
+
+.chart[data-state="empty"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--surface-2, #f8fafc);
+}
+
+.chart[data-state="empty"] > .empty-state,
+.chart[data-state="empty"] > .chart__empty {
+  max-width: 320px;
+  padding: var(--sp-4, 16px);
+  color: var(--ink-3, #64748b);
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+/* Error state (degraded upstream): keep the box, gray it out, and
+ * defer messaging to a child element. */
+.chart[data-state="error"] > .plotly,
+.chart[data-state="error"] > .plotly-graph-div {
+  opacity: 0.25;
+  filter: grayscale(1);
+  pointer-events: none;
+}
+
+/* ---------- 6. Fake hover crosshair overlay ---------- */
+
+.chart-crosshair {
+  position: relative;
+}
+
+.chart-crosshair::before,
+.chart-crosshair::after {
+  content: "";
+  position: absolute;
+  background: transparent;
+  border: 0 dashed var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 120ms ease;
+  z-index: 3;
+}
+
+/* Vertical hairline (X-crosshair) */
+.chart-crosshair::before {
+  top: 0;
+  bottom: 0;
+  left: var(--chart-cx, 50%);
+  width: 0;
+  border-left-width: 1px;
+}
+
+/* Horizontal hairline (Y-crosshair) */
+.chart-crosshair::after {
+  left: 0;
+  right: 0;
+  top: var(--chart-cy, 50%);
+  height: 0;
+  border-top-width: 1px;
+}
+
+.chart-crosshair:hover::before,
+.chart-crosshair:hover::after,
+.chart-crosshair[data-crosshair="on"]::before,
+.chart-crosshair[data-crosshair="on"]::after {
+  opacity: 0.55;
+}
+
+/* Hide the fake crosshair when Plotly's own hover layer is active
+ * to prevent visual duplication. Consumers can toggle the data
+ * attribute when binding to Plotly's plotly_hover event. */
+.chart-crosshair[data-plotly-hover="on"]::before,
+.chart-crosshair[data-plotly-hover="on"]::after {
+  opacity: 0 !important;
+}
+
+/* ---------- 7. Selection / drag rects ---------- */
+
+.plotly .select-outline,
+.plotly .zoombox {
+  stroke: var(--orange, #f97316) !important;
+  stroke-dasharray: 3 3 !important;
+  fill: rgba(249, 115, 22, 0.06) !important;
+}
+
+/* ---------- 8. Print: collapse modebar, lighten gridlines ------- */
+
+@media print {
+  .plotly .modebar {
+    display: none !important;
+  }
+  .plotly .gridlayer path {
+    stroke: rgba(0, 0, 0, 0.05) !important;
+  }
+  .chart-card {
+    break-inside: avoid;
+  }
+}
+
+/* ---------- 9. Reduced-motion: drop modebar opacity transition --*/
+
+@media (prefers-reduced-motion: reduce) {
+  .plotly .modebar {
+    transition: none !important;
+  }
+  .chart-crosshair::before,
+  .chart-crosshair::after {
+    transition: none;
+  }
+}
+
+/* ============================================================
+ * Dark mode (OS preference)
+ * ============================================================ */
+
+@media (prefers-color-scheme: dark) {
+  .chart,
+  .chart-card,
+  .chart-card__body {
+    background: var(--surface, #14171f);
+  }
+
+  .chart[data-state="loading"],
+  .chart[data-state="empty"] {
+    background: var(--surface-2, #1a1e28);
+  }
+
+  .plotly .hovertext path,
+  .plotly .hovertext rect {
+    fill: var(--surface, #14171f) !important;
+    stroke: var(--hairline-strong, rgba(248, 250, 252, 0.18)) !important;
+  }
+
+  .plotly .hovertext text,
+  .plotly .hovertext tspan {
+    fill: var(--ink, #f8fafc) !important;
+  }
+
+  .plotly .axis text,
+  .plotly .xaxislayer-above text,
+  .plotly .yaxislayer-above text,
+  .plotly .xtick text,
+  .plotly .ytick text {
+    fill: var(--ink-3, #94a3b8) !important;
+  }
+
+  .plotly .g-xtitle text,
+  .plotly .g-ytitle text {
+    fill: var(--ink-2, #cbd5e1) !important;
+  }
+
+  .plotly .gridlayer path {
+    stroke: var(--hairline, rgba(248, 250, 252, 0.10)) !important;
+  }
+
+  .plotly .zerolinelayer path,
+  .plotly .xtick > path,
+  .plotly .ytick > path {
+    stroke: var(--hairline-strong, rgba(248, 250, 252, 0.18)) !important;
+  }
+
+  .plotly .modebar-btn path {
+    fill: var(--ink-3, #94a3b8) !important;
+  }
+
+  .plotly .modebar-btn:hover path,
+  .plotly .modebar-btn.active path {
+    fill: var(--ink, #f8fafc) !important;
+  }
+
+  .plotly .legendtext {
+    fill: var(--ink-2, #cbd5e1) !important;
+  }
+}
+
+/* ============================================================
+ * Explicit theme override — wins over OS preference.
+ * Mirrors tokens.css activation pattern.
+ * ============================================================ */
+
+[data-theme="dark"] .chart,
+[data-theme="dark"] .chart-card,
+[data-theme="dark"] .chart-card__body {
+  background: var(--surface, #14171f);
+}
+
+[data-theme="dark"] .chart[data-state="loading"],
+[data-theme="dark"] .chart[data-state="empty"] {
+  background: var(--surface-2, #1a1e28);
+}
+
+[data-theme="dark"] .plotly .hovertext path,
+[data-theme="dark"] .plotly .hovertext rect {
+  fill: var(--surface, #14171f) !important;
+  stroke: var(--hairline-strong, rgba(248, 250, 252, 0.18)) !important;
+}
+
+[data-theme="dark"] .plotly .hovertext text,
+[data-theme="dark"] .plotly .hovertext tspan {
+  fill: var(--ink, #f8fafc) !important;
+}
+
+[data-theme="dark"] .plotly .axis text,
+[data-theme="dark"] .plotly .xaxislayer-above text,
+[data-theme="dark"] .plotly .yaxislayer-above text,
+[data-theme="dark"] .plotly .xtick text,
+[data-theme="dark"] .plotly .ytick text {
+  fill: var(--ink-3, #94a3b8) !important;
+}
+
+[data-theme="dark"] .plotly .g-xtitle text,
+[data-theme="dark"] .plotly .g-ytitle text {
+  fill: var(--ink-2, #cbd5e1) !important;
+}
+
+[data-theme="dark"] .plotly .gridlayer path {
+  stroke: var(--hairline, rgba(248, 250, 252, 0.10)) !important;
+}
+
+[data-theme="dark"] .plotly .zerolinelayer path,
+[data-theme="dark"] .plotly .xtick > path,
+[data-theme="dark"] .plotly .ytick > path {
+  stroke: var(--hairline-strong, rgba(248, 250, 252, 0.18)) !important;
+}
+
+[data-theme="dark"] .plotly .modebar-btn path {
+  fill: var(--ink-3, #94a3b8) !important;
+}
+
+[data-theme="dark"] .plotly .modebar-btn:hover path,
+[data-theme="dark"] .plotly .modebar-btn.active path {
+  fill: var(--ink, #f8fafc) !important;
+}
+
+[data-theme="dark"] .plotly .legendtext {
+  fill: var(--ink-2, #cbd5e1) !important;
+}
+
+/* ============================================================
+ * End of charts.css
+ * ============================================================ */

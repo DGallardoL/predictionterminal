@@ -1,0 +1,308 @@
+/* ============================================================
+ * tour.css  (T13, wave-10)
+ *
+ * Standalone onboarding tour overlay for the Prediction Terminal.
+ * Pairs with web/js/onboarding-tour.js (window.PFM.tour).
+ *
+ * MOUNT:
+ *   index-html-owner opts in by adding (in <head>, AFTER tokens.css):
+ *     <link rel="stylesheet" href="css/tour.css">
+ *     <script defer src="js/onboarding-tour.js"></script>
+ *   Then call window.PFM.tour.start() from a help-menu handler,
+ *   or auto-start on first visit if !window.PFM.tour.isCompleted().
+ *
+ * Scoping:
+ *   All selectors are namespaced under `.pfm-tour-*` so the
+ *   sheet is collision-proof. Consumes tokens from tokens.css
+ *   (--orange, --ink, --bg, --sp-*, --radius-*) with safe
+ *   fallbacks so the tour still renders if tokens.css is absent.
+ * ============================================================ */
+
+/* ---- Backdrop dimmer (click-through transparent over target) ---- */
+.pfm-tour-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99990;
+  pointer-events: auto;
+  background: rgba(15, 23, 42, 0.42);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  animation: pfmTourFadeIn 180ms ease-out both;
+}
+
+@keyframes pfmTourFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ---- Highlight ring drawn around the active target ---- */
+.pfm-tour-spotlight {
+  position: fixed;
+  z-index: 99991;
+  pointer-events: none;
+  border: 4px dashed var(--orange, #f97316);
+  border-radius: 10px;
+  box-shadow:
+    0 0 0 4px rgba(249, 115, 22, 0.18),
+    0 0 24px 6px rgba(249, 115, 22, 0.45),
+    0 0 0 9999px rgba(15, 23, 42, 0.42);
+  transition:
+    top 220ms cubic-bezier(0.4, 0, 0.2, 1),
+    left 220ms cubic-bezier(0.4, 0, 0.2, 1),
+    width 220ms cubic-bezier(0.4, 0, 0.2, 1),
+    height 220ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation: pfmTourGlow 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes pfmTourGlow {
+  from {
+    box-shadow:
+      0 0 0 4px rgba(249, 115, 22, 0.18),
+      0 0 24px 6px rgba(249, 115, 22, 0.45),
+      0 0 0 9999px rgba(15, 23, 42, 0.42);
+  }
+  to {
+    box-shadow:
+      0 0 0 6px rgba(249, 115, 22, 0.28),
+      0 0 36px 10px rgba(249, 115, 22, 0.62),
+      0 0 0 9999px rgba(15, 23, 42, 0.42);
+  }
+}
+
+/* ---- Tooltip card ---- */
+.pfm-tour-tooltip {
+  position: fixed;
+  z-index: 99992;
+  width: 280px;
+  background: var(--bg, #ffffff);
+  color: var(--ink, #0f172a);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 12px;
+  padding: 16px 18px 14px;
+  box-shadow:
+    0 8px 24px rgba(15, 23, 42, 0.18),
+    0 2px 6px rgba(15, 23, 42, 0.08);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+  animation: pfmTourSlideIn 220ms cubic-bezier(0.4, 0, 0.2, 1) both;
+  transition:
+    top 220ms cubic-bezier(0.4, 0, 0.2, 1),
+    left 220ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes pfmTourSlideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Tooltip pointer (orange dot indicating anchor) ---- */
+.pfm-tour-tooltip::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--orange, #f97316);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.22);
+}
+.pfm-tour-tooltip[data-pos="right"]::before { left: -5px; top: 24px; }
+.pfm-tour-tooltip[data-pos="left"]::before  { right: -5px; top: 24px; }
+.pfm-tour-tooltip[data-pos="bottom"]::before { top: -5px; left: 24px; }
+.pfm-tour-tooltip[data-pos="top"]::before    { bottom: -5px; left: 24px; }
+
+/* ---- Tooltip header ---- */
+.pfm-tour-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.pfm-tour-title {
+  font-family: "Georgia", "Times New Roman", Cambria, serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ink, #0f172a);
+  margin: 0;
+}
+
+.pfm-tour-step {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink-3, #64748b);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ---- Tooltip body ---- */
+.pfm-tour-body {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-2, #334155);
+  margin: 0 0 14px;
+}
+
+/* ---- Tooltip actions ---- */
+.pfm-tour-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pfm-tour-skip {
+  font-size: 12px;
+  background: transparent;
+  border: none;
+  color: var(--ink-3, #64748b);
+  cursor: pointer;
+  padding: 6px 4px;
+  margin-right: auto;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-family: inherit;
+}
+.pfm-tour-skip:hover { color: var(--ink, #0f172a); }
+.pfm-tour-skip:focus-visible {
+  outline: 2px solid var(--orange, #f97316);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.pfm-tour-btn {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+
+.pfm-tour-btn--back {
+  background: transparent;
+  color: var(--ink-2, #334155);
+  border-color: rgba(15, 23, 42, 0.14);
+}
+.pfm-tour-btn--back:hover:not(:disabled) {
+  background: rgba(15, 23, 42, 0.04);
+  border-color: rgba(15, 23, 42, 0.22);
+}
+.pfm-tour-btn--back:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pfm-tour-btn--next {
+  background: var(--orange, #f97316);
+  color: #ffffff;
+  border-color: var(--orange, #f97316);
+}
+.pfm-tour-btn--next:hover {
+  background: var(--orange-2, #ea580c);
+  border-color: var(--orange-2, #ea580c);
+}
+
+.pfm-tour-btn:focus-visible {
+  outline: 2px solid var(--orange, #f97316);
+  outline-offset: 2px;
+}
+
+/* ---- Progress dots row ---- */
+.pfm-tour-progress {
+  display: flex;
+  gap: 5px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.pfm-tour-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.18);
+  transition: background 160ms ease, transform 160ms ease;
+}
+.pfm-tour-dot--done { background: var(--orange-soft, #ffedd5); }
+.pfm-tour-dot--current {
+  background: var(--orange, #f97316);
+  transform: scale(1.3);
+}
+
+/* ---- Fallback floating tooltip when no anchor resolved ---- */
+.pfm-tour-tooltip--floating {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pfm-tour-tooltip--floating::before { display: none; }
+
+/* ---- Responsive (mobile narrow) ---- */
+@media (max-width: 480px) {
+  .pfm-tour-tooltip {
+    width: calc(100vw - 32px);
+    max-width: 320px;
+  }
+  .pfm-tour-spotlight {
+    border-width: 3px;
+  }
+}
+
+/* ---- Dark mode (OS pref + explicit toggle from T05) ---- */
+@media (prefers-color-scheme: dark) {
+  .pfm-tour-tooltip {
+    background: #0f172a;
+    color: #f1f5f9;
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  .pfm-tour-title { color: #f1f5f9; }
+  .pfm-tour-body  { color: #cbd5e1; }
+  .pfm-tour-step  { color: #94a3b8; }
+  .pfm-tour-skip  { color: #94a3b8; }
+  .pfm-tour-skip:hover { color: #f1f5f9; }
+  .pfm-tour-btn--back {
+    color: #cbd5e1;
+    border-color: rgba(255, 255, 255, 0.16);
+  }
+  .pfm-tour-btn--back:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .pfm-tour-progress {
+    border-top-color: rgba(255, 255, 255, 0.08);
+  }
+  .pfm-tour-dot { background: rgba(255, 255, 255, 0.18); }
+}
+[data-theme="dark"] .pfm-tour-tooltip {
+  background: #0f172a;
+  color: #f1f5f9;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+[data-theme="dark"] .pfm-tour-title { color: #f1f5f9; }
+[data-theme="dark"] .pfm-tour-body  { color: #cbd5e1; }
+[data-theme="dark"] .pfm-tour-step  { color: #94a3b8; }
+[data-theme="dark"] .pfm-tour-skip  { color: #94a3b8; }
+[data-theme="dark"] .pfm-tour-skip:hover { color: #f1f5f9; }
+[data-theme="dark"] .pfm-tour-btn--back {
+  color: #cbd5e1;
+  border-color: rgba(255, 255, 255, 0.16);
+}
+[data-theme="dark"] .pfm-tour-progress {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+[data-theme="dark"] .pfm-tour-dot { background: rgba(255, 255, 255, 0.18); }
+
+/* ---- Reduced motion: kill animations, keep instant feedback ---- */
+@media (prefers-reduced-motion: reduce) {
+  .pfm-tour-backdrop,
+  .pfm-tour-tooltip { animation: none; }
+  .pfm-tour-spotlight {
+    animation: none;
+    transition: none;
+  }
+  .pfm-tour-tooltip { transition: none; }
+}

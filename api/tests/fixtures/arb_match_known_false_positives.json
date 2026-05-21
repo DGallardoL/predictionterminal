@@ -1,0 +1,150 @@
+{
+  "_description": "Hand-curated arb-pair fixtures for T78 match-quality audit. 'bad' pairs MUST be rejected (score < 0.4 or hard-reject) by the current T76+T77 matcher. 'good' pairs MUST score > 0.7. Used by api/tests/test_arb_match_quality.py. Each 'bad' entry includes an 'expected_reason' aligned with T77's REJECT_REASONS. The 'known_t77_gaps' section lists cases the user-flagged-FP catalog includes that current T77 does NOT yet catch — these are tracked as xfail in the test suite so T78 surfaces them without blocking CI.",
+  "_schema_version": 3,
+  "bad": [
+    {
+      "pair_id": "fp-btc-80k-vs-90k",
+      "poly_title": "Will Bitcoin trade above $80,000 by Dec 31 2025?",
+      "kalshi_title": "Will Bitcoin trade above $90,000 by Dec 31 2025?",
+      "expected_reason": "threshold_mismatch",
+      "notes": "Same asset and window but different price threshold — caught by T77 threshold-mismatch."
+    },
+    {
+      "pair_id": "fp-us-senate-vs-state-senate",
+      "poly_title": "Will Democrats win the US Senate majority in 2026?",
+      "kalshi_title": "Will Democrats win the Florida State Senate majority in 2026?",
+      "expected_reason": "jurisdiction_mismatch",
+      "notes": "US Senate vs Florida State Senate — caught by T77 jurisdiction logic."
+    },
+    {
+      "pair_id": "fp-ny-mayor-vs-fl-mayor",
+      "poly_title": "Will Eric Adams win the New York mayoral race in 2025?",
+      "kalshi_title": "Will Karen Bass win the Florida mayoral race in 2026?",
+      "expected_reason": "jurisdiction_mismatch",
+      "notes": "Different jurisdictions (NY vs FL)."
+    },
+    {
+      "pair_id": "fp-recession-2025-vs-2027",
+      "poly_title": "Will the US enter a recession in 2025?",
+      "kalshi_title": "Will the US enter a recession in 2027?",
+      "expected_reason": "resolution_window_no_overlap",
+      "notes": "Same event, non-overlapping in-year windows — T77 rejects."
+    },
+    {
+      "pair_id": "fp-house-il-vs-fl",
+      "poly_title": "Will the Democratic candidate win the Illinois US House race in 2026?",
+      "kalshi_title": "Will the Democratic candidate win the Florida US House race in 2026?",
+      "expected_reason": "jurisdiction_mismatch",
+      "notes": "Different states — T77 jurisdiction logic catches state-level conflicts."
+    },
+    {
+      "pair_id": "fp-eth-2025-vs-2027-in-year",
+      "poly_title": "Will Ethereum reach $5,000 in 2025?",
+      "kalshi_title": "Will Ethereum reach $5,000 in 2027?",
+      "expected_reason": "resolution_window_no_overlap",
+      "notes": "Same asset/threshold but non-overlapping 'in YEAR' anchors — T76 anchors full Jan–Dec window so T77 rejects on window non-overlap."
+    },
+    {
+      "pair_id": "fp-nv-primary-vs-ny-primary",
+      "poly_title": "Will Jeff Hurd win the Nevada Republican primary in 2026?",
+      "kalshi_title": "Will Jeff Hurd win the New York Republican primary in 2026?",
+      "expected_reason": "jurisdiction_mismatch",
+      "notes": "Same candidate name but different states — must not match."
+    },
+    {
+      "pair_id": "fp-gov-tx-vs-ca",
+      "poly_title": "Will the Democratic candidate win the Texas gubernatorial race in 2026?",
+      "kalshi_title": "Will the Democratic candidate win the California gubernatorial race in 2026?",
+      "expected_reason": "jurisdiction_mismatch",
+      "notes": "Different state governors."
+    },
+    {
+      "pair_id": "fp-recession-2025-vs-2028",
+      "poly_title": "Will the US enter a recession in 2025?",
+      "kalshi_title": "Will the US enter a recession in 2028?",
+      "expected_reason": "resolution_window_no_overlap",
+      "notes": "Three-year separation, in-year windows non-overlap."
+    },
+    {
+      "pair_id": "fp-btc-100k-2025-vs-2027",
+      "poly_title": "Will Bitcoin reach $100,000 in 2025?",
+      "kalshi_title": "Will Bitcoin reach $100,000 in 2027?",
+      "expected_reason": "resolution_window_no_overlap",
+      "notes": "Same threshold but non-overlapping resolution years."
+    }
+  ],
+  "good": [
+    {
+      "pair_id": "tp-trump-2024-presidency",
+      "poly_title": "Will Donald Trump win the US presidential election by Nov 5 2024?",
+      "kalshi_title": "Will Donald J. Trump win the US presidential election by Nov 5 2024?",
+      "notes": "Same event, slight name format diff."
+    },
+    {
+      "pair_id": "tp-btc-100k-eoy-2025",
+      "poly_title": "Will Bitcoin reach $100,000 by Dec 31 2025?",
+      "kalshi_title": "Will Bitcoin reach $100,000 by Dec 31 2025?",
+      "notes": "Same threshold, same window, identical wording — sanity check baseline."
+    },
+    {
+      "pair_id": "tp-superbowl-lx-chiefs",
+      "poly_title": "Will the Kansas City Chiefs win Super Bowl by Feb 8 2026?",
+      "kalshi_title": "Will the Kansas City Chiefs win Super Bowl by Feb 8 2026?",
+      "notes": "Same game; identical resolution date and entity."
+    },
+    {
+      "pair_id": "tp-senate-control-2026",
+      "poly_title": "Will Republicans control the US Senate by Nov 3 2026?",
+      "kalshi_title": "Will Republicans hold the US Senate majority by Nov 3 2026?",
+      "notes": "Same chamber, same election date, slight wording variation."
+    },
+    {
+      "pair_id": "tp-eth-2000-eoy-2026",
+      "poly_title": "Will Ethereum reach $2,000 by Dec 31 2026?",
+      "kalshi_title": "Will Ethereum reach $2,000 by Dec 31 2026?",
+      "notes": "Identical pair — sanity-check upper bound."
+    }
+  ],
+  "known_t77_gaps": [
+    {
+      "pair_id": "gap-trump-2024-vs-2028",
+      "poly_title": "Will Donald Trump win the US presidential election by Nov 5 2024?",
+      "kalshi_title": "Will Donald Trump win the US presidential election by Nov 7 2028?",
+      "expected_reason": "resolution_window_no_overlap",
+      "current_score_observed": 0.9,
+      "gap_explanation": "T76 returns windows with earliest=None, latest=date — T77's windows_overlap() treats half-open intervals as overlapping, so 'by 2024' and 'by 2028' pass the hard-reject check. Fix: T76 should anchor earliest to the same year/month as latest when only one anchor is found, or T77 should require strict latest-date proximity (e.g. |latest_a - latest_b| < 90d) for events without an explicit earliest."
+    },
+    {
+      "pair_id": "gap-fed-march-vs-june-2026",
+      "poly_title": "Will the Fed cut rates at the FOMC meeting by March 18 2026?",
+      "kalshi_title": "Will the Fed cut rates at the FOMC meeting by June 17 2026?",
+      "expected_reason": "resolution_window_no_overlap",
+      "current_score_observed": 0.639,
+      "gap_explanation": "Same half-open-window issue; meeting-specific calendar events need a tighter date-proximity check."
+    },
+    {
+      "pair_id": "gap-superbowl-2025-vs-2026",
+      "poly_title": "Will the Kansas City Chiefs win Super Bowl by Feb 9 2025?",
+      "kalshi_title": "Will the Kansas City Chiefs win Super Bowl by Feb 8 2026?",
+      "expected_reason": "resolution_window_no_overlap",
+      "current_score_observed": 0.9,
+      "gap_explanation": "Same half-open-window issue; sports-final events resolve on a single day, requiring strict latest-equality."
+    },
+    {
+      "pair_id": "gap-eth-merge-vs-pectra",
+      "poly_title": "Will the Ethereum Merge upgrade complete by Dec 31 2022?",
+      "kalshi_title": "Will the Ethereum Pectra upgrade complete by Dec 31 2026?",
+      "expected_reason": "resolution_window_no_overlap",
+      "current_score_observed": 0.625,
+      "gap_explanation": "Half-open windows + 4-year gap not caught; relies on entity disambiguation (Merge vs Pectra) which T77's tokenizer treats as both crypto-topic."
+    },
+    {
+      "pair_id": "gap-oscar-2024-vs-2025",
+      "poly_title": "Will Oppenheimer win Best Picture at the Academy Awards by Mar 11 2024?",
+      "kalshi_title": "Will Anora win Best Picture at the Academy Awards by Mar 3 2025?",
+      "expected_reason": "resolution_window_no_overlap",
+      "current_score_observed": 0.725,
+      "gap_explanation": "Half-open windows; entity match on 'Best Picture / Academy Awards' overrides the year diff."
+    }
+  ]
+}

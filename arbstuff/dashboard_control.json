@@ -1,0 +1,6 @@
+{
+  "email_enabled": false,
+  "threshold": 0.99,
+  "min_alert_profit": 1.0,
+  "scan_mode": "OG"
+}

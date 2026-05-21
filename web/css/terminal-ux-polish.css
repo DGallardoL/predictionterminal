@@ -1,0 +1,502 @@
+/* ============================================================
+ * terminal-ux-polish.css  (W13-UX-2, wave-13)
+ *
+ * Bloomberg-style polish layer for Terminal mode.
+ *
+ * Scope:
+ *   Every rule is anchored at [data-mode-pane="terminal"] so this
+ *   sheet cannot leak into Regression or Strategies panes. Mount
+ *   AFTER terminal-density.css and terminal-layout.css so the
+ *   tighter typographic + chrome rules win on the cascade.
+ *
+ * Owner:  W13-UX-2 (this file is single-owner; do not co-edit).
+ * Tokens: consumes only :root vars from tokens.css. Defines none.
+ *
+ * User feedback being honoured ("terminal super clean, data-dense"):
+ *   - 11px JetBrains Mono numerics, right-aligned, tabular-nums
+ *   - Row hover: bg-alt at ~4% intensity
+ *   - Compact 4px vertical row padding
+ *   - 10px Inter uppercase headers w/ 0.08em tracking, ink-3
+ *   - Status pills: 9px mono, square corners, tight padding
+ *   - Delta chips: triangles + absolute values, color-coded
+ *   - 16px sparkline row inline
+ *   - Sticky first column + sticky header on wide tables
+ *   - Active panel: thin orange left-border
+ *   - Sub-tab pills: compact, sharper corners
+ *   - Chart gridlines hidden until hover
+ * ============================================================ */
+
+/* ------------------------------------------------------------
+ * 1.  Numeric table cells
+ *
+ * Apply to every <td> inside a terminal table. Right-align is
+ * standard for monetary / numeric columns; the `.tx-text`
+ * escape hatch reverts to left-align for label columns (symbol,
+ * name, description, etc.).
+ * ------------------------------------------------------------ */
+
+[data-mode-pane="terminal"] table {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "calt" 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  font-size: 11px;
+  line-height: 1.35;
+  color: var(--ink-2);
+}
+
+[data-mode-pane="terminal"] table td,
+[data-mode-pane="terminal"] table th {
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--hairline);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+[data-mode-pane="terminal"] table td {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+/* First column is usually a label/symbol: left align. */
+[data-mode-pane="terminal"] table td:first-child,
+[data-mode-pane="terminal"] table th:first-child {
+  text-align: left;
+  font-family: var(--sans);
+  font-weight: 500;
+}
+
+/* Explicit escape hatches. */
+[data-mode-pane="terminal"] table td.tx-text,
+[data-mode-pane="terminal"] table th.tx-text {
+  text-align: left;
+  font-family: var(--sans);
+}
+
+[data-mode-pane="terminal"] table td.tx-num,
+[data-mode-pane="terminal"] table th.tx-num {
+  text-align: right;
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ------------------------------------------------------------
+ * 2.  Column headers (<th>)
+ * ------------------------------------------------------------ */
+
+[data-mode-pane="terminal"] table thead th,
+[data-mode-pane="terminal"] table th {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--hairline-strong);
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+[data-mode-pane="terminal"] table thead th {
+  text-align: right;
+}
+
+[data-mode-pane="terminal"] table thead th:first-child {
+  text-align: left;
+}
+
+/* ------------------------------------------------------------
+ * 3.  Row hover  (rgba 4% over bg-alt)
+ *
+ * Use a translucent ink overlay rather than a fixed color so the
+ * effect tracks light + dark themes without duplication.
+ * ------------------------------------------------------------ */
+
+[data-mode-pane="terminal"] table tbody tr {
+  transition: background-color 80ms linear;
+}
+
+[data-mode-pane="terminal"] table tbody tr:hover {
+  background-color: rgba(15, 23, 42, 0.04);
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-mode-pane="terminal"] table tbody tr:hover {
+    background-color: rgba(248, 250, 252, 0.04);
+  }
+}
+
+[data-theme="dark"] [data-mode-pane="terminal"] table tbody tr:hover {
+  background-color: rgba(248, 250, 252, 0.04);
+}
+
+[data-theme="light"] [data-mode-pane="terminal"] table tbody tr:hover {
+  background-color: rgba(15, 23, 42, 0.04);
+}
+
+/* Selected row keeps a faint orange tint. */
+[data-mode-pane="terminal"] table tbody tr.is-selected,
+[data-mode-pane="terminal"] table tbody tr[aria-selected="true"] {
+  background-color: color-mix(in srgb, var(--orange) 6%, transparent);
+  box-shadow: inset 2px 0 0 var(--orange);
+}
+
+/* ------------------------------------------------------------
+ * 4.  Sticky header + sticky first column
+ *
+ * Activated by `.tbl-sticky` wrapper or any [data-sticky="true"]
+ * table. The first-column sticky must come with a solid bg so
+ * cells from scrolled columns do not bleed through.
+ * ------------------------------------------------------------ */
+
+[data-mode-pane="terminal"] .tbl-sticky,
+[data-mode-pane="terminal"] [data-sticky="true"] {
+  overflow: auto;
+  max-height: 100%;
+  position: relative;
+}
+
+[data-mode-pane="terminal"] .tbl-sticky table thead th,
+[data-mode-pane="terminal"] [data-sticky="true"] thead th {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: var(--surface-2);
+  box-shadow: 0 1px 0 var(--hairline-strong);
+}
+
+[data-mode-pane="terminal"] .tbl-sticky table tbody td:first-child,
+[data-mode-pane="terminal"] .tbl-sticky table thead th:first-child,
+[data-mode-pane="terminal"] [data-sticky="true"] tbody td:first-child,
+[data-mode-pane="terminal"] [data-sticky="true"] thead th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: var(--surface);
+  box-shadow: 1px 0 0 var(--hairline);
+}
+
+[data-mode-pane="terminal"] .tbl-sticky table thead th:first-child,
+[data-mode-pane="terminal"] [data-sticky="true"] thead th:first-child {
+  z-index: 4;
+  background: var(--surface-2);
+}
+
+/* ------------------------------------------------------------
+ * 5.  Status pills  (9px mono, square corners)
+ *
+ * Markup pattern:  <span class="tx-pill tx-pill--pos">ACTIVE</span>
+ * Variants follow the semantic palette (pos/neg/warn/info/mute).
+ * ------------------------------------------------------------ */
+
+[data-mode-pane="terminal"] .tx-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  border-radius: 2px;
+  background: var(--bg-alt);
+  color: var(--ink-2);
+  border: 1px solid var(--hairline);
+  white-space: nowrap;
+}
+
+[data-mode-pane="terminal"] .tx-pill--pos {
+  background: color-mix(in srgb, var(--pos) 12%, transparent);
+  color: var(--pos);
+  border-color: color-mix(in srgb, var(--pos) 30%, transparent);
+}
+
+[data-mode-pane="terminal"] .tx-pill--neg {
+  background: color-mix(in srgb, var(--neg) 12%, transparent);
+  color: var(--neg);
+  border-color: color-mix(in srgb, var(--neg) 30%, transparent);
+}
+
+[data-mode-pane="terminal"] .tx-pill--warn {
+  background: color-mix(in srgb, var(--warn) 14%, transparent);
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 35%, transparent);
+}
+
+[data-mode-pane="terminal"] .tx-pill--info {
+  background: color-mix(in srgb, var(--info) 12%, transparent);
+  color: var(--info);
+  border-color: color-mix(in srgb, var(--info) 30%, transparent);
+}
+
+[data-mode-pane="terminal"] .tx-pill--accent {
+  background: color-mix(in srgb, var(--orange) 12%, transparent);
+  color: var(--orange-2);
+  border-color: color-mix(in srgb, var(--orange) 35%, transparent);
+}
+
+[data-mode-pane="terminal"] .tx-pill--mute {
+  background: var(--bg-alt);
+  color: var(--ink-3);
+  border-color: var(--hairline);
+}
+
+/* ------------------------------------------------------------
+ * 6.  Delta chips  (▲ / ▼ + absolute value)
+ *
+ * Markup pattern:
+ *   <span class="tx-delta tx-delta--up">▲ 1.24</span>
+ *   <span class="tx-delta tx-delta--down">▼ 0.83</span>
+ *   <span class="tx-delta tx-delta--flat">– 0.00</span>
+ *
+ * The ::before glyph renders if data attribute is set (so JS may
+ * just set data-dir and ship the number).
+ * ------------------------------------------------------------ */
+
+[data-mode-pane="terminal"] .tx-delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+[data-mode-pane="terminal"] .tx-delta--up,
+[data-mode-pane="terminal"] .tx-delta[data-dir="up"] {
+  color: var(--pos);
+}
+
+[data-mode-pane="terminal"] .tx-delta--down,
+[data-mode-pane="terminal"] .tx-delta[data-dir="down"] {
+  color: var(--neg);
+}
+
+[data-mode-pane="terminal"] .tx-delta--flat,
+[data-mode-pane="terminal"] .tx-delta[data-dir="flat"] {
+  color: var(--ink-3);
+}
+
+[data-mode-pane="terminal"] .tx-delta[data-dir="up"]::before {
+  content: "▲";
+  font-size: 9px;
+  line-height: 1;
+}
+
+[data-mode-pane="terminal"] .tx-delta[data-dir="down"]::before {
+  content: "▼";
+  font-size: 9px;
+  line-height: 1;
+}
+
+[data-mode-pane="terminal"] .tx-delta[data-dir="flat"]::before {
+  content: "–";
+  font-size: 11px;
+  line-height: 1;
+}
+
+/* Coloured backgrounds when an emphasised chip is wanted. */
+[data-mode-pane="terminal"] .tx-delta--chip {
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+[data-mode-pane="terminal"] .tx-delta--chip.tx-delta--up,
+[data-mode-pane="terminal"] .tx-delta--chip[data-dir="up"] {
+  background: color-mix(in srgb, var(--pos) 12%, transparent);
+}
+
+[data-mode-pane="terminal"] .tx-delta--chip.tx-delta--down,
+[data-mode-pane="terminal"] .tx-delta--chip[data-dir="down"] {
+  background: color-mix(in srgb, var(--neg) 12%, transparent);
+}
+
+/* ------------------------------------------------------------
+ * 7.  Inline sparklines  (16px tall, full row inline)
+ *
+ * Markup:  <span class="tx-spark"><svg ...></svg></span>
+ * The wrapper enforces height + alignment; the inner <svg> or
+ * <canvas> should set width:100% and inherit height.
+ * ------------------------------------------------------------ */
+
+[data-mode-pane="terminal"] .tx-spark {
+  display: inline-block;
+  height: 16px;
+  min-width: 48px;
+  width: 96px;
+  vertical-align: middle;
+  line-height: 0;
+}
+
+[data-mode-pane="terminal"] .tx-spark > svg,
+[data-mode-pane="terminal"] .tx-spark > canvas {
+  display: block;
+  height: 16px;
+  width: 100%;
+}
+
+[data-mode-pane="terminal"] .tx-spark--pos {
+  color: var(--pos);
+}
+
+[data-mode-pane="terminal"] .tx-spark--neg {
+  color: var(--neg);
+}
+
+[data-mode-pane="terminal"] .tx-spark--flat {
+  color: var(--ink-4);
+}
+
+/* Inside a table cell, give the cell some breathing room so the
+ * sparkline does not push neighbouring numbers around. */
+[data-mode-pane="terminal"] table td .tx-spark {
+  margin: 0 4px;
+}
+
+/* ------------------------------------------------------------
+ * 8.  Active panel — thin orange left-border accent
+ *
+ * Any terminal pane / card with `.is-active` or
+ * [data-active="true"] gets a 2-px orange rule on its left edge.
+ * Use sparingly: at most one active panel per row.
+ * ------------------------------------------------------------ */
+
+[data-mode-pane="terminal"] .tx-panel,
+[data-mode-pane="terminal"] [data-tx-panel] {
+  position: relative;
+  border-left: 2px solid transparent;
+  transition: border-color 120ms linear, background-color 120ms linear;
+}
+
+[data-mode-pane="terminal"] .tx-panel.is-active,
+[data-mode-pane="terminal"] .tx-panel[data-active="true"],
+[data-mode-pane="terminal"] [data-tx-panel].is-active,
+[data-mode-pane="terminal"] [data-tx-panel][data-active="true"] {
+  border-left-color: var(--orange);
+}
+
+[data-mode-pane="terminal"] .tx-panel.is-active > .tx-panel__title,
+[data-mode-pane="terminal"] [data-tx-panel].is-active > .tx-panel__title {
+  color: var(--ink);
+}
+
+/* ------------------------------------------------------------
+ * 9.  Sub-tab pills  (compact, sharper corners)
+ *
+ * Tighter sibling of the global tab style — only inside terminal.
+ * ------------------------------------------------------------ */
+
+[data-mode-pane="terminal"] .tx-subtabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  background: var(--bg-alt);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+}
+
+[data-mode-pane="terminal"] .tx-subtabs__pill,
+[data-mode-pane="terminal"] .tx-subtabs button {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: 0;
+  background: transparent;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: color 80ms linear, background-color 80ms linear;
+  line-height: 1.2;
+}
+
+[data-mode-pane="terminal"] .tx-subtabs__pill:hover,
+[data-mode-pane="terminal"] .tx-subtabs button:hover {
+  color: var(--ink);
+  background: var(--surface);
+}
+
+[data-mode-pane="terminal"] .tx-subtabs__pill.is-active,
+[data-mode-pane="terminal"] .tx-subtabs__pill[aria-selected="true"],
+[data-mode-pane="terminal"] .tx-subtabs button.is-active,
+[data-mode-pane="terminal"] .tx-subtabs button[aria-selected="true"] {
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: 0 0 0 1px var(--hairline-strong), 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+/* ------------------------------------------------------------
+ * 10.  Charts — hide gridlines until hover
+ *
+ * Plotly renders gridlines as <path class="ygrid"> / "xgrid".
+ * Default to transparent; reveal at low opacity on hover. We
+ * scope to a `.tx-chart` wrapper so non-terminal charts are
+ * untouched.
+ * ------------------------------------------------------------ */
+
+[data-mode-pane="terminal"] .tx-chart .gridlayer .xgrid,
+[data-mode-pane="terminal"] .tx-chart .gridlayer .ygrid {
+  stroke: var(--hairline);
+  stroke-opacity: 0;
+  transition: stroke-opacity 140ms linear;
+}
+
+[data-mode-pane="terminal"] .tx-chart:hover .gridlayer .xgrid,
+[data-mode-pane="terminal"] .tx-chart:hover .gridlayer .ygrid,
+[data-mode-pane="terminal"] .tx-chart:focus-within .gridlayer .xgrid,
+[data-mode-pane="terminal"] .tx-chart:focus-within .gridlayer .ygrid {
+  stroke-opacity: 1;
+}
+
+/* The zero-line and axis baselines remain visible (low opacity). */
+[data-mode-pane="terminal"] .tx-chart .zerolinelayer path {
+  stroke: var(--hairline-strong);
+  stroke-opacity: 0.6;
+}
+
+[data-mode-pane="terminal"] .tx-chart .xaxislayer-above path,
+[data-mode-pane="terminal"] .tx-chart .yaxislayer-above path {
+  stroke: var(--hairline-strong);
+}
+
+/* Axis tick text in mono for that Bloomberg feel. */
+[data-mode-pane="terminal"] .tx-chart .xtick text,
+[data-mode-pane="terminal"] .tx-chart .ytick text {
+  font-family: var(--mono);
+  font-size: 10px;
+  fill: var(--ink-3);
+}
+
+/* ------------------------------------------------------------
+ * 11.  Reduced-motion fallback
+ *
+ * Honour the user's OS preference: zero out the soft transitions
+ * we introduced (hover fades, gridline reveals).
+ * ------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  [data-mode-pane="terminal"] table tbody tr,
+  [data-mode-pane="terminal"] .tx-panel,
+  [data-mode-pane="terminal"] [data-tx-panel],
+  [data-mode-pane="terminal"] .tx-subtabs__pill,
+  [data-mode-pane="terminal"] .tx-subtabs button,
+  [data-mode-pane="terminal"] .tx-chart .gridlayer .xgrid,
+  [data-mode-pane="terminal"] .tx-chart .gridlayer .ygrid {
+    transition: none;
+  }
+}
+
+/* ============================================================
+ * End of terminal-ux-polish.css
+ * ============================================================ */

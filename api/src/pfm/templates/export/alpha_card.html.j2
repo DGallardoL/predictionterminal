@@ -1,0 +1,39 @@
+{% extends "_base.html.j2" %}
+{% block title %}Alpha Card — {{ data.pair_id | default("(unknown)") }}{% endblock %}
+{% block content %}
+  <h1>
+    {{ data.pair_id | default("(unknown alpha)") }}
+    {% if data.tier %}
+      <span class="badge {{ data.tier }}">{{ data.tier }}</span>
+    {% endif %}
+  </h1>
+  {% if data.headline %}
+    <p class="muted">{{ data.headline }}</p>
+  {% endif %}
+
+  <h2>Metrics</h2>
+  <table class="pfm-tbl">
+    <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>OOS Sharpe</td><td>{{ "%.3f" | format(data.oos_sharpe | default(0.0) | float) }}</td></tr>
+      <tr><td>Half-life (days)</td><td>{{ "%.2f" | format(data.half_life_days | default(0.0) | float) }}</td></tr>
+      <tr><td>Beta hedge</td><td>{{ "%.3f" | format(data.beta_hedge | default(0.0) | float) }}</td></tr>
+      <tr><td>ADF p-value</td><td>{{ "%.4f" | format(data.adf_pvalue | default(1.0) | float) }}</td></tr>
+      <tr><td>Permutation p</td><td>{{ "%.4f" | format(data.perm_p | default(1.0) | float) }}</td></tr>
+      <tr><td>Observations</td><td>{{ data.n_obs | default(0) }}</td></tr>
+      <tr><td>Verdict</td><td>{{ data.verdict | default("?") }}</td></tr>
+    </tbody>
+  </table>
+
+  {% if data.caveats %}
+    <h2>Caveats</h2>
+    <ul class="small">
+      {% for c in data.caveats %}<li>{{ c }}</li>{% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if data.notes %}
+    <h2>Notes</h2>
+    <p>{{ data.notes }}</p>
+  {% endif %}
+{% endblock %}

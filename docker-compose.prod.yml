@@ -1,0 +1,33 @@
+services:
+  api:
+    restart: always
+    environment:
+      LOG_LEVEL: WARNING
+      ENV: production
+      # SECURITY: refuse to boot if CORS_ORIGINS is unset in prod. Empty would
+      # let the FastAPI default fall through to "*" or a permissive list.
+      # TODO: reconcile with PFM_CORS_ORIGINS read by main.py:1444
+      CORS_ORIGINS: ${CORS_ORIGINS:?CORS_ORIGINS required in production}
+      SENTRY_DSN: ${SENTRY_DSN:-}
+      SLACK_WEBHOOK_URL: ${SLACK_WEBHOOK_URL:-}
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 1G
+
+  web:
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 256M
+
+  redis:
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M

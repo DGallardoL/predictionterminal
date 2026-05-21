@@ -1,0 +1,593 @@
+/* result-pinner.css - pinboard drawer + "Pin this" prompt + compare table.
+ * Mounted by web/js/result-pinner.js (injects DOM on init).
+ * Scoped under .pfm-pin-* classes to avoid bleeding into rest of UI.
+ * Uses existing tokens (--ah-bg, --orange) defensively with fallbacks.
+ */
+
+:root {
+  --pfm-pin-bg: var(--ah-bg, #0a0a0c);
+  --pfm-pin-surface: var(--ah-surface, #131318);
+  --pfm-pin-surface-2: #1a1a20;
+  --pfm-pin-border: rgba(255, 255, 255, 0.08);
+  --pfm-pin-border-strong: rgba(255, 255, 255, 0.18);
+  --pfm-pin-text: #e8e8ec;
+  --pfm-pin-text-dim: rgba(232, 232, 236, 0.6);
+  --pfm-pin-text-mute: rgba(232, 232, 236, 0.4);
+  --pfm-pin-orange: var(--orange, #ff8a3d);
+  --pfm-pin-orange-soft: rgba(255, 138, 61, 0.16);
+  --pfm-pin-blue: #5aa6ff;
+  --pfm-pin-green: #4cc38a;
+  --pfm-pin-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+  --pfm-pin-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  --pfm-pin-z: 9000;
+}
+
+/* =====================================================================
+ * Drawer shell (240px slide-in from right)
+ * ===================================================================== */
+.pfm-pin-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.32);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+  z-index: calc(var(--pfm-pin-z) - 1);
+}
+.pfm-pin-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.pfm-pin-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 240px;
+  height: 100vh;
+  background: var(--pfm-pin-bg);
+  border-left: 1px solid var(--pfm-pin-border-strong);
+  box-shadow: var(--pfm-pin-shadow);
+  transform: translateX(100%);
+  transition: transform 220ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  z-index: var(--pfm-pin-z);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, sans-serif;
+  color: var(--pfm-pin-text);
+}
+.pfm-pin-drawer.is-open {
+  transform: translateX(0);
+}
+
+/* Widen when compare card is visible */
+.pfm-pin-drawer:has(.pfm-pin-compare:not([hidden])) {
+  width: 480px;
+}
+
+/* Head */
+.pfm-pin-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--pfm-pin-border);
+  flex-shrink: 0;
+}
+.pfm-pin-head h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--pfm-pin-text);
+}
+.pfm-pin-head-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.pfm-pin-btn-mini {
+  background: transparent;
+  color: var(--pfm-pin-text-dim);
+  border: 1px solid var(--pfm-pin-border);
+  border-radius: 4px;
+  padding: 3px 8px;
+  font: 500 11px ui-sans-serif, system-ui, sans-serif;
+  cursor: pointer;
+  transition: background 120ms, color 120ms, border-color 120ms;
+}
+.pfm-pin-btn-mini:hover {
+  color: var(--pfm-pin-text);
+  border-color: var(--pfm-pin-border-strong);
+  background: var(--pfm-pin-surface);
+}
+.pfm-pin-btn-close {
+  background: transparent;
+  color: var(--pfm-pin-text-dim);
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  padding: 2px 6px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.pfm-pin-btn-close:hover {
+  background: var(--pfm-pin-surface);
+  color: var(--pfm-pin-text);
+}
+
+/* Body splits into list + compare */
+.pfm-pin-body {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  min-height: 0;
+}
+.pfm-pin-list-wrap {
+  width: 240px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border-right: 1px solid var(--pfm-pin-border);
+}
+.pfm-pin-drawer:not(:has(.pfm-pin-compare:not([hidden]))) .pfm-pin-list-wrap {
+  width: 100%;
+  border-right: none;
+}
+
+.pfm-pin-meta {
+  padding: 8px 14px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 10.5px;
+  color: var(--pfm-pin-text-mute);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.pfm-pin-count {
+  font-family: var(--pfm-pin-mono);
+  color: var(--pfm-pin-text-dim);
+}
+.pfm-pin-hint {
+  font-size: 10px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--pfm-pin-text-mute);
+}
+
+/* =====================================================================
+ * Pin list
+ * ===================================================================== */
+.pfm-pin-list {
+  list-style: none;
+  padding: 0 8px 12px;
+  margin: 0;
+  overflow-y: auto;
+  flex: 1;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pfm-pin-border-strong) transparent;
+}
+.pfm-pin-list::-webkit-scrollbar {
+  width: 6px;
+}
+.pfm-pin-list::-webkit-scrollbar-thumb {
+  background: var(--pfm-pin-border-strong);
+  border-radius: 3px;
+}
+.pfm-pin-empty {
+  padding: 16px 8px;
+  color: var(--pfm-pin-text-mute);
+  font-size: 11.5px;
+  text-align: center;
+  font-style: italic;
+}
+
+.pfm-pin-item {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  background: var(--pfm-pin-surface);
+  border: 1px solid var(--pfm-pin-border);
+  border-radius: 5px;
+  margin-bottom: 6px;
+  overflow: hidden;
+  transition: border-color 120ms, background 120ms;
+}
+.pfm-pin-item:hover {
+  border-color: var(--pfm-pin-border-strong);
+  background: var(--pfm-pin-surface-2);
+}
+.pfm-pin-item.is-selected {
+  border-color: var(--pfm-pin-orange);
+  background: var(--pfm-pin-orange-soft);
+}
+.pfm-pin-item.slot-a {
+  border-left: 3px solid var(--pfm-pin-blue);
+}
+.pfm-pin-item.slot-b {
+  border-left: 3px solid var(--pfm-pin-orange);
+}
+
+.pfm-pin-select {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: inherit;
+  text-align: left;
+  padding: 7px 8px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
+  column-gap: 8px;
+  row-gap: 2px;
+  align-items: center;
+  font: inherit;
+}
+.pfm-pin-tick {
+  font-family: var(--pfm-pin-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--pfm-pin-text);
+  grid-column: 1;
+  grid-row: 1;
+}
+.pfm-pin-r2 {
+  font-family: var(--pfm-pin-mono);
+  font-size: 10.5px;
+  color: var(--pfm-pin-text-dim);
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+}
+.pfm-pin-date {
+  font-family: var(--pfm-pin-mono);
+  font-size: 10px;
+  color: var(--pfm-pin-text-mute);
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+.pfm-pin-flag {
+  position: absolute;
+  top: 4px;
+  right: 30px;
+  background: var(--pfm-pin-orange);
+  color: #0a0a0c;
+  font: 700 9px/1 var(--pfm-pin-mono);
+  letter-spacing: 0.05em;
+  border-radius: 3px;
+  padding: 2px 5px;
+  pointer-events: none;
+}
+.pfm-pin-item.slot-a .pfm-pin-flag {
+  background: var(--pfm-pin-blue);
+  color: #0a0a0c;
+}
+
+.pfm-pin-note {
+  padding: 0 8px 6px;
+  font-size: 10.5px;
+  color: var(--pfm-pin-text-dim);
+  font-style: italic;
+  border-top: 1px dashed var(--pfm-pin-border);
+  margin-top: -2px;
+  padding-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 220px;
+}
+
+.pfm-pin-menu {
+  display: flex;
+  align-items: flex-start;
+  padding: 4px 4px 0 0;
+}
+.pfm-pin-menu details {
+  position: relative;
+}
+.pfm-pin-menu summary {
+  list-style: none;
+  cursor: pointer;
+  color: var(--pfm-pin-text-mute);
+  font-size: 10px;
+  padding: 4px 6px;
+  border-radius: 3px;
+  user-select: none;
+}
+.pfm-pin-menu summary::-webkit-details-marker { display: none; }
+.pfm-pin-menu summary:hover {
+  color: var(--pfm-pin-text);
+  background: var(--pfm-pin-surface-2);
+}
+.pfm-pin-menu-body {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--pfm-pin-surface-2);
+  border: 1px solid var(--pfm-pin-border-strong);
+  border-radius: 4px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  min-width: 96px;
+  z-index: 10;
+  padding: 3px;
+}
+.pfm-pin-menu-body button {
+  background: transparent;
+  border: none;
+  color: var(--pfm-pin-text);
+  text-align: left;
+  padding: 5px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.pfm-pin-menu-body button:hover {
+  background: var(--pfm-pin-surface);
+  color: var(--pfm-pin-orange);
+}
+
+/* =====================================================================
+ * Compare panel (right half of drawer when active)
+ * ===================================================================== */
+.pfm-pin-compare {
+  flex: 1;
+  padding: 10px 14px 14px;
+  overflow-y: auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pfm-pin-cmp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+.pfm-pin-cmp-head h4 {
+  margin: 0;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pfm-pin-text-dim);
+}
+
+.pfm-pin-cmp-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.pfm-pin-cmp-card {
+  background: var(--pfm-pin-surface);
+  border: 1px solid var(--pfm-pin-border);
+  border-radius: 5px;
+  padding: 8px 10px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto;
+  column-gap: 8px;
+  row-gap: 2px;
+  align-items: baseline;
+}
+.pfm-pin-cmp-card.slot-a {
+  border-top: 2px solid var(--pfm-pin-blue);
+}
+.pfm-pin-cmp-card.slot-b {
+  border-top: 2px solid var(--pfm-pin-orange);
+}
+.pfm-pin-cmp-card .lbl {
+  grid-row: 1 / span 3;
+  grid-column: 1;
+  font: 700 16px var(--pfm-pin-mono);
+  color: var(--pfm-pin-text-mute);
+  align-self: center;
+  padding-right: 6px;
+  border-right: 1px solid var(--pfm-pin-border);
+}
+.pfm-pin-cmp-card.slot-a .lbl { color: var(--pfm-pin-blue); }
+.pfm-pin-cmp-card.slot-b .lbl { color: var(--pfm-pin-orange); }
+.pfm-pin-cmp-card .tk {
+  font: 600 13px var(--pfm-pin-mono);
+  color: var(--pfm-pin-text);
+}
+.pfm-pin-cmp-card .r2 {
+  font: 500 11px var(--pfm-pin-mono);
+  color: var(--pfm-pin-text-dim);
+}
+.pfm-pin-cmp-card .dt {
+  font: 500 10px var(--pfm-pin-mono);
+  color: var(--pfm-pin-text-mute);
+}
+
+.pfm-pin-cmp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--pfm-pin-mono);
+  font-size: 11px;
+}
+.pfm-pin-cmp-table thead th {
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--pfm-pin-border-strong);
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--pfm-pin-text-mute);
+}
+.pfm-pin-cmp-table tbody th {
+  text-align: left;
+  font-weight: 500;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 11.5px;
+  color: var(--pfm-pin-text);
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--pfm-pin-border);
+  white-space: nowrap;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pfm-pin-cmp-table tbody td {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--pfm-pin-border);
+  vertical-align: top;
+}
+.pfm-pin-cmp-table tbody td .b {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--pfm-pin-text);
+  min-width: 48px;
+}
+.pfm-pin-cmp-table tbody td .se {
+  display: inline-block;
+  color: var(--pfm-pin-text-dim);
+  margin-left: 4px;
+}
+.pfm-pin-cmp-table tbody td .p {
+  display: block;
+  color: var(--pfm-pin-text-mute);
+  font-size: 10px;
+  margin-top: 1px;
+}
+.pfm-pin-cmp-table tbody td .muted {
+  color: var(--pfm-pin-text-mute);
+}
+
+.pfm-pin-cmp-row.is-sig td .b,
+.pfm-pin-cmp-row.is-sig td .p,
+.pfm-pin-cmp-row.is-sig th {
+  color: var(--pfm-pin-orange);
+}
+.pfm-pin-cmp-row.is-sig {
+  background: var(--pfm-pin-orange-soft);
+}
+.pfm-pin-cmp-row.is-sig td .se {
+  color: rgba(255, 138, 61, 0.7);
+}
+
+.pfm-pin-cmp-legend {
+  margin: 0;
+  font-size: 10.5px;
+  color: var(--pfm-pin-text-mute);
+  font-style: italic;
+}
+.pfm-pin-cmp-legend .lg-sig {
+  color: var(--pfm-pin-orange);
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* =====================================================================
+ * "Pin this" floating prompt (after fit-complete, 8s TTL)
+ * ===================================================================== */
+.pfm-pin-prompt {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--pfm-pin-orange);
+  color: #0a0a0c;
+  border: none;
+  border-radius: 22px;
+  padding: 9px 16px 9px 12px;
+  font: 600 12.5px ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(255, 138, 61, 0.35), 0 2px 6px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 200ms ease, transform 200ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  z-index: calc(var(--pfm-pin-z) + 1);
+}
+.pfm-pin-prompt.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  animation: pfm-pin-pulse 1.6s ease-in-out 2;
+}
+.pfm-pin-prompt:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 10px 28px rgba(255, 138, 61, 0.45), 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+.pfm-pin-prompt-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  font-size: 13px;
+}
+@keyframes pfm-pin-pulse {
+  0%, 100% { box-shadow: 0 8px 24px rgba(255, 138, 61, 0.35), 0 2px 6px rgba(0, 0, 0, 0.4); }
+  50% { box-shadow: 0 8px 32px rgba(255, 138, 61, 0.6), 0 2px 6px rgba(0, 0, 0, 0.4); }
+}
+
+/* =====================================================================
+ * Toast
+ * ===================================================================== */
+.pfm-pin-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translate(-50%, 12px);
+  background: var(--pfm-pin-surface-2);
+  border: 1px solid var(--pfm-pin-border-strong);
+  color: var(--pfm-pin-text);
+  font: 500 12px ui-sans-serif, system-ui, sans-serif;
+  padding: 8px 14px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 180ms ease;
+  z-index: calc(var(--pfm-pin-z) + 2);
+  box-shadow: var(--pfm-pin-shadow);
+}
+.pfm-pin-toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* =====================================================================
+ * Reduced motion
+ * ===================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .pfm-pin-drawer,
+  .pfm-pin-backdrop,
+  .pfm-pin-prompt,
+  .pfm-pin-toast {
+    transition: none;
+  }
+  .pfm-pin-prompt.is-visible {
+    animation: none;
+  }
+}
+
+/* =====================================================================
+ * Narrow screens - drawer becomes full-width when compare is active
+ * ===================================================================== */
+@media (max-width: 560px) {
+  .pfm-pin-drawer,
+  .pfm-pin-drawer:has(.pfm-pin-compare:not([hidden])) {
+    width: 100vw;
+  }
+  .pfm-pin-body {
+    flex-direction: column;
+  }
+  .pfm-pin-list-wrap {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--pfm-pin-border);
+    max-height: 40vh;
+  }
+}

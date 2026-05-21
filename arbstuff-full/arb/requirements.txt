@@ -1,0 +1,16 @@
+# --- core engine ---
+requests
+python-dotenv
+cryptography
+websockets
+
+# --- exchange clients ---
+py-clob-client
+web3
+
+# --- Flask SSE bridge (review_app.py) ---
+flask
+flask-cors
+
+# --- optional alerts (used if env vars are set) ---
+twilio

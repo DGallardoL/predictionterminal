@@ -1,0 +1,315 @@
+/* ============================================================
+ * activity-log.css  (W12-37, wave-12)
+ *
+ * Right-side slide-in drawer showing the last 20 user actions
+ * tracked by web/js/activity-log.js. Hairline-row aesthetic,
+ * mono timestamps, color-coded type icons. Persists state via
+ * pfm:activity:v1 (capped at 50 entries).
+ *
+ * Tokens consumed (from tokens.css):
+ *   --bg, --surface, --surface-2, --ink, --ink-2, --ink-3,
+ *   --ink-4, --hairline, --hairline-strong, --orange, --pos,
+ *   --neg, --warn, --info, --sans, --mono, --sp-*, --r-*
+ *
+ * Scope: SOLE owner of `.pfm-activity-*` selectors. Does not
+ * redefine root tokens.
+ * ============================================================ */
+
+/* ---- Toggle (FAB-style pill anchored bottom-right) ---- */
+.pfm-activity-toggle {
+  position: fixed;
+  right: var(--sp-4, 16px);
+  bottom: var(--sp-4, 16px);
+  z-index: 9998;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 12px;
+  font: 500 12px/1 var(--sans);
+  color: var(--ink-2);
+  background: var(--surface);
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--r-pill, 999px);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease, color 120ms ease;
+}
+.pfm-activity-toggle:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+.pfm-activity-toggle__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
+}
+.pfm-activity-toggle__count {
+  font: 600 11px/1 var(--mono);
+  color: var(--ink-3);
+}
+
+/* ---- Backdrop ---- */
+.pfm-activity-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.32);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+  z-index: 9998;
+}
+.pfm-activity-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---- Drawer ---- */
+.pfm-activity-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 320px;
+  max-width: 90vw;
+  background: var(--surface);
+  border-left: 1px solid var(--hairline-strong);
+  box-shadow: -8px 0 28px rgba(15, 23, 42, 0.10);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: 9999;
+  font-family: var(--sans);
+  color: var(--ink);
+}
+.pfm-activity-drawer.is-open {
+  transform: translateX(0);
+}
+
+/* ---- Header ---- */
+.pfm-activity-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-4, 16px) var(--sp-4, 16px) var(--sp-3, 12px);
+  border-bottom: 1px solid var(--hairline);
+}
+.pfm-activity-title {
+  font: 600 13px/1.2 var(--sans);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0;
+}
+.pfm-activity-subtitle {
+  font: 400 11px/1.2 var(--mono);
+  color: var(--ink-3);
+  margin-top: 2px;
+}
+.pfm-activity-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.pfm-activity-btn {
+  background: transparent;
+  border: 1px solid var(--hairline);
+  color: var(--ink-2);
+  font: 500 11px/1 var(--sans);
+  padding: 5px 9px;
+  border-radius: var(--r-2, 6px);
+  cursor: pointer;
+  transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+.pfm-activity-btn:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+  border-color: var(--hairline-strong);
+}
+.pfm-activity-btn--close {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* ---- List ---- */
+.pfm-activity-list {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.pfm-activity-list::-webkit-scrollbar {
+  width: 6px;
+}
+.pfm-activity-list::-webkit-scrollbar-thumb {
+  background: var(--hairline-strong);
+  border-radius: 3px;
+}
+
+/* ---- Row ---- */
+.pfm-activity-row {
+  display: grid;
+  grid-template-columns: 24px 56px 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--hairline);
+  cursor: default;
+  position: relative;
+  transition: background 120ms ease;
+}
+.pfm-activity-row[data-replayable="true"] {
+  cursor: pointer;
+}
+.pfm-activity-row:hover {
+  background: var(--surface-2);
+}
+.pfm-activity-row:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: -2px;
+}
+
+.pfm-activity-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--r-2, 6px);
+  font: 600 11px/1 var(--mono);
+  color: #fff;
+  background: var(--ink-3);
+  flex-shrink: 0;
+}
+.pfm-activity-icon[data-type="mode"]      { background: var(--orange); }
+.pfm-activity-icon[data-type="fit"]       { background: var(--info); }
+.pfm-activity-icon[data-type="factor"]    { background: var(--pos); }
+.pfm-activity-icon[data-type="factor-remove"] { background: var(--neg); }
+.pfm-activity-icon[data-type="pin"]       { background: var(--warn); }
+.pfm-activity-icon[data-type="theme"]     { background: #6366f1; }
+.pfm-activity-icon[data-type="cmdk"]      { background: #0ea5e9; }
+.pfm-activity-icon[data-type="sort"]      { background: #8b5cf6; }
+.pfm-activity-icon[data-type="filter"]    { background: #14b8a6; }
+
+.pfm-activity-time {
+  font: 500 10px/1.2 var(--mono);
+  color: var(--ink-3);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.pfm-activity-label {
+  font: 500 12px/1.3 var(--sans);
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pfm-activity-replay {
+  font: 500 10px/1 var(--sans);
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0;
+  transition: opacity 120ms ease;
+}
+.pfm-activity-row[data-replayable="true"]:hover .pfm-activity-replay {
+  opacity: 1;
+}
+
+/* ---- Detail preview tooltip ---- */
+.pfm-activity-detail {
+  display: none;
+  position: absolute;
+  right: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 280px;
+  padding: 8px 10px;
+  background: var(--ink);
+  color: var(--surface);
+  font: 400 11px/1.4 var(--mono);
+  border-radius: var(--r-2, 6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  white-space: pre-wrap;
+  word-break: break-word;
+  z-index: 10000;
+  pointer-events: none;
+}
+.pfm-activity-row:hover .pfm-activity-detail {
+  display: block;
+}
+
+/* ---- Empty state ---- */
+.pfm-activity-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  padding: var(--sp-8, 32px);
+  color: var(--ink-3);
+  text-align: center;
+}
+.pfm-activity-empty__title {
+  font: 500 13px/1.4 var(--sans);
+  color: var(--ink-2);
+  margin: 0 0 4px;
+}
+.pfm-activity-empty__hint {
+  font: 400 11px/1.4 var(--sans);
+  color: var(--ink-3);
+  margin: 0;
+}
+
+/* ---- Footer ---- */
+.pfm-activity-footer {
+  padding: 10px 14px;
+  border-top: 1px solid var(--hairline);
+  font: 400 10px/1.4 var(--mono);
+  color: var(--ink-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+  .pfm-activity-drawer {
+    width: 100vw;
+    max-width: 100vw;
+  }
+  .pfm-activity-row {
+    grid-template-columns: 22px 50px 1fr auto;
+    padding: 9px 12px;
+  }
+  .pfm-activity-detail {
+    display: none !important;
+  }
+}
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .pfm-activity-drawer,
+  .pfm-activity-backdrop,
+  .pfm-activity-toggle,
+  .pfm-activity-btn {
+    transition: none !important;
+  }
+}
+
+/* ============================================================
+ * End of activity-log.css
+ * ============================================================ */

@@ -1,0 +1,51 @@
+name: Deploy to Fly.io
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+
+jobs:
+  # Gate: run the test suite first so a green CI is a deploy precondition.
+  # Skip on tag pushes (we assume the originating branch commit was tested).
+  test:
+    if: github.ref_type == 'branch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        working-directory: api
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e '.[dev]'
+      - name: Lint (ruff)
+        working-directory: api
+        run: ruff check src/pfm
+      - name: Run pytest with coverage gate
+        working-directory: api
+        run: PYTHONPATH=src pytest --cov=pfm --cov-report=term-missing --cov-fail-under=70 -q --no-header
+        env:
+          REDIS_URL: ""   # tests use fakeredis when REDIS_URL is unset/empty
+
+  deploy:
+    needs: test
+    if: |
+      always() && (needs.test.result == 'success' || needs.test.result == 'skipped')
+    runs-on: ubuntu-latest
+    concurrency: deploy-group
+    steps:
+      - uses: actions/checkout@v4
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - name: Pass git SHA to Sentry
+        id: meta
+        run: echo "sha=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Deploy
+        run: flyctl deploy --remote-only --build-arg GIT_SHA=${{ steps.meta.outputs.sha }}
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

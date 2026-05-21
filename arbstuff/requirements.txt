@@ -1,0 +1,6 @@
+requests
+python-dotenv
+cryptography
+py-clob-client
+web3
+twilio

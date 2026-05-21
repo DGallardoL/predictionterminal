@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "vpin_bulk_now": 0.2674948243403663,
+  "vpin_bulk_p50": 0.45300611111719014,
+  "vpin_bulk_p90": 0.5294050348393984,
+  "vpin_bulk_max": 0.5613508529318745,
+  "level": "low",
+  "warn_threshold": 0.45,
+  "halt_threshold": 0.5,
+  "n_buckets": 157,
+  "rolling_window": 50,
+  "as_of": "2026-05-20T02:28:57Z",
+  "symbol": "BTCUSDT",
+  "interval": "1m"
+}

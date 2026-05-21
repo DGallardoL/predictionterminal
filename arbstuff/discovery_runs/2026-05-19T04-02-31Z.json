@@ -1,0 +1,19 @@
+{
+  "ts": "2026-05-19T04:02:31Z",
+  "elapsed_s": 293.7,
+  "k_total": 7415,
+  "k_fresh": 7415,
+  "p_total": 9765,
+  "p_fresh": 6056,
+  "matches_seen": 108,
+  "accepted_above_floor": 5,
+  "skipped_below_floor": 103,
+  "already_in_config": 5,
+  "truly_new_added": 0,
+  "by_tier": {
+    "HIGH": 0,
+    "MED": 0,
+    "LOW": 0
+  },
+  "config_size": 799
+}

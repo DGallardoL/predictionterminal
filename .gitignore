@@ -1,0 +1,77 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+*.swp
+*.swo
+
+# Claude Code local session/task state (not project source)
+.claude/
+
+# Multi-session coordination scratch (internal process logs, not source)
+.coordination/
+**/.coordination/
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Docker / build artefacts
+*.pid
+*.log
+
+# Data caches (local runs may write here)
+data/
+.cache/
+
+# Mac specific binary attachments not part of the source
+*.HEIC
+
+# Backup files (e.g. factors.yml.bak.waveN) — never check these in
+*.bak
+*.bak.*
+
+# SQLite scratch DBs — alerts/persisted state used for local runs
+*.db
+/tmp/pfm_alerts.db
+
+# Redis snapshots from local Docker / standalone runs
+*.rdb
+
+# Lock files (engine keep-alive, discovery daemon, etc.)
+*.lock
+
+# Arb engine / discovery RUNTIME state — regenerated at runtime, never source.
+# (dashboard_state.json changes every scan; the store/checkpoint are per-deploy.)
+**/arbstuff/dashboard_state.json
+**/arbstuff/crawl_state.json
+**/arbstuff/confirmed_arbs.json
+arbstuff/dashboard_state.json
+arbstuff/crawl_state.json
+arbstuff/confirmed_arbs.json
+dump.rdb

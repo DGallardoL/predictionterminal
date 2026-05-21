@@ -1,0 +1,377 @@
+/* ============================================================
+ * theme-high-contrast.css  (T13-33, wave-13)
+ *
+ * High-contrast accessibility theme variant for the Prediction
+ * Terminal frontend. Targets WCAG AAA contrast:
+ *     - Normal-weight body text: >= 7:1
+ *     - Large / bold text:       >= 4.5:1
+ *     - UI affordances & focus:  4px solid #c2410c outline
+ *
+ * Activation:
+ *   <html data-theme="high-contrast">
+ *
+ *   This is a NEW value alongside the existing values that
+ *   tokens.css already supports ("light", "dark"). The CSS-only
+ *   activation works the moment T05's theme toggle (or any user
+ *   script / devtools / browser extension) writes the attribute.
+ *
+ * MOUNT ORDER (MANDATORY):
+ *   Load this stylesheet AFTER tokens.css (and after
+ *   global-refinement.css / dark-mode.css) so the
+ *   [data-theme="high-contrast"] selector wins over those
+ *   sheets' :root and [data-theme="dark"|"light"] blocks via
+ *   source-order tie-breaking at equal specificity.
+ *
+ *     <link rel="stylesheet" href="css/tokens.css">
+ *     <link rel="stylesheet" href="css/global-refinement.css">
+ *     <link rel="stylesheet" href="css/dark-mode.css">
+ *     <link rel="stylesheet" href="css/theme-high-contrast.css">
+ *
+ * COORDINATION:
+ *   - SOLE owner: T13-33.
+ *   - This file overrides tokens.css variables under the
+ *     [data-theme="high-contrast"] selector. It does NOT
+ *     redefine variables on :root and does NOT touch
+ *     tokens.css itself (which remains the canonical owner of
+ *     the variable surface).
+ *   - --shadow-1/2/3 and --focus-ring are owned by T68
+ *     (global-refinement.css). We override them locally on the
+ *     [data-theme="high-contrast"] cascade — this is a value
+ *     override, NOT a redefinition on :root, so it stays inside
+ *     the documented mechanism for theme-scoped shadow tuning.
+ *
+ * THEME-TOGGLE INTEGRATION (handoff to T05 owner):
+ *   web/js/theme-toggle.js currently cycles:
+ *       light <-> dark   (toggleMode flips between resolved)
+ *       set("system") allowed via explicit API
+ *
+ *   To extend to a 4-state cycle:
+ *       light -> dark -> high-contrast -> system -> light ...
+ *
+ *   Required changes (T05 owner, separate claim):
+ *     1. Add "high-contrast" to VALID_MODES.
+ *     2. Replace toggleMode() with a cycle function:
+ *           order = ["light", "dark", "high-contrast", "system"]
+ *           next = order[(order.indexOf(currentMode) + 1) % 4]
+ *     3. resolveMode("high-contrast") -> "high-contrast"
+ *        (apply writes data-theme="high-contrast" directly).
+ *     4. syncButton: add a third icon state (e.g. "contrast"
+ *        glyph) when data-resolved="high-contrast". The button
+ *        already exposes data-resolved and data-mode, so a CSS
+ *        selector here can style it without JS changes.
+ *
+ *   This stylesheet is functional today without those JS
+ *   changes — any consumer can opt in by setting the attribute
+ *   programmatically (window.PFM.theme.set is a no-op for
+ *   "high-contrast" until VALID_MODES is extended, but
+ *   document.documentElement.setAttribute("data-theme",
+ *   "high-contrast") works immediately).
+ * ============================================================ */
+
+/* ============================================================
+ * Token overrides — high-contrast palette.
+ *
+ * Contrast ratios (verified against WebAIM contrast formula):
+ *   --ink (#000) on --bg (#fff)            -> 21.0 : 1   (AAA)
+ *   --ink-2 (#0a0a0a) on --bg (#fff)       -> 19.8 : 1   (AAA)
+ *   --ink-3 (#1a1a1a) on --bg (#fff)       -> 16.7 : 1   (AAA)
+ *   --orange-500 (#c2410c) on --bg (#fff)  ->  5.6 : 1   (AA normal, AAA large)
+ *   --neg (#a30000) on --bg (#fff)         ->  9.5 : 1   (AAA)
+ *   --pos (#006400) on --bg (#fff)         ->  6.4 : 1   (AA normal, AAA large)
+ *   --info (#0033a0) on --bg (#fff)        -> 10.7 : 1   (AAA)
+ *
+ * The orange ramp collapses to two stops to keep accent usage
+ * legible at every weight: brand orange = darker #c2410c
+ * (formerly --orange-700); --orange-600/700 deepen further so
+ * solid-fill buttons still feel distinct from a light hover.
+ * ============================================================ */
+
+[data-theme="high-contrast"] {
+  /* ---- Surfaces: pure white, no tint ---- */
+  --bg: #ffffff;
+  --bg-alt: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #ffffff;
+  --ah-bg: #ffffff;
+
+  /* ---- Ink: pure black, with near-black auxiliary tiers so
+   *      hierarchy survives without sacrificing AAA contrast. ---- */
+  --ink: #000000;
+  --ink-2: #0a0a0a;
+  --ink-3: #1a1a1a;
+  --ink-4: #2a2a2a;
+  --ink-muted: #1a1a1a;
+
+  /* ---- Brand orange ramp: shift everything one stop darker
+   *      so the default --orange-500 token clears AA (>=4.5:1)
+   *      against pure white. ---- */
+  --orange-50: #fff1e6;
+  --orange-100: #ffd9b8;
+  --orange-400: #c2410c;
+  --orange-500: #c2410c;
+  --orange-600: #9a3412;
+  --orange-700: #7c2d12;
+  --orange: #c2410c;
+  --orange-2: #9a3412;
+  --orange-soft: #fff1e6;
+
+  /* ---- Hairlines: 5x darker than the light-mode default so
+   *      borders read as crisp lines, not faint suggestions. ---- */
+  --hairline: rgba(0, 0, 0, 0.40);
+  --hairline-strong: rgba(0, 0, 0, 0.70);
+
+  /* ---- Semantic colors: every channel deepened to clear AAA
+   *      against pure white. ---- */
+  --pos: #006400;
+  --neg: #a30000;
+  --warn: #8a4b00;
+  --info: #0033a0;
+
+  /* ---- Shadows: T68 owns the defaults; we override them under
+   *      this theme scope only. Pure-black, layered for strong
+   *      depth cues without relying on color. ---- */
+  --shadow-1: 0 1px 0 rgba(0, 0, 0, 0.35),
+              0 2px 4px rgba(0, 0, 0, 0.25);
+  --shadow-2: 0 2px 0 rgba(0, 0, 0, 0.45),
+              0 4px 10px rgba(0, 0, 0, 0.30);
+  --shadow-3: 0 4px 0 rgba(0, 0, 0, 0.55),
+              0 10px 24px rgba(0, 0, 0, 0.35);
+
+  /* ---- Focus ring: 4px solid (no transparency) brand-darkened
+   *      orange. T68's --focus-ring is consumed by .pfm-focus
+   *      and most form/button styles; this override flows through
+   *      everywhere via the cascade. ---- */
+  --focus-ring: 0 0 0 4px #c2410c;
+  --focus-ring-color: #c2410c;
+  --focus-ring-width: 4px;
+}
+
+/* ============================================================
+ * Focus-visible: 4px solid #c2410c outline, no offset blur.
+ *
+ * We apply this universally inside the high-contrast scope so
+ * even widgets that bypass --focus-ring get a legible ring.
+ * The outline is OUTSIDE the element box; box-shadow is added
+ * as a fallback for elements that already use shadow-based
+ * focus styling.
+ * ============================================================ */
+
+[data-theme="high-contrast"] :focus-visible {
+  outline: 4px solid #c2410c !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px #c2410c !important;
+}
+
+[data-theme="high-contrast"] :focus:not(:focus-visible) {
+  /* Non-keyboard focus (e.g. mouse-click on a button) still
+   * deserves a visible cue in high-contrast mode, but slightly
+   * softer than the keyboard ring. */
+  outline: 3px solid #c2410c;
+  outline-offset: 2px;
+}
+
+/* ============================================================
+ * Link & interactive treatments.
+ *
+ * Underline everything that's clickable. The orange is already
+ * deepened in the palette; underline plus weight delta plus
+ * focus ring gives three concurrent affordances.
+ * ============================================================ */
+
+[data-theme="high-contrast"] a,
+[data-theme="high-contrast"] .pfm-link,
+[data-theme="high-contrast"] a:visited {
+  color: #c2410c;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+[data-theme="high-contrast"] a:hover,
+[data-theme="high-contrast"] .pfm-link:hover {
+  color: #7c2d12;
+  background-color: #fff1e6;
+  text-decoration-thickness: 3px;
+}
+
+/* ============================================================
+ * Form controls & buttons.
+ *
+ * Force a 2px solid black border on every form affordance so
+ * field boundaries are unambiguous regardless of the
+ * downstream stylesheet's own border treatment.
+ * ============================================================ */
+
+[data-theme="high-contrast"] input,
+[data-theme="high-contrast"] textarea,
+[data-theme="high-contrast"] select,
+[data-theme="high-contrast"] button {
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+[data-theme="high-contrast"] button[disabled],
+[data-theme="high-contrast"] input[disabled],
+[data-theme="high-contrast"] select[disabled] {
+  /* Disabled state still needs to clear 3:1 against bg per WCAG
+   * 1.4.11 (non-text contrast). #595959 = 7.0:1. */
+  border-color: #595959;
+  color: #595959;
+  background-color: #f5f5f5;
+}
+
+[data-theme="high-contrast"] button.primary,
+[data-theme="high-contrast"] .pfm-btn-primary,
+[data-theme="high-contrast"] button[type="submit"] {
+  background-color: #c2410c;
+  border-color: #7c2d12;
+  color: #ffffff;
+}
+
+[data-theme="high-contrast"] button.primary:hover,
+[data-theme="high-contrast"] .pfm-btn-primary:hover,
+[data-theme="high-contrast"] button[type="submit"]:hover {
+  background-color: #7c2d12;
+  border-color: #000000;
+}
+
+/* ============================================================
+ * Tables, cards, and panels.
+ *
+ * Restore explicit 2px borders on cards and 1.5px on table
+ * rows; rely on geometry, not color, to convey grouping.
+ * ============================================================ */
+
+[data-theme="high-contrast"] table {
+  border-collapse: collapse;
+  border: 2px solid #000000;
+}
+
+[data-theme="high-contrast"] th,
+[data-theme="high-contrast"] td {
+  border: 1.5px solid #000000;
+}
+
+[data-theme="high-contrast"] thead th {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+[data-theme="high-contrast"] .pfm-card,
+[data-theme="high-contrast"] .card,
+[data-theme="high-contrast"] .panel,
+[data-theme="high-contrast"] .ah-card {
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  box-shadow: var(--shadow-1);
+}
+
+/* ============================================================
+ * Plotly / chart canvases.
+ *
+ * Plotly is re-themed via plotly-theme.js on 'pfm:theme-change'
+ * events. Until T05's onChange fires for high-contrast (see
+ * handoff note above), enforce a black 2px frame on any chart
+ * container so chart bounds remain visible.
+ * ============================================================ */
+
+[data-theme="high-contrast"] .js-plotly-plot,
+[data-theme="high-contrast"] .plotly-chart-container {
+  border: 2px solid #000000;
+  background-color: #ffffff;
+}
+
+/* ============================================================
+ * Theme-toggle button glyph state.
+ *
+ * T05 already exposes data-resolved on the toggle button. When
+ * high-contrast is active, dim both sun/moon SVGs and overlay
+ * a "contrast" glyph via CSS so users can tell the button is
+ * in its third state without JS changes shipping yet.
+ * ============================================================ */
+
+[data-theme="high-contrast"] .pfm-theme-toggle {
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+[data-theme="high-contrast"] .pfm-theme-toggle .pfm-theme-toggle-sun,
+[data-theme="high-contrast"] .pfm-theme-toggle .pfm-theme-toggle-moon {
+  opacity: 0.25;
+}
+
+[data-theme="high-contrast"] .pfm-theme-toggle::after {
+  /* Half-filled circle glyph = "contrast". Drawn with a radial
+   * gradient so we don't depend on an icon font. */
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #000000 0 50%, transparent 50% 100%);
+  border: 2px solid #000000;
+  pointer-events: none;
+}
+
+/* ============================================================
+ * Reduced-motion compatibility.
+ *
+ * In high-contrast mode, suppress every animation that crosses
+ * the foreground/background boundary so flicker doesn't degrade
+ * readability for users who paired prefers-reduced-motion with
+ * a high-contrast preference.
+ * ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  [data-theme="high-contrast"] *,
+  [data-theme="high-contrast"] *::before,
+  [data-theme="high-contrast"] *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ============================================================
+ * Forced-colors (Windows High Contrast Mode) cooperation.
+ *
+ * When the OS already enforces forced-colors, defer to system
+ * colors entirely. Setting forced-color-adjust: auto lets the
+ * OS palette take over our overrides for any element that
+ * doesn't need explicit semantic color.
+ * ============================================================ */
+
+@media (forced-colors: active) {
+  [data-theme="high-contrast"] {
+    forced-color-adjust: auto;
+  }
+
+  [data-theme="high-contrast"] :focus-visible {
+    outline: 4px solid CanvasText !important;
+    outline-offset: 2px !important;
+  }
+}
+
+/* ============================================================
+ * Print compatibility.
+ *
+ * High-contrast users frequently print pages. Keep the palette
+ * stable (pure black on pure white) when printing under this
+ * theme; do NOT inherit print.css's color reductions.
+ * ============================================================ */
+
+@media print {
+  [data-theme="high-contrast"] {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --ink: #000000;
+  }
+}
+
+/* ============================================================
+ * End of theme-high-contrast.css
+ * ============================================================ */

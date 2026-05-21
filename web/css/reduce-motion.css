@@ -1,0 +1,313 @@
+/* ============================================================
+ * reduce-motion.css — Exhaustive prefers-reduced-motion overrides
+ * ------------------------------------------------------------
+ * W13-34. Companion to global-refinement.css §10 (which does a
+ * universal `*` zero-out). This file is the EXHAUSTIVE pass:
+ *
+ *   - Per-property transition kills (NOT just the shorthand,
+ *     so component-level `transition-property` lines still die)
+ *   - Plotly transition hook: any element marked with
+ *     `[data-plotly-no-transition]` gets all chart animations
+ *     stripped (Plotly listens to this via its own config flag,
+ *     and we belt-and-brace it with CSS too).
+ *   - Cube transforms, slide-in modals, fade-in toasts:
+ *     replaced with instant render (no fly-in).
+ *   - Pulse indicators (live dots): replaced with static
+ *     indicator (solid fill + outline ring, no scale pulse).
+ *   - Auto-rotate hero / carousel / marquee: paused.
+ *   - Particle / sparkle / confetti effects: hidden.
+ *   - Loading skeletons: shimmer slowed dramatically (8s) so
+ *     vestibular users still see "something loading" without
+ *     the flicker that triggers issues.
+ *
+ * Specificity strategy: use `!important` only inside the media
+ * query, and use specific-property names where possible so this
+ * file doesn't clobber legitimate JS-driven inline transitions
+ * outside the media block.
+ * ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  /* ----------------------------------------------------------
+   * 1) Per-property transition kills.
+   * The universal `*` selector in global-refinement.css handles
+   * the shorthand, but some components set individual properties
+   * (`transition-property: transform;` etc.) which need explicit
+   * neutralisation so that subsequent `transition-duration` calls
+   * from JS can't re-animate.
+   * ---------------------------------------------------------- */
+  *,
+  *::before,
+  *::after {
+    transition-property: none !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    transition-timing-function: linear !important;
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    animation-timing-function: linear !important;
+  }
+
+  /* ----------------------------------------------------------
+   * 2) Smooth scroll — kill, including JS-toggled containers.
+   * ---------------------------------------------------------- */
+  html,
+  body,
+  [data-smooth-scroll],
+  .scroll-container,
+  .terminal-scroll,
+  .alpha-hub-scroll {
+    scroll-behavior: auto !important;
+  }
+
+  /* ----------------------------------------------------------
+   * 3) Plotly chart transitions.
+   *
+   * Plotly animations are driven by its JS, but we mark
+   * containers with `data-plotly-no-transition` so the chart
+   * factory (web/plotly-theme.js) can read the attribute and
+   * pass `{transition: {duration: 0}}` to plot.update().
+   *
+   * This CSS belt-and-braces it: even if Plotly tries to inject
+   * an SVG transform transition, we strip it.
+   * ---------------------------------------------------------- */
+  [data-plotly-no-transition],
+  [data-plotly-no-transition] .plotly,
+  [data-plotly-no-transition] .plot-container,
+  [data-plotly-no-transition] svg * {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* Plotly's default class names — strip the spinner pulse too */
+  .plotly .modebar-btn,
+  .plotly .draglayer .nsewdrag,
+  .plotly .gl-container,
+  .js-plotly-plot .plotly .modebar {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* ----------------------------------------------------------
+   * 4) Cube transforms, 3D rotators.
+   * Force final-state with no rotation transition.
+   * ---------------------------------------------------------- */
+  .cube,
+  .cube-face,
+  [data-rotate-3d],
+  .terminal-cube,
+  .alpha-cube {
+    transform: none !important;
+    transform-style: flat !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* ----------------------------------------------------------
+   * 5) Slide-in modals, drawers, sheets, dialogs.
+   * Render at final position instantly. Backdrop fade -> instant.
+   * ---------------------------------------------------------- */
+  .modal,
+  .modal-overlay,
+  .modal-backdrop,
+  .drawer,
+  .slide-drawer,
+  .sheet,
+  .mobile-sheet,
+  .strategies-detail-modal,
+  .arb-settings-drawer,
+  dialog,
+  [role="dialog"] {
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .modal-backdrop,
+  .modal-overlay {
+    /* Snap to final opacity — no fade */
+    opacity: 1 !important;
+  }
+
+  /* ----------------------------------------------------------
+   * 6) Fade-in toasts, snackbars, alerts.
+   * Show fully opaque instantly; lifecycle (auto-dismiss timer)
+   * is JS-driven and unaffected by this CSS.
+   * ---------------------------------------------------------- */
+  .toast,
+  .snackbar,
+  .results-toast,
+  .alert-toast,
+  .notification,
+  [data-toast] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* ----------------------------------------------------------
+   * 7) Pulse indicators (live dots, connection status).
+   * The classic scale(1) -> scale(1.4) pulse is replaced with a
+   * static solid dot + an outline ring so it still reads as
+   * "live" without movement.
+   * ---------------------------------------------------------- */
+  .pulse,
+  .live-dot,
+  .status-pulse,
+  .connection-pulse,
+  .arb-status-pulse,
+  [data-pulse],
+  [data-live-indicator] {
+    animation: none !important;
+    transform: none !important;
+    /* Static "alive" look: filled core + 2px outline ring */
+    box-shadow: 0 0 0 2px rgba(0, 200, 120, 0.35) !important;
+    background-color: rgb(0, 200, 120) !important;
+  }
+
+  /* Red "stale" or "error" pulse variant */
+  .pulse--error,
+  .live-dot--stale,
+  [data-pulse="error"] {
+    box-shadow: 0 0 0 2px rgba(220, 60, 60, 0.35) !important;
+    background-color: rgb(220, 60, 60) !important;
+  }
+
+  /* Orange "warning" pulse variant */
+  .pulse--warning,
+  [data-pulse="warning"] {
+    box-shadow: 0 0 0 2px rgba(230, 150, 40, 0.35) !important;
+    background-color: rgb(230, 150, 40) !important;
+  }
+
+  /* ----------------------------------------------------------
+   * 8) Auto-rotate hero, carousels, marquees.
+   * Pause + show first item statically. JS-driven rotators
+   * should also check `window.matchMedia('(prefers-reduced-motion: reduce)')`
+   * but we hard-stop here for components that don't.
+   * ---------------------------------------------------------- */
+  .hero-rotator,
+  .auto-carousel,
+  .marquee,
+  .ticker-tape,
+  [data-auto-rotate],
+  [data-marquee] {
+    animation: none !important;
+    animation-play-state: paused !important;
+    transform: none !important;
+  }
+
+  /* Keep only the first slide visible for rotators that stack
+   * children with absolute positioning */
+  [data-auto-rotate] > :not(:first-child),
+  .hero-rotator > .slide:not(:first-child),
+  .auto-carousel > .slide:not(:first-child) {
+    display: none !important;
+  }
+
+  /* ----------------------------------------------------------
+   * 9) Particle / sparkle / confetti / firework effects.
+   * Hide outright — these are decorative, never load-bearing.
+   * ---------------------------------------------------------- */
+  .particles,
+  .particle-canvas,
+  .sparkles,
+  .sparkle,
+  .confetti,
+  .confetti-canvas,
+  .firework,
+  [data-particles],
+  [data-decorative-motion] {
+    display: none !important;
+  }
+
+  /* ----------------------------------------------------------
+   * 10) Loading skeletons.
+   * Keep a slow shimmer (8s) so the affordance of "loading"
+   * remains, but at a speed that won't trigger vestibular issues.
+   * Alternative: static gradient — uncomment block A and comment
+   * block B if you want fully static skeletons.
+   * ---------------------------------------------------------- */
+
+  /* --- Block A (static gradient) — DISABLED by default ---
+  .skeleton,
+  .skeleton-line,
+  .skeleton-block,
+  [data-skeleton] {
+    background: linear-gradient(
+      90deg,
+      var(--skeleton-base, #2a2a2a) 0%,
+      var(--skeleton-hi, #3a3a3a) 50%,
+      var(--skeleton-base, #2a2a2a) 100%
+    ) !important;
+    animation: none !important;
+  }
+  */
+
+  /* --- Block B (slow shimmer) — ACTIVE --- */
+  .skeleton,
+  .skeleton-line,
+  .skeleton-block,
+  [data-skeleton] {
+    /* Override the universal `animation-duration: 0.01ms` above
+     * for skeletons only, since 0.01ms would make the shimmer
+     * invisible and the loading state ambiguous. */
+    animation-duration: 8s !important;
+    animation-iteration-count: infinite !important;
+    animation-timing-function: ease-in-out !important;
+  }
+
+  /* ----------------------------------------------------------
+   * 11) Hover-grow / lift transforms.
+   * Some cards (alpha hub tier pills, terminal data cards) use
+   * `:hover { transform: translateY(-2px); }`. Disable the
+   * lift but keep the colour/border feedback intact.
+   * ---------------------------------------------------------- */
+  .alpha-card:hover,
+  .terminal-card:hover,
+  .data-card:hover,
+  .arb-row:hover,
+  [data-hover-lift]:hover {
+    transform: none !important;
+  }
+
+  /* ----------------------------------------------------------
+   * 12) Focus ring transitions.
+   * Focus rings must appear INSTANTLY for keyboard users.
+   * ---------------------------------------------------------- */
+  *:focus,
+  *:focus-visible {
+    transition: none !important;
+    outline-offset: 2px !important;
+  }
+
+  /* ----------------------------------------------------------
+   * 13) Plotly modebar hover icons (orange theme).
+   * Show final state without fade.
+   * ---------------------------------------------------------- */
+  .modebar-btn:hover,
+  .modebar-btn:focus {
+    transition: none !important;
+    opacity: 1 !important;
+  }
+
+  /* ----------------------------------------------------------
+   * 14) CSS-only progress bars (regression-loading.css etc.).
+   * Show the determinate width but kill the indeterminate
+   * sliding animation.
+   * ---------------------------------------------------------- */
+  .progress-bar--indeterminate,
+  .loading-bar--indeterminate,
+  [data-progress="indeterminate"] {
+    animation: none !important;
+    background: var(--progress-indeterminate-bg, #444) !important;
+  }
+
+}
+
+/* ============================================================
+ * End of reduce-motion.css
+ * ============================================================ */

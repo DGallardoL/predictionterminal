@@ -1,0 +1,440 @@
+/* ============================================================
+ * skeletons.css — CSS-only skeleton loader system (T04, wave-10)
+ *
+ * Usage:
+ *   <div class="skel skel--line-md"></div>
+ *   <div class="skel skel--card"></div>
+ *   <div data-skel="row">…</div>           (JS hook)
+ *
+ * Auto-hide: when an ancestor has [data-loaded="true"], every
+ * descendant `.skel` (and `[data-skel]` placeholder) fades out
+ * over 200 ms and stops intercepting pointer events.
+ *
+ * No CSS custom-property is REDEFINED here — only consumed.
+ * Tokens live in web/css/tokens.css. If --bg-alt is missing, a
+ * neutral fallback (#e5e7eb / dark #1f232b) is used.
+ * ============================================================ */
+
+/* ---------- 1. Base shimmer block ------------------------------- */
+
+.skel {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 14px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-alt, #e5e7eb) 25%,
+    rgba(255, 255, 255, 0.6) 50%,
+    var(--bg-alt, #e5e7eb) 75%
+  );
+  background-size: 200% 100%;
+  animation: skelShimmer 1.4s linear infinite;
+  /* Skeletons are decorative; hide from assistive tech.            */
+  /* JS can flip aria-hidden if it ever needs to announce loading.  */
+  color: transparent;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes skelShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ---------- 2. Size variants ----------------------------------- */
+
+.skel--line-sm {
+  height: 10px;
+  width: 60%;
+  border-radius: 3px;
+}
+
+.skel--line-md {
+  height: 14px;
+  width: 80%;
+  border-radius: 3px;
+}
+
+.skel--line-lg {
+  height: 24px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* ---------- 3. Shape / preset variants ------------------------- */
+
+.skel--circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.skel--circle.skel--sm {
+  width: 24px;
+  height: 24px;
+}
+
+.skel--circle.skel--lg {
+  width: 64px;
+  height: 64px;
+}
+
+/* Card preset: header (avatar + title) + 3 stacked lines.          */
+/* The card itself is a static shell — the SHIMMER blocks live as   */
+/* ::before/::after + child pseudo elements via inner spans is too  */
+/* brittle, so we render the four shimmer shapes with stacked       */
+/* radial gradients on a single element.                            */
+.skel--card {
+  width: 100%;
+  height: 140px;
+  border-radius: 10px;
+  padding: 14px 16px;
+  background:
+    /* line 3 - 50% width */
+    linear-gradient(var(--bg-alt, #e5e7eb), var(--bg-alt, #e5e7eb))
+      16px 116px / 35% 10px no-repeat,
+    /* line 2 - 70% width */
+    linear-gradient(var(--bg-alt, #e5e7eb), var(--bg-alt, #e5e7eb))
+      16px 94px / 60% 10px no-repeat,
+    /* line 1 - 90% width */
+    linear-gradient(var(--bg-alt, #e5e7eb), var(--bg-alt, #e5e7eb))
+      16px 72px / 80% 10px no-repeat,
+    /* header title bar */
+    linear-gradient(var(--bg-alt, #e5e7eb), var(--bg-alt, #e5e7eb))
+      62px 22px / 40% 14px no-repeat,
+    /* avatar */
+    radial-gradient(
+        circle at 36px 30px,
+        var(--bg-alt, #e5e7eb) 0 16px,
+        transparent 17px
+      )
+      0 0 / 100% 100% no-repeat,
+    /* shimmer overlay sweeps the whole card */
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.45) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  background-color: var(--card-bg, transparent);
+  background-size:
+    35% 10px,
+    60% 10px,
+    80% 10px,
+    40% 14px,
+    100% 100%,
+    200% 100%;
+  background-position:
+    16px 116px,
+    16px 94px,
+    16px 72px,
+    62px 22px,
+    0 0,
+    200% 0;
+  background-repeat: no-repeat;
+  animation: skelCardShimmer 1.4s linear infinite;
+  /* keep pointer-events disabled so users can't click ghosts */
+  pointer-events: none;
+}
+
+@keyframes skelCardShimmer {
+  0% {
+    background-position:
+      16px 116px,
+      16px 94px,
+      16px 72px,
+      62px 22px,
+      0 0,
+      200% 0;
+  }
+  100% {
+    background-position:
+      16px 116px,
+      16px 94px,
+      16px 72px,
+      62px 22px,
+      0 0,
+      -200% 0;
+  }
+}
+
+/* Row preset (table row pattern): 4 inline blocks, baseline aligned. */
+.skel--row {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: 28px;
+  padding: 6px 0;
+  background: none;
+  animation: none;
+  pointer-events: none;
+}
+
+.skel--row::before,
+.skel--row::after,
+.skel--row > .skel-cell {
+  content: "";
+  height: 12px;
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-alt, #e5e7eb) 25%,
+    rgba(255, 255, 255, 0.6) 50%,
+    var(--bg-alt, #e5e7eb) 75%
+  );
+  background-size: 200% 100%;
+  animation: skelShimmer 1.4s linear infinite;
+}
+
+.skel--row::before {
+  width: 80%;
+}
+
+.skel--row::after {
+  width: 90%;
+  grid-column: 4;
+}
+
+/* Chart preset: 300 px tall canvas placeholder. */
+.skel--chart {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+}
+
+.skel--chart.skel--sm {
+  height: 180px;
+}
+
+.skel--chart.skel--lg {
+  height: 420px;
+}
+
+/* Stat preset: a big number + a small label under it. */
+.skel--stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  height: auto;
+  background: none;
+  animation: none;
+  pointer-events: none;
+}
+
+.skel--stat::before,
+.skel--stat::after {
+  content: "";
+  display: block;
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-alt, #e5e7eb) 25%,
+    rgba(255, 255, 255, 0.6) 50%,
+    var(--bg-alt, #e5e7eb) 75%
+  );
+  background-size: 200% 100%;
+  animation: skelShimmer 1.4s linear infinite;
+}
+
+.skel--stat::before {
+  height: 28px;
+  width: 60%;
+}
+
+.skel--stat::after {
+  height: 10px;
+  width: 35%;
+}
+
+/* ---------- 4. Stack container --------------------------------- */
+
+.skel-stack > * + * {
+  margin-top: 8px;
+}
+
+.skel-stack--lg > * + * {
+  margin-top: 16px;
+}
+
+/* ---------- 5. Attribute-driven placeholders ------------------- */
+
+/* When JS sets data-skel="<variant>" on a container, render a
+ * skeleton via ::before so the existing markup doesn't need to be
+ * wiped.  The real content stays in the DOM but is visually hidden
+ * via opacity until the container flips to data-loaded="true".    */
+[data-skel] {
+  position: relative;
+  min-height: 60px;
+}
+
+[data-skel] > * {
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+}
+
+[data-skel]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    var(--bg-alt, #e5e7eb) 25%,
+    rgba(255, 255, 255, 0.6) 50%,
+    var(--bg-alt, #e5e7eb) 75%
+  );
+  background-size: 200% 100%;
+  animation: skelShimmer 1.4s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+[data-skel="row"]::before {
+  height: 28px;
+  top: auto;
+  bottom: auto;
+}
+
+[data-skel="chart"] {
+  min-height: 300px;
+}
+
+[data-skel="chart"]::before {
+  border-radius: 8px;
+}
+
+[data-skel="card"] {
+  min-height: 140px;
+}
+
+[data-skel="card"]::before {
+  border-radius: 10px;
+}
+
+[data-skel="stat"] {
+  min-height: 48px;
+}
+
+[data-skel="stat"]::before {
+  height: 28px;
+  inset: 0 40% 20px 0;
+}
+
+/* ---------- 6. Auto-hide when parent reports loaded ------------ */
+
+[data-loaded="true"] .skel,
+[data-loaded="true"][data-skel]::before {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease-out;
+}
+
+[data-loaded="true"][data-skel]::before {
+  /* Stop the shimmer once hidden so paint cost drops to zero. */
+  animation: none;
+}
+
+[data-loaded="true"][data-skel] > * {
+  opacity: 1;
+}
+
+/* When the skel element itself is hidden, allow the underlying
+ * content (if any sibling is using the .skel as cover) to come
+ * back. Sibling content is the caller's responsibility.            */
+.skel {
+  transition: opacity 200ms ease-out;
+}
+
+/* ---------- 7. Reduced motion ---------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .skel,
+  .skel--card,
+  .skel--row::before,
+  .skel--row::after,
+  .skel--row > .skel-cell,
+  .skel--stat::before,
+  .skel--stat::after,
+  [data-skel]::before {
+    animation: none;
+    background: var(--bg-alt, #e5e7eb);
+    opacity: 0.6;
+  }
+}
+
+/* ---------- 8. Dark mode --------------------------------------- */
+
+[data-theme="dark"] .skel,
+[data-theme="dark"] .skel--row::before,
+[data-theme="dark"] .skel--row::after,
+[data-theme="dark"] .skel--row > .skel-cell,
+[data-theme="dark"] .skel--stat::before,
+[data-theme="dark"] .skel--stat::after,
+[data-theme="dark"] [data-skel]::before {
+  background: linear-gradient(
+    90deg,
+    var(--bg-alt, #1f232b) 25%,
+    rgba(255, 255, 255, 0.08) 50%,
+    var(--bg-alt, #1f232b) 75%
+  );
+  background-size: 200% 100%;
+}
+
+[data-theme="dark"] .skel--card {
+  background:
+    linear-gradient(var(--bg-alt, #1f232b), var(--bg-alt, #1f232b))
+      16px 116px / 35% 10px no-repeat,
+    linear-gradient(var(--bg-alt, #1f232b), var(--bg-alt, #1f232b))
+      16px 94px / 60% 10px no-repeat,
+    linear-gradient(var(--bg-alt, #1f232b), var(--bg-alt, #1f232b))
+      16px 72px / 80% 10px no-repeat,
+    linear-gradient(var(--bg-alt, #1f232b), var(--bg-alt, #1f232b))
+      62px 22px / 40% 14px no-repeat,
+    radial-gradient(
+        circle at 36px 30px,
+        var(--bg-alt, #1f232b) 0 16px,
+        transparent 17px
+      )
+      0 0 / 100% 100% no-repeat,
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  background-color: var(--card-bg, transparent);
+  background-size:
+    35% 10px,
+    60% 10px,
+    80% 10px,
+    40% 14px,
+    100% 100%,
+    200% 100%;
+  background-position:
+    16px 116px,
+    16px 94px,
+    16px 72px,
+    62px 22px,
+    0 0,
+    200% 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-theme="dark"] .skel,
+  [data-theme="dark"] [data-skel]::before {
+    background: var(--bg-alt, #1f232b);
+  }
+}

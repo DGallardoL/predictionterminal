@@ -1,0 +1,487 @@
+/* ──────────────────────────────────────────────────────────────────────────
+ * regression-clarity.css — T62
+ *
+ * Refines legibility of the Regression result detail panel.
+ * Spec sheet aesthetic: dense JetBrains Mono coefficient rows, VIF heatmap
+ * chips, p-value significance overlay chips, residual diagnostics callout,
+ * R² gauge bar and small-caps section dividers.
+ *
+ * Every selector is scoped under [data-mode-pane="regression"] so nothing
+ * leaks into Terminal or Strategies modes. No JS, no HTML edits.
+ *
+ * Tokens consumed (defined in web/index.html :root):
+ *   --hairline   --hairline-2
+ *   --ink --ink-2 --ink-3 --ink-4
+ *   --bg --bg-alt
+ *   --orange --orange-2 --orange-soft
+ *   --pos --pos-soft --neg --neg-soft
+ *   --mono
+ *
+ * Tokens introduced (locally, never override globals):
+ *   --rc-serif        local serif-display fallback
+ *   --rc-tint-hover   --rc-tint-sig
+ *   --rc-vif-good     --rc-vif-warn      --rc-vif-bad   --rc-vif-crit
+ *   --rc-pass         --rc-flag          --rc-fail
+ * ────────────────────────────────────────────────────────────────────── */
+
+[data-mode-pane="regression"] {
+  --rc-serif: "Instrument Serif", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --rc-tint-hover: rgba(249, 115, 22, 0.04);
+  --rc-tint-sig: rgba(249, 115, 22, 0.10);
+
+  --rc-vif-good: hsl(142 71% 92% / 1);
+  --rc-vif-good-ink: hsl(142 60% 22% / 1);
+  --rc-vif-warn: hsl(45 96% 90% / 1);
+  --rc-vif-warn-ink: hsl(34 90% 26% / 1);
+  --rc-vif-bad: hsl(28 95% 88% / 1);
+  --rc-vif-bad-ink: hsl(20 88% 30% / 1);
+  --rc-vif-crit: hsl(4 86% 88% / 1);
+  --rc-vif-crit-ink: hsl(0 72% 32% / 1);
+
+  --rc-pass: var(--pos);
+  --rc-flag: #d97706;
+  --rc-fail: var(--neg);
+}
+
+/* ── 1 · Spec-sheet coefficient table ─────────────────────────────────── */
+
+[data-mode-pane="regression"] #coef-table,
+[data-mode-pane="regression"] table.coef,
+[data-mode-pane="regression"] #result-coef-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.35;
+  letter-spacing: -0.005em;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "zero" 1;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+[data-mode-pane="regression"] #coef-table thead th,
+[data-mode-pane="regression"] table.coef thead th,
+[data-mode-pane="regression"] #result-coef-table thead th {
+  font-family: var(--rc-serif);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding: 9px 10px 7px;
+  border-bottom: 1px solid var(--hairline-2);
+  background: transparent;
+  text-align: right;
+}
+
+[data-mode-pane="regression"] #coef-table thead th:first-child,
+[data-mode-pane="regression"] table.coef thead th:first-child,
+[data-mode-pane="regression"] #result-coef-table thead th:first-child {
+  text-align: left;
+}
+
+[data-mode-pane="regression"] #coef-table tbody tr,
+[data-mode-pane="regression"] table.coef tbody tr,
+[data-mode-pane="regression"] #result-coef-table tbody tr,
+[data-mode-pane="regression"] .coef-row {
+  transition: background-color 90ms linear;
+}
+
+[data-mode-pane="regression"] #coef-table tbody tr:not(.coef-popover-row),
+[data-mode-pane="regression"] table.coef tbody tr:not(.coef-popover-row),
+[data-mode-pane="regression"] #result-coef-table tbody tr:not(.coef-popover-row),
+[data-mode-pane="regression"] .coef-row {
+  border-bottom: 1px solid var(--hairline);
+}
+
+[data-mode-pane="regression"] #coef-table tbody tr:not(.coef-popover-row):hover,
+[data-mode-pane="regression"] table.coef tbody tr:not(.coef-popover-row):hover,
+[data-mode-pane="regression"] #result-coef-table tbody tr:not(.coef-popover-row):hover,
+[data-mode-pane="regression"] .coef-row:hover {
+  background: var(--rc-tint-hover);
+}
+
+[data-mode-pane="regression"] #coef-table tbody td,
+[data-mode-pane="regression"] table.coef tbody td,
+[data-mode-pane="regression"] #result-coef-table tbody td {
+  padding: 7px 10px;
+  vertical-align: middle;
+  text-align: right;
+  white-space: nowrap;
+  border-bottom: 0;
+}
+
+/* Factor column stays left-aligned and gets a touch more breathing room. */
+[data-mode-pane="regression"] #coef-table tbody td:first-child,
+[data-mode-pane="regression"] table.coef tbody td:first-child,
+[data-mode-pane="regression"] #result-coef-table tbody td:first-child,
+[data-mode-pane="regression"] .coef-row > td:first-child,
+[data-mode-pane="regression"] .coef-row > .factor-cell {
+  text-align: left;
+  white-space: normal;
+  letter-spacing: 0;
+  padding-left: 12px;
+}
+
+/* Numeric cells get a faint tabular tint to read like Bloomberg fields. */
+[data-mode-pane="regression"] #coef-table tbody td.pos,
+[data-mode-pane="regression"] table.coef tbody td.pos {
+  color: var(--pos);
+  font-weight: 600;
+}
+[data-mode-pane="regression"] #coef-table tbody td.neg,
+[data-mode-pane="regression"] table.coef tbody td.neg {
+  color: var(--neg);
+  font-weight: 600;
+}
+
+/* ── 2 · VIF heatmap badges ───────────────────────────────────────────── */
+
+[data-mode-pane="regression"] .coef-vif-cell,
+[data-mode-pane="regression"] td.coef-vif-cell,
+[data-mode-pane="regression"] .vif-chip {
+  font-family: var(--rc-serif);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  border-radius: 4px;
+  padding: 2px 8px;
+  display: inline-block;
+  min-width: 38px;
+  text-align: center;
+  background: var(--rc-vif-good);
+  color: var(--rc-vif-good-ink);
+  border: 1px solid color-mix(in srgb, var(--rc-vif-good-ink) 14%, transparent);
+}
+
+[data-mode-pane="regression"] .coef-vif-cell.warn,
+[data-mode-pane="regression"] td.coef-vif-cell.warn,
+[data-mode-pane="regression"] .vif-chip[data-vif="warn"] {
+  background: var(--rc-vif-warn);
+  color: var(--rc-vif-warn-ink);
+  border-color: color-mix(in srgb, var(--rc-vif-warn-ink) 14%, transparent);
+}
+
+[data-mode-pane="regression"] .coef-vif-cell.bad,
+[data-mode-pane="regression"] td.coef-vif-cell.bad,
+[data-mode-pane="regression"] .vif-chip[data-vif="bad"] {
+  background: var(--rc-vif-bad);
+  color: var(--rc-vif-bad-ink);
+  border-color: color-mix(in srgb, var(--rc-vif-bad-ink) 14%, transparent);
+}
+
+[data-mode-pane="regression"] .coef-vif-cell.crit,
+[data-mode-pane="regression"] .vif-chip[data-vif="crit"] {
+  background: var(--rc-vif-crit);
+  color: var(--rc-vif-crit-ink);
+  border-color: color-mix(in srgb, var(--rc-vif-crit-ink) 20%, transparent);
+  font-weight: 600;
+}
+
+/* The VIF panel chart card gets the same chip palette swatch in its label. */
+[data-mode-pane="regression"] .vif-panel,
+[data-mode-pane="regression"] #chart-vif {
+  /* keep chart but tighten label rhythm */
+  margin-top: 6px;
+}
+
+[data-mode-pane="regression"] .vif-panel::before,
+[data-mode-pane="regression"] #chart-vif::before {
+  content: "VIF · ≤2 SAFE  ≤5 MILD  ≤10 HIGH  >10 CRITICAL";
+  display: block;
+  font-family: var(--rc-serif);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* ── 3 · Significance chips (p-value overlay) ─────────────────────────── */
+
+/* The p-column is the 5th tbody td (Factor, β, SE, t, p, CI, VIF, Clip).
+ * We make that cell a relative-positioned anchor and float an absolutely
+ * positioned chip overlaying its value. The cell still shows the raw p
+ * text — the chip is a visual amplifier, not a replacement. */
+[data-mode-pane="regression"] #coef-table tbody td:nth-child(5),
+[data-mode-pane="regression"] table.coef tbody td:nth-child(5),
+[data-mode-pane="regression"] #result-coef-table tbody td:nth-child(5) {
+  position: relative;
+  min-width: 64px;
+}
+
+[data-mode-pane="regression"] tr.coef-sig td:nth-child(5)::after,
+[data-mode-pane="regression"] .coef-row.coef-sig td:nth-child(5)::after {
+  content: "";
+  position: absolute;
+  inset: 4px 4px 4px auto;
+  width: 6px;
+  border-radius: 2px;
+  background: var(--orange);
+  box-shadow: 0 0 0 2px var(--orange-soft);
+  pointer-events: none;
+}
+
+/* Explicit chip variant — useful if JS later sets data-p-bucket. */
+[data-mode-pane="regression"] .p-chip {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  transform: translateY(-50%);
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 1px 6px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+[data-mode-pane="regression"] .p-chip[data-p-bucket="sig"],
+[data-mode-pane="regression"] td[data-p-bucket="sig"] .p-chip {
+  background: var(--orange);
+  color: #fff;
+}
+[data-mode-pane="regression"] .p-chip[data-p-bucket="trend"],
+[data-mode-pane="regression"] td[data-p-bucket="trend"] .p-chip {
+  background: var(--orange-soft);
+  color: var(--orange-2);
+}
+[data-mode-pane="regression"] .p-chip[data-p-bucket="ns"],
+[data-mode-pane="regression"] td[data-p-bucket="ns"] .p-chip {
+  background: var(--hairline);
+  color: var(--ink-4);
+}
+
+/* Whole-row significance backdrop — keeps Bloomberg-row legibility. */
+[data-mode-pane="regression"] tr.coef-sig:not(.coef-popover-row),
+[data-mode-pane="regression"] .coef-row.coef-sig {
+  background: linear-gradient(
+    to right,
+    var(--rc-tint-sig) 0,
+    var(--rc-tint-sig) 3px,
+    transparent 3px,
+    transparent 100%
+  );
+}
+
+/* ── 4 · Residual diagnostics callout ─────────────────────────────────── */
+
+[data-mode-pane="regression"] .residual-stats,
+[data-mode-pane="regression"] #diag-pills.diag,
+[data-mode-pane="regression"] .diag {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  padding: 14px;
+  margin-top: 16px;
+  background: var(--bg-alt);
+  border: 1px solid var(--hairline);
+  border-left: 3px solid var(--orange);
+  border-radius: 6px;
+}
+
+[data-mode-pane="regression"] .residual-stats::before,
+[data-mode-pane="regression"] #diag-pills.diag::before,
+[data-mode-pane="regression"] .diag::before {
+  content: "RESIDUAL DIAGNOSTICS";
+  grid-column: 1 / -1;
+  font-family: var(--rc-serif);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+[data-mode-pane="regression"] .residual-stats .rs-stat,
+[data-mode-pane="regression"] .diag .pill,
+[data-mode-pane="regression"] .diag .diag-pill {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 10px;
+  background: var(--bg);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+[data-mode-pane="regression"] .residual-stats .rs-label {
+  font-family: var(--rc-serif);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+[data-mode-pane="regression"] .residual-stats .rs-value {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Pass / flag / fail indicator dots. Backed by data-test attribute,
+ * which existing diag-pill structure does not yet emit — but the rule
+ * is forward-compatible and harmless when absent. */
+[data-mode-pane="regression"] [data-test="pass"]::after,
+[data-mode-pane="regression"] .diag .pill.good::after,
+[data-mode-pane="regression"] .diag .diag-pill.good::after {
+  content: "\2713";
+  color: var(--rc-pass);
+  font-weight: 700;
+  margin-left: 6px;
+}
+[data-mode-pane="regression"] [data-test="flag"]::after,
+[data-mode-pane="regression"] .diag .pill.warn::after,
+[data-mode-pane="regression"] .diag .diag-pill.warn::after {
+  content: "\26A0";
+  color: var(--rc-flag);
+  font-weight: 700;
+  margin-left: 6px;
+}
+[data-mode-pane="regression"] [data-test="fail"]::after,
+[data-mode-pane="regression"] .diag .pill.bad::after,
+[data-mode-pane="regression"] .diag .diag-pill.bad::after {
+  content: "\2717";
+  color: var(--rc-fail);
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+/* ── 5 · R² gauge ─────────────────────────────────────────────────────── */
+
+[data-mode-pane="regression"] .r2-gauge {
+  --r2: 0;
+  position: relative;
+  height: 6px;
+  width: 100%;
+  max-width: 220px;
+  background: var(--hairline);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+[data-mode-pane="regression"] .r2-gauge::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: calc(var(--r2) * 100%);
+  background: linear-gradient(90deg, var(--orange-2), var(--orange));
+  border-radius: 3px 0 0 3px;
+  transition: width 240ms ease-out;
+}
+
+/* Promote the already-rendered .rpc-r2 inside .reg-pinned-card to a gauge
+ * by drawing a thin filled bar after the value when CSS var --r2 is set
+ * inline by the renderer. The label text stays untouched. */
+[data-mode-pane="regression"] .reg-pinned-card .rpc-r2 {
+  position: relative;
+  padding-bottom: 8px;
+}
+[data-mode-pane="regression"] .reg-pinned-card .rpc-r2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: var(--hairline);
+  border-radius: 2px;
+}
+[data-mode-pane="regression"] .reg-pinned-card .rpc-r2[style*="--r2"]::after {
+  background:
+    linear-gradient(90deg, var(--orange-2), var(--orange)) 0/calc(var(--r2, 0) * 100%) 100% no-repeat,
+    var(--hairline);
+}
+
+/* ── 6 · Section dividers ─────────────────────────────────────────────── */
+
+[data-mode-pane="regression"] .result-pane > .chart-card,
+[data-mode-pane="regression"] .result-pane > .reg-chart-block {
+  margin-bottom: 24px;
+}
+
+[data-mode-pane="regression"] .result-pane > .chart-card > h3,
+[data-mode-pane="regression"] .result-pane > .reg-chart-block > h4 {
+  font-family: var(--rc-serif);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 500;
+  padding-bottom: 6px;
+  margin: 0 0 10px;
+  border-bottom: 1px solid var(--hairline);
+}
+
+/* A tiny inline divider class JS may emit to break visual zones. */
+[data-mode-pane="regression"] .rc-divider {
+  display: block;
+  height: 1px;
+  background: var(--hairline);
+  margin: 24px 0;
+}
+
+[data-mode-pane="regression"] .rc-section-label {
+  display: block;
+  font-family: var(--rc-serif);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 24px 0 8px;
+}
+
+/* ── Display-P3 rich-color overlay (capable displays only) ────────────── */
+
+@supports (color: color(display-p3 1 0 0)) {
+  [data-mode-pane="regression"] {
+    --rc-vif-good: color(display-p3 0.82 0.96 0.86);
+    --rc-vif-good-ink: color(display-p3 0.04 0.32 0.16);
+    --rc-vif-warn: color(display-p3 0.99 0.93 0.74);
+    --rc-vif-warn-ink: color(display-p3 0.45 0.27 0.04);
+    --rc-vif-bad: color(display-p3 0.99 0.82 0.62);
+    --rc-vif-bad-ink: color(display-p3 0.50 0.18 0.02);
+    --rc-vif-crit: color(display-p3 0.99 0.76 0.74);
+    --rc-vif-crit-ink: color(display-p3 0.52 0.04 0.04);
+
+    --rc-tint-hover: color(display-p3 0.97 0.45 0.10 / 0.05);
+    --rc-tint-sig: color(display-p3 0.97 0.45 0.10 / 0.12);
+  }
+
+  [data-mode-pane="regression"] tr.coef-sig td:nth-child(5)::after,
+  [data-mode-pane="regression"] .coef-row.coef-sig td:nth-child(5)::after {
+    background: color(display-p3 0.97 0.45 0.10);
+    box-shadow: 0 0 0 2px color(display-p3 0.99 0.92 0.85);
+  }
+
+  [data-mode-pane="regression"] .r2-gauge::before {
+    background: linear-gradient(
+      90deg,
+      color(display-p3 0.91 0.34 0.04),
+      color(display-p3 0.97 0.45 0.10)
+    );
+  }
+}
+
+/* ── Dark-mode adjustments (token-driven, no var redef) ───────────────── */
+
+@media (prefers-color-scheme: dark) {
+  [data-mode-pane="regression"] {
+    --rc-tint-hover: rgba(249, 115, 22, 0.06);
+    --rc-tint-sig: rgba(249, 115, 22, 0.14);
+
+    --rc-vif-good: hsl(142 35% 18% / 1);
+    --rc-vif-good-ink: hsl(142 55% 76% / 1);
+    --rc-vif-warn: hsl(42 45% 18% / 1);
+    --rc-vif-warn-ink: hsl(42 80% 72% / 1);
+    --rc-vif-bad: hsl(24 50% 20% / 1);
+    --rc-vif-bad-ink: hsl(24 88% 74% / 1);
+    --rc-vif-crit: hsl(0 50% 22% / 1);
+    --rc-vif-crit-ink: hsl(0 80% 78% / 1);
+  }
+}

@@ -1,0 +1,272 @@
+/* =========================================================================
+   terminal-layout.css — T64 (Track H · user-flagged UX priority)
+   -------------------------------------------------------------------------
+   Layout & density refinement for Terminal mode. Strictly scoped under
+   [data-mode-pane="terminal"]. NO color changes; tokens defined in
+   web/css/tokens.css (or in index.html ":root") are reused. Where a token
+   may not yet be defined we provide a defensive fallback only inside the
+   scoped block — we never re-declare the canonical custom property at
+   :root level (PROTOCOL-V2 forbids redefining --hairline, --ah-bg, …).
+
+   Goals
+     1. 12-column grid wrapping Terminal pane (gap 16px / var(--sp-4))
+     2. Consistent spacing scale: --sp-1/2/3/4/6 = 4/8/12/16/24
+     3. Sticky section nav (.pfm-homepage-tabs inside Terminal)
+     4. Collapsible sidebar (.term-side) via .tm-sidebar--collapsed (56px)
+     5. Refined hairlines on every Terminal card
+     6. Responsive: 1100px → 6-col, 768px → 1-col
+     7. Card outline polish: 8px radius, 1px hairline, soft shadow
+
+   Mount: add <link rel="stylesheet" href="css/terminal-layout.css"> AFTER
+          tokens.css and AFTER terminal-premium.css so this layer wins on
+          spacing/density. Coordinated via index-html-owner.
+   ========================================================================= */
+
+/* ---------- Local fallbacks (scoped, do not pollute :root) -------------- */
+[data-mode-pane="terminal"] {
+  /* Spacing scale — re-asserted in scope so this stylesheet is self-contained.
+     If tokens.css already defines them globally these will simply re-bind
+     them to the same value (no cascade hazard).                            */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-6: 24px;
+
+  /* Defensive: if --hairline isn't defined globally yet (Wave-10 T01 is
+     extracting tokens), fall back to the same rgba used in existing rules. */
+  --tm-hairline-fallback: rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- 12-column wrapper grid ------------------------------------- */
+/* Wraps the Terminal pane's .term-shell. We attach the grid to .term-shell
+   (which is the existing top-level wrapper inside [data-mode-pane=terminal])
+   without breaking its existing flex children — the children that should
+   span full width (default) keep grid-column: 1 / -1. Specific sections
+   may opt-in to narrower spans via the tm-col-* utilities below.          */
+[data-mode-pane="terminal"] .term-shell {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--sp-4);
+  align-content: start;
+}
+
+/* All direct children span full width by default — keeps existing layout
+   intact while opting the wrapper into the grid system.                   */
+[data-mode-pane="terminal"] .term-shell > * {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+/* Opt-in column spans for future panels. tm-col-N = span N of 12.        */
+[data-mode-pane="terminal"] .tm-col-3  { grid-column: span 3; }
+[data-mode-pane="terminal"] .tm-col-4  { grid-column: span 4; }
+[data-mode-pane="terminal"] .tm-col-6  { grid-column: span 6; }
+[data-mode-pane="terminal"] .tm-col-8  { grid-column: span 8; }
+[data-mode-pane="terminal"] .tm-col-9  { grid-column: span 9; }
+[data-mode-pane="terminal"] .tm-col-12 { grid-column: 1 / -1; }
+
+/* ---------- Sticky section nav (top tabs) ------------------------------ */
+/* Terminal's section nav within the homepage is .pfm-homepage-tabs. We
+   pin it to the top of the viewport with a blurred translucent backdrop
+   so users always know where they are while scrolling the long page.    */
+[data-mode-pane="terminal"] .pfm-homepage-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.86);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  padding: var(--sp-2) var(--sp-3);
+  margin: 0 calc(-1 * var(--sp-3));
+  border-bottom: 1px solid var(--hairline, var(--tm-hairline-fallback));
+}
+
+/* A small dedicated stickyability tag for any future top-level Terminal
+   nav row that isn't .pfm-homepage-tabs.                                  */
+[data-mode-pane="terminal"] .tm-section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.86);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  padding: var(--sp-2) var(--sp-3);
+  border-bottom: 1px solid var(--hairline, var(--tm-hairline-fallback));
+}
+
+/* ---------- Sidebar collapsible state ---------------------------------- */
+/* The Terminal left-rail is .term-side (inside .term-grid). Adding
+   .tm-sidebar--collapsed on .term-side narrows it to 56px and hides the
+   text labels of .term-side-title / search input / theme rows, leaving
+   only icons. The collapsed-toggle button itself is wired by the
+   index-html-owner; this file only provides the visual contract.        */
+[data-mode-pane="terminal"] .term-side.tm-sidebar--collapsed {
+  width: 56px;
+  min-width: 56px;
+  max-width: 56px;
+  overflow: hidden;
+  transition: width 180ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Narrow the parent grid track when collapsed: override the 280px sidebar
+   column declared in the inline stylesheet.                              */
+[data-mode-pane="terminal"] .term-grid:has(> .term-side.tm-sidebar--collapsed) {
+  grid-template-columns: 56px minmax(0, 1fr);
+}
+
+/* Hide text-bearing children while collapsed; keep SVG icons visible.   */
+[data-mode-pane="terminal"] .term-side.tm-sidebar--collapsed .term-side-title {
+  justify-content: center;
+  font-size: 0;            /* nuke uppercase label text                  */
+  letter-spacing: 0;
+}
+[data-mode-pane="terminal"] .term-side.tm-sidebar--collapsed .term-side-title svg {
+  width: 16px;
+  height: 16px;
+}
+[data-mode-pane="terminal"] .term-side.tm-sidebar--collapsed .term-side-title .count,
+[data-mode-pane="terminal"] .term-side.tm-sidebar--collapsed .term-search,
+[data-mode-pane="terminal"] .term-side.tm-sidebar--collapsed .term-search-results,
+[data-mode-pane="terminal"] .term-side.tm-sidebar--collapsed .term-watchlist,
+[data-mode-pane="terminal"] .term-side.tm-sidebar--collapsed .term-themes {
+  display: none;
+}
+[data-mode-pane="terminal"] .term-side.tm-sidebar--collapsed .term-side-card {
+  padding: var(--sp-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------- Refined hairlines on Terminal cards ------------------------ */
+/* Normalise any ad-hoc `1px solid #ccc / #ddd / #e5e7eb` patterns to the
+   project hairline token. We target the specific Terminal card classes
+   so we don't accidentally reach into other modes.                      */
+[data-mode-pane="terminal"] .term-card,
+[data-mode-pane="terminal"] .term-mini-card,
+[data-mode-pane="terminal"] .term-side-card,
+[data-mode-pane="terminal"] .term-strip,
+[data-mode-pane="terminal"] .term-strip-block + .term-strip-block,
+[data-mode-pane="terminal"] .term-list-pane,
+[data-mode-pane="terminal"] .term-detail-pane {
+  border-color: var(--hairline, var(--tm-hairline-fallback));
+}
+
+/* ---------- Card outline polish --------------------------------------- */
+/* Every Terminal panel card gets the same outline contract: 8px radius,
+   single hairline, very soft shadow. We use moderate specificity so the
+   inline stylesheet's per-card padding rules continue to win where
+   they're set intentionally.                                            */
+[data-mode-pane="terminal"] .term-card,
+[data-mode-pane="terminal"] .term-mini-card,
+[data-mode-pane="terminal"] .term-side-card,
+[data-mode-pane="terminal"] .term-strip,
+[data-mode-pane="terminal"] .term-list-pane,
+[data-mode-pane="terminal"] .term-detail-pane {
+  border-radius: 8px;
+  border: 1px solid var(--hairline, var(--tm-hairline-fallback));
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* ---------- Consistent spacing inside Terminal sections --------------- */
+/* Replace ad-hoc margins/paddings inside Terminal sections with the
+   --sp-* scale so vertical rhythm is uniform.                          */
+[data-mode-pane="terminal"] .term-card { padding: var(--sp-4); }
+[data-mode-pane="terminal"] .term-mini-card { padding: var(--sp-3); }
+[data-mode-pane="terminal"] .term-side-card { padding: var(--sp-3); }
+[data-mode-pane="terminal"] .term-strip { padding: var(--sp-3) var(--sp-4); }
+
+/* Vertical breathing room between major sections inside .term-shell.  */
+[data-mode-pane="terminal"] #term-homepage,
+[data-mode-pane="terminal"] .term-strip,
+[data-mode-pane="terminal"] .term-grid {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Eliminate ad-hoc inline margins where they're commonly set in markup.
+   These are scoped narrow enough that they only fire inside Terminal.  */
+[data-mode-pane="terminal"] .term-side-title {
+  margin-bottom: var(--sp-2);
+}
+[data-mode-pane="terminal"] .term-side-title + * {
+  margin-top: var(--sp-1);
+}
+
+/* ---------- Hover affordance (layout only — no color change) --------- */
+[data-mode-pane="terminal"] .term-card,
+[data-mode-pane="terminal"] .term-mini-card,
+[data-mode-pane="terminal"] .term-side-card {
+  transition:
+    box-shadow 180ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform  180ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- Responsive collapse --------------------------------------- */
+/* At <1100px → 6-column grid; at <768px → single column.
+   We also flatten .term-grid (sidebar + main) and .term-strip into a
+   single column at the narrow breakpoint so nothing horizontally        */
+@media (max-width: 1100px) {
+  [data-mode-pane="terminal"] .term-shell {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: var(--sp-3);
+  }
+  [data-mode-pane="terminal"] .tm-col-8,
+  [data-mode-pane="terminal"] .tm-col-9 { grid-column: 1 / -1; }
+  [data-mode-pane="terminal"] .tm-col-6 { grid-column: span 6; }
+  [data-mode-pane="terminal"] .tm-col-4 { grid-column: span 3; }
+  [data-mode-pane="terminal"] .tm-col-3 { grid-column: span 3; }
+}
+
+@media (max-width: 768px) {
+  [data-mode-pane="terminal"] .term-shell {
+    grid-template-columns: 1fr;
+    gap: var(--sp-3);
+  }
+  [data-mode-pane="terminal"] .tm-col-3,
+  [data-mode-pane="terminal"] .tm-col-4,
+  [data-mode-pane="terminal"] .tm-col-6,
+  [data-mode-pane="terminal"] .tm-col-8,
+  [data-mode-pane="terminal"] .tm-col-9,
+  [data-mode-pane="terminal"] .tm-col-12 { grid-column: 1 / -1; }
+
+  /* Make the side-rail flow above main content at narrow widths.        */
+  [data-mode-pane="terminal"] .term-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-3);
+  }
+  [data-mode-pane="terminal"] .term-strip {
+    grid-template-columns: 1fr;
+    gap: var(--sp-3);
+  }
+  [data-mode-pane="terminal"] .term-strip-block + .term-strip-block {
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1px solid var(--hairline, var(--tm-hairline-fallback));
+    padding-top: var(--sp-3);
+  }
+
+  /* Sticky nav becomes slightly tighter on phones.                      */
+  [data-mode-pane="terminal"] .pfm-homepage-tabs,
+  [data-mode-pane="terminal"] .tm-section-nav {
+    padding: var(--sp-1) var(--sp-2);
+  }
+}
+
+/* ---------- Print: drop sticky + shadows ------------------------------ */
+@media print {
+  [data-mode-pane="terminal"] .pfm-homepage-tabs,
+  [data-mode-pane="terminal"] .tm-section-nav {
+    position: static;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: transparent;
+  }
+  [data-mode-pane="terminal"] .term-card,
+  [data-mode-pane="terminal"] .term-mini-card,
+  [data-mode-pane="terminal"] .term-side-card,
+  [data-mode-pane="terminal"] .term-strip {
+    box-shadow: none;
+  }
+}

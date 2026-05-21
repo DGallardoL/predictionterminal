@@ -1,0 +1,414 @@
+/* ============================================================
+ * empty-states.css  (T08, wave-10)
+ *
+ * Refined empty-state component system for the Prediction
+ * Terminal frontend. The goal is dignity, not whimsy:
+ *
+ *   - Hairline dashed containers (no illustrations, no mascots)
+ *   - Monochrome icon slot (24-32px) — caller supplies an inline
+ *     SVG or a single glyph; we do not ship cute graphics
+ *   - Instrument-Serif title, neutral sans body, monospace hint
+ *   - Variants for compact inline use, "soft" load errors, and
+ *     transient retry-able failures
+ *
+ * MOUNT (index-html-owner, task T08):
+ *   Add a <link rel="stylesheet"> for this file AFTER
+ *   global-refinement.css but BEFORE mode-specific sheets so
+ *   panel-level overrides win when necessary:
+ *
+ *   <link rel="stylesheet" href="/css/tokens.css" />
+ *   <link rel="stylesheet" href="/css/global-refinement.css" />
+ *   <link rel="stylesheet" href="/css/empty-states.css" />
+ *   ...
+ *
+ * USAGE EXAMPLES (reference markup for index-html-owner):
+ *
+ *   --- 1. No jumps detected (Terminal → Jumps tab) -----------
+ *   <div class="empty-state" role="status">
+ *     <div class="empty-state__icon" aria-hidden="true">·</div>
+ *     <h3 class="empty-state__title">No jumps in the last 7 days</h3>
+ *     <p class="empty-state__body">
+ *       Our default threshold is 5pp / 3σ. Try lowering one to
+ *       surface softer regime shifts.
+ *     </p>
+ *     <button class="empty-state__action" type="button"
+ *             data-action="jumps-threshold-3pp">
+ *       Set threshold 3pp
+ *     </button>
+ *     <code class="empty-state__hint">
+ *       GET /terminal/jumps?threshold=0.03
+ *     </code>
+ *   </div>
+ *
+ *   --- 2. No factors selected yet (Regression mode) ----------
+ *   <div class="empty-state empty-state--compact">
+ *     <h3 class="empty-state__title">No factors selected yet</h3>
+ *     <p class="empty-state__body">
+ *       Pick one factor to begin. Search by slug or browse the
+ *       1228-factor catalog.
+ *     </p>
+ *     <code class="empty-state__hint">e.g. fed-rate-cut-2026q3</code>
+ *   </div>
+ *
+ *   --- 3. No market data today (Terminal → Market) -----------
+ *   <div class="empty-state">
+ *     <h3 class="empty-state__title">No data for this market today</h3>
+ *     <p class="empty-state__body">
+ *       Polymarket may not have priced it yet, or the contract
+ *       just resolved. Try a neighboring date.
+ *     </p>
+ *   </div>
+ *
+ *   --- 4. Empty pinboard (Regression → Pinned fits) ----------
+ *   <div class="empty-state">
+ *     <h3 class="empty-state__title">You haven't pinned any fits yet</h3>
+ *     <p class="empty-state__body">
+ *       Run a /fit and click <strong>Pin</strong> in the result
+ *       header to keep it for cross-comparison.
+ *     </p>
+ *     <code class="empty-state__hint">POST /fit → click Pin</code>
+ *   </div>
+ *
+ *   --- 5. Couldn't load (transient, with retry) --------------
+ *   <div class="empty-state empty-state--loading-fail" role="alert">
+ *     <h3 class="empty-state__title">Couldn't reach the API</h3>
+ *     <p class="empty-state__body">
+ *       The request timed out after 8s. The server may be
+ *       restarting — usually back within 20s.
+ *     </p>
+ *     <button class="empty-state__action" type="button"
+ *             data-action="retry">
+ *       Retry
+ *     </button>
+ *     <code class="empty-state__hint">last error: ETIMEDOUT</code>
+ *   </div>
+ *
+ * COORDINATION:
+ *   - This file is the SOLE owner of the `.empty-state` class
+ *     family. Do NOT redefine `.empty-state*` selectors in any
+ *     other stylesheet. Use cascade overrides via more-specific
+ *     ancestor selectors (e.g. `.alphahub-detail .empty-state`).
+ *   - All colors / spacing / radii come from tokens.css. Do NOT
+ *     hardcode hex values or pixel-spacing in this sheet beyond
+ *     the small adjustments documented inline below.
+ * ============================================================ */
+
+/* ------------------------------------------------------------ *
+ * Base container
+ *
+ * A hairline dashed rectangle on a barely-tinted background.
+ * 32-48px padding keeps it visually substantial without being
+ * an attention-hog. Flex column with a small gap so any subset
+ * of icon / title / body / action / hint renders cleanly.
+ * ------------------------------------------------------------ */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3);
+  padding: var(--sp-8) var(--sp-6);
+  text-align: center;
+  border: 1px dashed var(--hairline-strong);
+  border-radius: var(--r-4);
+  background: var(--bg-alt);
+  color: var(--ink-2);
+  /* Subtle entrance — does nothing for reduced-motion users  */
+  transition: border-color 200ms ease, background-color 200ms ease;
+}
+
+/* Generous padding on larger panes — the spec asks for 32-48px */
+@media (min-width: 768px) {
+  .empty-state {
+    padding: var(--sp-12) var(--sp-8);
+  }
+}
+
+/* ------------------------------------------------------------ *
+ * Icon slot
+ *
+ * Caller supplies content (inline SVG, a single glyph, or a
+ * unicode dot). We constrain the box and tint to ink-3 so the
+ * caller need not worry about color.
+ * ------------------------------------------------------------ */
+
+.empty-state__icon {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-3);
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: var(--sp-1);
+}
+
+.empty-state__icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+/* ------------------------------------------------------------ *
+ * Title — Instrument Serif, 18px, ink-2
+ * ------------------------------------------------------------ */
+
+.empty-state__title {
+  margin: 0;
+  font-family: var(--serif-display);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--ink-2);
+  letter-spacing: -0.01em;
+}
+
+/* ------------------------------------------------------------ *
+ * Body — 14px sans, ink-3, max-width 36ch
+ *
+ * The 36ch cap keeps the message readable on wide panes; combined
+ * with text-align:center the result is a balanced block of copy.
+ * ------------------------------------------------------------ */
+
+.empty-state__body {
+  margin: 0;
+  max-width: 36ch;
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+.empty-state__body strong {
+  color: var(--ink-2);
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------ *
+ * Action — primary button below body
+ *
+ * Compact (32px tall), orange, the standard call-to-action look.
+ * Sits a touch below the body for breathing room.
+ * ------------------------------------------------------------ */
+
+.empty-state__action {
+  margin-top: var(--sp-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  height: 32px;
+  padding: 0 var(--sp-4);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  background: var(--orange);
+  border: 1px solid var(--orange-2);
+  border-radius: var(--r-2);
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.empty-state__action:hover {
+  background: var(--orange-2);
+}
+
+.empty-state__action:active {
+  transform: translateY(1px);
+}
+
+.empty-state__action:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+.empty-state__action[disabled],
+.empty-state__action[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ------------------------------------------------------------ *
+ * Hint — 11px monospace tip, typically an example query or slug
+ *
+ * Visually quieter than the body; uses the mono stack so users
+ * recognize it as "machine input" rather than prose.
+ * ------------------------------------------------------------ */
+
+.empty-state__hint {
+  margin-top: var(--sp-2);
+  display: inline-block;
+  padding: 2px var(--sp-2);
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--ink-3);
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* ------------------------------------------------------------ *
+ * Variant — compact (inline, smaller padding)
+ *
+ * Used inside tighter panels (e.g. an empty list of pinned
+ * results inside the Regression sidebar). Drop padding by half
+ * and tighten the gap; title also drops a touch.
+ * ------------------------------------------------------------ */
+
+.empty-state--compact {
+  padding: var(--sp-5) var(--sp-4);
+  gap: var(--sp-2);
+}
+
+@media (min-width: 768px) {
+  .empty-state--compact {
+    padding: var(--sp-6) var(--sp-5);
+  }
+}
+
+.empty-state--compact .empty-state__title {
+  font-size: 16px;
+}
+
+.empty-state--compact .empty-state__body {
+  font-size: 13px;
+  max-width: 32ch;
+}
+
+.empty-state--compact .empty-state__icon {
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+}
+
+/* ------------------------------------------------------------ *
+ * Variant — error ("couldn't load")
+ *
+ * Orange-tinted border to signal something went wrong. Background
+ * lifts to --orange-soft for the same reason. We deliberately
+ * keep the dashed border style — error states still want the
+ * "placeholder" feel, not the alarm of a solid red box.
+ * ------------------------------------------------------------ */
+
+.empty-state--error {
+  border-color: var(--orange);
+  background: var(--orange-soft);
+  color: var(--ink-2);
+}
+
+.empty-state--error .empty-state__title {
+  color: var(--orange-2);
+}
+
+.empty-state--error .empty-state__icon {
+  color: var(--orange);
+}
+
+.empty-state--error .empty-state__hint {
+  border-color: var(--orange);
+  color: var(--orange-2);
+  background: var(--surface);
+}
+
+/* ------------------------------------------------------------ *
+ * Variant — loading-fail (transient with retry)
+ *
+ * Like `--error` in tone but tuned for "the server blinked"
+ * situations: keep border softer (--warn), keep background tied
+ * to bg-alt so the retry button reads as the focal element.
+ * Comes with a subtle pulsing border to suggest "still trying".
+ * ------------------------------------------------------------ */
+
+.empty-state--loading-fail {
+  border-color: var(--warn);
+  background: var(--bg-alt);
+  animation: empty-state-pulse 2400ms ease-in-out infinite;
+}
+
+.empty-state--loading-fail .empty-state__title {
+  color: var(--ink-2);
+}
+
+.empty-state--loading-fail .empty-state__icon {
+  color: var(--warn);
+}
+
+.empty-state--loading-fail .empty-state__action {
+  background: var(--ink-2);
+  border-color: var(--ink);
+}
+
+.empty-state--loading-fail .empty-state__action:hover {
+  background: var(--ink);
+}
+
+@keyframes empty-state-pulse {
+  0%, 100% {
+    border-color: var(--warn);
+  }
+  50% {
+    border-color: var(--hairline-strong);
+  }
+}
+
+/* ------------------------------------------------------------ *
+ * Reduced motion
+ *
+ * The container transition and the loading-fail pulse animation
+ * are nice but never necessary. Disable both — leave the visual
+ * design intact.
+ * ------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .empty-state {
+    transition: none;
+  }
+
+  .empty-state__action {
+    transition: none;
+  }
+
+  .empty-state__action:active {
+    transform: none;
+  }
+
+  .empty-state--loading-fail {
+    animation: none;
+  }
+}
+
+/* ------------------------------------------------------------ *
+ * Dark mode parity
+ *
+ * Token re-tinting (in tokens.css) takes care of bg-alt, ink-2,
+ * ink-3, --hairline-strong, --orange-soft. The only spot that
+ * needs a manual nudge is the action button on the error variant
+ * — the default white-on-orange remains legible in dark mode.
+ * The pulsing border under prefers-reduced-motion is already
+ * suppressed above, so we don't need a dark-mode override there.
+ * ------------------------------------------------------------ */
+
+@media (prefers-color-scheme: dark) {
+  .empty-state__hint {
+    background: var(--surface-2);
+  }
+}
+
+[data-theme="dark"] .empty-state__hint {
+  background: var(--surface-2);
+}
+
+/* ============================================================
+ * End of empty-states.css
+ * ============================================================ */

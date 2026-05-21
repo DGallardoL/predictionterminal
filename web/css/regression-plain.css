@@ -1,0 +1,299 @@
+/* ════════════════════════════════════════════════════════════════════════
+   T63 · REGRESSION → PLAIN ENGLISH EXPLAINER CARD
+   ────────────────────────────────────────────────────────────────────────
+   Loaded after inline + module CSS. Scope: a single root element with id
+   #pfm-regression-explainer (the mount), namespaced `.pfm-rxp-*` for every
+   inner selector — no leakage into the broader page.
+
+   The card distills a FitResponse into:
+     - 3 plain-language bullets (direction & magnitude, confidence, fit
+       quality + caveats).
+     - A single "Significant predictors" chip row.
+     - A two-state pill: Plain (default) ↔ Expert (defers to the existing
+       coefficient table elsewhere; this card hides itself).
+
+   Design rules:
+     - No new CSS variables — consume the shared tokens when present, fall
+       back to literal values when loaded standalone.
+     - Hairline-first; one shadow tier; no gradients.
+     - 100ch line length, 15px body — meant to be READ, not scanned.
+   ──────────────────────────────────────────────────────────────────────── */
+
+#pfm-regression-explainer {
+  --pfm-rxp-bg:        var(--ah-bg, #ffffff);
+  --pfm-rxp-bg-alt:    var(--ah-bg-alt, #fcfcfd);
+  --pfm-rxp-surface:   var(--ah-surface, #f6f6f8);
+  --pfm-rxp-ink:       var(--ah-ink, #0a0a0c);
+  --pfm-rxp-ink-2:     var(--ah-ink-2, #3f3f47);
+  --pfm-rxp-ink-3:     var(--ah-ink-3, #6a6a73);
+  --pfm-rxp-ink-4:     var(--ah-ink-4, #9c9ca5);
+  --pfm-rxp-hairline:  var(--ah-hairline, #ececef);
+  --pfm-rxp-hairline-2:var(--ah-hairline-2, #d6d6dc);
+  --pfm-rxp-accent:    var(--orange, #d97706);
+  --pfm-rxp-pos:       var(--ah-pos, #16a34a);
+  --pfm-rxp-neg:       var(--ah-neg, #dc2626);
+  --pfm-rxp-warn:      var(--ah-warn, #d97706);
+  --pfm-rxp-info:      var(--ah-info, #0284c7);
+  --pfm-rxp-serif:     var(--serif-display, "Instrument Serif", "Iowan Old Style", Georgia, serif);
+  --pfm-rxp-sans:      var(--sans, "Inter", system-ui, -apple-system, "Segoe UI", sans-serif);
+  --pfm-rxp-mono:      var(--mono, ui-monospace, "JetBrains Mono", Menlo, monospace);
+
+  display: block;
+  margin: 16px 0;
+  color: var(--pfm-rxp-ink);
+  font-family: var(--pfm-rxp-sans);
+}
+
+#pfm-regression-explainer[hidden],
+#pfm-regression-explainer.pfm-rxp-hide {
+  display: none !important;
+}
+
+/* ─────────────────────────── Card shell ───────────────────────────── */
+
+.pfm-rxp-card {
+  background: var(--pfm-rxp-bg);
+  border: 1px solid var(--pfm-rxp-hairline);
+  border-radius: 10px;
+  padding: 18px 20px 20px;
+  box-shadow: 0 1px 0 rgba(10, 10, 12, 0.02), 0 6px 18px -10px rgba(10, 10, 12, 0.08);
+}
+
+.pfm-rxp-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.pfm-rxp-title {
+  font-family: var(--pfm-rxp-serif);
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: 0.005em;
+  margin: 0;
+  color: var(--pfm-rxp-ink);
+}
+
+.pfm-rxp-title .pfm-rxp-eyebrow {
+  display: block;
+  font-family: var(--pfm-rxp-sans);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pfm-rxp-ink-4);
+  margin-bottom: 4px;
+}
+
+/* ─────────────────────────── Toggle pill ──────────────────────────── */
+
+.pfm-rxp-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  padding: 2px;
+  background: var(--pfm-rxp-surface);
+  border: 1px solid var(--pfm-rxp-hairline);
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  user-select: none;
+}
+
+.pfm-rxp-toggle-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--pfm-rxp-ink-3);
+  padding: 5px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  transition: color 140ms ease, background 140ms ease;
+}
+
+.pfm-rxp-toggle-btn:hover {
+  color: var(--pfm-rxp-ink);
+}
+
+.pfm-rxp-toggle-btn[aria-pressed="true"] {
+  background: var(--pfm-rxp-bg);
+  color: var(--pfm-rxp-ink);
+  box-shadow: 0 1px 0 rgba(10, 10, 12, 0.04), 0 1px 4px rgba(10, 10, 12, 0.06);
+}
+
+.pfm-rxp-toggle-btn:focus-visible {
+  outline: 2px solid var(--pfm-rxp-accent);
+  outline-offset: 1px;
+}
+
+/* ─────────────────────────── Bullets ──────────────────────────────── */
+
+.pfm-rxp-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.pfm-rxp-bullet {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 12px 14px 12px 12px;
+  background: var(--pfm-rxp-bg-alt);
+  border: 1px solid var(--pfm-rxp-hairline);
+  border-radius: 8px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--pfm-rxp-ink-2);
+}
+
+.pfm-rxp-bullet b,
+.pfm-rxp-bullet strong {
+  color: var(--pfm-rxp-ink);
+  font-weight: 600;
+}
+
+.pfm-rxp-bullet .pfm-rxp-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  border-radius: 999px;
+  background: var(--pfm-rxp-ink);
+  color: var(--pfm-rxp-bg);
+  font-family: var(--pfm-rxp-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.pfm-rxp-bullet--good  .pfm-rxp-num { background: var(--pfm-rxp-pos); }
+.pfm-rxp-bullet--warn  .pfm-rxp-num { background: var(--pfm-rxp-warn); }
+.pfm-rxp-bullet--bad   .pfm-rxp-num { background: var(--pfm-rxp-neg); }
+.pfm-rxp-bullet--info  .pfm-rxp-num { background: var(--pfm-rxp-info); }
+
+.pfm-rxp-bullet .pfm-rxp-num-mono {
+  font-family: var(--pfm-rxp-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.005em;
+}
+
+/* ─────────────────────────── Significant predictors ──────────────── */
+
+.pfm-rxp-sig-wrap {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--pfm-rxp-hairline-2);
+}
+
+.pfm-rxp-sig-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pfm-rxp-ink-4);
+  margin: 0 0 8px;
+}
+
+.pfm-rxp-sig-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pfm-rxp-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px 4px 8px;
+  background: var(--pfm-rxp-surface);
+  border: 1px solid var(--pfm-rxp-hairline);
+  border-radius: 999px;
+  font-family: var(--pfm-rxp-mono);
+  font-size: 11.5px;
+  letter-spacing: 0;
+  color: var(--pfm-rxp-ink-2);
+  white-space: nowrap;
+}
+
+.pfm-rxp-chip-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--pfm-rxp-pos);
+}
+
+.pfm-rxp-chip[data-sign="neg"] .pfm-rxp-chip-dot {
+  background: var(--pfm-rxp-neg);
+}
+
+.pfm-rxp-chip-beta {
+  color: var(--pfm-rxp-ink);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.pfm-rxp-sig-empty {
+  font-size: 12.5px;
+  color: var(--pfm-rxp-ink-4);
+  font-style: italic;
+}
+
+/* ─────────────────────────── Empty / error states ────────────────── */
+
+.pfm-rxp-empty {
+  padding: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--pfm-rxp-ink-4);
+  font-style: italic;
+}
+
+/* ─────────────────────────── Responsive ──────────────────────────── */
+
+@media (max-width: 560px) {
+  .pfm-rxp-card { padding: 14px 14px 16px; }
+  .pfm-rxp-head { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .pfm-rxp-bullet { font-size: 14px; padding: 10px 12px; }
+}
+
+/* ─────────────────────────── Dark mode ───────────────────────────── */
+
+@media (prefers-color-scheme: dark) {
+  #pfm-regression-explainer {
+    --pfm-rxp-bg:        var(--ah-bg, #0a0a0c);
+    --pfm-rxp-bg-alt:    var(--ah-bg-alt, #111114);
+    --pfm-rxp-surface:   var(--ah-surface, #18181b);
+    --pfm-rxp-ink:       var(--ah-ink, #f4f4f5);
+    --pfm-rxp-ink-2:     var(--ah-ink-2, #d4d4d8);
+    --pfm-rxp-ink-3:     var(--ah-ink-3, #a1a1aa);
+    --pfm-rxp-ink-4:     var(--ah-ink-4, #71717a);
+    --pfm-rxp-hairline:  var(--ah-hairline, #27272a);
+    --pfm-rxp-hairline-2:var(--ah-hairline-2, #3f3f46);
+  }
+  .pfm-rxp-card {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35), 0 6px 18px -10px rgba(0, 0, 0, 0.5);
+  }
+  .pfm-rxp-bullet .pfm-rxp-num { color: #0a0a0c; }
+}
+
+/* ─────────────────────────── Print ───────────────────────────────── */
+
+@media print {
+  #pfm-regression-explainer .pfm-rxp-toggle { display: none; }
+  .pfm-rxp-card { border-color: #000; box-shadow: none; }
+  .pfm-rxp-bullet { break-inside: avoid; }
+}

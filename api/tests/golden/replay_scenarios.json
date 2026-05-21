@@ -1,0 +1,145 @@
+{
+  "n_scenarios": 4,
+  "scenarios": [
+    {
+      "as_of_iso": "2024-11-04T18:00:00+00:00",
+      "description": "Trump won unexpectedly. PM markets moved 96% YES on Trump while markets opened with massive overnight repricing.",
+      "end_iso": "2024-11-06T12:00:00+00:00",
+      "expected_pnl_per_dollar_long": {
+        "BTCUSD": 0.1043,
+        "DXY": 0.0166,
+        "GLD": -0.0312,
+        "IWM": 0.0584,
+        "QQQ": 0.0259,
+        "SPY": 0.0246,
+        "TLT": -0.0289
+      },
+      "id": "election_night_2024",
+      "n_equities": 7,
+      "n_markets": 8,
+      "name": "election_night_2024",
+      "narrative": "Polls closed on the East Coast at 18:00 UTC on Nov 4th 2024 with Polymarket pricing Trump near 60% and Harris near 40%. Within five hours, as Pennsylvania, Georgia and Michigan tipped, the Trump contract repriced from 60% to 96% in roughly two trading sessions. That repricing is the cleanest example of an event-driven PM signal in 2024.\n\nEquities followed: small-caps (IWM) led on the open, the dollar (DXY) ripped on the rate-differential trade, long bonds (TLT) sold off on deficit fears, and BTC broke its prior cycle high intraday on Nov 6th. Gold sold off modestly. The cross-asset co-movement validates the use of PM odds as a real-time fundamental factor on event days.\n\nFor the replay demo we span Nov 4 18:00Z through Nov 6 12:00Z so users can see the entry-to-resolution arc, not just a single snapshot.",
+      "slugs": [
+        "presidential-election-winner-2024",
+        "which-party-wins-presidential-election-2024",
+        "2024-presidential-popular-vote-margin",
+        "senate-control-after-2024-election",
+        "house-control-after-2024-election",
+        "2024-georgia-presidential-election-margin",
+        "2024-pennsylvania-presidential-election-margin",
+        "2024-michigan-presidential-election-margin"
+      ],
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "IWM",
+        "DXY",
+        "GLD",
+        "BTCUSD",
+        "TLT"
+      ],
+      "timestamp": "2024-11-04T18:00:00+00:00",
+      "title": "US Election Night 2024"
+    },
+    {
+      "as_of_iso": "2024-09-18T18:00:00+00:00",
+      "description": "Powell delivered 50bp cut. PM markets pre-decision were 60/40 between 25bp and 50bp.",
+      "end_iso": "2024-09-25T18:00:00+00:00",
+      "expected_pnl_per_dollar_long": {
+        "IEF": -0.0078,
+        "KRE": 0.0421,
+        "QQQ": 0.0128,
+        "SPY": 0.0136,
+        "TLT": -0.0185,
+        "XLF": 0.0238
+      },
+      "id": "fomc_2024_09",
+      "n_equities": 6,
+      "n_markets": 4,
+      "name": "fomc_2024_09",
+      "narrative": "Heading into the 18:00 UTC announcement on Sep 18 2024, Polymarket pricing on the 'cuts 50bp or more' contract sat near 60%, with the 25bp contract at 40%. Fed funds futures were pricing a closer 50/50 \u2014 PM was modestly ahead of rates markets. Powell delivered 50bp.\n\nLong-duration Treasuries (TLT, IEF) jumped on the print, then round-tripped over the next week as the curve bear-steepened. Regional banks (KRE) and broad financials (XLF) outperformed the index, validating the rate-cut-friendly-banks playbook. SPY and QQQ closed the week roughly flat \u2014 the 'sell the news' drift was clean.\n\nThe replay window of t+0 to t+7d captures the full FOMC reaction arc, including the next-day reversal that frustrated many duration-long positions.",
+      "slugs": [
+        "fed-decision-in-september-2024",
+        "fed-cuts-25bp-or-more-september-2024",
+        "fed-cuts-50bp-or-more-september-2024",
+        "recession-2024"
+      ],
+      "tickers": [
+        "TLT",
+        "IEF",
+        "SPY",
+        "QQQ",
+        "KRE",
+        "XLF"
+      ],
+      "timestamp": "2024-09-18T18:00:00+00:00",
+      "title": "FOMC September 2024 \u2014 50bp Cut Surprise"
+    },
+    {
+      "as_of_iso": "2024-11-21T00:00:00+00:00",
+      "description": "BTC broke 100k for first time on Nov-21. PM markets had 50% YES day-of, 95% by week-end.",
+      "end_iso": "2024-11-28T00:00:00+00:00",
+      "expected_pnl_per_dollar_long": {
+        "BTC-USD": 0.0432,
+        "COIN": 0.0712,
+        "IBIT": 0.0421,
+        "MARA": 0.0938,
+        "MSTR": 0.1865,
+        "RIOT": 0.1052
+      },
+      "id": "btc_ath_2024_11",
+      "n_equities": 6,
+      "n_markets": 4,
+      "name": "btc_ath_2024_11",
+      "narrative": "On Nov 21 2024 BTC traded above $99k for the first time, pushing within striking distance of the $100k psychological level. Polymarket's 'BTC > $100k by EOY 2024' contract opened the day near 50% and closed the week above 95% as spot finally printed 100,000 on Nov 22 evening.\n\nThe crypto-equity complex traded as a proxy basket. MSTR, the leveraged-BTC vehicle, outperformed BTC itself on the move; miners (MARA, RIOT) ran on the price-of-coin / cost-of-mining spread; IBIT (the iShares spot-BTC ETF) saw record inflows; COIN ripped on volume expectations.\n\nThe replay spans the seven days from Nov 21 to Nov 28 so users can see the breakout, the gap-fill failure, and the sustained leg above $95k. Note the 'crypto-etf-approval-2024' slug is marked as anti-alpha in the catalog \u2014 included here for narrative completeness, not as a deployable signal.",
+      "slugs": [
+        "bitcoin-100k-by-end-of-2024",
+        "bitcoin-150k-by-end-of-2024",
+        "bitcoin-all-time-high-by-end-of-2024",
+        "crypto-etf-approval-2024"
+      ],
+      "tickers": [
+        "BTC-USD",
+        "COIN",
+        "MSTR",
+        "IBIT",
+        "MARA",
+        "RIOT"
+      ],
+      "timestamp": "2024-11-21T00:00:00+00:00",
+      "title": "BTC Cracks $100k \u2014 November 2024"
+    },
+    {
+      "as_of_iso": "2020-03-09T00:00:00+00:00",
+      "description": "S&P -7.6% Mar-9. VIX hit 62. PM markets were thin but pandemic odds spiked from 40% to 90% in 7 days.",
+      "end_iso": "2020-03-16T00:00:00+00:00",
+      "expected_pnl_per_dollar_long": {
+        "GLD": -0.0238,
+        "SPY": -0.1212,
+        "TLT": 0.0541,
+        "USO": -0.2967,
+        "VIX": 0.4815,
+        "XLF": -0.1587
+      },
+      "id": "covid_crash_2020_03",
+      "n_equities": 6,
+      "n_markets": 2,
+      "name": "covid_crash_2020_03",
+      "narrative": "Monday March 9 2020 \u2014 'Black Monday II' \u2014 opened with the S&P 500 down 7%, hitting the level-1 NYSE circuit breaker before 09:35 ET. Two parallel shocks drove the move: the Saudi-Russia oil price war that crashed WTI overnight, and rapidly accelerating COVID-19 case counts in Italy and the US.\n\nPolymarket coverage in March 2020 was thin and illiquid. The two slugs in this replay are research-time reconstructions \u2014 the 'pandemic declared by March' contract spiked from ~40% on March 2 to ~90% by March 11 (the actual WHO declaration). The 'recession 2020' contract was even thinner; we include it for narrative continuity.\n\nThe cross-asset move was textbook risk-off: SPY -12% over the week, VIX peaked at 75, USO down ~30% on the price war, TLT +5% on flight-to-quality, GLD round-tripped (initial sell on margin calls, then rally), XLF down sharply on rate-cut fears. Use this replay to stress-test crisis-regime portfolio behavior, not to validate PM signal alpha \u2014 the markets were too thin to be tradeable.",
+      "slugs": [
+        "recession-2020",
+        "coronavirus-pandemic-declared-march-2020"
+      ],
+      "tickers": [
+        "SPY",
+        "VIX",
+        "USO",
+        "TLT",
+        "GLD",
+        "XLF"
+      ],
+      "timestamp": "2020-03-09T00:00:00+00:00",
+      "title": "COVID Crash \u2014 Black Monday II, March 9, 2020"
+    }
+  ]
+}

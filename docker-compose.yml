@@ -1,0 +1,90 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: pfm-redis
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes", "--save", "60", "1000"]
+    volumes:
+      - pfm-redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    networks:
+      - pfm
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: pfm-api
+    restart: unless-stopped
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      CACHE_TTL_SECONDS: "3600"
+      POLYMARKET_GAMMA_URL: https://gamma-api.polymarket.com
+      POLYMARKET_CLOB_URL: https://clob.polymarket.com
+      LOG_LEVEL: INFO
+      # Prewarm jobs — keep cold-start widgets <100ms.
+      # PM-VIX score, earnings dashboard, and live signals get refreshed
+      # in the background so the first hit on each endpoint is served
+      # from cache instead of paying 8-18s upstream fetch cost.
+      PFM_PMVIX_PREWARM_ENABLED: "1"
+      PFM_PMVIX_PREWARM_INTERVAL_S: "300"
+      PFM_EARNINGS_PREWARM_ENABLED: "1"
+      PFM_EARNINGS_PREWARM_INTERVAL_S: "3600"
+      # Live signals: recompute every 15min using the real Polymarket fetcher.
+      # Set PFM_LIVE_SIGNALS_FETCHER=synthetic in dev if you want to skip live fetches.
+      PFM_LIVE_SIGNALS_ENABLED: "1"
+      PFM_LIVE_SIGNALS_INTERVAL_S: "900"
+      PFM_LIVE_SIGNALS_FETCHER: "polymarket"
+      # PM-VIX slug auto-refresh: cron checks each hardcoded slug is alive
+      # and replaces dead ones via keyword search (every 6h).
+      PFM_PM_VIX_AUTO_REFRESH_ENABLED: "1"
+      PFM_PM_VIX_AUTO_REFRESH_INTERVAL_S: "21600"
+      # Decay refresh job: re-evaluate decay status of all alphas every 4h.
+      PFM_DECAY_REFRESH_ENABLED: "1"
+      PFM_DECAY_REFRESH_INTERVAL_S: "14400"
+      # Curated factor-history prewarm. At startup, fetch the top N curated
+      # factors' price history into Redis so the first /reverse-finder /
+      # /fit call serves from cache (~3-5s instead of ~90s cold).
+      PFM_FACTOR_PREWARM_ENABLED: "1"
+      PFM_FACTOR_PREWARM_TOP_N: "50"
+      PFM_FACTOR_PREWARM_LOOKBACK_DAYS: "180"
+      PFM_FACTOR_PREWARM_CONCURRENCY: "8"
+    ports:
+      - "8000:8000"
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - pfm
+
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: pfm-web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    depends_on:
+      api:
+        condition: service_healthy
+    networks:
+      - pfm
+
+networks:
+  pfm:
+    driver: bridge
+
+volumes:
+  pfm-redis-data:
+    driver: local

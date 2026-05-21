@@ -1,0 +1,43 @@
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: pfm-prometheus
+    restart: unless-stopped
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    ports:
+      - "9090:9090"
+    networks:
+      - pfm
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: pfm-grafana
+    restart: unless-stopped
+    environment:
+      # SECURITY: never hardcode. Operator must set GRAFANA_ADMIN_PASSWORD in
+      # the deploy environment (e.g. .env / secrets manager). Compose will
+      # refuse to start if it's unset.
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:?GRAFANA_ADMIN_PASSWORD required}
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_ADMIN_USER:-admin}
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_AUTH_ANONYMOUS_ENABLED=false
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./monitoring/grafana_dashboard.json:/etc/grafana/provisioning/dashboards/pfm.json:ro
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+    networks:
+      - pfm
+
+networks:
+  pfm:
+    external: true
+    name: proyectofuentes_pfm
+
+volumes:
+  prometheus-data:
+  grafana-data:

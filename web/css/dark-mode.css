@@ -1,0 +1,511 @@
+/* ============================================================
+ * dark-mode.css  (T05, wave-10)
+ *
+ * Mode-specific dark-theme adjustments for Terminal, Strategies
+ * (alpha Hub), and Regression panels. Activates ONLY when
+ * <html data-theme="dark"> is set by web/js/theme-toggle.js
+ * (or when the OS prefers-color-scheme is dark AND the toggle
+ * has not forced light).
+ *
+ * MOUNT ORDER:
+ *   Load AFTER tokens.css (which already exposes dark-mode
+ *   variable values via [data-theme="dark"] block) and AFTER
+ *   the mode-specific premium stylesheets (alphahub-premium,
+ *   terminal-premium, regression-results, regression-clarity)
+ *   so we can override their light-mode values where needed.
+ *
+ * SCOPE / NON-OVERLAP:
+ *   - This file ONLY defines rules gated on
+ *     `[data-theme="dark"] ...` selectors. It NEVER touches
+ *     :root variables; tokens.css is the sole owner of those.
+ *   - Brand --orange-500 is intentionally NOT redefined; the
+ *     orange ramp stays identical in dark mode.
+ *   - Hairline/ink/surface tokens are not re-overridden here;
+ *     downstream selectors consume the tokens.css dark values.
+ *
+ * SMOOTH TRANSITIONS:
+ *   We apply a 200ms ease transition to background-color,
+ *   color, and border-color on a curated set of selectors
+ *   (not :root *) so theme flips feel smooth without
+ *   degrading scroll/interaction performance.
+ * ============================================================ */
+
+/* ----------------------------------------------------------
+ * Global smooth transition on theme-relevant properties only.
+ * We list the most common surfaces explicitly (cards, panels,
+ * inputs, buttons, code) rather than using `:root *`, which
+ * would cascade onto every animated element and visibly lag
+ * Plotly hover overlays + drawer slide-ins.
+ * ---------------------------------------------------------- */
+html.pfm-theme-transition,
+html.pfm-theme-transition body,
+html.pfm-theme-transition .term-card,
+html.pfm-theme-transition .term-mini-card,
+html.pfm-theme-transition .term-side-card,
+html.pfm-theme-transition .term-strip-block,
+html.pfm-theme-transition .alphahub-card,
+html.pfm-theme-transition .alphahub-detail,
+html.pfm-theme-transition .alphahub-fs-card,
+html.pfm-theme-transition #pfm-fit-summary-card,
+html.pfm-theme-transition .pfm-rxp-card,
+html.pfm-theme-transition .pfm-rxl-card,
+html.pfm-theme-transition nav.top,
+html.pfm-theme-transition input,
+html.pfm-theme-transition select,
+html.pfm-theme-transition textarea,
+html.pfm-theme-transition button,
+html.pfm-theme-transition .pfm-theme-toggle {
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease;
+}
+
+/* ----------------------------------------------------------
+ * Toggle button (auto-injected by theme-toggle.js)
+ * ---------------------------------------------------------- */
+.pfm-theme-toggle {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 9999;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  border-radius: 999px;
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.14));
+  background: var(--surface, #ffffff);
+  color: var(--ink, #0f172a);
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  -webkit-appearance: none;
+  appearance: none;
+  line-height: 1;
+}
+
+.pfm-theme-toggle:hover {
+  border-color: var(--hairline-strong, rgba(15, 23, 42, 0.22));
+}
+
+.pfm-theme-toggle:focus-visible {
+  outline: 2px solid var(--orange-500, #f97316);
+  outline-offset: 2px;
+}
+
+.pfm-theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  pointer-events: none;
+}
+
+.pfm-theme-toggle .pfm-theme-toggle-sun { display: none; }
+.pfm-theme-toggle .pfm-theme-toggle-moon { display: block; }
+
+[data-theme="dark"] .pfm-theme-toggle .pfm-theme-toggle-sun { display: block; }
+[data-theme="dark"] .pfm-theme-toggle .pfm-theme-toggle-moon { display: none; }
+
+[data-theme="dark"] .pfm-theme-toggle {
+  background: #14171f;
+  color: #f8fafc;
+  border-color: rgba(248, 250, 252, 0.14);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* ----------------------------------------------------------
+ * Page chrome in dark mode
+ * ---------------------------------------------------------- */
+[data-theme="dark"] body {
+  background: #07090d;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] nav.top {
+  background: rgba(8, 10, 14, 0.86);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] nav.top a,
+[data-theme="dark"] nav.top button {
+  color: #e2e8f0;
+}
+
+/* ----------------------------------------------------------
+ * Terminal density tables — lighter row hairlines for dark.
+ * Matches T64/T65 selectors so dense tables stay legible.
+ * ---------------------------------------------------------- */
+[data-theme="dark"] .term-card {
+  background: #0f172a;            /* slate-900 */
+  border: 1px solid #1e293b;      /* slate-800 */
+  color: #e2e8f0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .term-mini-card,
+[data-theme="dark"] .term-side-card,
+[data-theme="dark"] .term-strip-block,
+[data-theme="dark"] .term-list-pane,
+[data-theme="dark"] .term-detail-pane {
+  background: #0f172a;
+  border-color: #1e293b;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .term-card h2,
+[data-theme="dark"] .term-card h3,
+[data-theme="dark"] .term-card h4 {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .term-card .term-sub,
+[data-theme="dark"] .term-card .term-muted,
+[data-theme="dark"] .term-card .term-label,
+[data-theme="dark"] .term-card .term-hint {
+  color: #94a3b8;
+}
+
+/* Row hairlines: lighter (more transparent) on dark so dense
+   tables don't get a heavy ladder effect. */
+[data-theme="dark"] .tm-row,
+[data-theme="dark"] .tm-th,
+[data-theme="dark"] .term-related-table tr,
+[data-theme="dark"] .term-tape-table tr,
+[data-theme="dark"] .term-sentlb-table tr,
+[data-theme="dark"] .term-mover-row,
+[data-theme="dark"] .term-jump-row,
+[data-theme="dark"] .term-sentlb-row,
+[data-theme="dark"] .term-upcoming-row,
+[data-theme="dark"] .term-kalshi-row,
+[data-theme="dark"] .term-search-row,
+[data-theme="dark"] .term-corr-row,
+[data-theme="dark"] .term-fair-row,
+[data-theme="dark"] .term-bucket-row {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .tm-row:hover,
+[data-theme="dark"] .term-related-table tr:hover,
+[data-theme="dark"] .term-mover-row:hover,
+[data-theme="dark"] .term-sentlb-row:hover,
+[data-theme="dark"] .term-search-row:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+[data-theme="dark"] .tm-cell,
+[data-theme="dark"] .tm-th,
+[data-theme="dark"] .tx-num,
+[data-theme="dark"] .num,
+[data-theme="dark"] .num-lg,
+[data-theme="dark"] .num-md,
+[data-theme="dark"] .num-sm {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .tm-th {
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+[data-theme="dark"] .tm-pill--live {
+  background: rgba(34, 197, 94, 0.16);
+  color: #4ade80;
+}
+
+[data-theme="dark"] .tm-pill--stale,
+[data-theme="dark"] .tm-pill--error {
+  background: rgba(239, 68, 68, 0.16);
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .tm-pill--neutral {
+  background: rgba(148, 163, 184, 0.16);
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .tm-delta--up { color: #4ade80; }
+[data-theme="dark"] .tm-delta--down { color: #fca5a5; }
+[data-theme="dark"] .tm-delta--flat { color: #94a3b8; }
+
+/* Sticky section nav + sidebar (T64) */
+[data-theme="dark"] .pfm-homepage-tabs,
+[data-theme="dark"] .tm-section-nav {
+  background: rgba(8, 10, 14, 0.84);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .term-side {
+  background: #0b0d12;
+  border-right-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ----------------------------------------------------------
+ * Strategies / alpha Hub cards — deeper shadows on dark
+ * ---------------------------------------------------------- */
+[data-theme="dark"] .alphahub-card {
+  background: #0c0c0c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.6),
+    0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .alphahub-card:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.7),
+    0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .alphahub-card .ah-title,
+[data-theme="dark"] .alphahub-card h3,
+[data-theme="dark"] .alphahub-card h4 {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .alphahub-card .ah-sub,
+[data-theme="dark"] .alphahub-card .ah-muted,
+[data-theme="dark"] .alphahub-card .ah-label {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .alphahub-detail,
+[data-theme="dark"] .alphahub-top-panel {
+  background: #0c0c0c;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+}
+
+/* Strategy detail fullscreen modal (T67) */
+[data-theme="dark"] .alphahub-fs-overlay {
+  background: rgba(0, 0, 0, 0.72);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+[data-theme="dark"] .alphahub-fs-card,
+[data-theme="dark"] #alphahub-fs-card {
+  background: #0c0c0c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.7),
+    0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .alphahub-fs-card h1,
+[data-theme="dark"] .alphahub-fs-card h2,
+[data-theme="dark"] .alphahub-fs-card h3,
+[data-theme="dark"] .alphahub-fs-card h4 {
+  color: #f8fafc;
+}
+
+/* Live Edge cards */
+[data-theme="dark"] .le-card,
+[data-theme="dark"] .live-edge-card {
+  background: #0c0c0c;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .le-row {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .le-row:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+/* Strategies section buttons / sub-tabs */
+[data-theme="dark"] .strat-section,
+[data-theme="dark"] .alphahub-sub-tab {
+  background: #11141b;
+  color: #cbd5e1;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .strat-section.active,
+[data-theme="dark"] .alphahub-sub-tab.active {
+  background: #0a0a0c;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+/* Arb live monitor — keep monitor cards dark even on light mode by default,
+   but here we tighten hairlines for explicit dark. */
+[data-theme="dark"] .arblive-card,
+[data-theme="dark"] .arblive-row {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ----------------------------------------------------------
+ * Regression sticky summary card — dark glass
+ * ---------------------------------------------------------- */
+[data-theme="dark"] #pfm-fit-summary-card {
+  background: rgba(20, 23, 31, 0.82);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  backdrop-filter: blur(14px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f1f5f9;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 14px 32px rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="dark"] #pfm-fit-summary-card .pfm-fs-label,
+[data-theme="dark"] #pfm-fit-summary-card .pfm-fs-muted {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] #pfm-fit-summary-card .pfm-fs-value,
+[data-theme="dark"] #pfm-fit-summary-card .pfm-fs-headline {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] #pfm-fit-summary-card .pfm-fs-verdict {
+  color: #e2e8f0;
+}
+
+/* Regression detail clarity (T62) */
+[data-theme="dark"] [data-mode-pane="regression"] table.coef,
+[data-theme="dark"] [data-mode-pane="regression"] #coef-table,
+[data-theme="dark"] [data-mode-pane="regression"] #result-coef-table {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] [data-mode-pane="regression"] .coef-row {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] [data-mode-pane="regression"] .coef-row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+[data-theme="dark"] [data-mode-pane="regression"] .vif-chip,
+[data-theme="dark"] [data-mode-pane="regression"] .p-chip {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] [data-mode-pane="regression"] .residual-stats,
+[data-theme="dark"] [data-mode-pane="regression"] #diag-pills {
+  background: #11141b;
+  border-color: rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] [data-mode-pane="regression"] .r2-gauge {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Regression plain-language card (T63) */
+[data-theme="dark"] .pfm-rxp-card {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .pfm-rxp-card .pfm-rxp-bullet {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .pfm-rxp-card .pfm-rxp-mode-toggle {
+  background: #11141b;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+}
+
+/* Regression loading card (T69) */
+[data-theme="dark"] .pfm-rxl-card {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .pfm-rxl-dot {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .pfm-rxl-dot.active {
+  background: var(--orange-500, #f97316);
+}
+
+/* ----------------------------------------------------------
+ * Inputs, selects, buttons — dark surfaces
+ * ---------------------------------------------------------- */
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] input[type="search"],
+[data-theme="dark"] input[type="number"],
+[data-theme="dark"] input[type="email"],
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background: #11141b;
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #64748b;
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus,
+[data-theme="dark"] select:focus {
+  border-color: var(--orange-500, #f97316);
+  outline: 2px solid rgba(249, 115, 22, 0.25);
+  outline-offset: 0;
+}
+
+[data-theme="dark"] button:not(.pfm-theme-toggle):not(.strat-section):not(.alphahub-sub-tab) {
+  background: #14171f;
+  color: #f1f5f9;
+  border-color: rgba(255, 255, 255, 0.10);
+}
+
+[data-theme="dark"] button.primary,
+[data-theme="dark"] button.pfm-btn-primary,
+[data-theme="dark"] .pfm-btn-primary {
+  background: var(--orange-500, #f97316);
+  color: #0a0a0c;
+  border-color: var(--orange-600, #ea580c);
+}
+
+[data-theme="dark"] code,
+[data-theme="dark"] pre {
+  background: #11141b;
+  color: #e2e8f0;
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ----------------------------------------------------------
+ * Result pinner drawer (T70)
+ * ---------------------------------------------------------- */
+[data-theme="dark"] .pfm-pinboard,
+[data-theme="dark"] .pfm-pinboard-drawer {
+  background: #0c0c0c;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  box-shadow: -8px 0 28px rgba(0, 0, 0, 0.6);
+}
+
+/* ----------------------------------------------------------
+ * Plotly host containers — let dark theme bleed through.
+ * The actual Plotly re-theme is dispatched via the
+ * pfm:theme-change event and handled by plotly-theme.js.
+ * ---------------------------------------------------------- */
+[data-theme="dark"] .plotly-host,
+[data-theme="dark"] .js-plotly-plot,
+[data-theme="dark"] .plot-container {
+  background: transparent;
+}
+
+/* ============================================================
+ * End of dark-mode.css
+ * ============================================================ */

@@ -1,0 +1,65 @@
+services:
+  - type: web
+    name: pfm-api
+    runtime: docker
+    dockerfilePath: ./api/Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: REDIS_URL
+        fromService:
+          name: pfm-redis
+          type: redis
+          property: connectionString
+      - key: LOG_LEVEL
+        value: INFO
+      - key: PFM_ALERTS_DRY_RUN
+        value: "1"
+      - key: POLYMARKET_GAMMA_URL
+        value: https://gamma-api.polymarket.com
+      - key: POLYMARKET_CLOB_URL
+        value: https://clob.polymarket.com
+      - key: CACHE_TTL_SECONDS
+        value: "3600"
+      - key: ENV
+        value: production
+      # CORS: replace with the actual deployed frontend origin(s) (comma-separated).
+      # Left as a placeholder so render's secrets UI can override; Lane 1 owns the
+      # final default value (see CLAUDE.md handoff notes).
+      - key: PFM_CORS_ORIGINS
+        sync: false
+      # --- performance / prewarm toggles (mirrors fly.toml [env]) ----------
+      - key: GUNICORN_WORKERS
+        value: "4"
+      - key: PFM_FACTOR_PREWARM_ENABLED
+        value: "1"
+      - key: PFM_FACTOR_PREWARM_TOP_N
+        value: "500"
+      - key: PFM_FACTOR_PREWARM_CONCURRENCY
+        value: "20"
+      - key: PFM_FACTOR_PREWARM_LOOKBACK_DAYS
+        value: "180"
+      - key: PFM_GAMMA_PRICE_TTL_S
+        value: "300"
+      - key: PFM_GAMMA_PRICE_REFRESH_S
+        value: "60"
+      - key: PFM_ARB_FALLBACK_MIN_SPREAD
+        value: "0.5"
+      - key: PFM_ARB_FALLBACK_TOP_N
+        value: "50"
+      - key: PFM_ARB_STREAM_TICK_S
+        value: "5.0"
+      - key: PFM_ARB_STREAM_SCAN_LOG_MAX
+        value: "30"
+      # Live-signals recompute job (Strategies → Live Edge feed).
+      - key: PFM_LIVE_SIGNALS_ENABLED
+        value: "1"
+      - key: PFM_LIVE_SIGNALS_INTERVAL_S
+        value: "900"
+      - key: PFM_LIVE_SIGNALS_FETCHER
+        value: polymarket
+
+  - type: redis
+    name: pfm-redis
+    plan: starter
+    maxmemoryPolicy: allkeys-lru
+    ipAllowList: []

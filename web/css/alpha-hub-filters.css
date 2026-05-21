@@ -1,0 +1,278 @@
+/* ============================================================================
+ * alpha-hub-filters.css — chip filter bar for α Hub leaderboard
+ * Owner: W12-40
+ * Mount: <link rel="stylesheet" href="/css/alpha-hub-filters.css" />
+ *
+ * Scoped to .pfm-ahf-* namespace. Variables consumed from web/css/tokens.css
+ * (--orange, --ink, --hairline, --surface, --sp-*, --r-*, --mono, --sans).
+ * Never redefines tokens.
+ *
+ * Visual contract:
+ *   - Horizontal scroll bar above the card grid (single-row)
+ *   - Three chip groups: Tier / Theme / Sharpe slider
+ *   - Chip: 11px Mono uppercase, hairline border, pill radius
+ *   - Hover: orange-tint background
+ *   - Active: orange-filled
+ *   - Slider: 4px track, 12px thumb, orange fill
+ * ============================================================================ */
+
+.pfm-ahf-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5, 20px);
+  padding: var(--sp-3, 12px) var(--sp-4, 16px);
+  margin: 0 0 var(--sp-3, 12px) 0;
+  background: var(--surface, #fff);
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  border-radius: var(--r-3, 8px);
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--hairline-strong, rgba(15, 23, 42, 0.14)) transparent;
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  color: var(--ink, #0f172a);
+}
+
+.pfm-ahf-bar::-webkit-scrollbar {
+  height: 6px;
+}
+.pfm-ahf-bar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.pfm-ahf-bar::-webkit-scrollbar-thumb {
+  background: var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  border-radius: 3px;
+}
+
+.pfm-ahf-group {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2, 8px);
+  flex: 0 0 auto;
+  min-width: max-content;
+}
+
+.pfm-ahf-group + .pfm-ahf-group {
+  padding-left: var(--sp-5, 20px);
+  border-left: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+}
+
+.pfm-ahf-label {
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-3, #64748b);
+  margin-right: var(--sp-1, 4px);
+  flex: 0 0 auto;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.pfm-ahf-chips {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1, 4px);
+  flex: 0 0 auto;
+}
+
+.pfm-ahf-chip {
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  padding: 4px 10px;
+  border: 1px solid var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  border-radius: var(--r-pill, 999px);
+  background: transparent;
+  color: var(--ink-2, #334155);
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  transition: background-color 120ms ease, color 120ms ease,
+    border-color 120ms ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.pfm-ahf-chip:hover:not([aria-pressed="true"]) {
+  background: var(--orange-soft, #fff8f1);
+  border-color: var(--orange-400, #fb923c);
+  color: var(--orange-700, #c2410c);
+}
+
+.pfm-ahf-chip:focus-visible {
+  outline: 2px solid var(--orange, #f97316);
+  outline-offset: 2px;
+}
+
+.pfm-ahf-chip[aria-pressed="true"] {
+  background: var(--orange, #f97316);
+  border-color: var(--orange, #f97316);
+  color: #ffffff;
+}
+
+.pfm-ahf-chip[aria-pressed="true"]:hover {
+  background: var(--orange-2, #ea580c);
+  border-color: var(--orange-2, #ea580c);
+}
+
+/* ---- Sharpe slider ----------------------------------------------------- */
+
+.pfm-ahf-slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2, 8px);
+  flex: 0 0 auto;
+  min-width: 200px;
+}
+
+.pfm-ahf-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 140px;
+  height: 4px;
+  background: var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  border-radius: 2px;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  /* Use a CSS variable to draw the orange fill up to the current value. */
+  --pfm-ahf-fill: 0%;
+  background-image: linear-gradient(
+    to right,
+    var(--orange, #f97316) 0%,
+    var(--orange, #f97316) var(--pfm-ahf-fill),
+    var(--hairline-strong, rgba(15, 23, 42, 0.14)) var(--pfm-ahf-fill),
+    var(--hairline-strong, rgba(15, 23, 42, 0.14)) 100%
+  );
+}
+
+.pfm-ahf-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 2px;
+  background: transparent;
+}
+
+.pfm-ahf-slider::-moz-range-track {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--hairline-strong, rgba(15, 23, 42, 0.14));
+}
+
+.pfm-ahf-slider::-moz-range-progress {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--orange, #f97316);
+}
+
+.pfm-ahf-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--orange, #f97316);
+  border: 2px solid var(--surface, #fff);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  margin-top: -4px;
+  transition: transform 100ms ease;
+}
+
+.pfm-ahf-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--orange, #f97316);
+  border: 2px solid var(--surface, #fff);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: transform 100ms ease;
+}
+
+.pfm-ahf-slider:hover::-webkit-slider-thumb,
+.pfm-ahf-slider:focus-visible::-webkit-slider-thumb {
+  transform: scale(1.15);
+}
+.pfm-ahf-slider:hover::-moz-range-thumb,
+.pfm-ahf-slider:focus-visible::-moz-range-thumb {
+  transform: scale(1.15);
+}
+
+.pfm-ahf-slider:focus-visible {
+  outline: 2px solid var(--orange, #f97316);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.pfm-ahf-slider-value {
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink, #0f172a);
+  min-width: 32px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.pfm-ahf-slider-value[data-zero="true"] {
+  color: var(--ink-3, #64748b);
+  font-weight: 500;
+}
+
+/* ---- Reset link -------------------------------------------------------- */
+
+.pfm-ahf-reset {
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-3, #64748b);
+  background: transparent;
+  border: 0;
+  padding: 4px 6px;
+  margin-left: auto;
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: color 120ms ease;
+}
+
+.pfm-ahf-reset:hover {
+  color: var(--orange, #f97316);
+}
+
+.pfm-ahf-reset:focus-visible {
+  outline: 2px solid var(--orange, #f97316);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.pfm-ahf-reset[hidden] {
+  display: none;
+}
+
+/* ---- Responsive: stack on small screens -------------------------------- */
+
+@media (max-width: 720px) {
+  .pfm-ahf-bar {
+    gap: var(--sp-3, 12px);
+    padding: var(--sp-2, 8px) var(--sp-3, 12px);
+  }
+  .pfm-ahf-group + .pfm-ahf-group {
+    padding-left: var(--sp-3, 12px);
+  }
+  .pfm-ahf-slider {
+    width: 100px;
+  }
+}
+
+/* ============================================================================
+ * End of alpha-hub-filters.css
+ * ============================================================================ */

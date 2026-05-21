@@ -1,0 +1,513 @@
+/* ============================================================
+ * portfolio-import.css  (W11-58 / T59, wave-11)
+ *
+ * Companion stylesheet for web/js/portfolio-import.js — the drag-
+ * and-drop CSV upload UI for the T33 portfolio import endpoint.
+ *
+ * NO design tokens are REDEFINED here — only consumed. The brand
+ * orange ramp, ink ramp, hairlines, spacing scale, and radii live
+ * in web/css/tokens.css. Fallbacks are provided defensively in
+ * case this stylesheet is mounted before tokens.css (it shouldn't
+ * be; see tokens.css mount-order note).
+ *
+ * Class prefix: `pfm-pi-` (Prediction Factor Model · Portfolio
+ * Import) to avoid colliding with the alpha-hub, terminal, or
+ * arblive namespaces.
+ * ============================================================ */
+
+.pfm-pi-host {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--ink, #0f172a);
+  font-family: var(--sans, Inter, "SF Pro Text", system-ui, sans-serif);
+}
+
+.pfm-pi-widget,
+.pfm-pi-widget *,
+.pfm-pi-widget *::before,
+.pfm-pi-widget *::after {
+  box-sizing: border-box;
+}
+
+.pfm-pi-widget {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3, 12px);
+  width: 100%;
+}
+
+/* ---------- Drop zone -------------------------------------------------- */
+
+.pfm-pi-dropzone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  min-height: 200px;
+  width: 100%;
+  border: 2px dashed var(--orange, #f97316);
+  border-radius: var(--r-3, 8px);
+  background: var(--surface, #ffffff);
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease,
+    box-shadow 160ms ease;
+  outline: none;
+}
+
+.pfm-pi-dropzone:focus-visible {
+  box-shadow: 0 0 0 3px var(--focus-ring, rgba(249, 115, 22, 0.35));
+}
+
+.pfm-pi-dropzone:hover {
+  background: var(--orange-soft, #fff8f1);
+}
+
+.pfm-pi-dropzone.is-dragover {
+  background: var(--orange-soft, #fff8f1);
+  border-style: solid;
+  border-color: var(--orange-2, #ea580c);
+}
+
+.pfm-pi-dropzone-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2, 8px);
+  align-items: center;
+  pointer-events: none; /* clicks bubble to the dropzone */
+}
+
+.pfm-pi-dropzone-inner > * {
+  pointer-events: auto;
+}
+
+.pfm-pi-dropzone-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 32px;
+  padding: 0 10px;
+  border-radius: var(--r-2, 6px);
+  background: var(--orange, #f97316);
+  color: #ffffff;
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.pfm-pi-dropzone-copy {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink, #0f172a);
+}
+
+.pfm-pi-dropzone-hint {
+  font-size: 12px;
+  color: var(--ink-3, #64748b);
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+}
+
+.pfm-pi-dropzone-hint code {
+  background: var(--bg-alt, #f4f4f5);
+  padding: 1px 6px;
+  border-radius: var(--r-1, 4px);
+  font-family: inherit;
+  color: var(--ink-2, #334155);
+}
+
+.pfm-pi-link {
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--orange-2, #ea580c);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-family: inherit;
+}
+
+.pfm-pi-link:hover {
+  color: var(--orange-700, #c2410c);
+}
+
+.pfm-pi-link:focus-visible {
+  outline: 2px solid var(--focus-ring, rgba(249, 115, 22, 0.35));
+  outline-offset: 2px;
+  border-radius: var(--r-1, 4px);
+}
+
+/* ---------- Status line ----------------------------------------------- */
+
+.pfm-pi-status {
+  min-height: 18px;
+  font-size: 12px;
+  color: var(--ink-3, #64748b);
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+}
+
+.pfm-pi-status[data-kind="ok"] {
+  color: var(--pos, #16a34a);
+}
+
+.pfm-pi-status[data-kind="warn"] {
+  color: var(--warn, #f59e0b);
+}
+
+.pfm-pi-status[data-kind="error"] {
+  color: var(--neg, #dc2626);
+}
+
+/* ---------- Preview table --------------------------------------------- */
+
+.pfm-pi-preview {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2, 8px);
+  padding: var(--sp-3, 12px);
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  border-radius: var(--r-3, 8px);
+  background: var(--surface, #ffffff);
+}
+
+.pfm-pi-preview-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-3, 12px);
+  padding-bottom: var(--sp-2, 8px);
+  border-bottom: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+}
+
+.pfm-pi-preview-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ink, #0f172a);
+}
+
+.pfm-pi-preview-meta {
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 10px;
+  color: var(--ink-3, #64748b);
+  font-variant-numeric: tabular-nums;
+}
+
+.pfm-pi-preview-scroll {
+  max-height: 320px;
+  overflow: auto;
+}
+
+.pfm-pi-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.pfm-pi-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-3, #64748b);
+  background: var(--bg-alt, #f4f4f5);
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+}
+
+.pfm-pi-table tbody td {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  color: var(--ink-2, #334155);
+  vertical-align: middle;
+}
+
+.pfm-pi-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.pfm-pi-table td.pfm-pi-num {
+  width: 36px;
+  color: var(--ink-4, #94a3b8);
+  font-size: 11px;
+}
+
+.pfm-pi-cell-ticker {
+  font-weight: 600;
+  color: var(--ink, #0f172a);
+}
+
+.pfm-pi-cell-muted {
+  color: var(--ink-4, #94a3b8);
+  font-style: italic;
+}
+
+.pfm-pi-cell-bad {
+  background: rgba(220, 38, 38, 0.08);
+  color: var(--neg, #dc2626);
+  position: relative;
+  cursor: help;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--neg, #dc2626);
+  text-underline-offset: 3px;
+}
+
+.pfm-pi-cell-bad:hover {
+  background: rgba(220, 38, 38, 0.14);
+}
+
+/* ---------- Error list ------------------------------------------------ */
+
+.pfm-pi-errlist {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: var(--sp-2, 8px);
+}
+
+.pfm-pi-err {
+  font-size: 12px;
+  color: var(--neg, #dc2626);
+  line-height: 1.4;
+}
+
+/* ---------- Progress bar --------------------------------------------- */
+
+.pfm-pi-progress {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: var(--bg-alt, #f4f4f5);
+  border-radius: var(--r-pill, 999px);
+  overflow: hidden;
+}
+
+.pfm-pi-progress-bar {
+  width: 0%;
+  height: 100%;
+  background: var(--orange, #f97316);
+  transition: width 200ms ease;
+  border-radius: var(--r-pill, 999px);
+}
+
+/* ---------- Action row ----------------------------------------------- */
+
+.pfm-pi-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--sp-2, 8px);
+}
+
+.pfm-pi-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: var(--r-2, 6px);
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: 1.2;
+  transition: background-color 140ms ease, color 140ms ease,
+    border-color 140ms ease, opacity 140ms ease;
+}
+
+.pfm-pi-btn:focus-visible {
+  outline: 2px solid var(--focus-ring, rgba(249, 115, 22, 0.35));
+  outline-offset: 2px;
+}
+
+.pfm-pi-btn-primary {
+  background: var(--orange, #f97316);
+  color: #ffffff;
+  border-color: var(--orange, #f97316);
+}
+
+.pfm-pi-btn-primary:hover:not(:disabled) {
+  background: var(--orange-2, #ea580c);
+  border-color: var(--orange-2, #ea580c);
+}
+
+.pfm-pi-btn-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.pfm-pi-btn-ghost {
+  background: transparent;
+  color: var(--ink-2, #334155);
+  border-color: var(--hairline-strong, rgba(15, 23, 42, 0.14));
+}
+
+.pfm-pi-btn-ghost:hover:not(:disabled) {
+  background: var(--bg-alt, #f4f4f5);
+  color: var(--ink, #0f172a);
+}
+
+.pfm-pi-btn-ghost:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ---------- Success panel -------------------------------------------- */
+
+.pfm-pi-success {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2, 8px);
+  padding: var(--sp-3, 12px);
+  border: 1px solid var(--orange, #f97316);
+  background: var(--orange-soft, #fff8f1);
+  border-radius: var(--r-3, 8px);
+}
+
+.pfm-pi-success-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3, 12px);
+  flex-wrap: wrap;
+}
+
+.pfm-pi-success-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--r-pill, 999px);
+  background: var(--orange, #f97316);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pfm-pi-success-handle {
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 13px;
+  color: var(--ink, #0f172a);
+  font-weight: 600;
+  user-select: all;
+}
+
+.pfm-pi-success-count {
+  font-size: 12px;
+  color: var(--ink-3, #64748b);
+}
+
+.pfm-pi-success-link {
+  font-size: 13px;
+  color: var(--orange-2, #ea580c);
+  text-decoration: none;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+.pfm-pi-success-link:hover {
+  color: var(--orange-700, #c2410c);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- Dark mode tweaks ----------------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+  .pfm-pi-dropzone-icon {
+    color: #0b0d12;
+  }
+  .pfm-pi-cell-bad {
+    background: rgba(239, 68, 68, 0.18);
+  }
+  .pfm-pi-cell-bad:hover {
+    background: rgba(239, 68, 68, 0.28);
+  }
+  .pfm-pi-table thead th {
+    background: var(--bg-alt, #11141b);
+  }
+  .pfm-pi-btn-primary {
+    color: #0b0d12;
+  }
+  .pfm-pi-success-badge {
+    color: #0b0d12;
+  }
+}
+
+[data-theme="dark"] .pfm-pi-dropzone-icon,
+[data-theme="dark"] .pfm-pi-btn-primary,
+[data-theme="dark"] .pfm-pi-success-badge {
+  color: #0b0d12;
+}
+
+[data-theme="dark"] .pfm-pi-cell-bad {
+  background: rgba(239, 68, 68, 0.18);
+}
+
+[data-theme="dark"] .pfm-pi-cell-bad:hover {
+  background: rgba(239, 68, 68, 0.28);
+}
+
+/* ---------- Mobile ---------------------------------------------------- */
+
+@media (max-width: 640px) {
+  .pfm-pi-dropzone {
+    padding: 24px 16px;
+    min-height: 160px;
+  }
+
+  .pfm-pi-dropzone-copy {
+    font-size: 14px;
+  }
+
+  .pfm-pi-preview-scroll {
+    max-height: 240px;
+  }
+
+  .pfm-pi-actions {
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+    background: var(--surface, #ffffff);
+    padding: var(--sp-2, 8px) 0;
+    margin: 0 calc(-1 * var(--sp-2, 8px));
+    padding-left: var(--sp-2, 8px);
+    padding-right: var(--sp-2, 8px);
+    border-top: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  }
+
+  .pfm-pi-btn-primary {
+    flex: 1 1 auto;
+    min-height: 44px;
+  }
+
+  .pfm-pi-btn-ghost {
+    min-height: 44px;
+  }
+}
+
+/* ---------- Reduced motion ------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .pfm-pi-dropzone,
+  .pfm-pi-progress-bar,
+  .pfm-pi-btn {
+    transition: none;
+  }
+}
+
+/* ============================================================
+ * End of portfolio-import.css
+ * ============================================================ */

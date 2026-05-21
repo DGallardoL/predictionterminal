@@ -1,0 +1,35 @@
+{
+  "diversification_ratio": 1.6260649003417567,
+  "effective_n": 2.981529323466617,
+  "expected_return": 0.48977471752714574,
+  "expected_vol": 0.09105592824707366,
+  "frontier": null,
+  "marginal_risk_contribution": {
+    "bitcoin_reach_by_december__bitcoin_reach_by_december_2": 0.3771981583711293,
+    "fed_cuts_10_2026__fed_cuts_7_2026": 0.3255617498126953,
+    "fed_target_40_eoy__fed_target_45_eoy": 0.29724009181617544
+  },
+  "mc_drawdown": {
+    "block": 10,
+    "horizon_days": 60,
+    "mean": 0.02014408912449286,
+    "n_paths": 1000,
+    "p05": 0.011857516369193863,
+    "p50": 0.020282183538996953,
+    "p95": 0.031015696426717948,
+    "std": 0.006117896988977814
+  },
+  "method": "hrp",
+  "n_observations": 252,
+  "pair_ids_used": [
+    "fed_target_40_eoy__fed_target_45_eoy",
+    "fed_cuts_10_2026__fed_cuts_7_2026",
+    "bitcoin_reach_by_december__bitcoin_reach_by_december_2"
+  ],
+  "sharpe": 4.884632182544796,
+  "weights": {
+    "bitcoin_reach_by_december__bitcoin_reach_by_december_2": 0.36964825856724937,
+    "fed_cuts_10_2026__fed_cuts_7_2026": 0.3217656640855201,
+    "fed_target_40_eoy__fed_target_45_eoy": 0.30858607734723054
+  }
+}

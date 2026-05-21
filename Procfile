@@ -1,0 +1,1 @@
+web: gunicorn pfm.main:app -k uvicorn.workers.UvicornWorker -w ${WEB_CONCURRENCY:-2} -b 0.0.0.0:${PORT:-8000} --max-requests 5000 --max-requests-jitter 500 --timeout 90 --graceful-timeout 30 --keep-alive 30 --forwarded-allow-ips '*'

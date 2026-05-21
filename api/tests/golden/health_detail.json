@@ -1,0 +1,9 @@
+{
+  "auth_status": {
+    "admin_token_configured": false,
+    "autogen_token_in_use": false,
+    "enabled": false,
+    "env_detection": "off"
+  },
+  "status": "ok"
+}

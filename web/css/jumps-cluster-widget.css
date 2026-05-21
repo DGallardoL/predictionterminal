@@ -1,0 +1,343 @@
+/* ============================================================
+ * jumps-cluster-widget.css — "Today's jump clusters" panel (T58)
+ *
+ * Consumes web/js/jumps-cluster-widget.js (window.PFM.clusterWidget).
+ * Mount: any container element passed to clusterWidget.mount(el).
+ *
+ * No CSS custom-property is REDEFINED here — only consumed.
+ * Tokens live in web/css/tokens.css.
+ * ============================================================ */
+
+.pfm-jc-widget {
+  display: block;
+  width: 100%;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink, #0f172a);
+  box-sizing: border-box;
+}
+
+.pfm-jc-widget *,
+.pfm-jc-widget *::before,
+.pfm-jc-widget *::after {
+  box-sizing: inherit;
+}
+
+/* ---------- Header --------------------------------------------- */
+
+.pfm-jc-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+}
+
+.pfm-jc-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ink, #0f172a);
+  text-transform: none;
+}
+
+.pfm-jc-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 10px;
+  color: var(--ink-3, #64748b);
+  font-variant-numeric: tabular-nums;
+}
+
+.pfm-jc-updated {
+  white-space: nowrap;
+}
+
+.pfm-jc-refresh {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink-2, #334155);
+  cursor: pointer;
+  line-height: 1;
+  transition: background-color 120ms ease, color 120ms ease, transform 120ms ease;
+}
+
+.pfm-jc-refresh:hover {
+  background: var(--bg-alt, #f4f4f5);
+  color: var(--ink, #0f172a);
+}
+
+.pfm-jc-refresh:active {
+  transform: scale(0.94);
+}
+
+.pfm-jc-refresh:focus-visible {
+  outline: 2px solid var(--orange, #f97316);
+  outline-offset: 2px;
+}
+
+.pfm-jc-refresh[data-spinning="true"] svg {
+  animation: pfmJcSpin 0.9s linear infinite;
+}
+
+@keyframes pfmJcSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Body / stack --------------------------------------- */
+
+.pfm-jc-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ---------- Cluster row ---------------------------------------- */
+
+.pfm-jc-row {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.pfm-jc-row:hover {
+  background: var(--bg-alt, #f4f4f5);
+  border-color: var(--hairline-strong, rgba(15, 23, 42, 0.14));
+}
+
+.pfm-jc-row:focus-visible {
+  outline: 2px solid var(--orange, #f97316);
+  outline-offset: 2px;
+}
+
+.pfm-jc-row-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.pfm-jc-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--orange-soft, #fff8f1);
+  color: var(--orange-700, #c2410c);
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 1px solid var(--orange-100, #ffedd5);
+}
+
+.pfm-jc-size {
+  font-size: 12px;
+  color: var(--ink-2, #334155);
+  font-variant-numeric: tabular-nums;
+}
+
+.pfm-jc-size strong {
+  color: var(--ink, #0f172a);
+  font-weight: 600;
+}
+
+.pfm-jc-summary {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-2, #334155);
+}
+
+.pfm-jc-arrow {
+  display: inline-block;
+  font-size: 11px;
+  line-height: 1;
+}
+
+.pfm-jc-arrow--up {
+  color: #16a34a;
+}
+
+.pfm-jc-arrow--down {
+  color: #dc2626;
+}
+
+.pfm-jc-arrow--flat {
+  color: var(--ink-3, #64748b);
+}
+
+/* ---------- Member list ---------------------------------------- */
+
+.pfm-jc-members {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pfm-jc-member {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-2, #334155);
+  line-height: 1.4;
+}
+
+.pfm-jc-member-slug {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1 1 auto;
+}
+
+.pfm-jc-member-bps {
+  flex: 0 0 auto;
+  font-feature-settings: "tnum" 1;
+}
+
+.pfm-jc-member-bps--up {
+  color: #16a34a;
+}
+
+.pfm-jc-member-bps--down {
+  color: #dc2626;
+}
+
+/* ---------- Expand transition --------------------------------- */
+
+.pfm-jc-extra {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 220ms ease;
+  margin-top: 0;
+}
+
+.pfm-jc-row[aria-expanded="true"] .pfm-jc-extra {
+  max-height: 600px;
+  margin-top: 8px;
+}
+
+.pfm-jc-extra-inner {
+  padding-top: 8px;
+  border-top: 1px dashed var(--hairline, rgba(15, 23, 42, 0.08));
+}
+
+/* ---------- Footer --------------------------------------------- */
+
+.pfm-jc-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.pfm-jc-view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 11px;
+  color: var(--orange-700, #c2410c);
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.pfm-jc-view-all:hover {
+  text-decoration: underline;
+  background: var(--orange-soft, #fff8f1);
+}
+
+.pfm-jc-view-all:focus-visible {
+  outline: 2px solid var(--orange, #f97316);
+  outline-offset: 2px;
+}
+
+/* ---------- States: empty / error / loading -------------------- */
+
+.pfm-jc-empty,
+.pfm-jc-error {
+  padding: 16px 12px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--ink-3, #64748b);
+  border: 1px dashed var(--hairline, rgba(15, 23, 42, 0.08));
+  border-radius: 8px;
+  background: var(--bg-alt, #f4f4f5);
+}
+
+.pfm-jc-error {
+  color: #b91c1c;
+  border-color: rgba(220, 38, 38, 0.25);
+  background: rgba(254, 226, 226, 0.5);
+}
+
+/* Skeleton row mirrors the live-row layout so the swap is visually
+   stable. Uses tokens; relies on web/css/skeletons.css for shimmer. */
+
+.pfm-jc-skel-row {
+  padding: 12px;
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pfm-jc-skel-row .skel {
+  height: 12px;
+}
+
+.pfm-jc-skel-row .skel--chip {
+  width: 80px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.pfm-jc-skel-row .skel--line-md {
+  width: 60%;
+  height: 12px;
+}
+
+.pfm-jc-skel-row .skel--line-sm {
+  width: 40%;
+  height: 10px;
+}

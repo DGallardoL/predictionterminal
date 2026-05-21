@@ -1,0 +1,72 @@
+{% extends "_base.html.j2" %}
+{% block title %}Bulk Export — {{ (data.slugs | default([])) | length }} markets{% endblock %}
+{% block content %}
+  <h1>Bulk Export</h1>
+  <p class="muted">
+    {{ (data.results | default([])) | length }} markets &middot;
+    scope = {{ (data.scope | default([])) | join(", ") }}
+  </p>
+
+  {% for entry in (data.results | default([])) %}
+    <h2>{{ entry.slug }}</h2>
+
+    {% if entry.live %}
+      <h3>Live</h3>
+      <table class="pfm-tbl">
+        <thead><tr><th>Field</th><th>Value</th></tr></thead>
+        <tbody>
+          {% for k, v in entry.live.items() %}
+            <tr><td>{{ k }}</td><td>{{ v }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% endif %}
+
+    {% if entry.stats %}
+      <h3>Stats</h3>
+      <table class="pfm-tbl">
+        <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+        <tbody>
+          {% for k, v in entry.stats.items() %}
+            <tr><td>{{ k }}</td><td>{{ v }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% endif %}
+
+    {% set hist = entry.history | default([]) %}
+    {% if hist %}
+      <h3>History (last {{ hist[-30:] | length }} bars)</h3>
+      {# Sparkline if we have ≥2 points. #}
+      {% if hist | length >= 2 %}
+        {% set prices = [] %}
+        {% for row in hist %}
+          {% set _ = prices.append(row.p | default(0.0) | float) %}
+        {% endfor %}
+        {% set lo = prices | min %}
+        {% set hi = prices | max %}
+        {% set rng = (hi - lo) if (hi > lo) else 1.0 %}
+        {% set n = prices | length %}
+        {% set w = 480 %}{% set h = 50 %}
+        <svg xmlns="http://www.w3.org/2000/svg" width="{{ w }}" height="{{ h }}"
+             viewBox="0 0 {{ w }} {{ h }}" style="background:#fafafa;border:1px solid #ddd;">
+          <polyline fill="none" stroke="#14213d" stroke-width="1.2"
+            points="{% for v in prices %}{{ "%.2f" | format(loop.index0 * (w / (n - 1))) }},{{ "%.2f" | format(h - ((v - lo) / rng) * (h - 4) - 2) }} {% endfor %}"/>
+        </svg>
+      {% endif %}
+      <table class="pfm-tbl">
+        <thead><tr><th>t</th><th>p</th></tr></thead>
+        <tbody>
+          {% for row in hist[-30:] %}
+            <tr>
+              <td>{{ row.t | default("") }}</td>
+              <td>{{ "%.4f" | format(row.p | default(0.0) | float) }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% endif %}
+
+    {% if not loop.last %}<div class="pagebreak"></div>{% endif %}
+  {% endfor %}
+{% endblock %}

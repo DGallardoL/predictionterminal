@@ -1,0 +1,44 @@
+{% extends "_base.html.j2" %}
+{% block title %}History — {{ data.slug | default("(unknown)") }}{% endblock %}
+{% block content %}
+  <h1>Price History: {{ data.slug | default("(unknown)") }}</h1>
+  <div class="kv"><span class="k">fidelity:</span><span class="v">{{ data.fidelity | default("—") }}</span></div>
+  <div class="kv"><span class="k">bars:</span><span class="v">{{ (data.history | default([])) | length }}</span></div>
+
+  {% set hist = data.history | default([]) %}
+  {% if hist %}
+    {# Build a tiny SVG sparkline from min/max-normalised prices. #}
+    {% set prices = [] %}
+    {% for row in hist %}
+      {% set _ = prices.append(row.p | default(0.0) | float) %}
+    {% endfor %}
+    {% set lo = prices | min %}
+    {% set hi = prices | max %}
+    {% set rng = (hi - lo) if (hi > lo) else 1.0 %}
+    {% set n = prices | length %}
+    {% set w = 600 %}
+    {% set h = 80 %}
+    <h2>Sparkline</h2>
+    <svg xmlns="http://www.w3.org/2000/svg" width="{{ w }}" height="{{ h }}"
+         viewBox="0 0 {{ w }} {{ h }}" style="background:#fafafa;border:1px solid #ddd;">
+      <polyline fill="none" stroke="#14213d" stroke-width="1.4"
+        points="{% for v in prices %}{{ "%.2f" | format(loop.index0 * (w / (n - 1 if n > 1 else 1))) }},{{ "%.2f" | format(h - ((v - lo) / rng) * (h - 4) - 2) }} {% endfor %}"/>
+    </svg>
+
+    <h2>Bars</h2>
+    <table class="pfm-tbl">
+      <thead><tr><th>#</th><th>t</th><th>p</th></tr></thead>
+      <tbody>
+        {% for row in hist %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ row.t | default("") }}</td>
+            <td>{{ "%.4f" | format(row.p | default(0.0) | float) }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p class="muted">No history available.</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,6 @@
+{
+  "poll_interval": 240,
+  "threshold": 0.91,
+  "min_alert_profit": 1.0,
+  "events": []
+}

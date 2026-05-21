@@ -1,0 +1,172 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  # Weekly slug-catalog health check + manual trigger. Live HTTP calls keep
+  # this off PR runs (flaky + slow).
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+# Cancel superseded runs of the same branch.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint (ruff)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: api/requirements.txt
+      - name: Install ruff
+        run: python -m pip install --upgrade pip 'ruff>=0.8'
+      - name: ruff check
+        working-directory: api
+        run: ruff check .
+      - name: ruff format --check
+        working-directory: api
+        run: ruff format --check .
+
+  typecheck:
+    # mypy is currently non-blocking — see CLAUDE.md "code quality" priorities.
+    # We still run it on every PR so the error count is visible in the logs and
+    # regressions show up in the diff. Once the count is under ~50 we'll drop
+    # the `|| echo` and gate merges on it.
+    name: Type check (mypy, non-blocking)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: api/requirements.txt
+      - name: Install dependencies
+        working-directory: api
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e '.[dev]'
+      - name: mypy (non-blocking)
+        working-directory: api
+        run: |
+          mypy src/pfm --no-pretty || echo "mypy errors present (non-blocking for now)"
+
+  test:
+    name: Tests (pytest + coverage)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: api/requirements.txt
+      - name: Install dependencies
+        working-directory: api
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e '.[dev]'
+      - name: Audit dependencies
+        run: |
+          pip install pip-audit
+          pip-audit --requirement api/requirements.txt --strict
+      - name: Run pytest with coverage
+        working-directory: api
+        run: |
+          pytest --cov=pfm --cov-report=term-missing --cov-report=xml --cov-fail-under=70 -q
+      - name: Upload coverage XML
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-xml
+          path: api/coverage.xml
+          if-no-files-found: ignore
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./api/coverage.xml
+          fail_ci_if_error: false
+
+  build:
+    name: Docker build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs: [lint, test]
+    # Skip the docker build on scheduled slug-validation runs — nothing has
+    # changed in the source tree, so rebuilding the image wastes minutes.
+    if: github.event_name != 'schedule'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - name: docker compose build
+        run: docker compose build --pull
+      - name: Sanity-check images
+        run: docker images | head -20
+
+  validate-factors:
+    # Walks factors.yml and hits Polymarket gamma / Kalshi v2 to confirm each
+    # slug still exists upstream. Runs weekly (Mon 06:00 UTC) and on manual
+    # dispatch only — live HTTP calls would make per-PR runs flaky and slow.
+    name: Validate factor slugs (live)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: api/requirements.txt
+      - name: Install dependencies
+        working-directory: api
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e .
+      - name: Run validate_factors.py (limited)
+        working-directory: api
+        # --limit keeps the job under ~5 min while still catching the bulk of
+        # the churn. The script exits non-zero if dead share > 5% of checked.
+        run: |
+          python scripts/validate_factors.py \
+            --source polymarket,kalshi \
+            --limit 200 \
+            --workers 20 \
+            --out factor_validation_report.json
+      - name: Upload factor validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: factor-validation-report
+          path: api/factor_validation_report.json
+          if-no-files-found: warn
+      # Optional: comment on a tracking issue when dead_count > 10.
+      # Left commented to keep this job auth-free; uncomment + set
+      # FACTOR_TRACKING_ISSUE if you want notifications.
+      # - name: Notify tracking issue on high dead count
+      #   if: always()
+      #   env:
+      #     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     FACTOR_TRACKING_ISSUE: "123"
+      #   run: |
+      #     DEAD=$(jq '.meta.n_dead' api/factor_validation_report.json)
+      #     if [ "$DEAD" -gt 10 ]; then
+      #       gh issue comment "$FACTOR_TRACKING_ISSUE" \
+      #         --repo "$GITHUB_REPOSITORY" \
+      #         --body "validate-factors found $DEAD dead slugs on $(date -u +%F). See workflow run artifacts."
+      #     fi

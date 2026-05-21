@@ -1,0 +1,1502 @@
+{
+  "summary": {
+    "as_of": "2026-05-20T02:23:56Z",
+    "total_tokens": 105,
+    "rated": 56,
+    "trending": 14,
+    "too_short": 35,
+    "blacklisted_keys": 3
+  },
+  "per_token": {
+    "92366606754622534078995797765190732003960647316450324078089268695674720585270": {
+      "slug": "delaware-democratic-senate-primary-winner",
+      "token": "92366606754622534078995797765190732003960647316450324078089268695674720585270",
+      "n_diffs": 155,
+      "roll_spread": 0.0070084050632124445,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.128,
+          "ratio": 0.05475316455634722,
+          "name": "[NR] Ann Arbor Democratic mayoral primary winner? - Christopher Beardsley"
+        }
+      ]
+    },
+    "39749646121583252088902287452637238797566153713761549022607845698653055271900": {
+      "slug": "republican-nominee-for-florida-governor",
+      "token": "39749646121583252088902287452637238797566153713761549022607845698653055271900",
+      "n_diffs": 152,
+      "roll_spread": null,
+      "trending": true,
+      "opps": [
+        {
+          "displayed": 0.01,
+          "ratio": null,
+          "name": "[NR] Florida GOV (primary) [R] - Byron Donalds"
+        }
+      ]
+    },
+    "80696067879695181723058738440590110202900693348345355765041818955794977070650": {
+      "slug": "who-will-trump-speak-to-in-may",
+      "token": "80696067879695181723058738440590110202900693348345355765041818955794977070650",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.028,
+          "ratio": null,
+          "name": "Who will Donald Trump talk to in May 2026? - Kim Jong Un"
+        }
+      ]
+    },
+    "73976064209674424497496098090574579438695617456068825258135151034489132696360": {
+      "slug": "ca-34-primary-winners",
+      "token": "73976064209674424497496098090574579438695617456068825258135151034489132696360",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.21,
+          "ratio": null,
+          "name": "CA-34 primary: first place - Angela Gonzales-Torres"
+        }
+      ]
+    },
+    "40034929521089321016576428824426569655731294124356195642603962447389272700836": {
+      "slug": "ca-41-primary-winners",
+      "token": "40034929521089321016576428824426569655731294124356195642603962447389272700836",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.07,
+          "ratio": null,
+          "name": "CA-41 primary: first place - Mitch Clemmons"
+        }
+      ]
+    },
+    "100785857940864452744576443371218072847730447564241361121720225984056432071878": {
+      "slug": "which-cities-will-waymo-launch-in-by-june-30",
+      "token": "100785857940864452744576443371218072847730447564241361121720225984056432071878",
+      "n_diffs": 170,
+      "roll_spread": 0.05394060407182839,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.25,
+          "ratio": 0.21576241628731355,
+          "name": "Where will Waymo operate in 2026? - Las Vegas"
+        }
+      ]
+    },
+    "3672869549869630205324059421967062278980551039548389146769101385886200963615": {
+      "slug": "which-artists-will-release-new-albums-in-2026",
+      "token": "3672869549869630205324059421967062278980551039548389146769101385886200963615",
+      "n_diffs": 125,
+      "roll_spread": 0.08759388745502662,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.333,
+          "ratio": 0.263044707072152,
+          "name": "Who will release a new album in 2026? - Olivia Rodrigo"
+        }
+      ]
+    },
+    "112951246296996088942289284555776845449943970543760706864846701172427419005466": {
+      "slug": "which-cities-will-waymo-launch-in-by-june-30",
+      "token": "112951246296996088942289284555776845449943970543760706864846701172427419005466",
+      "n_diffs": 178,
+      "roll_spread": null,
+      "trending": true,
+      "opps": [
+        {
+          "displayed": 0.397,
+          "ratio": null,
+          "name": "Where will Waymo operate in 2026? - Detroit"
+        }
+      ]
+    },
+    "76360951015922861590733397967648491745735838233590790186126484130628220985734": {
+      "slug": "ca-40-primary-winners",
+      "token": "76360951015922861590733397967648491745735838233590790186126484130628220985734",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.26,
+          "ratio": null,
+          "name": "CA-40 primary: first place - Ken Calvert"
+        }
+      ]
+    },
+    "33155332955952891634578278971241370547565953905463429717597205277664278786659": {
+      "slug": "republican-nominee-for-florida-governor",
+      "token": "33155332955952891634578278971241370547565953905463429717597205277664278786659",
+      "n_diffs": 148,
+      "roll_spread": 0.01996565020916853,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.28,
+          "ratio": 0.07130589360417332,
+          "name": "[NR] Florida GOV (primary) [R] - James Fishback"
+        }
+      ]
+    },
+    "8417857546958031155821215581110737289791302897905295446747739284425459874523": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "8417857546958031155821215581110737289791302897905295446747739284425459874523",
+      "n_diffs": 177,
+      "roll_spread": null,
+      "trending": true,
+      "opps": [
+        {
+          "displayed": 0.01,
+          "ratio": null,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Pete Buttigie"
+        }
+      ]
+    },
+    "13816265972795740746826497273331581454008202671240956753741031515047283428438": {
+      "slug": "texas-senate-republican-primary-runoff-margin-of-victory",
+      "token": "13816265972795740746826497273331581454008202671240956753741031515047283428438",
+      "n_diffs": 62,
+      "roll_spread": null,
+      "trending": true,
+      "opps": [
+        {
+          "displayed": 0.014,
+          "ratio": null,
+          "name": "[NR] Texas Republican Senate Runoff: Margin of Victory - Paxton 9%+"
+        }
+      ]
+    },
+    "104704502228469263792218233728958962396920679853740538529971824436222989871774": {
+      "slug": "ca-04-primary-winners",
+      "token": "104704502228469263792218233728958962396920679853740538529971824436222989871774",
+      "n_diffs": 59,
+      "roll_spread": 0.01751884753402589,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.43,
+          "ratio": 0.040741505893083466,
+          "name": "CA-04 primary: first place - Mike Thompson"
+        }
+      ]
+    },
+    "73568172745930197063214755481432730578235618889397969845368070698776710302362": {
+      "slug": "how-many-more-people-leave-the-trump-cabinet-this-year",
+      "token": "73568172745930197063214755481432730578235618889397969845368070698776710302362",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.232,
+          "ratio": null,
+          "name": "[NR] How many Cabinet members will Trump say he fired in 2026? - 0"
+        }
+      ]
+    },
+    "22647293097694074110961696330608217982088778135665192579862952302358773958959": {
+      "slug": "ca-03-primary-winners",
+      "token": "22647293097694074110961696330608217982088778135665192579862952302358773958959",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.33,
+          "ratio": null,
+          "name": "CA-03 primary: first place - Robb Tucker"
+        }
+      ]
+    },
+    "20544711031185260309029549847708945732772609984073125464277707796637020265053": {
+      "slug": "who-will-trump-publicly-praise-by-may-31",
+      "token": "20544711031185260309029549847708945732772609984073125464277707796637020265053",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.313,
+          "ratio": null,
+          "name": "Who will Trump pardon? - Elon Musk"
+        }
+      ]
+    },
+    "76032385406054880046495746101391433866992686571581386305703829100934490330975": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "76032385406054880046495746101391433866992686571581386305703829100934490330975",
+      "n_diffs": 162,
+      "roll_spread": null,
+      "trending": true,
+      "opps": [
+        {
+          "displayed": 0.06,
+          "ratio": null,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - J.B. Pritzker"
+        }
+      ]
+    },
+    "82042888342236205868575993963406299500218543475833577355236426115473554512436": {
+      "slug": "ca-13-primary-winners",
+      "token": "82042888342236205868575993963406299500218543475833577355236426115473554512436",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.13,
+          "ratio": null,
+          "name": "California District 13 HOUSE (primary) - Kevin Lincoln II"
+        }
+      ]
+    },
+    "101167667500323933802644689098772330249433922852837065419578800198450116063379": {
+      "slug": "somaliland-parliamentary-election-winner",
+      "token": "101167667500323933802644689098772330249433922852837065419578800198450116063379",
+      "n_diffs": 142,
+      "roll_spread": 0.0709949288149719,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.07,
+          "ratio": 1.0142132687853127,
+          "name": "[NR] Will Trump recognize Somaliland? - No election before 2027"
+        }
+      ]
+    },
+    "2768157937874120034987983870820709545624694476148510359495906319046874484208": {
+      "slug": "ca-48-primary-winners",
+      "token": "2768157937874120034987983870820709545624694476148510359495906319046874484208",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.29,
+          "ratio": null,
+          "name": "CA-48 primary: first place - Ammar Campa-Najjar"
+        }
+      ]
+    },
+    "63952359603512671588039100562167629340955465989056994563377753262516997774087": {
+      "slug": "which-cities-will-waymo-launch-in-by-june-30",
+      "token": "63952359603512671588039100562167629340955465989056994563377753262516997774087",
+      "n_diffs": 169,
+      "roll_spread": 0.01756953818375078,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.485,
+          "ratio": 0.036225851925259345,
+          "name": "Where will Waymo operate in 2026? - Washington DC"
+        }
+      ]
+    },
+    "16161781003518677420129378187847783436189938581234209947056925099320314749910": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "16161781003518677420129378187847783436189938581234209947056925099320314749910",
+      "n_diffs": 165,
+      "roll_spread": 0.011228031499246447,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.0,
+          "ratio": null,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Gavin Newsom"
+        }
+      ]
+    },
+    "15495141874216560499919484262797256722436698135046452261122506723922805216854": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "15495141874216560499919484262797256722436698135046452261122506723922805216854",
+      "n_diffs": 174,
+      "roll_spread": null,
+      "trending": true,
+      "opps": [
+        {
+          "displayed": 0.28,
+          "ratio": null,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Cory Booker"
+        }
+      ]
+    },
+    "41849906692032360799797223364564797044758452435491696773457316486952738777687": {
+      "slug": "who-will-advance-from-the-california-governor-primary",
+      "token": "41849906692032360799797223364564797044758452435491696773457316486952738777687",
+      "n_diffs": 151,
+      "roll_spread": 0.055769088388491234,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.11,
+          "ratio": 0.5069917126226475,
+          "name": "Who will lead the next qualifying poll in the 2026 California governor's race? -"
+        },
+        {
+          "displayed": 0.23,
+          "ratio": 0.24247429734126622,
+          "name": "California GOV (primary) - Steve Hilton"
+        }
+      ]
+    },
+    "77241659415686939564612148424541346595244402669378807188527447282448213774877": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "77241659415686939564612148424541346595244402669378807188527447282448213774877",
+      "n_diffs": 165,
+      "roll_spread": 0.042489634957419385,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.15,
+          "ratio": 0.2832642330494626,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Mark Kelly"
+        }
+      ]
+    },
+    "82774011037486758114958733503343840845322255425504000059681012296351430690731": {
+      "slug": "which-company-has-the-best-coding-ai-model-end-of-may",
+      "token": "82774011037486758114958733503343840845322255425504000059681012296351430690731",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.523,
+          "ratio": null,
+          "name": "[NR] Which AI company will have the best coding model at the end of 2026? - Anth"
+        }
+      ]
+    },
+    "63518878584392985141839385022757253264978524326701424116517779008842551022122": {
+      "slug": "highest-temperature-in-ankara-on-may-20-2026",
+      "token": "63518878584392985141839385022757253264978524326701424116517779008842551022122",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.338,
+          "ratio": null,
+          "name": "[NR] Highest temperature in Oklahoma City on May 20, 2026? - 13\u00b0C or below"
+        }
+      ]
+    },
+    "26021311865799640399229658117780477223350788089736498086513988252294905748370": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "26021311865799640399229658117780477223350788089736498086513988252294905748370",
+      "n_diffs": 161,
+      "roll_spread": 0.04431680935984375,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.24,
+          "ratio": 0.1846533723326823,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Gretchen Whit"
+        }
+      ]
+    },
+    "21892918566477480200155854255443225580146195615682253469077750770879493669279": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "21892918566477480200155854255443225580146195615682253469077750770879493669279",
+      "n_diffs": 144,
+      "roll_spread": 0.019522266290543246,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.15,
+          "ratio": 0.130148441936955,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Kamala Harris"
+        }
+      ]
+    },
+    "53569973688291015761411742628954563413545963332714589867640375981612444617694": {
+      "slug": "which-cities-will-waymo-launch-in-by-june-30",
+      "token": "53569973688291015761411742628954563413545963332714589867640375981612444617694",
+      "n_diffs": 169,
+      "roll_spread": 0.0229090449169916,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.3,
+          "ratio": 0.07636348305663868,
+          "name": "Where will Waymo operate in 2026? - Denver"
+        }
+      ]
+    },
+    "10848309958144906124352987451423687727064816050693397289200523290645737068343": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "10848309958144906124352987451423687727064816050693397289200523290645737068343",
+      "n_diffs": 155,
+      "roll_spread": null,
+      "trending": true,
+      "opps": [
+        {
+          "displayed": 0.4,
+          "ratio": null,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Jared Polis"
+        }
+      ]
+    },
+    "94495166556994695319220591877877326867271103412306477867919432683718476975192": {
+      "slug": "brazil-presidential-election-first-round-margin-of-victory",
+      "token": "94495166556994695319220591877877326867271103412306477867919432683718476975192",
+      "n_diffs": 88,
+      "roll_spread": 0.06985682000782312,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.37,
+          "ratio": 0.18880221623735977,
+          "name": "[NR] Brazil Presidential Election First Round: Margin of Victory - Fl\u00e1vio Bolson"
+        }
+      ]
+    },
+    "112393989023250176814680066380110594891242242518527762105666760152448041311098": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "112393989023250176814680066380110594891242242518527762105666760152448041311098",
+      "n_diffs": 175,
+      "roll_spread": null,
+      "trending": true,
+      "opps": [
+        {
+          "displayed": 0.4,
+          "ratio": null,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Wes Moore"
+        }
+      ]
+    },
+    "69990689797324339924658269437175771684372791126214397571224820822755549298158": {
+      "slug": "ca-48-primary-winners",
+      "token": "69990689797324339924658269437175771684372791126214397571224820822755549298158",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.67,
+          "ratio": null,
+          "name": "CA-48 primary: first place - Marni von Wilpert"
+        }
+      ]
+    },
+    "99864248888588815367883723582136745150539385369701691402924437187249818385589": {
+      "slug": "california-governor-primary-election-first-place",
+      "token": "99864248888588815367883723582136745150539385369701691402924437187249818385589",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.38,
+          "ratio": null,
+          "name": "[NR] California GOV (primary) - Xavier Becerra"
+        }
+      ]
+    },
+    "71018284257882247736582119908244632834074727440744495552766034637961488924684": {
+      "slug": "who-will-advance-from-the-california-governor-primary",
+      "token": "71018284257882247736582119908244632834074727440744495552766034637961488924684",
+      "n_diffs": 146,
+      "roll_spread": 0.035216503914694296,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.027,
+          "ratio": 1.3043149598034924,
+          "name": "California GOV (primary) - Xavier Becerra"
+        },
+        {
+          "displayed": 0.235,
+          "ratio": 0.14985746346678425,
+          "name": "Who will lead the next qualifying poll in the 2026 California governor's race? -"
+        }
+      ]
+    },
+    "92908734622924170121067085245493963856800007522038860716149505423587416434367": {
+      "slug": "which-film-will-get-the-most-oscar-nominations-at-the-99th-academy-awards",
+      "token": "92908734622924170121067085245493963856800007522038860716149505423587416434367",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.358,
+          "ratio": null,
+          "name": "[NR] Oscar nominations for Achievement in Casting? - Wild Horse Nine"
+        }
+      ]
+    },
+    "40366426079868741411865906670728391232963702470225780928090803634239333814309": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "40366426079868741411865906670728391232963702470225780928090803634239333814309",
+      "n_diffs": 160,
+      "roll_spread": 0.0010194646517171072,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.1,
+          "ratio": 0.010194646517171072,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Josh Shapiro"
+        }
+      ]
+    },
+    "49100155288255713531280332748049097097613379788560462245718736090008547142642": {
+      "slug": "next-james-bond-actor-635",
+      "token": "49100155288255713531280332748049097097613379788560462245718736090008547142642",
+      "n_diffs": 240,
+      "roll_spread": 0.04834635221492454,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.552,
+          "ratio": 0.0875839714038488,
+          "name": "[NR] Who will be the next James Bond? - Callum Turner"
+        }
+      ]
+    },
+    "27052546636078261666536456010311223748318359167685268182165029786860238099921": {
+      "slug": "ca-04-primary-winners",
+      "token": "27052546636078261666536456010311223748318359167685268182165029786860238099921",
+      "n_diffs": 63,
+      "roll_spread": null,
+      "trending": true,
+      "opps": [
+        {
+          "displayed": 0.499,
+          "ratio": null,
+          "name": "CA-04 primary: first place - Eric Jones"
+        }
+      ]
+    },
+    "82637035518082328879794274631097316043977247737892403243581478085869453589088": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "82637035518082328879794274631097316043977247737892403243581478085869453589088",
+      "n_diffs": 160,
+      "roll_spread": 0.003634763067248186,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.48,
+          "ratio": 0.007572423056767054,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Jon Ossoff"
+        }
+      ]
+    },
+    "36076722562614500292739765580530452371911611190241029657346471775738324595052": {
+      "slug": "which-guests-will-appear-on-the-uponly-podcast-before-2027",
+      "token": "36076722562614500292739765580530452371911611190241029657346471775738324595052",
+      "n_diffs": 122,
+      "roll_spread": 0.09858401259144055,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.17,
+          "ratio": 0.5799059564202385,
+          "name": "Which guests will appear on the UpOnly podcast by 2027? - Brian Armstrong"
+        }
+      ]
+    },
+    "3518357448915052288685616207440998304017065390665737839162271434669478972786": {
+      "slug": "which-parties-will-be-part-of-the-next-government-of-new-zealand",
+      "token": "3518357448915052288685616207440998304017065390665737839162271434669478972786",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.44,
+          "ratio": null,
+          "name": "Which party will win the next UK general election? - National Party"
+        }
+      ]
+    },
+    "62201850260596518916020825552406655585040993346727301701659860147648842953511": {
+      "slug": "argentina-official-usd-exchange-rate-end-of-2026",
+      "token": "62201850260596518916020825552406655585040993346727301701659860147648842953511",
+      "n_diffs": 85,
+      "roll_spread": 0.06793015783666306,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.51,
+          "ratio": 0.1331963879150256,
+          "name": "[NR] USD/IRR on May 29, 2026 - 1600.00+"
+        }
+      ]
+    },
+    "101697674408392508868839392651267914756174014745618631438288885144564007207545": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "101697674408392508868839392651267914756174014745618631438288885144564007207545",
+      "n_diffs": 160,
+      "roll_spread": 0.014457756726399457,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.41,
+          "ratio": 0.03526282128390112,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Alexandria Oc"
+        }
+      ]
+    },
+    "78981426090035567523591416855669099778462601359531174594468565494703064208791": {
+      "slug": "who-will-place-first-in-the-primary-for-nancy-pelosis-congressional-seat-ca-11",
+      "token": "78981426090035567523591416855669099778462601359531174594468565494703064208791",
+      "n_diffs": 172,
+      "roll_spread": 0.006487938018355752,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.649,
+          "ratio": 0.00999682283259746,
+          "name": "[NR] Who will advance from the CA-11 primary? - Saikat Chakrabarti"
+        }
+      ]
+    },
+    "16976595754865702888942253430173145813500518669245701188211359895815715104826": {
+      "slug": "ohio-governor-winner-2026",
+      "token": "16976595754865702888942253430173145813500518669245701188211359895815715104826",
+      "n_diffs": 188,
+      "roll_spread": 0.02770829470975963,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.31,
+          "ratio": 0.0893815958379343,
+          "name": "[NR] Ohio Secretary of State winner? - Democrat"
+        }
+      ]
+    },
+    "17320592898526544822044833295401400755961194348705170492538425349376048824877": {
+      "slug": "next-senate-majority-leader-485",
+      "token": "17320592898526544822044833295401400755961194348705170492538425349376048824877",
+      "n_diffs": 51,
+      "roll_spread": null,
+      "trending": true,
+      "opps": [
+        {
+          "displayed": 0.23,
+          "ratio": null,
+          "name": "[NR] Who will win the next Senate Democratic Leader election? - Chuck Schumer"
+        }
+      ]
+    },
+    "52230336476819183634131630379506763945656941481748456840623332270034430230150": {
+      "slug": "which-cities-will-waymo-launch-in-by-june-30",
+      "token": "52230336476819183634131630379506763945656941481748456840623332270034430230150",
+      "n_diffs": 171,
+      "roll_spread": 0.05282694627158876,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.647,
+          "ratio": 0.08164906688035356,
+          "name": "Where will Waymo operate in 2026? - London"
+        }
+      ]
+    },
+    "66439326791754631222128498834722529254569967665962764508265153666276400777966": {
+      "slug": "republican-senate-seats-after-the-2026-midterm-elections-927",
+      "token": "66439326791754631222128498834722529254569967665962764508265153666276400777966",
+      "n_diffs": 133,
+      "roll_spread": 0.0146881227568284,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.667,
+          "ratio": 0.022021173548468366,
+          "name": "[NR] How many Senate seats will Democrats hold after the Midterms? - \u226447"
+        }
+      ]
+    },
+    "102930332066322717678137770418947444828758233479058338439365957079254636234443": {
+      "slug": "texas-senate-republican-primary-runoff-margin-of-victory",
+      "token": "102930332066322717678137770418947444828758233479058338439365957079254636234443",
+      "n_diffs": 55,
+      "roll_spread": null,
+      "trending": true,
+      "opps": [
+        {
+          "displayed": 0.667,
+          "ratio": null,
+          "name": "[NR] Texas Republican Senate Runoff: Margin of Victory - Cornyn 9%+"
+        }
+      ]
+    },
+    "3104629708171062356498135654472461762731791851667035051301931240755518332250": {
+      "slug": "ohio-governor-winner-2026",
+      "token": "3104629708171062356498135654472461762731791851667035051301931240755518332250",
+      "n_diffs": 196,
+      "roll_spread": 0.039517963045178614,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.31,
+          "ratio": 0.12747730014573747,
+          "name": "[NR] Ohio Secretary of State winner? - Republican"
+        }
+      ]
+    },
+    "92069802434104292618997393220147839633288541932538398586366669501352321539390": {
+      "slug": "ca-22-primary-winners",
+      "token": "92069802434104292618997393220147839633288541932538398586366669501352321539390",
+      "n_diffs": 154,
+      "roll_spread": 0.06802756124260344,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.55,
+          "ratio": 0.12368647498655169,
+          "name": "CA-22 primary: first place - Randy Villegas"
+        }
+      ]
+    },
+    "36230592501217063846714152934009424328246443678749759887272050838006695969543": {
+      "slug": "california-governor-primary-election-first-place",
+      "token": "36230592501217063846714152934009424328246443678749759887272050838006695969543",
+      "n_diffs": 33,
+      "roll_spread": 0.06842156921664362,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.44,
+          "ratio": 0.15550356640146276,
+          "name": "[NR] California GOV (primary) - Tom Steyer"
+        }
+      ]
+    },
+    "29426895889456211375773317154316595604124202506402005583125404724814425951159": {
+      "slug": "ca-17-primary-winners",
+      "token": "29426895889456211375773317154316595604124202506402005583125404724814425951159",
+      "n_diffs": 52,
+      "roll_spread": 0.08571645800539067,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.2,
+          "ratio": 0.4285822900269533,
+          "name": "CA-17 primary: first place - Ethan Agarwal"
+        }
+      ]
+    },
+    "37290511533946529150943375679292103549152891940177149183371570358731355083864": {
+      "slug": "ca-07-primary-winners",
+      "token": "37290511533946529150943375679292103549152891940177149183371570358731355083864",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.04,
+          "ratio": null,
+          "name": "CA-07 primary: first place - Mai Vang"
+        }
+      ]
+    },
+    "73197386422190855683808847899890112720383354193439504968265722423178479955299": {
+      "slug": "brazil-presidential-election-first-round-margin-of-victory",
+      "token": "73197386422190855683808847899890112720383354193439504968265722423178479955299",
+      "n_diffs": 89,
+      "roll_spread": 0.041166268111027825,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.7,
+          "ratio": 0.05880895444432547,
+          "name": "[NR] Brazil Presidential Election First Round: Margin of Victory - Lula da Silva"
+        }
+      ]
+    },
+    "74321548422823720189117812972657453621668164518266160286445263501087633561380": {
+      "slug": "how-many-tornadoes-in-the-us-in-2026",
+      "token": "74321548422823720189117812972657453621668164518266160286445263501087633561380",
+      "n_diffs": 63,
+      "roll_spread": 0.010609137571670438,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.702,
+          "ratio": 0.015112731583576124,
+          "name": "[NR] How many border encounters in May 2026? - 1050\u20131099"
+        }
+      ]
+    },
+    "86723395069155086777466988839735092796211690103276380396607837858611084865187": {
+      "slug": "ca-06-primary-winners",
+      "token": "86723395069155086777466988839735092796211690103276380396607837858611084865187",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.59,
+          "ratio": null,
+          "name": "CA-06 primary: first place - Richard Pan"
+        }
+      ]
+    },
+    "79825167762459488478206414509755176562349257846652439268369145558426777722770": {
+      "slug": "ohio-senate-election-winner",
+      "token": "79825167762459488478206414509755176562349257846652439268369145558426777722770",
+      "n_diffs": 204,
+      "roll_spread": 0.00537988140228993,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.05,
+          "ratio": 0.1075976280457986,
+          "name": "[NR] Ohio Senate winner? (2028) - Democrat"
+        }
+      ]
+    },
+    "40954019003777435604558052006970196562562286344248079973501454612721846767592": {
+      "slug": "which-states-will-use-new-congressional-maps-in-the-midterms",
+      "token": "40954019003777435604558052006970196562562286344248079973501454612721846767592",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.07,
+          "ratio": null,
+          "name": "Which states will redistrict before the midterms? - Utah"
+        }
+      ]
+    },
+    "13180223152677155260417358329845318164707652033848879766061237977017500928379": {
+      "slug": "2026-may-1st-2nd-3rd-hottest-on-record",
+      "token": "13180223152677155260417358329845318164707652033848879766061237977017500928379",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.522,
+          "ratio": null,
+          "name": "[NR] Will 2026 be the hottest year ever? - 1st hottest"
+        }
+      ]
+    },
+    "111394826590193310622075208085123253955586587501538476190057516703346418362600": {
+      "slug": "north-carolina-senate-election-winner",
+      "token": "111394826590193310622075208085123253955586587501538476190057516703346418362600",
+      "n_diffs": 185,
+      "roll_spread": 0.00868502649776819,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.48,
+          "ratio": 0.01809380520368373,
+          "name": "[NR] North Carolina Senate winner? (2028) - Democrat"
+        }
+      ]
+    },
+    "69908185249078099348466099388148864764525845923415294308139153388799352317616": {
+      "slug": "ohio-senate-election-winner",
+      "token": "69908185249078099348466099388148864764525845923415294308139153388799352317616",
+      "n_diffs": 200,
+      "roll_spread": 0.0034359977302102396,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.02,
+          "ratio": 0.17179988651051198,
+          "name": "[NR] Ohio Senate winner? (2028) - Republican"
+        }
+      ]
+    },
+    "85255397873237558858447685287854751130109864480350032224451058169602594241557": {
+      "slug": "what-price-will-bitcoin-hit-in-may-2026",
+      "token": "85255397873237558858447685287854751130109864480350032224451058169602594241557",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.55,
+          "ratio": null,
+          "name": "Will BTC hit $75,000 before $100,000? - \u2193 75,000"
+        }
+      ]
+    },
+    "17136684850505737657652572227947013886415829191502197009254552108066874350055": {
+      "slug": "how-many-tornadoes-in-the-us-in-may",
+      "token": "17136684850505737657652572227947013886415829191502197009254552108066874350055",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.49,
+          "ratio": null,
+          "name": "[NR] How many states will redistrict before the midterms? - 410+"
+        }
+      ]
+    },
+    "111348284493447069635582987166313136972374266989696433887125483653228875691129": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "111348284493447069635582987166313136972374266989696433887125483653228875691129",
+      "n_diffs": 169,
+      "roll_spread": 0.00607492896293956,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.56,
+          "ratio": 0.010848087433820642,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Raphael Warno"
+        }
+      ]
+    },
+    "56655179006940143400521884802457589002931410995192541499281902268418198158096": {
+      "slug": "tx-02-house-election-winner",
+      "token": "56655179006940143400521884802457589002931410995192541499281902268418198158096",
+      "n_diffs": 108,
+      "roll_spread": 0.10296873232900437,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.6,
+          "ratio": 0.17161455388167396,
+          "name": "[NR] Texas House of Representatives winner - Democratic Party"
+        }
+      ]
+    },
+    "62831517509825405761763142539845746280269675872170259538293560849475982647892": {
+      "slug": "north-carolina-senate-election-winner",
+      "token": "62831517509825405761763142539845746280269675872170259538293560849475982647892",
+      "n_diffs": 197,
+      "roll_spread": 0.012625295259706798,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.5,
+          "ratio": 0.025250590519413595,
+          "name": "[NR] North Carolina Senate winner? (2028) - Republican"
+        }
+      ]
+    },
+    "58405908710254932168893032550285658051593103894302949171507576077431176701192": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "58405908710254932168893032550285658051593103894302949171507576077431176701192",
+      "n_diffs": 179,
+      "roll_spread": 0.04434540426143725,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.483,
+          "ratio": 0.0918124311830999,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Elise Stefani"
+        }
+      ]
+    },
+    "113387238875096876242426408850350538617653375950929781131630585449348321994416": {
+      "slug": "argentina-presidential-election-winner",
+      "token": "113387238875096876242426408850350538617653375950929781131630585449348321994416",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.14,
+          "ratio": null,
+          "name": "[NR] Who will win the next Argentine presidential election? - Javier Milei"
+        }
+      ]
+    },
+    "2440220104463125251518979804322171287277424498487280475108263743103966315295": {
+      "slug": "tx-02-house-election-winner",
+      "token": "2440220104463125251518979804322171287277424498487280475108263743103966315295",
+      "n_diffs": 90,
+      "roll_spread": 0.0966110657035126,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.59,
+          "ratio": 0.16374756898900442,
+          "name": "[NR] Texas House of Representatives winner - Republican Party"
+        }
+      ]
+    },
+    "43035443907656506704527037200225719721941648954979830565481550335322734318837": {
+      "slug": "who-will-xi-jinping-purge-in-2026",
+      "token": "43035443907656506704527037200225719721941648954979830565481550335322734318837",
+      "n_diffs": 92,
+      "roll_spread": 0.014307569095553686,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.822,
+          "ratio": 0.017405801819408376,
+          "name": "Who will be named as Xi Jinping's successor? - Li Xi"
+        }
+      ]
+    },
+    "63181870782405950124279961902353120579068900417542374338506218092303660288790": {
+      "slug": "what-animals-will-trump-say-in-may",
+      "token": "63181870782405950124279961902353120579068900417542374338506218092303660288790",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.763,
+          "ratio": null,
+          "name": "Who will be Trump's next Secretary of Defense? - Elephant"
+        }
+      ]
+    },
+    "20535370510756332462433575263109694145574231213604117747907874615324086102913": {
+      "slug": "michigan-democratic-senate-primary-winner",
+      "token": "20535370510756332462433575263109694145574231213604117747907874615324086102913",
+      "n_diffs": 241,
+      "roll_spread": 0.04758873922277446,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.07,
+          "ratio": 0.6798391317539207,
+          "name": "[NR] Michigan SEN (primary) [D] - Abdul El-Sayed"
+        }
+      ]
+    },
+    "4041912122563547970024635557261696068618666839090786586996637505354743961673": {
+      "slug": "michigan-democratic-senate-primary-winner",
+      "token": "4041912122563547970024635557261696068618666839090786586996637505354743961673",
+      "n_diffs": 226,
+      "roll_spread": 0.05926733866848732,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.485,
+          "ratio": 0.12220069828554087,
+          "name": "[NR] Michigan SEN (primary) [D] - Haley Stevens"
+        }
+      ]
+    },
+    "71334664885801955807825330010928919481514110131639634508060790735437273378545": {
+      "slug": "which-bills-will-become-law-in-2026",
+      "token": "71334664885801955807825330010928919481514110131639634508060790735437273378545",
+      "n_diffs": 60,
+      "roll_spread": 0.10298584959387629,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.1,
+          "ratio": 1.0298584959387629,
+          "name": "Which bills will become law in 2026? - FISA Section 702 reauthorization"
+        }
+      ]
+    },
+    "58841098442152294829476128535995472029440268937258911437185759781296325903919": {
+      "slug": "highest-temperature-in-dallas-on-may-20-2026",
+      "token": "58841098442152294829476128535995472029440268937258911437185759781296325903919",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.716,
+          "ratio": null,
+          "name": "[NR] Highest temperature in Dallas on May 20, 2026? - 73\u00b0F or below"
+        }
+      ]
+    },
+    "3924554927953214763392038796839669101622489251494732432280353079312613763061": {
+      "slug": "peak-us-national-debt-before-2027",
+      "token": "3924554927953214763392038796839669101622489251494732432280353079312613763061",
+      "n_diffs": 175,
+      "roll_spread": 0.06461779218129614,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.41,
+          "ratio": 0.15760437117389303,
+          "name": "Peak US National Debt Under Trump Administration - $41 trillion"
+        }
+      ]
+    },
+    "7611210293288054716222852057031330880102224187492530980734111495293111189452": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "7611210293288054716222852057031330880102224187492530980734111495293111189452",
+      "n_diffs": 175,
+      "roll_spread": 0.0017712961442104928,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.68,
+          "ratio": 0.0026048472708977834,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Roy Cooper"
+        }
+      ]
+    },
+    "110762863100591353331498244291136016234578918765536205666495742296352833470271": {
+      "slug": "which-countries-will-recognize-israel-by-june-30",
+      "token": "110762863100591353331498244291136016234578918765536205666495742296352833470271",
+      "n_diffs": 159,
+      "roll_spread": null,
+      "trending": true,
+      "opps": [
+        {
+          "displayed": 0.802,
+          "ratio": null,
+          "name": "Which countries will normalize relations with Israel before 2027? - Saudi Arabia"
+        }
+      ]
+    },
+    "77222455686428465162208644140197665895028163408526781903026094828441675826304": {
+      "slug": "another-sp-500-company-buys-bitcoin-by-november-30",
+      "token": "77222455686428465162208644140197665895028163408526781903026094828441675826304",
+      "n_diffs": 151,
+      "roll_spread": 0.06765244515664169,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.744,
+          "ratio": 0.0909307058557012,
+          "name": "When will any company achieve AGI? - December 31, 2026"
+        }
+      ]
+    },
+    "63952419735605866642963251139532539589881331695406506748465504655396242355156": {
+      "slug": "ca-45-primary-winners",
+      "token": "63952419735605866642963251139532539589881331695406506748465504655396242355156",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.66,
+          "ratio": null,
+          "name": "CA-45 primary: first place - Chuong Vo"
+        }
+      ]
+    },
+    "22879769232544702309459734857825459980910104747937470036552736453122914481526": {
+      "slug": "next-uk-prime-minister-in-2026-122",
+      "token": "22879769232544702309459734857825459980910104747937470036552736453122914481526",
+      "n_diffs": 81,
+      "roll_spread": null,
+      "trending": true,
+      "opps": [
+        {
+          "displayed": 0.099,
+          "ratio": null,
+          "name": "[NR] Who will be the next Prime Minister of the UK? - Andy Burnham"
+        }
+      ]
+    },
+    "72319501812650594611824491560134841888773638121349080695329813545450788583737": {
+      "slug": "what-will-trump-say-during-coast-guard-keynote",
+      "token": "72319501812650594611824491560134841888773638121349080695329813545450788583737",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.34,
+          "ratio": null,
+          "name": "What will Trump say during his keynote address at Coast Guard Academy Commenceme"
+        }
+      ]
+    },
+    "81603711149771855979072358203929648813940267866019287580546374602006831536578": {
+      "slug": "highest-temperature-in-atlanta-on-may-20-2026",
+      "token": "81603711149771855979072358203929648813940267866019287580546374602006831536578",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.59,
+          "ratio": null,
+          "name": "[NR] Highest temperature in Atlanta on May 20, 2026? - 90-91\u00b0F"
+        }
+      ]
+    },
+    "4711561748541451803333561287076868140107339984428636555925964791620495575738": {
+      "slug": "highest-temperature-in-atlanta-on-may-20-2026",
+      "token": "4711561748541451803333561287076868140107339984428636555925964791620495575738",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.47,
+          "ratio": null,
+          "name": "[NR] Highest temperature in Atlanta on May 20, 2026? - 86-87\u00b0F"
+        }
+      ]
+    },
+    "101150418432971177581229360160218601991484544552049810993061823856385271432952": {
+      "slug": "who-will-xi-jinping-purge-in-2026",
+      "token": "101150418432971177581229360160218601991484544552049810993061823856385271432952",
+      "n_diffs": 92,
+      "roll_spread": 0.004340194718086449,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.769,
+          "ratio": 0.005643946317407606,
+          "name": "Who will be named as Xi Jinping's successor? - Ding Xuexiang"
+        }
+      ]
+    },
+    "110855754174390712430691709821913019199691534588672980864389189658290207399482": {
+      "slug": "who-will-advance-from-the-california-governor-primary",
+      "token": "110855754174390712430691709821913019199691534588672980864389189658290207399482",
+      "n_diffs": 164,
+      "roll_spread": 0.03458466743430347,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.52,
+          "ratio": 0.06650897583519898,
+          "name": "California GOV (primary) - Tom Steyer"
+        },
+        {
+          "displayed": 0.47,
+          "ratio": 0.07358439879639037,
+          "name": "Who will lead the next qualifying poll in the 2026 California governor's race? -"
+        }
+      ]
+    },
+    "105988055763919295705881710688552540348426401963673920860350518079155820585325": {
+      "slug": "who-will-testify-to-congress-about-epstein",
+      "token": "105988055763919295705881710688552540348426401963673920860350518079155820585325",
+      "n_diffs": 80,
+      "roll_spread": 0.048731424893510934,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.752,
+          "ratio": 0.06480242672009433,
+          "name": "Who will testify in front of Congress in 2026? - Ghislaine Maxwell"
+        }
+      ]
+    },
+    "66227760249569918983216845998089750781110573632056431712508916648773985039168": {
+      "slug": "which-countries-will-recognize-israel-by-june-30",
+      "token": "66227760249569918983216845998089750781110573632056431712508916648773985039168",
+      "n_diffs": 151,
+      "roll_spread": 0.06582022362413459,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.813,
+          "ratio": 0.0809596846545321,
+          "name": "Which countries will normalize relations with Israel before 2027? - Lebanon"
+        }
+      ]
+    },
+    "106778536492762512710139926498769581002257358889721588369375472863173433482004": {
+      "slug": "ca-40-primary-winners",
+      "token": "106778536492762512710139926498769581002257358889721588369375472863173433482004",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.32,
+          "ratio": null,
+          "name": "CA-40 primary: first place - Esther Kim Varet"
+        }
+      ]
+    },
+    "102323527587193200373028627679524231603603797712821130364991869422397404904082": {
+      "slug": "highest-temperature-in-atlanta-on-may-20-2026",
+      "token": "102323527587193200373028627679524231603603797712821130364991869422397404904082",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.22,
+          "ratio": null,
+          "name": "[NR] Highest temperature in Atlanta on May 20, 2026? - 88-89\u00b0F"
+        }
+      ]
+    },
+    "112017410426373196594542366294030879633442709616966935158827028697910461249434": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "112017410426373196594542366294030879633442709616966935158827028697910461249434",
+      "n_diffs": 146,
+      "roll_spread": null,
+      "trending": true,
+      "opps": [
+        {
+          "displayed": 0.524,
+          "ratio": null,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Phil Murphy"
+        }
+      ]
+    },
+    "40001554280514639575248113942404775300178150008617376574462404952462535321139": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "40001554280514639575248113942404775300178150008617376574462404952462535321139",
+      "n_diffs": 160,
+      "roll_spread": 0.0018678864667303371,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.81,
+          "ratio": 0.0023060326749757246,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Jon Stewart"
+        }
+      ]
+    },
+    "42029614303640800142574266372356790410856650261671089992356708841913426601402": {
+      "slug": "who-will-announce-presidential-run-before-2027",
+      "token": "42029614303640800142574266372356790410856650261671089992356708841913426601402",
+      "n_diffs": 158,
+      "roll_spread": 0.001313929068366408,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.68,
+          "ratio": 0.0019322486299505998,
+          "name": "Who will run for the Democratic presidential nomination in 2028? - Stephen A. Sm"
+        }
+      ]
+    },
+    "88061870021564560777583271594392393680870508483773889335723665419440389817499": {
+      "slug": "which-artists-will-have-a-billboard-1-song-this-year",
+      "token": "88061870021564560777583271594392393680870508483773889335723665419440389817499",
+      "n_diffs": 115,
+      "roll_spread": 0.13656560102533605,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.559,
+          "ratio": 0.24430340076088736,
+          "name": "Who will have a #1 hit this year? - Rihanna"
+        }
+      ]
+    },
+    "57566401556019402717238885018224215823759927753773262742379213321520594287478": {
+      "slug": "highest-temperature-in-miami-on-may-20-2026",
+      "token": "57566401556019402717238885018224215823759927753773262742379213321520594287478",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.2,
+          "ratio": null,
+          "name": "[NR] Highest temperature in Miami on May 20, 2026? - 88-89\u00b0F"
+        }
+      ]
+    },
+    "98234136592037696090754422952703263693048695255543576004806870859788156954314": {
+      "slug": "what-will-trump-say-this-week-may-24",
+      "token": "98234136592037696090754422952703263693048695255543576004806870859788156954314",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.08,
+          "ratio": null,
+          "name": "What will Trump say this week? - Stupid person"
+        }
+      ]
+    },
+    "94230171906841915106704029803563020420374657103436346471561700926244621209762": {
+      "slug": "republican-house-seats-after-the-2026-midterm-elections",
+      "token": "94230171906841915106704029803563020420374657103436346471561700926244621209762",
+      "n_diffs": 118,
+      "roll_spread": 0.015351061679566493,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.51,
+          "ratio": 0.030100120940326457,
+          "name": "[NR] How many House seats will Republicans hold after the Midterms? - Below 190"
+        }
+      ]
+    },
+    "77049616014122820756629651271545265879501166098233042628825639006594307779049": {
+      "slug": "which-companies-will-be-acquired-before-2027",
+      "token": "77049616014122820756629651271545265879501166098233042628825639006594307779049",
+      "n_diffs": 171,
+      "roll_spread": 0.0627601698433197,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.53,
+          "ratio": 0.11841541479871641,
+          "name": "Which companies will be acquired this year? - Pizza Hut"
+        }
+      ]
+    },
+    "89456325563210120148726526266720979771149815464429140407703340395832382926778": {
+      "slug": "highest-temperature-in-houston-on-may-20-2026",
+      "token": "89456325563210120148726526266720979771149815464429140407703340395832382926778",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.29,
+          "ratio": null,
+          "name": "[NR] Highest temperature in Houston on May 20, 2026? - 84-85\u00b0F"
+        }
+      ]
+    },
+    "16040470176590332178266575986841073712697460370218768293287706373316090538021": {
+      "slug": "what-kind-of-product-will-openai-announce-in-2026",
+      "token": "16040470176590332178266575986841073712697460370218768293287706373316090538021",
+      "n_diffs": 88,
+      "roll_spread": 0.08079640706670892,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.28,
+          "ratio": 0.28855859666681755,
+          "name": "What kind of device will Jony Ive and OpenAI announce? - Earbuds/Headphones"
+        }
+      ]
+    },
+    "88053704628489640762425511993635091848865935014357369499929855038775441031323": {
+      "slug": "california-governor-primary-election-first-place",
+      "token": "88053704628489640762425511993635091848865935014357369499929855038775441031323",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.05,
+          "ratio": null,
+          "name": "[NR] California Governor Primary margin of victory - Xavier Becerra"
+        }
+      ]
+    },
+    "70793601446090039661054641455695184186449486414315553749871988541954441879851": {
+      "slug": "which-companies-will-have-a-1-ai-model-by-december-31",
+      "token": "70793601446090039661054641455695184186449486414315553749871988541954441879851",
+      "n_diffs": 0,
+      "roll_spread": null,
+      "trending": false,
+      "opps": [
+        {
+          "displayed": 0.05,
+          "ratio": null,
+          "name": "Which companies will have a top-ranked AI model this year? - OpenAI"
+        }
+      ]
+    }
+  },
+  "blacklist_arb_keys": [
+    "KXRECOGSOMALI-29-27_yes_0xd04271b958886773b42d0873e54ab82109461b42967a87473ee42c998612bf21",
+    "KXCAGOV2ND-26JUN02-2-XBEC_yes_0x50b747a9e8efa400cc053169e43347516b932aaf7b526bdcc8eca7b2b5ddb8a1",
+    "KXBILLS-FISA_yes_0x612126703db7fb7eaa44906b2c7de42300a6cb6e0615c1e360e96e328b6433e5"
+  ]
+}

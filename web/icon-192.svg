@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <title>Prediction Terminal</title>
+  <rect width="192" height="192" rx="32" fill="#ffffff"/>
+  <circle cx="150" cy="44" r="9" fill="#f97316"/>
+  <g font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-weight="800">
+    <text x="96" y="124" text-anchor="middle" font-size="104" fill="#f97316" letter-spacing="-6">PT</text>
+  </g>
+</svg>

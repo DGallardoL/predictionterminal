@@ -1,0 +1,61 @@
+{% extends "_base.html.j2" %}
+{% block title %}Portfolio Optimization{% endblock %}
+{% block content %}
+  <h1>Portfolio Optimization</h1>
+  <div class="kv"><span class="k">method:</span><span class="v">{{ data.method | default("?") }}</span></div>
+  <div class="kv"><span class="k">expected return:</span><span class="v">{{ "%.4f" | format(data.expected_return | default(0.0) | float) }}</span></div>
+  <div class="kv"><span class="k">expected vol:</span><span class="v">{{ "%.4f" | format(data.expected_vol | default(0.0) | float) }}</span></div>
+  <div class="kv"><span class="k">sharpe:</span><span class="v">{{ "%.3f" | format(data.sharpe | default(0.0) | float) }}</span></div>
+  <div class="kv"><span class="k">eff. N:</span><span class="v">{{ "%.2f" | format(data.effective_n | default(0.0) | float) }}</span></div>
+
+  <h2>Weights</h2>
+  {% set weights = data.weights | default({}) %}
+  {% if weights %}
+    {# Pie SVG built in Python (data.weights_pie_svg) when available; fall back to bars. #}
+    {% if data.weights_pie_svg %}
+      {{ data.weights_pie_svg | safe }}
+    {% endif %}
+    <table class="pfm-tbl">
+      <thead><tr><th>Pair</th><th>Weight</th><th>Bar</th></tr></thead>
+      <tbody>
+        {% for label, w in weights.items() %}
+          <tr>
+            <td>{{ label }}</td>
+            <td>{{ "%.4f" | format(w | float) }}</td>
+            <td>
+              <div style="background:#14213d;height:8px;width:{{ ((w | float) * 100.0 * 2) | round(1) }}px;"></div>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p class="muted">No weights available.</p>
+  {% endif %}
+
+  {% if data.frontier %}
+    <h2>Efficient Frontier (placeholder)</h2>
+    <table class="pfm-tbl">
+      <thead>
+        <tr><th>#</th><th>E[r]</th><th>σ</th><th>Sharpe</th></tr>
+      </thead>
+      <tbody>
+        {% for pt in data.frontier[:25] %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ "%.4f" | format(pt.expected_return | float) }}</td>
+            <td>{{ "%.4f" | format(pt.expected_vol | float) }}</td>
+            <td>{{ "%.3f" | format(pt.sharpe | float) }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+
+  {% if data.warnings %}
+    <h2>Warnings</h2>
+    <ul class="small">
+      {% for w in data.warnings %}<li>{{ w }}</li>{% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}

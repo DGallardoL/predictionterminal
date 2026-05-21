@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ question }} | PFM</title>
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ question }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="{{ og_image_url }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ question }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{{ og_image_url }}">
+
+  <style>
+    /* All selectors scoped to .pfm-emb- to avoid collisions with the host page. */
+    html, body { margin: 0; padding: 0; background: transparent; }
+    .pfm-emb-card {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 14px 16px 10px 16px;
+      border-radius: 8px;
+      border: 1px solid {{ '#30363d' if theme == 'dark' else '#d0d7de' }};
+      background: {{ '#0d1117' if theme == 'dark' else '#ffffff' }};
+      color: {{ '#e6edf3' if theme == 'dark' else '#1f2328' }};
+    }
+    .pfm-emb-row { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+    .pfm-emb-question { font-size: 14px; font-weight: 600; line-height: 1.3; margin: 0 0 6px 0; }
+    .pfm-emb-price { font-size: 28px; font-weight: 700; }
+    .pfm-emb-change-pos { color: #2da44e; font-size: 14px; font-weight: 600; }
+    .pfm-emb-change-neg { color: #cf222e; font-size: 14px; font-weight: 600; }
+    .pfm-emb-vol { color: {{ '#7d8590' if theme == 'dark' else '#656d76' }}; font-size: 12px; }
+    .pfm-emb-chart { width: 100%; height: 80px; margin-top: 4px; }
+    .pfm-emb-footer {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 6px; font-size: 11px;
+      color: {{ '#7d8590' if theme == 'dark' else '#656d76' }};
+    }
+    .pfm-emb-footer a { color: inherit; text-decoration: none; }
+    .pfm-emb-footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="pfm-emb-card" id="pfm-emb-root">
+    <div class="pfm-emb-question">{{ question }}</div>
+    <div class="pfm-emb-row">
+      <span class="pfm-emb-price">{{ price_pct }}</span>
+      <span class="{{ 'pfm-emb-change-pos' if change_7d_value >= 0 else 'pfm-emb-change-neg' }}">
+        {{ change_7d_str }}
+      </span>
+      <span class="pfm-emb-vol">vol {{ volume_str }}</span>
+    </div>
+    <div id="pfm-emb-chart" class="pfm-emb-chart"></div>
+    <div class="pfm-emb-footer">
+      <a href="{{ home_url }}" target="_blank" rel="noopener">PFM &middot; Prediction Factor Model</a>
+      <span>{{ slug }}</span>
+    </div>
+  </div>
+
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+  <script>
+    (function () {
+      var data = {{ history_json|safe }};
+      var theme = {{ theme_json|safe }};
+      var dark = theme === 'dark';
+      var line = {{ change_7d_value }} >= 0 ? '#2da44e' : '#cf222e';
+      var trace = {
+        x: data.map(function (_, i) { return i; }),
+        y: data,
+        type: 'scatter', mode: 'lines',
+        line: { color: line, width: 2 },
+        fill: 'tozeroy', fillcolor: line + '22',
+        hoverinfo: 'skip'
+      };
+      var layout = {
+        margin: { t: 0, l: 0, r: 0, b: 0 },
+        paper_bgcolor: 'rgba(0,0,0,0)',
+        plot_bgcolor: 'rgba(0,0,0,0)',
+        xaxis: { visible: false },
+        yaxis: { visible: false },
+        showlegend: false
+      };
+      try {
+        Plotly.newPlot('pfm-emb-chart', [trace], layout, { displayModeBar: false, staticPlot: true });
+      } catch (e) { /* CDN blocked; sparkline silently absent */ }
+
+      // Auto-resize the parent iframe.
+      function postSize() {
+        try {
+          var h = document.getElementById('pfm-emb-root').offsetHeight + 4;
+          if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ pfm: 'resize', height: h, slug: {{ slug_json|safe }} }, '*');
+          }
+        } catch (e) {}
+      }
+      window.addEventListener('load', postSize);
+      setTimeout(postSize, 250);
+
+      // Lightweight beacon for tracking embeds. Best-effort, no PII.
+      try {
+        var ref = document.referrer || '';
+        var u = new URL(window.location.href);
+        var beacon = {
+          slug: {{ slug_json|safe }},
+          referrer: ref,
+          utm_source: u.searchParams.get('utm_source'),
+          utm_medium: u.searchParams.get('utm_medium'),
+          utm_campaign: u.searchParams.get('utm_campaign'),
+          ts: new Date().toISOString()
+        };
+        var beaconUrl = {{ beacon_url_json|safe }};
+        if (beaconUrl && navigator.sendBeacon) {
+          navigator.sendBeacon(beaconUrl, new Blob([JSON.stringify(beacon)], { type: 'application/json' }));
+        }
+      } catch (e) {}
+    })();
+  </script>
+</body>
+</html>

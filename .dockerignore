@@ -1,0 +1,70 @@
+# Build context = repo root (fly.toml's dir). The api/Dockerfile only COPYs
+# api/requirements.txt, api/src and web/, but the whole root is uploaded to the
+# Docker daemon / Fly builder unless excluded. Keep the context small & clean.
+
+# --- Python envs & caches (api/.venv alone is ~1.2 GB) ---
+**/.venv/
+**/venv/
+**/env/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.egg-info/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.hypothesis/
+**/.coverage
+**/htmlcov/
+
+# --- tests (not needed in the runtime image) ---
+api/tests/
+
+# --- VCS / CI / editor / OS ---
+.git/
+.github/
+.gitignore
+.gitattributes
+.vscode/
+.idea/
+**/.DS_Store
+*.swp
+
+# --- Redis dumps (would leak state) & logs ---
+**/*.rdb
+dump.rdb
+appendonly.aof
+**/*.log
+logs/
+tmp/
+
+# --- heavy stuff irrelevant to the API+UI image ---
+# arbstuff/ holds ~18 MB of logs, *.bak, backups/ and runtime state. Exclude
+# the whole tree, then re-include ONLY the files the in-image arb engine needs
+# (the engine + the four config JSONs load_config() reads). The engine creates
+# its own runtime files (dashboard_state.json, arb_engine.log, arb_pnl_log.json,
+# arb_detection_history.json, roll_spread_cache.json, vpin_status.json, …) at
+# startup, so those are intentionally NOT re-included — dashboard_state.json in
+# particular is runtime-generated and would otherwise ship stale state.
+# Negation order matters: the `!` lines must come AFTER `arbstuff/`.
+arbstuff/
+!arbstuff/arb_engine.py
+!arbstuff/markets_config_reviewed.json
+!arbstuff/markets_config.json
+!arbstuff/markets_config_politics.json
+!arbstuff/markets_config_discovered.json
+arbstuff-full/
+cryptostuff/
+research/
+docs/
+openspec/
+monitoring/
+.coordination/
+*.HEIC
+*.bak
+*.md.bak*
+factor_validation_report.json
+
+# --- frontend deps (we ship the static files, not node_modules) ---
+**/node_modules/
+web/node_modules/

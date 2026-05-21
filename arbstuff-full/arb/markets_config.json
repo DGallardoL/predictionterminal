@@ -1,0 +1,4760 @@
+{
+    "poll_interval": 8,
+    "threshold": 0.94,
+    "min_alert_profit": 1.0,
+    "events": [
+        {
+            "name": "NFL Coach of the Year",
+            "kalshi_ticker": "KXNFLCOTY-26",
+            "poly_slug": "nfl-coach-of-the-year-345",
+            "mapping": {
+                "bjoh": "Ben Johnson",
+                "mvra": "Mike Vrabel",
+                "lcoe": "Liam Coen",
+                "agle": "Aaron Glenn",
+                "mmac": "Mike Macdonald",
+                "pcar": "Pete Carroll",
+                "dcan": "Dave Canales",
+                "ksha": "Kyle Shanahan",
+                "jihar": "Jim Harbaugh",
+                "jgan": "Jonathan Gannon",
+                "dcam": "Dan Campbell",
+                "sste": "Shane Steichen",
+                "spay": "Sean Payton",
+                "mlaf": "Matt LaFleur",
+                "bsch": "Brian Schottenheimer",
+                "bcal": "Brian Callahan",
+                "rmor": "Raheem Morris",
+                "kmoo": "Kellen Moore",
+                "mtom": "Mike Tomlin",
+                "bdab": "Brian Daboll",
+                "mmcd": "Mike McDaniel",
+                "smcv": "Sean McVay",
+                "kste": "Kevin Stefanski",
+                "ztay": "Zac Taylor",
+                "smcd": "Sean McDermott",
+                "koco": "Kevin O'Connell",
+                "tbow": "Todd Bowles",
+                "dqui": "Dan Quinn",
+                "drya": "Demeco Ryans",
+                "arei": "Andy Reid",
+                "nsir": "Nick Sirianni",
+                "johar": "John Harbaugh"
+            }
+        },
+        {
+            "name": "Best AI Model 2025",
+            "kalshi_ticker": "KXCODINGMODEL-26JAN",
+            "poly_slug": "which-company-will-have-the-best-ai-model-for-coding-at-the-end-of-2025",
+            "mapping": {
+                "anth": "anthropic",
+                "goog": "google",
+                "open": "openai",
+                "xai": "xai",
+                "deep": "deepseek",
+                "alib": "alibaba",
+                "mist": "mistral",
+                "moon": "moonshot",
+                "z": "z.ai",
+                "abac": "company a",
+                "abbb": "company b",
+                "accc": "company c"
+            }
+        },
+        {
+            "name": "Grammys Song of the Year",
+            "kalshi_ticker": "KXGRAMSOTY-68",
+            "poly_slug": "grammys-song-of-the-year-winner",
+            "mapping": {
+                "abr": "abracadabra",
+                "anx": "anxiety",
+                "apt": "apt",
+                "dtm": "dtmf",
+                "gol": "golden",
+                "lut": "luther",
+                "man": "manchild",
+                "wil": "wildflower"
+            }
+        },
+        {
+            "name": "Honduras Presidential Election 2025",
+            "kalshi_ticker": "KXHONDURASPRES-25",
+            "poly_slug": "honduras-presidential-election",
+            "mapping": {
+                "snas": "salvador alejandro césar nasralla salum",
+                "navi": "jorge nelson ávila gutiérrez",
+                "mcal": "mario rivera callejas",
+                "rmon": "rixi ramona moncada godoy",
+                "nasf": "nasry juan asfura zablah"
+            }
+        },
+        {
+            "name": "Grammys Album of the Year",
+            "kalshi_ticker": "KXGRAMAOTY-68",
+            "poly_slug": "grammys-album-of-the-year-winner",
+            "mapping": {
+                "deb": "Debí Tirar Más Fotos - Bad Bunny",
+                "swa": "SWAG - Justin Bieber",
+                "man": "Man's Best Friend - Sabrina Carpenter",
+                "let": "Let God Sort Em Out - Clipse Pusha T Malice",
+                "may": "Mayhem - Lady Gaga",
+                "gnx": "GNX - Kendrick Lamar",
+                "mut": "MUTT - Leon Thomas",
+                "chr": "Chromakopia - Tyler the Creator"
+            }
+        },
+        {
+            "name": "Grammys Producer of the Year",
+            "kalshi_ticker": "KXGRAMPOTY-68",
+            "poly_slug": "grammys-producer-of-the-year-winner",
+            "mapping": {
+                "dan": "Dan Auerbach",
+                "cir": "Cirkut",
+                "dij": "Dijon",
+                "bla": "Blake Mills",
+                "sou": "Sounwave"
+            }
+        },
+        {
+            "name": "Grammys Best New Artist",
+            "kalshi_ticker": "KXGRAMBNA-68",
+            "poly_slug": "grammys-best-new-artist-winner",
+            "mapping": {
+                "som": "Sombr",
+                "kat": "KATSEYE",
+                "mar": "The Marías",
+                "add": "Addison Rae",
+                "leo": "Leon Thomas",
+                "ale": "Alex Warren",
+                "lol": "Lola Young"
+            }
+        },
+        {
+            "name": "Grammys Record of the Year",
+            "kalshi_ticker": "KXGRAMROTY-68",
+            "poly_slug": "grammys-record-of-the-year-winner",
+            "mapping": {
+                "dtmf": "DTMF - Bad Bunny",
+                "man": "Manchild - Sabrina Carpenter",
+                "anx": "Anxiety - Doechii",
+                "wil": "Wildflower - Billie Eilish",
+                "lut": "Luther - Kendrick Lamar and SZA",
+                "sub": "The Subway - Chappell Roan",
+                "apt": "APT - Rosé and Bruno Mars"
+            }
+        },
+        {
+            "name": "Grammys Best Rap Album",
+            "kalshi_ticker": "KXGRAMBRA-68",
+            "poly_slug": "grammys-best-rap-album-winner",
+            "mapping": {
+                "gnx": "GNX - Kendrick Lamar",
+                "god": "God Does Like Ugly - JID",
+                "let": "Let God Sort Em Out - Clipse Pusha T Malice",
+                "chr": "Chromakopia - Tyler the Creator"
+            }
+        },
+        {
+            "name": "Oscars 2026 Best Director",
+            "kalshi_ticker": "KXOSCARDIR-26",
+            "poly_slug": "oscars-2026-best-director-winner",
+            "mapping": {
+                "chl": "Chloé Zhao",
+                "rya": "Ryan Coogler",
+                "joa": "Joachim Trier",
+                "jaf": "Jafar Panahi",
+                "yor": "Yorgos Lanthimos",
+                "jos": "Josh Safdie",
+                "kat": "Kathryn Bigelow",
+                "par": "Park Chan-wook",
+                "gui": "Guillermo del Toro",
+                "kle": "Kleber Mendonça Filho",
+                "jon": "Jon M. Chu",
+                "hik": "Hikari",
+                "ben": "Benny Safdie"
+            }
+        },
+        {
+            "name": "Oscars 2026 Best Actress",
+            "kalshi_ticker": "KXOSCARACTR-26",
+            "poly_slug": "oscars-2026-best-actress-winner",
+            "mapping": {
+                "jes": "Jessie Buckley",
+                "ren": "Renate Reinsve",
+                "cyn": "Cynthia Erivo",
+                "emm": "Emma Stone",
+                "ros": "Rose Byrne",
+                "jul": "Julia Roberts",
+                "jen": "Jennifer Lawrence",
+                "tes": "Tessa Thompson",
+                "syd": "Sydney Sweeney",
+                "emi": "Emily Blunt",
+                "kat": "Kate Hudson",
+                "jun": "June Squibb",
+                "cat": "Cate Blanchett",
+                "eva": "Eva Victor",
+                "lau": "Laura Dern"
+            }
+        },
+        {
+            "name": "Oscars 2026 Best Supporting Actor",
+            "kalshi_ticker": "KXOSCARSUPACTO-26",
+            "poly_slug": "oscars-2026-best-supporting-actor-winner",
+            "mapping": {
+                "ste": "Stellan Skarsgård",
+                "ada": "Adam Sandler",
+                "jer": "Jeremy Strong",
+                "sean": "Sean Penn",
+                "pau": "Paul Mescal",
+                "del": "Delroy Lindo",
+                "aki": "Akira Emoto",
+                "mil": "Miles Caton",
+                "and": "Andrew Garfield",
+                "jac": "Jacob Elordi",
+                "jack": "Jack O'Connell",
+                "sea": "Sean Bean",
+                "die": "Diego Luna",
+                "jon": "Jonathan Bailey",
+                "pet": "Peter Dinklage"
+            }
+        },
+        {
+            "name": "Oscars 2026 Best Supporting Actress",
+            "kalshi_ticker": "KXOSCARSUPACTR-26",
+            "poly_slug": "oscars-2026-best-supporting-actress-winner",
+            "mapping": {
+                "ell": "Elle Fanning",
+                "ari": "Ariana Grande",
+                "ing": "Inga Ibsdotter Lilleaas",
+                "gwe": "Gwyneth Paltrow",
+                "tey": "Teyana Taylor",
+                "amy": "Amy Madigan",
+                "wun": "Wunmi Mosaku",
+                "emi": "Emily Blunt",
+                "jen": "Jennifer Lopez",
+                "gle": "Glenn Close",
+                "mar": "Mari Yamamoto",
+                "reb": "Rebecca Ferguson",
+                "ayo": "Ayo Edebiri",
+                "cha": "Chase Infiniti",
+                "lau": "Laura Dern"
+            }
+        },
+        {
+            "name": "Oscars 2026 Best Picture",
+            "kalshi_ticker": "KXOSCARPIC-26",
+            "poly_slug": "oscars-2026-best-picture-winner",
+            "mapping": {
+                "ham": "Hamnet",
+                "sin": "Sinners",
+                "sen": "Sentimental Value",
+                "wic": "Wicked: For Good",
+                "one": "One Battle After Another",
+                "mar": "Marty Supreme",
+                "bug": "Bugonia",
+                "itw": "It Was Just an Accident",
+                "spri": "Springsteen: Deliver Me from Nowhere",
+                "jay": "Jay Kelly",
+                "aho": "A House of Dynamite",
+                "ava": "Avatar: Fire and Ash",
+                "ren": "Rental Family",
+                "fran": "Frankenstein",
+                "noo": "No Other Choice",
+                "and": "And Then There Was One"
+            }
+        },
+        {
+            "name": "Oscars 2026 Best Costume Design",
+            "kalshi_ticker": "KXOSCARCOSTUME-26",
+            "poly_slug": "oscars-2026-best-costume-design-winner",
+            "mapping": {
+                "ham": "Hamnet",
+                "fra": "Frankenstein",
+                "wic": "Wicked: For Good",
+                "sin": "Sinners",
+                "mar": "Marty Supreme",
+                "kis": "Kiss of the Spider Woman",
+                "one": "One Battle After Another",
+                "hed": "Hedda",
+                "dow": "Downton Abbey: The Grand Finale",
+                "bug": "Bugonia",
+                "spr": "Springsteen: Deliver Me from Nowhere",
+                "sno": "Snow White",
+                "fan": "The Fantastic Four: First Steps",
+                "pho": "The Phoenician Scheme",
+                "nou": "Nouvelle Vague"
+            }
+        },
+        {
+            "name": "Oscars 2026 Best Adapted Screenplay",
+            "kalshi_ticker": "KXOSCARASPLAY-26",
+            "poly_slug": "oscars-2026-best-adapted-screenplay-winner",
+            "mapping": {
+                "ham": "Hamnet",
+                "one": "One Battle After Another",
+                "bug": "Bugonia",
+                "wak": "Wake Up Dead Man",
+                "spr": "Springsteen: Deliver Me from Nowhere",
+                "noo": "No Other Choice",
+                "fra": "Frankenstein",
+                "wic": "Wicked: For Good",
+                "lif": "The Life of Chuck",
+                "tra": "Train Dreams",
+                "bal": "Ballad of a Small Player",
+                "hed": "Hedda",
+                "ist": "Is This Thing On?",
+                "nou": "Nouvelle Vague",
+                "nur": "Nuremberg"
+            }
+        },
+        {
+            "name": "Golden Globes Best Director",
+            "kalshi_ticker": "KXGGDIR-26",
+            "poly_slug": "golden-globes-best-director-winner",
+            "mapping": {
+                "chl": "Chloe Zhao – Hamnet",
+                "joa": "Joachim Trier – Sentimental Value",
+                "rya": "Ryan Coogler – Sinners",
+                "pau": "Paul Thomas Anderson – One Battle After Another",
+                "jaf": "Jafar Panahi – It Was Just an Accident",
+                "yor": "Yorgos Lanthimos – Bugonia",
+                "jos": "Josh Safdie – Marty Supreme",
+                "kat": "Kathryn Bigelow – A House of Dynamite",
+                "jon": "Jon M. Chu – Wicked: For Good",
+                "par": "Park Chan-wook – No Other Choice",
+                "gui": "Guillermo Del Toro – Frankenstein",
+                "kle": "Kleber Mendonca Filho – The Secret Agent",
+                "jam": "James Cameron – Avatar: Fire and Ash",
+                "ben": "Benny Safdie – The Smashing Machine",
+                "noah": "Noah Baumbach – Jay Kelly"
+            }
+        },
+        {
+            "name": "Alaska Governor Election",
+            "kalshi_ticker": "KXGOVAK-26",
+            "poly_slug": "alaska-governor-election-winner",
+            "mapping": {
+                "tbeg": "Tom Begich",
+                "mpel": "Mary Peltola",
+                "cbis": "Click Bishop",
+                "ndah": "Nancy Dahlstrom",
+                "edev": "Edna DeVries",
+                "bwil": "Bernadette Wilson",
+                "acru": "Adam Crum",
+                "ttay": "Treg Taylor"
+            }
+        },
+        {
+            "name": "Oscars 2026 Best Production Design",
+            "kalshi_ticker": "KXOSCARPROD-26",
+            "poly_slug": "oscars-2026-best-production-design-winner",
+            "mapping": {
+                "fra": "Frankenstein",
+                "wic": "Wicked: For Good",
+                "sin": "Sinners",
+                "ham": "Hamnet",
+                "ava": "Avatar: Fire and Ash",
+                "mar": "Marty Supreme",
+                "one": "One Battle After Another",
+                "pho": "The Phoenician Scheme",
+                "bug": "Bugonia",
+                "fan": "The Fantastic Four: First Steps",
+                "wak": "Wake Up Dead Man",
+                "nou": "Nouvelle Vague",
+                "spr": "Springsteen: Deliver Me from Nowhere",
+                "hed": "Hedda",
+                "kis": "Kiss of the Spider Woman"
+            }
+        },
+        {
+            "name": "Oscars 2026 Best Film Editing",
+            "kalshi_ticker": "KXOSCAREDIT-26",
+            "poly_slug": "oscars-2026-best-film-editing-winner",
+            "mapping": {
+                "one": "One Battle After Another",
+                "sin": "Sinners",
+                "ham": "Hamnet",
+                "hou": "A House of Dynamite",
+                "mar": "Marty Supreme",
+                "f1t": "F1: The Movie",
+                "sen": "Sentimental Value",
+                "noo": "No Other Choice",
+                "wic": "Wicked: For Good",
+                "bug": "Bugonia",
+                "ava": "Avatar: Fire and Ash",
+                "sma": "The Smashing Machine",
+                "fra": "Frankenstein",
+                "spr": "Springsteen: Deliver Me from Nowhere",
+                "itw": "It Was Just an Accident"
+            }
+        },
+        {
+            "name": "Game Awards Game of the Year 2025",
+            "kalshi_ticker": "KXGAMEAWARDS-2025",
+            "poly_slug": "game-awards-game-of-the-year-2025",
+            "mapping": {
+                "ds2": "Death Stranding 2: On The Beach",
+                "goy": "Ghost of Yotei",
+                "gta6": "Grand Theft Auto VI",
+                "mp4": "Metroid Prime 4: Beyond",
+                "mhw": "Monster Hunter Wilds",
+                "sf": "Split Fiction",
+                "cob": "Clair Obscur: Expedition 33",
+                "dkb": "Donkey Kong Bananza",
+                "ern": "Elden Ring: Nightreign",
+                "hk": "Hollow Knight: Silksong",
+                "bp": "Blue Prince",
+                "tow": "The Outer Worlds 2",
+                "toc": "Mafia: The Old Country",
+                "king": "Kingdom Come: Deliverance II",
+                "bor": "Borderlands 4",
+                "cod7": "Call of Duty: Black Ops 7",
+                "had": "Hades II",
+                "doo": "Doom: The Dark Ages",
+                "mari": "Mario Kart World"
+            }
+        },
+        {
+            "name": "Most Searched Person on Google 2024",
+            "kalshi_ticker": "KXRANKLISTGOOGLESEARCH-26JAN",
+            "poly_slug": "1-searched-person-on-google-this-year",
+            "mapping": {
+                "don": "Donald Trump",
+                "vol": "Volodymyr Zelenskyy",
+                "tay": "Taylor Swift",
+                "elo": "Elon Musk",
+                "cha": "Charlie Kirk",
+                "kat": "Katy Perry",
+                "vla": "Vladimir Putin",
+                "bey": "Beyoncé",
+                "ben": "Benjamin Netanyahu",
+                "sam": "Sam Altman",
+                "pop": "Pope Leo XIV",
+                "ken": "Kendrick Lamar",
+                "bad": "Bad Bunny",
+                "zoh": "Zohran Mamdani",
+                "bia": "Bianca Censori",
+                "lui": "Luigi Mangione"
+            }
+        },
+        {
+            "name": "NFL MVP 2024",
+            "kalshi_ticker": "KXNFLMVP-26",
+            "poly_slug": "nfl-mvp-355",
+            "mapping": {
+                "djon": "Daniel Jones",
+                "ljac": "Lamar Jackson",
+                "jall": "Josh Allen",
+                "pmah": "Patrick Mahomes",
+                "jbur": "Joe Burrow",
+                "jdan": "Jayden Daniels",
+                "jher": "Justin Herbert",
+                "jhur": "Jalen Hurts",
+                "cstr": "C.J. Stroud",
+                "bpur": "Brock Purdy",
+                "jgof": "Jared Goff",
+                "cwil": "Caleb Williams",
+                "jlov": "Jordan Love",
+                "bmay": "Baker Mayfield",
+                "dpre": "Dak Prescott",
+                "msta": "Matthew Stafford",
+                "tlar": "Trevor Lawrence",
+                "sbar": "Saquon Barkley",
+                "kmur": "Kyler Murray",
+                "ttag": "Tua Tagovailoa",
+                "dmay": "Drake Maye",
+                "sdar": "Sam Darnold",
+                "byou": "Bryce Young",
+                "gsmi": "Geno Smith",
+                "bnix": "Bo Nix",
+                "mpej": "Michael Penix",
+                "arod": "Aaron Rodgers",
+                "jmcc": "J.J. McCarthy",
+                "jjef": "Justin Jefferson",
+                "jcha": "Ja'Marr Chase",
+                "jgib": "Jahmyr Gibbs",
+                "dhen": "Derrick Henry",
+                "cwar": "Cam Ward",
+                "pnac": "Puka Nacua",
+                "jfie": "Justin Fields",
+                "brob": "Bijan Robinson",
+                "cmcc": "Christian McCaffrey",
+                "mgar": "Myles Garrett",
+                "clam": "CeeDee Lamb",
+                "jtay": "Jonathan Taylor"
+            }
+        },
+        {
+            "name": "NFL Offensive Rookie of the Year 2024",
+            "kalshi_ticker": "KXNFLOROTY-26",
+            "poly_slug": "nfl-offensive-rookie-of-the-year-267",
+            "mapping": {
+                "ajea": "Ashton Jeanty",
+                "cwar": "Cameron Ward",
+                "thun": "Travis Hunter",
+                "tmcm": "Tetairoa McMillan",
+                "oham": "Omarion Hampton",
+                "mgol": "Matthew Golden",
+                "ssan": "Shedeur Sanders",
+                "tsho": "Tyler Shough",
+                "jdar": "Jaxson Dart",
+                "twar": "Tyler Warren",
+                "eegb": "Emeka Egbuka",
+                "qjud": "Quinshon Judkins",
+                "rhar": "RJ Harvey",
+                "then": "TreVeyon Henderson",
+                "jmil": "Jalen Milroe",
+                "clov": "Colston Loveland",
+                "lbur": "Luther Burden",
+                "qewe": "Quinn Ewers",
+                "jhig": "Elijah Arroyo",
+                "jblu": "Jaydon Blue",
+                "jbec": "Will Howard",
+                "dsam": "Dylan Sampson",
+                "whow": "Elic Ayomanor",
+                "thar": "Jack Bech",
+                "dgab": "Cam Skattebo"
+            }
+        },
+        {
+            "name": "NFL Defensive Rookie of the Year 2024",
+            "kalshi_ticker": "KXNFLDROTY-26",
+            "poly_slug": "nfl-defensive-rookie-of-the-year-345",
+            "mapping": {
+                "acar": "Abdul Carter",
+                "jawal": "Jalon Walker",
+                "mgra": "Mason Graham",
+                "mwil": "Mykel Williams",
+                "thun": "Travis Hunter",
+                "sste": "Shemar Stewart",
+                "deze": "Donovan Ezeiruaku",
+                "mgre": "Mike Green",
+                "jcam": "Jihaad Campbell",
+                "jpea": "James Pearce Jr.",
+                "wnol": "Walter Nolen",
+                "msta": "Malarki Starks",
+                "wjoh": "Will Johnson",
+                "jbar": "Jahdae Barron",
+                "jtui": "JT Tuimoloau",
+                "nemm": "Nick Emmanowori"
+            }
+        },
+        {
+            "name": "Chile Presidential Election 2025",
+            "kalshi_ticker": "KXPRESCHILE-25",
+            "poly_slug": "chile-presidential-election",
+            "mapping": {
+                "jkas": "José Antonio Kast",
+                "jjar": "Jeannette Jara",
+                "fpar": "Franco Parisi",
+                "emat": "Evelyn Matthei",
+                "jkai": "Johannes Kaiser",
+                "eart": "Eduardo Artés",
+                "momi": "Marco Enríquez-Ominami",
+                "hnic": "Harold Mayne-Nicholls",
+                "jmul": "Jaime Mulet",
+                "ctoh": "Carolina Tohá"
+            }
+        },
+        {
+            "name": "Bucharest Mayoral Election 2025",
+            "kalshi_ticker": "KXBUCHARESTMAYOR-25",
+            "poly_slug": "romania-bucharest-mayoral-election",
+            "mapping": {
+                "cciu": "Ciprian Ciucu",
+                "cdru": "Catalin Drula",
+                "vghe": "Vlad Gheorghe",
+                "dtri": "Dan Trifu",
+                "gfir": "Gabriela Firea",
+                "cpop": "Cristian Popescu Piedone",
+                "dbal": "Daniel Baluta",
+                "vvoi": "Vlad Voiculescu",
+                "vale": "Virgil Alexandru Zidaru",
+                "vpon": "Victor Ponta",
+                "cant": "Crin Antonescu",
+                "ccir": "Cătălin Cîrstoiu",
+                "aale": "Anca Alexandrescu"
+            }
+        },
+        {
+            "name": "Person of the Year 2025",
+            "kalshi_ticker": "KXTIME-25",
+            "poly_slug": "time-2025-person-of-the-year",
+            "mapping": {
+                "dt": "Donald Trump",
+                "em": "Elon Musk",
+                "xij": "Xi Jinping",
+                "sa": "Sam Altman",
+                "jp": "Jerome Powell",
+                "ts": "Taylor Swift",
+                "ai": "Artificial Intelligence",
+                "leb": "LeBron James",
+                "pleoxiv": "Pope Leo XIV",
+                "ben": "Benjamin Netanyahu",
+                "zoh": "Zohran Mamdani"
+            }
+        },
+        {
+            "name": "Super Bowl Champion 2026",
+            "kalshi_ticker": "KXSB-26",
+            "poly_slug": "super-bowl-champion-2026-731",
+            "mapping": {
+                "ari": "Arizona",
+                "atl": "Atlanta",
+                "bal": "Baltimore",
+                "buf": "Buffalo",
+                "car": "Carolina",
+                "chi": "Chicago",
+                "cin": "Cincinnati",
+                "cle": "Cleveland",
+                "dal": "Dallas",
+                "den": "Denver",
+                "det": "Detroit",
+                "gb": "Green Bay",
+                "hou": "Houston",
+                "ind": "Indianapolis",
+                "jax": "Jacksonville",
+                "kc": "Kansas City",
+                "lv": "Las Vegas",
+                "lac": "Los Angeles C",
+                "lar": "Los Angeles R",
+                "mia": "Miami",
+                "min": "Minnesota",
+                "ne": "New England",
+                "no": "New Orleans",
+                "nyg": "New York G",
+                "nyj": "New York J",
+                "phi": "Philadelphia",
+                "pit": "Pittsburgh",
+                "sf": "San Francisco",
+                "sea": "Seattle",
+                "tb": "Tampa Bay",
+                "ten": "Tennessee",
+                "was": "Washington"
+            }
+        },
+        {
+            "name": "NBA Champion 2026",
+            "kalshi_ticker": "KXNBA-26",
+            "poly_slug": "2026-nba-champion",
+            "mapping": {
+                "atl": "Atlanta Hawks",
+                "bos": "Boston Celtics",
+                "bkn": "Brooklyn Nets",
+                "cha": "Charlotte Hornets",
+                "chi": "Chicago Bulls",
+                "cle": "Cleveland Cavaliers",
+                "dal": "Dallas Mavericks",
+                "den": "Denver Nuggets",
+                "det": "Detroit Pistons",
+                "gsw": "Golden State Warriors",
+                "hou": "Houston Rockets",
+                "ind": "Indiana Pacers",
+                "lac": "Los Angeles Clippers",
+                "lal": "Los Angeles Lakers",
+                "mem": "Memphis Grizzlies",
+                "mia": "Miami Heat",
+                "mil": "Milwaukee Bucks",
+                "min": "Minnesota Timberwolves",
+                "nop": "New Orleans Pelicans",
+                "nyk": "New York Knicks",
+                "okc": "Oklahoma City Thunder",
+                "orl": "Orlando Magic",
+                "phi": "Philadelphia 76ers",
+                "phx": "Phoenix Suns",
+                "por": "Portland Trail Blazers",
+                "sac": "Sacramento Kings",
+                "sas": "San Antonio Spurs",
+                "tor": "Toronto Raptors",
+                "uta": "Utah Jazz",
+                "was": "Washington Wizards"
+            }
+        },
+        {
+            "name": "Premier League Winner 2026",
+            "kalshi_ticker": "KXPREMIERLEAGUE-26",
+            "poly_slug": "english-premier-league-winner",
+            "mapping": {
+                "lfc": "Liverpool",
+                "ars": "Arsenal",
+                "mci": "Man City",
+                "che": "Chelsea",
+                "new": "Newcastle",
+                "mun": "Man United",
+                "tot": "Tottenham",
+                "avl": "Aston Villa",
+                "nfo": "Nottm Forest",
+                "bri": "Brighton",
+                "bou": "Bournemouth",
+                "eve": "Everton",
+                "cry": "Crystal Palace",
+                "whu": "West Ham",
+                "lee": "Leeds",
+                "ful": "Fulham",
+                "bre": "Brentford",
+                "wol": "Wolves",
+                "bur": "Burnley",
+                "sun": "Sunderland"
+            }
+        },
+        {
+            "name": "Top Spotify Artist 2025",
+            "kalshi_ticker": "KXTOPARTIST-25",
+            "poly_slug": "top-spotify-artist-2025-146",
+            "mapping": {
+                "ts": "Taylor Swift",
+                "kl": "Kendrick Lamar",
+                "tw": "The Weeknd",
+                "bb": "Bad Bunny",
+                "d": "Drake"
+            }
+        },
+        {
+            "name": "La Liga Winner 2026",
+            "kalshi_ticker": "KXLALIGA-26",
+            "poly_slug": "la-liga-winner-114",
+            "mapping": {
+                "rma": "Real Madrid",
+                "bar": "Barcelona",
+                "atm": "Atletico Madrid",
+                "vil": "Villarreal",
+                "ath": "Athletic Bilbao",
+                "rbb": "Betis",
+                "rso": "Real Sociedad",
+                "gir": "Girona",
+                "rcc": "Celta Vigo",
+                "vcf": "Valencia",
+                "sev": "Sevilla",
+                "get": "Getafe",
+                "esp": "Espanyol",
+                "osa": "Osasuna",
+                "ala": "Alaves",
+                "mal": "Mallorca",
+                "lev": "Levante",
+                "rvc": "Rayo Vallecano",
+                "elc": "Elche",
+                "ovi": "Oviedo"
+            }
+        },
+        {
+            "name": "StarLadder Budapest Major Winner 2025",
+            "kalshi_ticker": "KXSTARLADDERBUDAPESTMAJOR-STAR25",
+            "poly_slug": "starladder-budapest-major-2025-winner",
+            "mapping": {
+                "3dm": "3DMAX",
+                "ast": "Astralis",
+                "aur": "Aurora Gaming",
+                "bb": "B8",
+                "faz": "FaZe Clan",
+                "fur": "FURIA",
+                "fly": "FlyQuest",
+                "fna": "Fnatic",
+                "g2": "G2 Esports",
+                "gam": "GamerLegion",
+                "leg": "Legacy",
+                "lyn": "Lynn Vision Gaming",
+                "m80": "M80",
+                "mib": "MIBR",
+                "mou": "MOUZ",
+                "nat": "Natus Vincere",
+                "nrg": "NRG",
+                "nin": "Ninjas in Pyjamas",
+                "par": "PARIVISION",
+                "pas": "Passion UA",
+                "rar": "Rare Atom",
+                "tyl": "TYLOO",
+                "vit": "Vitality",
+                "pai": "paiN Gaming"
+            }
+        },
+        {
+            "name": "FIFA World Cup Winner 2026",
+            "kalshi_ticker": "KXMENWORLDCUP-26",
+            "poly_slug": "2026-fifa-world-cup-winner-595",
+            "mapping": {
+                "es": "Spain",
+                "gb": "England",
+                "fr": "France",
+                "ar": "Argentina",
+                "br": "Brazil",
+                "pt": "Portugal",
+                "de": "Germany",
+                "no": "Norway",
+                "nl": "Netherlands",
+                "it": "Italy",
+                "us": "USA",
+                "co": "Colombia",
+                "be": "Belgium",
+                "ma": "Morocco",
+                "uy": "Uruguay",
+                "jp": "Japan",
+                "hr": "Croatia",
+                "mx": "Mexico",
+                "ch": "Switzerland",
+                "ec": "Ecuador",
+                "ca": "Canada",
+                "kr": "South Korea",
+                "sn": "Senegal",
+                "at": "Austria",
+                "py": "Paraguay",
+                "sct": "Scotland",
+                "ci": "Ivory Coast",
+                "ir": "Iran",
+                "eg": "Egypt",
+                "nz": "New Zealand",
+                "gh": "Ghana",
+                "dz": "Algeria",
+                "au": "Australia",
+                "ht": "Haiti",
+                "jo": "Jordan",
+                "tn": "Tunisia",
+                "uz": "Uzbekistan",
+                "za": "South Africa",
+                "cv": "Cape Verde",
+                "qa": "Qatar",
+                "sa": "Saudi Arabia",
+                "cw": "Curaçao"
+            }
+        },
+        {
+            "name": "Serie A Winner 2026",
+            "kalshi_ticker": "KXSERIEA-26",
+            "poly_slug": "serie-a-league-winner",
+            "mapping": {
+                "acm": "AC Milan",
+                "ata": "Atalanta",
+                "bfc": "Bologna",
+                "cag": "Cagliari",
+                "cre": "Cremonese",
+                "fio": "Fiorentina",
+                "gen": "Genoa",
+                "int": "Inter",
+                "juv": "Juventus",
+                "laz": "Lazio",
+                "lec": "Lecce",
+                "nap": "Napoli",
+                "par": "Parma",
+                "pis": "Pisa",
+                "rom": "Roma",
+                "sas": "Sassuolo",
+                "tor": "Torino",
+                "udi": "Udinese",
+                "ver": "Verona"
+            }
+        },
+        {
+            "name": "Ligue 1 Winner 2026",
+            "kalshi_ticker": "KXLIGUE1-26",
+            "poly_slug": "french-ligue-1-winner",
+            "mapping": {
+                "ang": "Angers",
+                "aux": "Auxerre",
+                "stb": "Brest",
+                "rcl": "Lens",
+                "hac": "Le Havre",
+                "lil": "Lille",
+                "fcl": "Lorient",
+                "ol": "Lyon",
+                "fcm": "Metz",
+                "asm": "Monaco",
+                "om": "Marseille",
+                "fcn": "Nantes",
+                "nic": "Nice",
+                "par": "Paris FC",
+                "psg": "PSG",
+                "ren": "Rennes",
+                "rcs": "Strasbourg",
+                "tfc": "Toulouse"
+            }
+        },
+        {
+            "name": "Next Prime Minister of Tonga",
+            "kalshi_ticker": "KXNEXTTONGAPM-26",
+            "poly_slug": "next-prime-minister-of-tonga",
+            "mapping": {
+                "aeke": "Dr ‘Aisake Valu Eke",
+                "ssov": "Siaosi Sovaleni",
+                "vlat": "Dr Viliami Uasike Latu"
+            }
+        },
+        {
+            "name": "Portugal Presidential Election 2026",
+            "kalshi_ticker": "KXPORTUGALPRES-26FEB15",
+            "poly_slug": "portugal-presidential-election",
+            "mapping": {
+                "hgem": "Henrique Gouveia e Melo (IND)",
+                "lmen": "Luís Marques Mendes (PSD)",
+                "aseg": "António José Seguro (IND)",
+                "jfig": "João Cotrim Figueiredo (IL)",
+                "aven": "André Ventura (CH)",
+                "rmor": "Rui Moreira (IND)",
+                "cmar": "Catarina Martins (BE)",
+                "tvie": "Tim Vieira (IND)"
+            }
+        },
+        {
+            "name": "Costa Rica Presidential Election 2026",
+            "kalshi_ticker": "KXCOSTARICAPRES-26",
+            "poly_slug": "costa-rica-presidential-election",
+            "mapping": {
+                "lfer": "Laura Virginia Fernández Delgado",
+                "falv": "Gerardo Fabricio Alvarado Muñoz",
+                "aram": "Álvaro Roberto Ramos Chaves",
+                "ndia": "Natalia Díaz Quintana",
+                "cdob": "Claudia Vanessa Dobles Camargo"
+            }
+        },
+        {
+            "name": "Costa Rica Legislative Assembly Election 2026",
+            "kalshi_ticker": "KXCOSTARICAASSEMBLY-26",
+            "poly_slug": "costa-rica-legislative-assembly-election-winner",
+            "mapping": {
+                "pln": "PLN",
+                "pusc": "PUSC",
+                "pnr": "PNR",
+                "fa": "FA",
+                "plp": "PLP"
+            }
+        },
+        {
+            "name": "Next Prime Minister of Hungary",
+            "kalshi_ticker": "KXNEXTHUNGARYPM-26MAY01",
+            "poly_slug": "next-prime-minister-of-hungary",
+            "mapping": {
+                "pmag": "Péter Magyar",
+                "vorb": "Viktor Orbán"
+            }
+        },
+        {
+            "name": "NHL Jack Adams Award 2025-26",
+            "kalshi_ticker": "KXNHLADAMS-26",
+            "poly_slug": "nhl-2025-26-jack-adams-award",
+            "mapping": {
+                "atou": "Andre Tourigny",
+                "jque": "Joel Quenneville",
+                "mstl": "Martin St Louis",
+                "deva": "Dean Evason",
+                "msul": "Mike Sullivan",
+                "rhus": "Ryan Huska",
+                "jmon": "Jim Montgomery",
+                "tgre": "Travis Green",
+                "rwar": "Ryan Warsofsky",
+                "jbla": "Jeff Blashill",
+                "tmcl": "Todd McLellan",
+                "rtoc": "Rick Tocchet",
+                "afoo": "Adam Foote",
+                "lruf": "Lindy Ruff",
+                "proy": "Patrick Roy",
+                "mstu": "Marco Sturm",
+                "jhyn": "John Hynes",
+                "jbed": "Jared Bednar",
+                "skee": "Sheldon Keefe",
+                "jhil": "Jim Hiller",
+                "abru": "Andrew Brunette",
+                "dmus": "Dan Muse",
+                "llam": "Lane Lambert",
+                "rbri": "Rod Brind'Amour",
+                "sarn": "Scott Arniel",
+                "jcoo": "Jon Cooper",
+                "cber": "Craig Berube",
+                "kkno": "Kris Knoblauch",
+                "pmau": "Paul Maurice",
+                "bcas": "Bruce Cassidy",
+                "scar": "Spencer Carbery",
+                "ggul": "Glen Gulutzan"
+            }
+        },
+        {
+            "name": "Brazil Presidential Election 2026",
+            "kalshi_ticker": "KXBRPRES-26",
+            "poly_slug": "brazil-presidential-election",
+            "mapping": {
+                "lula": "Luiz Inácio Lula da Silva",
+                "jb": "Jair Bolsonaro",
+                "fh": "Fernando Haddad",
+                "tdf": "Tarcisio de Freitas",
+                "mb": "Michelle Bolsonaro"
+            }
+        },
+        {
+            "name": "Bundesliga Winner 2026",
+            "kalshi_ticker": "KXBUNDESLIGA-26",
+            "poly_slug": "bundesliga-winner-527",
+            "mapping": {
+                "bmu": "Bayern Munich",
+                "bvb": "Dortmund",
+                "koe": "FC Koln",
+                "stp": "St Pauli",
+                "sge": "Eintracht Frankfurt",
+                "tsg": "Hoffenheim",
+                "rbl": "RB Leipzig",
+                "wob": "VfL Wolfsburg",
+                "svw": "Werder Bremen",
+                "lev": "Leverkusen",
+                "fca": "FC Augsburg",
+                "vfb": "Stuttgart",
+                "scf": "Freiburg",
+                "uni": "Union Berlin",
+                "m05": "Mainz",
+                "bmg": "Mgladbach",
+                "hsv": "Hamburger SV",
+                "fch": "FC Heidenheim"
+            }
+        },
+        {
+            "name": "Fed Decision December 2025",
+            "kalshi_ticker": "KXFEDDECISION-25DEC",
+            "poly_slug": "fed-decision-in-december",
+            "mapping": {
+                "h0": "No change",
+                "c25": "25 bps decrease"
+            }
+        },
+        {
+            "name": "Democratic Presidential Nominee 2028",
+            "kalshi_ticker": "KXPRESNOMD-28",
+            "poly_slug": "democratic-presidential-nominee-2028",
+            "mapping": {
+                "hbid": "Hunter Biden",
+                "jtal": "Gretchen Whitmer",
+                "rgal": "Oprah Winfrey",
+                "rkha": "Person P",
+                "cmur": "Chris Murphy",
+                "zmam": "Zohran Mamdani",
+                "kh": "Kamala Harris",
+                "gn": "Gavin Newsom",
+                "gw": "Gretchen Whitmer",
+                "js": "Josh Shapiro",
+                "tw": "Tim Walz",
+                "aoc": "Alexandria Ocasio-Cortez",
+                "mc": "Mark Cuban",
+                "pb": "Pete Buttigieg",
+                "wm": "Wes Moore",
+                "ab": "Andy Beshear",
+                "rc": "Roy Cooper",
+                "jbp": "J.B. Pritzker",
+                "jf": "Jon Ossoff",
+                "rw": "Raphael Warnock",
+                "mo": "Michelle Obama",
+                "sas": "Stephen A. Smith",
+                "mk": "Mark Kelly",
+                "jp": "Person CF",
+                "rema": "Rahm Emanuel",
+                "jste": "Jon Stewart",
+                "boba": "Barack Obama",
+                "hcli": "Hillary Clinton",
+                "cboo": "Corey Booker",
+                "lc": "Liz Cheney",
+                "bs": "Bernie Sanders",
+                "joss": "Jon Ossoff",
+                "gr": "Gina Raimondo",
+                "phi": "Phil Murphy",
+                "ljam": "LeBron James",
+                "djoh": "Dwayne 'The Rock' Johnson"
+            }
+        },
+        {
+            "name": "Next CEO of X",
+            "kalshi_ticker": "KXNEWROLEX-26JAN",
+            "poly_slug": "next-ceo-of-x",
+            "mapping": {
+                "emus": "Elon Musk",
+                "jdor": "Jack Dorsey",
+                "nbie": "Nikita Bier",
+                "jdon": "MrBeast",
+                "grok4": "Grok",
+                "salt": "John Legere",
+                "mrez": "Mahmoud Reza Banki",
+                "mmay": "Marissa Mayer",
+                "skri": "Sriram Krishnan",
+                "jleg": "John Legere",
+                "ssan": "Sheryl Sandberg"
+            }
+        },
+        {
+            "name": "Richest Person on December 31",
+            "kalshi_ticker": "KXWEALTHY-25",
+            "poly_slug": "richest-person-on-december-31",
+            "mapping": {
+                "em": "Elon Musk",
+                "ba": "Bernard Arnault",
+                "jb": "Jeff Bezos",
+                "mz": "Mark Zuckerberg",
+                "le": "Larry Ellison",
+                "jh": "Jensen Huang",
+                "wb": "Warren Buffett"
+            }
+        },
+        {
+            "name": "Next Prime Minister of Czech Republic",
+            "kalshi_ticker": "KXNEXTCZECHRPM-25OCT04",
+            "poly_slug": "next-prime-minister-of-the-czech-republic",
+            "mapping": {
+                "abab": "Andrej Babiš",
+                "khav": "Karel Havlíček",
+                "pfia": "Petr Fiala",
+                "vrak": "Vít Rakušan"
+            }
+        },
+        {
+            "name": "House Control 2026",
+            "kalshi_ticker": "CONTROLH-2026",
+            "poly_slug": "which-party-will-win-the-house-in-2026",
+            "mapping": {
+                "d": "Democratic Party",
+                "r": "Republican Party"
+            }
+        },
+        {
+            "name": "AFC Championship Winner",
+            "kalshi_ticker": "KXNFLAFCCHAMP-25",
+            "poly_slug": "afc-champion-1",
+            "mapping": {
+                "bal": "Baltimore",
+                "buf": "Buffalo",
+                "cin": "Cincinnati",
+                "cle": "Cleveland",
+                "den": "Denver",
+                "hou": "Houston",
+                "ind": "Indianapolis",
+                "jac": "Jacksonville",
+                "kc": "Kansas City",
+                "lv": "Las Vegas",
+                "lac": "Los Angeles C",
+                "mia": "Miami",
+                "ne": "New England",
+                "nyj": "New York J",
+                "pit": "Pittsburgh",
+                "ten": "Tennessee"
+            }
+        },
+        {
+            "name": "AFC South Winner",
+            "kalshi_ticker": "KXNFLAFCSOUTH-25",
+            "poly_slug": "afc-south-winner-1",
+            "mapping": {
+                "hou": "Houston",
+                "ind": "Indianapolis",
+                "jac": "Jacksonville",
+                "ten": "Tennessee"
+            }
+        },
+        {
+            "name": "AFC East Winner",
+            "kalshi_ticker": "KXNFLAFCEAST-25",
+            "poly_slug": "afc-east-winner-11",
+            "mapping": {
+                "buf": "Buffalo",
+                "mia": "Miami",
+                "ne": "New England",
+                "nyj": "New York J"
+            }
+        },
+        {
+            "name": "AFC North Winner",
+            "kalshi_ticker": "KXNFLAFCNORTH-25",
+            "poly_slug": "afc-north-winner-1",
+            "mapping": {
+                "bal": "Baltimore",
+                "cin": "Cincinnati",
+                "cle": "Cleveland",
+                "pit": "Pittsburgh"
+            }
+        },
+        {
+            "name": "AFC West Winner",
+            "kalshi_ticker": "KXNFLAFCWEST-25",
+            "poly_slug": "afc-west-winner-1",
+            "mapping": {
+                "kc": "Kansas City",
+                "den": "Denver",
+                "lv": "Las Vegas",
+                "lac": "Los Angeles C"
+            }
+        },
+        {
+            "name": "NFC North Winner",
+            "kalshi_ticker": "KXNFLNFCNORTH-25",
+            "poly_slug": "nfc-north-winner-11",
+            "mapping": {
+                "det": "Detroit",
+                "gb": "Green Bay",
+                "min": "Minnesota",
+                "chi": "Chicago"
+            }
+        },
+        {
+            "name": "NFC South Winner",
+            "kalshi_ticker": "KXNFLNFCSOUTH-25",
+            "poly_slug": "nfc-south-winner-11",
+            "mapping": {
+                "tb": "Tampa Bay",
+                "no": "New Orleans",
+                "atl": "Atlanta",
+                "car": "Carolina"
+            }
+        },
+        {
+            "name": "NFC West Winner",
+            "kalshi_ticker": "KXNFLNFCWEST-25",
+            "poly_slug": "nfc-west-winner-1",
+            "mapping": {
+                "sf": "San Francisco",
+                "la": "Los Angeles R",
+                "sea": "Seattle",
+                "ari": "Arizona"
+            }
+        },
+        {
+            "name": "NFC East Winner",
+            "kalshi_ticker": "KXNFLNFCEAST-25",
+            "poly_slug": "nfc-east-winner-1",
+            "mapping": {
+                "phi": "Philadelphia",
+                "dal": "Dallas",
+                "nyg": "New York G",
+                "was": "Washington"
+            }
+        },
+        {
+            "name": "NBA Eastern Conference Champion",
+            "kalshi_ticker": "KXNBAEAST-26",
+            "poly_slug": "nba-eastern-conference-champion-442",
+            "mapping": {
+                "atl": "Atlanta Hawks",
+                "bos": "Boston Celtics",
+                "bkn": "Brooklyn Nets",
+                "cha": "Charlotte Hornets",
+                "chi": "Chicago Bulls",
+                "cle": "Cleveland Cavaliers",
+                "dal": "Detroit Pistons",
+                "ind": "Indiana Pacers",
+                "mia": "Miami Heat",
+                "mil": "Milwaukee Bucks",
+                "nyk": "New York Knicks",
+                "orl": "Orlando Magic",
+                "phi": "Philadelphia 76ers",
+                "tor": "Toronto Raptors",
+                "was": "Washington Wizards"
+            }
+        },
+        {
+            "name": "NBA Western Conference Champion",
+            "kalshi_ticker": "KXNBAWEST-26",
+            "poly_slug": "nba-western-conference-champion-933",
+            "mapping": {
+                "dal": "Dallas Mavericks",
+                "den": "Denver Nuggets",
+                "gsw": "Golden State Warriors",
+                "hou": "Houston Rockets",
+                "lac": "Los Angeles Clippers",
+                "lal": "Los Angeles Lakers",
+                "mem": "Memphis Grizzlies",
+                "min": "Minnesota Timberwolves",
+                "nop": "New Orleans Pelicans",
+                "okc": "Oklahoma City Thunder",
+                "phx": "Phoenix Suns",
+                "por": "Portland Trail Blazers",
+                "sac": "Sacramento Kings",
+                "sas": "San Antonio Spurs",
+                "uta": "Utah Jazz"
+            }
+        },
+        {
+            "name": "NHL Pacific Division Winner",
+            "kalshi_ticker": "KXNHLPACIFIC-26",
+            "poly_slug": "nhl-pacific-division-winner-228",
+            "mapping": {
+                "edm": "Edmonton Oilers",
+                "vgk": "Vegas Golden Knights",
+                "la": "Los Angeles Kings",
+                "van": "Vancouver Canucks",
+                "ana": "Anaheim Ducks",
+                "cgy": "Calgary Flames",
+                "sea": "Seattle Kraken",
+                "sj": "San Jose Sharks"
+            }
+        },
+        {
+            "name": "Who will Trump meet with in 2025",
+            "kalshi_ticker": "KXWLEADER-25",
+            "poly_slug": "who-will-trump-meet-with-in-2025",
+            "mapping": {
+                "vp": "Vladimir Putin",
+                "kju": "Kim Jong Un",
+                "xjin": "Xi Jinping",
+                "mbs": "Mohammed bin Salman"
+            }
+        },
+        {
+            "name": "NHL Atlantic Division Winner",
+            "kalshi_ticker": "KXNHLATLANTIC-26",
+            "poly_slug": "nhl-atlantic-division-winner-747",
+            "mapping": {
+                "tb": "Tampa Bay Lightning",
+                "tor": "Toronto Maple Leafs",
+                "fla": "Florida Panthers",
+                "ott": "Ottawa Senators",
+                "mtl": "Montreal Canadiens",
+                "det": "Detroit Red Wings",
+                "buf": "Buffalo Sabres",
+                "bos": "Boston Bruins"
+            }
+        },
+        {
+            "name": "NHL Metropolitan Division Winner",
+            "kalshi_ticker": "KXNHLMETROPOLITAN-26",
+            "poly_slug": "nhl-metropolitan-division-winner-831",
+            "mapping": {
+                "car": "Carolina Hurricanes",
+                "nj": "New Jersey Devils",
+                "wsh": "Washington Capitals",
+                "nyr": "New York Rangers",
+                "nyi": "New York Islanders",
+                "cbj": "Columbus Blue Jackets",
+                "phi": "Philadelphia Flyers",
+                "pit": "Pittsburgh Penguins"
+            }
+        },
+        {
+            "name": "NHL Central Division Winner",
+            "kalshi_ticker": "KXNHLCENTRAL-26",
+            "poly_slug": "nhl-central-division-winner-948",
+            "mapping": {
+                "dal": "Dallas Stars",
+                "col": "Colorado Avalanche",
+                "wpg": "Winnipeg Jets",
+                "min": "Minnesota Wild",
+                "uta": "Arizona Coyotes",
+                "stl": "St. Louis Blues",
+                "nsh": "Nashville Predators",
+                "chi": "Chicago Blackhawks"
+            }
+        },
+        {
+            "name": "Nobel Peace Prize Winner 2026",
+            "kalshi_ticker": "KXNOBELPEACE-26",
+            "poly_slug": "nobel-peace-prize-winner-2026-139",
+            "mapping": {
+                "vol": "Volodymyr Zelenskyy",
+                "elo": "Elon Musk",
+                "icj": "International Court of Justice"
+            }
+        },
+        {
+            "name": "NHL Eastern Conference Champion",
+            "kalshi_ticker": "KXNHLEAST-26",
+            "poly_slug": "nhl-eastern-conference-champion-198",
+            "mapping": {
+                "bos": "Boston Bruins",
+                "buf": "Buffalo Sabres",
+                "car": "Carolina Hurricanes",
+                "cbj": "Columbus Blue Jackets",
+                "det": "Detroit Red Wings",
+                "fla": "Florida Panthers",
+                "mtl": "Montreal Canadiens",
+                "nj": "New Jersey Devils",
+                "nyi": "New York Islanders",
+                "nyr": "New York Rangers",
+                "ott": "Ottawa Senators",
+                "phi": "Philadelphia Flyers",
+                "pit": "Pittsburgh Penguins",
+                "tb": "Tampa Bay Lightning",
+                "tor": "Toronto Maple Leafs",
+                "wsh": "Washington Capitals"
+            }
+        },
+        {
+            "name": "NHL Western Conference Champion",
+            "kalshi_ticker": "KXNHLWEST-26",
+            "poly_slug": "nhl-western-conference-champion-865",
+            "mapping": {
+                "ana": "Anaheim Ducks",
+                "cgy": "Calgary Flames",
+                "chi": "Chicago Blackhawks",
+                "col": "Colorado Avalanche",
+                "dal": "Dallas Stars",
+                "edm": "Edmonton Oilers",
+                "la": "Los Angeles Kings",
+                "min": "Minnesota Wild",
+                "nsh": "Nashville Predators",
+                "sea": "Seattle Kraken",
+                "sj": "San Jose Sharks",
+                "stl": "St. Louis Blues",
+                "uta": "Utah Mammoth",
+                "van": "Vancouver Canucks",
+                "vgk": "Vegas Golden Knights",
+                "wpg": "Winnipeg Jets"
+            }
+        },
+        {
+            "name": "Countries to Recognize Palestine in 2025",
+            "kalshi_ticker": "KXRECOGPALESTINE-25",
+            "poly_slug": "which-countries-will-recognize-palestine-in-2025",
+            "mapping": {
+                "jap": "Japan",
+                "ita": "Italy",
+                "us": "United States",
+                "ger": "Germany",
+                "can": "Canada",
+                "fr": "France",
+                "uk": "United Kingdom",
+                "nl": "The Netherlands"
+            }
+        },
+        {
+            "name": "Freestyle Chess Grand Slam Tour Winner 2025",
+            "kalshi_ticker": "KXCHESS-25FCTOUR1ST",
+            "poly_slug": "2025-freestyle-chess-grand-slam-tour-winner",
+            "mapping": {
+                "mcar": "Magnus Carlsen",
+                "fcar": "Fabiano Caruana",
+                "vkey": "Vincent Keymer"
+            }
+        },
+        {
+            "name": "Freestyle Chess South Africa Winner",
+            "kalshi_ticker": "KXCHESS-25FCSLAMSA1ST",
+            "poly_slug": "freestyle-chess-grand-slam-south-africa-winner",
+            "mapping": {
+                "mcar": "Magnus Carlsen",
+                "fcar": "Fabiano Caruana",
+                "vkey": "Vincent Keymer",
+                "laro": "Levon Aronian",
+                "arj": "Arjun Erigaisi",
+                "han": "Hans Niemann",
+                "par": "Parham Maghsoodloo",
+                "jav": "Javokhir Sindarov"
+            }
+        },
+        {
+            "name": "Benin Parliamentary Election",
+            "kalshi_ticker": "KXBENINPARLIAMENT-26JAN11",
+            "poly_slug": "benin-parliamentary-election-winner",
+            "mapping": {
+                "upr": "UPR",
+                "br": "BR",
+                "ld": "LD",
+                "fcbe": "FCBE"
+            }
+        },
+        {
+            "name": "Colombia Presidential Election",
+            "kalshi_ticker": "KXCOLOMBIAPRES-26",
+            "poly_slug": "colombia-presidential-election",
+            "mapping": {
+                "sfaj": "Sergio Fajardo (DC)",
+                "aesp": "Abelardo de la Espriella",
+                "vdav": "Vicky Dávila (IND)",
+                "icas": "Iván Cepeda Castro",
+                "gbol": "Gustavo Bolívar (HC)",
+                "dqui": "Daniel Quintero"
+            }
+        },
+        {
+            "name": "Paris Mayoral Election",
+            "kalshi_ticker": "KXPARISMAYOR-26MAR15",
+            "poly_slug": "paris-mayoral-election",
+            "mapping": {
+                "egre": "Éric Grégoire",
+                "rdat": "Rachida Dati",
+                "pbou": "Pierre-Yves Bournazel",
+                "dbel": "David Belliard",
+                "schi": "Sophia Chikirou",
+                "tmar": "Thierry Mariani"
+            }
+        },
+        {
+            "name": "Peru Presidential Election",
+            "kalshi_ticker": "KXPERUPRES-26",
+            "poly_slug": "peru-presidential-election-winner",
+            "mapping": {
+                "kfuj": "Keiko Fujimori"
+            }
+        },
+        {
+            "name": "Seoul Mayoral Election",
+            "kalshi_ticker": "KXSEOULMAYOR-26JUN03",
+            "poly_slug": "2026-seoul-mayoral-election-winner",
+            "mapping": {
+                "oseh": "Oh Se-hoon",
+                "cwon": "Chong Won-oh",
+                "pjum": "Park Ju-min",
+                "syou": "Seo Young-kyo",
+                "nkyu": "Na Kyung-won"
+            }
+        },
+        {
+            "name": "Armenia Parliamentary Election",
+            "kalshi_ticker": "KXARMENIAPARLI-26",
+            "poly_slug": "armenia-parliamentary-election-winner",
+            "mapping": {
+                "civil": "Civil Contract",
+                "alliance": "Armenia Alliance"
+            }
+        },
+        {
+            "name": "Sweden Parliamentary Election",
+            "kalshi_ticker": "KXSWEDENPARLI-26",
+            "poly_slug": "sweden-parliamentary-election-winner",
+            "mapping": {
+                "sdp": "Swedish Social Democratic Party (S)",
+                "sd": "Sweden Democrats (SD)",
+                "moderate": "Moderate Party (M)",
+                "green": "Green Party (MP)",
+                "left": "Left Party (V)"
+            }
+        },
+        {
+            "name": "FIFA World Cup Group A Winner",
+            "kalshi_ticker": "KXWCGROUPWIN-26A",
+            "poly_slug": "fifa-world-cup-group-a-winner",
+            "mapping": {
+                "mex": "Mexico",
+                "kor": "South Korea",
+                "rsa": "South Africa"
+            }
+        },
+        {
+            "name": "FIFA World Cup Group B Winner",
+            "kalshi_ticker": "KXWCGROUPWIN-26B",
+            "poly_slug": "fifa-world-cup-group-b-winner",
+            "mapping": {
+                "can": "Canada",
+                "qat": "Qatar",
+                "sui": "Switzerland"
+            }
+        },
+        {
+            "name": "FIFA World Cup Group C Winner",
+            "kalshi_ticker": "KXWCGROUPWIN-26C",
+            "poly_slug": "fifa-world-cup-group-c-winner",
+            "mapping": {
+                "hti": "Haiti",
+                "mar": "Morocco",
+                "bra": "Brazil",
+                "sco": "Scotland"
+            }
+        },
+        {
+            "name": "FIFA World Cup Group D Winner",
+            "kalshi_ticker": "KXWCGROUPWIN-26D",
+            "poly_slug": "fifa-world-cup-group-d-winner",
+            "mapping": {
+                "usa": "USA",
+                "aus": "Australia",
+                "par": "Paraguay"
+            }
+        },
+        {
+            "name": "FIFA World Cup Group E Winner",
+            "kalshi_ticker": "KXWCGROUPWIN-26E",
+            "poly_slug": "fifa-world-cup-group-e-winner",
+            "mapping": {
+                "cuw": "Curaçao",
+                "civ": "Côte d'Ivoire",
+                "ecu": "Ecuador",
+                "ger": "Germany"
+            }
+        },
+        {
+            "name": "FIFA World Cup Group F Winner",
+            "kalshi_ticker": "KXWCGROUPWIN-26F",
+            "poly_slug": "fifa-world-cup-group-f-winner",
+            "mapping": {
+                "jpn": "Japan",
+                "tun": "Tunisia",
+                "ned": "Netherlands"
+            }
+        },
+        {
+            "name": "FIFA World Cup Group G Winner",
+            "kalshi_ticker": "KXWCGROUPWIN-26G",
+            "poly_slug": "fifa-world-cup-group-g-winner",
+            "mapping": {
+                "iri": "Iran",
+                "egy": "Egypt",
+                "nzl": "New Zealand",
+                "bel": "Belgium"
+            }
+        },
+        {
+            "name": "FIFA World Cup Group H Winner",
+            "kalshi_ticker": "KXWCGROUPWIN-26H",
+            "poly_slug": "fifa-world-cup-group-h-winner",
+            "mapping": {
+                "ksa": "Saudi Arabia",
+                "cpv": "Cape Verde",
+                "uru": "Uruguay",
+                "esp": "Spain"
+            }
+        },
+        {
+            "name": "FIFA World Cup Group I Winner",
+            "kalshi_ticker": "KXWCGROUPWIN-26I",
+            "poly_slug": "fifa-world-cup-group-i-winner",
+            "mapping": {
+                "sen": "Senegal",
+                "fra": "France",
+                "nor": "Norway"
+            }
+        },
+        {
+            "name": "FIFA World Cup Group K Winner",
+            "kalshi_ticker": "KXWCGROUPWIN-26K",
+            "poly_slug": "fifa-world-cup-group-k-winner",
+            "mapping": {
+                "uzb": "Uzbekistan",
+                "col": "Colombia",
+                "por": "Portugal"
+            }
+        },
+        {
+            "name": "FIFA World Cup Group L Winner",
+            "kalshi_ticker": "KXWCGROUPWIN-26L",
+            "poly_slug": "fifa-world-cup-group-l-winner",
+            "mapping": {
+                "pan": "Panama",
+                "eng": "England",
+                "gha": "Ghana",
+                "cro": "Croatia"
+            }
+        },
+        {
+            "name": "FIFA World Cup Group J Winner",
+            "kalshi_ticker": "KXWCGROUPWIN-26J",
+            "poly_slug": "fifa-world-cup-group-j-winner",
+            "mapping": {
+                "jor": "Jordan",
+                "arg": "Argentina",
+                "aut": "Austria",
+                "dza": "Algeria"
+            }
+        },
+        {
+            "name": "Bank of Japan Decision (Jan)",
+            "kalshi_ticker": "KXCBDECISIONJAPAN-26JAN22",
+            "poly_slug": "bank-of-japan-decision-in-december-425",
+            "mapping": {
+                "hold": "No change",
+                "h25": "25 bps increase",
+                "h25p": "50+ bps increase"
+            }
+        },
+        {
+            "name": "Bank of Canada Decision (Jan)",
+            "kalshi_ticker": "KXCBDECISIONCANADA-26JAN",
+            "poly_slug": "bank-of-canada-decision-in-january",
+            "mapping": {
+                "c25": "25 bps decrease",
+                "h0": "No change"
+            }
+        },
+        {
+            "name": "Bank of England Decision (Feb)",
+            "kalshi_ticker": "KXCBDECISIONENGLAND-26FEB05",
+            "poly_slug": "bank-of-england-decision-in-february",
+            "mapping": {
+                "c25": "25 bps decrease",
+                "hold": "No change"
+            }
+        },
+        {
+            "name": "Bank of Mexico Decision (Feb)",
+            "kalshi_ticker": "KXCBDECISIONMEXICO-26FEB05",
+            "poly_slug": "bank-of-mexico-decision-in-february",
+            "mapping": {
+                "hold": "No change"
+            }
+        },
+        {
+            "name": "Actor Awards - Best Ensemble in a Comedy Series",
+            "kalshi_ticker": "KXSAGNOMCASTCOM-26",
+            "poly_slug": "the-actor-awards-nominations-best-ensemble-in-a-comedy-series",
+            "mapping": {
+                "hac": "Hacks",
+                "abb": "Abbott Elementary",
+                "onl": "Only Murders in the Building",
+                "pap": "The Paper",
+                "stu": "The Studio",
+                "bea": "The Bear",
+                "fou": "The Four Seasons",
+                "sat": "Saturday Night Live",
+                "wed": "Wednesday",
+                "lov": "I Love L.A."
+            }
+        },
+        {
+            "name": "Actor Awards - Best Supporting Actor Film",
+            "kalshi_ticker": "KXSAGNOMSUPACTO-26",
+            "poly_slug": "the-actor-awards-nominations-best-supporting-actor-film",
+            "mapping": {
+                "ben": "Benicio del Toro",
+                "pau": "Paul Mescal",
+                "sea": "Sean Penn",
+                "ste": "Stellan Skarsgard",
+                "ada": "Adam Sandler",
+                "jac": "Jacob Elordi"
+            }
+        },
+        {
+            "name": "Actor Awards - Best Actor Film",
+            "kalshi_ticker": "KXSAGNOMACTO-26",
+            "poly_slug": "the-actor-awards-nominations-best-actor-film",
+            "mapping": {
+                "tim": "Timothée Chalamet",
+                "leo": "Leonardo DiCaprio",
+                "eth": "Ethan Hawke",
+                "joe": "Joel Edgerton",
+                "wag": "Wagner Moura"
+            }
+        },
+        {
+            "name": "Actor Awards - Best Cast Film",
+            "kalshi_ticker": "KXSAGNOMCAST-26",
+            "poly_slug": "the-actor-awards-nominations-best-cast-film",
+            "mapping": {
+                "one": "One Battle After Another",
+                "ham": "Hamnet",
+                "jay": "Jay Kelly",
+                "sin": "Sinners",
+                "wic": "Wicked: For Good",
+                "mar": "Marty Supreme",
+                "nou": "Nouvelle Vague",
+                "sen": "Sentimental Value",
+                "son": "Song Sung Blue"
+            }
+        },
+        {
+            "name": "Actor Awards - Best Supporting Actress Film",
+            "kalshi_ticker": "KXSAGNOMSUPACTR-26",
+            "poly_slug": "the-actor-awards-nominations-best-supporting-actress-film",
+            "mapping": {
+                "emi": "Emily Blunt",
+                "ell": "Elle Fanning",
+                "ari": "Ariana Grande",
+                "reg": "Regina Hall",
+                "tey": "Teyana Taylor",
+                "gle": "Glenn Close",
+                "gwy": "Gwyneth Paltrow",
+                "amy": "Amy Madigan"
+            }
+        },
+        {
+            "name": "Actor Awards - Best Actress Film",
+            "kalshi_ticker": "KXSAGNOMACTR-26",
+            "poly_slug": "the-actor-awards-nominations-best-actress-film",
+            "mapping": {
+                "jes": "Jessie Buckley",
+                "cyn": "Cynthia Erivo",
+                "ros": "Rose Byrne",
+                "ren": "Renate Reinsve",
+                "emma": "Emma Stone"
+            }
+        },
+        {
+            "name": "Actor Awards - Best Actress in a Comedy Series",
+            "kalshi_ticker": "KXSAGNOMACTRCOM-26",
+            "poly_slug": "the-actor-awards-nominations-best-actress-in-a-comedy-series",
+            "mapping": {
+                "eri": "Erin Doherty",
+                "meg": "Meghann Fahy",
+                "mic": "Patricia Arquette",
+                "pat": "Patricia Arquette",
+                "lau": "Laurie Metcalf"
+            }
+        },
+        {
+            "name": "Actor Awards - Best Cast in a Motion Picture (Winner)",
+            "kalshi_ticker": "KXSAGAWARDENSEMBLE-26",
+            "poly_slug": "the-actor-awards-winner-best-cast-in-a-motion-picture",
+            "mapping": {
+                "ham": "Hamnet",
+                "one": "One Battle After Another",
+                "sin": "Sinners",
+                "wic": "Wicked: For Good",
+                "mar": "Marty Supreme",
+                "sen": "Sentimental Value"
+            }
+        },
+        {
+            "name": "Actor Awards - Best Actor Film (Winner)",
+            "kalshi_ticker": "KXSAGAWARDACTO-26",
+            "poly_slug": "the-actor-awards-winner-best-actor-film",
+            "mapping": {
+                "tim": "Timothée Chalamet",
+                "leo": "Leonardo DiCaprio",
+                "eth": "Ethan Hawke",
+                "joe": "Joel Edgerton",
+                "wag": "Wagner Moura"
+            }
+        },
+        {
+            "name": "Actor Awards - Best Actor TV Movie or Limited Series (Winner)",
+            "kalshi_ticker": "KXSAGAWARDACTOLIM-26",
+            "poly_slug": "the-actor-awards-winner-best-actor-tv-movie-or-limited-series",
+            "mapping": {
+                "owe": "Owen Cooper",
+                "ste": "Stephen Graham",
+                "jas": "Jason Clarke"
+            }
+        },
+        {
+            "name": "Actor Awards - Best Supporting Actress Film (Winner)",
+            "kalshi_ticker": "KXSAGAWARDSUPACTR-26",
+            "poly_slug": "the-actor-awards-winner-best-supporting-actress-film",
+            "mapping": {
+                "emi": "Emily Blunt",
+                "ell": "Elle Fanning",
+                "ari": "Ariana Grande",
+                "reg": "Regina Hall",
+                "tey": "Teyana Taylor",
+                "gle": "Glenn Close",
+                "amy": "Amy Madigan",
+                "gwy": "Gwyneth Paltrow"
+            }
+        },
+        {
+            "name": "Actor Awards - Best Actress in a Comedy Series (Winner)",
+            "kalshi_ticker": "KXSAGAWARDACTRCOM-26",
+            "poly_slug": "the-actor-awards-winner-best-actress-in-a-comedy-series",
+            "mapping": {
+                "kri": "Kristen Bell",
+                "qui": "Quinta Brunton",
+                "jea": "Jean Smart",
+                "sel": "Selena Gomez",
+                "kris": "Kristen Bell"
+            }
+        },
+        {
+            "name": "Actor Awards - Best Ensemble in a Comedy Series (Winner)",
+            "kalshi_ticker": "KXSAGAWARDCASTCOMEDY-26",
+            "poly_slug": "the-actor-awards-winner-best-ensemble-in-a-comedy-series",
+            "mapping": {
+                "abb": "Abbott Elementary",
+                "hac": "Hacks",
+                "onl": "Only Murders in the Building",
+                "pap": "The Paper",
+                "stu": "The Studio",
+                "bea": "The Bear",
+                "fou": "The Four Seasons",
+                "lov": "I Love L.A.",
+                "sat": "Saturday Night Live",
+                "wed": "Wednesday"
+            }
+        },
+        {
+            "name": "golden-globes-best-motion-picture-animated-winner",
+            "kalshi_ticker": "KXGGAFILM-26",
+            "poly_slug": "golden-globes-best-motion-picture-animated-winner",
+            "mapping": {
+                "kpo": "KPop Demon Hunters",
+                "zoo": "Zootopia 2",
+                "arc": "Arco",
+                "eli": "Elio",
+                "sca": "Scarlet",
+                "nez": "Ne Zha 2",
+                "lit": "Little Amelie or the Character of Rain",
+                "bad": "The Bad Guys 2",
+                "twi": "The Twits",
+                "mag": "A Magnificent Life",
+                "ani": "Animal Farm",
+                "dem": "Demon Slayer Kimetsu No Yaiba",
+                "sne": "Sneaks",
+                "pre": "Predator Killer of Killers"
+            }
+        },
+        {
+            "name": "golden-globes-best-supporting-actress-motion-picture-winner",
+            "kalshi_ticker": "KXGGFILMSUPACTR-26",
+            "poly_slug": "golden-globes-best-supporting-actress-motion-picture-winner",
+            "mapping": {
+                "ari": "Ariana Grande – Wicked: For Good",
+                "ell": "Elle Fanning – Sentimental Value",
+                "tey": "Teyana Taylor – One Battle After Another",
+                "emi": "Emily Blunt – The Smashing Machine",
+                "gwy": "Gwyneth Paltrow – Marty Supreme",
+                "jen": "Jennifer Lopez – Kiss of the Spider Woman",
+                "amy": "Amy Madigan – Weapons",
+                "ing": "Inga Ibsdotter Lilleaas – Sentimental Value",
+                "gle": "Glenn Close – Wake Up Dead Man",
+                "wun": "Wunmi Mosaku – Sinners",
+                "lau": "Laura Dern – Jay Kelly",
+                "cha": "Chase Infiniti – One Battle After Another",
+                "reg": "Regina Hall – One Battle After Another",
+                "hai": "Hailee Steinfeld – Sinners"
+            }
+        },
+        {
+            "name": "golden-globes-best-television-series-drama-winner",
+            "kalshi_ticker": "KXGGDRAMATV-26",
+            "poly_slug": "golden-globes-best-television-series-drama-winner",
+            "mapping": {
+                "sev": "Severance",
+                "pit": "The Pitt",
+                "whi": "The White Lotus",
+                "las": "The Last of Us",
+                "mor": "The Morning Show",
+                "par": "Paradise",
+                "gil": "The Gilded Age",
+                "and": "Andor",
+                "str": "Stranger Things",
+                "slo": "Slow Horses",
+                "dip": "The Diplomat",
+                "plu": "Pluribus"
+            }
+        },
+        {
+            "name": "golden-globes-best-motion-picture-drama-winner",
+            "kalshi_ticker": "KXGGDRAMAFILM-26",
+            "poly_slug": "golden-globes-best-motion-picture-drama-winner",
+            "mapping": {
+                "ham": "Hamnet",
+                "sin": "Sinners",
+                "sen": "Sentimental Value",
+                "one": "One Battle After Another",
+                "spr": "Springsteen Deliver Me from Nowhere",
+                "itw": "It Was Just an Accident",
+                "ava": "Avatar Fire and Ash",
+                "sma": "The Smashing Machine",
+                "fra": "Frankenstein",
+                "noo": "No Other Choice",
+                "sec": "The Secret Agent",
+                "nur": "Nuremberg",
+                "wea": "Weapons",
+                "aft": "After the Hunt"
+            }
+        },
+        {
+            "name": "golden-globes-best-actress-musical-or-comedy-winner",
+            "kalshi_ticker": "KXGGMCOMFILMACTR-26",
+            "poly_slug": "golden-globes-best-actress-musical-or-comedy-winner",
+            "mapping": {
+                "emm": "Emma Stone – Bugonia",
+                "cyn": "Cynthia Erivo – Wicked: For Good",
+                "kat": "Kate Hudson – Song Sung Blue",
+                "eva": "Eva Victor – Sorry Baby",
+                "oli": "Olivia Colman – The Roses",
+                "emma": "Emma Mackey – Ella McCay",
+                "dak": "Dakota Johnson – Materialists",
+                "cat": "Cate Blanchett - Father Mother Sister Brother",
+                "pam": "Pamela Anderson – The Naked Gun",
+                "lau": "Laura Dern – Is This Thing On?",
+                "jam": "Jamie Lee Curtis – Freakier Friday",
+                "eli": "Elizabeth Olsen – Eternity",
+                "lin": "Lindsay Lohan – Freakier Friday",
+                "ali": "Alison Brie – Together",
+                "kay": "Kaya Scodelario – Kaya Scodelario",
+                "ros": "Rose Byrne (If I Had Legs I'd Kick You)",
+                "ama": "Amanda Seyfried (The Testament of Ann Lee)",
+                "cha": "Chase Infiniti (One Battle After Another)"
+            }
+        },
+        {
+            "name": "golden-globes-best-actor-musical-or-comedy-winner",
+            "kalshi_ticker": "KXGGMCOMFILMACTO-26",
+            "poly_slug": "golden-globes-best-actor-musical-or-comedy-winner",
+            "mapping": {
+                "jes": "Jesse Plemons – Bugonia",
+                "tim": "Timothee Chalamet – Marty Supreme",
+                "geo": "George Clooney – Jay Kelly",
+                "bre": "Brendan Fraser – Rental Family",
+                "dan": "Daniel Craig – Wake Up Dead Man",
+                "hug": "Hugh Jackman – Song Sung Blue",
+                "wil": "Will Arnett – Is This Thing On?",
+                "lia": "Liam Neeson – The Naked Gun",
+                "rob": "Robert Pattinson – Mickey 17",
+                "ben": "Benicio Del Toro – The Phoenician Scheme",
+                "ton": "Tonatiuh – Kiss of the Spider Woman",
+                "joa": "Joaquin Phoenix – Eddington",
+                "timr": "Tim Robinson – Friendship",
+                "chr": "Chris Evans – Materialists",
+                "leo": "Leonardo DiCaprio (One Battle After Another)",
+                "etha": "Ethan Hawke (Blue Moon)",
+                "lee": "Lee Byung-hun (No Other Choice)"
+            }
+        },
+        {
+            "name": "golden-globes-best-motion-picture-musical-or-comedy-winner",
+            "kalshi_ticker": "KXGGMCOMFILM-26",
+            "poly_slug": "golden-globes-best-motion-picture-musical-or-comedy-winner",
+            "mapping": {
+                "wic": "Wicked For Good",
+                "bug": "Bugonia",
+                "mar": "Marty Supreme",
+                "wak": "Wake Up Dead Man",
+                "ren": "Rental Family",
+                "jay": "Jay Kelly",
+                "ist": "Is This Thing On",
+                "kis": "Kiss of the Spider Woman",
+                "fat": "Father Mother Sister Brother",
+                "nak": "The Naked Gun",
+                "son": "Song Sung Blue",
+                "sor": "Sorry Baby",
+                "mat": "Materialists",
+                "tog": "Together",
+                "ell": "Ella McCay",
+                "one": "One Battle After Another",
+                "blu": "Blue Moon",
+                "noo": "No Other Choice",
+                "nou": "Nouvelle Vague"
+            }
+        },
+        {
+            "name": "golden-globes-best-original-score-motion-picture-winner",
+            "kalshi_ticker": "KXGGSCORE-26",
+            "poly_slug": "golden-globes-best-original-score-motion-picture-winner",
+            "mapping": {
+                "sin": "Sinners",
+                "ham": "Hamnet",
+                "fra": "Frankenstein",
+                "one": "One Battle After Another",
+                "bug": "Bugonia",
+                "mar": "Marty Supreme",
+                "wic": "Wicked For Good",
+                "f1t": "F1 The Movie",
+                "ava": "Avatar Fire and Ash",
+                "jay": "Jay Kelly",
+                "sen": "Sentimental Value",
+                "kis": "Kiss of the Spider Woman",
+                "wak": "Wake Up Dead Man",
+                "sir": "Sirat"
+            }
+        },
+        {
+            "name": "golden-globes-best-actor-television-drama-winner",
+            "kalshi_ticker": "KXGGDRAMATVACTO-26",
+            "poly_slug": "golden-globes-best-actor-television-drama-winner",
+            "mapping": {
+                "noa": "Noah Wyle – The Pitt",
+                "ada": "Adam Scott – Severance",
+                "ste": "Sterling K. Brown – Paradise",
+                "gar": "Gary Oldman – Slow Horses",
+                "die": "Diego Luna – Andor",
+                "ped": "Pedro Pascal – The Last of Us",
+                "eth": "Ethan Hawke – The Lowdown",
+                "wal": "Walton Goggins – Fallout",
+                "tim": "Timothy Olyphant – Alien: Earth",
+                "mor": "Morgan Spector – The Gilded Age",
+                "mar": "Mark Ruffalo (Task)"
+            }
+        },
+        {
+            "name": "golden-globes-best-supporting-actor-motion-picture-winner",
+            "kalshi_ticker": "KXGGFILMSUPACTO-26",
+            "poly_slug": "golden-globes-best-supporting-actor-motion-picture-winner",
+            "mapping": {
+                "ste": "Stellan Skarsgard – Sentimental Value",
+                "sea": "Sean Penn – One Battle After Another",
+                "ada": "Adam Sandler – Jay Kelly",
+                "jer": "Jeremy Strong – Springsteen: Deliver Me from Nowhere",
+                "pau": "Paul Mescal – Hamnet",
+                "ben": "Benicio Del Toro – One Battle After Another",
+                "jac": "Jack O'Connell – Sinners",
+                "jon": "Jonathan Bailey – Wicked: For Good",
+                "aki": "Akira Emoto – Rental Family",
+                "jos": "Josh O'Connor – Wake Up Dead Man",
+                "and": "Andrew Scott – Blue Moon",
+                "mil": "Miles Caton – Sinners",
+                "bra": "Bradley Cooper – Is This Thing On?"
+            }
+        },
+        {
+            "name": "golden-globes-best-screenplay-motion-picture-winner",
+            "kalshi_ticker": "KXGGSCREEN-26",
+            "poly_slug": "golden-globes-best-screenplay-motion-picture-winner",
+            "mapping": {
+                "sen": "Sentimental Value",
+                "ham": "Hamnet",
+                "sin": "Sinners",
+                "one": "One Battle After Another",
+                "mar": "Marty Supreme",
+                "bug": "Bugonia",
+                "jay": "Jay Kelly",
+                "noo": "No Other Choice",
+                "wak": "Wake Up Dead Man",
+                "ren": "Rental Family",
+                "sec": "The Secret Agent",
+                "fra": "Frankenstein",
+                "wea": "Weapons"
+            }
+        },
+        {
+            "name": "golden-globes-best-actress-television-drama-winner",
+            "kalshi_ticker": "KXGGDRAMATVACTR-26",
+            "poly_slug": "golden-globes-best-actress-television-drama-winner",
+            "mapping": {
+                "kat": "Kathy Bates – Matlock",
+                "bri": "Britt Lower – Severance",
+                "bel": "Bella Ramsey – The Last of Us",
+                "ker": "Keri Russell – The Diplomat",
+                "jen": "Jennifer Aniston – The Morning Show",
+                "car": "Carrie Coon – The Gilded Age",
+                "rhe": "Rhea Seehorn – Pluribus",
+                "ree": "Reese Witherspoon – The Morning Show",
+                "eli": "Elisabeth Moss – The Handmaid’s Tale",
+                "syd": "Sydney Chandler – Alien: Earth",
+                "hel": "Helen Mirren (Mobland)"
+            }
+        },
+        {
+            "name": "golden-globes-best-actor-television-musical-or-comedy-winner",
+            "kalshi_ticker": "KXGGMCOMTVACTO-26",
+            "poly_slug": "golden-globes-best-actor-television-musical-or-comedy-winner",
+            "mapping": {
+                "set": "Seth Rogen – The Studio",
+                "mar": "Martin Short – Only Murders in the Building",
+                "jer": "Jeremy Allen White – The Bear",
+                "ada": "Adam Brody – Nobody Wants This",
+                "ste": "Steve Martin – Only Murders in the Building",
+                "gle": "Glen Powell – Chad Powers",
+                "ted": "Ted Danson – A Man on the Inside",
+                "nat": "Nathan Fielder – The Rehearsal",
+                "dom": "Domhnall Gleeson – The Paper",
+                "ben": "Benito Skinner – Overcompensating"
+            }
+        },
+        {
+            "name": "golden-globes-best-television-limited-series-winner",
+            "kalshi_ticker": "KXGGLSERIES-26",
+            "poly_slug": "golden-globes-best-television-limited-series-winner",
+            "mapping": {
+                "ado": "Adolescence",
+                "dyi": "Dying for Sex",
+                "mon": "Monster The Ed Gein Story",
+                "tas": "Task",
+                "sir": "Sirens",
+                "blac": "Black Rabbit",
+                "dop": "Dope Thief",
+                "dea": "Death by Lightning",
+                "bla": "Black Mirror",
+                "sav": "The Savant",
+                "all": "All Her Fault",
+                "bea": "The Beast In Me",
+                "gir": "The Girlfriend"
+            }
+        },
+        {
+            "name": "golden-globes-best-actor-limited-series-winner",
+            "kalshi_ticker": "KXGGLSERIESACTO-26",
+            "poly_slug": "golden-globes-best-actor-limited-series-winner",
+            "mapping": {
+                "ste": "Stephen Graham – Adolescence",
+                "cha": "Charlie Hunnam – Monster The Ed Gein Story",
+                "mar": "Mark Ruffalo – Task",
+                "bri": "Brian Tyree Henry – Dope Thief",
+                "jas": "Jason Bateman – Black Rabbit",
+                "ster": "Sterling K Brown – Washington Black",
+                "mic": "Michael Shannon – Death by Lightning",
+                "pau": "Paul Giamatti – Black Mirror",
+                "jud": "Jude Law – Black Rabbit",
+                "jac": "Jacob Elordi – The Narrow Road to the Deep North",
+                "mat": "Matthew Rhys (The Beast In Me)"
+            }
+        },
+        {
+            "name": "golden-globes-best-actress-drama-winner",
+            "kalshi_ticker": "KXGGDRAMAFILMACTR-26",
+            "poly_slug": "golden-globes-best-actress-drama-winner",
+            "mapping": {
+                "jes": "Jessie Buckley – Hamnet",
+                "ren": "Renate Reinsve – Sentimental Value",
+                "ros": "Rose Byrne – If I Had Legs I'd Kick You",
+                "jen": "Jennifer Lawrence – Die My Love",
+                "jul": "Julia Garner – Weapons",
+                "syd": "Sydney Sweeney – Christy",
+                "tes": "Tessa Thompson – Hedda",
+                "jun": "June Squibb – Eleanor the Great",
+                "jod": "Jodie Foster – A Private Life",
+                "juli": "Julia Roberts – After the Hunt",
+                "luc": "Lucy Liu – Rosemead",
+                "gle": "Glenn Close – The Summer Book",
+                "cat": "Cate Blanchett – Black Bag",
+                "eva": "Eva Victor (Sorry, Baby)"
+            }
+        },
+        {
+            "name": "golden-globes-best-actress-television-musical-or-comedy-winner",
+            "kalshi_ticker": "KXGGMCOMTVACTR-26",
+            "poly_slug": "golden-globes-best-actress-television-musical-or-comedy-winner",
+            "mapping": {
+                "jea": "Jean Smart – Hacks",
+                "jen": "Jenna Ortega – Wednesday"
+            }
+        },
+        {
+            "name": "golden-globes-best-television-series-comedy-or-musical-winner",
+            "kalshi_ticker": "KXGGMCOMTV-26",
+            "poly_slug": "golden-globes-best-television-series-comedy-or-musical-winner",
+            "mapping": {
+                "stu": "The Studio",
+                "hac": "Hacks",
+                "onl": "Only Murders in the Building",
+                "abb": "Abbott Elementary",
+                "bea": "The Bear",
+                "nob": "Nobody Wants This",
+                "wed": "Wednesday",
+                "reh": "The Rehearsal",
+                "pap": "The Paper",
+                "lov": "I Love LA"
+            }
+        },
+        {
+            "name": "golden-globes-best-supporting-actress-television-winner",
+            "kalshi_ticker": "KXGGTVSUPACTR-26",
+            "poly_slug": "golden-globes-best-supporting-actress-television-winner",
+            "mapping": {
+                "han": "Hannah Einbinder – Hacks",
+                "eri": "Erin Doherty – Adolescence",
+                "car": "Carrie Coon – The White Lotus",
+                "par": "Parker Posey – The White Lotus",
+                "cat": "Catherine O'Hara – The Studio",
+                "jen": "Jenny Slate – Dying for Sex",
+                "lau": "Laurie Metcalf – Monster: The Ed Gein Story",
+                "aim": "Aimee Lou Wood – The White Lotus",
+                "mar": "Marion Cotillard – The Morning Show"
+            }
+        },
+        {
+            "name": "golden-globes-best-supporting-actor-television-winner",
+            "kalshi_ticker": "KXGGTVSUPACTO-26",
+            "poly_slug": "golden-globes-best-supporting-actor-television-winner",
+            "mapping": {
+                "owe": "Owen Cooper – Adolescence",
+                "tra": "Tramell Tillman – Severance",
+                "wal": "Walton Goggins – The White Lotus",
+                "ike": "Ike Barinholtz – The Studio",
+                "bil": "Billy Crudup – The Morning Show",
+                "ebo": "Ebon Moss-Bachrach – The Bear",
+                "jas": "Jason Isaacs – The White Lotus",
+                "joh": "John Turturro – Severance",
+                "sam": "Sam Rockwell – The White Lotus",
+                "pat": "Patrick Schwarzenegger – The White Lotus",
+                "ash": "Ashley Walters (Adolescence)"
+            }
+        },
+        {
+            "name": "golden-globes-best-actress-limited-series-winner",
+            "kalshi_ticker": "KXGGLSERIESACTR-26",
+            "poly_slug": "golden-globes-best-actress-limited-series-winner",
+            "mapping": {
+                "mic": "Michelle Williams – Dying for Sex",
+                "meg": "Meghann Fahy – Sirens",
+                "jes": "Jessica Chastain – The Savant",
+                "ren": "Renee Zellweger – Bridget Jones Mad About the Boy",
+                "ras": "Rashida Jones – Black Mirror",
+                "kai": "Kaitlyn Dever – Apple Cider Vinegar",
+                "sar": "Sarah Snook – All Her Fault",
+                "cla": "Claire Danes – The Beast in Me",
+                "ama": "Amanda Seyfried – Long Bright River",
+                "ell": "Ellen Pompeo – Good American Family",
+                "rob": "Robin Wright (The Girlfriend)"
+            }
+        },
+        {
+            "name": "golden-globes-best-podcast-winner",
+            "kalshi_ticker": "KXGGPODCAST-26",
+            "poly_slug": "golden-globes-best-podcast-winner",
+            "mapping": {
+                "arm": "Armchair Expert with Dax Shepard",
+                "call": "Call Her Daddy",
+                "goo": "Good Hang with Amy Poehler",
+                "sma": "Smartless",
+                "mel": "The Mel Robbins Podcast",
+                "upf": "Up First"
+            }
+        },
+        {
+            "name": "golden-globes-best-actor-drama-winner",
+            "kalshi_ticker": "KXGGDRAMAFILMACTO-26",
+            "poly_slug": "golden-globes-best-actor-drama-winner",
+            "mapping": {
+                "jer": "Jeremy Allen White – Springsteen: Deliver Me from Nowhere",
+                "mic": "Michael B. Jordan – Sinners",
+                "dwa": "Dwayne Johnson – The Smashing Machine",
+                "leo": "Leonardo DiCaprio – One Battle After Another",
+                "wag": "Wagner Moura – The Secret Agent",
+                "dan": "Daniel Day-Lewis – Anemone",
+                "pau": "Paul Mescal – Hamnet",
+                "eth": "Ethan Hawke – Blue Moon",
+                "col": "Colin Farrell – Ballad of a Small Player",
+                "lee": "Lee Byung-hun – No Other Choice",
+                "osc": "Oscar Isaac – Frankenstein",
+                "joe": "Joel Edgerton – Train Dreams",
+                "rus": "Russell Crowe – Nuremberg",
+                "mat": "Matthew McConaughey – The Lost Bus",
+                "ram": "Rami Malek – Nuremberg"
+            }
+        },
+        {
+            "name": "reserve-bank-of-australia-decision-in-february",
+            "kalshi_ticker": "KXCBDECISIONAUSTRALIA-26FEB03",
+            "poly_slug": "reserve-bank-of-australia-decision-in-february",
+            "mapping": {
+                "hold": "No Change"
+            }
+        },
+        {
+            "name": "los-angeles-mayoral-election-117",
+            "kalshi_ticker": "KXMAYORLA-26",
+            "poly_slug": "los-angeles-mayoral-election-117",
+            "mapping": {
+                "kbas": "Karen Bass",
+                "rcar": "Rick Caruso",
+                "aaln": "Asaad Alnajjar",
+                "gvio": "Gina Viola"
+            }
+        },
+        {
+            "name": "balance-of-power-2026-midterms",
+            "kalshi_ticker": "KXBALANCEPOWERCOMBO-27FEB",
+            "poly_slug": "balance-of-power-2026-midterms",
+            "mapping": {
+                "dd": "Democrats Sweep",
+                "dr": "R Senate, D House",
+                "rr": "Republicans Sweep",
+                "rd": "D Senate, R House"
+            }
+        },
+        {
+            "name": "eurovision-winner-2026",
+            "kalshi_ticker": "KXEUROVISION-26",
+            "poly_slug": "eurovision-winner-2026",
+            "mapping": {
+                "alb": "Albania",
+                "aze": "Azerbaijan",
+                "bel": "Belgium",
+                "bul": "Bulgaria",
+                "cyr": "Country C",
+                "cro": "Croatia",
+                "cze": "Czechia",
+                "den": "Denmark",
+                "est": "Estonia",
+                "fin": "Finland",
+                "fra": "France",
+                "geo": "Georgia",
+                "ger": "Germany",
+                "gre": "Greece",
+                "isr": "Israel",
+                "ita": "Italy",
+                "lat": "Latvia",
+                "lit": "Lithuania",
+                "lux": "Luxembourg",
+                "mal": "Malta",
+                "mol": "Moldova",
+                "mon": "Montenegro",
+                "nor": "Norway",
+                "pol": "Poland",
+                "por": "Portugal",
+                "rom": "Romania",
+                "san": "San Marino",
+                "ser": "Serbia",
+                "swe": "Sweden",
+                "swi": "Switzerland",
+                "ukr": "Ukraine",
+                "uni": "United Kingdom"
+            }
+        },
+        {
+            "name": "december-unemployment-rate-938",
+            "kalshi_ticker": "KXECONSTATU3-25DEC",
+            "poly_slug": "december-unemployment-rate-938",
+            "mapping": {
+                "t4.5": 0.045,
+                "t4.6": 0.046,
+                "t4.7": 0.047,
+                "t4.8": 0.048
+            }
+        },
+        {
+            "name": "steam-awards-sit-back-and-relax",
+            "kalshi_ticker": "KXSTEAMSBAR-26",
+            "poly_slug": "steam-awards-sit-back-and-relax",
+            "mapping": {
+                "meg": "Megabonk",
+                "chi": "Cast n Chill",
+                "sli": "Slime Rancher 2",
+                "pow": "PowerWash Simulator 2",
+                "rvgt": "RV There Yet?"
+            }
+        },
+        {
+            "name": "steam-awards-outstanding-story-rich-game",
+            "kalshi_ticker": "KXSTEAMOSRG-26",
+            "poly_slug": "steam-awards-outstanding-story-rich-game",
+            "mapping": {
+                "las": "The Last of Us: Part II Remastered",
+                "dyi": "Dying Light: The Beast",
+                "dis": "Dispatch",
+                "kin": "Kingdom Come: Deliverance II",
+                "noi": "No, I'm Not a Human"
+            }
+        },
+        {
+            "name": "steam-awards-best-soundtrack",
+            "kalshi_ticker": "KXSTEAMBS-26",
+            "poly_slug": "steam-awards-best-soundtrack",
+            "mapping": {
+                "del": "DELTARUNE",
+                "rif": "Rift of the NecroDancer",
+                "cla": "Clair Obscur: Expedition 33",
+                "mar": "Game M",
+                "tok": "Tokyo Xtreme Racer"
+            }
+        },
+        {
+            "name": "steam-awards-best-game-you-suck-at",
+            "kalshi_ticker": "KXSTEAMBGYSA-26",
+            "poly_slug": "steam-awards-best-game-you-suck-at",
+            "mapping": {
+                "hal": "Game H",
+                "whe": "Where Winds Meet",
+                "pat": "Path of Exile",
+                "eld": "Elden Ring: Nightreign",
+                "mar": "Marvel Rivals"
+            }
+        },
+        {
+            "name": "steam-awards-most-innovative-gameplay-353",
+            "kalshi_ticker": "KXSTEAMMIG-26",
+            "poly_slug": "steam-awards-most-innovative-gameplay-353",
+            "mapping": {
+                "arc": "ARC Raiders",
+                "eur": "Europa Universalis V",
+                "mag": "Mage Arena",
+                "esc": "Escape From Duckov",
+                "blu": "Blue Prince"
+            }
+        },
+        {
+            "name": "steam-awards-better-with-friends",
+            "kalshi_ticker": "KXSTEAMBWF-26",
+            "poly_slug": "steam-awards-better-with-friends",
+            "mapping": {
+                "spl": "Split Fiction",
+                "rep": "R.E.P.O.",
+                "sch": "Schedule I",
+                "pea": "PEAK",
+                "bat": "Battlefield 6"
+            }
+        },
+        {
+            "name": "steam-awards-best-game-on-steam-deck",
+            "kalshi_ticker": "KXSTEAMBGOSD-26",
+            "poly_slug": "steam-awards-best-game-on-steam-deck",
+            "mapping": {
+                "dig": "Digimon Story: Time Stranger",
+                "bal": "BALL x PIT",
+                "clo": "Clover Pit",
+                "dee": "Deep Rock Galactic: Survivor",
+                "had": "Hades II"
+            }
+        },
+        {
+            "name": "steam-awards-labor-of-love-915",
+            "kalshi_ticker": "KXSTEAMLOL-26",
+            "poly_slug": "steam-awards-labor-of-love-915",
+            "mapping": {
+                "hel": "Helldivers 2",
+                "nom": "Game N",
+                "rus": "Rust",
+                "bal": "Baldur's Gate 3",
+                "dot": "Dota 2"
+            }
+        },
+        {
+            "name": "steam-awards-vr-game-of-the-year",
+            "kalshi_ticker": "KXSTEAMVRGOTY-26",
+            "poly_slug": "steam-awards-vr-game-of-the-year",
+            "mapping": {
+                "mid": "The Midnight Walk",
+                "pav": "Pavlov",
+                "emi": "Emissary Zero",
+                "f1": "F1® 25",
+                "lem": "Le Mans Ultimate"
+            }
+        },
+        {
+            "name": "steam-awards-game-of-the-year-395",
+            "kalshi_ticker": "KXSTEAMGOTY-26",
+            "poly_slug": "steam-awards-game-of-the-year-395",
+            "mapping": {
+                "arc": "Arc Raiders",
+                "cla": "Clair Obscur: Expedition 33",
+                "dis": "Dispatch",
+                "hol": "Hollow Knight: Silksong",
+                "kin": "Kingdom Come: Deliverance II"
+            }
+        },
+        {
+            "name": "who-will-be-ufc-featherweight-champion-at-the-end-of-2026",
+            "kalshi_ticker": "KXUFCFEATHERWEIGHTTITLE-26",
+            "poly_slug": "who-will-be-ufc-featherweight-champion-at-the-end-of-2026",
+            "mapping": {
+                "avol": "Alexander Volkanovski",
+                "mevl": "Movsar Evloev",
+                "dlop": "Diego Lopes",
+                "yrod": "Yair Rodriguez",
+                "bort": "Brian Ortega",
+                "aall": "Arnold Allen",
+                "lmur": "Lerone Murphy"
+            }
+        },
+        {
+            "name": "who-will-be-ufc-bantamweight-champion-at-the-end-of-2026",
+            "kalshi_ticker": "KXUFCBANTAMWEIGHTTITLE-26",
+            "poly_slug": "who-will-be-ufc-bantamweight-champion-at-the-end-of-2026",
+            "mapping": {
+                "mdva": "Merab Dvalishvili",
+                "soma": "Sean O'Malley",
+                "unur": "Umar Nurmagomedov",
+                "pyan": "Petr Yan",
+                "csan": "Cory Sandhagen",
+                "syad": "Song Yadong",
+                "dfig": "Deiveson Figueiredo",
+                "mver": "Marlon Vera"
+            }
+        },
+        {
+            "name": "who-will-be-ufc-flyweight-champion-at-the-end-of-2026",
+            "kalshi_ticker": "KXUFCFLYWEIGHTTITLE-26",
+            "poly_slug": "who-will-be-ufc-flyweight-champion-at-the-end-of-2026",
+            "mapping": {
+                "apan": "Alexandre Pantoja",
+                "jvan": "Joshua Van",
+                "broy": "Brandon Royval",
+                "bmor": "Brandon Moreno",
+                "ttai": "Tatsuro Taira",
+                "mkap": "Manel Kape",
+                "aalb": "Amir Albazi"
+            }
+        },
+        {
+            "name": "next-chelsea-manager-972",
+            "kalshi_ticker": "KXNEXTMANAGERCHELSEA-26",
+            "poly_slug": "next-chelsea-manager-972",
+            "mapping": {
+                "rdze": "Robert De Zerbi",
+                "lros": "Liam Rosenior",
+                "aira": "Andoni Iraola",
+                "ogla": "Oliver Glasner",
+                "cfab": "Cesc Fabregas",
+                "xher": "Xavi Hernandez"
+            }
+        },
+        {
+            "name": "texas-democratic-senate-primary-winner",
+            "kalshi_ticker": "KXSENATETXD-26",
+            "poly_slug": "texas-democratic-senate-primary-winner",
+            "mapping": {
+                "jtal": "James Talarico",
+                "jcro": "Jasmine Crockett"
+            }
+        },
+        {
+            "name": "connecticut-governor-republican-primary-winner",
+            "kalshi_ticker": "KXGOVCTNOMR-26",
+            "poly_slug": "connecticut-governor-republican-primary-winner",
+            "mapping": {
+                "este": "Erin Stewart",
+                "rfaz": "Ryan Fazio"
+            }
+        },
+        {
+            "name": "ia-01-house-election-winner",
+            "kalshi_ticker": "HOUSEIA1-26",
+            "poly_slug": "ia-01-house-election-winner",
+            "mapping": {
+                "d": "Democratic Party",
+                "r": "Republican Party"
+            }
+        },
+        {
+            "name": "mi-13-democratic-primary-winner",
+            "kalshi_ticker": "KXMI13D-26",
+            "poly_slug": "mi-13-democratic-primary-winner",
+            "mapping": {
+                "stha": "Shri Thanedar",
+                "dmck": "Donavan McKinney",
+                "nhas": "Nazmul Hassan",
+                "scam": "Shelby Campbell",
+                "acar": "Anthony Carbonaro"
+            }
+        },
+        {
+            "name": "iowa-governor-democratic-primary-winner",
+            "kalshi_ticker": "KXGOVIANOMD-26",
+            "poly_slug": "iowa-governor-democratic-primary-winner",
+            "mapping": {
+                "rsan": "Rob Sand",
+                "jsta": "Julie Stauch",
+                "pdah": "Paul Dahl"
+            }
+        },
+        {
+            "name": "iowa-democratic-senate-primary-winner",
+            "kalshi_ticker": "KXKXSENATEIAD-26",
+            "poly_slug": "iowa-democratic-senate-primary-winner",
+            "mapping": {
+                "nsag": "Nathan Sage",
+                "jtur": "Josh Turek",
+                "zwah": "Zach Wahls"
+            }
+        },
+        {
+            "name": "ia-03-house-election-winner",
+            "kalshi_ticker": "HOUSEIA3-26",
+            "poly_slug": "ia-03-house-election-winner",
+            "mapping": {
+                "d": "Democratic Party",
+                "r": "Republican Party"
+            }
+        },
+        {
+            "name": "iowa-republican-senate-primary-winner",
+            "kalshi_ticker": "KXSENATEIAR-26",
+            "poly_slug": "iowa-republican-senate-primary-winner",
+            "mapping": {
+                "jcar": "Jim Carlin",
+                "jsmi": "Joshua Smith",
+                "ahin": "Ashley Hinson",
+                "pgra": "Person G"
+            }
+        },
+        {
+            "name": "iowa-governor-winner-2026",
+            "kalshi_ticker": "GOVPARTYIA-26",
+            "poly_slug": "iowa-governor-winner-2026",
+            "mapping": {
+                "r": "Republican",
+                "d": "Democrat"
+            }
+        },
+        {
+            "name": "iowa-governor-republican-primary-winner",
+            "kalshi_ticker": "KXGOVIANOMR-26",
+            "poly_slug": "iowa-governor-republican-primary-winner",
+            "mapping": {
+                "eand": "Eddie Andrews",
+                "bshe": "Brad Sherman",
+                "rfee": "Randy Feenstra",
+                "asin": "Adam Steen",
+                "zlah": "Zach Lahn"
+            }
+        },
+        {
+            "name": "ia-02-republican-primary-winner",
+            "kalshi_ticker": "KXIA02R-26",
+            "poly_slug": "ia-02-republican-primary-winner",
+            "mapping": {
+                "slun": "Shannon Lundgren",
+                "cmcc": "Charlie McClintock",
+                "jmit": "Joe Mitchell"
+            }
+        },
+        {
+            "name": "wyoming-governor-republican-primary-winner",
+            "kalshi_ticker": "KXGOVWYNOMR-26",
+            "poly_slug": "wyoming-governor-republican-primary-winner",
+            "mapping": {
+                "bbie": "Bo Biteman",
+                "hhag": "Harriet Hageman",
+                "cgra": "Chuck Gray",
+                "mdeg": "Megan Degenfelder",
+                "ebar": "Eric Barlow"
+            }
+        },
+        {
+            "name": "wyoming-governor-winner-2026",
+            "kalshi_ticker": "GOVPARTYWY-26",
+            "poly_slug": "wyoming-governor-winner-2026",
+            "mapping": {
+                "d": "Democrat",
+                "r": "Republican"
+            }
+        },
+        {
+            "name": "virginia-senate-election-winner",
+            "kalshi_ticker": "SENATEVA-26",
+            "poly_slug": "virginia-senate-election-winner",
+            "mapping": {
+                "r": "Republican",
+                "d": "Democrat"
+            }
+        },
+        {
+            "name": "virginia-republican-senate-primary-winner",
+            "kalshi_ticker": "KXSENATEVAR-26",
+            "poly_slug": "virginia-republican-senate-primary-winner",
+            "mapping": {
+                "bree": "Bryce Reeves",
+                "kfar": "Kim Farington",
+                "dwil": "David Williams",
+                "amin": "Al Mina"
+            }
+        },
+        {
+            "name": "virginia-democratic-senate-primary-winner",
+            "kalshi_ticker": "KXSENATEVAD-26",
+            "poly_slug": "virginia-democratic-senate-primary-winner",
+            "mapping": {
+                "mwar": "Mark Warner",
+                "jrey": "Jason Reynolds"
+            }
+        },
+        {
+            "name": "va-07-house-election-winner",
+            "kalshi_ticker": "HOUSEVA7-26",
+            "poly_slug": "va-07-house-election-winner",
+            "mapping": {
+                "d": "Democratic Party",
+                "r": "Republican Party"
+            }
+        },
+        {
+            "name": "va-01-house-election-winner",
+            "kalshi_ticker": "HOUSEVA1-26",
+            "poly_slug": "va-01-house-election-winner",
+            "mapping": {
+                "d": "Democratic Party",
+                "r": "Republican Party"
+            }
+        },
+        {
+            "name": "va-02-democratic-primary-winner",
+            "kalshi_ticker": "KXVA2D-26",
+            "poly_slug": "va-02-democratic-primary-winner",
+            "mapping": {
+                "elur": "Elaine Luria",
+                "josy": "James Osyf",
+                "mstr": "Matt Strickler",
+                "ndev": "Nila Devanath",
+                "pmos": "Patrick Mosolf",
+                "nsle": "Nicolaus Sleister",
+                "bstr": "Burk Stringfellow"
+            }
+        },
+        {
+            "name": "va-02-house-election-winner",
+            "kalshi_ticker": "HOUSEVA2-26",
+            "poly_slug": "va-02-house-election-winner",
+            "mapping": {
+                "d": "Democratic Party",
+                "r": "Republican Party"
+            }
+        },
+        {
+            "name": "va-10-house-election-winner",
+            "kalshi_ticker": "KXHOUSEVA10-26",
+            "poly_slug": "va-10-house-election-winner",
+            "mapping": {
+                "d": "Democratic Party",
+                "r": "Republican Party"
+            }
+        },
+        {
+            "name": "west-virginia-senate-election-winner",
+            "kalshi_ticker": "SENATEWV-26",
+            "poly_slug": "west-virginia-senate-election-winner",
+            "mapping": {
+                "r": "Republican",
+                "d": "Democrat"
+            }
+        },
+        {
+            "name": "west-virginia-republican-senate-primary-winner",
+            "kalshi_ticker": "KXSENATEWVR-26",
+            "poly_slug": "west-virginia-republican-senate-primary-winner",
+            "mapping": {
+                "agaa": "Alexander Gaasserud",
+                "twil": "Tom Willis",
+                "smoo": "Shelley Moore Capito"
+            }
+        },
+        {
+            "name": "who-will-advance-from-the-alaska-governor-primary",
+            "kalshi_ticker": "KXGOVAKPRIMARY-26",
+            "poly_slug": "who-will-advance-from-the-alaska-governor-primary",
+            "mapping": {
+                "cbis": "Click Bishop",
+                "ndah": "Nancy Dahlstrom",
+                "edev": "Edna DeVries",
+                "bwil": "Bernadette Wilson",
+                "acru": "Adam Crum",
+                "ttay": "Treg Taylor",
+                "tbeg": "Tom Begich",
+                "dbro": "Dave Bronson",
+                "shug": "Shelley Hughes",
+                "mhei": "Matt Heilala",
+                "mcla": "Matt Claman"
+            }
+        },
+        {
+            "name": "which-states-will-donald-trump-visit-in-2026",
+            "kalshi_ticker": "KXTRUMPSTATES-27JAN01",
+            "poly_slug": "which-states-will-donald-trump-visit-in-2026",
+            "mapping": {
+                "ny": "New York",
+                "ca": "California",
+                "ak": "Arkansas",
+                "tx": "Texas",
+                "ga": "Georgia",
+                "co": "Colorado",
+                "pa": "Pennsylvania",
+                "oh": "Ohio"
+            }
+        },
+        {
+            "name": "nebraska-governor-winner-2026",
+            "kalshi_ticker": "GOVPARTYNE-26",
+            "poly_slug": "nebraska-governor-winner-2026",
+            "mapping": {
+                "d": "Democrat",
+                "r": "Republican"
+            }
+        },
+        {
+            "name": "nebraska-senate-election-winner",
+            "kalshi_ticker": "SENATENE-26",
+            "poly_slug": "nebraska-senate-election-winner",
+            "mapping": {
+                "r": "Republican",
+                "d": "Democrat"
+            }
+        },
+        {
+            "name": "nebraska-republican-senate-primary-winner",
+            "kalshi_ticker": "KXSENATENER-26",
+            "poly_slug": "nebraska-republican-senate-primary-winner",
+            "mapping": {
+                "pric": "Pete Ricketts",
+                "edun": "Edward Dunn"
+            }
+        },
+        {
+            "name": "ne-02-house-election-winner",
+            "kalshi_ticker": "HOUSENE2-26",
+            "poly_slug": "ne-02-house-election-winner",
+            "mapping": {
+                "d": "Democratic Party",
+                "r": "Republican Party"
+            }
+        },
+        {
+            "name": "ne-02-democratic-primary-winner",
+            "kalshi_ticker": "KXNE2D-26",
+            "poly_slug": "ne-02-democratic-primary-winner",
+            "mapping": {
+                "jcav": "John Cavanaugh",
+                "mjoh": "Mark Johnston",
+                "earg": "Evangelos Argyrakis",
+                "dpow": "Denise Powell"
+            }
+        },
+        {
+            "name": "ne-02-republican-primary-winner",
+            "kalshi_ticker": "KXNE2R-26",
+            "poly_slug": "ne-02-republican-primary-winner",
+            "mapping": {
+                "blin": "Brett Lindstrom",
+                "bhar": "Brinker Harding",
+                "dfre": "Dan Frei"
+            }
+        },
+        {
+            "name": "tennessee-governor-republican-primary-winner",
+            "kalshi_ticker": "KXGOVTNNOMR-2-26",
+            "poly_slug": "tennessee-governor-republican-primary-winner",
+            "mapping": {
+                "jros": "John Rose",
+                "mbla": "Marsha Blackburn"
+            }
+        },
+        {
+            "name": "tennessee-senate-election-winner",
+            "kalshi_ticker": "SENATETN-26",
+            "poly_slug": "tennessee-senate-election-winner",
+            "mapping": {
+                "r": "Republican",
+                "d": "Democrat"
+            }
+        },
+        {
+            "name": "tennessee-governor-winner-2026",
+            "kalshi_ticker": "GOVPARTYTN-26",
+            "poly_slug": "tennessee-governor-winner-2026",
+            "mapping": {
+                "d": "Democrat",
+                "r": "Republican"
+            }
+        },
+        {
+            "name": "ny-13-democratic-primary-winner",
+            "kalshi_ticker": "KXNY13D-26",
+            "poly_slug": "ny-13-democratic-primary-winner",
+            "mapping": {
+                "aesp": "Adriano Espaillat",
+                "orom": "Oscar Romero",
+                "tchi": "Theo Chino-Tavarez",
+                "jama": "Jaleel Amador",
+                "mmil": "Matt Miller",
+                "mrod": "Megan Rodriguez"
+            }
+        },
+        {
+            "name": "tx-32-house-election-winner",
+            "kalshi_ticker": "KXHOUSETX32-26",
+            "poly_slug": "tx-32-house-election-winner",
+            "mapping": {
+                "d": "Democratic Party",
+                "r": "Republican Party"
+            }
+        },
+        {
+            "name": "tx-35-house-election-winner",
+            "kalshi_ticker": "KXHOUSETX35-26",
+            "poly_slug": "tx-35-house-election-winner",
+            "mapping": {
+                "d": "Democratic Party",
+                "r": "Republican Party"
+            }
+        },
+        {
+            "name": "tx-31-republican-primary-winner",
+            "kalshi_ticker": "KXTX31R-26",
+            "poly_slug": "tx-31-republican-primary-winner",
+            "mapping": {
+                "jcar": "John Carter",
+                "vgom": "Valentina Gomez",
+                "rham": "Raymond Hamden"
+            }
+        },
+        {
+            "name": "tx-09-house-election-winner",
+            "kalshi_ticker": "KXHOUSETX9-26",
+            "poly_slug": "tx-09-house-election-winner",
+            "mapping": {
+                "d": "Democratic Party",
+                "r": "Republican Party"
+            }
+        },
+        {
+            "name": "tx-28-democratic-primary-winner",
+            "kalshi_ticker": "KXTX28D-26",
+            "poly_slug": "tx-28-democratic-primary-winner",
+            "mapping": {
+                "hcue": "Henry Cuellar",
+                "rtre": "Ryan Trevino"
+            }
+        },
+        {
+            "name": "2026-mens-australian-open-winner",
+            "kalshi_ticker": "KXAOMEN-26",
+            "poly_slug": "2026-mens-australian-open-winner",
+            "mapping": {
+                "jsin": "Jannik Sinner",
+                "calc": "Carlos Alcaraz",
+                "ndjo": "Novak Djokovic",
+                "azve": "Alexander Zverev",
+                "dmed": "Daniil Medvedev",
+                "tfri": "Taylor Fritz",
+                "bshe": "Ben Shelton",
+                "jfon": "Joao Fonseca",
+                "admi": "Alex De Minaur",
+                "faal": "Felix Auger Aliassime",
+                "abub": "Alexander Bublik",
+                "ftia": "Frances Tiafoe",
+                "lmus": "Lorenzo Musetti",
+                "gmpe": "Giovanni Mpetshi Perricard",
+                "arub": "Andrey Rublev",
+                "jmen": "Jakub Mensik",
+                "ltie": "Learner Tien",
+                "cruu": "Casper Ruud",
+                "tpau": "Tommy Paul"
+            }
+        },
+        {
+            "name": "what-will-be-the-2-us-netflix-show-this-week-592",
+            "kalshi_ticker": "KXNETFLIXRANKSHOWRUNNERUP-26JAN05",
+            "poly_slug": "what-will-be-the-2-us-netflix-show-this-week-592",
+            "mapping": {
+                "str": "Stranger Things: Season 5",
+                "dav": "Dave Chappelle: the Unstoppable",
+                "emi": "Emily in Paris: Season 5",
+                "ric": "Ricky Gervais: Mortality",
+                "run": "Run Away"
+            }
+        },
+        {
+            "name": "what-will-be-the-top-us-netflix-show-this-week-812",
+            "kalshi_ticker": "KXNETFLIXRANKSHOW-26JAN05",
+            "poly_slug": "what-will-be-the-top-us-netflix-show-this-week-812",
+            "mapping": {
+                "str": "Stranger Things: Season 5",
+                "dav": "Dave Chappelle: the Unstoppable",
+                "emi": "Emily in Paris: Season 5",
+                "ric": "Ricky Gervais: Mortality",
+                "run": "Run Away"
+            }
+        },
+        {
+            "name": "will-mamdani-raise-the-minimum-wage-to-30-before-2027",
+            "kalshi_ticker": "KXNYCMINWAGE-27JAN01",
+            "poly_slug": "will-mamdani-raise-the-minimum-wage-to-30-before-2027",
+            "mapping": {
+                "27jan01": "Will Mamdani raise the minimum wage to $30 before 2027?"
+            }
+        },
+        {
+            "name": "venezuela-leader-end-of-2026",
+            "kalshi_ticker": "KXVENEZUELALEADER-26DEC31",
+            "poly_slug": "venezuela-leader-end-of-2026",
+            "mapping": {
+                "egon": "Edmundo González",
+                "mcm": "María Corina Machado",
+                "drod": "Delcy Rodríguez",
+                "jrod": "Jorge Rodríguez",
+                "nmad": "Nicolás Maduro",
+                "epet": "Evan Pettus",
+                "fdon": "Frank Donovan",
+                "dcai": "Diosdado Cabello Rondón",
+                "mrub": "Marco Rubio",
+                "pheg": "Pete Hegseth",
+                "rgre": "Richard Grenell",
+                "dfig": "Dinorah Figuera"
+            }
+        },
+        {
+            "name": "who-will-be-ufc-heavyweight-champion-at-the-end-of-2026",
+            "kalshi_ticker": "KXUFCHEAVYWEIGHTTITLE-26",
+            "poly_slug": "who-will-be-ufc-heavyweight-champion-at-the-end-of-2026",
+            "mapping": {
+                "tasp": "Tom Aspinall",
+                "cgan": "Ciryl Gane",
+                "avol": "Alexander Volkov",
+                "spav": "Sergei Pavlovich",
+                "cbla": "Curtis Blaydes",
+                "jalm": "Jailton Almeida",
+                "mtyb": "Marcin Tybura"
+            }
+        },
+        {
+            "name": "who-will-be-ufc-middleweight-champion-at-the-end-of-2026",
+            "kalshi_ticker": "KXUFCMIDDLEWEIGHTTITLE-26",
+            "poly_slug": "who-will-be-ufc-middleweight-champion-at-the-end-of-2026",
+            "mapping": {
+                "dple": "Fighter D",
+                "nima": "Nassourdine Imavov",
+                "sstr": "Sean Strickland",
+                "kchi": "Khamzat Chimaev",
+                "iade": "Israel Adesanya",
+                "cbor": "Caio Borralho",
+                "aher": "Anthony Hernandez"
+            }
+        },
+        {
+            "name": "who-will-be-ufc-welterweight-champion-at-the-end-of-2026",
+            "kalshi_ticker": "KXUFCWELTERWEIGHTTITLE-26",
+            "poly_slug": "who-will-be-ufc-welterweight-champion-at-the-end-of-2026",
+            "mapping": {
+                "dmad": "Fighter D",
+                "bmuh": "Belal Muhammad",
+                "sbra": "Sean Brady",
+                "srak": "Shavkat Rakhmonov",
+                "ledw": "Leon Edwards",
+                "kusm": "Kamaru Usman",
+                "mmor": "Michael Morales",
+                "imak": "Islam Makhachev"
+            }
+        },
+        {
+            "name": "who-will-be-ufc-light-heavyweight-champion-at-the-end-of-2026",
+            "kalshi_ticker": "KXUFCLHEAVYWEIGHTTITLE-26",
+            "poly_slug": "who-will-be-ufc-light-heavyweight-champion-at-the-end-of-2026",
+            "mapping": {
+                "mank": "Magomed Ankalaev",
+                "aper": "Alex Pereira",
+                "jpro": "Jiří Procházka",
+                "culb": "Carlos Ulberg",
+                "krou": "Khalil Rountree Jr.",
+                "jbta": "Jan Błachowicz",
+                "jhil": "Jamahal Hill"
+            }
+        },
+        {
+            "name": "who-will-be-ufc-lightweight-champion-at-the-end-of-2026",
+            "kalshi_ticker": "KXUFCLIGHTWEIGHTTITLE-26",
+            "poly_slug": "who-will-be-ufc-lightweight-champion-at-the-end-of-2026",
+            "mapping": {
+                "itop": "Ilia Topuria",
+                "atsa": "Arman Tsarukyan",
+                "mhol": "Max Holloway",
+                "coli": "Charles Oliveira",
+                "jgae": "Justin Gaethje",
+                "dhoo": "Dan Hooker",
+                "mgam": "Mateusz Gamrot"
+            }
+        },
+        {
+            "name": "will-anyone-be-charged-over-daycare-fraud-in-minnesota-by",
+            "kalshi_ticker": "KXMNDAYCARECHARGE",
+            "poly_slug": "will-anyone-be-charged-over-daycare-fraud-in-minnesota-by",
+            "mapping": {
+                "Mon Feb 26 2001 00:00:00 GMT-0600 (Central Standard Time)": "January 31, 2026",
+                "Thu Jul 26 2001 00:00:00 GMT-0500 (Central Daylight Time)": "June 30, 2026",
+                "27jan01": "December 31, 2026"
+            }
+        },
+        {
+            "name": "will-lionel-messi-play-in-the-2026-fifa-world-cup",
+            "kalshi_ticker": "KXSOCCERPLAYMESSI-26",
+            "poly_slug": "will-lionel-messi-play-in-the-2026-fifa-world-cup",
+            "mapping": {
+                "26": "Will Lionel Messi play in the 2026 FIFA World Cup?"
+            }
+        },
+        {
+            "name": "minnesota-governor-democratic-primary-winner",
+            "kalshi_ticker": "KXGOVMNNOMD-26",
+            "poly_slug": "minnesota-governor-democratic-primary-winner",
+            "mapping": {
+                "twal": "Tim Walz",
+                "aklo": "Amy Klobuchar",
+                "bgat": "Bill Gates Jr.",
+                "ssim": "Steve Simon"
+            }
+        },
+        {
+            "name": "minnesota-governor-winner-2026",
+            "kalshi_ticker": "GOVPARTYMN-26",
+            "poly_slug": "minnesota-governor-winner-2026",
+            "mapping": {
+                "d": "Democrat",
+                "r": "Republican"
+            }
+        },
+        {
+            "name": "minnesota-governor-republican-primary-winner",
+            "kalshi_ticker": "KXGOVMNNOMR-26",
+            "poly_slug": "minnesota-governor-republican-primary-winner",
+            "mapping": {
+                "sjen": "Scott Jensen",
+                "krob": "Kristin Robbins",
+                "kqua": "Kendall Qualls",
+                "jsch": "Candidate J",
+                "cmad": "Chris Madel",
+                "mlin": "Mike Lindell",
+                "ldem": "Lisa Demuth"
+            }
+        },
+        {
+            "name": "minnesota-democratic-senate-primary-winner",
+            "kalshi_ticker": "KXSENATEMND-26",
+            "poly_slug": "minnesota-democratic-senate-primary-winner",
+            "mapping": {
+                "pfla": "Peggy Flanagan",
+                "mlop": "Melisa López Franzen",
+                "acra": "Angie Craig",
+                "kell": "Keith Ellison",
+                "mhor": "Melisa Hortman",
+                "ioma": "Ilhan Omar",
+                "jfre": "Jacob Frey",
+                "bmcc": "Betty McCollum",
+                "ssim": "Steve Simon",
+                "dwel": "David Wellstone"
+            }
+        },
+        {
+            "name": "minnesota-republican-senate-primary-winner",
+            "kalshi_ticker": "KXSENATEMNR-26",
+            "poly_slug": "minnesota-republican-senate-primary-winner",
+            "mapping": {
+                "rwhi": "Royce White",
+                "jcol": "Julia Coleman",
+                "krob": "Kristin Robbins"
+            }
+        },
+        {
+            "name": "vermont-governor-winner-2026",
+            "kalshi_ticker": "GOVPARTYVT-26",
+            "poly_slug": "vermont-governor-winner-2026",
+            "mapping": {
+                "d": "Democrat",
+                "r": "Republican"
+            }
+        },
+        {
+            "name": "vermont-governor-republican-primary-winner",
+            "kalshi_ticker": "KXGOVVTNOMR-262",
+            "poly_slug": "vermont-governor-republican-primary-winner",
+            "mapping": {
+                "psco": "Phil Scott",
+                "jrod": "John Rodgers"
+            }
+        },
+        {
+            "name": "vermont-governor-democratic-primary-winner",
+            "kalshi_ticker": "KXGOVVTNOMD-26",
+            "poly_slug": "vermont-governor-democratic-primary-winner",
+            "mapping": {
+                "mpie": "Mike Pieciak",
+                "ccla": "Charity Clark"
+            }
+        },
+        {
+            "name": "connecticut-governor-democratic-primary-winner",
+            "kalshi_ticker": "KXGOVCTNOMD-26",
+            "poly_slug": "connecticut-governor-democratic-primary-winner",
+            "mapping": {
+                "nlam": "Ned Lamont"
+            }
+        },
+        {
+            "name": "connecticut-governor-winner-2026",
+            "kalshi_ticker": "GOVPARTYCT-26",
+            "poly_slug": "connecticut-governor-winner-2026",
+            "mapping": {
+                "r": "Republican",
+                "d": "Democrat"
+            }
+        },
+        {
+            "name": "hltv-awards-player-of-the-year",
+            "kalshi_ticker": "KXRANKLISTCS2PLAYER-26JAN",
+            "poly_slug": "hltv-awards-player-of-the-year",
+            "mapping": {
+                "zyw": "Mathieu \"ZywOo\" Herbaut",
+                "don": "Danil \"donk\" Kryshkovets",
+                "sh1": "Dmitry \"sh1ro\" Sokolov",
+                "m0n": "Ilya \"m0NESY\" Osipov",
+                "rop": "Robin \"ropz\" Kool"
+            }
+        },
+        {
+            "name": "super-bowl-lx-matchup",
+            "kalshi_ticker": "KXTEAMSINSB-26",
+            "poly_slug": "super-bowl-lx-matchup",
+            "mapping": {
+                "bufgb": "Buffalo vs. Green Bay",
+                "bufphi": "Buffalo vs. Philadelphia",
+                "buftb": "Buffalo vs. Tampa Bay",
+                "bufsf": "Buffalo vs. San Francisco",
+                "bufla": "Buffalo vs. Los Angeles Rams",
+                "bufdet": "Buffalo vs. Detroit",
+                "bufwas": "Buffalo vs. Washington",
+                "bufdal": "Buffalo vs. Dallas",
+                "bufsea": "Buffalo vs. Seattle",
+                "bufchi": "Buffalo vs. Chicago",
+                "balgb": "Baltimore vs. Green Bay",
+                "balphi": "Baltimore vs. Philadelphia",
+                "baltb": "Baltimore vs. Tampa Bay",
+                "balsf": "Baltimore vs. San Francisco",
+                "balla": "Baltimore vs. Los Angeles Rams",
+                "baldet": "Baltimore vs. Detroit",
+                "balwas": "Baltimore vs. Washington",
+                "baldal": "Baltimore vs. Dallas",
+                "lacgb": "LA Chargers vs. Green Bay",
+                "lacphi": "LA Chargers vs. Philadelphia",
+                "lactb": "LA Chargers vs. Tampa Bay",
+                "lacsf": "LA Chargers vs. San Francisco",
+                "lacla": "LA Chargers vs. Los Angeles Rams",
+                "lacdet": "LA Chargers vs. Detroit",
+                "lacwas": "LA Chargers vs. Washington",
+                "lacdal": "LA Chargers vs. Dallas",
+                "lacsea": "LA Chargers vs. Seattle",
+                "lacchi": "LA Chargers vs. Chicago",
+                "kcgb": "Kansas City vs. Green Bay",
+                "kcphi": "Kansas City vs. Philadelphia",
+                "kctb": "Kansas City vs. Tampa Bay",
+                "kcsf": "Kansas City vs. San Francisco",
+                "kcla": "Kansas City vs. Los Angeles Rams",
+                "kcdet": "Kansas City vs. Detroit",
+                "kcwas": "Kansas City vs. Washington",
+                "kcdal": "Kansas City vs. Dallas",
+                "indgb": "Indianapolis vs. Green Bay",
+                "indphi": "Indianapolis vs. Philadelphia",
+                "indtb": "Indianapolis vs. Tampa Bay",
+                "indsf": "Indianapolis vs. San Francisco",
+                "indla": "Indianapolis vs. Los Angeles Rams",
+                "inddet": "Indianapolis vs. Detroit",
+                "indwas": "Indianapolis vs. Washington",
+                "inddal": "Indianapolis vs. Dallas",
+                "dengb": "Denver vs. Green Bay",
+                "denphi": "Denver vs. Philadelphia",
+                "dentb": "Denver vs. Tampa Bay",
+                "densf": "Denver vs. San Francisco",
+                "denla": "Denver vs. Los Angeles Rams",
+                "dendet": "Denver vs. Detroit",
+                "denwas": "Denver vs. Washington",
+                "dendal": "Denver vs. Dallas",
+                "densea": "Denver vs. Seattle",
+                "denchi": "Denver vs. Chicago",
+                "negb": "New England vs. Green Bay",
+                "nephi": "New England vs. Philadelphia",
+                "netb": "New England vs. Tampa Bay",
+                "nesf": "New England vs. San Francisco",
+                "nela": "New England vs. Los Angeles Rams",
+                "nedet": "New England vs. Detroit",
+                "newas": "New England vs. Washington",
+                "nedal": "New England vs. Dallas",
+                "nesea": "New England vs. Seattle",
+                "nechi": "New England vs. Chicago",
+                "jacgb": "Jacksonville vs. Green Bay",
+                "jacphi": "Jacksonville vs. Philadelphia",
+                "jactb": "Jacksonville vs. Tampa Bay",
+                "jacsf": "Jacksonville vs. San Francisco",
+                "jacla": "Jacksonville vs. Los Angeles Rams",
+                "jacdet": "Jacksonville vs. Detroit",
+                "jacwas": "Jacksonville vs. Washington",
+                "jacdal": "Jacksonville vs. Dallas",
+                "jacsea": "Jacksonville vs. Seattle",
+                "jacchi": "Jacksonville vs. Chicago",
+                "housea": "Houston vs. Seattle",
+                "houchi": "Houston vs. Chicago",
+                "houphi": "Houston vs. Philadelphia",
+                "housf": "Houston vs. San Francisco",
+                "houla": "Houston vs. Los Angeles Rams",
+                "hougb": "Houston vs. Green Bay"
+            }
+        },
+        {
+            "name": "next-atlanta-falcons-head-coach",
+            "kalshi_ticker": "KXNEXTNFLCOACH-ATL27",
+            "poly_slug": "next-atlanta-falcons-head-coach",
+            "mapping": {
+                "kste": "Kevin Stefanski",
+                "kkub": "Klint Kubiak",
+                "mlaf": "Mike LaFleur",
+                "kkin": "Kliff Kingsbury",
+                "bbel": "Bill Belichick",
+                "jbra": "Joe Brady",
+                "jhaf": "Jeff Hafley",
+                "eeve": "Ejiro Evero"
+            }
+        },
+        {
+            "name": "next-cleveland-browns-head-coach",
+            "kalshi_ticker": "KXNEXTNFLCOACH-CLE27",
+            "poly_slug": "next-cleveland-browns-head-coach",
+            "mapping": {
+                "kkub": "Klint Kubiak",
+                "kkin": "Kliff Kingsbury",
+                "mmcd": "Mike McDaniel",
+                "jbra": "Joe Brady",
+                "bflo": "Brian Flores",
+                "tree": "Tommy Rees",
+                "mnag": "Matt Nagy",
+                "jhaf": "Jeff Hafley",
+                "jmin": "Jesse Minter",
+                "mmcc": "Mike McCarthy",
+                "rsal": "Robert Saleh",
+                "jsch": "Jim Schwartz"
+            }
+        },
+        {
+            "name": "next-new-york-giants-head-coach",
+            "kalshi_ticker": "KXNYGCOACH-26",
+            "poly_slug": "next-new-york-giants-head-coach",
+            "mapping": {
+                "lkif": "Lane Kiffin",
+                "kkin": "Kliff Kingsbury",
+                "jmin": "Jesse Minter",
+                "kkub": "Klint Kubiak",
+                "jhaf": "Jeff Hafley",
+                "jbra": "Joe Brady",
+                "bbel": "Bill Belichick",
+                "bflo": "Brian Flores",
+                "mkaf": "Mike Kafka",
+                "cshu": "Chris Shula",
+                "mnag": "Matt Nagy"
+            }
+        },
+        {
+            "name": "next-arizona-cardinals-head-coach",
+            "kalshi_ticker": "KXNEXTNFLCOACH-ARI27",
+            "poly_slug": "next-arizona-cardinals-head-coach",
+            "mapping": {
+                "kkub": "Klint Kubiak",
+                "jmin": "Josh McCown",
+                "cshu": "Chris Shula",
+                "vjos": "Vance Joseph",
+                "bflo": "Brian Flores",
+                "mmcc": "Mike McCarthy"
+            }
+        },
+        {
+            "name": "next-las-vegas-raiders-head-coach",
+            "kalshi_ticker": "KXNEXTNFLCOACH-LV27",
+            "poly_slug": "next-las-vegas-raiders-head-coach",
+            "mapping": {
+                "bflo": "Brian Flores",
+                "rsal": "Robert Saleh",
+                "kking": "Kliff Kingsbury",
+                "kkub": "Klint Kubiak",
+                "jmin": "Jesse Minter",
+                "tbro": "Tom Brady",
+                "tmon": "Todd Monken",
+                "jbra": "Joe Brady",
+                "aste": "Adam Stenavich",
+                "mmcc": "Mike McCarthy"
+            }
+        },
+        {
+            "name": "next-tennessee-titans-head-coach",
+            "kalshi_ticker": "KXTENNCOACH-26",
+            "poly_slug": "next-tennessee-titans-head-coach",
+            "mapping": {
+                "jmin": "Jesse Minter",
+                "mnag": "Matt Nagy",
+                "ssar": "Steve Spagnuolo",
+                "vjos": "Vance Joseph"
+            }
+        },
+        {
+            "name": "will-elon-musk-change-his-x-profile-picture-by-january-31",
+            "kalshi_ticker": "KXPROFILECHANGEMUSK-26FEB",
+            "poly_slug": "will-elon-musk-change-his-x-profile-picture-by-january-31",
+            "mapping": {
+                "elo": "Will Elon Musk change his X profile picture by January 31?"
+            }
+        },
+        {
+            "name": "next-baltimore-ravens-head-coach",
+            "kalshi_ticker": "KXNEXTNFLCOACH-BAL27",
+            "poly_slug": "next-baltimore-ravens-head-coach",
+            "mapping": {
+                "kkub": "Klint Kubiak",
+                "mmcc": "Mike McCarthy",
+                "kste": "Kevin Stefanski",
+                "bflo": "Brian Flores",
+                "vjos": "Vance Joseph",
+                "mkaf": "Mike Kafka",
+                "cshu": "Option C",
+                "mlaf": "Mike LaFleur",
+                "zorr": "Zach Orr",
+                "tmon": "Todd Monken"
+            }
+        },
+        {
+            "name": "what-will-be-the-top-us-netflix-show-this-week-486",
+            "kalshi_ticker": "KXNETFLIXRANKSHOW-26JAN12",
+            "poly_slug": "what-will-be-the-top-us-netflix-show-this-week-486",
+            "mapping": {
+                "str": "Stranger Things: Season 5",
+                "run": "Run Away",
+                "emi": "Emily in Paris: Season 5",
+                "unl": "Unlocked: A Jail Experiment: Season 2",
+                "his": "His & Hers"
+            }
+        },
+        {
+            "name": "what-will-be-the-2-us-netflix-show-this-week-452",
+            "kalshi_ticker": "KXNETFLIXRANKSHOWRUNNERUP-26JAN12",
+            "poly_slug": "what-will-be-the-2-us-netflix-show-this-week-452",
+            "mapping": {
+                "str": "Stranger Things: Season 5",
+                "run": "Run Away",
+                "emi": "Emily in Paris: Season 5",
+                "his": "His & Hers"
+            }
+        },
+        {
+            "name": "what-will-be-the-top-global-netflix-show-this-week-456",
+            "kalshi_ticker": "KXNETFLIXRANKSHOWGLOBAL-26JAN12",
+            "poly_slug": "what-will-be-the-top-global-netflix-show-this-week-456",
+            "mapping": {
+                "str": "Stranger Things: Season 5",
+                "run": "Run Away",
+                "emi": "Emily in Paris: Season 5",
+                "his": "His & Hers"
+            }
+        },
+        {
+            "name": "what-will-be-the-2-global-netflix-show-this-week-146",
+            "kalshi_ticker": "KXNETFLIXRANKSHOWGLOBAL2-26JAN12",
+            "poly_slug": "what-will-be-the-2-global-netflix-show-this-week-146",
+            "mapping": {
+                "str": "Stranger Things: Season 5",
+                "run": "Run Away",
+                "emi": "Emily in Paris: Season 5",
+                "his": "His & Hers"
+            }
+        },
+        {
+            "name": "what-will-be-the-top-us-netflix-movie-this-week-512",
+            "kalshi_ticker": "KXNETFLIXRANKMOVIE-26JAN12",
+            "poly_slug": "what-will-be-the-top-us-netflix-movie-this-week-512",
+            "mapping": {
+                "evi": "Evil Influencer: The Jodi Hildebrandt Story",
+                "kpo": "Kpop Demon Hunters",
+                "man": "Man on Fire",
+                "pri": "Priscilla",
+                "peo": "People We Meet on Vacation"
+            }
+        },
+        {
+            "name": "what-will-be-the-2-us-netflix-movie-this-week-231",
+            "kalshi_ticker": "KXNETFLIXRANKMOVIERUNNERUP-26JAN12",
+            "poly_slug": "what-will-be-the-2-us-netflix-movie-this-week-231",
+            "mapping": {
+                "evi": "Evil Influencer: The Jodi Hildebrandt Story",
+                "kpo": "Kpop Demon Hunters",
+                "man": "Man on Fire",
+                "pri": "Priscilla",
+                "peo": "People We Meet on Vacation"
+            }
+        },
+        {
+            "name": "what-will-be-the-top-global-netflix-movie-this-week-716",
+            "kalshi_ticker": "KXNETFLIXRANKMOVIEGLOBAL-26JAN12",
+            "poly_slug": "what-will-be-the-top-global-netflix-movie-this-week-716",
+            "mapping": {
+                "evi": "Evil Influencer: The Jodi Hildebrandt Story",
+                "kpo": "Kpop Demon Hunters",
+                "man": "Man on Fire",
+                "pri": "Priscilla",
+                "peo": "People We Meet on Vacation"
+            }
+        },
+        {
+            "name": "what-will-be-the-2-global-netflix-movie-this-week-389",
+            "kalshi_ticker": "KXNETFLIXRANKMOVIEGLOBAL2-26JAN12",
+            "poly_slug": "what-will-be-the-2-global-netflix-movie-this-week-389",
+            "mapping": {
+                "evi": "Evil Influencer: The Jodi Hildebrandt Story",
+                "kpo": "Kpop Demon Hunters",
+                "man": "Man on Fire",
+                "pri": "Priscilla",
+                "peo": "People We Meet on Vacation"
+            }
+        },
+        {
+            "name": "which-countries-will-donald-trump-visit-in-2026",
+            "kalshi_ticker": "KXTRUMPCOUNTRIES-27JAN01",
+            "poly_slug": "which-countries-will-donald-trump-visit-in-2026",
+            "mapping": {
+                "isr": "Israel",
+                "sa": "Saudi Arabia",
+                "can": "Canada",
+                "ita": "Italy",
+                "fra": "France",
+                "chi": "China",
+                "rus": "Russia",
+                "ger": "Germany",
+                "tai": "Taiwan",
+                "swi": "Switzerland",
+                "ind": "India",
+                "mex": "Mexico",
+                "tur": "Turkey",
+                "jap": "Japan"
+            }
+        },
+        {
+      "name": "nba-western-conference-1-seed",
+      "kalshi_ticker": "KXNBAWEST1SEED-25",
+      "poly_slug": "nba-western-conference-1-seed",
+      "mapping": {
+        "den": "Denver Nuggets",
+        "min": "Minnesota Timberwolves",
+        "por": "Portland Trail Blazers",
+        "uta": "Utah Jazz",
+        "gsw": "Golden State Warriors",
+        "lac": "Los Angeles Lakers",
+        "lal": "Los Angeles Clippers",
+        "sac": "San Antonio Spurs",
+        "dal": "Dallas Mavericks",
+        "hou": "Houston Rockets",
+        "mem": "Memphis Grizzlies",
+        "nop": "New Orleans Pelicans"
+      }
+    },
+    {
+      "name": "nba-eastern-conference-1-seed",
+      "kalshi_ticker": "KXNBAEAST1SEED-25",
+      "poly_slug": "nba-eastern-conference-1-seed",
+      "mapping": {
+        "was": "Washington Wizards",
+        "atl": "Atlanta Hawks",
+        "bos": "Boston Celtics",
+        "cha": "Charlotte Hornets",
+        "chi": "Chicago Bulls",
+        "cle": "Cleveland Cavaliers",
+        "det": "Detroit Pistons",
+        "ind": "Indiana Pacers",
+        "mia": "Miami Heat",
+        "mil": "Milwaukee Bucks",
+        "nyk": "New York Knicks",
+        "orl": "Orlando Magic",
+        "phi": "Philadelphia 76ers",
+        "tor": "Toronto Raptors"
+      }
+    },
+    {
+      "name": "nba-2025-26-southeast-division-winner",
+      "kalshi_ticker": "KXNBASOUTHEAST-25",
+      "poly_slug": "nba-2025-26-southeast-division-winner",
+      "mapping": {
+        "orl": "Orlando Magic",
+        "mia": "Miami Heat",
+        "atl": "Atlanta Hawks",
+        "cha": "Charlotte Hornets",
+        "was": "Washington Wizards"
+      }
+    },
+    {
+      "name": "nba-2025-26-central-division-winner",
+      "kalshi_ticker": "KXNBACENTRAL-25",
+      "poly_slug": "nba-2025-26-central-division-winner",
+      "mapping": {
+        "det": "Detroit Pistons",
+        "cle": "Cleveland Cavaliers",
+        "chi": "Chicago Bulls",
+        "mil": "Milwaukee Bucks",
+        "ind": "Indiana Pacers"
+      }
+    },
+    {
+      "name": "nba-2025-26-southwest-division-winner",
+      "kalshi_ticker": "KXNBASOUTHWEST-25",
+      "poly_slug": "nba-2025-26-southwest-division-winner",
+      "mapping": {
+        "sas": "San Antonio Spurs",
+        "hou": "Houston Rockets",
+        "mem": "Memphis Grizzlies",
+        "dal": "Dallas Mavericks",
+        "nop": "New Orleans Pelicans"
+      }
+    },
+    {
+      "name": "nba-2025-26-atlantic-division-winner",
+      "kalshi_ticker": "KXNBAATLANTIC-25",
+      "poly_slug": "nba-2025-26-atlantic-division-winner",
+      "mapping": {
+        "bos": "Boston Celtics",
+        "nyk": "New York Knicks",
+        "tor": "Toronto Raptors",
+        "phi": "Philadelphia 76ers"
+      }
+    },
+    {
+      "name": "nba-2025-26-northwest-division-winner",
+      "kalshi_ticker": "KXNBANORTHWEST-25",
+      "poly_slug": "nba-2025-26-northwest-division-winner",
+      "mapping": {
+        "den": "Denver Nuggets",
+        "min": "Minnesota Timberwolves",
+        "por": "Portland Trail Blazers",
+        "uta": "Utah Jazz"
+      }
+    },
+
+    {
+      "name": "next-miami-dolphins-head-coach",
+      "kalshi_ticker": "KXNEXTNFLCOACH-MIA26",
+      "poly_slug": "next-miami-dolphins-head-coach",
+      "mapping": {
+        "jhar": "John Harbaugh",
+        "kste": "Kevin Stefanski",
+        "jhaf": "Jeff Hafley",
+        "vjos": "Vance Joseph"
+      }
+    },
+
+    {
+      "name": "nfc-champion-1",
+      "kalshi_ticker": "KXNFLNFCCHAMP-25",
+      "poly_slug": "nfc-champion-1",
+      "mapping": {
+        "ari": "Arizona",
+        "atl": "Atlanta",
+        "car": "Carolina",
+        "chi": "Chicago",
+        "dal": "Dallas",
+        "det": "Detroit",
+        "gb": "Green Bay",
+        "la": "Los Angeles R",
+        "min": "Minnesota",
+        "no": "New Orleans",
+        "nyg": "New York G",
+        "phi": "Philadelphia",
+        "sf": "San Francisco",
+        "sea": "Seattle",
+        "tb": "Tampa Bay",
+        "was": "Washington"
+      }
+    },
+    {
+      "name": "nfl-draft-2026-first-overall-pick",
+      "kalshi_ticker": "KXNFLDRAFT1-26",
+      "poly_slug": "nfl-draft-2026-first-overall-pick",
+      "mapping": {
+        "aman": "Arch Manning",
+        "gnus": "Garrett Nussmeier",
+        "lsel": "LaNorris Sellers",
+        "dall": "Drew Allar",
+        "cklu": "Cade Klubnik",
+        "slea": "Sam Leavitt",
+        "kfau": "Keldric Faulk",
+        "tpar": "T.J. Parker",
+        "kpro": "Kadyn Proctor",
+        "fmen": "Fernando Mendoza",
+        "rbai": "Rueben Bain Jr",
+        "mmos": "Miller Moss",
+        "cdow": "Caleb Downs",
+        "fmau": "Francis Mauigoa",
+        "jmat": "Jayden Maiava",
+        "cbec": "Carson Beck",
+        "clom": "Caleb Lomu",
+        "achi": "Aidan Chiles",
+        "jmai": "John Mateer",
+        "kdro": "Kyron Drones",
+        "jdan": "Jalon Daniels",
+        "jtys": "Jordyn Tyson",
+        "tsim": "Ty Simpson",
+        "rwil": "Raylen Wilson",
+        "tgre": "Taylen Green",
+        "cwei": "Conner Weigman",
+        "sfan": "Spencer Fano",
+        "dmoo": "Dante Moore",
+        "aree": "Arvell Reese"
+      }
+    },
+    {
+      "name": "afc-champion-1",
+      "kalshi_ticker": "KXNFLAFCCHAMP-25",
+      "poly_slug": "afc-champion-1",
+      "mapping": {
+        "bal": "Baltimore",
+        "buf": "Buffalo",
+        "cin": "Cincinnati",
+        "cle": "Cleveland",
+        "den": "Denver",
+        "hou": "Houston",
+        "ind": "Indianapolis",
+        "jac": "Jacksonville",
+        "kc": "Kansas City",
+        "lv": "Las Vegas",
+        "lac": "Los Angeles C",
+        "mia": "Miami",
+        "ne": "New England",
+        "nyj": "New York J",
+        "pit": "Pittsburgh",
+        "ten": "Tennessee"
+      }
+    },
+    {
+      "name": "first-song-at-super-bowl-lx-halftime-show",
+      "kalshi_ticker": "KXFIRSTSUPERBOWLSONG-26FEB09",
+      "poly_slug": "first-song-at-super-bowl-lx-halftime-show",
+      "mapping": {
+        "las": "La Santa",
+        "lac": "LA CANCIÓN",
+        "unx": "un x100to",
+        "nev": "Neverita",
+        "saf": "Safaera",
+        "per": "PERRO NEGRO",
+        "laj": "La Jumpa",
+        "dtm": "DtMF",
+        "nue": "NUEVAYOL",
+        "lam": "LA MUDANZA",
+        "oji": "Ojitos Lindos",
+        "cal": "Callaita",
+        "yon": "Yonaguni",
+        "efe": "Efecto",
+        "mia": "MIA",
+        "bai": "BAILE INOLVIDABLE"
+      }
+    },
+    {
+      "name": "what-songs-will-be-played-at-the-super-bowl-halftime-show",
+      "kalshi_ticker": "KXSBSETLISTS-26",
+      "poly_slug": "what-songs-will-be-played-at-the-super-bowl-halftime-show",
+      "mapping": {
+        "lac": "LA CANCIÓN",
+        "mep": "Me Porto Bonito",
+
+        "bai": "BAILE INOLVIDABLE",
+        "ili": "I Like It",
+        "oji": "Ojitos Lindos",
+        "cal": "Callaita",
+        "nom": "No Me Conoce - Remix",
+        "yon": "Yonaguni",
+        "efe": "Efecto",
+        "mia": "MIA",
+        "unx": "un x100to",
+        "teb": "Te Boté - Remix",
+        "per": "PERRO NEGRO",
+        "dtm": "DtMF",
+        "nue": "NUEVAYOL",
+        "nev": "Neverita",
+        "saf": "Safaera",
+        "la": "La Jumpa"
+      }
+    },
+    {
+      "name": "alabama-democratic-senate-primary-winner",
+      "kalshi_ticker": "KXSENATEALD-26",
+      "poly_slug": "alabama-democratic-senate-primary-winner",
+      "mapping": {
+        "mwhe": "Mark Wheeler",
+        "kswe": "Kyle Sweetser",
+        "dlar": "Dakarai Larriett"
+      }
+    },
+    {
+      "name": "alabama-governor-republican-primary-winner",
+      "kalshi_ticker": "KXGOVALNOMR-26",
+      "poly_slug": "alabama-governor-republican-primary-winner",
+      "mapping": {
+        "ttub": "Tommy Tuberville",
+        "kmcf": "Ken McFeeters"
+      }
+    },
+    {
+      "name": "alabama-governor-winner-2026",
+      "kalshi_ticker": "GOVPARTYAL-26",
+      "poly_slug": "alabama-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "alabama-senate-election-winner-154",
+      "kalshi_ticker": "SENATEAL-26",
+      "poly_slug": "alabama-senate-election-winner-154",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "alabama-republican-senate-primary-winner",
+      "kalshi_ticker": "KXSENATEALR-26",
+      "poly_slug": "alabama-republican-senate-primary-winner",
+      "mapping": {
+        "bmoo": "Barry Moore",
+        "jhud": "Jared Hudson",
+        "smar": "Steve Marshall"
+      }
+    },
+    {
+      "name": "new-mexico-governor-democratic-primary-winner",
+      "kalshi_ticker": "KXGOVNMNOMD-26",
+      "poly_slug": "new-mexico-governor-democratic-primary-winner",
+      "mapping": {
+        "dhaa": "Deb Haaland",
+        "kmiy": "Ken Miyagishima",
+        "sbre": "Sam Bregman"
+      }
+    },
+    {
+      "name": "new-mexico-governor-winner-2026",
+      "kalshi_ticker": "GOVPARTYNM-26",
+      "poly_slug": "new-mexico-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "new-mexico-senate-election-winner",
+      "kalshi_ticker": "SENATENM-26",
+      "poly_slug": "new-mexico-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "nm-02-house-election-winner",
+      "kalshi_ticker": "HOUSENM2-26",
+      "poly_slug": "nm-02-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "south-carolina-governor-republican-primary-winner-784",
+      "kalshi_ticker": "KXGOVSCNOMR-26",
+      "poly_slug": "south-carolina-governor-republican-primary-winner-784",
+      "mapping": {
+        "jkim": "Josh Kimbrell",
+        "nmac": "Nancy Mace",
+        "rnor": "Ralph Norman",
+        "awil": "Alan Wilson",
+        "peve": "Pamela Evette"
+      }
+    },
+    {
+      "name": "south-carolina-senate-election-winner",
+      "kalshi_ticker": "SENATESC-26",
+      "poly_slug": "south-carolina-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "south-carolina-republican-senate-primary-winner",
+      "kalshi_ticker": "KXSENATESCR-26",
+      "poly_slug": "south-carolina-republican-senate-primary-winner",
+      "mapping": {
+        "pdans": "Paul Dans",
+        "lgra": "Lindsey Graham",
+        "mlyn": "Mark Lynch",
+        "tmur": "Thomas Murphy"
+      }
+    },
+    {
+      "name": "south-carolina-governor-winner-2026",
+      "kalshi_ticker": "GOVPARTYSC-26",
+      "poly_slug": "south-carolina-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "south-carolina-democratic-senate-primary-winner",
+      "kalshi_ticker": "KXSENATESCD-26",
+      "poly_slug": "south-carolina-democratic-senate-primary-winner",
+      "mapping": {
+        "aand": "Annie Andrews",
+        "kfre": "Kyle Freeman"
+      }
+    },
+    {
+      "name": "rhode-island-senate-election-winner",
+      "kalshi_ticker": "SENATERI-26",
+      "poly_slug": "rhode-island-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "rhode-island-governor-winner-2026",
+      "kalshi_ticker": "GOVPARTYRI-26",
+      "poly_slug": "rhode-island-governor-winner-2026",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "rhode-island-governor-democratic-primary-winner",
+      "kalshi_ticker": "KXGOVRINOMD-26",
+      "poly_slug": "rhode-island-governor-democratic-primary-winner",
+      "mapping": {
+        "dmck": "Dan McKee",
+        "hfou": "Helena Foulkes"
+      }
+    },
+    {
+      "name": "rhode-island-democratic-senate-primary-winner",
+      "kalshi_ticker": "KXSENATERID-26",
+      "poly_slug": "rhode-island-democratic-senate-primary-winner",
+      "mapping": {
+        "jree": "Jack Reed",
+        "cbur": "Connor Burbridge"
+      }
+    },
+    {
+      "name": "rhode-island-republican-senate-primary-winner",
+      "kalshi_ticker": "KXSENATERIR-26",
+      "poly_slug": "rhode-island-republican-senate-primary-winner",
+      "mapping": {
+        "rmck": "Raymond McKay",
+        "awat": "Allen Waters"
+      }
+    },
+    {
+      "name": "who-will-win-the-beast-games-season-2-966",
+      "kalshi_ticker": "KXMRBEASTGAMES-26MAY01",
+      "poly_slug": "who-will-win-the-beast-games-season-2-966",
+      "mapping": {
+        "21": 21,
+        "31": 31,
+        "38": 38,
+        "42": 42,
+        "45": 45,
+        "58": 58,
+        "91": 91,
+        "99": 99,
+        "112": 112,
+        "118": 118,
+        "126": 126,
+        "148": 148,
+        "152": 152,
+        "157": 157,
+        "162": 162,
+        "167": 167,
+        "172": 172,
+        "173": 173,
+        "174": 174,
+        "191": 191,
+        "194": 194,
+        "195": 195,
+        "566": 566,
+        "831": 831,
+        "952": 952
+      }
+    },
+    {
+      "name": "bafta-film-awards-best-original-screenplay-winner",
+      "kalshi_ticker": "KXBAFTAOSPLAY-26",
+      "poly_slug": "bafta-film-awards-best-original-screenplay-winner",
+      "mapping": {
+        "blu": "Blue Moon",
+        "isw": "I Swear",
+        "ist": "Is This Thing On?",
+        "itw": "It Was Just an Accident",
+        "mar": "Marty Supreme",
+        "sec": "The Secret Agent",
+        "sen": "Sentimental Value",
+        "sin": "Sinners",
+        "wea": "Weapons"
+      }
+    },
+    {
+      "name": "bafta-film-awards-best-film-winner",
+      "kalshi_ticker": "KXBAFTAFILM-26",
+      "poly_slug": "bafta-film-awards-best-film-winner",
+      "mapping": {
+        "bal": "The Ballad of Wallis Island",
+        "bug": "Bugonia",
+        "fra": "Frankenstein",
+        "ham": "Hamnet",
+        "swe": "I Swear",
+        "mar": "Marty Supreme",
+        "nur": "Nuremberg",
+        "one": "One Battle After Another",
+        "sen": "Sentimental Value",
+        "sin": "Sinners"
+      }
+    },
+    {
+      "name": "bafta-film-awards-best-leading-actor-winner",
+      "kalshi_ticker": "KXBAFTAACTO-26",
+      "poly_slug": "bafta-film-awards-best-leading-actor-winner",
+      "mapping": {
+        "rob": "Robert Aramayo",
+        "tim": "Timothée Chalamet",
+        "rus": "Russell Crowe",
+        "leo": "Leonardo DiCaprio",
+        "joe": "Joel Edgerton",
+        "eth": "Ethan Hawke",
+        "mic": "Michael B. Jordan",
+        "har": "Harry Melling",
+        "cil": "Cillian Murphy",
+        "jes": "Jesse Plemons"
+      }
+    },
+    {
+      "name": "bafta-film-awards-best-supporting-actor-winner",
+      "kalshi_ticker": "KXBAFTASUPACTO-26",
+      "poly_slug": "bafta-film-awards-best-supporting-actor-winner",
+      "mapping": {
+        "ben": "Benicio Del Toro",
+        "jac": "Jacob Elordi",
+        "del": "Delroy Lindo",
+        "pau": "Paul Mescal",
+        "pet": "Peter Mullan",
+        "sea": "Sean Penn",
+        "ada": "Actor D",
+        "and": "Andrew Scott",
+        "ale": "Alexander Skarsgård",
+        "ste": "Stellan Skarsgård"
+      }
+    },
+    {
+      "name": "bafta-film-awards-best-director-winner",
+      "kalshi_ticker": "KXBAFTADIR-26",
+      "poly_slug": "bafta-film-awards-best-director-winner",
+      "mapping": {
+        "pau": "One Battle After Another",
+        "yor": "Bugonia",
+        "chl": "Hamnet",
+        "rya": "Sinners",
+        "jos": "Marty Supreme",
+        "lyn": "Die My Love",
+        "hik": "Rental Family"
+      }
+    },
+    {
+      "name": "bafta-film-awards-best-leading-actress-winner",
+      "kalshi_ticker": "KXBAFTAACTR-26",
+      "poly_slug": "bafta-film-awards-best-leading-actress-winner",
+      "mapping": {
+        "jes": "Jessie Buckley",
+        "ros": "Rose Byrne",
+        "cyn": "Cynthia Erivo",
+        "kat": "Kate Hudson",
+        "cha": "Chase Infiniti",
+        "jen": "Jennifer Lawrence",
+        "ren": "Renate Reinsve",
+        "and": "Andrea Riseborough",
+        "emm": "Emma Stone",
+        "tes": "Tessa Thompson"
+      }
+    },
+    {
+      "name": "who-will-perform-at-the-2026-grammys",
+      "kalshi_ticker": "KXPERFORMGRAMMYS-26",
+      "poly_slug": "who-will-perform-at-the-2026-grammys",
+      "mapping": {
+        "ken": "Kendrick Lamar",
+        "tay": "Taylor Swift",
+        "bil": "Billie Eilish",
+        "sza": "SZA",
+        "mil": "Miley Cyrus",
+        "dua": "Dua Lipa",
+        "oli": "Olivia Rodrigo",
+        "dra": "Drake",
+        "add": "Addison Rae",
+        "bad": "Bad Bunny",
+        "wee": "The Weeknd",
+        "sab": "Sabrina Carpenter",
+        "lan": "Lana Del Rey",
+        "tra": "Travis Scott",
+        "som": "Sombr",
+        "doe": "Doechii",
+        "lad": "Lady Gaga",
+        "cha": "Chappell Roan",
+        "ros": "ROSÉ",
+        "bru": "Bruno Mars",
+        "jus": "Justin Bieber",
+        "pus": "Pusha T",
+        "mal": "Malice",
+        "leo": "Leon Thomas",
+        "tyl": "Tyler the Creator",
+        "oliv": "Olivia Dean",
+        "kat": "KATSEYE",
+        "mar": "The Marías",
+        "ale": "Alex Warren",
+        "lol": "Lola Young"
+      }
+    },
+    {
+      "name": "grammys-best-contemporary-country-album-winner",
+      "kalshi_ticker": "KXGRAMBCCA-68",
+      "poly_slug": "grammys-best-contemporary-country-album-winner",
+      "mapping": {
+        "pat": "Patterns - Kelsea Ballerini",
+        "sni": "Snipe Hunter - Tyler Childers",
+        "eva": "Evangeline Vs. The Machine - Eric Church",
+        "bea": "Beautifully Broken - Jelly Roll",
+        "pos": "Postcards From Texas - Miranda Lambert"
+      }
+    },
+    {
+      "name": "grammys-best-regional-roots-music-album-winner",
+      "kalshi_ticker": "KXGRAMBRRMA-68",
+      "poly_slug": "grammys-best-regional-roots-music-album-winner",
+      "mapping": {
+        "liv": "Live At Vaughan's - Corey Henry & The Treme Funktet",
+        "chu": "Church Of New Orleans - Kyle Roussel",
+        "sec": "Second Line Sunday - Trombone Shorty And New Breed Brass Band"
+      }
+    },
+    {
+      "name": "grammys-best-folk-album-winner",
+      "kalshi_ticker": "KXGRAMBFA-68",
+      "poly_slug": "grammys-best-folk-album-winner",
+      "mapping": {
+        "wha": "What Did The Blackbird Say To The Crow - Rhiannon Giddens & Justin Robinson",
+        "cro": "Crown Of Roses - Patty Griffin",
+        "wil": "Wild And Clear And Blue - I'm With Her",
+        "fox": "Foxes In The Snow - Jason Isbell",
+        "und": "Under The Powerlines April 24 – September 24 - Jesse Welles"
+      }
+    },
+    {
+      "name": "grammys-best-contemporary-blues-album-winner",
+      "kalshi_ticker": "KXGRAMBCBA-68",
+      "poly_slug": "grammys-best-contemporary-blues-album-winner",
+      "mapping": {
+        "bre": "Breakthrough - Joe Bonamassa",
+        "pap": "Paper Doll - Samantha Fish",
+        "pre": "Preacher Kids - Robert Randolph",
+        "fam": "Family - Southern Avenue"
+      }
+    },
+    {
+      "name": "grammys-best-bluegrass-album-winner",
+      "kalshi_ticker": "KXGRAMBBA-68",
+      "poly_slug": "grammys-best-bluegrass-album-winner",
+      "mapping": {
+        "car": "Carter & Cleveland - Michael Cleveland & Jason Carter",
+        "arc": "Arcadia - Alison Krauss & Union Station",
+        "out": "Outrun - The Steeldrivers",
+        "hig": "A Tip Toe High Wire - Sierra Hull"
+      }
+    },
+    {
+      "name": "grammys-best-gospel-album-winner",
+      "kalshi_ticker": "KXGRAMBGA-68",
+      "poly_slug": "grammys-best-gospel-album-winner",
+      "mapping": {
+        "yol": "Sunny Days - Yolanda Adams",
+        "tash": "Tasha - Tasha Cobbs Leonard",
+        "liv": "Live Breathe Fight - Tamela Mann",
+        "onl": "Only On The Road Live - Tye Tribbett",
+        "hea": "Heart Of Mine - Darrel Walls, PJ Morton"
+      }
+    },
+    {
+      "name": "grammys-best-contemporary-christian-music-performancesong-winner",
+      "kalshi_ticker": "KXGRAMBCCMPS-68",
+      "poly_slug": "grammys-best-contemporary-christian-music-performancesong-winner",
+      "mapping": {
+        "ikn": "I Know A Name - Elevation Worship, Chris Brown, Brandon Lake",
+        "you": "YOUR WAY'S BETTER - Forrest Frank",
+        "har": "Hard Fought Hallelujah - Brandon Lake With Jelly Roll",
+        "hea": "Headphones - Lecrae, Killer Mike, T.I.",
+        "ama": "Amazing - Darrel Walls, PJ Morton"
+      }
+    },
+    {
+      "name": "grammys-best-gospel-performancesong-winner",
+      "kalshi_ticker": "KXGRAMBGPS-68",
+      "poly_slug": "grammys-best-gospel-performancesong-winner",
+      "mapping": {
+        "doi": "Do It Again - Kirk Franklin",
+        "chu": "Church - Tasha Cobbs Leonard, John Legend",
+        "stil": "Still — Live - Jonathan McReynolds & Jamal Roberts",
+        "ame": "Amen - Pastor Mike Jr.",
+        "com": "Come Jesus Come - CeCe Winans Featuring Shirley Caesar"
+      }
+    },
+    {
+      "name": "grammys-best-traditional-blues-album-winner",
+      "kalshi_ticker": "KXGRAMBTBA-68",
+      "poly_slug": "grammys-best-traditional-blues-album-winner",
+      "mapping": {
+        "ain": "Album I",
+        "roo": "Room On The Porch - Taj Mahal & Keb' Mo'",
+        "one": "One Hour Mama: The Blues Of Victoria Spivey - Maria Muldaur",
+        "loo": "Look Out Highway - Charlie Musselwhite",
+        "you": "Young Fashioned Ways - Kenny Wayne Shepherd & Bobby Rush"
+      }
+    },
+    {
+      "name": "grammys-best-americana-album-winner",
+      "kalshi_ticker": "KXGRAMBAA-68",
+      "poly_slug": "grammys-best-americana-album-winner",
+      "mapping": {
+        "big": "BIG MONEY - Jon Batiste",
+        "blo": "Bloom - Larkin Poe",
+        "las": "Last Leaf On The Tree - Willie Nelson",
+        "sol": "So Long Little Miss Sunshine - Molly Tuttle",
+        "mid": "Middle - Jesse Welles"
+      }
+    },
+    {
+      "name": "grammys-best-american-roots-song-winner",
+      "kalshi_ticker": "KXGRAMBARS-68",
+      "poly_slug": "grammys-best-american-roots-song-winner",
+      "mapping": {
+        "anc": "Ancient Light - Sarah Jarosz, Aoife O'Donovan & Sara Watkins, songwriters (I'm With Her)",
+        "big": "BIG MONEY - Jon Batiste, Mike Elizondo & Steve McEwan, songwriters (Jon Batiste)",
+        "fox": "Foxes In The Snow - Jason Isbell, songwriter (Jason Isbell)",
+        "mid": "Middle - Jesse Welles, songwriter (Jesse Welles)"
+      }
+    },
+    {
+      "name": "grammys-best-americana-performance-winner",
+      "kalshi_ticker": "KXGRAMBAP-68",
+      "poly_slug": "grammys-best-americana-performance-winner",
+      "mapping": {
+        "boo": "Boom - Sierra Hull",
+        "poi": "Poison In My Well - Maggie Rose & Grace Potter",
+        "god": "Godspeed - Mavis Staples",
+        "tha": "That's Gonna Leave A Mark - Molly Tuttle",
+        "hor": "Horses - Jesse Welles"
+      }
+    },
+    {
+      "name": "grammys-best-american-roots-performance-winner",
+      "kalshi_ticker": "KXGRAMBARP-68",
+      "poly_slug": "grammys-best-american-roots-performance-winner",
+      "mapping": {
+        "lon": "LONELY AVENUE - Jon Batiste Featuring Randy Newman",
+        "anc": "Ancient Light - I'm With Her",
+        "cri": "Crimson And Clay - Jason Isbell",
+        "ric": "Richmond On The James - Alison Krauss & Union Station",
+        "bea": "Beautiful Strangers - Mavis Staples"
+      }
+    },
+    {
+      "name": "grammys-best-traditional-country-album-winner",
+      "kalshi_ticker": "KXGRAMBTCA-68",
+      "poly_slug": "grammys-best-traditional-country-album-winner",
+      "mapping": {
+        "dol": "Dollar A Day - Charley Crockett",
+        "ame": "American Romance - Lukas Nelson",
+        "ohw": "Oh What A Beautiful World - Willie Nelson",
+        "har": "Hard Fought Woman - Margo Price",
+        "ain": "Ain't In It For My Health - Zach Top"
+      }
+    },
+    {
+      "name": "next-pittsburgh-steelers-head-coach",
+      "kalshi_ticker": "KXNEXTNFLCOACH-PIT27",
+      "poly_slug": "next-pittsburgh-steelers-head-coach",
+      "mapping": {
+        "jhaf": "John Harbaugh",
+        "kste": "Kevin Stefanski",
+        "jhar": "J",
+        "rsal": "Robert Saleh",
+        "mala": "M",
+        "cshu": "Chris Shula",
+        "kkub": "Klint Kubiak",
+        "mmcc": "Mike McCarthy",
+        "vjos": "Vance Joseph",
+        "jmin": "Jesse Minter",
+        "bflo": "Brian Flores",
+        "lana": "L",
+        "bdab": "B",
+        "ccig": "C",
+        "asmi": "Arthur Smith",
+        "mfre": "Marcus Freeman",
+        "kkin": "K",
+        "gudi": "G",
+        "nsch": "N",
+        "dpit": "D"
+      }
+    },
+    {
+      "name": "grammys-best-country-duogroup-performance-winner",
+      "kalshi_ticker": "KXGRAMBCDGP-68",
+      "poly_slug": "grammys-best-country-duogroup-performance-winner",
+      "mapping": {
+        "son": "A Song To Sing - Miranda Lambert And Chris Stapleton",
+        "tra": "Trailblazer - Reba McEntire, Miranda Lambert, Lainey Wilson",
+        "lov": "Love Me Like You Used To Do - Margo Price & Tyler Childers",
+        "ame": "Amen - Shaboozey & Jelly Roll",
+        "hon": "Honky Tonk Hall Of Fame - George Strait, Chris Stapleton"
+      }
+    },
+    {
+      "name": "grammys-best-country-solo-performance-winner",
+      "kalshi_ticker": "KXGRAMBCSP-68",
+      "poly_slug": "grammys-best-country-solo-performance-winner",
+      "mapping": {
+        "nos": "Nose On The Grindstone - Tyler Childers",
+        "goo": "Good News - Shaboozey",
+        "bad": "Bad As I Used To Be - Chris Stapleton",
+        "nev": "I Never Lie - Zach Top",
+        "som": "Somewhere Over Laredo - Lainey Wilson"
+      }
+    },
+    {
+      "name": "grammys-best-contemporary-instrumental-album-winner",
+      "kalshi_ticker": "KXGRAMBCIA-68",
+      "poly_slug": "grammys-best-contemporary-instrumental-album-winner",
+      "mapping": {
+        "bri": "Brightside - ARKAI",
+        "one": "Ones & Twos - Gerald Clayton",
+        "bea": "BEATrio - Béla Fleck, Edmar Castañeda, Antonio Sánchez",
+        "jus": "Just Us - Bob James & Dave Koz",
+        "sha": "Shayan - Charu Suri"
+      }
+    },
+    {
+      "name": "grammys-best-musical-theater-album-winner",
+      "kalshi_ticker": "KXGRAMBMTA-68",
+      "poly_slug": "grammys-best-musical-theater-album-winner",
+      "mapping": {
+        "bue": "Buena Vista Social Club - Original Broadway Cast",
+        "dea": "Death Becomes Her - Original Broadway Cast",
+        "gyp": "Gypsy - 2024 Broadway Cast",
+        "jus": "Just In Time - Original Broadway Cast",
+        "may": "Maybe Happy Ending - Original Broadway Cast"
+      }
+    },
+    {
+      "name": "grammys-best-traditional-pop-vocal-album-winner",
+      "kalshi_ticker": "KXGRAMBTPVA-68",
+      "poly_slug": "grammys-best-traditional-pop-vocal-album-winner",
+      "mapping": {
+        "win": "Wintersongs - Laila Biali",
+        "gif": "The Gift Of Love - Jennifer Hudson",
+        "bel": "Who Believes In Angels - Elton John & Brandi Carlile",
+        "har": "Harlequin - Lady Gaga",
+        "mat": "A Matter Of Time - Laufey",
+        "sec": "The Secret Of Life: Partners, Volume 2 - Barbra Streisand"
+      }
+    },
+    {
+      "name": "grammys-best-alternative-jazz-album-winner",
+      "kalshi_ticker": "KXGRAMBAJA-68",
+      "poly_slug": "grammys-best-alternative-jazz-album-winner",
+      "mapping": {
+        "hon": "honey from a winter stone - Ambrose Akinmusire",
+        "key": "Keys To The City Volume One - Robert Glasper",
+        "rid": "Ride into the Sun - Brad Mehldau",
+        "liv": "LIVE-ACTION - Nate Smith",
+        "blu": "Blues Blood - Immanuel Wilkins"
+      }
+    },
+    {
+      "name": "grammys-best-large-jazz-ensemble-album-winner",
+      "kalshi_ticker": "KXGRAMBLJEA-68",
+      "poly_slug": "grammys-best-large-jazz-ensemble-album-winner",
+      "mapping": {
+        "orc": "Basie Rocks - Deborah Silver & The Count Basie Orchestra",
+        "wit": "Without Further Ado, Vol 1 - Christian McBride Big Band",
+        "lum": "Lumen - Danilo Pérez & Bohuslän Big Band",
+        "bas": "Album B",
+        "lig": "Lights on a Satellite - Sun Ra Arkestra",
+        "som": "Some Days Are Better: The Lost Scores - Kenny Wheeler Legacy"
+      }
+    },
+    {
+      "name": "grammys-best-jazz-instrumental-album-winner",
+      "kalshi_ticker": "KXGRAMBJIA-68",
+      "poly_slug": "grammys-best-jazz-instrumental-album-winner",
+      "mapping": {
+        "tri": "Trilogy 3 — Live - Chick Corea, Christian McBride & Brian Blade",
+        "sou": "Southern Nights - Sullivan Fortner Featuring Peter Washington & Marcus Gilmore",
+        "bel": "Belonging - Branford Marsalis Quartet",
+        "spi": "Spirit Fall - John Patitucci Featuring Chris Potter & Brian Blade",
+        "fas": "Fasten Up - Yellowjackets"
+      }
+    },
+    {
+      "name": "grammys-best-jazz-vocal-album-winner",
+      "kalshi_ticker": "KXGRAMBJVA-68",
+      "poly_slug": "grammys-best-jazz-vocal-album-winner",
+      "mapping": {
+        "ele": "Elemental - Dee Dee Bridgewater & Bill Charlap",
+        "wei": "We Insist 2025 - Terri Lyne Carrington & Christie Dashiell",
+        "por": "Portrait - Samara Joy",
+        "fly": "Fly - Michael Mayo",
+        "liv": "Live at Vic's Las Vegas - Nicole Zuraitis, Dan Pugach, Tom Scott, Idan Morim, Keyon Harrold, Rachel Eckroth & Sam Weber"
+      }
+    },
+    {
+      "name": "grammys-best-jazz-performance-winner",
+      "kalshi_ticker": "KXGRAMBJP-68",
+      "poly_slug": "grammys-best-jazz-performance-winner",
+      "mapping": {
+        "nob": "Noble Rise - Lakecia Benjamin Featuring Immanuel Wilkins & Mark Whitfield",
+        "win": "Windows - Live - Chick Corea, Christian McBride & Brian Blade",
+        "pea": "Peace Of Mind / Dreams Come True - Samara Joy",
+        "fou": "Four - Michael Mayo",
+        "all": "All Stars Lead To You – Live - Nicole Zuraitis, Dan Pugach, Tom Scott, Idan Morim, Keyon Harrold, Rachel Eckroth & Sam Weber"
+      }
+    },
+    {
+      "name": "grammys-best-rb-album-winner",
+      "kalshi_ticker": "KXGRAMBRNBA-68",
+      "poly_slug": "grammys-best-rb-album-winner",
+      "mapping": {
+        "bel": "BELOVED - GIVĒON",
+        "why": "Why Not More - Coco Jones",
+        "cro": "The Crown - Ledisi",
+        "esc": "Escape Room - Teyana Taylor",
+        "mut": "MUTT - Leon Thomas"
+      }
+    },
+    {
+      "name": "grammys-best-spoken-word-poetry-album-winner",
+      "kalshi_ticker": "KXGRAMBSWPA-68",
+      "poly_slug": "grammys-best-spoken-word-poetry-album-winner",
+      "mapping": {
+        "hur": "A Hurricane in Heels: healed people don't act like that - Queen Sheba",
+        "bla": "Black Shaman - Marc Marcel",
+        "pag": "Pages - Omari Hardwick & Anthony Hamilton",
+        "sau": "Saul Williams Meets Carlos Niño & Friends At Treepeople - Saul Williams, Carlos Niño & Friends",
+        "word": "Words For Days Vol. 1 - Mad Skillz"
+      }
+    },
+    {
+      "name": "grammys-best-melodic-rap-performance-winner",
+      "kalshi_ticker": "KXGRAMBMRP-68",
+      "poly_slug": "grammys-best-melodic-rap-performance-winner",
+      "mapping": {
+        "pro": "Proud Of Me - Fridayy Featuring Meek Mill",
+        "who": "Wholeheartedly - JID Featuring Ty Dolla $ign & 6Lack",
+        "lut": "luther - Kendrick Lamar With SZA",
+        "wem": "WeMaj - Terrace Martin & Kenyon Dixon Featuring Rapsody",
+        "som": "SOMEBODY LOVES ME - PARTYNEXTDOOR & Drake"
+      }
+    },
+    {
+      "name": "colombia-chamber-of-representatives-election-winner",
+      "kalshi_ticker": "KXCOLOMBIAPARLI-26MAR08",
+      "poly_slug": "colombia-chamber-of-representatives-election-winner",
+      "mapping": {
+        "hpac": "Historic Pact for Colombia (PH)",
+        "lpar": "Partido Liberal Colombiano (PLC)",
+        "cpar": "Partido Conservador Colombiano (Conservative)",
+        "dcen": "Centro Democrático (CD)",
+        "pofu": "Partido de la U (La U)",
+        "gall": "Green Alliance"
+      }
+    },
+    {
+      "name": "bafta-film-awards-best-supporting-actress-winner-351",
+      "kalshi_ticker": "KXBAFTASUPACTR-26",
+      "poly_slug": "bafta-film-awards-best-supporting-actress-winner-351",
+      "mapping": {
+        "ode": "Odessa A'zion",
+        "bre": "Brenda Blethyn",
+        "ari": "Ariana Grande",
+        "ing": "Inga Ibsdotter Lilleaas",
+        "amy": "Amy Madigan",
+        "wun": "Wunmi Mosaku",
+        "car": "Carey Mulligan",
+        "gwy": "Gwyneth Paltrow",
+        "tey": "Teyana Taylor",
+        "em": "Emily Watson"
+      }
+    },
+    {
+      "name": "survivor-50-winner",
+      "kalshi_ticker": "KXSURVIVOR-26DEC31",
+      "poly_slug": "survivor-50-winner",
+      "mapping": {
+        "ang": "Angelina Keeley",
+        "aub": "Aubry Bracco",
+        "cha": "Contestant H",
+        "chr": "Chrissy Hofbeck",
+        "chri": "Christian Hubicki",
+        "cir": "Contestant I",
+        "ben": "Benjamin \"Coach\" Wade",
+        "col": "Contestant O",
+        "dee": "Dee Valladares",
+        "emi": "Emily Flippen",
+        "gen": "Genevieve Mushaluk",
+        "jen": "Jenna Lewis-Dougherty",
+        "joe": "Joe Hunter",
+        "jon": "Jonathan Young",
+        "kam": "Kamilla Karthigesu",
+        "kyl": "Kyle Fraser",
+        "mik": "Mike White",
+        "ozz": "Ozzy Lusth",
+        "qui": "Quintavius \"Q\" Burdette",
+        "ric": "Rick Devens",
+        "riz": "Rizo Velovic",
+        "sav": "Savannah Louie",
+        "ste": "Stephenie LaGrossa Kendrick",
+        "tif": "Tiffany Nicole Ervin"
+      }
+    },
+    {
+      "name": "nepal-house-of-representatives-election-winner",
+      "kalshi_ticker": "KXNEPALHOUSE-26MAR05",
+      "poly_slug": "nepal-house-of-representatives-election-winner",
+      "mapping": {
+        "cpn": "CPN-UML",
+        "ncp": "NCP",
+        "rsp": "RSP",
+        "rpp": "RPP"
+      }
+    },
+    {
+      "name": "who-will-win-the-lyon-mayoral-election",
+      "kalshi_ticker": "KXLYONMAYOR-26MAR15",
+      "poly_slug": "who-will-win-the-lyon-mayoral-election",
+      "mapping": {
+        "jaul": "Jean-Michel Aulas",
+        "gdou": "Grégory Doucet",
+        "adup": "Alexandre Dupalais",
+        "nper": "Nathalie Perrin-Gilbert",
+        "abel": "Anaïs Belouassa-Cherifi"
+      }
+    },
+    {
+      "name": "marseille-mayor-election-winner",
+      "kalshi_ticker": "KXMARSEILLEMAYOR-26MAR15",
+      "poly_slug": "marseille-mayor-election-winner",
+      "mapping": {
+        "bpay": "Benoît Payan",
+        "mvas": "Martine Vassal",
+        "fall": "Franck Allisio",
+        "sdel": "Sébastien Delogu"
+      }
+    },
+    {
+      "name": "louisiana-republican-senate-primary-winner-889",
+      "kalshi_ticker": "KXSENATELAR-26",
+      "poly_slug": "louisiana-republican-senate-primary-winner-889",
+      "mapping": {
+        "bcas": "Bill Cassidy",
+        "jflem": "John Fleming",
+        "bmig": "Blake Miguez",
+        "jeme": "Julie Emerson",
+        "ksei": "Kathy Seiden",
+        "eskr": "Eric Skrmetta"
+      }
+    },
+    {
+      "name": "louisiana-senate-election-winner",
+      "kalshi_ticker": "KXSENATELA-26NOV",
+      "poly_slug": "louisiana-senate-election-winner",
+      "mapping": {
+        "d": "Democrat",
+        "r": "Republican"
+      }
+    },
+    {
+      "name": "hungary-parliamentary-election-winner",
+      "kalshi_ticker": "KXHUNGARYPARLIPARTY-26APR12",
+      "poly_slug": "hungary-parliamentary-election-winner",
+      "mapping": {
+        "fide": "Fidesz",
+        "tisz": "TISZA",
+        "dk": "DK",
+        "mh": "Mi Hazánk"
+      }
+    },
+    {
+      "name": "2026-winter-olympics-most-gold-medals",
+      "kalshi_ticker": "KXWO-GOLD-26",
+      "poly_slug": "2026-winter-olympics-most-gold-medals",
+      "mapping": {
+        "nor": "Norway",
+        "usa": "United States",
+        "chn": "China",
+        "swe": "Sweden",
+        "nld": "Netherlands",
+        "fra": "France",
+        "can": "Canada",
+        "jpn": "Japan",
+        "ita": "Italy",
+        "aus": "Austria"
+      }
+    },
+    {
+      "name": "2026-winter-olympics-most-medals",
+      "kalshi_ticker": "KXWO-MEDALS-26",
+      "poly_slug": "2026-winter-olympics-most-medals",
+      "mapping": {
+        "nor": "Norway",
+        "usa": "United States",
+        "chn": "China",
+        "swe": "Sweden",
+        "nld": "Netherlands",
+        "fra": "France",
+        "can": "Canada",
+        "jpn": "Japan",
+        "ita": "Italy",
+        "aus": "Austria"
+      }
+    },
+    {
+      "name": "2026-winter-olympics-ice-hockey-gold-medal-winner",
+      "kalshi_ticker": "KXWOHOCKEY-MEN26CGOLD",
+      "poly_slug": "2026-winter-olympics-ice-hockey-gold-medal-winner",
+      "mapping": {
+        "can": "Canada",
+        "cze": "Czech Republic",
+        "fin": "Finland",
+        "fra": "France",
+        "ita": "Italy",
+        "swe": "Sweden",
+        "usa": "United States",
+        "svk": "Slovakia",
+        "lva": "Latvia",
+        "dnk": "Denmark"
+      }
+    },
+    {
+      "name": "new-jersey-senate-election-winner",
+      "kalshi_ticker": "SENATENJ-26",
+      "poly_slug": "new-jersey-senate-election-winner",
+      "mapping": {
+        "r": "Republican",
+        "d": "Democrat"
+      }
+    },
+    {
+      "name": "scotland-parliamentary-election-winner",
+      "kalshi_ticker": "KXSCOTPARLIAMENT-26MAY07",
+      "poly_slug": "scotland-parliamentary-election-winner",
+      "mapping": {
+        "snp": "Scottish National Party",
+        "con": "Scottish Conservatives",
+        "lab": "Scottish Labour",
+        "ref": "Reform UK"
+      }
+    },
+    {
+      "name": "wa-09-house-election-winner",
+      "kalshi_ticker": "KXHOUSERACE-WA09-26",
+      "poly_slug": "wa-09-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "wa-10-house-election-winner",
+      "kalshi_ticker": "KXHOUSERACE-WA10-26",
+      "poly_slug": "wa-10-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "wa-07-house-election-winner",
+      "kalshi_ticker": "KXHOUSERACE-WA07-26",
+      "poly_slug": "wa-07-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "wa-01-house-election-winner",
+      "kalshi_ticker": "KXHOUSERACE-WA01-26",
+      "poly_slug": "wa-01-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "wa-04-house-election-winner",
+      "kalshi_ticker": "KXHOUSERACE-WA04-26",
+      "poly_slug": "wa-04-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "wa-05-house-election-winner",
+      "kalshi_ticker": "KXHOUSERACE-WA05-26",
+      "poly_slug": "wa-05-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "wa-06-house-election-winner",
+      "kalshi_ticker": "KXHOUSERACE-WA06-26",
+      "poly_slug": "wa-06-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    },
+    {
+      "name": "wa-03-house-election-winner",
+      "kalshi_ticker": "HOUSEWA3-26",
+      "poly_slug": "wa-03-house-election-winner",
+      "mapping": {
+        "d": "Democratic Party",
+        "r": "Republican Party"
+      }
+    }
+    ]
+}

@@ -1,0 +1,372 @@
+/* ============================================================
+ * regression-ux-polish.css  (W13-UX-1, wave-13)
+ *
+ * Final polish pass on Regression-mode visual hierarchy.
+ * Addresses the user-feedback memo "regression result no es claro".
+ *
+ * SCOPE
+ *   All selectors are scoped under
+ *     .mode-pane[data-mode-pane="regression"]
+ *   so Strategies / Terminal panes are not touched.
+ *
+ * RELATIONSHIP TO OTHER REGRESSION SHEETS
+ *   - regression-results.css   owns the base .pfm-fs-card chrome
+ *   - regression-clarity.css   owns the coefficient table chrome,
+ *                              VIF chips, residual-stats callout
+ *   - regression-plain.css     owns plain-English narration block
+ *   - regression-loading.css   owns the .pfm-rxl-* loading card
+ *
+ *   This sheet is a non-destructive POLISH layer: it adds breathing
+ *   room, an accent border on the hero card, zebra striping on the
+ *   coefficient table, prominent significance pills, a tightened
+ *   VIF gradient, a stronger residual callout, a pill-style
+ *   Plain-English toggle, and a 3-px full-width loading bar.
+ *
+ *   MOUNT ORDER: AFTER tokens.css and AFTER every other
+ *   regression-* sheet (so this layer wins on shared properties
+ *   without using !important).
+ *
+ * NO TOKENS REDEFINED. Uses --orange, --ink-*, --surface*,
+ * --hairline*, --sp-*, --r-*, --pos/--warn/--neg, --t, --ease.
+ *
+ * Print rules deferred to W13-35 (print-regression-export.css).
+ * ============================================================ */
+
+/* ── 1 · Hero summary card — breathing room + orange accent ─── */
+
+[data-mode-pane="regression"] #pfm-fit-summary-stack > .pfm-fs-card,
+[data-mode-pane="regression"] .pfm-fs-card {
+  padding: var(--sp-6);
+  border-left: 4px solid var(--orange);
+  border-radius: var(--r-3);
+  background: var(--surface);
+  box-shadow:
+    0 1px 0 var(--hairline),
+    0 8px 24px -16px rgba(15, 23, 42, 0.18);
+  transition:
+    border-color var(--t, 180ms) var(--ease, cubic-bezier(.22,.61,.36,1)),
+    box-shadow var(--t, 180ms) var(--ease, cubic-bezier(.22,.61,.36,1));
+}
+
+[data-mode-pane="regression"] .pfm-fs-card:hover {
+  border-left-color: var(--orange-2);
+  box-shadow:
+    0 1px 0 var(--hairline-strong),
+    0 12px 28px -18px rgba(234, 88, 12, 0.28);
+}
+
+[data-mode-pane="regression"] .pfm-fs-card[data-collapsed="true"] {
+  padding: var(--sp-4) var(--sp-6);
+}
+
+[data-mode-pane="regression"] .pfm-fs-header {
+  margin-bottom: var(--sp-4);
+}
+
+[data-mode-pane="regression"] .pfm-fs-metrics {
+  gap: var(--sp-5);
+  margin-top: var(--sp-2);
+}
+
+/* ── 2 · Coefficient table — zebra striping (subtle 2% alt bg) ─ */
+
+[data-mode-pane="regression"] #coef-table tbody tr:not(.coef-popover-row):nth-child(even),
+[data-mode-pane="regression"] table.coef tbody tr:not(.coef-popover-row):nth-child(even),
+[data-mode-pane="regression"] #result-coef-table tbody tr:not(.coef-popover-row):nth-child(even),
+[data-mode-pane="regression"] .coef-row:nth-child(even) {
+  background-color: rgba(15, 23, 42, 0.02);
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-mode-pane="regression"] #coef-table tbody tr:not(.coef-popover-row):nth-child(even),
+  [data-mode-pane="regression"] table.coef tbody tr:not(.coef-popover-row):nth-child(even),
+  [data-mode-pane="regression"] #result-coef-table tbody tr:not(.coef-popover-row):nth-child(even),
+  [data-mode-pane="regression"] .coef-row:nth-child(even) {
+    background-color: rgba(248, 250, 252, 0.025);
+  }
+}
+
+[data-theme="dark"] [data-mode-pane="regression"] #coef-table tbody tr:not(.coef-popover-row):nth-child(even),
+[data-theme="dark"] [data-mode-pane="regression"] table.coef tbody tr:not(.coef-popover-row):nth-child(even),
+[data-theme="dark"] [data-mode-pane="regression"] #result-coef-table tbody tr:not(.coef-popover-row):nth-child(even),
+[data-theme="dark"] [data-mode-pane="regression"] .coef-row:nth-child(even) {
+  background-color: rgba(248, 250, 252, 0.025);
+}
+
+/* Hover still wins over zebra */
+[data-mode-pane="regression"] #coef-table tbody tr:not(.coef-popover-row):hover,
+[data-mode-pane="regression"] table.coef tbody tr:not(.coef-popover-row):hover,
+[data-mode-pane="regression"] #result-coef-table tbody tr:not(.coef-popover-row):hover,
+[data-mode-pane="regression"] .coef-row:hover {
+  background-color: var(--orange-soft);
+}
+
+/* ── 3 · Significance pills — more prominent ─────────────────── */
+
+[data-mode-pane="regression"] .sig-pill,
+[data-mode-pane="regression"] .signif-pill,
+[data-mode-pane="regression"] .pfm-sig-pill,
+[data-mode-pane="regression"] [data-sig],
+[data-mode-pane="regression"] .coef-row .sig {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.25em;
+  padding: 2px 8px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  border-radius: var(--r-pill);
+  border: 1px solid transparent;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+[data-mode-pane="regression"] [data-sig="***"],
+[data-mode-pane="regression"] .sig-pill.sig-3,
+[data-mode-pane="regression"] .pfm-sig-pill[data-level="3"] {
+  background: rgba(22, 163, 74, 0.14);
+  color: var(--pos);
+  border-color: rgba(22, 163, 74, 0.32);
+}
+
+[data-mode-pane="regression"] [data-sig="**"],
+[data-mode-pane="regression"] .sig-pill.sig-2,
+[data-mode-pane="regression"] .pfm-sig-pill[data-level="2"] {
+  background: rgba(22, 163, 74, 0.08);
+  color: var(--pos);
+  border-color: rgba(22, 163, 74, 0.22);
+}
+
+[data-mode-pane="regression"] [data-sig="*"],
+[data-mode-pane="regression"] .sig-pill.sig-1,
+[data-mode-pane="regression"] .pfm-sig-pill[data-level="1"] {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--warn);
+  border-color: rgba(245, 158, 11, 0.30);
+}
+
+[data-mode-pane="regression"] [data-sig="ns"],
+[data-mode-pane="regression"] [data-sig=""],
+[data-mode-pane="regression"] .sig-pill.sig-ns,
+[data-mode-pane="regression"] .pfm-sig-pill[data-level="0"] {
+  background: rgba(100, 116, 139, 0.10);
+  color: var(--ink-3);
+  border-color: rgba(100, 116, 139, 0.22);
+}
+
+/* ── 4 · VIF chips — green → amber → orange → red gradient ──── */
+
+[data-mode-pane="regression"] .vif-chip,
+[data-mode-pane="regression"] .pfm-vif-chip,
+[data-mode-pane="regression"] [data-vif-grade] {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: var(--r-pill);
+  border: 1px solid transparent;
+}
+
+[data-mode-pane="regression"] [data-vif-grade="good"],
+[data-mode-pane="regression"] .vif-chip.vif-good {
+  background: rgba(22, 163, 74, 0.12);
+  color: var(--pos);
+  border-color: rgba(22, 163, 74, 0.28);
+}
+
+[data-mode-pane="regression"] [data-vif-grade="warn"],
+[data-mode-pane="regression"] .vif-chip.vif-warn {
+  background: rgba(245, 158, 11, 0.14);
+  color: var(--warn);
+  border-color: rgba(245, 158, 11, 0.32);
+}
+
+[data-mode-pane="regression"] [data-vif-grade="bad"],
+[data-mode-pane="regression"] .vif-chip.vif-bad {
+  background: rgba(249, 115, 22, 0.16);
+  color: var(--orange-2);
+  border-color: rgba(249, 115, 22, 0.36);
+}
+
+[data-mode-pane="regression"] [data-vif-grade="crit"],
+[data-mode-pane="regression"] .vif-chip.vif-crit {
+  background: rgba(220, 38, 38, 0.14);
+  color: var(--neg);
+  border-color: rgba(220, 38, 38, 0.34);
+}
+
+/* ── 5 · Residual diagnostics callout — stronger left rule ───── */
+
+[data-mode-pane="regression"] .residual-stats,
+[data-mode-pane="regression"] .residual-diagnostics,
+[data-mode-pane="regression"] [data-residual-callout] {
+  background: var(--surface-2);
+  border-left: 3px solid var(--hairline-strong);
+  border-radius: var(--r-2);
+  padding: var(--sp-4) var(--sp-5);
+  margin-top: var(--sp-4);
+}
+
+[data-mode-pane="regression"] .residual-stats .rs-label,
+[data-mode-pane="regression"] .residual-diagnostics .rs-label {
+  color: var(--ink-3);
+}
+
+/* ── 6 · Plain-English toggle — pill button + active state ───── */
+
+[data-mode-pane="regression"] .plain-english-toggle,
+[data-mode-pane="regression"] #plain-english-toggle,
+[data-mode-pane="regression"] [data-plain-english-toggle],
+[data-mode-pane="regression"] button.pfm-pe-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--ink-2);
+  background: var(--surface);
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--r-pill);
+  cursor: pointer;
+  transition:
+    background var(--t-fast, 120ms) var(--ease, cubic-bezier(.22,.61,.36,1)),
+    color var(--t-fast, 120ms) var(--ease, cubic-bezier(.22,.61,.36,1)),
+    border-color var(--t-fast, 120ms) var(--ease, cubic-bezier(.22,.61,.36,1));
+}
+
+[data-mode-pane="regression"] .plain-english-toggle:hover,
+[data-mode-pane="regression"] #plain-english-toggle:hover,
+[data-mode-pane="regression"] [data-plain-english-toggle]:hover,
+[data-mode-pane="regression"] button.pfm-pe-toggle:hover {
+  color: var(--ink);
+  border-color: var(--orange);
+  background: var(--orange-soft);
+}
+
+[data-mode-pane="regression"] .plain-english-toggle[aria-pressed="true"],
+[data-mode-pane="regression"] .plain-english-toggle.is-active,
+[data-mode-pane="regression"] #plain-english-toggle[aria-pressed="true"],
+[data-mode-pane="regression"] [data-plain-english-toggle][aria-pressed="true"],
+[data-mode-pane="regression"] button.pfm-pe-toggle[aria-pressed="true"] {
+  background: var(--orange);
+  color: #fff;
+  border-color: var(--orange-2);
+  box-shadow: 0 1px 0 rgba(234, 88, 12, 0.4) inset;
+}
+
+[data-mode-pane="regression"] .plain-english-toggle:focus-visible,
+[data-mode-pane="regression"] #plain-english-toggle:focus-visible,
+[data-mode-pane="regression"] [data-plain-english-toggle]:focus-visible,
+[data-mode-pane="regression"] button.pfm-pe-toggle:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+/* ── 7 · Loading bar — 3-px full-width orange ───────────────── */
+
+[data-mode-pane="regression"] .pfm-loading-bar,
+[data-mode-pane="regression"] [data-loading-bar],
+[data-mode-pane="regression"] #pfm-regression-loading-bar {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+[data-mode-pane="regression"] .pfm-loading-bar::before,
+[data-mode-pane="regression"] [data-loading-bar]::before,
+[data-mode-pane="regression"] #pfm-regression-loading-bar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 35%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--orange) 30%,
+    var(--orange-2) 70%,
+    transparent 100%
+  );
+  animation: pfm-ux-loading-bar 1100ms cubic-bezier(.45,.05,.55,.95) infinite;
+}
+
+@keyframes pfm-ux-loading-bar {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(285%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-mode-pane="regression"] .pfm-loading-bar::before,
+  [data-mode-pane="regression"] [data-loading-bar]::before,
+  [data-mode-pane="regression"] #pfm-regression-loading-bar::before {
+    animation-duration: 2600ms;
+  }
+}
+
+/* ── 8 · Mobile · hero card → bottom-sheet on phones ────────── */
+
+@media (max-width: 640px) {
+  [data-mode-pane="regression"] #pfm-fit-summary-stack {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    pointer-events: none;
+  }
+
+  [data-mode-pane="regression"] #pfm-fit-summary-stack > .pfm-fs-card,
+  [data-mode-pane="regression"] #pfm-fit-summary-stack .pfm-fs-card {
+    pointer-events: auto;
+    margin: 0;
+    width: 100%;
+    border-radius: var(--r-4) var(--r-4) 0 0;
+    border-left: none;
+    border-top: 4px solid var(--orange);
+    padding: var(--sp-5) var(--sp-4) calc(var(--sp-5) + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -12px 30px -16px rgba(15, 23, 42, 0.30);
+    max-height: 70vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  [data-mode-pane="regression"] #pfm-fit-summary-stack .pfm-fs-card::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 4px;
+    margin: 0 auto var(--sp-3);
+    border-radius: var(--r-pill);
+    background: var(--hairline-strong);
+  }
+
+  [data-mode-pane="regression"] .pfm-fs-card[data-collapsed="true"] {
+    padding-bottom: calc(var(--sp-3) + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* ── 9 · Print · deferred to W13-35 (print-regression-export.css) */
+
+@media print {
+  /* Intentionally blank — see web/css/print-regression-export.css
+     for the A4-friendly layout. This sheet must not duplicate. */
+}
+
+/* ============================================================
+ * End of regression-ux-polish.css
+ * ============================================================ */

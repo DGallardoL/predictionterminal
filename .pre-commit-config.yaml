@@ -1,0 +1,91 @@
+# Pre-commit configuration for the prediction-terminal monorepo.
+#
+# Audited + tightened by task W11-50 (2026-05-16).
+# Goal: catch formatting / lint / coordination-ledger / large-file / merge
+# issues *before* they reach CI. A 5-second pytest smoke gives us a sanity
+# check that nothing import-breaking landed.
+#
+# Install:    pre-commit install
+# Run-all:    pre-commit run --all-files
+# Skip slow:  SKIP=pytest-smoke git commit ...
+# Skip everything (rare): git commit --no-verify
+
+default_stages: [commit]
+fail_fast: false
+
+repos:
+  # ---------------------------------------------------------------------------
+  # Ruff: format, autofix, then strict re-check.
+  # ---------------------------------------------------------------------------
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      # 1. Autoformat first so subsequent hooks see canonical layout.
+      - id: ruff-format
+        name: ruff format (autoformat)
+        types_or: [python, pyi]
+      # 2. Autofix lints (safe fixes only by default).
+      - id: ruff
+        name: ruff check --fix (lint + autofix)
+        args: [--fix, --exit-non-zero-on-fix]
+        types_or: [python, pyi]
+      # 3. Strict pass: fail if anything is still dirty.
+      - id: ruff
+        name: ruff check (strict, no autofix)
+        alias: ruff-strict
+        args: []
+        types_or: [python, pyi]
+
+  # ---------------------------------------------------------------------------
+  # Generic hygiene hooks.
+  # ---------------------------------------------------------------------------
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: check-merge-conflict
+      - id: check-yaml
+        name: check-yaml (syntax)
+      - id: check-json
+        name: check-json (active-edits.json + others)
+      - id: check-added-large-files
+        name: check-large-files (>1MB, except web/index.html)
+        args: [--maxkb=1024]
+        # web/index.html is intentionally a ~1.6 MB single-file frontend.
+        exclude: ^web/index\.html$
+
+  # ---------------------------------------------------------------------------
+  # JSON-schema validation for alpha_strategies.json (only if schema present).
+  # ---------------------------------------------------------------------------
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.29.4
+    hooks:
+      - id: check-jsonschema
+        name: json-schema-validate alpha_strategies.json
+        files: ^web/data/alpha_strategies\.json$
+        args: [--schemafile, web/data/alpha_strategies.schema.json]
+        # Skip silently if the schema file is missing (it's optional).
+        stages: [commit]
+
+  # ---------------------------------------------------------------------------
+  # Local hooks: coordination ledger + pytest smoke.
+  # ---------------------------------------------------------------------------
+  - repo: local
+    hooks:
+      - id: validate-active-edits
+        name: validate active-edits.json
+        entry: python api/scripts/validate_active_edits.py
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      - id: pytest-smoke
+        name: pytest smoke (health + factors_yml, ~5s)
+        entry: bash -c 'cd api && PYTHONPATH=src .venv/bin/python -m pytest -q -m "not slow" tests/test_health_deep.py tests/test_factors_yml_schema.py'
+        language: system
+        pass_filenames: false
+        # Only run on Python or factors.yml changes to keep typical commits fast.
+        files: '(\.py$|api/src/pfm/factors\.yml$|api/tests/test_health.*\.py$|api/tests/test_factors_yml.*\.py$)'
+        stages: [commit]

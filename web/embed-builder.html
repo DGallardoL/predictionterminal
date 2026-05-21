@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PFM Embed Builder</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+           background: #f6f8fa; color: #1f2328; margin: 0; padding: 24px; }
+    h1 { font-size: 22px; margin: 0 0 4px; }
+    .sub { color: #656d76; margin: 0 0 18px; font-size: 13px; }
+    .wrap { max-width: 920px; margin: 0 auto; }
+    .grid { display: grid; grid-template-columns: 320px 1fr; gap: 18px; }
+    .panel { background: #fff; border: 1px solid #d0d7de; border-radius: 8px; padding: 16px; }
+    label { display: block; font-size: 12px; font-weight: 600; margin: 10px 0 4px; color: #1f2328; }
+    input[type=text], select, input[type=number] {
+      width: 100%; box-sizing: border-box; padding: 6px 8px;
+      border: 1px solid #d0d7de; border-radius: 6px; font-size: 13px; }
+    .preview { background: #fff; border: 1px solid #d0d7de; border-radius: 8px;
+               padding: 12px; min-height: 240px; }
+    .tabs { display: flex; gap: 4px; margin-top: 14px; border-bottom: 1px solid #d0d7de; }
+    .tab { padding: 6px 12px; cursor: pointer; font-size: 12px; font-weight: 600;
+           border: 1px solid transparent; border-bottom: none; border-radius: 6px 6px 0 0; }
+    .tab.active { background: #fff; border-color: #d0d7de; color: #0969da; }
+    .codebox { position: relative; background: #f6f8fa; border: 1px solid #d0d7de;
+               border-top: none; border-radius: 0 0 6px 6px; padding: 10px;
+               font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px;
+               white-space: pre-wrap; word-break: break-all; min-height: 60px; }
+    button.copy { position: absolute; top: 8px; right: 8px; background: #2da44e;
+                  color: #fff; border: none; border-radius: 6px; padding: 4px 10px;
+                  font-size: 11px; font-weight: 600; cursor: pointer; }
+    button.copy:hover { background: #2c974b; }
+    .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+             background: #1f2328; color: #fff; padding: 8px 14px; border-radius: 8px;
+             font-size: 13px; opacity: 0; transition: opacity .2s ease;
+             pointer-events: none; }
+    .toast.show { opacity: 1; }
+    iframe.preview-frame { width: 100%; min-height: 200px; border: 0; display: block; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Embed Builder</h1>
+    <p class="sub">Generate a snippet for any blog or tweet thread. Live preview below.</p>
+
+    <div class="grid">
+      <div class="panel">
+        <label for="kind">Card type</label>
+        <select id="kind">
+          <option value="market">Market</option>
+          <option value="strategy">Strategy</option>
+          <option value="compare">Compare (overlay)</option>
+        </select>
+
+        <label for="slug" id="slug-label">Market slug</label>
+        <input type="text" id="slug" value="will-bitcoin-hit-100k">
+
+        <label for="theme">Theme</label>
+        <select id="theme">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+
+        <label for="height">Height (px)</label>
+        <input type="number" id="height" value="200" min="120" max="600">
+
+        <label>
+          <input type="checkbox" id="autorefresh">
+          <span style="font-weight:400;font-size:12px;">Auto-refresh every 60s</span>
+        </label>
+
+        <label for="apibase">API base URL</label>
+        <input type="text" id="apibase" value="">
+      </div>
+
+      <div>
+        <div class="panel preview" id="preview-panel">
+          <iframe id="preview" class="preview-frame" srcdoc=""></iframe>
+        </div>
+
+        <div class="tabs">
+          <div class="tab active" data-tab="iframe">iframe HTML</div>
+          <div class="tab" data-tab="script">script tag</div>
+          <div class="tab" data-tab="url">direct URL</div>
+        </div>
+        <div class="codebox" id="code-iframe">
+          <button class="copy" data-target="code-iframe">Copy</button>
+          <span class="code"></span>
+        </div>
+        <div class="codebox" id="code-script" style="display:none;">
+          <button class="copy" data-target="code-script">Copy</button>
+          <span class="code"></span>
+        </div>
+        <div class="codebox" id="code-url" style="display:none;">
+          <button class="copy" data-target="code-url">Copy</button>
+          <span class="code"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copied</div>
+
+  <script>
+    (function () {
+      var $ = function (id) { return document.getElementById(id); };
+      var apiBaseEl = $('apibase');
+      apiBaseEl.value = window.location.protocol + '//' + window.location.host;
+
+      function makeUrl() {
+        var kind = $('kind').value;
+        var slug = $('slug').value.trim();
+        var theme = $('theme').value;
+        var base = apiBaseEl.value.replace(/\/+$/, '');
+        if (kind === 'market') {
+          return base + '/embed/market/' + encodeURIComponent(slug) + '?theme=' + theme;
+        }
+        if (kind === 'strategy') {
+          return base + '/embed/strategy/' + encodeURIComponent(slug) + '?theme=' + theme;
+        }
+        return base + '/embed/compare?slugs=' + encodeURIComponent(slug) + '&theme=' + theme;
+      }
+
+      function makeIframeCode() {
+        var url = makeUrl();
+        var h = parseInt($('height').value, 10) || 200;
+        return '<iframe src="' + url + '" width="100%" height="' + h +
+               '" frameborder="0" scrolling="no" style="border:0;border-radius:8px;"></iframe>';
+      }
+
+      function makeScriptCode() {
+        var kind = $('kind').value;
+        var slug = $('slug').value.trim();
+        var theme = $('theme').value;
+        var base = apiBaseEl.value.replace(/\/+$/, '');
+        var attr = kind === 'market' ? 'data-pfm-market' :
+                   kind === 'strategy' ? 'data-pfm-strategy' : 'data-pfm-compare';
+        return '<div ' + attr + '="' + slug + '" data-pfm-theme="' + theme + '"></div>\n' +
+               '<script src="' + base + '/embed.js" async><\/script>';
+      }
+
+      function refresh() {
+        // Update slug label per card type.
+        var kind = $('kind').value;
+        $('slug-label').textContent = kind === 'strategy' ? 'Pair ID' :
+                                      kind === 'compare' ? 'Slugs (comma-separated)' :
+                                      'Market slug';
+
+        var url = makeUrl();
+        $('preview').src = url;
+
+        $('code-iframe').querySelector('.code').textContent = makeIframeCode();
+        $('code-script').querySelector('.code').textContent = makeScriptCode();
+        $('code-url').querySelector('.code').textContent = url;
+      }
+
+      ['kind','slug','theme','height','autorefresh','apibase'].forEach(function (id) {
+        $(id).addEventListener('input', refresh);
+        $(id).addEventListener('change', refresh);
+      });
+
+      document.querySelectorAll('.tab').forEach(function (t) {
+        t.addEventListener('click', function () {
+          document.querySelectorAll('.tab').forEach(function (x) { x.classList.remove('active'); });
+          t.classList.add('active');
+          ['iframe','script','url'].forEach(function (k) {
+            $('code-' + k).style.display = (k === t.dataset.tab) ? 'block' : 'none';
+          });
+        });
+      });
+
+      function showToast(msg) {
+        var el = $('toast');
+        el.textContent = msg;
+        el.classList.add('show');
+        setTimeout(function () { el.classList.remove('show'); }, 1200);
+      }
+
+      document.querySelectorAll('button.copy').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var target = $(btn.dataset.target).querySelector('.code');
+          var text = target.textContent;
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function () { showToast('Copied'); });
+          } else {
+            var ta = document.createElement('textarea');
+            ta.value = text; document.body.appendChild(ta); ta.select();
+            try { document.execCommand('copy'); showToast('Copied'); } catch (e) {}
+            document.body.removeChild(ta);
+          }
+        });
+      });
+
+      refresh();
+    })();
+  </script>
+</body>
+</html>

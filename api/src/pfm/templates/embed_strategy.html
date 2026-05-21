@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ pair_label }} | PFM Alpha</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ pair_label }} — {{ tier }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="{{ og_image_url }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ pair_label }} — {{ tier }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{{ og_image_url }}">
+
+  <style>
+    html, body { margin: 0; padding: 0; background: transparent; }
+    .pfm-emb-card {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      box-sizing: border-box; width: 100%; padding: 14px 16px;
+      border-radius: 8px;
+      border: 1px solid {{ '#30363d' if theme == 'dark' else '#d0d7de' }};
+      background: {{ '#0d1117' if theme == 'dark' else '#ffffff' }};
+      color: {{ '#e6edf3' if theme == 'dark' else '#1f2328' }};
+    }
+    .pfm-emb-header { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .pfm-emb-tier {
+      display: inline-block; padding: 2px 8px; border-radius: 12px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+      background: {{ tier_bg }}; color: {{ tier_fg }};
+    }
+    .pfm-emb-pair { font-size: 14px; font-weight: 600; line-height: 1.3; }
+    .pfm-emb-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 8px 0 6px; }
+    .pfm-emb-cell { display: flex; flex-direction: column; }
+    .pfm-emb-cell-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em;
+      color: {{ '#7d8590' if theme == 'dark' else '#656d76' }}; }
+    .pfm-emb-cell-value { font-size: 18px; font-weight: 700; }
+    .pfm-emb-action {
+      padding: 6px 8px; border-radius: 6px; font-size: 13px; font-weight: 600;
+      background: {{ action_bg }}; color: {{ action_fg }};
+      text-align: center; margin-top: 4px;
+    }
+    .pfm-emb-footer { display: flex; justify-content: space-between; align-items: center;
+      margin-top: 8px; font-size: 11px;
+      color: {{ '#7d8590' if theme == 'dark' else '#656d76' }}; }
+    .pfm-emb-footer a { color: inherit; text-decoration: none; }
+    .pfm-emb-footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="pfm-emb-card" id="pfm-emb-root">
+    <div class="pfm-emb-header">
+      <div class="pfm-emb-pair">{{ pair_label }}</div>
+      <span class="pfm-emb-tier">{{ tier }}</span>
+    </div>
+    <div class="pfm-emb-grid">
+      <div class="pfm-emb-cell">
+        <span class="pfm-emb-cell-label">OOS Sharpe</span>
+        <span class="pfm-emb-cell-value">{{ oos_sharpe_str }}</span>
+      </div>
+      <div class="pfm-emb-cell">
+        <span class="pfm-emb-cell-label">½-life</span>
+        <span class="pfm-emb-cell-value">{{ half_life_str }}</span>
+      </div>
+      <div class="pfm-emb-cell">
+        <span class="pfm-emb-cell-label">Spread z</span>
+        <span class="pfm-emb-cell-value">{{ z_str }}</span>
+      </div>
+    </div>
+    <div class="pfm-emb-action">{{ action }} &middot; {{ reason }}</div>
+    <div class="pfm-emb-footer">
+      <a href="{{ home_url }}" target="_blank" rel="noopener">PFM &middot; α Hub</a>
+      <span>{{ pair_id }}</span>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      function postSize() {
+        try {
+          var h = document.getElementById('pfm-emb-root').offsetHeight + 4;
+          if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ pfm: 'resize', height: h, pair_id: {{ pair_id_json|safe }} }, '*');
+          }
+        } catch (e) {}
+      }
+      window.addEventListener('load', postSize);
+      setTimeout(postSize, 200);
+    })();
+  </script>
+</body>
+</html>

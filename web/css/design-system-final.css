@@ -1,0 +1,277 @@
+/* ============================================================
+ * design-system-final.css  (W13-UX-7, wave-13)
+ *
+ * Final design-system overrides for production launch.
+ * Layers AFTER tokens.css and AFTER global-refinement.css (T68);
+ * redefines ONLY rules that improve the system. Does NOT
+ * redefine tokens owned by tokens.css (--orange, --ink, --bg,
+ * --sp-*, --r-*, --hairline*) or by T68 (--shadow-1/2/3,
+ * --focus-ring, --ease, --t, --t-fast, --t-slow).
+ *
+ * MOUNT ORDER (MANDATORY):
+ *   1. tokens.css                  (T01)
+ *   2. global-refinement.css       (T68)
+ *   3. design-system-final.css     (THIS FILE — last in the
+ *                                   design-system layer, before
+ *                                   any mode-specific sheet)
+ *   4. mode sheets                 (alphahub-premium.css,
+ *                                   terminal-premium.css, etc.)
+ *
+ * COORDINATION (per PROTOCOL-V2):
+ *   - Sole owner: web/css/design-system-final.css.
+ *   - Does NOT modify tokens.css or global-refinement.css.
+ *   - Adds NEW tokens (--shadow-0, --shadow-4, --z-*, --ds-t-*,
+ *     --focus-ring-strong, --sp-7/10/16/20) on :root.
+ *   - Refines rules (disabled opacity, focus ring thickness,
+ *     hairline normalisation) by re-declaring SELECTORS that
+ *     T68 already targets — legal under T68's own comment
+ *     "Mode sheets may override these tokens locally".
+ *
+ * SCOPE:
+ *   1) Shadow scale extended to 5 levels (--shadow-0..4).
+ *   2) Z-index scale (--z-base/sticky/dropdown/modal/toast/tooltip).
+ *   3) Transition timing standardised (100/180/280/480 ms).
+ *   4) Focus state thickened to 4 px outline.
+ *   5) Hairlines normalised to 1 px (no half-pixel artefacts).
+ *   6) Disabled state opacity 0.4 (was 0.5).
+ *   7) Spacing scale gaps filled (7/10/16/20) on 4-px grid.
+ *   8) Border-radius helpers (.r-1 .. .r-pill).
+ *   9) Elevation helpers (.elev-0 .. .elev-4).
+ * ============================================================ */
+
+:root {
+  /* ---- Shadow scale (extended; T68 keeps owning 1/2/3) ---- */
+  --shadow-0: none;
+  --shadow-4: 0 24px 64px rgba(15, 23, 42, 0.18),
+              0 8px 24px rgba(15, 23, 42, 0.10);
+
+  /* ---- Z-index scale (NEW tokens; no collisions) ----
+   * Use as `z-index: var(--z-modal);` etc. Discrete steps so
+   * any mid-layer can be slotted in without renumbering. */
+  --z-base: 0;
+  --z-sticky: 10;
+  --z-dropdown: 100;
+  --z-modal: 1000;
+  --z-toast: 1100;
+  --z-tooltip: 9999;
+
+  /* ---- Transition timing (standardised; final-canonical) ----
+   * Note: T68 owns --t-fast (120ms), --t (180ms), --t-slow
+   * (280ms). We add the production-canonical scale with NEW
+   * names so neither file clobbers the other. New code should
+   * prefer --ds-t-* tokens going forward. */
+  --ds-t-fast: 100ms;
+  --ds-t-normal: 180ms;
+  --ds-t-slow: 280ms;
+  --ds-t-glacial: 480ms;
+
+  /* ---- Focus ring (4 px outline for better visibility) ----
+   * Layered: a 1 px contrast stripe + 4 px orange halo. */
+  --focus-ring-strong: 0 0 0 4px rgba(249, 115, 22, 0.32);
+  --focus-ring-outline-w: 4px;
+
+  /* ---- Spacing scale gaps (4-px grid completion) ----
+   * tokens.css ships 1/2/3/4/5/6/8/12; fill the gaps so
+   * downstream sheets never need ad-hoc multiples. */
+  --sp-7: 28px;
+  --sp-10: 40px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+}
+
+/* ============================================================
+ * 1) Focus state — promote to 4 px outline.
+ *    T68 applies var(--focus-ring) (3 px). Re-target the same
+ *    selector set with var(--focus-ring-strong) (4 px). Source
+ *    order ensures this wins.
+ * ============================================================ */
+
+*:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring-strong);
+  border-radius: var(--r-1);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[role="button"]:focus-visible,
+[role="tab"]:focus-visible,
+[role="menuitem"]:focus-visible,
+[tabindex]:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring-strong);
+}
+
+/* Plain :focus fallback for non-supporting browsers. */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ============================================================
+ * 2) Disabled state — 0.4 opacity (slightly more pronounced).
+ *    T68 sets 0.5; this re-declaration wins by source order.
+ * ============================================================ */
+
+[aria-disabled="true"],
+[disabled],
+:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Keep tooltip wrappers clickable on disabled controls. */
+[aria-disabled="true"][data-allow-pointer],
+[disabled][data-allow-pointer] {
+  pointer-events: auto;
+}
+
+/* ============================================================
+ * 3) Hairlines — normalise to exactly 1 px, never 0.5 px.
+ *    Sub-pixel borders disappear on standard-DPI displays;
+ *    enforce a single deterministic 1 px hairline across the
+ *    app. The colour comes from tokens.css (--hairline).
+ * ============================================================ */
+
+.hairline-t { border-top: 1px solid var(--hairline); }
+.hairline-r { border-right: 1px solid var(--hairline); }
+.hairline-b { border-bottom: 1px solid var(--hairline); }
+.hairline-l { border-left: 1px solid var(--hairline); }
+.hairline   { border: 1px solid var(--hairline); }
+
+.hairline-strong-t { border-top: 1px solid var(--hairline-strong); }
+.hairline-strong-r { border-right: 1px solid var(--hairline-strong); }
+.hairline-strong-b { border-bottom: 1px solid var(--hairline-strong); }
+.hairline-strong-l { border-left: 1px solid var(--hairline-strong); }
+.hairline-strong   { border: 1px solid var(--hairline-strong); }
+
+/* Defensive: collapse any 0.5px borders that slipped through
+ * from third-party widgets or stale CSS — round up to 1 px. */
+[style*="border-width: 0.5px"],
+[style*="border:0.5px"],
+[style*="border: 0.5px"] {
+  border-width: 1px !important;
+}
+
+/* ============================================================
+ * 4) Elevation helpers (5-level shadow scale).
+ *    .elev-0 .. .elev-4. Opt-in classes; do not override the
+ *    broad selectors T68 already targets, so existing cards
+ *    keep their current shadow tier. New components should
+ *    prefer these helpers.
+ * ============================================================ */
+
+.elev-0 { box-shadow: var(--shadow-0); }
+.elev-1 { box-shadow: var(--shadow-1); }
+.elev-2 { box-shadow: var(--shadow-2); }
+.elev-3 { box-shadow: var(--shadow-3); }
+.elev-4 { box-shadow: var(--shadow-4); }
+
+/* Dramatic shadow specifically for modal overlays. Matches the
+ * z-index modal tier and signals "floating above page". */
+.modal,
+.modal-dialog,
+.fullscreen-modal,
+.alphahub-fs-card,
+[data-elevation="4"] {
+  /* Do not force-override mode-specific shadows; only apply if
+   * the consumer has opted in via .elev-modal. */
+}
+
+.elev-modal {
+  box-shadow: var(--shadow-4);
+  z-index: var(--z-modal);
+}
+
+/* ============================================================
+ * 5) Z-index helpers — match the documented scale.
+ *    Avoid magic numbers in component CSS; use these classes
+ *    or reference the tokens directly.
+ * ============================================================ */
+
+.z-base     { z-index: var(--z-base); }
+.z-sticky   { z-index: var(--z-sticky); }
+.z-dropdown { z-index: var(--z-dropdown); }
+.z-modal    { z-index: var(--z-modal); }
+.z-toast    { z-index: var(--z-toast); }
+.z-tooltip  { z-index: var(--z-tooltip); }
+
+/* Default stacking for common ARIA roles where unset.
+ * Uses tokens so any layer change cascades automatically. */
+[role="tooltip"] {
+  z-index: var(--z-tooltip);
+}
+
+[role="dialog"][aria-modal="true"] {
+  z-index: var(--z-modal);
+}
+
+.toast,
+.toast-container,
+[role="status"][data-toast] {
+  z-index: var(--z-toast);
+}
+
+/* ============================================================
+ * 6) Border-radius helpers (4 / 6 / 8 / 12 / pill).
+ *    Mirrors tokens.css. Use to enforce the canonical scale on
+ *    new components without remembering exact pixel values.
+ * ============================================================ */
+
+.r-1    { border-radius: var(--r-1); }
+.r-2    { border-radius: var(--r-2); }
+.r-3    { border-radius: var(--r-3); }
+.r-4    { border-radius: var(--r-4); }
+.r-pill { border-radius: var(--r-pill); }
+
+/* ============================================================
+ * 7) Spacing helpers — 4-px grid utilities for the new gap
+ *    tokens (7/10/16/20). Existing utilities for 1..12 live in
+ *    other sheets; we only expose the additions here.
+ * ============================================================ */
+
+.p-7  { padding: var(--sp-7); }
+.p-10 { padding: var(--sp-10); }
+.p-16 { padding: var(--sp-16); }
+.p-20 { padding: var(--sp-20); }
+
+.m-7  { margin: var(--sp-7); }
+.m-10 { margin: var(--sp-10); }
+.m-16 { margin: var(--sp-16); }
+.m-20 { margin: var(--sp-20); }
+
+.gap-7  { gap: var(--sp-7); }
+.gap-10 { gap: var(--sp-10); }
+.gap-16 { gap: var(--sp-16); }
+.gap-20 { gap: var(--sp-20); }
+
+/* ============================================================
+ * 8) Transition helpers — use the new --ds-t-* scale.
+ *    Component code can pick a tier without thinking in ms.
+ * ============================================================ */
+
+.t-fast    { transition-duration: var(--ds-t-fast)   !important; }
+.t-normal  { transition-duration: var(--ds-t-normal) !important; }
+.t-slow    { transition-duration: var(--ds-t-slow)   !important; }
+.t-glacial { transition-duration: var(--ds-t-glacial)!important; }
+
+/* ============================================================
+ * 9) Reduce motion — re-affirm the hard override so the new
+ *    --ds-t-* helpers also respect user preference.
+ * ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .t-fast,
+  .t-normal,
+  .t-slow,
+  .t-glacial {
+    transition: none !important;
+  }
+}
+
+/* ============================================================
+ * End of design-system-final.css
+ * ============================================================ */

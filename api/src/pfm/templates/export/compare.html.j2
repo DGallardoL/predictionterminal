@@ -1,0 +1,58 @@
+{% extends "_base.html.j2" %}
+{% block title %}Compare — {{ data.slugs | default([]) | join(" / ") }}{% endblock %}
+{% block content %}
+  <h1>Multi-leg Comparison</h1>
+  {% set legs = data.legs | default(data.results | default([])) %}
+  {% set slugs = data.slugs | default([]) %}
+  <p class="muted">{{ legs | length }} legs:
+    {% for s in slugs %}<code>{{ s }}</code>{% if not loop.last %}, {% endif %}{% endfor %}
+  </p>
+
+  <h2>Leg Summary</h2>
+  <table class="pfm-tbl">
+    <thead>
+      <tr>
+        <th>Slug</th><th>Last</th><th>24h Vol</th>
+        <th>n_obs</th><th>Mean</th><th>Std</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for leg in legs %}
+        {% set live = leg.live | default({}) %}
+        {% set stats = leg.stats | default({}) %}
+        <tr>
+          <td>{{ leg.slug | default("?") }}</td>
+          <td>{{ live.last_trade_price | default(live.midpoint | default("—")) }}</td>
+          <td>{{ live.volume_24hr | default("—") }}</td>
+          <td>{{ stats.n_obs | default("—") }}</td>
+          <td>{{ stats.mean | default("—") }}</td>
+          <td>{{ stats.std | default("—") }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% if data.correlation_matrix %}
+    <h2>Correlation Matrix</h2>
+    <table class="pfm-tbl">
+      <thead>
+        <tr>
+          <th></th>
+          {% for col in data.correlation_matrix.keys() %}
+            <th>{{ col }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row_label, row in data.correlation_matrix.items() %}
+          <tr>
+            <th>{{ row_label }}</th>
+            {% for cell in row.values() %}
+              <td>{{ "%.3f" | format(cell | default(0.0) | float) if cell is not none else "—" }}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+{% endblock %}

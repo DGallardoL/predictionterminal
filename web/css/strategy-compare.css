@@ -1,0 +1,610 @@
+/* W11-59 — Strategy Compare modal styles
+ *
+ * Side-by-side comparison of two alpha strategies. Reuses T12 modal
+ * classes (.modal, .modal--xl, .modal__header, .modal__body, .modal__close,
+ * .modal-backdrop). All new selectors are namespaced `.sc-*`.
+ *
+ * MOUNT ORDER:
+ *   AFTER tokens.css and modal.css.
+ *
+ * Tokens consumed (all from tokens.css):
+ *   --ink, --ink-2, --ink-3, --ink-4
+ *   --surface, --surface-2, --bg-alt
+ *   --hairline, --hairline-strong
+ *   --orange, --orange-soft, --orange-600
+ *   --r-2, --r-3, --r-4, --r-pill
+ *   --sp-1..--sp-6
+ *   --mono
+ *   --t-fast, --ease, --focus-ring
+ *
+ * Side-A / Side-B accent colors (local scope only — not exported):
+ *   --sc-side-a-color = --orange      (#f97316)
+ *   --sc-side-b-color = sky-500       (#0ea5e9)
+ */
+
+.sc-root {
+  /* container is purely structural; everything visible is on .modal-backdrop */
+  display: contents;
+}
+
+.sc-root[data-open="false"] .modal-backdrop.sc-backdrop {
+  display: none;
+}
+
+.sc-backdrop {
+  /* override modal.css default flex centering when needed; defaults are fine */
+}
+
+.sc-modal {
+  /* Inherit modal--xl size; allow it to stretch a bit taller for two columns */
+  max-height: 92vh;
+  --sc-side-a-color: var(--orange, #f97316);
+  --sc-side-b-color: #0ea5e9;
+}
+
+body.sc-body-locked {
+  overflow: hidden;
+}
+
+/* ------------------------------------------------------------
+ * Header
+ * ------------------------------------------------------------ */
+.sc-header .modal__title {
+  font-family: var(--serif-display, "Instrument Serif", Georgia, serif);
+  letter-spacing: 0.005em;
+  /* allow long pair-id pairs to wrap a bit */
+  max-width: calc(100% - 48px);
+  word-break: break-word;
+}
+
+/* ------------------------------------------------------------
+ * Body container
+ * ------------------------------------------------------------ */
+.sc-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5, 20px);
+}
+
+/* ------------------------------------------------------------
+ * Loading / error
+ * ------------------------------------------------------------ */
+.sc-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3, 12px);
+  padding: var(--sp-8, 32px) var(--sp-4, 16px);
+  color: var(--ink-3, #64748b);
+  min-height: 280px;
+}
+
+.sc-loading-spinner {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  border-top-color: var(--orange, #f97316);
+  border-radius: 50%;
+  animation: sc-spin 0.9s linear infinite;
+}
+
+@keyframes sc-spin {
+  to { transform: rotate(360deg); }
+}
+
+.sc-loading-text {
+  font-size: 13px;
+  font-family: var(--mono, ui-monospace);
+  letter-spacing: 0.01em;
+}
+
+.sc-error {
+  border: 1px solid var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  background: var(--surface-2, #f8fafc);
+  border-radius: var(--r-3, 8px);
+  padding: var(--sp-5, 20px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2, 8px);
+}
+
+.sc-error-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink, #0f172a);
+}
+
+.sc-error-msg {
+  font-size: 12px;
+  font-family: var(--mono, ui-monospace);
+  color: var(--ink-3, #64748b);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.sc-error-retry {
+  align-self: flex-start;
+  margin-top: var(--sp-2, 8px);
+  appearance: none;
+  border: 1px solid var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  background: var(--surface, #ffffff);
+  color: var(--ink, #0f172a);
+  border-radius: var(--r-2, 6px);
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background var(--t-fast, 120ms) var(--ease, ease);
+}
+
+.sc-error-retry:hover {
+  background: var(--bg-alt, #f4f4f5);
+}
+
+/* ------------------------------------------------------------
+ * Grid
+ * ------------------------------------------------------------ */
+.sc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0; /* divider provides separation */
+  position: relative;
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  border-radius: var(--r-3, 8px);
+  overflow: hidden;
+  background: var(--surface, #ffffff);
+}
+
+/* Vertical divider hairline between A and B */
+.sc-grid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: var(--hairline, rgba(15, 23, 42, 0.08));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Pair titles span the whole grid */
+.sc-pair-titles {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  background: var(--surface-2, #f8fafc);
+}
+
+.sc-pair-title {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2, 8px);
+  padding: var(--sp-3, 12px) var(--sp-4, 16px);
+  min-width: 0;
+}
+
+.sc-pair-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-family: var(--mono, ui-monospace);
+  font-size: 11px;
+  font-weight: 600;
+  color: #ffffff;
+  flex: 0 0 auto;
+}
+
+.sc-side-a .sc-pair-letter {
+  background: var(--sc-side-a-color);
+}
+
+.sc-side-b .sc-pair-letter {
+  background: var(--sc-side-b-color);
+}
+
+.sc-pair-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink, #0f172a);
+  letter-spacing: 0.005em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+/* ------------------------------------------------------------
+ * Section (4 per strategy: Setup / Risk / Theory / Live)
+ * ------------------------------------------------------------ */
+.sc-section {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+}
+
+.sc-section:first-of-type {
+  border-top: none;
+}
+
+.sc-section-header {
+  width: 100%;
+  appearance: none;
+  background: transparent;
+  border: none;
+  cursor: default; /* not a toggle on desktop */
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3, 12px);
+  padding: var(--sp-3, 12px) var(--sp-4, 16px);
+  font-family: var(--serif-display, "Instrument Serif", Georgia, serif);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-2, #334155);
+  background: var(--surface-2, #f8fafc);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sc-section-caret {
+  font-size: 10px;
+  color: var(--ink-4, #94a3b8);
+  transition: transform var(--t-fast, 120ms) var(--ease, ease);
+  display: none; /* hidden on desktop */
+}
+
+.sc-section[data-open="false"] .sc-section-caret {
+  transform: rotate(-90deg);
+}
+
+.sc-section-body {
+  display: block;
+}
+
+/* ------------------------------------------------------------
+ * Rows
+ * ------------------------------------------------------------ */
+.sc-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  border-top: 1px dashed var(--hairline, rgba(15, 23, 42, 0.08));
+  position: relative;
+}
+
+.sc-row:first-child {
+  border-top: none;
+}
+
+.sc-row:hover {
+  background: rgba(249, 115, 22, 0.02);
+}
+
+.sc-row-label {
+  grid-column: 1 / -1;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-4, #94a3b8);
+  padding: var(--sp-2, 8px) var(--sp-4, 16px) 2px;
+  background: transparent;
+  font-family: var(--mono, ui-monospace);
+}
+
+.sc-row-val {
+  padding: 2px var(--sp-4, 16px) var(--sp-3, 12px);
+  font-size: 13px;
+  color: var(--ink, #0f172a);
+  font-variant-numeric: tabular-nums;
+  min-width: 0;
+  overflow-wrap: break-word;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2, 8px);
+}
+
+.sc-row-val.sc-side-b {
+  justify-content: space-between;
+}
+
+.sc-row-val-inner {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.sc-prose {
+  font-size: 12px;
+  color: var(--ink-2, #334155);
+  line-height: 1.5;
+  font-family: inherit;
+}
+
+/* Tier pills */
+.sc-tier {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--r-pill, 999px);
+  font-family: var(--mono, ui-monospace);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  background: var(--bg-alt, #f4f4f5);
+  color: var(--ink-2, #334155);
+}
+
+.sc-tier[data-tier="A_GOLD"] {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-color: #d97706;
+  color: #78350f;
+}
+
+.sc-tier[data-tier="A"] {
+  background: var(--orange-soft, #fff8f1);
+  border-color: var(--orange, #f97316);
+  color: var(--orange-600, #ea580c);
+}
+
+.sc-tier[data-tier="B_VALIDATED"],
+.sc-tier[data-tier="B"] {
+  background: #ecfdf5;
+  border-color: #10b981;
+  color: #047857;
+}
+
+.sc-tier[data-tier="C"] {
+  background: #eff6ff;
+  border-color: #3b82f6;
+  color: #1d4ed8;
+}
+
+.sc-tier[data-tier="D"] {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+  color: #4b5563;
+}
+
+/* Live-state pill */
+.sc-pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--r-pill, 999px);
+  font-family: var(--mono, ui-monospace);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  background: var(--surface-2, #f8fafc);
+  color: var(--ink-2, #334155);
+  text-transform: uppercase;
+}
+
+.sc-pill[data-state*="long"],
+.sc-pill[data-state*="buy"],
+.sc-pill[data-state*="active"] {
+  background: #ecfdf5;
+  border-color: #10b981;
+  color: #047857;
+}
+
+.sc-pill[data-state*="short"],
+.sc-pill[data-state*="sell"] {
+  background: #fef2f2;
+  border-color: #ef4444;
+  color: #b91c1c;
+}
+
+.sc-pill[data-state*="flat"],
+.sc-pill[data-state*="idle"] {
+  background: var(--bg-alt, #f4f4f5);
+  border-color: var(--hairline-strong, rgba(15, 23, 42, 0.14));
+  color: var(--ink-3, #64748b);
+}
+
+/* ------------------------------------------------------------
+ * Diff chip
+ * Orange-soft bg, mono 11px, with ▲/▼ delta indicator
+ * ------------------------------------------------------------ */
+.sc-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 6px;
+  border-radius: var(--r-pill, 999px);
+  background: var(--orange-soft, #fff8f1);
+  border: 1px solid var(--orange, #f97316);
+  color: var(--orange-600, #ea580c);
+  font-family: var(--mono, ui-monospace);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.sc-chip-arrow {
+  font-size: 9px;
+  line-height: 1;
+}
+
+.sc-chip-val {
+  font-size: 11px;
+  letter-spacing: 0.01em;
+}
+
+.sc-chip[data-dir="down"] {
+  background: #fef2f2;
+  border-color: #ef4444;
+  color: #b91c1c;
+}
+
+.sc-chip[data-dir="text"] {
+  background: #fffbeb;
+  border-color: #f59e0b;
+  color: #b45309;
+}
+
+.sc-chip--text .sc-chip-val {
+  /* text diff is just the ≠ glyph */
+  display: none;
+}
+
+/* ------------------------------------------------------------
+ * Equity curve
+ * ------------------------------------------------------------ */
+.sc-equity {
+  border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  border-radius: var(--r-3, 8px);
+  background: var(--surface, #ffffff);
+  padding: var(--sp-3, 12px) var(--sp-4, 16px) var(--sp-4, 16px);
+}
+
+.sc-equity-header {
+  font-family: var(--serif-display, "Instrument Serif", Georgia, serif);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-2, #334155);
+  margin-bottom: var(--sp-2, 8px);
+}
+
+.sc-equity-plot {
+  width: 100%;
+  min-height: 240px;
+}
+
+.sc-equity-fallback {
+  font-size: 12px;
+  color: var(--ink-3, #64748b);
+  padding: var(--sp-4, 16px);
+  text-align: center;
+  font-family: var(--mono, ui-monospace);
+}
+
+/* ------------------------------------------------------------
+ * Mobile: stack vertically, sections become accordion
+ * (collapse one at a time)
+ * ------------------------------------------------------------ */
+@media (max-width: 720px) {
+  .sc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sc-grid::before {
+    display: none;
+  }
+
+  .sc-pair-titles {
+    grid-template-columns: 1fr;
+  }
+
+  .sc-pair-titles .sc-pair-title + .sc-pair-title {
+    border-top: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+  }
+
+  .sc-section-header {
+    cursor: pointer;
+  }
+
+  .sc-section-header:hover {
+    background: var(--bg-alt, #f4f4f5);
+  }
+
+  .sc-section-caret {
+    display: inline-block;
+  }
+
+  .sc-section[data-open="false"] .sc-section-body {
+    display: none;
+  }
+
+  .sc-row {
+    grid-template-columns: 1fr;
+  }
+
+  .sc-row-val {
+    padding-top: 0;
+  }
+
+  /* On mobile, mark each value with its side letter */
+  .sc-row-val.sc-side-a::before,
+  .sc-row-val.sc-side-b::before {
+    content: "A";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--sc-side-a-color);
+    color: #ffffff;
+    font-family: var(--mono, ui-monospace);
+    font-size: 9px;
+    font-weight: 700;
+    flex: 0 0 auto;
+    margin-right: 6px;
+  }
+
+  .sc-row-val.sc-side-b::before {
+    content: "B";
+    background: var(--sc-side-b-color);
+  }
+
+  .sc-equity-plot {
+    min-height: 200px;
+  }
+}
+
+/* ------------------------------------------------------------
+ * Dark-mode tweaks
+ * ------------------------------------------------------------ */
+@media (prefers-color-scheme: dark) {
+  .sc-grid {
+    background: var(--surface, #14171f);
+  }
+
+  .sc-pair-titles,
+  .sc-section-header {
+    background: var(--surface-2, #1a1e28);
+  }
+
+  .sc-equity {
+    background: var(--surface, #14171f);
+  }
+
+  .sc-row:hover {
+    background: rgba(249, 115, 22, 0.05);
+  }
+}
+
+[data-theme="dark"] .sc-grid {
+  background: var(--surface, #14171f);
+}
+
+[data-theme="dark"] .sc-pair-titles,
+[data-theme="dark"] .sc-section-header {
+  background: var(--surface-2, #1a1e28);
+}
+
+[data-theme="dark"] .sc-equity {
+  background: var(--surface, #14171f);
+}
+
+/* ------------------------------------------------------------
+ * Reduced motion
+ * ------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  .sc-loading-spinner {
+    animation-duration: 2s;
+  }
+
+  .sc-section-caret {
+    transition: none;
+  }
+}

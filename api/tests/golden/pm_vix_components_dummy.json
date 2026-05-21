@@ -1,0 +1,55 @@
+{
+  "components": [
+    {
+      "avg_prob": 0.5,
+      "bucket": "recession",
+      "contribution": 24.961,
+      "n_total": 5,
+      "n_used": 5,
+      "source": "hardcoded",
+      "sub_score": 83.202,
+      "weight": 0.3
+    },
+    {
+      "avg_prob": 0.5,
+      "bucket": "geopolitical",
+      "contribution": 20.8,
+      "n_total": 5,
+      "n_used": 5,
+      "source": "hardcoded",
+      "sub_score": 83.202,
+      "weight": 0.25
+    },
+    {
+      "avg_prob": 0.5,
+      "bucket": "election",
+      "contribution": 16.64,
+      "n_total": 5,
+      "n_used": 5,
+      "source": "hardcoded",
+      "sub_score": 83.202,
+      "weight": 0.2
+    },
+    {
+      "avg_prob": 0.5,
+      "bucket": "macro",
+      "contribution": 12.48,
+      "n_total": 5,
+      "n_used": 5,
+      "source": "hardcoded",
+      "sub_score": 83.202,
+      "weight": 0.15
+    },
+    {
+      "avg_prob": 0.5,
+      "bucket": "crypto",
+      "contribution": 8.32,
+      "n_total": 3,
+      "n_used": 3,
+      "source": "hardcoded",
+      "sub_score": 83.202,
+      "weight": 0.1
+    }
+  ],
+  "score": 83.202
+}

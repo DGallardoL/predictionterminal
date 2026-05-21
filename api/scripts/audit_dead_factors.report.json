@@ -1,0 +1,4732 @@
+{
+  "checked_at": "2026-05-02T19:54:28.970356+00:00",
+  "n_total_polymarket": 944,
+  "n_checked": 944,
+  "by_status": {
+    "ACTIVE": [
+      {
+        "id": "nba_26_coach_of_the_year_joe_mazzulla",
+        "slug": "nba-2025-26-coach-of-the-year-joe-mazzulla",
+        "final_outcome": null
+      },
+      {
+        "id": "nba_26_coach_of_the_year_jb_bickerstaff",
+        "slug": "nba-2025-26-coach-of-the-year-jb-bickerstaff",
+        "final_outcome": null
+      },
+      {
+        "id": "nba_26_coach_of_the_year_mitch_johnson",
+        "slug": "nba-2025-26-coach-of-the-year-mitch-johnson",
+        "final_outcome": null
+      },
+      {
+        "id": "lorenzo_musetti_win_the_mens",
+        "slug": "will-lorenzo-musetti-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "joao_fonseca_win_the_mens",
+        "slug": "will-joao-fonseca-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "jack_draper_win_the_mens",
+        "slug": "will-jack-draper-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "sebastian_korda_win_the_mens",
+        "slug": "will-sebastian-korda-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "alejandro_davidovich_fokina_win_the",
+        "slug": "will-alejandro-davidovich-fokina-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "jan_lennard_struff_win_the",
+        "slug": "will-jan-lennard-struff-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "frances_tiafoe_win_the_mens",
+        "slug": "will-frances-tiafoe-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "alex_michelsen_win_the_mens",
+        "slug": "will-alex-michelsen-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "alex_de_minaur_win_the",
+        "slug": "will-alex-de-minaur-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "alexander_bublik_win_the_mens",
+        "slug": "will-alexander-bublik-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "will_carlos_alcaraz_win_the_mens_french_open",
+        "slug": "will-carlos-alcaraz-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "will_novak_djokovic_win_the_mens_french_open",
+        "slug": "will-novak-djokovic-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "will_arthur_fils_win_the_mens_french_open",
+        "slug": "will-arthur-fils-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "will_alexander_zverev_win_the_mens_french_open",
+        "slug": "will-alexander-zverev-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "will_jannik_sinner_win_the_mens_french_open",
+        "slug": "will-jannik-sinner-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "will_casper_ruud_win_the_mens_french_open",
+        "slug": "will-casper-ruud-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "will_stefanos_tsitsipas_win_the_mens_french_open",
+        "slug": "will-stefanos-tsitsipas-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "will_learner_tien_win_the_mens_french_open",
+        "slug": "will-learner-tien-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "will_daniil_medvedev_win_the_mens_french_open",
+        "slug": "will-daniil-medvedev-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "will_taylor_fritz_win_the_mens_french_open",
+        "slug": "will-taylor-fritz-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "will_flavio_cobolli_win_the_mens_french_open",
+        "slug": "will-flavio-cobolli-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "will_amanda_anisimova_win_the_womens_french_open",
+        "slug": "will-amanda-anisimova-win-the-2026-womens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "will_felix_auger_aliassime_win_the_mens_french_ope",
+        "slug": "will-felix-auger-aliassime-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "will_jiri_lehecka_win_the_mens_french_open",
+        "slug": "will-jiri-lehecka-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "will_francisco_cerundolo_win_the_mens_french_open",
+        "slug": "will-francisco-cerundolo-win-the-2026-mens-french-open",
+        "final_outcome": null
+      },
+      {
+        "id": "no_fed_cuts_2026",
+        "slug": "will-no-fed-rate-cuts-happen-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "powell_out_may",
+        "slug": "jerome-powell-out-as-fed-chair-by-may-14-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "us_recession_2026",
+        "slug": "us-recession-by-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "twelve_plus_fed_cuts",
+        "slug": "will-12-or-more-fed-rate-cuts-happen-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "tariff_refund",
+        "slug": "will-the-court-force-trump-to-refund-tariffs-2026-06-30",
+        "final_outcome": null
+      },
+      {
+        "id": "five_fed_cuts",
+        "slug": "will-5-fed-rate-cuts-happen-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "eleven_fed_cuts",
+        "slug": "will-11-fed-rate-cuts-happen-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "viking_acquired",
+        "slug": "will-viking-therapeutics-be-acquired-before-2027-542",
+        "final_outcome": null
+      },
+      {
+        "id": "bp_acquired",
+        "slug": "will-bp-be-acquired-before-2027-549",
+        "final_outcome": null
+      },
+      {
+        "id": "ai_bubble_burst",
+        "slug": "ai-industry-downturn-by-december-31-2026-857",
+        "final_outcome": null
+      },
+      {
+        "id": "china_invade_taiwan_2026",
+        "slug": "will-china-invade-taiwan-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "china_blockade_taiwan",
+        "slug": "will-china-blockade-taiwan-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "iran_regime_jun",
+        "slug": "will-the-iranian-regime-fall-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "us_invades_iran",
+        "slug": "will-the-us-invade-iran-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "russia_ukraine_ceasefire",
+        "slug": "russia-x-ukraine-ceasefire-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "israel_strikes_3",
+        "slug": "will-israel-strike-3-countries-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "xi_out_2027",
+        "slug": "xi-jinping-out-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "putin_out_2027",
+        "slug": "putin-out-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "trump_out_2027",
+        "slug": "trump-out-as-president-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "nebius_acquired",
+        "slug": "will-nebius-group-be-acquired-before-2027-514",
+        "final_outcome": null
+      },
+      {
+        "id": "perplexity_acquired",
+        "slug": "will-perplexity-ai-be-acquired-before-2027-776",
+        "final_outcome": null
+      },
+      {
+        "id": "openai_acquired",
+        "slug": "will-openai-be-acquired-before-2027-859",
+        "final_outcome": null
+      },
+      {
+        "id": "anthropic_best_jun",
+        "slug": "will-anthropic-have-the-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "xai_best_jun",
+        "slug": "will-xai-have-the-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "gitlab_acquired",
+        "slug": "will-gitlab-be-acquired-before-2027-944",
+        "final_outcome": null
+      },
+      {
+        "id": "msft_largest_jun",
+        "slug": "will-microsoft-be-the-largest-company-in-the-world-by-market-cap-on-june-30-612",
+        "final_outcome": null
+      },
+      {
+        "id": "alphabet_largest_jun",
+        "slug": "will-alphabet-be-the-largest-company-in-the-world-by-market-cap-on-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "musk_trillionaire",
+        "slug": "elon-musk-trillionaire-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "apple_foldable",
+        "slug": "will-apple-release-a-foldable-iphone-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "btc_ath_jun",
+        "slug": "bitcoin-all-time-high-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "btc_beats_gold",
+        "slug": "will-bitcoin-outperform-gold-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "btc_200k_eoy",
+        "slug": "will-bitcoin-reach-200000-by-december-31-2026-752-232-389",
+        "final_outcome": null
+      },
+      {
+        "id": "mstr_sells_btc",
+        "slug": "microstrategy-sells-any-bitcoin-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "china_japan_clash",
+        "slug": "china-x-japan-military-clash-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "btc_150k_h1",
+        "slug": "will-bitcoin-hit-150k-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "inflation_above_4_2026",
+        "slug": "will-inflation-reach-more-than-4-in-2026-669",
+        "final_outcome": null
+      },
+      {
+        "id": "inflation_above_35_2026",
+        "slug": "will-inflation-reach-more-than-3pt5-in-2026-154",
+        "final_outcome": null
+      },
+      {
+        "id": "eth_ath_eoy",
+        "slug": "ethereum-all-time-high-by-december-31-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "eth_10k_eoy",
+        "slug": "will-ethereum-reach-10000-by-december-31-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "eth_5k_eoy",
+        "slug": "will-ethereum-reach-5000-by-december-31-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "eth_dip_1500",
+        "slug": "will-ethereum-dip-to-1500-by-december-31-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "sol_ath_jun",
+        "slug": "solana-all-time-high-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "btc_250k_eoy",
+        "slug": "will-bitcoin-reach-250000-by-december-31-2026-579-442",
+        "final_outcome": null
+      },
+      {
+        "id": "btc_dip_15k",
+        "slug": "will-bitcoin-dip-to-15000-by-december-31-2026-416-954-417-853-885-363-335-458-585-275-615-269-479-379-516-218-918-374-598",
+        "final_outcome": null
+      },
+      {
+        "id": "satoshi_moves",
+        "slug": "will-satoshi-move-any-bitcoin-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "oil_above_200_jun",
+        "slug": "will-crude-oil-cl-hit-high-200-by-end-of-june-677",
+        "final_outcome": null
+      },
+      {
+        "id": "oil_above_150_jun",
+        "slug": "will-crude-oil-cl-hit-high-150-by-end-of-june-788-691",
+        "final_outcome": null
+      },
+      {
+        "id": "oil_above_115_jun",
+        "slug": "will-crude-oil-cl-hit-high-115-by-end-of-june-217-913-468-473",
+        "final_outcome": null
+      },
+      {
+        "id": "oil_below_70_jun",
+        "slug": "will-crude-oil-cl-hit-low-70-by-end-of-june-776-556-989-392-677",
+        "final_outcome": null
+      },
+      {
+        "id": "tsla_largest_jun",
+        "slug": "will-tesla-be-the-largest-company-in-the-world-by-market-cap-on-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "amzn_largest_jun",
+        "slug": "will-amazon-be-the-largest-company-in-the-world-by-market-cap-on-june-30-123",
+        "final_outcome": null
+      },
+      {
+        "id": "nvda_largest_jun",
+        "slug": "will-nvidia-be-the-largest-company-in-the-world-by-market-cap-on-june-30-824",
+        "final_outcome": null
+      },
+      {
+        "id": "aapl_largest_jun",
+        "slug": "will-apple-be-the-largest-company-in-the-world-by-market-cap-on-june-30-416",
+        "final_outcome": null
+      },
+      {
+        "id": "tesla_robotaxi_ca_jun",
+        "slug": "will-tesla-launch-robotaxis-in-california-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "msft_acquire_tiktok",
+        "slug": "will-microsoft-acquire-tiktok-637-223-119",
+        "final_outcome": null
+      },
+      {
+        "id": "apple_new_product_line",
+        "slug": "will-apple-release-a-new-product-line-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "human_moon_landing_2026",
+        "slug": "human-moon-landing-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "google_best_ai_jun",
+        "slug": "will-google-have-the-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "msft_best_ai_may",
+        "slug": "will-microsoft-have-the-best-ai-model-at-the-end-of-may-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "amazon_best_ai_may",
+        "slug": "will-amazon-have-the-best-ai-model-at-the-end-of-may-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "amazon_best_ai_jun",
+        "slug": "will-amazon-have-the-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "lovable_acquired",
+        "slug": "will-lovable-be-acquired-before-2027-423",
+        "final_outcome": null
+      },
+      {
+        "id": "ubisoft_acquired",
+        "slug": "will-ubisoft-be-acquired-before-2027-175",
+        "final_outcome": null
+      },
+      {
+        "id": "iran_regime_eoy",
+        "slug": "will-the-iranian-regime-fall-by-the-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "ca_billionaire_tax",
+        "slug": "billionaire-one-time-wealth-tax-passes-in-california-election-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "trump_out_jun30",
+        "slug": "trump-out-as-president-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "hurricane_cat4_us",
+        "slug": "will-any-category-4-hurricane-make-landfall-in-the-us-in-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "eq_8plus_mag7_jun",
+        "slug": "will-there-be-8-or-more-earthquakes-of-magnitude-7pt0-or-higher-worldwide-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "named_storm_pre_hurr",
+        "slug": "named-storm-forms-before-hurricane-season-197",
+        "final_outcome": null
+      },
+      {
+        "id": "measles_10k_us",
+        "slug": "will-there-be-at-least-10000-measles-cases-in-the-us-in-2026-418-668-617",
+        "final_outcome": null
+      },
+      {
+        "id": "new_pandemic_2026",
+        "slug": "new-pandemic-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "covid_variant_2026",
+        "slug": "new-covid-variant-of-concern-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "spacex_no_ipo_2027",
+        "slug": "will-spacex-not-ipo-by-december-31-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "zelenskyy_out_2027",
+        "slug": "zelenskyy-out-as-ukraine-president-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "russia_invade_nato_jun",
+        "slug": "will-russia-invade-a-nato-country-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_cuts_1_2026",
+        "slug": "will-1-fed-rate-cut-happen-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_cuts_2_2026",
+        "slug": "will-2-fed-rate-cuts-happen-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_cuts_3_2026",
+        "slug": "will-3-fed-rate-cuts-happen-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_cuts_4_2026",
+        "slug": "will-4-fed-rate-cuts-happen-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_cuts_6_2026",
+        "slug": "will-6-fed-rate-cuts-happen-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_cuts_7_2026",
+        "slug": "will-7-fed-rate-cuts-happen-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_cuts_8_2026",
+        "slug": "will-8-fed-rate-cuts-happen-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_cuts_9_2026",
+        "slug": "will-9-fed-rate-cuts-happen-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_cuts_10_2026",
+        "slug": "will-10-fed-rate-cuts-happen-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_target_45_eoy",
+        "slug": "will-the-upper-bound-of-the-target-federal-funds-rate-be-4pt5-at-the-end-of-2026-139",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_target_40_eoy",
+        "slug": "will-the-upper-bound-of-the-target-federal-funds-rate-be-4pt0-at-the-end-of-2026-386",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_rate_hike_2026",
+        "slug": "fed-rate-hike-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "btc_dip_55k",
+        "slug": "will-bitcoin-dip-to-55000-by-december-31-2026-527-627-868-745-188-361-314-673-612-946-821-624-855-557-684-381",
+        "final_outcome": null
+      },
+      {
+        "id": "btc_dip_45k",
+        "slug": "will-bitcoin-dip-to-45000-by-december-31-2026-674-923-755-971-998-525-926-245-316-517-544-589-965-923-986-841-815-224",
+        "final_outcome": null
+      },
+      {
+        "id": "btc_dip_35k",
+        "slug": "will-bitcoin-dip-to-35000-by-december-31-2026-744-877-748-219-467-465-646-211-122-947-537-552-555-361-972-954-635-887",
+        "final_outcome": null
+      },
+      {
+        "id": "btc_100k_eoy",
+        "slug": "will-bitcoin-reach-100000-by-december-31-2026-571-361-361",
+        "final_outcome": null
+      },
+      {
+        "id": "btc_500k_eoy",
+        "slug": "will-bitcoin-reach-500000-by-december-31-2026-864",
+        "final_outcome": null
+      },
+      {
+        "id": "btc_1m_eoy",
+        "slug": "will-bitcoin-reach-1000000-by-december-31-2026-946",
+        "final_outcome": null
+      },
+      {
+        "id": "metamask_token_jun",
+        "slug": "will-metamask-launch-a-token-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "opensea_fdv_500m",
+        "slug": "opensea-fdv-above-500m-one-day-after-launch-221-468-166-873-514-375-468-384",
+        "final_outcome": null
+      },
+      {
+        "id": "bop_dem_dem",
+        "slug": "2026-balance-of-power-d-senate-d-house-949",
+        "final_outcome": null
+      },
+      {
+        "id": "bop_rep_dem",
+        "slug": "2026-balance-of-power-r-senate-d-house-444",
+        "final_outcome": null
+      },
+      {
+        "id": "bop_rep_rep",
+        "slug": "2026-balance-of-power-r-senate-r-house-537",
+        "final_outcome": null
+      },
+      {
+        "id": "bop_other",
+        "slug": "2026-balance-of-power-other-131",
+        "final_outcome": null
+      },
+      {
+        "id": "saudi_aramco_largest",
+        "slug": "will-saudi-aramco-be-the-largest-company-in-the-world-by-market-cap-on-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "oil_above_175_jun",
+        "slug": "will-crude-oil-cl-hit-high-175-by-end-of-june-456-295",
+        "final_outcome": null
+      },
+      {
+        "id": "gold_5500_jun",
+        "slug": "gc-hit-5500-high-jun-2026-424-457-376-356",
+        "final_outcome": null
+      },
+      {
+        "id": "trump_acquire_greenland",
+        "slug": "will-trump-acquire-greenland-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "us_acquire_greenland",
+        "slug": "will-the-us-acquire-any-part-of-greenland-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "us_invade_greenland",
+        "slug": "will-the-us-invade-greenland-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "us_invade_cuba",
+        "slug": "will-the-us-invade-cuba-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "us_strike_cuba",
+        "slug": "us-strike-on-cuba-by-december-31",
+        "final_outcome": null
+      },
+      {
+        "id": "ukraine_joins_nato",
+        "slug": "ukraine-joins-nato-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "us_withdraw_nato",
+        "slug": "will-us-withdraw-from-nato-before-2027-348-975-598-224-737",
+        "final_outcome": null
+      },
+      {
+        "id": "us_iran_nuclear_deal_jun",
+        "slug": "us-iran-nuclear-deal-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "netanyahu_out_jun",
+        "slug": "netanyahu-out-by-june-30-383-244-575",
+        "final_outcome": null
+      },
+      {
+        "id": "putin_out_jun",
+        "slug": "putin-out-as-president-of-russia-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "iran_leadership_change_eoy",
+        "slug": "iran-leadership-change-by-december-31-974-976-658-482-568",
+        "final_outcome": null
+      },
+      {
+        "id": "trump_putin_meet_europe",
+        "slug": "will-trump-and-putin-meet-next-in-another-european-country-954-837-364",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_hit_1m_before_gta_vi",
+        "slug": "will-bitcoin-hit-1m-before-gta-vi-872",
+        "final_outcome": null
+      },
+      {
+        "id": "tom_steyer_win_the_california_governor",
+        "slug": "will-tom-steyer-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "donald_trump_win_the_nobel_peace",
+        "slug": "will-donald-trump-win-the-nobel-peace-prize-in-2026-382",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_hit_60k_or_80k_first",
+        "slug": "will-bitcoin-hit-60k-or-80k-first-965",
+        "final_outcome": null
+      },
+      {
+        "id": "china_invades_taiwan_before_gta_vi",
+        "slug": "will-china-invades-taiwan-before-gta-vi-716",
+        "final_outcome": null
+      },
+      {
+        "id": "china_x_taiwan_military_clash_before",
+        "slug": "china-x-taiwan-military-clash-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "mojtaba_khamenei_be_head_of_state",
+        "slug": "will-mojtaba-khamenei-be-head-of-state-in-iran-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "russia_ukraine_ceasefire_before_gta_vi",
+        "slug": "russia-ukraine-ceasefire-before-gta-vi-554",
+        "final_outcome": null
+      },
+      {
+        "id": "jerome_powell_out_from_fed",
+        "slug": "jerome-powell-out-from-fed-board-by-may-30",
+        "final_outcome": null
+      },
+      {
+        "id": "inflation_reach_more_than_in",
+        "slug": "will-inflation-reach-more-than-5-in-2026-282",
+        "final_outcome": null
+      },
+      {
+        "id": "jerome_powell_out_from_fed_2",
+        "slug": "jerome-powell-out-from-fed-board-by-december-31",
+        "final_outcome": null
+      },
+      {
+        "id": "lucy_powell_be_the_next",
+        "slug": "will-lucy-powell-be-the-next-prime-minister-of-the-united-kingdom-in-2026-663",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_emergency_rate_cut_before",
+        "slug": "fed-emergency-rate-cut-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "us_confirm_that_aliens_exist",
+        "slug": "will-the-us-confirm-that-aliens-exist-before-2027-789-924-249",
+        "final_outcome": null
+      },
+      {
+        "id": "starmer_out_by_june",
+        "slug": "starmer-out-by-june-30-2026-862-594-548",
+        "final_outcome": null
+      },
+      {
+        "id": "kyle_langford_win_the_california",
+        "slug": "will-kyle-langford-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "eric_swalwell_win_the_california",
+        "slug": "will-eric-swalwell-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "starmer_out_by_december",
+        "slug": "starmer-out-by-december-31-2026-936-416-977-234",
+        "final_outcome": null
+      },
+      {
+        "id": "tony_thurmond_win_the_california",
+        "slug": "will-tony-thurmond-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "butch_ware_win_the_california",
+        "slug": "will-butch-ware-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "alex_padilla_win_the_california",
+        "slug": "will-alex-padilla-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "apple_be_the_largest_company",
+        "slug": "will-apple-be-the-largest-company-in-the-world-by-market-cap-on-december-31-291",
+        "final_outcome": null
+      },
+      {
+        "id": "brex_ipo_before",
+        "slug": "brex-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "microsoft_be_the_largest_company",
+        "slug": "will-microsoft-be-the-largest-company-in-the-world-by-market-cap-on-december-31-481",
+        "final_outcome": null
+      },
+      {
+        "id": "alphabet_be_the_largest_company",
+        "slug": "will-alphabet-be-the-largest-company-in-the-world-by-market-cap-on-december-31-872",
+        "final_outcome": null
+      },
+      {
+        "id": "amazon_be_the_largest_company",
+        "slug": "will-amazon-be-the-largest-company-in-the-world-by-market-cap-on-december-31-376",
+        "final_outcome": null
+      },
+      {
+        "id": "cerebras_ipo_before",
+        "slug": "cerebras-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "ledger_ipo_before",
+        "slug": "ledger-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "anduril_ipo_before",
+        "slug": "anduril-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "snapchat_be_acquired_before",
+        "slug": "will-snapchat-be-acquired-before-2027-286",
+        "final_outcome": null
+      },
+      {
+        "id": "fannie_mae_ipo_before",
+        "slug": "fannie-mae-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_dip_to_by_december",
+        "slug": "will-bitcoin-dip-to-50000-by-december-31-2026-454-325-222-878-949-487-451",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_all_time_high_by",
+        "slug": "bitcoin-all-time-high-by-september-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_all_time_high_by_2",
+        "slug": "bitcoin-all-time-high-by-december-31-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "pete_hegseth_be_the_leader",
+        "slug": "will-pete-hegseth-be-the-leader-of-venezuela-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "ethereum_dip_to_by_december",
+        "slug": "will-ethereum-dip-to-1000-by-december-31-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_reach_by_december",
+        "slug": "will-bitcoin-reach-90000-by-december-31-2026-113-862-581",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_dip_to_by_december_2",
+        "slug": "will-bitcoin-dip-to-25000-by-december-31-2026-948-243-253-666-115-787-981-282-573-719-186-417-762-754-486-851-278-145",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_reach_by_december_2",
+        "slug": "will-bitcoin-reach-150000-by-december-31-2026-557-246-971",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_dip_to_by_december_3",
+        "slug": "will-bitcoin-dip-to-30000-by-december-31-2026-971-191-116-343-999-758-299",
+        "final_outcome": null
+      },
+      {
+        "id": "ethereum_dip_to_by_december_2",
+        "slug": "will-ethereum-dip-to-800-by-december-31-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "china_unban_bitcoin_by",
+        "slug": "will-china-unban-bitcoin-by-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "doge_lunar_mission_launch_before",
+        "slug": "will-the-doge-1-lunar-mission-launch-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_reach_by_december_3",
+        "slug": "will-bitcoin-reach-140000-by-december-31-2026-131-829-299",
+        "final_outcome": null
+      },
+      {
+        "id": "ethereum_all_time_high_by",
+        "slug": "ethereum-all-time-high-by-september-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "ethereum_reach_by_december",
+        "slug": "will-ethereum-reach-3500-by-december-31-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_dip_to_by_december_4",
+        "slug": "will-bitcoin-dip-to-20000-by-december-31-2026-121-885-178-397-354-236-731",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_reach_by_december_4",
+        "slug": "will-bitcoin-reach-190000-by-december-31-2026-936-485-627",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_hit_150k_by_december",
+        "slug": "will-bitcoin-hit-150k-by-december-31-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "eth_flipped_in",
+        "slug": "eth-flipped-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_reach_by_december_5",
+        "slug": "will-bitcoin-reach-160000-by-december-31-2026-934-934-164",
+        "final_outcome": null
+      },
+      {
+        "id": "bytedance_have_the_best_ai",
+        "slug": "will-bytedance-have-the-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "microsoft_have_the_best_ai",
+        "slug": "will-microsoft-have-the-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "baidu_have_the_best_ai",
+        "slug": "will-baidu-have-the-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "meta_have_the_best_ai",
+        "slug": "will-meta-have-the-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "zai_have_the_best_ai",
+        "slug": "will-zai-have-the-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "taiwanese_premier_cho_jung_tai",
+        "slug": "taiwanese-premier-cho-jung-tai-out-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "gpt_be_released_by_june",
+        "slug": "will-gpt-6-be-released-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "openai_have_a_ai_model",
+        "slug": "will-openai-have-a-1-ai-model-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "deepseek_have_a_ai_model",
+        "slug": "will-deepseek-have-a-1-ai-model-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "anthropic_ipo_before",
+        "slug": "anthropic-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "china_invade_taiwan_by_june",
+        "slug": "will-china-invade-taiwan-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "russia_x_ukraine_ceasefire_by",
+        "slug": "russia-x-ukraine-ceasefire-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "evan_pettus_be_the_leader",
+        "slug": "will-evan-pettus-be-the-leader-of-venezuela-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "dan_caine_be_the_leader",
+        "slug": "will-dan-caine-be-the-leader-of-venezuela-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "reza_pahlavi_enter_iran_by",
+        "slug": "will-reza-pahlavi-enter-iran-by-june-30-555-947-362-379-213",
+        "final_outcome": null
+      },
+      {
+        "id": "richard_grenell_be_the_leader",
+        "slug": "will-richard-grenell-be-the-leader-of-venezuela-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "nicols_maduro_be_the_leader",
+        "slug": "will-nicols-maduro-be-the-leader-of-venezuela-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "iran_agrees_to_end_enrichment",
+        "slug": "iran-agrees-to-end-enrichment-of-uranium-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "reza_pahlavi_enter_iran_by_2",
+        "slug": "will-reza-pahlavi-enter-iran-by-december-31-898-927",
+        "final_outcome": null
+      },
+      {
+        "id": "nato_x_russia_military_clash",
+        "slug": "nato-x-russia-military-clash-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "iran_coup_attempt_by_june",
+        "slug": "iran-coup-attempt-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "diosdado_cabello_rondn_be_the",
+        "slug": "will-diosdado-cabello-rondn-be-the-leader-of-venezuela-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "france_uk_or_germany_strike",
+        "slug": "will-france-uk-or-germany-strike-iran-by-june-30-259",
+        "final_outcome": null
+      },
+      {
+        "id": "delcy_rodrguez_be_the_leader",
+        "slug": "will-delcy-rodrguez-be-the-leader-of-venezuela-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "frank_donovan_be_the_leader",
+        "slug": "will-frank-donovan-be-the-leader-of-venezuela-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "any_country_leave_nato_by",
+        "slug": "will-any-country-leave-nato-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "dinorah_figuera_be_the_leader",
+        "slug": "will-dinorah-figuera-be-the-leader-of-venezuela-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "iran_nuke_before",
+        "slug": "iran-nuke-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "marco_rubio_be_the_leader",
+        "slug": "will-marco-rubio-be-the-leader-of-venezuela-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "spacexs_public_ticker_be_sex",
+        "slug": "will-spacexs-public-ticker-be-sex-544",
+        "final_outcome": null
+      },
+      {
+        "id": "tesla_be_the_largest_company",
+        "slug": "will-tesla-be-the-largest-company-in-the-world-by-market-cap-on-december-31-139",
+        "final_outcome": null
+      },
+      {
+        "id": "cl_hit_low_jun",
+        "slug": "cl-hit-52-low-jun-2026-281-667-725-982-533-271",
+        "final_outcome": null
+      },
+      {
+        "id": "spacexs_public_ticker_be_star",
+        "slug": "will-spacexs-public-ticker-be-star-796",
+        "final_outcome": null
+      },
+      {
+        "id": "citigroup_or_any_of_its",
+        "slug": "will-citigroup-or-any-of-its-underwriting-affiliates-serve-as-the-lead-underwriter-in-spacexs-initial-public-offering-719",
+        "final_outcome": null
+      },
+      {
+        "id": "spacexs_public_ticker_be_spc",
+        "slug": "will-spacexs-public-ticker-be-spc-937",
+        "final_outcome": null
+      },
+      {
+        "id": "spacex_space_exploration_technologies_co",
+        "slug": "spacex-space-exploration-technologies-corp-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "spacex_be_the_largest_company",
+        "slug": "will-spacex-be-the-largest-company-in-the-world-by-market-cap-on-december-31",
+        "final_outcome": null
+      },
+      {
+        "id": "us_strike_on_mexico_by",
+        "slug": "us-strike-on-mexico-by-december-31",
+        "final_outcome": null
+      },
+      {
+        "id": "cl_hit_low_jun_2",
+        "slug": "cl-hit-50-low-jun-2026-493-719-428-266-222-294",
+        "final_outcome": null
+      },
+      {
+        "id": "spacex_ipo_closing_market_cap",
+        "slug": "spacex-ipo-closing-market-cap-above-2t-574",
+        "final_outcome": null
+      },
+      {
+        "id": "spacex_ipo_by_september",
+        "slug": "will-spacex-ipo-by-september-30-2026-832-864-576-595",
+        "final_outcome": null
+      },
+      {
+        "id": "us_strike_or_more_countries",
+        "slug": "will-the-us-strike-15-or-more-countries-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "spacex_ipo_closing_market_cap_2",
+        "slug": "spacex-ipo-closing-market-cap-above-1t-528",
+        "final_outcome": null
+      },
+      {
+        "id": "usa_win_the_fifa_world",
+        "slug": "will-usa-win-the-2026-fifa-world-cup-467",
+        "final_outcome": null
+      },
+      {
+        "id": "france_win_the_fifa_world",
+        "slug": "will-france-win-the-2026-fifa-world-cup-924",
+        "final_outcome": null
+      },
+      {
+        "id": "australia_win_the_fifa_world",
+        "slug": "will-australia-win-the-2026-fifa-world-cup-816",
+        "final_outcome": null
+      },
+      {
+        "id": "spain_win_the_fifa_world",
+        "slug": "will-spain-win-the-2026-fifa-world-cup-963",
+        "final_outcome": null
+      },
+      {
+        "id": "iran_win_the_fifa_world",
+        "slug": "will-iran-win-the-2026-fifa-world-cup-788",
+        "final_outcome": null
+      },
+      {
+        "id": "mexico_win_the_fifa_world",
+        "slug": "will-mexico-win-the-2026-fifa-world-cup-529",
+        "final_outcome": null
+      },
+      {
+        "id": "ecuador_win_the_fifa_world",
+        "slug": "will-ecuador-win-the-2026-fifa-world-cup-986",
+        "final_outcome": null
+      },
+      {
+        "id": "new_zealand_win_the_fifa",
+        "slug": "will-new-zealand-win-the-2026-fifa-world-cup-635",
+        "final_outcome": null
+      },
+      {
+        "id": "team_z_win_the_fifa",
+        "slug": "will-team-z-win-the-2026-fifa-world-cup-316",
+        "final_outcome": null
+      },
+      {
+        "id": "brazil_win_the_fifa_world",
+        "slug": "will-brazil-win-the-2026-fifa-world-cup-183",
+        "final_outcome": null
+      },
+      {
+        "id": "canada_win_the_fifa_world",
+        "slug": "will-canada-win-the-2026-fifa-world-cup-755",
+        "final_outcome": null
+      },
+      {
+        "id": "japan_win_the_fifa_world",
+        "slug": "will-japan-win-the-2026-fifa-world-cup-112",
+        "final_outcome": null
+      },
+      {
+        "id": "uzbekistan_win_the_fifa_world",
+        "slug": "will-uzbekistan-win-the-2026-fifa-world-cup-773",
+        "final_outcome": null
+      },
+      {
+        "id": "tunisia_win_the_fifa_world",
+        "slug": "will-tunisia-win-the-2026-fifa-world-cup-165",
+        "final_outcome": null
+      },
+      {
+        "id": "portugal_win_the_fifa_world",
+        "slug": "will-portugal-win-the-2026-fifa-world-cup-912",
+        "final_outcome": null
+      },
+      {
+        "id": "wuthering_heights_be_the_top",
+        "slug": "will-wuthering-heights-be-the-top-grossing-movie-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "scream_be_the_top_grossing",
+        "slug": "will-scream-7-be-the-top-grossing-movie-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "wicked_for_good_be_the",
+        "slug": "will-wicked-for-good-be-the-top-grossing-movie-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "dune_messiah_be_the_top",
+        "slug": "will-dune-messiah-be-the-top-grossing-movie-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "movie_a_be_the_top",
+        "slug": "will-movie-a-be-the-top-grossing-movie-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "spider_man_brand_new_day",
+        "slug": "will-spider-man-brand-new-day-be-the-top-grossing-movie-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "avengers_doomsday_be_the_top",
+        "slug": "will-avengers-doomsday-be-the-top-grossing-movie-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "jumanji_be_the_top_grossing",
+        "slug": "will-jumanji-3-be-the-top-grossing-movie-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "toy_story_be_the_top",
+        "slug": "will-toy-story-5-be-the-top-grossing-movie-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "odyssey_be_the_top_grossing",
+        "slug": "will-the-odyssey-be-the-top-grossing-movie-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "hunger_games_sunrise_on_the",
+        "slug": "will-the-hunger-games-sunrise-on-the-reaping-be-the-top-grossing-movie-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "new_rhianna_album_before_gta",
+        "slug": "new-rhianna-album-before-gta-vi-926",
+        "final_outcome": null
+      },
+      {
+        "id": "is_jeffrey_epstein_alive",
+        "slug": "is-jeffrey-epstein-alive-498",
+        "final_outcome": null
+      },
+      {
+        "id": "10pt0_or_above_earthquake_before",
+        "slug": "10pt0-or-above-earthquake-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "there_be_between_and_earthquakes",
+        "slug": "will-there-be-between-14-and-16-earthquakes-of-magnitude-7pt0-or-higher-worldwide-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "jesus_christ_return_before",
+        "slug": "will-jesus-christ-return-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "richard_van_de_water_win",
+        "slug": "will-richard-van-de-water-win-the-bachelorette-season-22",
+        "final_outcome": null
+      },
+      {
+        "id": "gta_vi_released_before_june",
+        "slug": "gta-vi-released-before-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "jesus_christ_return_before_gta",
+        "slug": "will-jesus-christ-return-before-gta-vi-665",
+        "final_outcome": null
+      },
+      {
+        "id": "base_launch_a_token_by",
+        "slug": "will-base-launch-a-token-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "unrwa_win_the_nobel_peace",
+        "slug": "will-unrwa-win-the-nobel-peace-prize-in-2026-983",
+        "final_outcome": null
+      },
+      {
+        "id": "antnio_guterres_win_the_nobel",
+        "slug": "will-antnio-guterres-win-the-nobel-peace-prize-in-2026-623",
+        "final_outcome": null
+      },
+      {
+        "id": "a_province_schedule_a_referendum",
+        "slug": "will-a-province-schedule-a-referendum-to-leave-canada-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "jon_stewart_win_the_democratic",
+        "slug": "will-jon-stewart-win-the-2028-democratic-presidential-nomination-518",
+        "final_outcome": null
+      },
+      {
+        "id": "gavin_newsom_win_the_democratic",
+        "slug": "will-gavin-newsom-win-the-2028-democratic-presidential-nomination-568",
+        "final_outcome": null
+      },
+      {
+        "id": "alexandria_ocasio_cortez_win_the",
+        "slug": "will-alexandria-ocasio-cortez-win-the-2028-democratic-presidential-nomination-653",
+        "final_outcome": null
+      },
+      {
+        "id": "stephen_a_smith_win_the",
+        "slug": "will-stephen-a-smith-win-the-2028-democratic-presidential-nomination-914",
+        "final_outcome": null
+      },
+      {
+        "id": "bernie_sanders_win_the_democratic",
+        "slug": "will-bernie-sanders-win-the-2028-democratic-presidential-nomination-879",
+        "final_outcome": null
+      },
+      {
+        "id": "jared_polis_win_the_democratic",
+        "slug": "will-jared-polis-win-the-2028-democratic-presidential-nomination-837",
+        "final_outcome": null
+      },
+      {
+        "id": "phil_murphy_win_the_democratic",
+        "slug": "will-phil-murphy-win-the-2028-democratic-presidential-nomination-611",
+        "final_outcome": null
+      },
+      {
+        "id": "andy_beshear_win_the_democratic",
+        "slug": "will-andy-beshear-win-the-2028-democratic-presidential-nomination-832",
+        "final_outcome": null
+      },
+      {
+        "id": "jon_ossoff_win_the_democratic",
+        "slug": "will-jon-ossoff-win-the-2028-democratic-presidential-nomination-885",
+        "final_outcome": null
+      },
+      {
+        "id": "mark_cuban_win_the_democratic",
+        "slug": "will-mark-cuban-win-the-2028-democratic-presidential-nomination-329",
+        "final_outcome": null
+      },
+      {
+        "id": "gina_raimondo_win_the_democratic",
+        "slug": "will-gina-raimondo-win-the-2028-democratic-presidential-nomination-676",
+        "final_outcome": null
+      },
+      {
+        "id": "roy_cooper_win_the_democratic",
+        "slug": "will-roy-cooper-win-the-2028-democratic-presidential-nomination-286",
+        "final_outcome": null
+      },
+      {
+        "id": "mark_kelly_win_the_democratic",
+        "slug": "will-mark-kelly-win-the-2028-democratic-presidential-nomination-479",
+        "final_outcome": null
+      },
+      {
+        "id": "barack_obama_win_the_democratic",
+        "slug": "will-barack-obama-win-the-2028-democratic-presidential-nomination-265",
+        "final_outcome": null
+      },
+      {
+        "id": "kamala_harris_win_the_democratic",
+        "slug": "will-kamala-harris-win-the-2028-democratic-presidential-nomination-641",
+        "final_outcome": null
+      },
+      {
+        "id": "tim_walz_win_the_democratic",
+        "slug": "will-tim-walz-win-the-2028-democratic-presidential-nomination-475",
+        "final_outcome": null
+      },
+      {
+        "id": "zohran_mamdani_win_the_democratic",
+        "slug": "will-zohran-mamdani-win-the-2028-democratic-presidential-nomination-445",
+        "final_outcome": null
+      },
+      {
+        "id": "corey_booker_win_the_democratic",
+        "slug": "will-corey-booker-win-the-2028-democratic-presidential-nomination-125",
+        "final_outcome": null
+      },
+      {
+        "id": "raphael_warnock_win_the_democratic",
+        "slug": "will-raphael-warnock-win-the-2028-democratic-presidential-nomination-914",
+        "final_outcome": null
+      },
+      {
+        "id": "rahm_emanuel_win_the_democratic",
+        "slug": "will-rahm-emanuel-win-the-2028-democratic-presidential-nomination-299",
+        "final_outcome": null
+      },
+      {
+        "id": "wes_moore_win_the_democratic",
+        "slug": "will-wes-moore-win-the-2028-democratic-presidential-nomination-714",
+        "final_outcome": null
+      },
+      {
+        "id": "michelle_obama_win_the_democratic",
+        "slug": "will-michelle-obama-win-the-2028-democratic-presidential-nomination-777",
+        "final_outcome": null
+      },
+      {
+        "id": "liz_cheney_win_the_democratic",
+        "slug": "will-liz-cheney-win-the-2028-democratic-presidential-nomination-551",
+        "final_outcome": null
+      },
+      {
+        "id": "john_fetterman_win_the_democratic",
+        "slug": "will-john-fetterman-win-the-2028-democratic-presidential-nomination-941",
+        "final_outcome": null
+      },
+      {
+        "id": "morocco_win_2026_fifa_world",
+        "slug": "will-morocco-win-the-2026-fifa-world-cup-464",
+        "final_outcome": null
+      },
+      {
+        "id": "argentina_win_2026_fifa_world",
+        "slug": "will-argentina-win-the-2026-fifa-world-cup-245",
+        "final_outcome": null
+      },
+      {
+        "id": "uruguay_win_2026_fifa_world",
+        "slug": "will-uruguay-win-the-2026-fifa-world-cup-932",
+        "final_outcome": null
+      },
+      {
+        "id": "germany_win_2026_fifa_world",
+        "slug": "will-germany-win-the-2026-fifa-world-cup-467",
+        "final_outcome": null
+      },
+      {
+        "id": "england_win_2026_fifa_world",
+        "slug": "will-england-win-the-2026-fifa-world-cup-937",
+        "final_outcome": null
+      },
+      {
+        "id": "norway_win_2026_fifa_world",
+        "slug": "will-norway-win-the-2026-fifa-world-cup-893",
+        "final_outcome": null
+      },
+      {
+        "id": "south_korea_win_2026_fifa",
+        "slug": "will-south-korea-win-the-2026-fifa-world-cup-485",
+        "final_outcome": null
+      },
+      {
+        "id": "jordan_win_2026_fifa_world",
+        "slug": "will-jordan-win-the-2026-fifa-world-cup-233",
+        "final_outcome": null
+      },
+      {
+        "id": "netherlands_win_2026_fifa_world",
+        "slug": "will-netherlands-win-the-2026-fifa-world-cup-739",
+        "final_outcome": null
+      },
+      {
+        "id": "belgium_win_2026_fifa_world",
+        "slug": "will-belgium-win-the-2026-fifa-world-cup-358",
+        "final_outcome": null
+      },
+      {
+        "id": "colombia_win_2026_fifa_world",
+        "slug": "will-colombia-win-the-2026-fifa-world-cup-734",
+        "final_outcome": null
+      },
+      {
+        "id": "paraguay_win_2026_fifa_world",
+        "slug": "will-paraguay-win-the-2026-fifa-world-cup-967",
+        "final_outcome": null
+      },
+      {
+        "id": "netanyahu_out_end_2026",
+        "slug": "netanyahu-out-before-2027-684-719-226-657",
+        "final_outcome": null
+      },
+      {
+        "id": "xavier_becerra_win_california_governor",
+        "slug": "will-xavier-becerra-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_reach_80000_december_31",
+        "slug": "will-bitcoin-reach-80000-by-december-31-2026-195-842-488-785",
+        "final_outcome": null
+      },
+      {
+        "id": "betty_yee_win_california_governor",
+        "slug": "will-betty-yee-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "rick_caruso_win_california_governor",
+        "slug": "will-rick-caruso-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "daniel_mercuri_win_california_governor",
+        "slug": "will-daniel-mercuri-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "katie_porter_win_california_governor",
+        "slug": "will-katie-porter-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "chad_bianco_win_california_governor",
+        "slug": "will-chad-bianco-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "leo_zacky_win_california_governor",
+        "slug": "will-leo-zacky-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "toni_atkins_win_california_governor",
+        "slug": "will-toni-atkins-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "steve_hilton_win_california_governor",
+        "slug": "will-steve-hilton-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "michael_younger_win_california_governor",
+        "slug": "will-michael-younger-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "matt_mahan_win_california_governor",
+        "slug": "will-matt-mahan-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "epstein_client_list_released_june",
+        "slug": "epstein-client-list-released-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "eleni_kounalakis_win_california_governor",
+        "slug": "will-eleni-kounalakis-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "2026_balance_power_d_senate",
+        "slug": "2026-balance-of-power-d-senate-r-house-692",
+        "final_outcome": null
+      },
+      {
+        "id": "nicole_shanahan_win_california_governor",
+        "slug": "will-nicole-shanahan-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "stephen_cloobeck_win_california_governor",
+        "slug": "will-stephen-cloobeck-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "edmundo_gonzlez_leader_venezuela_end",
+        "slug": "will-edmundo-gonzlez-be-the-leader-of-venezuela-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "kamala_harris_win_california_governor",
+        "slug": "will-kamala-harris-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "deepseek_have_best_ai_model",
+        "slug": "will-deepseek-have-the-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "nvidia_largest_company_world_market",
+        "slug": "will-nvidia-be-the-largest-company-in-the-world-by-market-cap-on-december-31-244",
+        "final_outcome": null
+      },
+      {
+        "id": "alibaba_have_best_ai_model",
+        "slug": "will-alibaba-have-the-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "there_no_head_state_venezuela",
+        "slug": "will-there-be-no-head-of-state-of-venezuela-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_reach_130000_december_31",
+        "slug": "will-bitcoin-reach-130000-by-december-31-2026-756-151-855",
+        "final_outcome": null
+      },
+      {
+        "id": "moonshot_have_best_ai_model",
+        "slug": "will-moonshot-have-the-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "xi_jinping_win_nobel_peace",
+        "slug": "will-xi-jinping-win-the-nobel-peace-prize-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "vladimir_padrino_lpez_leader_venezuela",
+        "slug": "will-vladimir-padrino-lpez-be-the-leader-of-venezuela-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_reach_110000_december_31",
+        "slug": "will-bitcoin-reach-110000-by-december-31-2026-658-339-969",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_dip_5000_december_31",
+        "slug": "will-bitcoin-dip-to-5000-by-december-31-2026-jy3n-991-141-345-117-196-482",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_dip_40000_december_31",
+        "slug": "will-bitcoin-dip-to-40000-by-december-31-2026-593-522-842-874-931-776-991",
+        "final_outcome": null
+      },
+      {
+        "id": "spacexs_public_ticker_space",
+        "slug": "will-spacexs-public-ticker-be-space-625",
+        "final_outcome": null
+      },
+      {
+        "id": "openai_have_best_ai_model",
+        "slug": "will-openai-have-the-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "spacexs_public_ticker_spax",
+        "slug": "will-spacexs-public-ticker-be-spax-713",
+        "final_outcome": null
+      },
+      {
+        "id": "mara_corina_machado_leader_venezuela",
+        "slug": "will-mara-corina-machado-be-the-leader-of-venezuela-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "michael_top_grossing_movie_2026",
+        "slug": "will-michael-be-the-top-grossing-movie-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "crude_oil_cl_hit_low",
+        "slug": "cl-hit-55-low-jun-2026-966-518-255-974-617-765",
+        "final_outcome": null
+      },
+      {
+        "id": "mistral_have_best_ai_model",
+        "slug": "will-mistral-have-the-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "saudi_aramco_largest_company_world",
+        "slug": "will-saudi-aramco-be-the-largest-company-in-the-world-by-market-cap-on-december-31-584",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_dip_10000_december_31",
+        "slug": "will-bitcoin-dip-to-10000-by-december-31-2026-888-644-567-258-946-853",
+        "final_outcome": null
+      },
+      {
+        "id": "spacexs_public_ticker_x",
+        "slug": "will-spacexs-public-ticker-be-x-333",
+        "final_outcome": null
+      },
+      {
+        "id": "microstrategy_sells_any_bitcoin_december",
+        "slug": "microstrategy-sells-any-bitcoin-by-december-31-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "bitcoin_reach_120000_december_31",
+        "slug": "will-bitcoin-reach-120000-by-december-31-2026-625-425-562",
+        "final_outcome": null
+      },
+      {
+        "id": "project_hail_mary_top_grossing",
+        "slug": "will-project-hail-mary-be-the-top-grossing-movie-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "spacexs_public_ticker_mars",
+        "slug": "will-spacexs-public-ticker-be-mars-627",
+        "final_outcome": null
+      },
+      {
+        "id": "meituan_have_best_ai_model",
+        "slug": "will-meituan-have-the-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "spacexs_public_ticker_another_ticker",
+        "slug": "will-spacexs-public-ticker-be-another-ticker-745",
+        "final_outcome": null
+      },
+      {
+        "id": "us_officially_declare_war_iran",
+        "slug": "will-the-us-officially-declare-war-on-iran-by-december-31-2026-746",
+        "final_outcome": null
+      },
+      {
+        "id": "jorge_rodrguez_leader_venezuela_end",
+        "slug": "will-jorge-rodrguez-be-the-leader-of-venezuela-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "gold_gc_hit_high_7000",
+        "slug": "gc-hit-7000-high-jun-2026-433-244-291",
+        "final_outcome": null
+      },
+      {
+        "id": "russia_capture_kostyantynivka_june_30",
+        "slug": "will-russia-capture-kostyantynivka-by-june-30-382-954-769",
+        "final_outcome": null
+      },
+      {
+        "id": "silver_si_hit_high_120",
+        "slug": "si-hit-120-high-jun-2026-868-341-771-388-669",
+        "final_outcome": null
+      },
+      {
+        "id": "silver_si_hit_high_200",
+        "slug": "si-hit-200-high-jun-2026-446-464-464",
+        "final_outcome": null
+      },
+      {
+        "id": "henry_cavill_announced_next_james",
+        "slug": "henry-cavill-announced-as-next-james-bond-857-642",
+        "final_outcome": null
+      },
+      {
+        "id": "silver_si_hit_high_250",
+        "slug": "will-silver-si-hit-high-250-by-end-of-june-218",
+        "final_outcome": null
+      },
+      {
+        "id": "gold_gc_hit_low_4200",
+        "slug": "gc-hit-4200-low-jun-2026-737-562-112-239-328-831-356-185-544-513",
+        "final_outcome": null
+      },
+      {
+        "id": "elon_musk_win_nobel_peace",
+        "slug": "will-elon-musk-win-the-nobel-peace-prize-in-2026-756",
+        "final_outcome": null
+      },
+      {
+        "id": "gold_gc_hit_high_6500",
+        "slug": "gc-hit-6500-high-jun-2026-737-471-976",
+        "final_outcome": null
+      },
+      {
+        "id": "gold_gc_hit_high_6000",
+        "slug": "gc-hit-6000-high-jun-2026-148-914-853",
+        "final_outcome": null
+      },
+      {
+        "id": "silver_si_hit_low_35",
+        "slug": "si-hit-35-low-jun-2026-329-686-772-518-637",
+        "final_outcome": null
+      },
+      {
+        "id": "silver_si_hit_high_230",
+        "slug": "will-silver-si-hit-high-230-by-end-of-june-543-885",
+        "final_outcome": null
+      },
+      {
+        "id": "star_wars_mandalorian_grogu_top",
+        "slug": "will-star-wars-the-mandalorian-and-grogu-be-the-top-grossing-movie-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "there_least_4000_measles_cases",
+        "slug": "will-there-be-at-least-4000-measles-cases-in-the-us-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "us_iran_nuclear_deal_before",
+        "slug": "us-iran-nuclear-deal-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "will_reza_pahlavi_lead_iran_in",
+        "slug": "will-reza-pahlavi-lead-iran-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_antonio_villaraigosa_win_the_california_gover",
+        "slug": "will-antonio-villaraigosa-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_there_be_5_or_more_confirmed_vei_4_or_higher",
+        "slug": "will-there-be-5-or-more-confirmed-vei-4-or-higher-volcanic-eruptions-worldwide-in-2026-655",
+        "final_outcome": null
+      },
+      {
+        "id": "will_narendra_modi_win_the_nobel_peace_prize_in",
+        "slug": "will-narendra-modi-win-the-nobel-peace-prize-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "kash_patel_out_by_june_30",
+        "slug": "kash-patel-out-by-june-30-165-798",
+        "final_outcome": null
+      },
+      {
+        "id": "will_jpmorgan_chase_or_any_of_its_underwriting_aff",
+        "slug": "will-jpmorgan-chase-or-any-of-its-underwriting-affiliates-serve-as-the-lead-underwriter-in-spacexs-initial-public-offering-471",
+        "final_outcome": null
+      },
+      {
+        "id": "will_elaine_culotti_win_the_california_governor_el",
+        "slug": "will-elaine-culotti-win-the-california-governor-election-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_charlie_kirk_win_the_nobel_peace_prize_in",
+        "slug": "will-charlie-kirk-win-the-nobel-peace-prize-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_tamim_bin_hamad_al_thani_win_the_nobel_peace",
+        "slug": "will-tamim-bin-hamad-al-thani-win-the-nobel-peace-prize-in-2026-755",
+        "final_outcome": null
+      },
+      {
+        "id": "will_zai_have_the_top_ai_model_at_the_end_of_june",
+        "slug": "will-zai-have-the-top-ai-model-at-the-end-of-june-2026-987",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_international_court_of_justice_win_the_no",
+        "slug": "will-the-international-court-of-justice-win-the-nobel-peace-prize-in-2026-885",
+        "final_outcome": null
+      },
+      {
+        "id": "miguel_daz_canel_out_as_leader_of_cuba_by_june_30",
+        "slug": "miguel-daz-canel-out-as-leader-of-cuba-by-june-30-935-772",
+        "final_outcome": null
+      },
+      {
+        "id": "ukraine_peace_referendum_scheduled_by_june_30",
+        "slug": "ukraine-peace-referendum-scheduled-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "will_greta_thunberg_win_the_nobel_peace_prize_in",
+        "slug": "will-greta-thunberg-win-the-nobel-peace-prize-in-2026-767",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_iranian_regime_survive_us_military_strike",
+        "slug": "will-the-iranian-regime-survive-us-military-strikes-741",
+        "final_outcome": null
+      },
+      {
+        "id": "will_recep_tayyip_erdoan_win_the_nobel_peace_prize",
+        "slug": "will-recep-tayyip-erdoan-win-the-nobel-peace-prize-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_pope_leo_xiv_win_the_nobel_peace_prize_in",
+        "slug": "will-pope-leo-xiv-win-the-nobel-peace-prize-in-2026-698",
+        "final_outcome": null
+      },
+      {
+        "id": "kraken_ipo_by_december_31",
+        "slug": "kraken-ipo-by-december-31-2026-513",
+        "final_outcome": null
+      },
+      {
+        "id": "will_ahmed_al_sharaa_win_the_nobel_peace_prize_in",
+        "slug": "will-ahmed-al-sharaa-win-the-nobel-peace-prize-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_meituan_have_the_top_ai_model_at_the_end_of_j",
+        "slug": "will-meituan-have-the-top-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "extended_fdv_above_300m_one_day_after_launch",
+        "slug": "extended-fdv-above-300m-one-day-after-launch-351-333",
+        "final_outcome": null
+      },
+      {
+        "id": "will_spacex_ipo_by_june_30",
+        "slug": "will-spacex-ipo-by-june-30-2026-372-264-619",
+        "final_outcome": null
+      },
+      {
+        "id": "will_khaled_mashal_win_the_nobel_peace_prize_in",
+        "slug": "will-khaled-mashal-win-the-nobel-peace-prize-in-2026-787",
+        "final_outcome": null
+      },
+      {
+        "id": "will_metamask_launch_a_token_by_december_31",
+        "slug": "will-metamask-launch-a-token-by-december-31-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_kash_patel_leave_the_trump_administration_bef",
+        "slug": "will-kash-patel-leave-the-trump-administration-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "will_donald_trump_be_the_leader_of_venezuela_end_o",
+        "slug": "will-donald-trump-be-the-leader-of-venezuela-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "opensea_fdv_above_1b_one_day_after_launch",
+        "slug": "opensea-fdv-above-1b-one-day-after-launch-426-422-754-756-879-328-494",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_colorado_avalanche_win_the_western_confer",
+        "slug": "will-the-colorado-avalanche-win-the-western-conference-993",
+        "final_outcome": null
+      },
+      {
+        "id": "extended_fdv_above_150m_one_day_after_launch",
+        "slug": "extended-fdv-above-150m-one-day-after-launch-452",
+        "final_outcome": null
+      },
+      {
+        "id": "variational_fdv_above_500m_one_day_after_launch",
+        "slug": "variational-fdv-above-500m-one-day-after-launch-547-272",
+        "final_outcome": null
+      },
+      {
+        "id": "nothing_ever_happens",
+        "slug": "nothing-ever-happens-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "variational_fdv_above_300m_one_day_after_launch",
+        "slug": "variational-fdv-above-300m-one-day-after-launch-777-637",
+        "final_outcome": null
+      },
+      {
+        "id": "extended_fdv_above_500m_one_day_after_launch",
+        "slug": "extended-fdv-above-500m-one-day-after-launch-711-975-248",
+        "final_outcome": null
+      },
+      {
+        "id": "will_spacex_ipo_by_december_31",
+        "slug": "will-spacex-ipo-by-december-31-2026-773-178-618-527",
+        "final_outcome": null
+      },
+      {
+        "id": "extended_fdv_above_800m_one_day_after_launch",
+        "slug": "extended-fdv-above-800m-one-day-after-launch-299-255-178",
+        "final_outcome": null
+      },
+      {
+        "id": "will_gold_gc_hit_high_by_end_of_june",
+        "slug": "will-gold-gc-hit-high-8500-by-end-of-june-241-524",
+        "final_outcome": null
+      },
+      {
+        "id": "will_hyperliquid_reach_by_december_31",
+        "slug": "will-hyperliquid-reach-100-by-december-31-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "si_hit_high_jun",
+        "slug": "si-hit-150-high-jun-2026-259-199-266-953",
+        "final_outcome": null
+      },
+      {
+        "id": "iran_nuclear_test_before",
+        "slug": "iran-nuclear-test-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "gemini_3pt5_released_by_june_30",
+        "slug": "gemini-3pt5-released-by-june-30-224-585-669",
+        "final_outcome": null
+      },
+      {
+        "id": "opensea_fdv_above_2b_one_day_after_launch",
+        "slug": "opensea-fdv-above-2b-one-day-after-launch-771-639-367-482-177-837",
+        "final_outcome": null
+      },
+      {
+        "id": "metamask_fdv_above_3b_one_day_after_launch",
+        "slug": "metamask-fdv-above-3b-one-day-after-launch-363-663-664-569-222",
+        "final_outcome": null
+      },
+      {
+        "id": "will_silver_si_hit_high_by_end_of_june",
+        "slug": "will-silver-si-hit-high-130-by-end-of-june-896-588-666-413",
+        "final_outcome": null
+      },
+      {
+        "id": "will_gold_gc_hit_high_by_end_of_june_2",
+        "slug": "will-gold-gc-hit-high-5700-by-end-of-june-439-682-222-223",
+        "final_outcome": null
+      },
+      {
+        "id": "will_anthropic_not_ipo_by_june_30",
+        "slug": "will-anthropic-not-ipo-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "openai_ipo_before",
+        "slug": "openai-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "gc_hit_high_jun",
+        "slug": "gc-hit-8000-high-jun-2026-342-647-753",
+        "final_outcome": null
+      },
+      {
+        "id": "will_a_chinese_ai_model_become_1_by_june_30",
+        "slug": "will-a-chinese-ai-model-become-1-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "ai_data_center_moratorium_passed_before",
+        "slug": "ai-data-center-moratorium-passed-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "will_silver_si_hit_high_by_end_of_june_2",
+        "slug": "will-silver-si-hit-high-210-by-end-of-june-757-644-317",
+        "final_outcome": null
+      },
+      {
+        "id": "si_hit_45_low_jun",
+        "slug": "si-hit-45-low-jun-2026-219-813-452-716-437",
+        "final_outcome": null
+      },
+      {
+        "id": "will_openai_have_the_highest_ipo_market_cap",
+        "slug": "will-openai-have-the-highest-ipo-market-cap-2026-734",
+        "final_outcome": null
+      },
+      {
+        "id": "ink_fdv_above_500m_one_day_after_launch",
+        "slug": "ink-fdv-above-500m-one-day-after-launch-253-778",
+        "final_outcome": null
+      },
+      {
+        "id": "will_openai_not_ipo_by_december_31",
+        "slug": "will-openai-not-ipo-by-december-31-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "poilievre_out_as_leader_of_conservatives_before",
+        "slug": "poilievre-out-as-leader-of-conservatives-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "will_hyperliquid_dip_to_12_by_december_31",
+        "slug": "will-hyperliquid-dip-to-12-by-december-31-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "variational_fdv_above_800m_one_day_after_launch",
+        "slug": "variational-fdv-above-800m-one-day-after-launch-842-835-884",
+        "final_outcome": null
+      },
+      {
+        "id": "will_bitcoin_reach_by_december_31",
+        "slug": "will-bitcoin-reach-170000-by-december-31-2026-335-688-943",
+        "final_outcome": null
+      },
+      {
+        "id": "gc_hit_low_jun",
+        "slug": "gc-hit-3800-low-jun-2026-729-384-549-926-881-297-655-985-818-121",
+        "final_outcome": null
+      },
+      {
+        "id": "gemini_3pt5_released_by_may_31",
+        "slug": "gemini-3pt5-released-by-may-31",
+        "final_outcome": null
+      },
+      {
+        "id": "will_bitcoin_replace_sha_before",
+        "slug": "will-bitcoin-replace-sha-256-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "us_enacts_ai_safety_bill_before",
+        "slug": "us-enacts-ai-safety-bill-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "si_hit_65_low_jun",
+        "slug": "si-hit-65-low-jun-2026-261-825-319-223-543",
+        "final_outcome": null
+      },
+      {
+        "id": "will_spacexs_market_cap_be_greater_than_2pt0t_at_m",
+        "slug": "will-spacexs-market-cap-be-greater-than-2pt0t-at-market-close-on-ipo-day-277",
+        "final_outcome": null
+      },
+      {
+        "id": "tesla_and_spacex_merger_officially_announced_by_ju",
+        "slug": "tesla-and-spacex-merger-officially-announced-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "will_jpmorgan_chase_fail_by_june_30",
+        "slug": "will-jpmorgan-chase-fail-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_spacex_not_ipo_by_december_31",
+        "slug": "will-spacex-not-ipo-by-december-31-2027-481-338",
+        "final_outcome": null
+      },
+      {
+        "id": "will_morgan_stanley_or_any_of_its_underwriting_aff",
+        "slug": "will-morgan-stanley-or-any-of-its-underwriting-affiliates-serve-as-the-lead-underwriter-in-spacexs-initial-public-offering-299",
+        "final_outcome": null
+      },
+      {
+        "id": "will_spacex_have_the_highest_ipo_market_cap",
+        "slug": "will-spacex-have-the-highest-ipo-market-cap-2026-516",
+        "final_outcome": null
+      },
+      {
+        "id": "will_stripe_acquire_paypal_in",
+        "slug": "will-stripe-acquire-paypal-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "gc_hit_high_jun_2",
+        "slug": "gc-hit-6200-high-jun-2026-163-341-565",
+        "final_outcome": null
+      },
+      {
+        "id": "gc_hit_low_jun_2",
+        "slug": "gc-hit-3400-low-jun-2026-571-949-486-723-515-342-491-368-346-299",
+        "final_outcome": null
+      },
+      {
+        "id": "openai_1t_ipo_before",
+        "slug": "openai-1t-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "stripe_ipo_before",
+        "slug": "stripe-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "si_hit_60_low_jun",
+        "slug": "si-hit-60-low-jun-2026-623-142-589-525-252",
+        "final_outcome": null
+      },
+      {
+        "id": "openai_announces_it_has_achieved_agi_before",
+        "slug": "openai-announces-it-has-achieved-agi-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "will_deutsche_bank_fail_by_june_30",
+        "slug": "will-deutsche-bank-fail-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_spacexs_market_cap_be_between_1pt0t_and_1pt2t",
+        "slug": "will-spacexs-market-cap-be-between-1pt0t-and-1pt2t-at-market-close-on-ipo-day-437",
+        "final_outcome": null
+      },
+      {
+        "id": "spx_hit_low_jun",
+        "slug": "spx-hit-6000-low-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "revolut_ipo_before",
+        "slug": "revolut-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "will_silver_si_hit_high_by_end_of_june_3",
+        "slug": "will-silver-si-hit-high-170-by-end-of-june-329-244-199-545",
+        "final_outcome": null
+      },
+      {
+        "id": "will_spacexs_market_cap_be_between_1pt6t_and_1pt8t",
+        "slug": "will-spacexs-market-cap-be-between-1pt6t-and-1pt8t-at-market-close-on-ipo-day-224",
+        "final_outcome": null
+      },
+      {
+        "id": "will_openai_announce_glasses_in",
+        "slug": "will-openai-announce-glasses-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "databricks_ipo_before",
+        "slug": "databricks-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "rippling_ipo_before",
+        "slug": "rippling-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "vanta_ipo_before",
+        "slug": "vanta-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "freddie_mac_ipo_before",
+        "slug": "freddie-mac-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "discord_ipo_before",
+        "slug": "discord-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "will_revolut_have_the_highest_ipo_market_cap",
+        "slug": "will-revolut-have-the-highest-ipo-market-cap-2026-963",
+        "final_outcome": null
+      },
+      {
+        "id": "will_spacexs_market_cap_be_between_1pt2t_and_1pt4t",
+        "slug": "will-spacexs-market-cap-be-between-1pt2t-and-1pt4t-at-market-close-on-ipo-day-668",
+        "final_outcome": null
+      },
+      {
+        "id": "spx_hit_low_jun_2",
+        "slug": "spx-hit-6300-low-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_amazon_have_the_top_ai_model_at_the_end_of_ju",
+        "slug": "will-amazon-have-the-top-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "mistral_ai_ipo_before",
+        "slug": "mistral-ai-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "will_spacex_or_openai_first_ipo_before",
+        "slug": "will-spacex-or-openai-first-ipo-before-2028",
+        "final_outcome": null
+      },
+      {
+        "id": "will_spacexs_market_cap_be_between_1pt4t_and_1pt6t",
+        "slug": "will-spacexs-market-cap-be-between-1pt4t-and-1pt6t-at-market-close-on-ipo-day-168",
+        "final_outcome": null
+      },
+      {
+        "id": "will_bitcoin_have_the_best_performance_in",
+        "slug": "will-bitcoin-have-the-best-performance-in-2026-749",
+        "final_outcome": null
+      },
+      {
+        "id": "cl_hit_45_low_jun",
+        "slug": "cl-hit-45-low-jun-2026-811-795-227-452-999-824",
+        "final_outcome": null
+      },
+      {
+        "id": "will_discord_not_ipo_by_june_30",
+        "slug": "will-discord-not-ipo-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "ripple_labs_ipo_before",
+        "slug": "ripple-labs-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "spacex_ipo_closing_market_cap_above_1pt2t",
+        "slug": "spacex-ipo-closing-market-cap-above-1pt2t-954",
+        "final_outcome": null
+      },
+      {
+        "id": "will_scotiabank_fail_by_june_30",
+        "slug": "will-scotiabank-fail-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_hsbc_fail_by_june_30",
+        "slug": "will-hsbc-fail-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "si_settle_above_jun",
+        "slug": "si-settle-above-115-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_goldman_sachs_or_any_of_its_underwriting_affi",
+        "slug": "will-goldman-sachs-or-any-of-its-underwriting-affiliates-serve-as-the-lead-underwriter-in-spacexs-initial-public-offering-197",
+        "final_outcome": null
+      },
+      {
+        "id": "cl_settle_below_42_jun",
+        "slug": "cl-settle-below-42-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_openai_announce_a_clip_on_device_for_clothing",
+        "slug": "will-openai-announce-a-clip-on-device-for-clothing-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "canada_recession_before",
+        "slug": "canada-recession-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "openai_1t_valuation_in",
+        "slug": "openai-1t-valuation-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "cl_hit_40_low_jun",
+        "slug": "cl-hit-40-low-jun-2026-467-163-164-698-647-525",
+        "final_outcome": null
+      },
+      {
+        "id": "si_hit_55_low_jun",
+        "slug": "si-hit-55-low-jun-2026-421-352-265-253-168",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_sp_have_the_best_performance_in",
+        "slug": "will-the-sp-500-have-the-best-performance-in-2026-545",
+        "final_outcome": null
+      },
+      {
+        "id": "will_tesla_release_optimus_by_june_30",
+        "slug": "will-tesla-release-optimus-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_anthropic_have_the_highest_ipo_market_cap",
+        "slug": "will-anthropic-have-the-highest-ipo-market-cap-2026-673",
+        "final_outcome": null
+      },
+      {
+        "id": "tesla_and_xai_merger_officially_announced_by_june",
+        "slug": "tesla-and-xai-merger-officially-announced-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "will_anthropic_have_the_top_ai_model_at_the_end_of",
+        "slug": "will-anthropic-have-the-top-ai-model-at-the-end-of-june-2026-475",
+        "final_outcome": null
+      },
+      {
+        "id": "will_apple_release_iphone_18_in",
+        "slug": "will-apple-release-iphone-18-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_gold_have_the_best_performance_in",
+        "slug": "will-gold-have-the-best-performance-in-2026-873",
+        "final_outcome": null
+      },
+      {
+        "id": "nasdaq_round_the_clock_trading_by_june_30",
+        "slug": "nasdaq-round-the-clock-trading-by-june-30",
+        "final_outcome": null
+      },
+      {
+        "id": "will_tesla_open_orders_for_the_robovan_before",
+        "slug": "will-tesla-open-orders-for-the-robovan-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "will_databricks_have_the_highest_ipo_market_cap",
+        "slug": "will-databricks-have-the-highest-ipo-market-cap-2026-418",
+        "final_outcome": null
+      },
+      {
+        "id": "anthropic_500b_valuation_in",
+        "slug": "anthropic-500b-valuation-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "anysphere_cursor_ipo_before",
+        "slug": "anysphere-cursor-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "will_discord_have_the_highest_ipo_market_cap",
+        "slug": "will-discord-have-the-highest-ipo-market-cap-2026-121",
+        "final_outcome": null
+      },
+      {
+        "id": "will_waymo_have_the_highest_ipo_market_cap",
+        "slug": "will-waymo-have-the-highest-ipo-market-cap-2026-835",
+        "final_outcome": null
+      },
+      {
+        "id": "gc_settle_jun",
+        "slug": "gc-settle-5000-5400-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_openai_announce_earbuds_or_headphones_in",
+        "slug": "will-openai-announce-earbuds-or-headphones-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_shein_have_the_highest_ipo_market_cap",
+        "slug": "will-shein-have-the-highest-ipo-market-cap-2026-348",
+        "final_outcome": null
+      },
+      {
+        "id": "will_bytedance_have_the_highest_ipo_market_cap",
+        "slug": "will-bytedance-have-the-highest-ipo-market-cap-2026-727",
+        "final_outcome": null
+      },
+      {
+        "id": "will_microsoft_have_the_top_ai_model_at_the_end_of",
+        "slug": "will-microsoft-have-the-top-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "musk_out_as_tesla_ceo_before",
+        "slug": "musk-out-as-tesla-ceo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "spx_hit_high_jun",
+        "slug": "spx-hit-8000-high-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_meta_acquire_tiktok",
+        "slug": "will-meta-acquire-tiktok-745-612-641",
+        "final_outcome": null
+      },
+      {
+        "id": "gc_settle_jun_2",
+        "slug": "gc-settle-5400-5800-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "ramp_ipo_before",
+        "slug": "ramp-ipo-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "will_paramount_close_warner_bros_acquisition_by_en",
+        "slug": "will-paramount-close-warner-bros-acquisition-by-end-of-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_openai_announce_a_phone_in",
+        "slug": "will-openai-announce-a-phone-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "spx_close_below_dec",
+        "slug": "spx-close-below-6000-dec-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "anthropic_acquired_before",
+        "slug": "anthropic-acquired-before-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "will_anthropic_not_ipo_by_december_31",
+        "slug": "will-anthropic-not-ipo-by-december-31-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "will_meta_have_the_top_ai_model_at_the_end_of_june",
+        "slug": "will-meta-have-the-top-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_anthropic_have_the_second_best_ai_model_at_th",
+        "slug": "will-anthropic-have-the-second-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "spx_hit_low_dec",
+        "slug": "spx-hit-4500-low-dec-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "gc_settle_below_jun",
+        "slug": "gc-settle-below-3800-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_perplexity_ai_have_the_highest_ipo_market_cap",
+        "slug": "will-perplexity-ai-have-the-highest-ipo-market-cap-2026-546",
+        "final_outcome": null
+      },
+      {
+        "id": "spx_hit_high_jun_2",
+        "slug": "spx-hit-7700-high-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "spx_hit_high_jun_3",
+        "slug": "spx-hit-7300-high-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "si_above_60_jun",
+        "slug": "si-above-60-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_trump_sell_over_100k_gold_cards_in",
+        "slug": "will-trump-sell-over-100k-gold-cards-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_openai_have_the_top_ai_model_at_the_end_of_ju",
+        "slug": "will-openai-have-the-top-ai-model-at-the-end-of-june-2026-945",
+        "final_outcome": null
+      },
+      {
+        "id": "will_bank_of_america_or_any_of_its_underwriting_af",
+        "slug": "will-bank-of-america-or-any-of-its-underwriting-affiliates-serve-as-the-lead-underwriter-in-spacexs-initial-public-offering-433",
+        "final_outcome": null
+      },
+      {
+        "id": "spx_hit_high_jun_4",
+        "slug": "spx-hit-7450-high-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "si_settle_60_70_jun",
+        "slug": "si-settle-60-70-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "cl_above_50_jun",
+        "slug": "cl-above-50-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "cl_above_90_jun",
+        "slug": "cl-above-90-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_anthropics_market_cap_be_between_400b_and_600_2",
+        "slug": "will-anthropics-market-cap-be-between-400b-and-600b-at-market-close-on-ipo-day-by-december-31-2027",
+        "final_outcome": null
+      },
+      {
+        "id": "will_anthropic_be_acquired_before",
+        "slug": "will-anthropic-be-acquired-before-2027-142",
+        "final_outcome": null
+      },
+      {
+        "id": "will_trump_sell_5k_10k_gold_cards_in",
+        "slug": "will-trump-sell-5k-10k-gold-cards-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_trump_sell_1_gold_cards_in",
+        "slug": "will-trump-sell-1-100-gold-cards-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_trump_sell_10k_25k_gold_cards_in",
+        "slug": "will-trump-sell-10k-25k-gold-cards-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "si_settle_80_90_jun",
+        "slug": "si-settle-80-90-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_tesla_sell_a_cybercab_for_30k_or_less_in",
+        "slug": "will-tesla-sell-a-cybercab-for-30k-or-less-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_meta_have_the_second_best_ai_model_at_the_end",
+        "slug": "will-meta-have-the-second-best-ai-model-at-the-end-of-june-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "cl_settle_63_70_jun",
+        "slug": "cl-settle-63-70-jun-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_anthropic_be_the_first_company_to_have_an_ai",
+        "slug": "will-anthropic-be-the-first-company-to-have-an-ai-model-hit-1550-on-chatbot-arena-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_openai_be_the_first_company_to_have_an_ai_mod",
+        "slug": "will-openai-be-the-first-company-to-have-an-ai-model-hit-1550-on-chatbot-arena-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_trump_sell_1k_gold_cards_in",
+        "slug": "will-trump-sell-101-1k-gold-cards-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_databricks_not_ipo_by_june_30",
+        "slug": "will-databricks-not-ipo-by-june-30-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "will_trump_sell_25k_100k_gold_cards_in",
+        "slug": "will-trump-sell-25k-100k-gold-cards-in-2026",
+        "final_outcome": null
+      },
+      {
+        "id": "orlando_magic_win_the_nba",
+        "slug": "will-the-orlando-magic-win-the-2026-nba-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "san_antonio_spurs_win_the",
+        "slug": "will-the-san-antonio-spurs-win-the-2026-nba-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "los_angeles_lakers_win_the",
+        "slug": "will-the-los-angeles-lakers-win-the-2026-nba-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "detroit_pistons_win_the_nba",
+        "slug": "will-the-detroit-pistons-win-the-2026-nba-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "philadelphia_76ers_win_the_nba",
+        "slug": "will-the-philadelphia-76ers-win-the-2026-nba-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "minnesota_timberwolves_win_the_nba",
+        "slug": "will-the-minnesota-timberwolves-win-the-2026-nba-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "boston_celtics_win_2026_nba",
+        "slug": "will-the-boston-celtics-win-the-2026-nba-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "new_york_knicks_win_2026",
+        "slug": "will-the-new-york-knicks-win-the-2026-nba-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "cleveland_cavaliers_win_2026_nba",
+        "slug": "will-the-cleveland-cavaliers-win-the-2026-nba-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "toronto_raptors_win_2026_nba",
+        "slug": "will-the-toronto-raptors-win-the-2026-nba-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "oklahoma_city_thunder_win_2026",
+        "slug": "will-the-oklahoma-city-thunder-win-the-2026-nba-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "congo_dr_win_the_fifa",
+        "slug": "will-congo-dr-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "egypt_win_the_fifa_world",
+        "slug": "will-egypt-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "cape_verde_win_the_fifa",
+        "slug": "will-cape-verde-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "ivory_coast_win_the_fifa",
+        "slug": "will-ivory-coast-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "curaao_win_the_fifa_world",
+        "slug": "will-curaao-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "iraq_win_the_fifa_world",
+        "slug": "will-iraq-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "qatar_win_the_fifa_world",
+        "slug": "will-qatar-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "algeria_win_the_fifa_world",
+        "slug": "will-algeria-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "bosnia_herzegovina_win_the_fifa",
+        "slug": "will-bosnia-herzegovina-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "croatia_win_2026_fifa_world",
+        "slug": "will-croatia-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "czechia_win_2026_fifa_world",
+        "slug": "will-czechia-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "turkiye_win_2026_fifa_world",
+        "slug": "will-turkiye-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "saudi_arabia_win_2026_fifa",
+        "slug": "will-saudi-arabia-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "senegal_win_2026_fifa_world",
+        "slug": "will-senegal-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "sweden_win_2026_fifa_world",
+        "slug": "will-sweden-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "ghana_win_2026_fifa_world",
+        "slug": "will-ghana-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "scotland_win_2026_fifa_world",
+        "slug": "will-scotland-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "switzerland_win_2026_fifa_world",
+        "slug": "will-switzerland-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "austria_win_2026_fifa_world",
+        "slug": "will-austria-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "south_africa_win_2026_fifa",
+        "slug": "will-south-africa-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "haiti_win_2026_fifa_world",
+        "slug": "will-haiti-win-the-2026-fifa-world-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "atletico_madrid_win_the_champions",
+        "slug": "will-atletico-madrid-win-the-202526-champions-league",
+        "final_outcome": null
+      },
+      {
+        "id": "psg_win_202526_champions_league",
+        "slug": "will-psg-win-the-202526-champions-league",
+        "final_outcome": null
+      },
+      {
+        "id": "bayern_munich_win_202526_champions",
+        "slug": "will-bayern-munich-win-the-202526-champions-league",
+        "final_outcome": null
+      },
+      {
+        "id": "arsenal_win_202526_champions_league",
+        "slug": "will-arsenal-win-the-202526-champions-league",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_hike_50_jun",
+        "slug": "will-the-fed-increase-interest-rates-by-50-bps-after-the-june-2026-meeting",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_cut_50_jun",
+        "slug": "will-the-fed-decrease-interest-rates-by-50-bps-after-the-june-2026-meeting",
+        "final_outcome": null
+      },
+      {
+        "id": "openai_ipo_1t",
+        "slug": "openai-ipo-closing-market-cap-above-1t",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_chair_shelton",
+        "slug": "will-judy-shelton-be-confirmed-as-fed-chair",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_chair_warsh",
+        "slug": "will-kevin-warsh-be-confirmed-as-fed-chair",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_chair_bessent",
+        "slug": "will-scott-bessent-be-confirmed-as-fed-chair",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_chair_bowman",
+        "slug": "will-michelle-bowman-be-confirmed-as-fed-chair",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_chair_powell_keep",
+        "slug": "will-jerome-powell-be-confirmed-as-fed-chair",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_chair_waller",
+        "slug": "will-christopher-waller-be-confirmed-as-fed-chair",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_no_change_jun",
+        "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-june-2026-meeting",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_cut_25_jun",
+        "slug": "will-the-fed-decrease-interest-rates-by-25-bps-after-the-june-2026-meeting",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_hike_25_jun",
+        "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-june-2026-meeting",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_hike_25_jul",
+        "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting",
+        "final_outcome": null
+      },
+      {
+        "id": "dem_house_2026",
+        "slug": "will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
+        "final_outcome": null
+      },
+      {
+        "id": "rep_house_2026",
+        "slug": "will-the-republican-party-control-the-house-after-the-2026-midterm-elections",
+        "final_outcome": null
+      },
+      {
+        "id": "dem_senate_2026",
+        "slug": "will-the-democratic-party-control-the-senate-after-the-2026-midterm-elections",
+        "final_outcome": null
+      },
+      {
+        "id": "rep_senate_2026",
+        "slug": "will-the-republican-party-control-the-senate-after-the-2026-midterm-elections",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_chair_hassett",
+        "slug": "will-kevin-hassett-be-confirmed-as-fed-chair",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_chair_miran",
+        "slug": "will-stephen-miran-be-confirmed-as-fed-chair",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_chair_reider",
+        "slug": "will-rick-reider-be-confirmed-as-fed-chair",
+        "final_outcome": null
+      },
+      {
+        "id": "tarcisio_de_frietas_win_the_2026",
+        "slug": "will-tarcisio-de-frietas-win-the-2026-brazilian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "eduardo_bolsonaro_win_the_2026_brazilian",
+        "slug": "will-eduardo-bolsonaro-win-the-2026-brazilian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "carlos_roberto_massa_jnior_win_the",
+        "slug": "will-carlos-roberto-massa-jnior-win-the-2026-brazilian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "luiz_incio_lula_da_silva_win",
+        "slug": "will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "michelle_bolsonaro_win_the_2026_brazilian",
+        "slug": "will-michelle-bolsonaro-win-the-2026-brazilian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "flvio_bolsonaro_win_the_2026_brazilian",
+        "slug": "will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "renan_santos_win_the_2026_brazilian",
+        "slug": "will-renan-santos-win-the-2026-brazilian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "eduardo_leite_win_the_2026_brazilian",
+        "slug": "will-eduardo-leite-win-the-2026-brazilian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "fernando_haddad_win_the_2026_brazilian",
+        "slug": "will-fernando-haddad-win-the-2026-brazilian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "jair_bolsonaro_win_the_2026_brazilian",
+        "slug": "will-jair-bolsonaro-win-the-2026-brazilian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "franois_asselineau_win_the_2027_french",
+        "slug": "will-franois-asselineau-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "franois_bayrou_win_the_2027_french",
+        "slug": "will-franois-bayrou-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "lisabeth_borne_win_the_2027_french",
+        "slug": "will-lisabeth-borne-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "mathilde_panot_win_the_2027_french",
+        "slug": "will-mathilde-panot-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "clmentine_autain_win_the_2027_french",
+        "slug": "will-clmentine-autain-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "nicolas_dupont_aignan_win_the_2027",
+        "slug": "will-nicolas-dupont-aignan-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "michel_barnier_win_the_2027_french",
+        "slug": "will-michel-barnier-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "aldo_rebelo_win_the_2026_brazilian",
+        "slug": "will-aldo-rebelo-win-the-2026-brazilian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "sgolne_royal_win_the_2027_french",
+        "slug": "will-sgolne-royal-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "clmence_guett_win_the_2027_french",
+        "slug": "will-clmence-guett-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "yal_braun_pivet_win_the_2027",
+        "slug": "will-yal-braun-pivet-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "liberal_democratic_party_of_russia_ldpr",
+        "slug": "will-the-liberal-democratic-party-of-russia-ldpr-gain-the-most-seats-in-the-next-russian-parliamentary-election",
+        "final_outcome": null
+      },
+      {
+        "id": "carole_delga_win_the_2027_french",
+        "slug": "will-carole-delga-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "manuel_bompard_win_the_2027_french",
+        "slug": "will-manuel-bompard-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "valrie_pcresse_win_the_2027_french",
+        "slug": "will-valrie-pcresse-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "ronaldo_caiado_win_the_2026_brazilian",
+        "slug": "will-ronaldo-caiado-win-the-2026-brazilian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "xavier_bertrand_win_the_2027_french",
+        "slug": "will-xavier-bertrand-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "fabien_roussel_win_the_2027_french",
+        "slug": "will-fabien-roussel-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "united_russia_er_gain_the_most",
+        "slug": "will-united-russia-er-gain-the-most-seats-in-the-next-russian-parliamentary-election",
+        "final_outcome": null
+      },
+      {
+        "id": "geraldo_alckmin_win_the_2026_brazilian",
+        "slug": "will-geraldo-alckmin-win-the-2026-brazilian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "olivier_faure_win_the_2027_french",
+        "slug": "will-olivier-faure-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "camilo_santana_win_the_2026_brazilian",
+        "slug": "will-camilo-santana-win-the-2026-brazilian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "laurent_wauquiez_win_the_2027_french",
+        "slug": "will-laurent-wauquiez-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "romeu_zema_win_the_2026_brazilian",
+        "slug": "will-romeu-zema-win-the-2026-brazilian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "marine_tondelier_win_the_2027_french",
+        "slug": "will-marine-tondelier-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "bruno_retailleau_win_the_2027_french",
+        "slug": "will-bruno-retailleau-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "ric_zemmour_win_the_2027_french",
+        "slug": "will-ric-zemmour-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_rate_cut_by_june",
+        "slug": "fed-rate-cut-by-june-2026-meeting",
+        "final_outcome": null
+      },
+      {
+        "id": "fed_rate_cut_by_december",
+        "slug": "fed-rate-cut-by-december-2026-meeting",
+        "final_outcome": null
+      },
+      {
+        "id": "roberto_snchez_palomino_win_the",
+        "slug": "will-roberto-snchez-palomino-win-the-2026-peruvian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "rafael_lpez_aliaga_win_the",
+        "slug": "will-rafael-lpez-aliaga-win-the-2026-peruvian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "keiko_fujimori_win_the_peruvian",
+        "slug": "will-keiko-fujimori-win-the-2026-peruvian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "jorge_nieto_win_the_peruvian",
+        "slug": "will-jorge-nieto-win-the-2026-peruvian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "ricardo_belmont_win_the_peruvian",
+        "slug": "will-ricardo-belmont-win-the-2026-peruvian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "vicky_dvila_win_the_colombian",
+        "slug": "will-vicky-dvila-win-the-2026-colombian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "na_kyung_won_win_the",
+        "slug": "will-na-kyung-won-win-the-2026-seoul-mayoral-election",
+        "final_outcome": null
+      },
+      {
+        "id": "seo_young_kyo_win_the",
+        "slug": "will-seo-young-kyo-win-the-2026-seoul-mayoral-election",
+        "final_outcome": null
+      },
+      {
+        "id": "park_hong_keun_win_the",
+        "slug": "will-park-hong-keun-win-the-2026-seoul-mayoral-election",
+        "final_outcome": null
+      },
+      {
+        "id": "han_dong_hoon_win_the",
+        "slug": "will-han-dong-hoon-win-the-2026-seoul-mayoral-election",
+        "final_outcome": null
+      },
+      {
+        "id": "jeon_hyun_heui_win_the",
+        "slug": "will-jeon-hyun-heui-win-the-2026-seoul-mayoral-election",
+        "final_outcome": null
+      },
+      {
+        "id": "hong_ihk_pyo_win_the",
+        "slug": "will-hong-ihk-pyo-win-the-2026-seoul-mayoral-election",
+        "final_outcome": null
+      },
+      {
+        "id": "ahn_cheol_soo_win_the",
+        "slug": "will-ahn-cheol-soo-win-the-2026-seoul-mayoral-election",
+        "final_outcome": null
+      },
+      {
+        "id": "alfonso_lpez_chau_win_the",
+        "slug": "will-alfonso-lpez-chau-win-the-2026-peruvian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "park_ju_min_win_the",
+        "slug": "will-park-ju-min-win-the-2026-seoul-mayoral-election",
+        "final_outcome": null
+      },
+      {
+        "id": "cho_kuk_win_the_seoul",
+        "slug": "will-cho-kuk-win-the-2026-seoul-mayoral-election",
+        "final_outcome": null
+      },
+      {
+        "id": "cho_eun_hee_win_the",
+        "slug": "will-cho-eun-hee-win-the-2026-seoul-mayoral-election",
+        "final_outcome": null
+      },
+      {
+        "id": "kang_hoon_sik_win_the",
+        "slug": "will-kang-hoon-sik-win-the-2026-seoul-mayoral-election",
+        "final_outcome": null
+      },
+      {
+        "id": "park_yong_jin_win_the",
+        "slug": "will-park-yong-jin-win-the-2026-seoul-mayoral-election",
+        "final_outcome": null
+      },
+      {
+        "id": "juan_daniel_oviedo_win_the",
+        "slug": "will-juan-daniel-oviedo-win-the-2026-colombian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "franois_ruffin_win_the_french",
+        "slug": "will-franois-ruffin-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "mauricio_cardenas_win_the_colombian",
+        "slug": "will-mauricio-cardenas-win-the-2026-colombian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "germn_vargas_lleras_win_the",
+        "slug": "will-germn-vargas-lleras-win-the-2026-colombian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "juan_branco_win_the_french",
+        "slug": "will-juan-branco-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "rodina_gain_the_most_seats",
+        "slug": "will-rodina-gain-the-most-seats-in-the-next-russian-parliamentary-election",
+        "final_outcome": null
+      },
+      {
+        "id": "claudia_lpez_win_the_colombian",
+        "slug": "will-claudia-lpez-win-the-2026-colombian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "graham_platner_be_the_democratic",
+        "slug": "will-graham-platner-be-the-democratic-nominee-for-senate-in-maine",
+        "final_outcome": null
+      },
+      {
+        "id": "gta_launch_postponed_again",
+        "slug": "gta-6-launch-postponed-again",
+        "final_outcome": null
+      },
+      {
+        "id": "shai_gilgeous_alexander_win_the",
+        "slug": "will-shai-gilgeous-alexander-win-the-20252026-nba-mvp",
+        "final_outcome": null
+      },
+      {
+        "id": "orlando_magic_win_the_nba_2",
+        "slug": "will-the-orlando-magic-win-the-nba-eastern-conference-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "an_anthropic_claude_model_score",
+        "slug": "will-an-anthropic-claude-model-score-at-least-45-on-humanitys-last-exam",
+        "final_outcome": null
+      },
+      {
+        "id": "mumbai_indians_win_the_indian",
+        "slug": "will-mumbai-indians-win-the-2026-indian-premier-league",
+        "final_outcome": null
+      },
+      {
+        "id": "xi_jinping_out_by",
+        "slug": "xi-jinping-out-by",
+        "final_outcome": null
+      },
+      {
+        "id": "spacexs_market_cap_be_greater",
+        "slug": "will-spacexs-market-cap-be-greater-than-1t-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "be_the_hottest_year_on",
+        "slug": "will-2026-be-the-hottest-year-on-record",
+        "final_outcome": null
+      },
+      {
+        "id": "be_the_second_hottest_year",
+        "slug": "will-2026-be-the-second-hottest-year-on-record",
+        "final_outcome": null
+      },
+      {
+        "id": "be_the_fifth_hottest_year",
+        "slug": "will-2026-be-the-fifth-hottest-year-on-record",
+        "final_outcome": null
+      },
+      {
+        "id": "be_the_fourth_hottest_year",
+        "slug": "will-2026-be-the-fourth-hottest-year-on-record",
+        "final_outcome": null
+      },
+      {
+        "id": "be_the_third_hottest_year",
+        "slug": "will-2026-be-the-third-hottest-year-on-record",
+        "final_outcome": null
+      },
+      {
+        "id": "charlotte_fc_win_the_mls",
+        "slug": "will-charlotte-fc-win-the-2026-mls-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "fc_cincinnati_win_the_mls",
+        "slug": "will-fc-cincinnati-win-the-2026-mls-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "orlando_city_sc_win_the",
+        "slug": "will-orlando-city-sc-win-the-2026-mls-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "elon_musk_buy_ryanair",
+        "slug": "will-elon-musk-buy-ryanair",
+        "final_outcome": null
+      },
+      {
+        "id": "columbus_crew_win_the_mls",
+        "slug": "will-columbus-crew-win-the-2026-mls-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "real_salt_lake_win_the",
+        "slug": "will-real-salt-lake-win-the-2026-mls-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "elon_musk_win_his_case",
+        "slug": "will-elon-musk-win-his-case-against-sam-altman",
+        "final_outcome": null
+      },
+      {
+        "id": "gavin_newsom_win_the_us",
+        "slug": "will-gavin-newsom-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "jasmine_crockett_win_the_democratic",
+        "slug": "will-jasmine-crockett-win-the-2028-democratic-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "beto_orourke_win_the_democratic",
+        "slug": "will-beto-orourke-win-the-2028-democratic-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "oprah_winfrey_win_the_democratic",
+        "slug": "will-oprah-winfrey-win-the-2028-democratic-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "mike_pence_win_the_republican",
+        "slug": "will-mike-pence-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "lebron_james_win_the_us",
+        "slug": "will-lebron-james-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "kim_kardashian_win_the_democratic",
+        "slug": "will-kim-kardashian-win-the-2028-democratic-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "byron_donalds_win_the_republican",
+        "slug": "will-byron-donalds-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "steve_bannon_win_the_republican",
+        "slug": "will-steve-bannon-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "kim_kardashian_win_the_us",
+        "slug": "will-kim-kardashian-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "ro_khanna_win_the_democratic",
+        "slug": "will-ro-khanna-win-the-2028-democratic-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "elon_musk_win_the_republican",
+        "slug": "will-elon-musk-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "ron_desantis_win_the_us",
+        "slug": "will-ron-desantis-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "jd_vance_win_the_republican",
+        "slug": "will-jd-vance-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "marco_rubio_win_the_us",
+        "slug": "will-marco-rubio-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "ron_desantis_win_the_republican",
+        "slug": "will-ron-desantis-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "kristi_noem_win_the_republican",
+        "slug": "will-kristi-noem-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "james_talarico_win_the_democratic",
+        "slug": "will-james-talarico-win-the-2028-democratic-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "erika_kirk_win_the_republican",
+        "slug": "will-erika-kirk-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "glenn_youngkin_win_the_us",
+        "slug": "will-glenn-youngkin-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "pete_hegseth_win_the_republican",
+        "slug": "will-pete-hegseth-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "tucker_carlson_win_the_republican",
+        "slug": "will-tucker-carlson-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "pete_hegseth_win_the_us",
+        "slug": "will-pete-hegseth-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "chelsea_clinton_win_the_democratic",
+        "slug": "will-chelsea-clinton-win-the-2028-democratic-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "chris_murphy_win_the_democratic",
+        "slug": "will-chris-murphy-win-the-2028-democratic-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "vivek_ramaswamy_win_the_us",
+        "slug": "will-vivek-ramaswamy-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "john_thune_win_the_republican",
+        "slug": "will-john-thune-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "kim_kardashian_win_the_republican",
+        "slug": "will-kim-kardashian-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "joe_kent_win_the_republican",
+        "slug": "will-joe-kent-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "wes_moore_win_the_us",
+        "slug": "will-wes-moore-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "eric_trump_win_the_us",
+        "slug": "will-eric-trump-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "robert_f_kennedy_jr_win",
+        "slug": "will-robert-f-kennedy-jr-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "donald_trump_jr_win_the",
+        "slug": "will-donald-trump-jr-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "brian_kemp_win_the_republican",
+        "slug": "will-brian-kemp-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "katie_britt_win_the_republican",
+        "slug": "will-katie-britt-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "person_a_win_the_democratic",
+        "slug": "will-person-a-win-the-2028-democratic-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "matt_gaetz_win_the_republican",
+        "slug": "will-matt-gaetz-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "eric_trump_win_the_republican",
+        "slug": "will-eric-trump-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "andrew_yang_win_the_democratic",
+        "slug": "will-andrew-yang-win-the-2028-democratic-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "nikki_haley_win_the_us",
+        "slug": "will-nikki-haley-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "george_clooney_win_the_democratic",
+        "slug": "will-george-clooney-win-the-2028-democratic-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "josh_hawley_win_the_republican",
+        "slug": "will-josh-hawley-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "gretchen_whitmer_win_the_us",
+        "slug": "will-gretchen-whitmer-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "hillary_clinton_win_the_democratic",
+        "slug": "will-hillary-clinton-win-the-2028-democratic-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "tulsi_gabbard_win_the_us",
+        "slug": "will-tulsi-gabbard-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "elise_stefanik_win_the_republican",
+        "slug": "will-elise-stefanik-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "dwayne_the_rock_johnson_win",
+        "slug": "will-dwayne-the-rock-johnson-win-the-2028-democratic-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "stephen_smith_win_the_us",
+        "slug": "will-stephen-smith-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "zohran_mamdani_win_the_us",
+        "slug": "will-zohran-mamdani-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "ro_khanna_win_the_us",
+        "slug": "will-ro-khanna-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "andy_beshear_win_the_us",
+        "slug": "will-andy-beshear-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "ruben_gallego_win_the_democratic",
+        "slug": "will-ruben-gallego-win-the-2028-democratic-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "tim_walz_win_the_us",
+        "slug": "will-tim-walz-win-the-2028-us-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "lebron_james_win_the_democratic",
+        "slug": "will-lebron-james-win-the-2028-democratic-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "sarah_huckabee_sanders_win_the",
+        "slug": "will-sarah-huckabee-sanders-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "donald_trump_jr_win_the_2",
+        "slug": "will-donald-trump-jr-win-the-2028-republican-presidential-nomination",
+        "final_outcome": null
+      },
+      {
+        "id": "franco_colapinto_2026_f1_drivers",
+        "slug": "will-franco-colapinto-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "arvid_lindblad_2026_f1_drivers",
+        "slug": "will-arvid-lindblad-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "alexander_albon_2026_f1_drivers",
+        "slug": "will-alexander-albon-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "carlos_sainz_jr_2026_f1",
+        "slug": "will-carlos-sainz-jr-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "oliver_bearman_2026_f1_drivers",
+        "slug": "will-oliver-bearman-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "liam_lawson_2026_f1_drivers",
+        "slug": "will-liam-lawson-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "lance_stroll_2026_f1_drivers",
+        "slug": "will-lance-stroll-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "pierre_gasly_2026_f1_drivers",
+        "slug": "will-pierre-gasly-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "valtteri_bottas_2026_f1_drivers",
+        "slug": "will-valtteri-bottas-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "sergio_prez_2026_f1_drivers",
+        "slug": "will-sergio-prez-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "esteban_ocon_2026_f1_drivers",
+        "slug": "will-esteban-ocon-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "isack_hadjar_2026_f1_drivers",
+        "slug": "will-isack-hadjar-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "gabriel_bortoleto_2026_f1_drivers",
+        "slug": "will-gabriel-bortoleto-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "carolina_panthers_win_2027_nfl",
+        "slug": "will-the-carolina-panthers-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "nico_hlkenberg_2026_f1_drivers",
+        "slug": "will-nico-hlkenberg-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "tampa_bay_buccaneers_win_2027",
+        "slug": "will-the-tampa-bay-buccaneers-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "fernando_alonso_2026_f1_drivers",
+        "slug": "will-fernando-alonso-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "victor_wembanyama_win_20252026_nba",
+        "slug": "will-victor-wembanyama-win-the-20252026-nba-mvp",
+        "final_outcome": null
+      },
+      {
+        "id": "nikola_jokic_win_20252026_nba",
+        "slug": "will-nikola-jokic-win-the-20252026-nba-mvp",
+        "final_outcome": null
+      },
+      {
+        "id": "washington_nationals_win_2026_world",
+        "slug": "will-the-washington-nationals-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "chicago_white_sox_win_2026",
+        "slug": "will-the-chicago-white-sox-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "st_louis_cardinals_win_2026",
+        "slug": "will-the-st-louis-cardinals-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "montreal_canadiens_win_2026_nhl",
+        "slug": "will-the-montreal-canadiens-win-the-2026-nhl-stanley-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "alpine_2026_f1_constructors_champion",
+        "slug": "will-alpine-be-the-2026-f1-constructors-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "bernard_cazeneuve_win_2027_french",
+        "slug": "will-bernard-cazeneuve-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "racing_bulls_2026_f1_constructors",
+        "slug": "will-racing-bulls-be-the-2026-f1-constructors-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "haas_2026_f1_constructors_champion",
+        "slug": "will-haas-be-the-2026-f1-constructors-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "new_york_jets_win_2027",
+        "slug": "will-the-new-york-jets-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "minnesota_wild_win_2026_nhl",
+        "slug": "will-the-minnesota-wild-win-the-2026-nhl-stanley-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "williams_2026_f1_constructors_champion",
+        "slug": "will-williams-be-the-2026-f1-constructors-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "lewis_hamilton_2026_f1_drivers",
+        "slug": "will-lewis-hamilton-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "carlos_esp_win_2026_peruvian",
+        "slug": "will-carlos-esp-win-the-2026-peruvian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "san_jose_earthquakes_win_2026",
+        "slug": "will-san-jose-earthquakes-win-the-2026-mls-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "tampa_bay_lightning_win_2026",
+        "slug": "will-the-tampa-bay-lightning-win-the-2026-nhl-stanley-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "colorado_rockies_win_2026_world",
+        "slug": "will-the-colorado-rockies-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "aston_martin_2026_f1_constructors",
+        "slug": "will-aston-martin-be-the-2026-f1-constructors-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "buffalo_sabres_win_2026_nhl",
+        "slug": "will-the-buffalo-sabres-win-the-2026-nhl-stanley-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "audi_2026_f1_constructors_champion",
+        "slug": "will-audi-be-the-2026-f1-constructors-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "colorado_avalanche_win_2026_nhl",
+        "slug": "will-the-colorado-avalanche-win-the-2026-nhl-stanley-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "anaheim_ducks_win_2026_nhl",
+        "slug": "will-the-anaheim-ducks-win-the-2026-nhl-stanley-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "new_orleans_saints_win_2027",
+        "slug": "will-the-new-orleans-saints-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "marisol_prez_tello_win_2026",
+        "slug": "will-marisol-prez-tello-win-the-2026-peruvian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "philadelphia_flyers_win_2026_nhl",
+        "slug": "will-the-philadelphia-flyers-win-the-2026-nhl-stanley-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "los_angeles_lakers_win_nba",
+        "slug": "will-the-los-angeles-lakers-win-the-nba-western-conference-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "max_verstappen_2026_f1_drivers",
+        "slug": "will-max-verstappen-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "lando_norris_2026_f1_drivers",
+        "slug": "will-lando-norris-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "csar_acua_win_2026_peruvian",
+        "slug": "will-csar-acua-win-the-2026-peruvian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "paloma_valencia_win_2026_colombian",
+        "slug": "will-paloma-valencia-win-the-2026-colombian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "abelardo_de_la_espriella_win",
+        "slug": "will-abelardo-de-la-espriella-win-the-2026-colombian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "chong_wonoh_win_2026_seoul",
+        "slug": "will-chong-won-oh-win-the-2026-seoul-mayoral-election",
+        "final_outcome": null
+      },
+      {
+        "id": "oscar_piastri_2026_f1_drivers",
+        "slug": "will-oscar-piastri-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "carlos_felipe_crdoba_win_2026",
+        "slug": "will-carlos-felipe-crdoba-win-the-2026-colombian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "oh_sehoon_win_2026_seoul",
+        "slug": "will-oh-se-hoon-win-the-2026-seoul-mayoral-election",
+        "final_outcome": null
+      },
+      {
+        "id": "luis_gilberto_murillo_win_2026",
+        "slug": "will-luis-gilberto-murillo-win-the-2026-colombian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "fernando_olivera_win_2026_peruvian",
+        "slug": "will-fernando-olivera-win-the-2026-peruvian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "abelardo_de_la_espriella_win_2",
+        "slug": "will-abelardo-de-la-espriella-win-the-1st-round-of-the-2026-colombian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "franois_hollande_win_2027_french",
+        "slug": "will-franois-hollande-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "ivn_cepeda_castro_win_1st",
+        "slug": "will-ivn-cepeda-castro-win-the-1st-round-of-the-2026-colombian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "ivan_cepeda_castro_win_2026",
+        "slug": "will-ivan-cepeda-castro-win-the-2026-colombian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "new_people_nl_gain_most",
+        "slug": "will-new-people-nl-gain-the-most-seats-in-the-next-russian-parliamentary-election",
+        "final_outcome": null
+      },
+      {
+        "id": "david_lisnard_win_2027_french",
+        "slug": "will-david-lisnard-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "wolfgang_grozo_win_2026_peruvian",
+        "slug": "will-wolfgang-grozo-win-the-2026-peruvian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "dominique_de_villepin_win_2027",
+        "slug": "will-dominique-de-villepin-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "grald_darmanin_win_2027_french",
+        "slug": "will-grald-darmanin-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "gabriel_attal_win_2027_french",
+        "slug": "will-gabriel-attal-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "naftali_bennett_next_prime_minister",
+        "slug": "will-naftali-bennett-be-the-next-prime-minister-of-israel",
+        "final_outcome": null
+      },
+      {
+        "id": "raphal_glucksmann_win_2027_french",
+        "slug": "will-raphal-glucksmann-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "civic_platform_gp_gain_most",
+        "slug": "will-civic-platform-gp-gain-the-most-seats-in-the-next-russian-parliamentary-election",
+        "final_outcome": null
+      },
+      {
+        "id": "yonhy_lescano_win_2026_peruvian",
+        "slug": "will-yonhy-lescano-win-the-2026-peruvian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "benjamin_netanyahu_next_prime_minister",
+        "slug": "will-benjamin-netanyahu-be-the-next-prime-minister-of-israel",
+        "final_outcome": null
+      },
+      {
+        "id": "avigdor_lieberman_next_prime_minister",
+        "slug": "will-avigdor-lieberman-be-the-next-prime-minister-of-israel",
+        "final_outcome": null
+      },
+      {
+        "id": "yoaz_hendel_next_prime_minister",
+        "slug": "will-yoaz-hendel-be-the-next-prime-minister-of-israel",
+        "final_outcome": null
+      },
+      {
+        "id": "yair_golan_next_prime_minister",
+        "slug": "will-yair-golan-be-the-next-prime-minister-of-israel",
+        "final_outcome": null
+      },
+      {
+        "id": "gideon_saar_next_prime_minister",
+        "slug": "will-gideon-saar-be-the-next-prime-minister-of-israel",
+        "final_outcome": null
+      },
+      {
+        "id": "nir_barkat_next_prime_minister",
+        "slug": "will-nir-barkat-be-the-next-prime-minister-of-israel",
+        "final_outcome": null
+      },
+      {
+        "id": "gadi_eizenkot_next_prime_minister",
+        "slug": "will-gadi-eizenkot-be-the-next-prime-minister-of-israel",
+        "final_outcome": null
+      },
+      {
+        "id": "yair_lapid_next_prime_minister",
+        "slug": "will-yair-lapid-be-the-next-prime-minister-of-israel",
+        "final_outcome": null
+      },
+      {
+        "id": "yariv_levin_next_prime_minister",
+        "slug": "will-yariv-levin-be-the-next-prime-minister-of-israel",
+        "final_outcome": null
+      },
+      {
+        "id": "gold_gc_hit_high_10000",
+        "slug": "will-gold-gc-hit-high-10000-by-end-of-june",
+        "final_outcome": null
+      },
+      {
+        "id": "yossi_cohen_next_prime_minister",
+        "slug": "will-yossi-cohen-be-the-next-prime-minister-of-israel",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_arizona_cardinals_win_the_nfl_league_cham",
+        "slug": "will-the-arizona-cardinals-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_las_vegas_raiders_win_the_nfl_league_cham",
+        "slug": "will-the-las-vegas-raiders-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_milwaukee_brewers_win_the_world_series",
+        "slug": "will-the-milwaukee-brewers-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_vegas_golden_knights_win_the_nhl_stanley",
+        "slug": "will-the-vegas-golden-knights-win-the-2026-nhl-stanley-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_miami_dolphins_win_the_nfl_league_champio",
+        "slug": "will-the-miami-dolphins-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_cadillac_be_the_f1_constructors_champion",
+        "slug": "will-cadillac-be-the-2026-f1-constructors-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_detroit_pistons_win_the_nba_eastern_confe",
+        "slug": "will-the-detroit-pistons-win-the-nba-eastern-conference-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "will_charles_leclerc_be_the_f1_drivers_champion",
+        "slug": "will-charles-leclerc-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_carolina_hurricanes_win_the_nhl_stanley_c",
+        "slug": "will-the-carolina-hurricanes-win-the-2026-nhl-stanley-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_atlanta_falcons_win_the_nfl_league_champi",
+        "slug": "will-the-atlanta-falcons-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_kansas_city_royals_win_the_american_league_ch",
+        "slug": "will-kansas-city-royals-win-the-2026-american-league-championship-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_minnesota_timberwolves_win_the_nba_wester",
+        "slug": "will-the-minnesota-timberwolves-win-the-nba-western-conference-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_san_antonio_spurs_win_the_nba_western_con",
+        "slug": "will-the-san-antonio-spurs-win-the-nba-western-conference-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_los_angeles_angels_win_the_world_series",
+        "slug": "will-the-los-angeles-angels-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_kimi_antonelli_be_the_f1_drivers_champion",
+        "slug": "will-kimi-antonelli-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_oklahoma_city_thunder_win_the_nba_western",
+        "slug": "will-the-oklahoma-city-thunder-win-the-nba-western-conference-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "spacex_ipo_closing_market_cap_above_3t",
+        "slug": "spacex-ipo-closing-market-cap-above-3t",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_cincinnati_bengals_win_the_nfl_league_cha",
+        "slug": "will-the-cincinnati-bengals-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "predictfun_fdv_above_200m_one_day_after_launch",
+        "slug": "predictfun-fdv-above-200m-one-day-after-launch",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_boston_celtics_win_the_nba_eastern_confer",
+        "slug": "will-the-boston-celtics-win-the-nba-eastern-conference-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "will_houston_dynamo_fc_win_the_mls_cup",
+        "slug": "will-houston-dynamo-fc-win-the-2026-mls-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_cleveland_browns_win_the_nfl_league_champ",
+        "slug": "will-the-cleveland-browns-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_george_russell_be_the_f1_drivers_champion",
+        "slug": "will-george-russell-be-the-2026-f1-drivers-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_philadelphia_phillies_win_the_world_serie",
+        "slug": "will-the-philadelphia-phillies-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_communist_party_of_the_russian_federation",
+        "slug": "will-the-communist-party-of-the-russian-federation-kprf-gain-the-most-seats-in-the-next-russian-parliamentary-election",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_green_bay_packers_win_the_nfl_league_cham",
+        "slug": "will-the-green-bay-packers-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_seattle_mariners_win_the_world_series",
+        "slug": "will-the-seattle-mariners-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_detroit_tigers_win_the_world_series",
+        "slug": "will-the-detroit-tigers-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_a_just_russia_for_truth_srzp_gain_the_most_se",
+        "slug": "will-a-just-russia-for-truth-srzp-gain-the-most-seats-in-the-next-russian-parliamentary-election",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_denver_broncos_win_the_nfl_league_champio",
+        "slug": "will-the-denver-broncos-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_philadelphia_eagles_win_the_nfl_league_ch",
+        "slug": "will-the-philadelphia-eagles-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_new_york_mets_win_the_world_series",
+        "slug": "will-the-new-york-mets-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_roy_barreras_win_the_colombian_presidential_e",
+        "slug": "will-roy-barreras-win-the-2026-colombian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "will_sergio_fajardo_win_the_colombian_presidential",
+        "slug": "will-sergio-fajardo-win-the-2026-colombian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "will_sbastien_lecornu_win_the_french_presidential",
+        "slug": "will-sbastien-lecornu-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_miami_marlins_win_the_world_series",
+        "slug": "will-the-miami-marlins-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_seattle_seahawks_win_the_nfl_league_champ",
+        "slug": "will-the-seattle-seahawks-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_los_angeles_chargers_win_the_nfl_league_c",
+        "slug": "will-the-los-angeles-chargers-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_kansas_city_chiefs_win_the_nfl_league_cha",
+        "slug": "will-the-kansas-city-chiefs-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_philadelphia_76ers_win_the_nba_eastern_co",
+        "slug": "will-the-philadelphia-76ers-win-the-nba-eastern-conference-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_baltimore_orioles_win_the_world_series",
+        "slug": "will-the-baltimore-orioles-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_tennessee_titans_win_the_nfl_league_champ",
+        "slug": "will-the-tennessee-titans-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_t1_win_the_lck_season_playoffs",
+        "slug": "will-t1-win-the-lck-2026-season-playoffs",
+        "final_outcome": null
+      },
+      {
+        "id": "will_jean_castex_win_the_french_presidential_elect",
+        "slug": "will-jean-castex-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "will_douard_philippe_win_the_french_presidential_e",
+        "slug": "will-douard-philippe-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_chicago_cubs_win_the_world_series",
+        "slug": "will-the-chicago-cubs-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_boston_red_sox_win_the_world_series",
+        "slug": "will-the-boston-red-sox-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_san_francisco_49ers_win_the_nfl_league_ch",
+        "slug": "will-the-san-francisco-49ers-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_toronto_raptors_win_the_nba_eastern_confe",
+        "slug": "will-the-toronto-raptors-win-the-nba-eastern-conference-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_dallas_cowboys_win_the_nfl_league_champio",
+        "slug": "will-the-dallas-cowboys-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_juan_manuel_galn_win_the_colombian_presidenti",
+        "slug": "will-juan-manuel-galn-win-the-2026-colombian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_baltimore_ravens_win_the_nfl_league_champ",
+        "slug": "will-the-baltimore-ravens-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_houston_texans_win_the_nfl_league_champio",
+        "slug": "will-the-houston-texans-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_jordan_bardella_win_the_french_presidential_e",
+        "slug": "will-jordan-bardella-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "will_jean_luc_mlenchon_win_the_french_presidential",
+        "slug": "will-jean-luc-mlenchon-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_san_diego_padres_win_the_world_series",
+        "slug": "will-the-san-diego-padres-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_sarah_knafo_win_the_french_presidential_elect",
+        "slug": "will-sarah-knafo-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "will_mesas_guevara_win_the_peruvian_presidential_e",
+        "slug": "will-mesas-guevara-win-the-2026-peruvian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "predictfun_fdv_above_400m_one_day_after_launch",
+        "slug": "predictfun-fdv-above-400m-one-day-after-launch",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_jacksonville_jaguars_win_the_nfl_league_c",
+        "slug": "will-the-jacksonville-jaguars-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_new_york_red_bulls_win_the_mls_cup",
+        "slug": "will-new-york-red-bulls-win-the-2026-mls-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_texas_rangers_win_the_world_series",
+        "slug": "will-the-texas-rangers-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_chicago_bears_win_the_nfl_league_champion",
+        "slug": "will-the-chicago-bears-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_cincinnati_reds_win_the_world_series",
+        "slug": "will-the-cincinnati-reds-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_detroit_lions_win_the_nfl_league_champion",
+        "slug": "will-the-detroit-lions-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_houston_astros_win_the_world_series",
+        "slug": "will-the-houston-astros-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_atlanta_braves_win_the_world_series",
+        "slug": "will-the-atlanta-braves-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_cleveland_guardians_win_the_world_series",
+        "slug": "will-the-cleveland-guardians-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_kansas_city_royals_win_the_world_series",
+        "slug": "will-the-kansas-city-royals-win-the-2026-world-series",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_minnesota_vikings_win_the_nfl_league_cham",
+        "slug": "will-the-minnesota-vikings-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_ousmane_dembl_win_the_ballon_dor",
+        "slug": "will-ousmane-dembl-win-the-2026-ballon-dor",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_pittsburgh_steelers_win_the_nfl_league_ch",
+        "slug": "will-the-pittsburgh-steelers-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_cleveland_cavaliers_win_the_nba_eastern_c",
+        "slug": "will-the-cleveland-cavaliers-win-the-nba-eastern-conference-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "will_darren_fletcher_be_appointed_as_manager_of_ma",
+        "slug": "will-darren-fletcher-be-appointed-as-manager-of-manchester-united",
+        "final_outcome": null
+      },
+      {
+        "id": "will_seattle_sounders_fc_win_the_mls_cup",
+        "slug": "will-seattle-sounders-fc-win-the-2026-mls-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_indianapolis_colts_win_the_nfl_league_cha",
+        "slug": "will-the-indianapolis-colts-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "will_new_york_city_fc_win_the_mls_cup",
+        "slug": "will-new-york-city-fc-win-the-2026-mls-cup",
+        "final_outcome": null
+      },
+      {
+        "id": "will_juan_carlos_pinzn_win_the_colombian_president",
+        "slug": "will-juan-carlos-pinzn-win-the-2026-colombian-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "will_marine_le_pen_win_the_french_presidential_ele",
+        "slug": "will-marine-le-pen-win-the-2027-french-presidential-election",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_new_york_giants_win_the_nfl_league_champi",
+        "slug": "will-the-new-york-giants-win-the-2027-nfl-league-championship",
+        "final_outcome": null
+      },
+      {
+        "id": "predictfun_fdv_above_100m_one_day_after_launch",
+        "slug": "predictfun-fdv-above-100m-one-day-after-launch",
+        "final_outcome": null
+      },
+      {
+        "id": "will_red_bull_racing_be_the_f1_constructors_champi",
+        "slug": "will-red-bull-racing-be-the-2026-f1-constructors-champion",
+        "final_outcome": null
+      },
+      {
+        "id": "will_janet_mills_be_the_democratic_nominee_for_sen",
+        "slug": "will-janet-mills-be-the-democratic-nominee-for-senate-in-maine",
+        "final_outcome": null
+      },
+      {
+        "id": "will_the_new_york_knicks_win_the_nba_eastern_confe",
+        "slug": "will-the-new-york-knicks-win-the-nba-eastern-conference-finals",
+        "final_outcome": null
+      },
+      {
+        "id": "predictfun_fdv_above_50m_one_day_after_launch",
+        "slug": "predictfun-fdv-above-50m-one-day-after-launch",
+        "final_outcome": null
+      },
+      {
+        "id": "predictfun_fdv_above_2b_one_day_after_launch",
+        "slug": "predictfun-fdv-above-2b-one-day-after-launch",
+        "final_outcome": null
+      },
+      {
+        "id": "solstice_fdv_above_100m_one_day_after_launch",
+        "slug": "solstice-fdv-above-100m-one-day-after-launch",
+        "final_outcome": null
+      },
+      {
+        "id": "predictfun_fdv_above_600m_one_day_after_launch",
+        "slug": "predictfun-fdv-above-600m-one-day-after-launch",
+        "final_outcome": null
+      },
+      {
+        "id": "predictfun_fdv_above_800m_one_day_after_launch",
+        "slug": "predictfun-fdv-above-800m-one-day-after-launch",
+        "final_outcome": null
+      },
+      {
+        "id": "puffpaw_fdv_above_100m_one_day_after_launch",
+        "slug": "puffpaw-fdv-above-100m-one-day-after-launch",
+        "final_outcome": null
+      },
+      {
+        "id": "will_anthropics_market_cap_be_between_400b_and_600",
+        "slug": "will-anthropics-market-cap-be-between-400b-and-600b-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "puffpaw_fdv_above_50m_one_day_after_launch",
+        "slug": "puffpaw-fdv-above-50m-one-day-after-launch",
+        "final_outcome": null
+      },
+      {
+        "id": "solstice_fdv_above_200m_one_day_after_launch",
+        "slug": "solstice-fdv-above-200m-one-day-after-launch",
+        "final_outcome": null
+      },
+      {
+        "id": "grvt_fdv_above_200m_one_day_after_launch",
+        "slug": "grvt-fdv-above-200m-one-day-after-launch",
+        "final_outcome": null
+      },
+      {
+        "id": "will_anthropics_market_cap_be_less_than_100b_at_ma",
+        "slug": "will-anthropics-market-cap-be-less-than-100b-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "will_gold_gc_hit_high_by_end_of_december",
+        "slug": "will-gold-gc-hit-high-6000-by-end-of-december",
+        "final_outcome": null
+      },
+      {
+        "id": "solstice_fdv_above_50m_one_day_after_launch",
+        "slug": "solstice-fdv-above-50m-one-day-after-launch",
+        "final_outcome": null
+      },
+      {
+        "id": "will_anthropics_market_cap_be_greater_than_600b_at",
+        "slug": "will-anthropics-market-cap-be-greater-than-600b-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "will_spacexs_market_cap_be_less_than_500b_at_marke",
+        "slug": "will-spacexs-market-cap-be-less-than-500b-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "will_anthropics_market_cap_be_between_300b_and_400",
+        "slug": "will-anthropics-market-cap-be-between-300b-and-400b-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "will_spacexs_market_cap_be_between_500b_and_600b_a",
+        "slug": "will-spacexs-market-cap-be-between-500b-and-600b-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "will_openai_gpt_score_at_least_50_on_humanitys_las",
+        "slug": "will-openai-gpt-score-at-least-50-on-humanitys-last-exam",
+        "final_outcome": null
+      },
+      {
+        "id": "anthropic_ceo_arrested",
+        "slug": "anthropic-ceo-arrested",
+        "final_outcome": null
+      },
+      {
+        "id": "will_gold_gc_hit_high_by_end_of_june_3",
+        "slug": "will-gold-gc-hit-high-9000-by-end-of-june",
+        "final_outcome": null
+      },
+      {
+        "id": "will_anthropics_market_cap_be_between_100b_and_200",
+        "slug": "will-anthropics-market-cap-be-between-100b-and-200b-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "openai_ipo_closing_market_cap_above_800b",
+        "slug": "openai-ipo-closing-market-cap-above-800b",
+        "final_outcome": null
+      },
+      {
+        "id": "will_anthropics_market_cap_be_between_200b_and_300",
+        "slug": "will-anthropics-market-cap-be-between-200b-and-300b-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "will_spacexs_market_cap_be_between_700b_and_800b_a",
+        "slug": "will-spacexs-market-cap-be-between-700b-and-800b-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "will_openais_market_cap_be_between_750b_and_1t_at",
+        "slug": "will-openais-market-cap-be-between-750b-and-1t-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "will_openais_market_cap_be_between_1t_and_1pt25t_a",
+        "slug": "will-openais-market-cap-be-between-1t-and-1pt25t-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "openai_ipo_closing_market_cap_above_1pt4t",
+        "slug": "openai-ipo-closing-market-cap-above-1pt4t",
+        "final_outcome": null
+      },
+      {
+        "id": "will_openais_market_cap_be_greater_than_1pt5t_at_m",
+        "slug": "will-openais-market-cap-be-greater-than-1pt5t-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "spacex_ipo_closing_market_cap_above_1pt6t",
+        "slug": "spacex-ipo-closing-market-cap-above-1pt6t",
+        "final_outcome": null
+      },
+      {
+        "id": "will_stravas_market_cap_be_between_3b_and_4b_at_ma",
+        "slug": "will-stravas-market-cap-be-between-3b-and-4b-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "will_discords_market_cap_be_less_than_15b_at_marke",
+        "slug": "will-discords-market-cap-be-less-than-15b-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "will_openais_market_cap_be_between_1pt25t_and_1pt5",
+        "slug": "will-openais-market-cap-be-between-1pt25t-and-1pt5t-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "will_openais_market_cap_be_less_than_500b_at_marke",
+        "slug": "will-openais-market-cap-be-less-than-500b-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "will_openais_market_cap_be_between_500b_and_750b_a",
+        "slug": "will-openais-market-cap-be-between-500b-and-750b-at-market-close-on-ipo-day",
+        "final_outcome": null
+      },
+      {
+        "id": "will_gold_gc_hit_high_by_end_of_december_2",
+        "slug": "will-gold-gc-hit-high-10000-by-end-of-december",
+        "final_outcome": null
+      },
+      {
+        "id": "will_gold_gc_hit_high_by_end_of_december_3",
+        "slug": "will-gold-gc-hit-high-15000-by-end-of-december",
+        "final_outcome": null
+      }
+    ],
+    "RESOLVED": [
+      {
+        "id": "ai_openai_best",
+        "slug": "will-openai-have-the-best-ai-model-at-the-end-of-april-2026",
+        "final_outcome": "no"
+      },
+      {
+        "id": "ai_anthropic_best",
+        "slug": "will-anthropic-have-the-best-ai-model-at-the-end-of-april-2026",
+        "final_outcome": "yes"
+      },
+      {
+        "id": "ai_deepseek_best",
+        "slug": "will-deepseek-have-the-best-ai-model-at-the-end-of-april-2026",
+        "final_outcome": "no"
+      },
+      {
+        "id": "nvda_largest_apr",
+        "slug": "will-nvidia-be-the-largest-company-in-the-world-by-market-cap-on-april-30-161",
+        "final_outcome": "yes"
+      },
+      {
+        "id": "trump_iran_ops_end_jun",
+        "slug": "trump-announces-end-of-military-operations-against-iran-by-june-30th-566-326-653-781-167-426-752-225-438",
+        "final_outcome": "yes"
+      }
+    ],
+    "DEAD": []
+  }
+}

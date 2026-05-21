@@ -1,0 +1,128 @@
+/* ============================================================================
+ * microcopy.css — tighter, more confident microcopy utilities
+ * Owner: W11-06 (microcopy)
+ * Mount: <link rel="stylesheet" href="/css/microcopy.css"> in web/index.html
+ *
+ * Provides:
+ *   - Text-utility classes: .copy--strong, .copy--subtle, .copy--tabular, .copy--quote
+ *   - Confidence pills:    .confidence-pill--high / --med / --low
+ *
+ * All declarations reference design tokens from web/css/tokens.css.
+ * No token redefinition here.
+ * ============================================================================ */
+
+/* ---------- Text-utility classes ---------- */
+
+.copy--strong {
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--text-strong, var(--text, #0b0d10));
+}
+
+.copy--subtle {
+  color: var(--text-subtle, var(--muted, #6b7280));
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.copy--tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  letter-spacing: 0;
+}
+
+/* Pull-quote: Instrument Serif italic, hanging open quote.
+ * If Instrument Serif isn't loaded, falls back through a serif stack. */
+.copy--quote {
+  font-family: "Instrument Serif", "Cormorant Garamond", "Georgia", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.125em;
+  line-height: 1.4;
+  color: var(--text, #0b0d10);
+  position: relative;
+  padding-left: 0.5em;
+  text-indent: -0.32em; /* hanging quote: pull the opening glyph into margin */
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+.copy--quote::before {
+  content: open-quote;
+  font-size: 1em;
+  line-height: 1;
+  color: var(--text-subtle, var(--muted, #9aa1ac));
+}
+
+.copy--quote::after {
+  content: close-quote;
+  color: var(--text-subtle, var(--muted, #9aa1ac));
+}
+
+/* ---------- Confidence pills ---------- */
+
+.confidence-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  font-variant-numeric: tabular-nums;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.confidence-pill::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.confidence-pill--high {
+  background: color-mix(in srgb, var(--green, #16a34a) 14%, transparent);
+  color: var(--green, #16a34a);
+  border-color: color-mix(in srgb, var(--green, #16a34a) 32%, transparent);
+}
+
+.confidence-pill--med {
+  background: color-mix(in srgb, var(--amber, #d97706) 14%, transparent);
+  color: var(--amber, #d97706);
+  border-color: color-mix(in srgb, var(--amber, #d97706) 32%, transparent);
+}
+
+.confidence-pill--low {
+  background: color-mix(in srgb, var(--red, #dc2626) 12%, transparent);
+  color: var(--red, #dc2626);
+  border-color: color-mix(in srgb, var(--red, #dc2626) 30%, transparent);
+}
+
+/* Dark-mode adjustments: rely on tokens, but lift contrast slightly. */
+@media (prefers-color-scheme: dark) {
+  .confidence-pill--high {
+    background: color-mix(in srgb, var(--green, #22c55e) 22%, transparent);
+  }
+  .confidence-pill--med {
+    background: color-mix(in srgb, var(--amber, #f59e0b) 22%, transparent);
+  }
+  .confidence-pill--low {
+    background: color-mix(in srgb, var(--red, #ef4444) 20%, transparent);
+  }
+}
+
+/* Reduced-motion safety: no animations here, but document the intent. */
+@media (prefers-reduced-motion: reduce) {
+  .confidence-pill,
+  .copy--quote::before,
+  .copy--quote::after {
+    transition: none !important;
+  }
+}

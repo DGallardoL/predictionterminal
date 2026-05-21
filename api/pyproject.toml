@@ -1,0 +1,259 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pfm"
+version = "0.1.0"
+description = "Prediction Factor Model — POC: factor models of stock returns on prediction-market factors"
+readme = "../README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Damian Gallardo" }]
+dependencies = [
+    "fastapi>=0.116",
+    "uvicorn[standard]>=0.32",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.6",
+    "statsmodels>=0.14.4",
+    "pandas>=2.2",
+    "numpy>=2.0",
+    "yfinance>=0.2.50",
+    "redis>=5.2",
+    "httpx>=0.27",
+    "pyyaml>=6.0",
+    "structlog>=24.4",
+    "scikit-learn>=1.4",
+    # Floor pinned to address CVE-2026-44431 (cross-origin redirect header
+    # leak on low-level ProxyManager API) and CVE-2026-44432 (Brotli /
+    # drain_conn decompression DoS in the streaming reader). Both fixed in
+    # 2.7.0. Pulled transitively by httpx/requests, but pinning explicitly
+    # so reproducible builds catch a regression.
+    "urllib3>=2.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3",
+    "pytest-cov>=6.0",
+    "pytest-asyncio>=0.24",
+    "respx>=0.22",
+    "ruff>=0.8",
+    "mypy>=1.10",
+    "types-pyyaml>=6.0",
+    "types-requests>=2.31",
+    "pandas-stubs>=2.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pfm"]
+
+[tool.hatch.build.targets.wheel.force-include]
+# Ship the PEP 561 marker so downstream consumers see typed annotations.
+"src/pfm/py.typed" = "pfm/py.typed"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+# Hardened rule set: pycodestyle/pyflakes + isort + naming + pyupgrade +
+# bugbear + comprehensions + simplify + ruff-specific + pathlib + pylint +
+# perflint + async sins. Pragmatic ignores below keep noise low.
+select = [
+    "E", "F", "W",  # pycodestyle + pyflakes
+    "I",            # isort
+    "N",            # pep8-naming
+    "UP",           # pyupgrade
+    "B",            # flake8-bugbear
+    "C4",           # comprehensions
+    "SIM",          # simplify
+    "RUF",          # ruff-specific
+    "PTH",          # use pathlib
+    "PL",           # pylint
+    "PERF",         # performance
+    "ASYNC",        # async sins
+]
+ignore = [
+    "E501",   # line length handled by formatter
+    "RUF002", # ambiguous unicode in docstrings — we use Greek letters intentionally
+    "RUF003", # ambiguous unicode in comments — same
+    "PLR0913", # too many args (pragmatic for FastAPI handlers)
+    "PLR2004", # magic values (too noisy for quant code)
+    "PLR0915", # too many statements
+    "PLR0912", # too many branches
+    "PLR0911", # too many returns
+    "B008",    # function calls in defaults — FastAPI Depends() pattern
+    "PLC0415", # `import` should be at top — we use lazy imports for optional deps
+    "PERF401", # manual list comprehension — readability over micro-optimization
+    "PLW0603", # global statement — used sparingly for caches
+    "RUF001",  # ambiguous unicode in strings — Greek letters in math docs
+    "RUF046",  # int(...) in comprehensions — explicit casts are clearer
+    "SIM108",  # ternary if-else — prefer explicit branches sometimes
+    "SIM102",  # nested if — clearer in domain code
+    "PLW2901", # loop variable overwritten — common in pandas iter loops
+    "PLR1714", # consider merging multiple comparisons — readability
+    # Quant-domain math notation: ``N``, ``T``, ``K``, etc. are conventional
+    # uppercase variable names (sample size, horizons, factor count, …) and
+    # forcing them to lowercase makes the code less readable to readers
+    # coming from the statistics / time-series literature.
+    "N806",
+    # Single-letter variable names like ``l`` / ``I`` / ``O`` are legitimately
+    # ambiguous in some fonts but show up routinely in math-heavy code where
+    # the binding matches the formula being implemented. Treat per-callsite.
+    "E741",
+    # ``pathlib`` migration — the codebase mixes os.path and pathlib by design
+    # depending on whether the call site needs str or Path objects. Functional
+    # behaviour is identical; converting wholesale would touch ~30 files
+    # without a measurable benefit. Re-enable per-file when refactoring.
+    "PTH100", "PTH105", "PTH108", "PTH110", "PTH118", "PTH120", "PTH123",
+    # ``contextlib.suppress(X)`` is the "pythonic" form of try/except/pass but
+    # raw try/except is more readable for one-off guards inline; leave to the
+    # author's discretion.
+    "SIM105",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests can use magic numbers, ``assert`` (S101), broad ``raises`` (B017),
+# self-assignment for invariance checks (PLW0127), and lazy/optional imports
+# pulled after a ``pytest.importorskip`` (E402).
+"tests/*" = [
+    "PLR2004", "S101", "N", "B017", "PLW0127", "E402", "PLW0108",
+    "PLC3002", "PLR0124", "RUF012", "RUF043",
+]
+# Dev/validation utilities (not part of the deployed image): allow prints,
+# magic numbers, and the usual one-off-script lints (loop vars, percent-format,
+# lazy imports, math-symbol arg names, etc.).
+"scripts/*" = [
+    "T201", "PLR2004", "N803", "SIM103", "F841", "E402",
+    "RUF005", "C416", "UP031", "PERF402", "RUF059", "B007",
+]
+# `main.py` is the FastAPI entrypoint and uses heavy lazy-import patterns
+# inside endpoint handlers (deferred deps, optional features). E402 is
+# stylistically wrong but intentional here.
+"src/pfm/main.py" = ["E402"]
+# These modules guard optional dependencies with try/except ImportError and
+# import the module-level fallback after the guard — that requires the import
+# to live below module-level code.
+"src/pfm/sources/*.py" = ["E402"]
+"src/pfm/terminal/__init__.py" = ["E402"]
+# Quant modules use canonical capitalized symbols (X, Y, T, R, F).
+"src/pfm/model.py" = ["N806"]
+"src/pfm/strategies.py" = ["N806"]
+"src/pfm/strategies_router.py" = ["E402", "N806"]
+"src/pfm/regression_router.py" = ["N806"]
+"src/pfm/factors_router.py" = ["N806"]
+"src/pfm/factor_model_pro.py" = ["N806"]
+# crypto5min fetchers forward a `timeout: float` parameter directly to
+# httpx — `asyncio.timeout` would double up with httpx's own timeout
+# handling and is wrong for our use-case.
+"src/pfm/crypto5min/market_fetcher.py" = ["ASYNC109"]
+"src/pfm/crypto5min/strike_scraper.py" = ["ASYNC109"]
+# health_deep_router forwards a `timeout: float` straight to the probe's own
+# timeout handling — asyncio.timeout would double up, same as crypto5min.
+"src/pfm/health_deep_router.py" = ["ASYNC109"]
+# Black-Scholes density uses the canonical capitalized maturity symbol T.
+"src/pfm/vol/physical_density.py" = ["N803"]
+# Schema package __init__.py is a pure facade re-exporting from focused
+# submodules. F401 (unused import) is exactly the point.
+"src/pfm/schemas/__init__.py" = ["F401"]
+
+[tool.ruff.lint.pep8-naming]
+# Capitalized math/quant identifiers are canonical (X = design matrix,
+# Y = response, T = sample size, R = rotation, Q = covariance, F = factor
+# loading, H = Hessian, A = transition matrix, S = score, N = count).
+# Allow them inside functions without fighting every regression textbook.
+extend-ignore-names = [
+    "X", "X_*",
+    "Y", "Y_*",
+    "T",
+    "N",
+    "R",
+    "Q",
+    "F", "F_*", "F1", "F2",
+    "H",
+    "A",
+    "S",
+    "Xc", "Xc_*",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+# ---------------------------------------------------------------------------
+# mypy — typed but pragmatic.
+# ---------------------------------------------------------------------------
+# `strict = false` because the codebase has 100+ modules with legacy `Any`
+# usage; flipping strict mode would yield thousands of errors and drown out
+# real ones. Instead we enable the high-signal flags (warn_unused_ignores,
+# warn_redundant_casts, no_implicit_optional, check_untyped_defs) which catch
+# real bugs without forcing a full annotation campaign.
+[tool.mypy]
+python_version = "3.12"
+strict = false
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_no_return = true
+no_implicit_optional = true
+check_untyped_defs = true
+disallow_untyped_calls = false
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+show_error_codes = true
+pretty = true
+files = "src/pfm"
+# Enable Pydantic v2's mypy plugin so `Field(default, ...)` is recognised
+# as a real default (otherwise BaseModel constructors look "missing args").
+plugins = ["pydantic.mypy"]
+exclude = [
+    "tests/.*",
+    "scripts/.*",
+    "\\.venv/.*",
+]
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
+
+[[tool.mypy.overrides]]
+# Third-party deps without bundled stubs. Keep this list short and audited;
+# adding a module here means we trust its runtime behavior without static
+# checking, so prefer real stubs when available (pandas-stubs, types-pyyaml).
+module = [
+    "yfinance.*",
+    "respx.*",
+    "weasyprint.*",
+    "matplotlib.*",
+    "scipy.*",
+    "sklearn.*",
+    "statsmodels.*",
+    "redis.*",
+    "prometheus_client.*",
+    "structlog.*",
+    # Optional cryptostuff microstructure deps imported via try/except inside
+    # crypto_events_engine.py; absent at type-check time but present at runtime
+    # when the WS engine is enabled.
+    "extraction.*",
+    "models.*",
+    # brotli-asgi ships no py.typed marker; runtime-only middleware import.
+    "brotli_asgi.*",
+    # sentry-sdk[fastapi] integrations resolved lazily inside main.py.
+    "sentry_sdk.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["src/pfm"]
+omit = ["*/tests/*", "*/__init__.py"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false

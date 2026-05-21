@@ -1,0 +1,171 @@
+/* ============================================================
+ * loading-states.css  (W13-38, wave-13)
+ *
+ * Universal loading-state styles consumed by web/js/loading-states.js
+ * (window.PFM.loading API).
+ *
+ * Visual contract:
+ *   - Bound element receives `.pfm-loading` while a request is
+ *     in flight. The class dims the element to 0.6 opacity and
+ *     applies a subtle pulse on its inner content while keeping
+ *     interactive children non-clickable (pointer-events: none).
+ *   - A floating overlay (`.pfm-loading__overlay`) is appended
+ *     as the last child by the JS controller. It contains a
+ *     ring spinner (`.pfm-loading__spinner`) and a label
+ *     (`.pfm-loading__label`).
+ *
+ * Tokens-only:
+ *   - Colors:    var(--surface), var(--ink), var(--ink-3), var(--orange)
+ *   - Spacing:   var(--sp-2), var(--sp-3), var(--sp-4)
+ *   - Radii:     var(--radius-md) defensive fallback
+ *   - Motion:    var(--t), var(--t-slow), var(--ease)
+ *   - Hairline:  var(--hairline)
+ *   - Shadow:    var(--shadow-2)
+ *
+ * Accessibility:
+ *   - Overlay element gets role="status" + aria-live="polite"
+ *     from the JS.
+ *   - @media (prefers-reduced-motion: reduce) suppresses pulse
+ *     and spinner rotation; we keep a static dimmed state and a
+ *     non-animated spinner ring.
+ *
+ * Mobile:
+ *   - Overlay scales down spinner + label padding under 480px.
+ *   - Touch users see the dimmed state immediately (no hover gate).
+ * ============================================================ */
+
+/* Host: any element bound for loading state. */
+.pfm-loading {
+  position: relative;
+  transition:
+    opacity var(--t, 180ms) var(--ease, ease),
+    filter var(--t, 180ms) var(--ease, ease);
+}
+
+/* Active state: dim + suppress interaction on children. */
+.pfm-loading.is-loading {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: progress;
+  user-select: none;
+}
+
+/* Subtle pulse on the host's first inner block (skipping the overlay). */
+.pfm-loading.is-loading > *:not(.pfm-loading__overlay) {
+  animation: pfm-loading-pulse 1.6s var(--ease, ease) infinite;
+}
+
+@keyframes pfm-loading-pulse {
+  0%, 100% { filter: saturate(0.95); }
+  50%      { filter: saturate(0.85) brightness(0.97); }
+}
+
+/* Overlay: spinner + label, centered over host. */
+.pfm-loading__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3, 12px);
+  padding: var(--sp-4, 16px);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: inherit;
+  z-index: 5;
+  pointer-events: auto; /* swallow clicks while loading */
+  opacity: 0;
+  animation: pfm-loading-fade-in var(--t, 180ms) var(--ease, ease) forwards;
+}
+
+[data-theme="dark"] .pfm-loading__overlay,
+.pfm-dark .pfm-loading__overlay {
+  background: rgba(15, 23, 42, 0.55);
+}
+
+@keyframes pfm-loading-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Spinner: 24px ring, orange accent, animates 800ms. */
+.pfm-loading__spinner {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--hairline, rgba(15, 23, 42, 0.14));
+  border-top-color: var(--orange, #f97316);
+  animation: pfm-loading-spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pfm-loading-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Label: small, ink-3, sans, never bold. */
+.pfm-loading__label {
+  font-family: var(--sans, system-ui, sans-serif);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--ink-3, #64748b);
+  text-align: center;
+  margin: 0;
+  max-width: 32ch;
+  line-height: 1.4;
+}
+
+/* Inline variant (no overlay, just spinner+label next to text). */
+.pfm-loading-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2, 8px);
+  font-family: var(--sans, system-ui, sans-serif);
+  font-size: 12px;
+  color: var(--ink-3, #64748b);
+}
+
+.pfm-loading-inline .pfm-loading__spinner {
+  width: 14px;
+  height: 14px;
+  border-width: 1.5px;
+}
+
+/* Mobile tweaks. */
+@media (max-width: 480px) {
+  .pfm-loading__overlay {
+    padding: var(--sp-3, 12px);
+    gap: var(--sp-2, 8px);
+  }
+  .pfm-loading__spinner {
+    width: 20px;
+    height: 20px;
+  }
+  .pfm-loading__label {
+    font-size: 11px;
+    max-width: 24ch;
+  }
+}
+
+/* Reduced motion: drop pulse + spin, keep static dim. */
+@media (prefers-reduced-motion: reduce) {
+  .pfm-loading.is-loading > *:not(.pfm-loading__overlay) {
+    animation: none;
+  }
+  .pfm-loading__spinner {
+    animation: none;
+    border-top-color: var(--orange, #f97316);
+    /* Use a static "loading" affordance — solid ring slice via gradient. */
+    background: conic-gradient(var(--orange, #f97316) 0 25%, transparent 25% 100%);
+    border: 2px solid transparent;
+    -webkit-mask: radial-gradient(circle 10px, transparent 99%, #000 100%);
+            mask: radial-gradient(circle 10px, transparent 99%, #000 100%);
+  }
+  .pfm-loading__overlay {
+    animation: none;
+    opacity: 1;
+  }
+}

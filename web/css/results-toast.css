@@ -1,0 +1,204 @@
+/* ============================================================
+ * results-toast.css  (W11-07, wave-11)
+ *
+ * Off-screen fit-complete toast. Shown when /fit finishes and
+ * the regression result panel (#results) is not visible in the
+ * viewport. Click → smooth-scroll to #results.
+ *
+ * Companion: web/js/results-toast.js (mounts root, listens for
+ * `pfm:fit-complete` dispatched by W11-02 events-bridge).
+ *
+ * Tokens consumed (no redefinitions — owned by tokens.css /
+ * global-refinement.css):
+ *   --surface, --ink, --ink-2, --ink-3, --orange, --orange-2,
+ *   --hairline, --hairline-strong, --shadow-2, --shadow-3,
+ *   --r-3, --sp-3, --sp-4, --sans, --mono, --t, --t-fast, --ease,
+ *   --focus-ring.
+ * ============================================================ */
+
+.pfm-rt-root {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none; /* root is transparent; toasts re-enable */
+}
+
+.pfm-rt-toast {
+  pointer-events: auto;
+  box-sizing: border-box;
+  width: 320px;
+  min-height: 56px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-3, 8px);
+  box-shadow: var(--shadow-2);
+
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.35;
+
+  cursor: pointer;
+  user-select: none;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity var(--t, 180ms) var(--ease, ease-out),
+    transform 200ms var(--ease, ease-out),
+    box-shadow var(--t, 180ms) var(--ease, ease-out),
+    border-color var(--t, 180ms) var(--ease, ease-out);
+}
+
+.pfm-rt-toast.is-enter {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pfm-rt-toast.is-leave {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.pfm-rt-toast:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-3);
+  border-color: var(--hairline-strong);
+}
+
+.pfm-rt-toast:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring, 0 0 0 3px rgba(249, 115, 22, 0.28));
+}
+
+/* ---- Inner layout ---- */
+
+.pfm-rt-icon {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--orange-soft, rgba(249, 115, 22, 0.10));
+  color: var(--orange, #f97316);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pfm-rt-body {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.pfm-rt-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pfm-rt-sub {
+  font-size: 11px;
+  color: var(--ink-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pfm-rt-r2 {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.pfm-rt-r2.is-strong { color: var(--orange, #f97316); }
+.pfm-rt-r2.is-weak   { color: var(--ink-3, #64748b); }
+.pfm-rt-r2.is-mid    { color: var(--ink-2, #334155); }
+
+.pfm-rt-sep {
+  margin: 0 6px;
+  color: var(--ink-4, #94a3b8);
+}
+
+.pfm-rt-cta {
+  flex: 0 0 auto;
+  font-size: 11px;
+  color: var(--ink-3);
+  margin-left: 6px;
+  white-space: nowrap;
+}
+
+.pfm-rt-close {
+  flex: 0 0 auto;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 4px;
+  margin: -4px -6px -4px 0;
+  color: var(--ink-3);
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1;
+  transition: color var(--t-fast, 120ms) var(--ease, ease-out),
+              background-color var(--t-fast, 120ms) var(--ease, ease-out);
+}
+
+.pfm-rt-close:hover {
+  color: var(--ink);
+  background: var(--bg-alt, rgba(15, 23, 42, 0.04));
+}
+
+.pfm-rt-close:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring, 0 0 0 2px rgba(249, 115, 22, 0.28));
+}
+
+/* ---- Mobile: full-width with 16px gutters ---- */
+
+@media (max-width: 480px) {
+  .pfm-rt-root {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+  .pfm-rt-toast {
+    width: auto;
+  }
+}
+
+/* ---- Reduced motion ---- */
+
+@media (prefers-reduced-motion: reduce) {
+  .pfm-rt-toast,
+  .pfm-rt-toast.is-enter,
+  .pfm-rt-toast.is-leave {
+    transition: opacity 1ms linear;
+    transform: none;
+  }
+  .pfm-rt-toast:hover {
+    transform: none;
+  }
+}
+
+/* ============================================================
+ * End of results-toast.css
+ * ============================================================ */

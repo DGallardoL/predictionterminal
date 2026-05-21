@@ -1,0 +1,71 @@
+# Build-context exclusions — these never need to be uploaded to the Docker
+# daemon (or to Fly when using `flyctl deploy --remote-only`). Without this
+# file the .venv/ (~400 MB), dump.rdb, tests/, and various __pycache__
+# directories all ride along on every build, slowing deploys by 30-60s and
+# potentially leaking transient Redis state.
+
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.eggs/
+.installed.cfg
+*.egg
+
+# Tests + tooling caches
+tests/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+.tox/
+.nox/
+
+# Local Redis dumps (would leak data)
+dump.rdb
+*.rdb
+appendonly.aof
+
+# Editor + OS noise
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Build / dist
+dist/
+build/
+*.tar.gz
+*.whl
+
+# Version control
+.git/
+.gitignore
+.gitattributes
+
+# Logs + tmp
+*.log
+logs/
+tmp/
+
+# Misc artifacts that don't belong in the runtime image
+factor_validation_report.json
+*.bak
+*.orig
+
+# Frontend assets are served from a separate context; never copy them into
+# the api image even by accident.
+../web/

@@ -1,0 +1,785 @@
+/* ============================================================
+ * responsive-mobile.css  (W11-10, wave-11)
+ *
+ * Comprehensive mobile breakpoints for the Prediction Terminal
+ * frontend. This sheet MUST be the LAST <link rel="stylesheet">
+ * in <head> so the cascade lets these overrides win at small
+ * viewports without raising specificity unnecessarily.
+ *
+ * BREAKPOINTS:
+ *   - max-width 768px : phone landscape / large phones / small
+ *                       tablets in portrait. Major layout
+ *                       collapse to single column, side panels
+ *                       morph to bottom sheets, top nav becomes
+ *                       a CSS-only hamburger.
+ *   - max-width 480px : phone portrait. Tighter type scale,
+ *                       stacked headers, single-column nav
+ *                       tap targets.
+ *
+ * SCOPING:
+ *   To avoid arms-race specificity wars with each mode's own
+ *   small-screen rules (modal.css 640px, terminal-layout 768px,
+ *   cmdk 560px, etc.) every override here lives inside the
+ *   `@media` block. Where JS toggling matters (T05 dark mode
+ *   sets `data-theme`; index-html-owner may set
+ *   `data-pfm-mobile="true"` on <body> from a UA sniff), we
+ *   prefer the `body[data-pfm-mobile="true"]` qualified
+ *   selector so the rule is opt-in and never fights an inline
+ *   style on desktop.
+ *
+ * WHAT STAYS:
+ *   - <h1> remains Instrument Serif 28px (the brand mark);
+ *     other headings scale down ~10%.
+ *   - All CSS variables defined elsewhere are CONSUMED here,
+ *     never redefined.
+ *
+ * WHAT GETS COLLAPSED AT <=768px:
+ *   - .grid, .row, .two-col, .three-col, [class*="cols-"]   -> 1col
+ *   - .terminal-layout, .alphahub-grid, .strategies-layout
+ *   - side panels (.side-panel, .aside, .detail-pane)        -> sheet
+ *   - .modal (non-fullscreen)                                -> bottom sheet
+ *   - top nav (.top-nav, header.app-header)                  -> hamburger
+ *   - forms (.form-row, .form-grid)                          -> stacked
+ *   - tables (table)                                         -> card stack
+ *
+ * WHAT DOES NOT DEGRADE AT <=480px:
+ *   - h1 brand mark (kept at Instrument Serif 28px on purpose)
+ *   - .modal--fullscreen (already covers viewport; no change)
+ *   - .toast, .pfm-toast, .connection-status pill (already mobile-fit)
+ *   - .skeleton placeholders (already fluid)
+ *   - print.css print rules (different media: print)
+ *
+ * MOUNT ORDER (MANDATORY):
+ *   This sheet is APPENDED LAST. Do not mount before any other
+ *   mode CSS, or its overrides will be partly clobbered by
+ *   later-specificity selectors in feature sheets.
+ * ============================================================ */
+
+
+/* ============================================================
+ * Tier 1 : <= 768px  (phone landscape, small tablets)
+ * ============================================================ */
+@media (max-width: 768px) {
+
+  /* --------------------------------------------------------
+   * 1.1 Type scale (~10% reduction). h1 is preserved.
+   * -------------------------------------------------------- */
+  html { font-size: 14.4px; }   /* 16px * 0.9 base reduction */
+
+  h1 {
+    /* The brand mark stays. Instrument Serif at 28px is the
+     * fixed identity element per spec. */
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: 28px !important;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  h2 { font-size: 1.35rem; line-height: 1.25; }
+  h3 { font-size: 1.10rem; line-height: 1.3;  }
+  h4 { font-size: 0.95rem; line-height: 1.3;  }
+  h5, h6 { font-size: 0.85rem; line-height: 1.3; }
+
+  p, li, dd, dt, label, button, input, select, textarea,
+  .body-text, .table, table {
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+
+  small, .small, .text-xs, .caption {
+    font-size: 0.78rem;
+  }
+
+  /* --------------------------------------------------------
+   * 1.2 Multi-column grids -> single column
+   * -------------------------------------------------------- */
+  .grid,
+  .row,
+  .two-col, .three-col, .four-col,
+  [class*="cols-2"], [class*="cols-3"], [class*="cols-4"],
+  .terminal-layout,
+  .terminal-grid,
+  .alphahub-grid,
+  .strategies-layout,
+  .strategies-grid,
+  .arblive-grid,
+  .arblive-opps-layout,
+  .arblive-split,
+  .regression-layout,
+  .form-grid,
+  .form-row,
+  .stats-strip,
+  .metric-strip,
+  .kpi-row,
+  .summary-row,
+  .header-grid,
+  .layout-3fr-2fr,
+  .layout-2fr-1fr,
+  .layout-1fr-1fr,
+  .panel-grid {
+    display: block !important;
+    grid-template-columns: 1fr !important;
+    grid-template-areas: none !important;
+    gap: var(--sp-3, 12px) !important;
+  }
+
+  /* Flex rows that act as multi-column layouts on desktop. */
+  .flex-row,
+  .row-flex,
+  .hstack,
+  .toolbar,
+  .filter-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: var(--sp-2, 8px) !important;
+  }
+
+  /* Each direct child of a collapsed grid should be full-width. */
+  .grid > *,
+  .two-col > *,
+  .three-col > *,
+  .four-col > *,
+  .terminal-layout > *,
+  .alphahub-grid > *,
+  .strategies-layout > *,
+  .arblive-grid > *,
+  .arblive-opps-layout > * {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* --------------------------------------------------------
+   * 1.3 Touch targets >= 44px (Apple HIG / WCAG AAA)
+   * -------------------------------------------------------- */
+  button,
+  .btn, .button,
+  a.btn, a.button,
+  [role="button"],
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  .tab, .mode-tab, .sub-tab,
+  .nav-link,
+  .pill, .tag,
+  .menu-item,
+  .alphahub-card,
+  .factor-row,
+  .tappable,
+  td[data-tappable],
+  tr[data-tappable] {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 10px 14px;
+    /* Improve hit area without changing visual padding too much: */
+    touch-action: manipulation;
+  }
+
+  /* Inline links inside text don't need a 44px box. */
+  p a, li a, .body-text a {
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+  }
+
+  /* Icon-only buttons get a square 44 box. */
+  .btn-icon,
+  .icon-button,
+  button[aria-label][data-icon-only],
+  .close-btn,
+  .modal__close {
+    min-width: 44px;
+    min-height: 44px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* --------------------------------------------------------
+   * 1.4 Side panels  ->  bottom sheets
+   *     (.side-panel, .aside, .detail-pane, .alphahub-detail,
+   *      .terminal-side, .strategies-side)
+   * -------------------------------------------------------- */
+  .side-panel,
+  .aside,
+  .detail-pane,
+  .alphahub-detail,
+  .terminal-side,
+  .strategies-side,
+  .arblive-detail,
+  .right-rail,
+  .left-rail {
+    position: fixed !important;
+    left: 0; right: 0; bottom: 0;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 80vh;
+    border-radius: 16px 16px 0 0;
+    border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+    border-bottom: none;
+    background: var(--surface, #fff);
+    color: var(--ink, #0f172a);
+    box-shadow: 0 -8px 32px rgba(15, 23, 42, 0.18);
+    z-index: 990;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: var(--sp-4, 16px);
+    transform: translateY(100%);
+    transition: transform 240ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .side-panel.is-open,
+  .aside.is-open,
+  .detail-pane.is-open,
+  .alphahub-detail.is-open,
+  .terminal-side.is-open,
+  .strategies-side.is-open,
+  .arblive-detail.is-open,
+  body[data-pfm-mobile="true"] .side-panel,
+  body[data-pfm-mobile="true"] .detail-pane.is-active {
+    transform: translateY(0);
+  }
+
+  /* Grab handle pseudo on side panels acting as sheets. */
+  .side-panel::before,
+  .aside::before,
+  .detail-pane::before,
+  .alphahub-detail::before,
+  .terminal-side::before,
+  .strategies-side::before {
+    content: "";
+    position: sticky;
+    top: 0;
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin: 6px auto var(--sp-3, 12px);
+    border-radius: 2px;
+    background: var(--hairline-strong, rgba(15, 23, 42, 0.18));
+  }
+
+  /* --------------------------------------------------------
+   * 1.5 Modal  ->  bottom-sheet (overrides T12 modal.css)
+   *     Note: .modal--fullscreen keeps its full-viewport
+   *     behaviour; we don't apply the sheet treatment there.
+   * -------------------------------------------------------- */
+  .modal-backdrop {
+    align-items: flex-end !important;
+    padding: 0 !important;
+  }
+
+  .modal:not(.modal--fullscreen) {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 80vh !important;
+    margin: 0 !important;
+    border-radius: 16px 16px 0 0 !important;
+    border-bottom: none !important;
+    /* Slide up from bottom */
+    transform: translateY(100%);
+    animation: pfm-mobile-sheet-up 260ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    /* Swipe-down dismiss: CSS-only transform target.
+     * Setting [data-dismissing="true"] from JS triggers slide-out;
+     * also works on :focus-within loss for keyboard users. */
+    transition: transform 220ms cubic-bezier(0.4, 0, 0.2, 1);
+    touch-action: pan-y;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Drag handle pseudo-element on the sheet modal. */
+  .modal:not(.modal--fullscreen)::before {
+    content: "";
+    position: sticky;
+    top: 0;
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin: 8px auto var(--sp-2, 8px);
+    border-radius: 2px;
+    background: var(--hairline-strong, rgba(15, 23, 42, 0.18));
+    z-index: 1;
+  }
+
+  /* Dismissal (JS may set data-dismissing="true" on the modal). */
+  .modal[data-dismissing="true"]:not(.modal--fullscreen),
+  .modal-backdrop.is-leaving .modal:not(.modal--fullscreen) {
+    transform: translateY(100%) !important;
+    animation: none;
+  }
+
+  @keyframes pfm-mobile-sheet-up {
+    from { transform: translateY(100%); }
+    to   { transform: translateY(0); }
+  }
+
+  /* Honour reduced motion: fade only, no slide. */
+  @media (prefers-reduced-motion: reduce) {
+    .modal:not(.modal--fullscreen) {
+      animation: none;
+      transform: translateY(0);
+      transition: opacity 160ms linear;
+    }
+  }
+
+  /* --------------------------------------------------------
+   * 1.6 Top nav  ->  CSS-only hamburger menu
+   *     Pattern: a hidden checkbox + <label class="menu-toggle">.
+   *     When the checkbox is :checked, the .top-nav slides in.
+   *     Markup that the index.html owner must add:
+   *       <input type="checkbox" id="pfm-menu-toggle"
+   *              class="menu-toggle-checkbox" hidden>
+   *       <label for="pfm-menu-toggle" class="menu-toggle"
+   *              aria-label="Toggle navigation">
+   *         <span></span><span></span><span></span>
+   *       </label>
+   * -------------------------------------------------------- */
+  .menu-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 12px 10px;
+    cursor: pointer;
+    border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+    border-radius: var(--r-2, 6px);
+    background: var(--surface, #fff);
+    position: relative;
+    z-index: 1001;
+  }
+  .menu-toggle > span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--ink, #0f172a);
+    border-radius: 1px;
+    transition: transform 180ms ease, opacity 180ms ease;
+  }
+  .menu-toggle-checkbox { display: none; }
+
+  /* Animate the bars into an X when the menu is open. */
+  .menu-toggle-checkbox:checked + .menu-toggle > span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-toggle-checkbox:checked + .menu-toggle > span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle-checkbox:checked + .menu-toggle > span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Top-nav element behaviour. */
+  .top-nav,
+  header.app-header > nav,
+  .app-nav,
+  .pfm-top-nav,
+  .mode-switcher {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    background: var(--surface, #fff);
+    border-bottom: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.10);
+    z-index: 1000;
+    padding: var(--sp-4, 16px);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2, 8px);
+    transition: transform 220ms cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 180ms linear;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
+  /* When the hamburger checkbox is checked anywhere up the tree,
+   * the immediately-following .top-nav (in a sibling structure)
+   * slides into view. The index-html owner should structure as:
+   *   <input class="menu-toggle-checkbox">
+   *   <label class="menu-toggle">...</label>
+   *   <nav class="top-nav">...</nav> */
+  .menu-toggle-checkbox:checked ~ .top-nav,
+  .menu-toggle-checkbox:checked ~ .app-nav,
+  .menu-toggle-checkbox:checked ~ .pfm-top-nav,
+  .menu-toggle-checkbox:checked ~ header.app-header > nav,
+  .menu-toggle-checkbox:checked ~ .mode-switcher {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Body class fallback for JS-toggled menus (in case the
+   * index owner wires it via JS instead of pure CSS). */
+  body[data-pfm-mobile="true"][data-nav-open="true"] .top-nav,
+  body[data-pfm-mobile="true"][data-nav-open="true"] .app-nav,
+  body[data-pfm-mobile="true"][data-nav-open="true"] .pfm-top-nav,
+  body[data-pfm-mobile="true"][data-nav-open="true"] .mode-switcher {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Nav links inside the slide-down panel become large tap rows. */
+  .top-nav a, .top-nav button,
+  .app-nav a, .app-nav button,
+  .pfm-top-nav a, .pfm-top-nav button,
+  .mode-switcher a, .mode-switcher button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 48px;
+    padding: var(--sp-3, 12px) var(--sp-4, 16px);
+    border-radius: var(--r-2, 6px);
+    text-align: left;
+    border: none;
+    background: transparent;
+    color: var(--ink, #0f172a);
+  }
+
+  /* --------------------------------------------------------
+   * 1.7 Forms: stacked, full-width, labels above
+   * -------------------------------------------------------- */
+  form, .form, .pfm-form {
+    width: 100%;
+  }
+
+  .form-row,
+  .form-group,
+  .field,
+  .input-group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: var(--sp-1, 4px) !important;
+    margin-bottom: var(--sp-3, 12px);
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--sp-1, 4px);
+    font-weight: 500;
+    color: var(--ink-2, #334155);
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  select,
+  textarea {
+    width: 100% !important;
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 16px;   /* prevents iOS auto-zoom on focus */
+    border-radius: var(--r-2, 6px);
+    box-sizing: border-box;
+  }
+
+  textarea { min-height: 88px; }
+
+  /* Checkbox + radio rows: label sits to the right, tap area large. */
+  .checkbox-row,
+  .radio-row,
+  label.inline {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: var(--sp-2, 8px) !important;
+    min-height: 44px;
+  }
+  input[type="checkbox"], input[type="radio"] {
+    width: 22px; height: 22px;
+    margin: 0;
+  }
+
+  /* --------------------------------------------------------
+   * 1.8 Tables  ->  card stacks (label : value pairs)
+   *     Cells must have data-label="..." for headers to render
+   *     above each value. If absent, the cell stacks without
+   *     a header — still legible.
+   * -------------------------------------------------------- */
+  table.responsive-table,
+  table[data-responsive="true"],
+  body[data-pfm-mobile="true"] table {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+
+  table.responsive-table thead,
+  table[data-responsive="true"] thead,
+  body[data-pfm-mobile="true"] table thead {
+    /* Visually hide header but keep accessible for screen readers
+     * via the data-label echo on each cell. */
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  table.responsive-table tbody,
+  table[data-responsive="true"] tbody,
+  body[data-pfm-mobile="true"] table tbody {
+    display: block;
+    width: 100%;
+  }
+
+  table.responsive-table tr,
+  table[data-responsive="true"] tr,
+  body[data-pfm-mobile="true"] table tr {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--sp-3, 12px);
+    padding: var(--sp-3, 12px);
+    border: 1px solid var(--hairline, rgba(15, 23, 42, 0.08));
+    border-radius: var(--r-3, 8px);
+    background: var(--surface, #fff);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  }
+
+  table.responsive-table td,
+  table[data-responsive="true"] td,
+  body[data-pfm-mobile="true"] table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--sp-3, 12px);
+    padding: 6px 0;
+    border: none !important;
+    text-align: right;
+  }
+
+  table.responsive-table td::before,
+  table[data-responsive="true"] td::before,
+  body[data-pfm-mobile="true"] table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--ink-3, #64748b);
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-align: left;
+    flex: 1 1 auto;
+  }
+
+  /* --------------------------------------------------------
+   * 1.9 Charts (Plotly + generic): reduced height, hide modebar,
+   *     thinner axis labels.
+   * -------------------------------------------------------- */
+  .plotly-chart,
+  .pfm-chart,
+  .chart-container,
+  [data-chart],
+  .js-plotly-plot,
+  .plot-container {
+    height: 200px !important;
+    min-height: 200px !important;
+    max-height: 240px;
+    width: 100% !important;
+  }
+
+  /* Plotly toolbar — hide on small screens; users can rotate
+   * to landscape if they need the modebar. */
+  .js-plotly-plot .plotly .modebar,
+  .modebar-container {
+    display: none !important;
+  }
+
+  /* Every-other-label axis density: Plotly renders ticks as
+   * <text> children of .xtick / .ytick groups. We hide every
+   * 2nd tick + label via :nth-child(even). */
+  .js-plotly-plot .xtick:nth-child(even),
+  .js-plotly-plot .ytick:nth-child(even),
+  .js-plotly-plot g.xtick:nth-of-type(even) text,
+  .js-plotly-plot g.ytick:nth-of-type(even) text {
+    display: none !important;
+    visibility: hidden;
+  }
+
+  /* Reduce axis label font size for charts that escape Plotly. */
+  .js-plotly-plot text {
+    font-size: 9px !important;
+  }
+
+  /* --------------------------------------------------------
+   * 1.10 Spacing trim
+   * -------------------------------------------------------- */
+  .container, .pfm-container, main, section, .pane, .mode-pane {
+    padding-left: var(--sp-3, 12px) !important;
+    padding-right: var(--sp-3, 12px) !important;
+  }
+
+  /* Sticky elements get tighter offsets. */
+  .sticky-top, [data-sticky-top] {
+    top: 0;
+  }
+
+  /* Long-form descriptive text gains a bit of horizontal hug. */
+  article, .prose, .markdown-body {
+    padding-left: var(--sp-2, 8px);
+    padding-right: var(--sp-2, 8px);
+  }
+}
+
+
+/* ============================================================
+ * Tier 2 : <= 480px  (phone portrait)
+ * Further reduction. h1 still pinned.
+ * ============================================================ */
+@media (max-width: 480px) {
+
+  /* --------------------------------------------------------
+   * 2.1 Type scale further reduced (~80% of base).
+   * -------------------------------------------------------- */
+  html { font-size: 13.6px; }
+
+  h1 {
+    /* Still the brand mark — DO NOT shrink. */
+    font-size: 28px !important;
+    line-height: 1.1;
+  }
+  h2 { font-size: 1.20rem; }
+  h3 { font-size: 1.02rem; }
+  h4 { font-size: 0.90rem; }
+  h5, h6 { font-size: 0.80rem; }
+
+  p, li, dd, dt, label, button, input, select, textarea,
+  .body-text {
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  small, .small, .caption { font-size: 0.74rem; }
+
+  /* --------------------------------------------------------
+   * 2.2 Single tap-target column for navigation.
+   *     Already collapsed at 768; here we enforce extra
+   *     vertical rhythm and remove any residual flex-direction:
+   *     row defaults that survived.
+   * -------------------------------------------------------- */
+  .top-nav, .app-nav, .pfm-top-nav, .mode-switcher,
+  .sub-nav, .tab-group, .sub-tab-group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: var(--sp-1, 4px) !important;
+    width: 100% !important;
+  }
+
+  .top-nav a, .top-nav button,
+  .app-nav a, .app-nav button,
+  .mode-switcher a, .mode-switcher button,
+  .sub-nav a, .sub-nav button,
+  .tab, .sub-tab {
+    width: 100% !important;
+    min-height: 48px;
+    padding: var(--sp-3, 12px) var(--sp-4, 16px) !important;
+    border-radius: var(--r-2, 6px);
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  /* --------------------------------------------------------
+   * 2.3 Stacked headers.
+   *     Page / panel headers that pair a title + actions
+   *     row should stack so the title gets full width and
+   *     the actions wrap below.
+   * -------------------------------------------------------- */
+  .page-header,
+  .panel-header,
+  .section-header,
+  .pane-header,
+  header.app-header,
+  .pfm-header,
+  .modal__header,
+  .alphahub-header,
+  .terminal-header,
+  .strategies-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: var(--sp-2, 8px) !important;
+    width: 100% !important;
+    padding: var(--sp-3, 12px) !important;
+  }
+
+  .page-header > *,
+  .panel-header > *,
+  .section-header > *,
+  .pane-header > *,
+  header.app-header > *,
+  .modal__header > * {
+    width: 100% !important;
+  }
+
+  .page-header .actions,
+  .panel-header .actions,
+  .section-header .actions,
+  .pane-header .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2, 8px);
+    justify-content: flex-start;
+  }
+
+  /* --------------------------------------------------------
+   * 2.4 Trim chrome further.
+   * -------------------------------------------------------- */
+  .container, .pfm-container, main, section, .pane, .mode-pane {
+    padding-left: var(--sp-2, 8px) !important;
+    padding-right: var(--sp-2, 8px) !important;
+  }
+
+  /* Big pill / KPI numerals can be 1 line shorter. */
+  .kpi-value, .stat-value, .metric-value, .big-number {
+    font-size: 1.4rem !important;
+    line-height: 1.1;
+  }
+
+  /* Modal bottom-sheet keeps drag handle; trim header padding. */
+  .modal:not(.modal--fullscreen) .modal__header {
+    padding: var(--sp-3, 12px) var(--sp-3, 12px) var(--sp-2, 8px);
+  }
+  .modal:not(.modal--fullscreen) .modal__body {
+    padding: var(--sp-2, 8px) var(--sp-3, 12px) var(--sp-4, 16px);
+  }
+
+  /* Charts shrink slightly more in portrait. */
+  .plotly-chart,
+  .pfm-chart,
+  .chart-container,
+  [data-chart],
+  .js-plotly-plot {
+    height: 180px !important;
+    min-height: 180px !important;
+  }
+}
+
+
+/* ============================================================
+ * Safety net : honour reduced-motion globally for mobile
+ * sliding transforms.
+ * ============================================================ */
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+  .top-nav, .app-nav, .pfm-top-nav, .mode-switcher,
+  .side-panel, .aside, .detail-pane,
+  .alphahub-detail, .terminal-side, .strategies-side,
+  .modal:not(.modal--fullscreen) {
+    transition: none !important;
+    animation: none !important;
+  }
+}

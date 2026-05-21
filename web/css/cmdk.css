@@ -1,0 +1,405 @@
+/* T03 — Command Palette (⌘K / Ctrl+K)
+ * Scoped under .pfm-cmdk-* namespace. Mounted lazily by web/js/cmdk.js.
+ * No CSS variable redefinitions; consumes tokens from web/css/tokens.css when present.
+ */
+
+.pfm-cmdk-root {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 14vh;
+  font-family: var(--font-sans, "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif);
+  color: var(--cmdk-fg, #0a0a0c);
+  pointer-events: none;
+}
+
+.pfm-cmdk-root[data-open="true"] {
+  display: flex;
+  pointer-events: auto;
+}
+
+.pfm-cmdk-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 9, 12, 0.55);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  opacity: 0;
+  transition: opacity 120ms ease-out;
+}
+
+.pfm-cmdk-root[data-open="true"] .pfm-cmdk-backdrop {
+  opacity: 1;
+}
+
+.pfm-cmdk-panel {
+  position: relative;
+  width: min(600px, calc(100vw - 32px));
+  max-height: calc(72vh);
+  display: flex;
+  flex-direction: column;
+  background: var(--cmdk-bg, #ffffff);
+  border: 1px solid var(--cmdk-border, rgba(0, 0, 0, 0.08));
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transform: scale(0.96);
+  opacity: 0;
+  transition: transform 120ms ease-out, opacity 120ms ease-out;
+  will-change: transform, opacity;
+}
+
+.pfm-cmdk-root[data-open="true"] .pfm-cmdk-panel {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Header — input row */
+.pfm-cmdk-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--cmdk-border, rgba(0, 0, 0, 0.06));
+  background: var(--cmdk-bg, #ffffff);
+}
+
+.pfm-cmdk-icon {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  color: var(--cmdk-muted, #8a8d94);
+  opacity: 0.8;
+}
+
+.pfm-cmdk-input {
+  flex: 1 1 auto;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font: 500 15px/1.4 var(--font-sans, "Inter", system-ui, sans-serif);
+  color: inherit;
+  letter-spacing: -0.005em;
+  padding: 2px 0;
+  min-width: 0;
+}
+
+.pfm-cmdk-input::placeholder {
+  color: var(--cmdk-muted, #9da0a8);
+  font-weight: 400;
+}
+
+.pfm-cmdk-kbd {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 6px;
+  font: 500 11px/1 var(--font-mono, "JetBrains Mono", "SF Mono", ui-monospace, Menlo, monospace);
+  color: var(--cmdk-muted, #6e7079);
+  background: var(--cmdk-kbd-bg, rgba(0, 0, 0, 0.05));
+  border: 1px solid var(--cmdk-border, rgba(0, 0, 0, 0.08));
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+/* Filter pills */
+.pfm-cmdk-filters {
+  display: flex;
+  gap: 6px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--cmdk-border, rgba(0, 0, 0, 0.05));
+  background: var(--cmdk-subtle, rgba(0, 0, 0, 0.015));
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.pfm-cmdk-filters::-webkit-scrollbar { display: none; }
+
+.pfm-cmdk-filter {
+  flex: 0 0 auto;
+  appearance: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--cmdk-muted, #6e7079);
+  font: 500 11px/1 var(--font-sans, "Inter", system-ui, sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 5px 9px;
+  border-radius: 999px;
+  transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+
+.pfm-cmdk-filter:hover {
+  color: var(--cmdk-fg, #1a1c20);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.pfm-cmdk-filter[data-active="true"] {
+  color: var(--cmdk-accent-fg, #ffffff);
+  background: var(--cmdk-accent, #0a0a0c);
+  border-color: var(--cmdk-accent, #0a0a0c);
+}
+
+/* Results list */
+.pfm-cmdk-list {
+  flex: 1 1 auto;
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.pfm-cmdk-group-label {
+  padding: 10px 16px 4px;
+  font: 600 10px/1 var(--font-sans, "Inter", system-ui, sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cmdk-muted, #8a8d94);
+}
+
+.pfm-cmdk-row {
+  display: grid;
+  grid-template-columns: 22px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  cursor: pointer;
+  font: 500 13px/1.35 var(--font-sans, "Inter", system-ui, sans-serif);
+  color: var(--cmdk-fg, #1a1c20);
+  border-left: 2px solid transparent;
+  transition: background 80ms ease;
+}
+
+.pfm-cmdk-row:hover,
+.pfm-cmdk-row[data-active="true"] {
+  background: var(--cmdk-hover, rgba(0, 0, 0, 0.04));
+  border-left-color: var(--cmdk-accent, #ff7a18);
+}
+
+.pfm-cmdk-row[data-active="true"] {
+  background: var(--cmdk-active, rgba(255, 122, 24, 0.06));
+}
+
+.pfm-cmdk-row-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font: 600 11px/1 var(--font-mono, "JetBrains Mono", ui-monospace, monospace);
+  color: var(--cmdk-muted, #6e7079);
+  background: var(--cmdk-pill-bg, rgba(0, 0, 0, 0.05));
+  border-radius: 4px;
+}
+
+.pfm-cmdk-row-body {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pfm-cmdk-row-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  color: var(--cmdk-fg, #1a1c20);
+}
+
+.pfm-cmdk-row-sub {
+  font: 400 11px/1.25 var(--font-sans, "Inter", system-ui, sans-serif);
+  color: var(--cmdk-muted, #8a8d94);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pfm-cmdk-row[data-kind="slug"] .pfm-cmdk-row-title,
+.pfm-cmdk-row[data-kind="slug"] .pfm-cmdk-row-sub,
+.pfm-cmdk-row[data-kind="slash"] .pfm-cmdk-row-title,
+.pfm-cmdk-row[data-kind="factor"] .pfm-cmdk-row-sub {
+  font-family: var(--font-mono, "JetBrains Mono", "SF Mono", ui-monospace, Menlo, monospace);
+  font-feature-settings: "ss01", "ss02";
+  letter-spacing: -0.01em;
+}
+
+.pfm-cmdk-row-meta {
+  flex: 0 0 auto;
+  font: 500 10px/1 var(--font-mono, "JetBrains Mono", ui-monospace, monospace);
+  color: var(--cmdk-muted, #8a8d94);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 6px;
+  background: var(--cmdk-pill-bg, rgba(0, 0, 0, 0.04));
+  border-radius: 3px;
+}
+
+.pfm-cmdk-row mark {
+  background: transparent;
+  color: var(--cmdk-accent, #ff7a18);
+  font-weight: 600;
+  padding: 0;
+}
+
+/* Empty state */
+.pfm-cmdk-empty {
+  padding: 18px 16px 20px;
+  color: var(--cmdk-muted, #8a8d94);
+  font: 400 12px/1.5 var(--font-sans, "Inter", system-ui, sans-serif);
+}
+
+.pfm-cmdk-empty-title {
+  font: 600 11px/1 var(--font-sans, "Inter", system-ui, sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cmdk-muted, #6e7079);
+  margin: 0 0 8px;
+}
+
+.pfm-cmdk-empty-tip {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 4px 0;
+  border-top: 1px dashed var(--cmdk-border, rgba(0, 0, 0, 0.06));
+}
+
+.pfm-cmdk-empty-tip:first-of-type { border-top: 0; }
+
+.pfm-cmdk-empty-tip code {
+  font: 500 11px/1 var(--font-mono, "JetBrains Mono", ui-monospace, monospace);
+  color: var(--cmdk-fg, #1a1c20);
+  background: var(--cmdk-pill-bg, rgba(0, 0, 0, 0.04));
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+/* Footer */
+.pfm-cmdk-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 14px;
+  border-top: 1px solid var(--cmdk-border, rgba(0, 0, 0, 0.05));
+  background: var(--cmdk-subtle, rgba(0, 0, 0, 0.015));
+  font: 500 10px/1 var(--font-sans, "Inter", system-ui, sans-serif);
+  color: var(--cmdk-muted, #8a8d94);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.pfm-cmdk-foot-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pfm-cmdk-foot-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pfm-cmdk-foot-key kbd {
+  font: 500 10px/1 var(--font-mono, "JetBrains Mono", ui-monospace, monospace);
+  color: var(--cmdk-muted, #6e7079);
+  background: var(--cmdk-kbd-bg, rgba(0, 0, 0, 0.05));
+  border: 1px solid var(--cmdk-border, rgba(0, 0, 0, 0.07));
+  border-radius: 3px;
+  padding: 2px 5px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* Loading hint */
+.pfm-cmdk-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--cmdk-accent, #ff7a18) 50%, transparent 100%);
+  background-size: 200% 100%;
+  opacity: 0;
+  pointer-events: none;
+  animation: pfm-cmdk-load 1.2s ease-in-out infinite;
+}
+
+.pfm-cmdk-root[data-loading="true"] .pfm-cmdk-loading {
+  opacity: 1;
+}
+
+@keyframes pfm-cmdk-load {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -100% 0; }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .pfm-cmdk-root {
+    --cmdk-fg: #ececf0;
+    --cmdk-muted: #8a8d94;
+    --cmdk-bg: #131418;
+    --cmdk-subtle: rgba(255, 255, 255, 0.025);
+    --cmdk-border: rgba(255, 255, 255, 0.07);
+    --cmdk-hover: rgba(255, 255, 255, 0.04);
+    --cmdk-active: rgba(255, 122, 24, 0.10);
+    --cmdk-pill-bg: rgba(255, 255, 255, 0.05);
+    --cmdk-kbd-bg: rgba(255, 255, 255, 0.06);
+    --cmdk-accent: #ff8a2e;
+    --cmdk-accent-fg: #0a0a0c;
+  }
+  .pfm-cmdk-backdrop {
+    background: rgba(0, 0, 0, 0.65);
+  }
+}
+
+[data-pfm-theme="dark"] .pfm-cmdk-root {
+  --cmdk-fg: #ececf0;
+  --cmdk-muted: #8a8d94;
+  --cmdk-bg: #131418;
+  --cmdk-subtle: rgba(255, 255, 255, 0.025);
+  --cmdk-border: rgba(255, 255, 255, 0.07);
+  --cmdk-hover: rgba(255, 255, 255, 0.04);
+  --cmdk-active: rgba(255, 122, 24, 0.10);
+  --cmdk-pill-bg: rgba(255, 255, 255, 0.05);
+  --cmdk-kbd-bg: rgba(255, 255, 255, 0.06);
+  --cmdk-accent: #ff8a2e;
+  --cmdk-accent-fg: #0a0a0c;
+}
+
+[data-pfm-theme="dark"] .pfm-cmdk-backdrop {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .pfm-cmdk-root {
+    padding-top: 6vh;
+  }
+  .pfm-cmdk-panel {
+    max-height: calc(86vh);
+    width: calc(100vw - 16px);
+    border-radius: 10px;
+  }
+  .pfm-cmdk-header { padding: 12px 14px; }
+  .pfm-cmdk-input  { font-size: 16px; } /* prevent iOS zoom */
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .pfm-cmdk-backdrop,
+  .pfm-cmdk-panel,
+  .pfm-cmdk-loading {
+    transition: none !important;
+    animation: none !important;
+  }
+}

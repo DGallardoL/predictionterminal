@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}PFM Export{% endblock %}</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 14mm 22mm 14mm;
+      @bottom-center {
+        content: "Educational tool. Not investment advice.  —  Page " counter(page) " of " counter(pages);
+        font-family: "Helvetica", "Arial", sans-serif;
+        font-size: 8pt;
+        color: #777;
+      }
+    }
+    body {
+      font-family: "Helvetica", "Arial", sans-serif;
+      font-size: 9pt;
+      color: #1a1a1a;
+      line-height: 1.35;
+    }
+    header.pfm-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #14213d;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    header.pfm-header .logo {
+      font-weight: 700;
+      font-size: 14pt;
+      color: #14213d;
+      letter-spacing: 0.5px;
+    }
+    header.pfm-header .logo .accent { color: #fca311; }
+    header.pfm-header .meta {
+      font-size: 8pt;
+      color: #555;
+      text-align: right;
+    }
+    h1 { font-size: 14pt; margin: 4px 0 8px 0; color: #14213d; }
+    h2 { font-size: 11pt; margin: 14px 0 4px 0; color: #14213d;
+         border-bottom: 1px solid #ccc; padding-bottom: 2px; }
+    h3 { font-size: 10pt; margin: 8px 0 3px 0; color: #14213d; }
+    table.pfm-tbl {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 8.5pt;
+      margin: 4px 0 8px 0;
+    }
+    table.pfm-tbl th, table.pfm-tbl td {
+      border: 1px solid #ddd;
+      padding: 3px 6px;
+      text-align: left;
+      vertical-align: top;
+    }
+    table.pfm-tbl th {
+      background: #14213d;
+      color: #fff;
+      font-weight: 600;
+    }
+    table.pfm-tbl tr:nth-child(even) td { background: #f8f9fb; }
+    .kv { display: inline-block; margin-right: 10px; }
+    .kv .k { color: #555; font-size: 8pt; }
+    .kv .v { font-weight: 600; }
+    .badge {
+      display: inline-block; padding: 2px 6px; border-radius: 3px;
+      font-size: 8pt; font-weight: 600; color: #fff;
+    }
+    .badge.A_GOLD       { background: #c9a227; }
+    .badge.A_STRUCTURAL { background: #2e7d32; }
+    .badge.B_VALIDATED  { background: #1565c0; }
+    .badge.B_FDR_ONLY   { background: #6a1b9a; }
+    .badge.C_TENTATIVE  { background: #ef6c00; }
+    .badge.D_RAW        { background: #757575; }
+    .muted { color: #666; }
+    .small { font-size: 7.5pt; }
+    .pagebreak { page-break-after: always; }
+  </style>
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  <header class="pfm-header">
+    <div class="logo">PFM<span class="accent">.</span> Prediction Factor Model</div>
+    <div class="meta">
+      <div>{{ filename }}</div>
+      <div>Generated {{ timestamp }} UTC</div>
+    </div>
+  </header>
+  {% block content %}{% endblock %}
+</body>
+</html>

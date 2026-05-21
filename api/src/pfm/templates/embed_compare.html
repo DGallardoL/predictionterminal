@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ title }} | PFM</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="{{ og_image_url }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{{ og_image_url }}">
+
+  <style>
+    html, body { margin: 0; padding: 0; background: transparent; }
+    .pfm-emb-card {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      box-sizing: border-box; width: 100%; padding: 14px 16px;
+      border-radius: 8px;
+      border: 1px solid {{ '#30363d' if theme == 'dark' else '#d0d7de' }};
+      background: {{ '#0d1117' if theme == 'dark' else '#ffffff' }};
+      color: {{ '#e6edf3' if theme == 'dark' else '#1f2328' }};
+    }
+    .pfm-emb-title { font-size: 13px; font-weight: 600; margin: 0 0 6px 0; }
+    .pfm-emb-legend { display: flex; gap: 12px; font-size: 11px; margin-bottom: 4px;
+      color: {{ '#7d8590' if theme == 'dark' else '#656d76' }}; }
+    .pfm-emb-legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; vertical-align: middle; margin-right: 4px; }
+    .pfm-emb-chart { width: 100%; height: 140px; }
+    .pfm-emb-footer { display: flex; justify-content: space-between; align-items: center;
+      margin-top: 6px; font-size: 11px;
+      color: {{ '#7d8590' if theme == 'dark' else '#656d76' }}; }
+    .pfm-emb-footer a { color: inherit; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="pfm-emb-card" id="pfm-emb-root">
+    <div class="pfm-emb-title">{{ title }}</div>
+    <div class="pfm-emb-legend">
+      {% for leg in legs %}
+        <span><span class="pfm-emb-legend-dot" style="background: {{ leg.color }};"></span>{{ leg.slug }}</span>
+      {% endfor %}
+    </div>
+    <div id="pfm-emb-chart" class="pfm-emb-chart"></div>
+    <div class="pfm-emb-footer">
+      <a href="{{ home_url }}" target="_blank" rel="noopener">PFM &middot; Compare</a>
+      <span>{{ slugs_str }}</span>
+    </div>
+  </div>
+
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+  <script>
+    (function () {
+      var legs = {{ legs_json|safe }};
+      var traces = legs.map(function (leg) {
+        return {
+          x: leg.history.map(function (_, i) { return i; }),
+          y: leg.history,
+          name: leg.slug,
+          type: 'scatter', mode: 'lines',
+          line: { color: leg.color, width: 2 },
+          hoverinfo: 'skip'
+        };
+      });
+      var layout = {
+        margin: { t: 4, l: 30, r: 8, b: 18 },
+        paper_bgcolor: 'rgba(0,0,0,0)',
+        plot_bgcolor: 'rgba(0,0,0,0)',
+        xaxis: { showgrid: false, zeroline: false, ticks: '', showticklabels: false },
+        yaxis: { showgrid: false, zeroline: false,
+                 tickfont: { color: {{ tick_color_json|safe }}, size: 9 },
+                 ticksuffix: '%' },
+        showlegend: false
+      };
+      try {
+        Plotly.newPlot('pfm-emb-chart', traces, layout, { displayModeBar: false, staticPlot: true });
+      } catch (e) {}
+
+      function postSize() {
+        try {
+          var h = document.getElementById('pfm-emb-root').offsetHeight + 4;
+          if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ pfm: 'resize', height: h }, '*');
+          }
+        } catch (e) {}
+      }
+      window.addEventListener('load', postSize);
+      setTimeout(postSize, 250);
+    })();
+  </script>
+</body>
+</html>

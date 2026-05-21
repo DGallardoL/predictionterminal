@@ -1,0 +1,528 @@
+/* ========================================================================
+   terminal-density.css  ·  T65 (wave-10)
+   ------------------------------------------------------------------------
+   Bloomberg-style data-dense table system for Terminal mode.
+
+   Scope: every selector below is rooted at [data-mode-pane="terminal"] so
+   Regression and Strategies panes are unaffected.
+
+   Coordination boundaries:
+     * T64 owns terminal-layout.css (grid / spacing / sticky header / cols).
+       This file deliberately does NOT touch panel padding, gutter widths,
+       sidebar collapse, or breakpoint behaviour.
+     * This file covers ROW and CELL density: padding, font-size, mono
+       numerics, sort indicators, sparkline column, hover, delta chips,
+       status pills, numeric hierarchy, sticky first column.
+
+   Design system this file consumes (no new --vars defined here per
+   PROTOCOL-V2 "Re-defining a CSS variable" rule):
+     --mono, --sans, --bg, --bg-alt, --surface, --hairline,
+     --ink, --orange, --orange-soft, --pos, --pos-soft, --neg, --neg-soft.
+
+   Class taxonomy
+   -------------------------------------------------------------------------
+   Spec'd primary classes (use these in NEW Terminal markup going forward):
+     .tm-table          generic Bloomberg table wrapper
+     .tm-thead .tm-th   sortable headers (use [aria-sort="asc"|"desc"])
+     .tm-tbody .tm-row  data row
+     .tm-cell           generic cell
+     .num               right-aligned tabular monospace numeric
+     .num-lg / .num-md  numeric size hierarchy (18px / 14px / 12px)
+     .tm-spark          inline sparkline cell (80px wide, 24px tall)
+     .tm-delta--up / .tm-delta--down  delta chip with ▲/▼ glyph
+     .tm-pill--live / .tm-pill--stale / .tm-pill--error  status pills
+     .tm-col-sticky     sticky-left column for wide tables
+
+   Fallback selectors target the existing legacy markup so the table-like
+   panels already rendered in web/index.html benefit immediately without
+   touching index.html (T65 has no claim on index.html):
+
+     [data-mode-pane="terminal"] table
+     .term-related-table  .term-tape-table  .term-sentlb-table
+     .term-mover-row  .term-jump-row  .term-sentlb-row
+     .term-upcoming-row  .term-kalshi-row  .term-search-row
+     .term-corr-row  .term-fair-row  .term-bucket-row  .term-jumps-head
+     .tx-num  (already used across regression / terminal)
+
+   ======================================================================== */
+
+
+/* -------- 1. Reset base inside terminal pane so density rules apply ----- */
+
+[data-mode-pane="terminal"] .tm-table,
+[data-mode-pane="terminal"] table.term-related-table,
+[data-mode-pane="terminal"] table.term-tape-table,
+[data-mode-pane="terminal"] table.term-sentlb-table,
+[data-mode-pane="terminal"] table.archive-list {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: var(--sans, "Inter", system-ui, sans-serif);
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--ink, #0a0a0c);
+}
+
+
+/* -------- 2. Tight rows (spec point 1) ---------------------------------- */
+
+[data-mode-pane="terminal"] .tm-row,
+[data-mode-pane="terminal"] .tm-table tbody tr,
+[data-mode-pane="terminal"] table.term-related-table tbody tr,
+[data-mode-pane="terminal"] table.term-tape-table tbody tr,
+[data-mode-pane="terminal"] table.term-sentlb-table tbody tr,
+[data-mode-pane="terminal"] .term-mover-row,
+[data-mode-pane="terminal"] .term-upcoming-row,
+[data-mode-pane="terminal"] .term-jump-row,
+[data-mode-pane="terminal"] .term-sentlb-row,
+[data-mode-pane="terminal"] .term-search-row,
+[data-mode-pane="terminal"] .term-corr-row,
+[data-mode-pane="terminal"] .term-fair-row,
+[data-mode-pane="terminal"] .term-bucket-row,
+[data-mode-pane="terminal"] .term-kalshi-row {
+  font-size: 12px;
+  line-height: 1.3;
+  border-bottom: 1px solid var(--hairline, #ececef);
+  transition: background 120ms ease;
+}
+
+/* Tight cell padding (the 4/8 from the spec). Applied via .tm-cell, native
+   <td>/<th>, and known terminal row inner cells via attribute-style hooks. */
+[data-mode-pane="terminal"] .tm-cell,
+[data-mode-pane="terminal"] .tm-th,
+[data-mode-pane="terminal"] .tm-table th,
+[data-mode-pane="terminal"] .tm-table td,
+[data-mode-pane="terminal"] table.term-related-table th,
+[data-mode-pane="terminal"] table.term-related-table td,
+[data-mode-pane="terminal"] table.term-tape-table th,
+[data-mode-pane="terminal"] table.term-tape-table td,
+[data-mode-pane="terminal"] table.term-sentlb-table th,
+[data-mode-pane="terminal"] table.term-sentlb-table td {
+  padding: 4px 8px;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--hairline, #ececef);
+}
+
+/* Reduce trailing-row double border */
+[data-mode-pane="terminal"] .tm-table tbody tr:last-child td,
+[data-mode-pane="terminal"] table.term-related-table tbody tr:last-child td,
+[data-mode-pane="terminal"] table.term-tape-table tbody tr:last-child td,
+[data-mode-pane="terminal"] table.term-sentlb-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+
+/* -------- 3. Mono numerics, right-aligned, tabular figures (spec 2 + 1) - */
+
+[data-mode-pane="terminal"] .num,
+[data-mode-pane="terminal"] .tx-num,
+[data-mode-pane="terminal"] .tm-cell--num,
+[data-mode-pane="terminal"] .tm-th--num {
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 11px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1, "zero" 1;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+/* When numeric appears inside a header it stays semibold but right-aligned */
+[data-mode-pane="terminal"] th.num,
+[data-mode-pane="terminal"] .tm-th.tm-th--num,
+[data-mode-pane="terminal"] .tm-th[data-num] {
+  text-align: right;
+}
+
+
+/* -------- 4. Numeric size hierarchy (spec 8) ---------------------------- */
+
+[data-mode-pane="terminal"] .num-lg {
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 18px;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+[data-mode-pane="terminal"] .num-md {
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 14px;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  font-weight: 500;
+}
+
+/* .num default already set to 11px above; expose .num-sm alias for clarity */
+[data-mode-pane="terminal"] .num-sm {
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 10px;
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+  color: rgba(10, 10, 12, 0.62);
+}
+
+
+/* -------- 5. Sortable column headers (spec 3) --------------------------- */
+
+[data-mode-pane="terminal"] .tm-thead,
+[data-mode-pane="terminal"] .tm-table thead,
+[data-mode-pane="terminal"] table.term-related-table thead,
+[data-mode-pane="terminal"] table.term-tape-table thead,
+[data-mode-pane="terminal"] table.term-sentlb-table thead {
+  background: var(--bg-alt, #fafafa);
+}
+
+[data-mode-pane="terminal"] .tm-th,
+[data-mode-pane="terminal"] .tm-table thead th,
+[data-mode-pane="terminal"] table.term-related-table thead th,
+[data-mode-pane="terminal"] table.term-tape-table thead th,
+[data-mode-pane="terminal"] table.term-sentlb-table thead th {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(10, 10, 12, 0.55);
+  background: var(--bg-alt, #fafafa);
+  border-bottom: 1px solid var(--hairline, #ececef);
+  user-select: none;
+}
+
+/* Sortable hint: data-sortable attribute → tiny triangle on hover/active */
+[data-mode-pane="terminal"] .tm-th[data-sortable] {
+  cursor: pointer;
+  position: relative;
+  padding-right: 18px;
+}
+
+[data-mode-pane="terminal"] .tm-th[data-sortable]:hover {
+  color: var(--ink, #0a0a0c);
+  background: var(--surface, #f6f5f8);
+}
+
+[data-mode-pane="terminal"] .tm-th[data-sortable]::after {
+  content: "";
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 5px solid currentColor;
+  opacity: 0;
+  transform: rotate(0deg);
+  transition: opacity 120ms ease;
+}
+
+[data-mode-pane="terminal"] .tm-th[data-sortable]:hover::after {
+  opacity: 0.45;
+}
+
+[data-mode-pane="terminal"] .tm-th[aria-sort="asc"] {
+  color: var(--ink, #0a0a0c);
+}
+[data-mode-pane="terminal"] .tm-th[aria-sort="asc"]::after {
+  opacity: 1;
+  color: var(--orange, #f97316);
+  border-bottom-color: var(--orange, #f97316);
+  transform: rotate(0deg);
+}
+
+[data-mode-pane="terminal"] .tm-th[aria-sort="desc"] {
+  color: var(--ink, #0a0a0c);
+}
+[data-mode-pane="terminal"] .tm-th[aria-sort="desc"]::after {
+  opacity: 1;
+  color: var(--orange, #f97316);
+  border-bottom-color: var(--orange, #f97316);
+  transform: rotate(180deg);
+}
+
+
+/* -------- 6. Inline sparkline column (spec 4) --------------------------- */
+
+[data-mode-pane="terminal"] .tm-spark,
+[data-mode-pane="terminal"] td.tm-spark,
+[data-mode-pane="terminal"] .tm-cell--spark {
+  width: 80px;
+  min-width: 80px;
+  max-width: 80px;
+  padding: 2px 8px;
+  vertical-align: middle;
+  line-height: 0; /* prevent inline svg baseline gap */
+}
+
+[data-mode-pane="terminal"] .tm-spark > svg,
+[data-mode-pane="terminal"] .tm-spark svg.spark,
+[data-mode-pane="terminal"] .tm-cell--spark svg {
+  display: block;
+  width: 100%;
+  height: 24px;
+  overflow: visible;
+  stroke-width: 1.2;
+  fill: none;
+  stroke: var(--ink, #0a0a0c);
+  opacity: 0.78;
+}
+
+[data-mode-pane="terminal"] .tm-spark svg .spark-area {
+  fill: rgba(249, 115, 22, 0.10);
+  stroke: none;
+}
+
+[data-mode-pane="terminal"] .tm-spark svg .spark-line--up { stroke: var(--pos, #16a34a); }
+[data-mode-pane="terminal"] .tm-spark svg .spark-line--down { stroke: var(--neg, #dc2626); }
+
+/* SVG-less fallback: a 1px ruler so empty sparkline column still aligns */
+[data-mode-pane="terminal"] .tm-spark:empty::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--hairline, #ececef);
+  margin: 11px 0;
+}
+
+
+/* -------- 7. Hover row highlight (spec 5) ------------------------------- */
+
+[data-mode-pane="terminal"] .tm-row:hover,
+[data-mode-pane="terminal"] .tm-table tbody tr:hover,
+[data-mode-pane="terminal"] table.term-related-table tbody tr:hover td,
+[data-mode-pane="terminal"] table.term-tape-table tbody tr:hover td,
+[data-mode-pane="terminal"] table.term-sentlb-table tbody tr:hover td,
+[data-mode-pane="terminal"] .term-mover-row:hover,
+[data-mode-pane="terminal"] .term-upcoming-row:hover,
+[data-mode-pane="terminal"] .term-jump-row:hover,
+[data-mode-pane="terminal"] .term-sentlb-row:hover,
+[data-mode-pane="terminal"] .term-search-row:hover,
+[data-mode-pane="terminal"] .term-corr-row:hover,
+[data-mode-pane="terminal"] .term-fair-row:hover,
+[data-mode-pane="terminal"] .term-bucket-row:hover,
+[data-mode-pane="terminal"] .term-kalshi-row:hover {
+  background: rgba(249, 115, 22, 0.04);
+  cursor: pointer;
+}
+
+/* Selected / focused row gets a slightly stronger tint + 2px orange rail */
+[data-mode-pane="terminal"] .tm-row[aria-selected="true"],
+[data-mode-pane="terminal"] .tm-row.is-selected {
+  background: rgba(249, 115, 22, 0.08);
+  box-shadow: inset 2px 0 0 var(--orange, #f97316);
+}
+
+
+/* -------- 8. Delta chips (spec 6) --------------------------------------- */
+
+[data-mode-pane="terminal"] .tm-delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--mono, "JetBrains Mono", ui-monospace, Menlo, monospace);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  line-height: 1;
+  padding: 2px 5px 2px 4px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+[data-mode-pane="terminal"] .tm-delta--up {
+  color: #15803d;
+  background: var(--pos-soft, rgba(22, 163, 74, 0.10));
+}
+
+[data-mode-pane="terminal"] .tm-delta--down {
+  color: #b91c1c;
+  background: var(--neg-soft, rgba(220, 38, 38, 0.10));
+}
+
+[data-mode-pane="terminal"] .tm-delta--flat {
+  color: rgba(10, 10, 12, 0.55);
+  background: transparent;
+}
+
+/* Glyphs live in pseudo-elements so HTML can be `<span class="tm-delta--up">+2.31%</span>` */
+[data-mode-pane="terminal"] .tm-delta--up::before {
+  content: "\25B2"; /* ▲ */
+  font-size: 8px;
+  line-height: 1;
+  margin-right: 1px;
+  transform: translateY(-0.5px);
+}
+
+[data-mode-pane="terminal"] .tm-delta--down::before {
+  content: "\25BC"; /* ▼ */
+  font-size: 8px;
+  line-height: 1;
+  margin-right: 1px;
+  transform: translateY(-0.5px);
+}
+
+[data-mode-pane="terminal"] .tm-delta--flat::before {
+  content: "\2013"; /* – */
+  font-size: 10px;
+  line-height: 1;
+  margin-right: 2px;
+}
+
+
+/* -------- 9. Status pills (spec 7) -------------------------------------- */
+
+[data-mode-pane="terminal"] .tm-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--sans, "Inter", system-ui, sans-serif);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 3px 7px 3px 6px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+[data-mode-pane="terminal"] .tm-pill::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: 0 0 auto;
+}
+
+[data-mode-pane="terminal"] .tm-pill--live {
+  color: #15803d;
+  background: var(--pos-soft, rgba(22, 163, 74, 0.10));
+}
+[data-mode-pane="terminal"] .tm-pill--live::before {
+  animation: tm-pulse 1.6s ease-in-out infinite;
+}
+
+[data-mode-pane="terminal"] .tm-pill--stale {
+  color: #92400e;
+  background: rgba(245, 158, 11, 0.12);
+}
+
+[data-mode-pane="terminal"] .tm-pill--error {
+  color: #b91c1c;
+  background: var(--neg-soft, rgba(220, 38, 38, 0.10));
+}
+
+[data-mode-pane="terminal"] .tm-pill--neutral {
+  color: rgba(10, 10, 12, 0.62);
+  background: var(--surface, #f6f5f8);
+}
+
+@keyframes tm-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.55; transform: scale(0.78); }
+}
+
+
+/* -------- 10. Sticky first column (spec 9) ------------------------------ */
+
+[data-mode-pane="terminal"] .tm-col-sticky,
+[data-mode-pane="terminal"] .tm-table th.tm-col-sticky,
+[data-mode-pane="terminal"] .tm-table td.tm-col-sticky {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: var(--bg, #ffffff);
+  box-shadow: 1px 0 0 var(--hairline, #ececef);
+}
+
+/* When the sticky cell lives in thead it sits above the body's sticky cells */
+[data-mode-pane="terminal"] .tm-table thead th.tm-col-sticky {
+  z-index: 3;
+  background: var(--bg-alt, #fafafa);
+}
+
+/* Hovered row keeps its tint behind the sticky cell so the rail stays
+   visually continuous across the scroll boundary. */
+[data-mode-pane="terminal"] .tm-row:hover .tm-col-sticky,
+[data-mode-pane="terminal"] .tm-table tbody tr:hover td.tm-col-sticky {
+  background: linear-gradient(
+    to right,
+    var(--bg, #ffffff),
+    rgba(249, 115, 22, 0.04) 60%
+  );
+}
+
+/* Container helper: pair `.tm-scroll-x > .tm-table` when a table is wider
+   than its panel and needs horizontal scroll. */
+[data-mode-pane="terminal"] .tm-scroll-x {
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+
+/* -------- 11. Zebra striping (subtle) ----------------------------------- */
+
+[data-mode-pane="terminal"] .tm-table.tm-table--zebra tbody tr:nth-child(even) td,
+[data-mode-pane="terminal"] table.term-related-table.tm-table--zebra tbody tr:nth-child(even) td {
+  background: var(--bg-alt, #fafafa);
+}
+
+
+/* -------- 12. Dark-mode harmonization ----------------------------------- */
+/*
+   The project already inverts --bg / --bg-alt / --surface / --hairline /
+   --ink under [data-theme="dark"] at index.html:7092+. The selectors above
+   consume those tokens via var(), so they auto-flip. The few hard-coded
+   colors below need explicit dark overrides so chips/pills stay legible.
+*/
+
+[data-mode-pane="terminal"][data-theme="dark"] .tm-delta--up,
+[data-theme="dark"] [data-mode-pane="terminal"] .tm-delta--up {
+  color: #4ade80;
+}
+[data-mode-pane="terminal"][data-theme="dark"] .tm-delta--down,
+[data-theme="dark"] [data-mode-pane="terminal"] .tm-delta--down {
+  color: #f87171;
+}
+[data-mode-pane="terminal"][data-theme="dark"] .tm-pill--live,
+[data-theme="dark"] [data-mode-pane="terminal"] .tm-pill--live {
+  color: #4ade80;
+}
+[data-mode-pane="terminal"][data-theme="dark"] .tm-pill--stale,
+[data-theme="dark"] [data-mode-pane="terminal"] .tm-pill--stale {
+  color: #fbbf24;
+}
+[data-mode-pane="terminal"][data-theme="dark"] .tm-pill--error,
+[data-theme="dark"] [data-mode-pane="terminal"] .tm-pill--error {
+  color: #f87171;
+}
+[data-mode-pane="terminal"][data-theme="dark"] .tm-th,
+[data-theme="dark"] [data-mode-pane="terminal"] .tm-th {
+  color: rgba(233, 233, 237, 0.55);
+}
+[data-mode-pane="terminal"][data-theme="dark"] .num-sm,
+[data-theme="dark"] [data-mode-pane="terminal"] .num-sm {
+  color: rgba(233, 233, 237, 0.55);
+}
+
+
+/* -------- 13. Print-friendly tweak -------------------------------------- */
+
+@media print {
+  [data-mode-pane="terminal"] .tm-table,
+  [data-mode-pane="terminal"] table.term-related-table {
+    font-size: 10px;
+  }
+  [data-mode-pane="terminal"] .tm-pill::before {
+    animation: none;
+  }
+  [data-mode-pane="terminal"] .tm-row:hover {
+    background: transparent;
+  }
+}

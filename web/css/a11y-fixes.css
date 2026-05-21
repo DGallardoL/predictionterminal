@@ -1,0 +1,210 @@
+/* ============================================================
+ * a11y-fixes.css  (W13-31, wave-13)
+ *
+ * Comprehensive keyboard-accessibility CSS. Pairs with
+ * web/js/a11y-fixes.js which auto-patches missing tabindex /
+ * role / aria-label attributes at runtime.
+ *
+ * COORDINATION:
+ *   - This sheet ONLY adds a11y-related rules. It does NOT
+ *     redefine any --orange/--ink/--bg tokens — they come
+ *     from tokens.css.
+ *   - Mount this sheet AFTER tokens.css and AFTER any panel
+ *     stylesheet that draws its own focus ring, so the
+ *     a11y ring wins.
+ *
+ * SCOPE:
+ *   - :focus-visible override (hairline + 3px orange ring)
+ *   - Skip-to-main-content link (visible only on focus)
+ *   - High-contrast ring on dark backgrounds
+ *   - Sufficient contrast on disabled controls
+ *   - ARIA live-region helpers (sr-only / visually-hidden)
+ *   - Reduced-motion respect for focus animations
+ * ============================================================ */
+
+/* ---- Visually-hidden helper (for sr-only labels and aria-live)
+ *      Standard accessible-hiding pattern: stays in the DOM and
+ *      is read by screen readers, but takes no visual space. */
+.a11y-sr-only,
+.a11y-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* ---- Skip-to-main-content link.
+ *      First focusable element on the page. Off-screen until
+ *      focused, at which point it slides into the top-left
+ *      corner with a prominent orange pill. */
+.a11y-skip-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-110%);
+  z-index: 100000;
+  padding: 12px 20px;
+  background: var(--orange, #f97316);
+  color: #fff;
+  font: 600 14px/1.2 var(--font-sans, system-ui, sans-serif);
+  text-decoration: none;
+  border-radius: 0 0 8px 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 140ms ease-out;
+  letter-spacing: 0.01em;
+}
+
+.a11y-skip-link:focus,
+.a11y-skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ---- Universal focus-visible ring.
+ *      Hairline border + 3px orange halo. Works against light
+ *      AND dark surfaces. Suppressed for pointer/mouse focus
+ *      (browsers no longer paint :focus-visible on click). */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--orange, #f97316);
+  outline-offset: 2px;
+  box-shadow:
+    0 0 0 1px rgba(15, 23, 42, 0.18),
+    0 0 0 5px rgba(249, 115, 22, 0.28);
+  border-radius: inherit;
+  transition: box-shadow 80ms ease-out;
+}
+
+/* Buttons / links / inputs: tighter, sharper variant */
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible,
+[role="tab"]:focus-visible,
+[role="menuitem"]:focus-visible,
+[role="option"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--orange, #f97316);
+  outline-offset: 2px;
+  box-shadow:
+    0 0 0 1px var(--ink, #0f172a),
+    0 0 0 5px rgba(249, 115, 22, 0.35);
+}
+
+/* Dark surfaces: thicker white inner hairline so the ring
+ * remains visible on near-black backgrounds. */
+[data-theme="dark"] :focus-visible,
+.dark :focus-visible,
+.panel-dark :focus-visible {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.45),
+    0 0 0 5px rgba(249, 115, 22, 0.55);
+}
+
+/* ---- Disabled state.
+ *      Browsers default to washed-out grey that often fails
+ *      4.5:1 contrast. Pin to a known accessible mid-grey. */
+button[disabled],
+button[aria-disabled="true"],
+[role="button"][aria-disabled="true"],
+input[disabled],
+select[disabled],
+textarea[disabled],
+.a11y-disabled {
+  opacity: 1; /* don't fade below threshold */
+  color: #475569 !important; /* slate-600, ~7:1 on white */
+  background-color: #e2e8f0 !important; /* slate-200 */
+  border-color: #cbd5e1 !important;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+[data-theme="dark"] button[disabled],
+[data-theme="dark"] [aria-disabled="true"] {
+  color: #cbd5e1 !important; /* slate-300 on dark */
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+/* ---- Inline focus rings inside cards / tables.
+ *      Some panels clip overflow which would chop the ring.
+ *      Add explicit z-index lift so it visually escapes. */
+:focus-visible {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---- Roving-tabindex group: visualize the active item.
+ *      JS toggles [data-a11y-roving-active="true"] on the
+ *      currently-focused item in tab / menu / cards groups. */
+[data-a11y-roving-active="true"] {
+  box-shadow: 0 0 0 2px var(--orange, #f97316) inset;
+}
+
+/* ---- Auto-patched element marker.
+ *      JS adds .a11y-patched when it injects tabindex/role.
+ *      Useful for debugging in DevTools (no visual effect). */
+.a11y-patched {
+  /* sentinel class */
+}
+
+/* ---- Reduced motion respect. */
+@media (prefers-reduced-motion: reduce) {
+  .a11y-skip-link,
+  :focus-visible {
+    transition: none !important;
+  }
+}
+
+/* ---- Forced-colors / Windows high-contrast support. */
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 3px solid CanvasText !important;
+    outline-offset: 2px !important;
+    box-shadow: none !important;
+  }
+  .a11y-skip-link {
+    background: ButtonFace;
+    color: ButtonText;
+    border: 2px solid ButtonText;
+  }
+}
+
+/* ---- Main landmark anchor.
+ *      The skip-link targets #a11y-main; if not present,
+ *      JS injects it. Make sure it can receive focus. */
+#a11y-main:focus {
+  outline: none;
+}
+#a11y-main:focus-visible {
+  outline: 2px dashed var(--orange, #f97316);
+  outline-offset: 4px;
+}
+
+/* ---- Live-region container.
+ *      JS announces dynamic updates via aria-live="polite"
+ *      on #a11y-live. Keep it visually hidden but in DOM. */
+#a11y-live,
+#a11y-live-assertive {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

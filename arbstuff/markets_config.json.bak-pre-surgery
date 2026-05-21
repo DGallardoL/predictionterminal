@@ -1,0 +1,2454 @@
+{
+  "poll_interval": 240,
+  "threshold": 0.94,
+  "min_alert_profit": 1.0,
+  "events": [
+    {
+      "name": "Who will attend Taylor Swift and Travis Kelce's Wedding?",
+      "kalshi_event_ticker": "KXTAYLORSWIFTWEDDINGATTEND-28DEC31",
+      "kalshi_ticker": "KXTAYLORSWIFTWEDDINGATTEND-28DEC31",
+      "poly_slug": "who-will-attend-taylor-swift-and-travis-kelces-wedding",
+      "category": "Entertainment",
+      "confidence": "HIGH",
+      "event_score": 1.0,
+      "mapping": {
+        "sel": "Selena Gomez",
+        "bla": "Blake Lively",
+        "pho": "Phoebe Bridgers",
+        "est": "Este Haim",
+        "dan": "Danielle Haim",
+        "ala": "Alana Haim",
+        "gra": "Gracie Abrams",
+        "sab": "Sabrina Carpenter",
+        "bri": "Brittany Mahomes",
+        "pat": "Patrick Mahomes",
+        "lan": "Lana Del Rey",
+        "jac": "Jack Antonoff",
+        "max": "Max Martin",
+        "jar": "Jared Goff"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXTAYLORSWIFTWEDDINGATTEND-28DEC31-SEL",
+          "k_suffix": "sel",
+          "k_outcome": "Selena Gomez",
+          "p_outcome": "Selena Gomez",
+          "p_index": 9,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTAYLORSWIFTWEDDINGATTEND-28DEC31-BLA",
+          "k_suffix": "bla",
+          "k_outcome": "Blake Lively",
+          "p_outcome": "Blake Lively",
+          "p_index": 12,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTAYLORSWIFTWEDDINGATTEND-28DEC31-PHO",
+          "k_suffix": "pho",
+          "k_outcome": "Phoebe Bridgers",
+          "p_outcome": "Phoebe Bridgers",
+          "p_index": 1,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTAYLORSWIFTWEDDINGATTEND-28DEC31-EST",
+          "k_suffix": "est",
+          "k_outcome": "Este Haim",
+          "p_outcome": "Este Haim",
+          "p_index": 14,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTAYLORSWIFTWEDDINGATTEND-28DEC31-DAN",
+          "k_suffix": "dan",
+          "k_outcome": "Danielle Haim",
+          "p_outcome": "Danielle Haim",
+          "p_index": 0,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTAYLORSWIFTWEDDINGATTEND-28DEC31-ALA",
+          "k_suffix": "ala",
+          "k_outcome": "Alana Haim",
+          "p_outcome": "Alana Haim",
+          "p_index": 7,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTAYLORSWIFTWEDDINGATTEND-28DEC31-GRA",
+          "k_suffix": "gra",
+          "k_outcome": "Gracie Abrams",
+          "p_outcome": "Gracie Abrams",
+          "p_index": 5,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTAYLORSWIFTWEDDINGATTEND-28DEC31-SAB",
+          "k_suffix": "sab",
+          "k_outcome": "Sabrina Carpenter",
+          "p_outcome": "Sabrina Carpenter",
+          "p_index": 10,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTAYLORSWIFTWEDDINGATTEND-28DEC31-BRI",
+          "k_suffix": "bri",
+          "k_outcome": "Brittany Mahomes",
+          "p_outcome": "Brittany Mahomes",
+          "p_index": 13,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTAYLORSWIFTWEDDINGATTEND-28DEC31-PAT",
+          "k_suffix": "pat",
+          "k_outcome": "Patrick Mahomes",
+          "p_outcome": "Patrick Mahomes",
+          "p_index": 6,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTAYLORSWIFTWEDDINGATTEND-28DEC31-LAN",
+          "k_suffix": "lan",
+          "k_outcome": "Lana Del Rey",
+          "p_outcome": "Lana Del Rey",
+          "p_index": 11,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTAYLORSWIFTWEDDINGATTEND-28DEC31-JAC",
+          "k_suffix": "jac",
+          "k_outcome": "Jack Antonoff",
+          "p_outcome": "Jack Antonoff",
+          "p_index": 4,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTAYLORSWIFTWEDDINGATTEND-28DEC31-MAX",
+          "k_suffix": "max",
+          "k_outcome": "Max Martin",
+          "p_outcome": "Max Martin",
+          "p_index": 8,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTAYLORSWIFTWEDDINGATTEND-28DEC31-JAR",
+          "k_suffix": "jar",
+          "k_outcome": "Jared Goff",
+          "p_outcome": "Jared Goff",
+          "p_index": 2,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534494Z"
+    },
+    {
+      "name": "Which bills will become law in 2026?",
+      "kalshi_event_ticker": "KXBILLS",
+      "kalshi_ticker": "KXBILLS",
+      "poly_slug": "which-bills-will-become-law-in-2026",
+      "category": "Politics",
+      "confidence": "HIGH",
+      "event_score": 0.965,
+      "mapping": {
+        "ccr": "Credit-card routing competition",
+        "aio": "AI-chip export licensing",
+        "fisa": "FISA Section 702 reauthorization",
+        "min": "Critical-minerals stockpile",
+        "chip": "Export-control chip security",
+        "tv": "Film/TV production expensing",
+        "show": "SHOWER Act",
+        "smith": "Smithsonian Women’s History Museum",
+        "defy": "DEFIANCE Act",
+        "airp": "Trump Airport",
+        "hous": "Housing for the 21st Century Act",
+        "250c": "$2.50 Coin",
+        "drive": "SELF DRIVE Act",
+        "data": "Data center utility cost protection"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXBILLS-CCR",
+          "k_suffix": "ccr",
+          "k_outcome": "Credit-card routing competition",
+          "p_outcome": "Credit-card routing competition",
+          "p_index": 11,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXBILLS-AIO",
+          "k_suffix": "aio",
+          "k_outcome": "AI-chip export licensing",
+          "p_outcome": "AI-chip export licensing",
+          "p_index": 12,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXBILLS-FISA",
+          "k_suffix": "fisa",
+          "k_outcome": "FISA Section 702 reauthorization (2 years)",
+          "p_outcome": "FISA Section 702 reauthorization",
+          "p_index": 8,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXBILLS-MIN",
+          "k_suffix": "min",
+          "k_outcome": "Critical-minerals stockpile",
+          "p_outcome": "Critical-minerals stockpile",
+          "p_index": 9,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXBILLS-CHIP",
+          "k_suffix": "chip",
+          "k_outcome": "Export-control chip security",
+          "p_outcome": "Export-control chip security",
+          "p_index": 4,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXBILLS-TV",
+          "k_suffix": "tv",
+          "k_outcome": "Film/TV production expensing",
+          "p_outcome": "Film/TV production expensing",
+          "p_index": 3,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXBILLS-SHOW",
+          "k_suffix": "show",
+          "k_outcome": "SHOWER Act",
+          "p_outcome": "SHOWER Act",
+          "p_index": 13,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXBILLS-SMITH",
+          "k_suffix": "smith",
+          "k_outcome": "Smithsonian Women’s History Museum",
+          "p_outcome": "Smithsonian Women’s History Museum",
+          "p_index": 10,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXBILLS-DEFY",
+          "k_suffix": "defy",
+          "k_outcome": "DEFIANCE Act",
+          "p_outcome": "DEFIANCE Act",
+          "p_index": 0,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXBILLS-AIRP",
+          "k_suffix": "airp",
+          "k_outcome": "Trump Airport",
+          "p_outcome": "Trump Airport",
+          "p_index": 6,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXBILLS-HOUS",
+          "k_suffix": "hous",
+          "k_outcome": "Housing for the 21st Century Act",
+          "p_outcome": "Housing for the 21st Century Act",
+          "p_index": 1,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXBILLS-250C",
+          "k_suffix": "250c",
+          "k_outcome": "$2.50 Coin",
+          "p_outcome": "$2.50 Coin",
+          "p_index": 7,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXBILLS-DRIVE",
+          "k_suffix": "drive",
+          "k_outcome": "SELF DRIVE Act",
+          "p_outcome": "SELF DRIVE Act",
+          "p_index": 2,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXBILLS-DATA",
+          "k_suffix": "data",
+          "k_outcome": "Data center utility cost protection",
+          "p_outcome": "Data center utility cost protection",
+          "p_index": 5,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534510Z"
+    },
+    {
+      "name": "Who will be arrested before 2027?",
+      "kalshi_event_ticker": "KXARREST-27JAN",
+      "kalshi_ticker": "KXARREST-27JAN",
+      "poly_slug": "who-will-be-arrested-before-2027",
+      "category": "Politics",
+      "confidence": "HIGH",
+      "event_score": 0.949,
+      "mapping": {
+        "gnew": "Gavin Newsom",
+        "ljun": "Lee Jun-seok",
+        "bclin": "Bill Clinton",
+        "afau": "Anthony Fauci",
+        "bom": "Barack Obama",
+        "hclin": "Hillary Clinton",
+        "jcla": "James Clapper",
+        "jcom": "James Comey",
+        "jbre": "John Brennan",
+        "sric": "Susan Rice",
+        "jker": "John Kerry",
+        "llyn": "Loretta Lynch",
+        "asch": "Adam Schiff",
+        "lcoo": "Lisa Cook",
+        "mkha": "Mahmoud Khalil",
+        "ljam": "Letitia James",
+        "thom": "Tom Homan",
+        "jbid": "Joe Biden",
+        "bjoh": "Brandon Johnson",
+        "bnet": "Benjamin Netanyahu",
+        "jzap": "José Luis Rodríguez Zapatero",
+        "pbon": "Pam Bondi",
+        "kpat": "Kash Patel",
+        "cowe": "Candace Owens"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXARREST-27JAN-GNEW",
+          "k_suffix": "gnew",
+          "k_outcome": "Gavin Newsom",
+          "p_outcome": "Gavin Newsom",
+          "p_index": 18,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-LJUN",
+          "k_suffix": "ljun",
+          "k_outcome": "Lee Jun-seok",
+          "p_outcome": "Lee Jun-seok",
+          "p_index": 11,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-BCLIN",
+          "k_suffix": "bclin",
+          "k_outcome": "Bill Clinton",
+          "p_outcome": "Bill Clinton",
+          "p_index": 16,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-AFAU",
+          "k_suffix": "afau",
+          "k_outcome": "Anthony Fauci",
+          "p_outcome": "Anthony Fauci",
+          "p_index": 12,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-BOM",
+          "k_suffix": "bom",
+          "k_outcome": "Barack Obama",
+          "p_outcome": "Barack Obama",
+          "p_index": 8,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-HCLIN",
+          "k_suffix": "hclin",
+          "k_outcome": "Hillary Clinton",
+          "p_outcome": "Hillary Clinton",
+          "p_index": 4,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-JCLA",
+          "k_suffix": "jcla",
+          "k_outcome": "James Clapper",
+          "p_outcome": "James Clapper",
+          "p_index": 2,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-JCOM",
+          "k_suffix": "jcom",
+          "k_outcome": "James Comey",
+          "p_outcome": "James Comey",
+          "p_index": 0,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-JBRE",
+          "k_suffix": "jbre",
+          "k_outcome": "John Brennan",
+          "p_outcome": "John Brennan",
+          "p_index": 1,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-SRIC",
+          "k_suffix": "sric",
+          "k_outcome": "Susan Rice",
+          "p_outcome": "Susan Rice",
+          "p_index": 17,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-JKER",
+          "k_suffix": "jker",
+          "k_outcome": "John Kerry",
+          "p_outcome": "John Kerry",
+          "p_index": 19,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-LLYN",
+          "k_suffix": "llyn",
+          "k_outcome": "Loretta Lynch",
+          "p_outcome": "Loretta Lynch",
+          "p_index": 5,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-ASCH",
+          "k_suffix": "asch",
+          "k_outcome": "Adam Schiff",
+          "p_outcome": "Adam Schiff",
+          "p_index": 3,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-LCOO",
+          "k_suffix": "lcoo",
+          "k_outcome": "Lisa Cook",
+          "p_outcome": "Lisa Cook",
+          "p_index": 22,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-MKHA",
+          "k_suffix": "mkha",
+          "k_outcome": "Mahmoud Khalil",
+          "p_outcome": "Mahmoud Khalil",
+          "p_index": 13,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-LJAM",
+          "k_suffix": "ljam",
+          "k_outcome": "Letitia James",
+          "p_outcome": "Letitia James",
+          "p_index": 15,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-THOM",
+          "k_suffix": "thom",
+          "k_outcome": "Tom Homan",
+          "p_outcome": "Tom Homan",
+          "p_index": 9,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-JBID",
+          "k_suffix": "jbid",
+          "k_outcome": "Joe Biden",
+          "p_outcome": "Joe Biden",
+          "p_index": 23,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-BJOH",
+          "k_suffix": "bjoh",
+          "k_outcome": "Brandon Johnson",
+          "p_outcome": "Brandon Johnson",
+          "p_index": 10,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-BNET",
+          "k_suffix": "bnet",
+          "k_outcome": "Benjamin Netanyahu",
+          "p_outcome": "Benjamin Netanyahu",
+          "p_index": 7,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-JZAP",
+          "k_suffix": "jzap",
+          "k_outcome": "José Luis Rodríguez Zapatero",
+          "p_outcome": "José Luis Rodríguez Zapatero",
+          "p_index": 14,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-PBON",
+          "k_suffix": "pbon",
+          "k_outcome": "Pam Bondi",
+          "p_outcome": "Pam Bondi",
+          "p_index": 20,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-KPAT",
+          "k_suffix": "kpat",
+          "k_outcome": "Kash Patel",
+          "p_outcome": "Kash Patel",
+          "p_index": 21,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXARREST-27JAN-COWE",
+          "k_suffix": "cowe",
+          "k_outcome": "Candace Owens",
+          "p_outcome": "Candace Owens",
+          "p_index": 6,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534517Z"
+    },
+    {
+      "name": "Brazil Presidential Election First Round: Margin of Victory",
+      "kalshi_event_ticker": "KXBRPRES1MOV-BRPRES26",
+      "kalshi_ticker": "KXBRPRES1MOV-BRPRES26",
+      "poly_slug": "brazil-presidential-election-first-round-margin-of-victory",
+      "category": "Elections",
+      "confidence": "HIGH",
+      "event_score": 0.941,
+      "mapping": {
+        "p2": "Flávio Bolsonaro <5%",
+        "p7": "Flávio Bolsonaro 5-10%",
+        "p12": "Flávio Bolsonaro 10%+",
+        "p57": "Lula da Silva <5%",
+        "p50": "Renan Santos Victory"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXBRPRES1MOV-BRPRES26-LSIL-P2",
+          "k_suffix": "p2",
+          "k_outcome": "Lula da Silva, 0-5%",
+          "p_outcome": "Lula da Silva 10-15%",
+          "p_index": 4,
+          "score": 0.944
+        },
+        {
+          "k_ticker": "KXBRPRES1MOV-BRPRES26-LSIL-P7",
+          "k_suffix": "p7",
+          "k_outcome": "Lula da Silva, 5-10%",
+          "p_outcome": "Lula da Silva 5-10%",
+          "p_index": 3,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXBRPRES1MOV-BRPRES26-LSIL-P12",
+          "k_suffix": "p12",
+          "k_outcome": "Lula da Silva, 10-15%",
+          "p_outcome": "Lula da Silva 15%+",
+          "p_index": 5,
+          "score": 0.914
+        },
+        {
+          "k_ticker": "KXBRPRES1MOV-BRPRES26-LSIL-P57",
+          "k_suffix": "p57",
+          "k_outcome": "Lula da Silva, ≥15%",
+          "p_outcome": "Lula da Silva <5%",
+          "p_index": 0,
+          "score": 0.968
+        },
+        {
+          "k_ticker": "KXBRPRES1MOV-BRPRES26-FBOL-P2",
+          "k_suffix": "p2",
+          "k_outcome": "Flávio Bolsonaro, 0-5%",
+          "p_outcome": "Flávio Bolsonaro <5%",
+          "p_index": 1,
+          "score": 0.947
+        },
+        {
+          "k_ticker": "KXBRPRES1MOV-BRPRES26-FBOL-P7",
+          "k_suffix": "p7",
+          "k_outcome": "Flávio Bolsonaro, 5-10%",
+          "p_outcome": "Flávio Bolsonaro 5-10%",
+          "p_index": 6,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXBRPRES1MOV-BRPRES26-FBOL-P12",
+          "k_suffix": "p12",
+          "k_outcome": "Flávio Bolsonaro, 10-15%",
+          "p_outcome": "Flávio Bolsonaro 10%+",
+          "p_index": 9,
+          "score": 0.927
+        },
+        {
+          "k_ticker": "KXBRPRES1MOV-BRPRES26-RSAN-P50",
+          "k_suffix": "p50",
+          "k_outcome": "Renan Santos wins",
+          "p_outcome": "Renan Santos Victory",
+          "p_index": 7,
+          "score": 0.757
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534521Z"
+    },
+    {
+      "name": "Which guests will appear on the UpOnly podcast by 2027?",
+      "kalshi_event_ticker": "KXUPONLY-01",
+      "kalshi_ticker": "KXUPONLY-01",
+      "poly_slug": "which-guests-will-appear-on-the-uponly-podcast-before-2027",
+      "category": "Entertainment",
+      "confidence": "HIGH",
+      "event_score": 0.935,
+      "mapping": {
+        "jeff": "Jeff Yan",
+        "gcr": "GCR",
+        "jess": "Jesse Pollak",
+        "bria": "Brian Armstrong",
+        "arth": "Arthur Hayes",
+        "anse": "Ansem",
+        "mart": "Martin Shkreli"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXUPONLY-01-JEFF",
+          "k_suffix": "jeff",
+          "k_outcome": "Jeff Yan",
+          "p_outcome": "Jeff Yan",
+          "p_index": 2,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUPONLY-01-GCR",
+          "k_suffix": "gcr",
+          "k_outcome": "GCR",
+          "p_outcome": "GCR",
+          "p_index": 4,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUPONLY-01-JESS",
+          "k_suffix": "jess",
+          "k_outcome": "Jesse Pollak",
+          "p_outcome": "Jesse Pollak",
+          "p_index": 10,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUPONLY-01-BRIA",
+          "k_suffix": "bria",
+          "k_outcome": "Brian Armstrong",
+          "p_outcome": "Brian Armstrong",
+          "p_index": 3,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUPONLY-01-ARTH",
+          "k_suffix": "arth",
+          "k_outcome": "Arthur Hayes",
+          "p_outcome": "Arthur Hayes",
+          "p_index": 5,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUPONLY-01-ANSE",
+          "k_suffix": "anse",
+          "k_outcome": "Ansem",
+          "p_outcome": "Ansem",
+          "p_index": 14,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUPONLY-01-MART",
+          "k_suffix": "mart",
+          "k_outcome": "Martin Shkreli",
+          "p_outcome": "Martin Shkreli",
+          "p_index": 15,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534524Z"
+    },
+    {
+      "name": "What flavors will JUUL relaunch?",
+      "kalshi_event_ticker": "KXJUULFLAVOR-27",
+      "kalshi_ticker": "KXJUULFLAVOR-27",
+      "poly_slug": "which-flavors-will-juul-relaunch-in-2026",
+      "category": "Companies",
+      "confidence": "HIGH",
+      "event_score": 0.93,
+      "mapping": {
+        "man": "Mango",
+        "min": "Mint",
+        "cuc": "Cucumber",
+        "fru": "Fruit Medley",
+        "cre": "Crème Brûlée"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXJUULFLAVOR-27-MAN",
+          "k_suffix": "man",
+          "k_outcome": "Mango",
+          "p_outcome": "Mango",
+          "p_index": 3,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXJUULFLAVOR-27-MIN",
+          "k_suffix": "min",
+          "k_outcome": "Mint",
+          "p_outcome": "Mint",
+          "p_index": 0,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXJUULFLAVOR-27-CUC",
+          "k_suffix": "cuc",
+          "k_outcome": "Cucumber",
+          "p_outcome": "Cucumber",
+          "p_index": 1,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXJUULFLAVOR-27-FRU",
+          "k_suffix": "fru",
+          "k_outcome": "Fruit Medley",
+          "p_outcome": "Fruit Medley",
+          "p_index": 4,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXJUULFLAVOR-27-CRE",
+          "k_suffix": "cre",
+          "k_outcome": "Crème Brûlée",
+          "p_outcome": "Crème Brûlée",
+          "p_index": 2,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534527Z"
+    },
+    {
+      "name": "What will Trump say during his Healthcare Affordability Event?",
+      "kalshi_event_ticker": "KXTRUMPMENTION-26MAY18",
+      "kalshi_ticker": "KXTRUMPMENTION-26MAY18",
+      "poly_slug": "what-will-trump-say-during-the-healthcare-affordability-event",
+      "category": "Mentions",
+      "confidence": "HIGH",
+      "event_score": 0.928,
+      "mapping": {
+        "trum": "TrumpRX",
+        "fake": "Fake News",
+        "vacc": "Autism",
+        "tari": "Tariff",
+        "canc": "Cocaine",
+        "insu": "Insurance",
+        "grea": "Great guy / Great person"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXTRUMPMENTION-26MAY18-TRUM",
+          "k_suffix": "trum",
+          "k_outcome": "TrumpRX",
+          "p_outcome": "TrumpRX",
+          "p_index": 18,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPMENTION-26MAY18-FAKE",
+          "k_suffix": "fake",
+          "k_outcome": "Fake News",
+          "p_outcome": "Fake News",
+          "p_index": 9,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPMENTION-26MAY18-VACC",
+          "k_suffix": "vacc",
+          "k_outcome": "Vaccine / Autism",
+          "p_outcome": "Autism",
+          "p_index": 11,
+          "score": 0.6
+        },
+        {
+          "k_ticker": "KXTRUMPMENTION-26MAY18-TARI",
+          "k_suffix": "tari",
+          "k_outcome": "Tariff",
+          "p_outcome": "Tariff",
+          "p_index": 19,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPMENTION-26MAY18-CANC",
+          "k_suffix": "canc",
+          "k_outcome": "Cancer",
+          "p_outcome": "Cocaine",
+          "p_index": 7,
+          "score": 0.615
+        },
+        {
+          "k_ticker": "KXTRUMPMENTION-26MAY18-INSU",
+          "k_suffix": "insu",
+          "k_outcome": "Insurance",
+          "p_outcome": "Insurance",
+          "p_index": 16,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPMENTION-26MAY18-GREA",
+          "k_suffix": "grea",
+          "k_outcome": "Great Healthcare Plan",
+          "p_outcome": "Great guy / Great person",
+          "p_index": 17,
+          "score": 0.558
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534530Z"
+    },
+    {
+      "name": "Who will recognize Palestine before 2027?",
+      "kalshi_event_ticker": "KXRECOGPALESTINE-27",
+      "kalshi_ticker": "KXRECOGPALESTINE-27",
+      "poly_slug": "which-countries-will-recognize-palestine-before-2027",
+      "category": "Politics",
+      "confidence": "HIGH",
+      "event_score": 0.927,
+      "mapping": {
+        "ita": "Italy",
+        "gre": "Greece",
+        "usa": "Austria",
+        "fin": "Finland",
+        "jap": "Japan",
+        "nz": "New Zealand",
+        "ger": "Germany",
+        "dut": "The Netherlands"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXRECOGPALESTINE-27-ITA",
+          "k_suffix": "ita",
+          "k_outcome": "Italy",
+          "p_outcome": "Italy",
+          "p_index": 1,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXRECOGPALESTINE-27-GRE",
+          "k_suffix": "gre",
+          "k_outcome": "Greece",
+          "p_outcome": "Greece",
+          "p_index": 8,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXRECOGPALESTINE-27-USA",
+          "k_suffix": "usa",
+          "k_outcome": "USA",
+          "p_outcome": "Austria",
+          "p_index": 7,
+          "score": 0.6
+        },
+        {
+          "k_ticker": "KXRECOGPALESTINE-27-FIN",
+          "k_suffix": "fin",
+          "k_outcome": "Finland",
+          "p_outcome": "Finland",
+          "p_index": 6,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXRECOGPALESTINE-27-JAP",
+          "k_suffix": "jap",
+          "k_outcome": "Japan",
+          "p_outcome": "Japan",
+          "p_index": 3,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXRECOGPALESTINE-27-NZ",
+          "k_suffix": "nz",
+          "k_outcome": "New Zealand",
+          "p_outcome": "New Zealand",
+          "p_index": 9,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXRECOGPALESTINE-27-GER",
+          "k_suffix": "ger",
+          "k_outcome": "Germany",
+          "p_outcome": "Germany",
+          "p_index": 4,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXRECOGPALESTINE-27-DUT",
+          "k_suffix": "dut",
+          "k_outcome": "The Netherlands",
+          "p_outcome": "The Netherlands",
+          "p_index": 2,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534533Z"
+    },
+    {
+      "name": "Who will win Chopped Castaways: Season 1?",
+      "kalshi_event_ticker": "KXCHOPPEDCASTAWAYS-26DEC31",
+      "kalshi_ticker": "KXCHOPPEDCASTAWAYS-26DEC31",
+      "poly_slug": "who-will-win-chopped-castaways",
+      "category": "Entertainment",
+      "confidence": "HIGH",
+      "event_score": 0.923,
+      "mapping": {
+        "ara": "Ara Zada",
+        "car": "Carrie Baird",
+        "cat": "Cate Meade",
+        "dwi": "Dwight Hudgins",
+        "han": "Hannah Flora",
+        "jam": "James Peck",
+        "jea": "Jean-Paul Bourgeois",
+        "log": "Logan Sandoval",
+        "pau": "Paulette Tejada",
+        "ste": "Stephen Kina",
+        "sun": "Sunny Moody"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXCHOPPEDCASTAWAYS-26DEC31-ARA",
+          "k_suffix": "ara",
+          "k_outcome": "Ara Zada",
+          "p_outcome": "Ara Zada",
+          "p_index": 0,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXCHOPPEDCASTAWAYS-26DEC31-CAR",
+          "k_suffix": "car",
+          "k_outcome": "Carrie Baird",
+          "p_outcome": "Carrie Baird",
+          "p_index": 13,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXCHOPPEDCASTAWAYS-26DEC31-CAT",
+          "k_suffix": "cat",
+          "k_outcome": "Cate Meade",
+          "p_outcome": "Cate Meade",
+          "p_index": 1,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXCHOPPEDCASTAWAYS-26DEC31-DWI",
+          "k_suffix": "dwi",
+          "k_outcome": "Dwight Hudgins",
+          "p_outcome": "Dwight Hudgins",
+          "p_index": 14,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXCHOPPEDCASTAWAYS-26DEC31-HAN",
+          "k_suffix": "han",
+          "k_outcome": "Hannah Flora",
+          "p_outcome": "Hannah Flora",
+          "p_index": 2,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXCHOPPEDCASTAWAYS-26DEC31-JAM",
+          "k_suffix": "jam",
+          "k_outcome": "James Peck",
+          "p_outcome": "James Peck",
+          "p_index": 15,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXCHOPPEDCASTAWAYS-26DEC31-JEA",
+          "k_suffix": "jea",
+          "k_outcome": "Jean-Paul Bourgeois",
+          "p_outcome": "Jean-Paul Bourgeois",
+          "p_index": 3,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXCHOPPEDCASTAWAYS-26DEC31-LOG",
+          "k_suffix": "log",
+          "k_outcome": "Logan Sandoval",
+          "p_outcome": "Logan Sandoval",
+          "p_index": 16,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXCHOPPEDCASTAWAYS-26DEC31-PAU",
+          "k_suffix": "pau",
+          "k_outcome": "Paulette Tejada",
+          "p_outcome": "Paulette Tejada",
+          "p_index": 4,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXCHOPPEDCASTAWAYS-26DEC31-STE",
+          "k_suffix": "ste",
+          "k_outcome": "Stephen Kina",
+          "p_outcome": "Stephen Kina",
+          "p_index": 17,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXCHOPPEDCASTAWAYS-26DEC31-SUN",
+          "k_suffix": "sun",
+          "k_outcome": "Sunny Moody",
+          "p_outcome": "Sunny Moody",
+          "p_index": 5,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534536Z"
+    },
+    {
+      "name": "What countries will Trump visit in 2026?",
+      "kalshi_event_ticker": "KXTRUMPCOUNTRIES-27JAN01",
+      "kalshi_ticker": "KXTRUMPCOUNTRIES-27JAN01",
+      "poly_slug": "which-countries-will-donald-trump-visit-in-2026",
+      "category": "Politics",
+      "confidence": "HIGH",
+      "event_score": 0.915,
+      "mapping": {
+        "isr": "Israel",
+        "sa": "Saudi Arabia",
+        "can": "Canada",
+        "ita": "Italy",
+        "fra": "France",
+        "chi": "China",
+        "ukr": "Ukraine",
+        "rus": "Russia",
+        "ger": "Germany",
+        "nk": "North Korea",
+        "tai": "Taiwan",
+        "ind": "India",
+        "mex": "Mexico",
+        "pol": "Ireland",
+        "tur": "Turkey",
+        "jap": "Japan",
+        "paki": "Pakistan"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-ISR",
+          "k_suffix": "isr",
+          "k_outcome": "Israel",
+          "p_outcome": "Israel",
+          "p_index": 3,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-SA",
+          "k_suffix": "sa",
+          "k_outcome": "Saudi Arabia",
+          "p_outcome": "Saudi Arabia",
+          "p_index": 6,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-CAN",
+          "k_suffix": "can",
+          "k_outcome": "Canada",
+          "p_outcome": "Canada",
+          "p_index": 4,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-ITA",
+          "k_suffix": "ita",
+          "k_outcome": "Italy",
+          "p_outcome": "Italy",
+          "p_index": 15,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-FRA",
+          "k_suffix": "fra",
+          "k_outcome": "France",
+          "p_outcome": "France",
+          "p_index": 10,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-CHI",
+          "k_suffix": "chi",
+          "k_outcome": "China",
+          "p_outcome": "China",
+          "p_index": 14,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-UKR",
+          "k_suffix": "ukr",
+          "k_outcome": "Ukraine",
+          "p_outcome": "Ukraine",
+          "p_index": 12,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-RUS",
+          "k_suffix": "rus",
+          "k_outcome": "Russia",
+          "p_outcome": "Russia",
+          "p_index": 11,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-GER",
+          "k_suffix": "ger",
+          "k_outcome": "Germany",
+          "p_outcome": "Germany",
+          "p_index": 8,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-NK",
+          "k_suffix": "nk",
+          "k_outcome": "North Korea",
+          "p_outcome": "North Korea",
+          "p_index": 20,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-TAI",
+          "k_suffix": "tai",
+          "k_outcome": "Taiwan",
+          "p_outcome": "Taiwan",
+          "p_index": 13,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-IND",
+          "k_suffix": "ind",
+          "k_outcome": "India",
+          "p_outcome": "India",
+          "p_index": 17,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-MEX",
+          "k_suffix": "mex",
+          "k_outcome": "Mexico",
+          "p_outcome": "Mexico",
+          "p_index": 5,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-POL",
+          "k_suffix": "pol",
+          "k_outcome": "Poland",
+          "p_outcome": "Ireland",
+          "p_index": 21,
+          "score": 0.615
+        },
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-TUR",
+          "k_suffix": "tur",
+          "k_outcome": "Turkey",
+          "p_outcome": "Turkey",
+          "p_index": 19,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-JAP",
+          "k_suffix": "jap",
+          "k_outcome": "Japan",
+          "p_outcome": "Japan",
+          "p_index": 7,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPCOUNTRIES-27JAN01-PAKI",
+          "k_suffix": "paki",
+          "k_outcome": "Pakistan",
+          "p_outcome": "Pakistan",
+          "p_index": 22,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534541Z"
+    },
+    {
+      "name": "2026 2026 Midterms: House popular vote margin of victory? (Generic ballot)",
+      "kalshi_event_ticker": "KXHOUSEPOPVOTEMARGIN-27NOV03",
+      "kalshi_ticker": "KXHOUSEPOPVOTEMARGIN-27NOV03",
+      "poly_slug": "2026-midterms-house-popular-vote-margin-of-victory-224",
+      "category": "Politics",
+      "confidence": "HIGH",
+      "event_score": 0.913,
+      "mapping": {
+        "b50": "Republicans 6%+",
+        "b1": "Democrats 0-2%",
+        "b3": "Democrats 2-4%",
+        "b5": "Democrats 4-6%",
+        "b7": "Democrats 6-8%",
+        "b9": "Democrats 8-10%",
+        "b11": "Democrats 10-12%",
+        "b13": "Democrats 12-14%",
+        "b15": "Democrats 14-16%",
+        "b58": "Democrats 16%+"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXHOUSEPOPVOTEMARGIN-27NOV03-B50",
+          "k_suffix": "b50",
+          "k_outcome": "Republicans win",
+          "p_outcome": "Republicans 6%+",
+          "p_index": 12,
+          "score": 0.857
+        },
+        {
+          "k_ticker": "KXHOUSEPOPVOTEMARGIN-27NOV03-B1",
+          "k_suffix": "b1",
+          "k_outcome": "Democrats, 0 to 2%",
+          "p_outcome": "Democrats 0-2%",
+          "p_index": 8,
+          "score": 0.897
+        },
+        {
+          "k_ticker": "KXHOUSEPOPVOTEMARGIN-27NOV03-B3",
+          "k_suffix": "b3",
+          "k_outcome": "Democrats, 2 to 4%",
+          "p_outcome": "Democrats 2-4%",
+          "p_index": 7,
+          "score": 0.897
+        },
+        {
+          "k_ticker": "KXHOUSEPOPVOTEMARGIN-27NOV03-B5",
+          "k_suffix": "b5",
+          "k_outcome": "Democrats, 4 to 6%",
+          "p_outcome": "Democrats 4-6%",
+          "p_index": 6,
+          "score": 0.897
+        },
+        {
+          "k_ticker": "KXHOUSEPOPVOTEMARGIN-27NOV03-B7",
+          "k_suffix": "b7",
+          "k_outcome": "Democrats, 6 to 8%",
+          "p_outcome": "Democrats 6-8%",
+          "p_index": 5,
+          "score": 0.897
+        },
+        {
+          "k_ticker": "KXHOUSEPOPVOTEMARGIN-27NOV03-B9",
+          "k_suffix": "b9",
+          "k_outcome": "Democrats, 8 to 10%",
+          "p_outcome": "Democrats 8-10%",
+          "p_index": 4,
+          "score": 0.903
+        },
+        {
+          "k_ticker": "KXHOUSEPOPVOTEMARGIN-27NOV03-B11",
+          "k_suffix": "b11",
+          "k_outcome": "Democrats, 10 to 12%",
+          "p_outcome": "Democrats 10-12%",
+          "p_index": 3,
+          "score": 0.909
+        },
+        {
+          "k_ticker": "KXHOUSEPOPVOTEMARGIN-27NOV03-B13",
+          "k_suffix": "b13",
+          "k_outcome": "Democrats, 12 to 14%",
+          "p_outcome": "Democrats 12-14%",
+          "p_index": 2,
+          "score": 0.909
+        },
+        {
+          "k_ticker": "KXHOUSEPOPVOTEMARGIN-27NOV03-B15",
+          "k_suffix": "b15",
+          "k_outcome": "Democrats, 14 to 16%",
+          "p_outcome": "Democrats 14-16%",
+          "p_index": 1,
+          "score": 0.909
+        },
+        {
+          "k_ticker": "KXHOUSEPOPVOTEMARGIN-27NOV03-B58",
+          "k_suffix": "b58",
+          "k_outcome": "Democrats, 16% and above",
+          "p_outcome": "Democrats 16%+",
+          "p_index": 0,
+          "score": 0.706
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534544Z"
+    },
+    {
+      "name": "How many dissenting votes at the next Fed meeting?",
+      "kalshi_event_ticker": "KXFOMCDISSENTCOUNT-26JUN",
+      "kalshi_ticker": "KXFOMCDISSENTCOUNT-26JUN",
+      "poly_slug": "how-many-dissent-at-the-next-fed-meeting-822",
+      "category": "Economics",
+      "confidence": "HIGH",
+      "event_score": 0.909,
+      "mapping": {
+        "0": "0",
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4+"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXFOMCDISSENTCOUNT-26JUN-0",
+          "k_suffix": "0",
+          "k_outcome": "0",
+          "p_outcome": "0",
+          "p_index": 2,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFOMCDISSENTCOUNT-26JUN-1",
+          "k_suffix": "1",
+          "k_outcome": "1",
+          "p_outcome": "1",
+          "p_index": 0,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFOMCDISSENTCOUNT-26JUN-2",
+          "k_suffix": "2",
+          "k_outcome": "2",
+          "p_outcome": "2",
+          "p_index": 3,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFOMCDISSENTCOUNT-26JUN-3",
+          "k_suffix": "3",
+          "k_outcome": "3",
+          "p_outcome": "3",
+          "p_index": 1,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFOMCDISSENTCOUNT-26JUN-4",
+          "k_suffix": "4",
+          "k_outcome": "4",
+          "p_outcome": "4+",
+          "p_index": 4,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534547Z"
+    },
+    {
+      "name": "Who will win the Fields Medal in 2026?",
+      "kalshi_event_ticker": "KXFIELDS-26",
+      "kalshi_ticker": "KXFIELDS-26",
+      "poly_slug": "who-will-win-the-2026-fields-medal",
+      "category": "Science and Technology",
+      "confidence": "HIGH",
+      "event_score": 0.909,
+      "mapping": {
+        "hwan": "Hong Wang",
+        "jtsi": "Jacob Tsimerman",
+        "yden": "Yu Deng",
+        "jtho": "Jack Thorne",
+        "jpar": "John Pardon",
+        "sras": "Sam Raskin",
+        "jsah": "Julian Sahasrabudhe",
+        "wsaw": "Will Sawin",
+        "alog": "Aleksandr Logunov",
+        "aefi": "Alexander Efimov"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXFIELDS-26-HWAN",
+          "k_suffix": "hwan",
+          "k_outcome": "Hong Wang",
+          "p_outcome": "Hong Wang",
+          "p_index": 4,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFIELDS-26-JTSI",
+          "k_suffix": "jtsi",
+          "k_outcome": "Jacob Tsimerman",
+          "p_outcome": "Jacob Tsimerman",
+          "p_index": 7,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFIELDS-26-YDEN",
+          "k_suffix": "yden",
+          "k_outcome": "Yu Deng",
+          "p_outcome": "Yu Deng",
+          "p_index": 0,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFIELDS-26-JTHO",
+          "k_suffix": "jtho",
+          "k_outcome": "Jack Thorne",
+          "p_outcome": "Jack Thorne",
+          "p_index": 2,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFIELDS-26-JPAR",
+          "k_suffix": "jpar",
+          "k_outcome": "John Pardon",
+          "p_outcome": "John Pardon",
+          "p_index": 5,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFIELDS-26-SRAS",
+          "k_suffix": "sras",
+          "k_outcome": "Sam Raskin",
+          "p_outcome": "Sam Raskin",
+          "p_index": 9,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFIELDS-26-JSAH",
+          "k_suffix": "jsah",
+          "k_outcome": "Julian Sahasrabudhe",
+          "p_outcome": "Julian Sahasrabudhe",
+          "p_index": 8,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFIELDS-26-WSAW",
+          "k_suffix": "wsaw",
+          "k_outcome": "Will Sawin",
+          "p_outcome": "Will Sawin",
+          "p_index": 1,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFIELDS-26-ALOG",
+          "k_suffix": "alog",
+          "k_outcome": "Aleksandr Logunov",
+          "p_outcome": "Aleksandr Logunov",
+          "p_index": 6,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFIELDS-26-AEFI",
+          "k_suffix": "aefi",
+          "k_outcome": "Alexander Efimov",
+          "p_outcome": "Alexander Efimov",
+          "p_index": 3,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534551Z"
+    },
+    {
+      "name": "Who will Trump pardon in 2026?",
+      "kalshi_event_ticker": "KXTRUMPPARDON-27JAN01",
+      "kalshi_ticker": "KXTRUMPPARDON-27JAN01",
+      "poly_slug": "who-will-trump-pardon-before-2027",
+      "category": "Politics",
+      "confidence": "HIGH",
+      "event_score": 0.908,
+      "mapping": {
+        "krod": "Keonne Rodriguez",
+        "dchau": "Derek Chauvin",
+        "sbf": "Sam Bankman-Fried",
+        "eada": "Eric Adams",
+        "sban": "Steve Bannon",
+        "gmax": "Ghislaine Maxwell",
+        "bmen": "Bob Menendez",
+        "jass": "Julian Assange",
+        "rver": "Roger Ver",
+        "esno": "Edward Snowden",
+        "msh": "Martin Shkreli",
+        "ehol": "Elizabeth Holmes"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXTRUMPPARDON-27JAN01-KROD",
+          "k_suffix": "krod",
+          "k_outcome": "Keonne Rodriguez",
+          "p_outcome": "Keonne Rodriguez",
+          "p_index": 24,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPPARDON-27JAN01-DCHAU",
+          "k_suffix": "dchau",
+          "k_outcome": "Derek Chauvin",
+          "p_outcome": "Derek Chauvin",
+          "p_index": 14,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPPARDON-27JAN01-SBF",
+          "k_suffix": "sbf",
+          "k_outcome": "Sam Bankman-Fried",
+          "p_outcome": "Sam Bankman-Fried",
+          "p_index": 10,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPPARDON-27JAN01-EADA",
+          "k_suffix": "eada",
+          "k_outcome": "Eric Adams",
+          "p_outcome": "Eric Adams",
+          "p_index": 5,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPPARDON-27JAN01-SBAN",
+          "k_suffix": "sban",
+          "k_outcome": "Steve Bannon",
+          "p_outcome": "Steve Bannon",
+          "p_index": 16,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPPARDON-27JAN01-GMAX",
+          "k_suffix": "gmax",
+          "k_outcome": "Ghislaine Maxwell",
+          "p_outcome": "Ghislaine Maxwell",
+          "p_index": 4,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPPARDON-27JAN01-BMEN",
+          "k_suffix": "bmen",
+          "k_outcome": "Bob Menendez",
+          "p_outcome": "Bob Menendez",
+          "p_index": 19,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPPARDON-27JAN01-JASS",
+          "k_suffix": "jass",
+          "k_outcome": "Julian Assange",
+          "p_outcome": "Julian Assange",
+          "p_index": 11,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPPARDON-27JAN01-RVER",
+          "k_suffix": "rver",
+          "k_outcome": "Roger Ver",
+          "p_outcome": "Roger Ver",
+          "p_index": 0,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPPARDON-27JAN01-ESNO",
+          "k_suffix": "esno",
+          "k_outcome": "Edward Snowden",
+          "p_outcome": "Edward Snowden",
+          "p_index": 18,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPPARDON-27JAN01-MSH",
+          "k_suffix": "msh",
+          "k_outcome": "Martin Shkreli",
+          "p_outcome": "Martin Shkreli",
+          "p_index": 25,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPPARDON-27JAN01-EHOL",
+          "k_suffix": "ehol",
+          "k_outcome": "Elizabeth Holmes",
+          "p_outcome": "Elizabeth Holmes",
+          "p_index": 20,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534554Z"
+    },
+    {
+      "name": "Where will Trump and Putin next meet?",
+      "kalshi_event_ticker": "KXPUTINDJTLOCATION-29",
+      "kalshi_ticker": "KXPUTINDJTLOCATION-29",
+      "poly_slug": "where-will-trump-and-putin-meet-next-584",
+      "category": "Social",
+      "confidence": "HIGH",
+      "event_score": 0.904,
+      "mapping": {
+        "tur": "Turkey",
+        "prc": "China",
+        "rus": "Russia"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXPUTINDJTLOCATION-29-TUR",
+          "k_suffix": "tur",
+          "k_outcome": "Turkey",
+          "p_outcome": "Turkey",
+          "p_index": 7,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXPUTINDJTLOCATION-29-PRC",
+          "k_suffix": "prc",
+          "k_outcome": "China",
+          "p_outcome": "China",
+          "p_index": 14,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXPUTINDJTLOCATION-29-RUS",
+          "k_suffix": "rus",
+          "k_outcome": "Russia",
+          "p_outcome": "Russia",
+          "p_index": 2,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534556Z"
+    },
+    {
+      "name": "California Governor winner?",
+      "kalshi_event_ticker": "KXGOVCA-26",
+      "kalshi_ticker": "KXGOVCA-26",
+      "poly_slug": "california-governor-election-2026",
+      "category": "Elections",
+      "confidence": "HIGH",
+      "event_score": 0.897,
+      "mapping": {
+        "tatk": "Toni Atkins",
+        "klan": "Kyle Langford",
+        "xbec": "Xavier Becerra",
+        "rcar": "Rick Caruso",
+        "cbia": "Chad Bianco",
+        "avil": "Antonio Villaraigosa",
+        "sclo": "Stephen Cloobeck",
+        "shil": "Steve Hilton",
+        "ekou": "Eleni Kounalakis",
+        "dmer": "Daniel Mercuri",
+        "kpor": "Katie Porter",
+        "tthu": "Tony Thurmond",
+        "bwar": "Butch Ware",
+        "byee": "Betty Yee",
+        "myou": "Michael Younger",
+        "lzac": "Leo Zacky",
+        "nic": "Nicole Shanahan",
+        "alex": "Alex Padilla",
+        "khar": "Kamala Harris",
+        "tste": "Tom Steyer",
+        "eswa": "Eric Swalwell",
+        "mmah": "Matt Mahan"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXGOVCA-26-TATK",
+          "k_suffix": "tatk",
+          "k_outcome": "Toni Atkins",
+          "p_outcome": "Toni Atkins",
+          "p_index": 27,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-KLAN",
+          "k_suffix": "klan",
+          "k_outcome": "Kyle Langford",
+          "p_outcome": "Kyle Langford",
+          "p_index": 5,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-XBEC",
+          "k_suffix": "xbec",
+          "k_outcome": "Xavier Becerra",
+          "p_outcome": "Xavier Becerra",
+          "p_index": 25,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-RCAR",
+          "k_suffix": "rcar",
+          "k_outcome": "Rick Caruso",
+          "p_outcome": "Rick Caruso",
+          "p_index": 0,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-CBIA",
+          "k_suffix": "cbia",
+          "k_outcome": "Chad Bianco",
+          "p_outcome": "Chad Bianco",
+          "p_index": 28,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-AVIL",
+          "k_suffix": "avil",
+          "k_outcome": "Antonio Villaraigosa",
+          "p_outcome": "Antonio Villaraigosa",
+          "p_index": 24,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-SCLO",
+          "k_suffix": "sclo",
+          "k_outcome": "Stephen Cloobeck",
+          "p_outcome": "Stephen Cloobeck",
+          "p_index": 3,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-SHIL",
+          "k_suffix": "shil",
+          "k_outcome": "Steve Hilton",
+          "p_outcome": "Steve Hilton",
+          "p_index": 2,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-EKOU",
+          "k_suffix": "ekou",
+          "k_outcome": "Eleni Kounalakis",
+          "p_outcome": "Eleni Kounalakis",
+          "p_index": 6,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-DMER",
+          "k_suffix": "dmer",
+          "k_outcome": "Daniel Mercuri",
+          "p_outcome": "Daniel Mercuri",
+          "p_index": 29,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-KPOR",
+          "k_suffix": "kpor",
+          "k_outcome": "Katie Porter",
+          "p_outcome": "Katie Porter",
+          "p_index": 1,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-TTHU",
+          "k_suffix": "tthu",
+          "k_outcome": "Tony Thurmond",
+          "p_outcome": "Tony Thurmond",
+          "p_index": 7,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-BWAR",
+          "k_suffix": "bwar",
+          "k_outcome": "Butch Ware",
+          "p_outcome": "Butch Ware",
+          "p_index": 26,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-BYEE",
+          "k_suffix": "byee",
+          "k_outcome": "Betty Yee",
+          "p_outcome": "Betty Yee",
+          "p_index": 4,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-MYOU",
+          "k_suffix": "myou",
+          "k_outcome": "Michael Younger",
+          "p_outcome": "Michael Younger",
+          "p_index": 30,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-LZAC",
+          "k_suffix": "lzac",
+          "k_outcome": "Leo Zacky",
+          "p_outcome": "Leo Zacky",
+          "p_index": 8,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-NIC",
+          "k_suffix": "nic",
+          "k_outcome": "Nicole Shanahan",
+          "p_outcome": "Nicole Shanahan",
+          "p_index": 31,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-ALEX",
+          "k_suffix": "alex",
+          "k_outcome": "Alex Padilla",
+          "p_outcome": "Alex Padilla",
+          "p_index": 23,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-KHAR",
+          "k_suffix": "khar",
+          "k_outcome": "Kamala Harris",
+          "p_outcome": "Kamala Harris",
+          "p_index": 10,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-TSTE",
+          "k_suffix": "tste",
+          "k_outcome": "Tom Steyer",
+          "p_outcome": "Tom Steyer",
+          "p_index": 32,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-ESWA",
+          "k_suffix": "eswa",
+          "k_outcome": "Eric Swalwell",
+          "p_outcome": "Eric Swalwell",
+          "p_index": 9,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXGOVCA-26-MMAH",
+          "k_suffix": "mmah",
+          "k_outcome": "Matt Mahan",
+          "p_outcome": "Matt Mahan",
+          "p_index": 33,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534562Z"
+    },
+    {
+      "name": "Who will Donald Trump meet in 2026?",
+      "kalshi_event_ticker": "KXTRUMPMEETING-27JAN01",
+      "kalshi_ticker": "KXTRUMPMEETING-27JAN01",
+      "poly_slug": "who-will-trump-meet-with-in-2026",
+      "category": "Politics",
+      "confidence": "HIGH",
+      "event_score": 0.894,
+      "mapping": {
+        "nvput": "Vladimir Putin",
+        "nxjin": "Xi Jinping",
+        "nmbs": "Mohammed bin Salman",
+        "nkju": "Kim Jong Un",
+        "nnmad": "Nicolás Maduro",
+        "npxiv": "Pope Leo XIV",
+        "naals": "Ahmed al-Sharaa"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXTRUMPMEETING-27JAN01-NVPUT",
+          "k_suffix": "nvput",
+          "k_outcome": "Vladimir Putin",
+          "p_outcome": "Vladimir Putin",
+          "p_index": 17,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPMEETING-27JAN01-NXJIN",
+          "k_suffix": "nxjin",
+          "k_outcome": "Xi Jinping",
+          "p_outcome": "Xi Jinping",
+          "p_index": 4,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPMEETING-27JAN01-NMBS",
+          "k_suffix": "nmbs",
+          "k_outcome": "Mohammed bin Salman",
+          "p_outcome": "Mohammed bin Salman",
+          "p_index": 5,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPMEETING-27JAN01-NKJU",
+          "k_suffix": "nkju",
+          "k_outcome": "Kim Jong Un",
+          "p_outcome": "Kim Jong Un",
+          "p_index": 2,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPMEETING-27JAN01-NNMAD",
+          "k_suffix": "nnmad",
+          "k_outcome": "Nicolás Maduro",
+          "p_outcome": "Nicolás Maduro",
+          "p_index": 22,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPMEETING-27JAN01-NPXIV",
+          "k_suffix": "npxiv",
+          "k_outcome": "Pope Leo XIV",
+          "p_outcome": "Pope Leo XIV",
+          "p_index": 19,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXTRUMPMEETING-27JAN01-NAALS",
+          "k_suffix": "naals",
+          "k_outcome": "Ahmed al-Sharaa",
+          "p_outcome": "Ahmed al-Sharaa",
+          "p_index": 16,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534565Z"
+    },
+    {
+      "name": "Who will be featured on Ariana Grande's album petal?",
+      "kalshi_event_ticker": "KXFEATURE-26PET",
+      "kalshi_ticker": "KXFEATURE-26PET",
+      "poly_slug": "who-will-be-featured-on-petal",
+      "category": "Entertainment",
+      "confidence": "HIGH",
+      "event_score": 0.892,
+      "mapping": {
+        "wee": "The Weeknd",
+        "doj": "Doja Cat",
+        "sza": "SZA",
+        "nic": "Nicki Minaj",
+        "bil": "Billie Eilish",
+        "oli": "Olivia Rodrigo",
+        "tyl": "Tyla",
+        "tro": "Troye Sivan",
+        "tay": "Taylor Swift"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXFEATURE-26PET-WEE",
+          "k_suffix": "wee",
+          "k_outcome": "The Weeknd",
+          "p_outcome": "The Weeknd",
+          "p_index": 2,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFEATURE-26PET-DOJ",
+          "k_suffix": "doj",
+          "k_outcome": "Doja Cat",
+          "p_outcome": "Doja Cat",
+          "p_index": 3,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFEATURE-26PET-SZA",
+          "k_suffix": "sza",
+          "k_outcome": "SZA",
+          "p_outcome": "SZA",
+          "p_index": 11,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFEATURE-26PET-NIC",
+          "k_suffix": "nic",
+          "k_outcome": "Nicki Minaj",
+          "p_outcome": "Nicki Minaj",
+          "p_index": 10,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFEATURE-26PET-BIL",
+          "k_suffix": "bil",
+          "k_outcome": "Billie Eilish",
+          "p_outcome": "Billie Eilish",
+          "p_index": 4,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFEATURE-26PET-OLI",
+          "k_suffix": "oli",
+          "k_outcome": "Olivia Rodrigo",
+          "p_outcome": "Olivia Rodrigo",
+          "p_index": 0,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFEATURE-26PET-TYL",
+          "k_suffix": "tyl",
+          "k_outcome": "Tyla",
+          "p_outcome": "Tyla",
+          "p_index": 1,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFEATURE-26PET-TRO",
+          "k_suffix": "tro",
+          "k_outcome": "Troye Sivan",
+          "p_outcome": "Troye Sivan",
+          "p_index": 12,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXFEATURE-26PET-TAY",
+          "k_suffix": "tay",
+          "k_outcome": "Taylor Swift",
+          "p_outcome": "Taylor Swift",
+          "p_index": 7,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534568Z"
+    },
+    {
+      "name": "Top US Netflix Movie this week?",
+      "kalshi_event_ticker": "KXNETFLIXRANKMOVIE-26MAY18",
+      "kalshi_ticker": "KXNETFLIXRANKMOVIE-26MAY18",
+      "poly_slug": "what-will-be-the-top-us-netflix-movie-this-week-644",
+      "category": "Entertainment",
+      "confidence": "HIGH",
+      "event_score": 0.889,
+      "mapping": {
+        "swa": "Swapped",
+        "rem": "Remarkably Bright Creatures",
+        "ape": "Apex",
+        "the": "The Proposal",
+        "hom": "Home",
+        "pre": "Pretty Woman",
+        "str": "Striking Distance",
+        "cra": "Other",
+        "bla": "Black Phone 2"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXNETFLIXRANKMOVIE-26MAY18-SWA",
+          "k_suffix": "swa",
+          "k_outcome": "Swapped",
+          "p_outcome": "Swapped",
+          "p_index": 16,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNETFLIXRANKMOVIE-26MAY18-REM",
+          "k_suffix": "rem",
+          "k_outcome": "Remarkably Bright Creatures",
+          "p_outcome": "Remarkably Bright Creatures",
+          "p_index": 17,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNETFLIXRANKMOVIE-26MAY18-APE",
+          "k_suffix": "ape",
+          "k_outcome": "Apex",
+          "p_outcome": "Apex",
+          "p_index": 0,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNETFLIXRANKMOVIE-26MAY18-THE",
+          "k_suffix": "the",
+          "k_outcome": "The Proposal",
+          "p_outcome": "The Proposal",
+          "p_index": 12,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNETFLIXRANKMOVIE-26MAY18-HOM",
+          "k_suffix": "hom",
+          "k_outcome": "Home",
+          "p_outcome": "Home",
+          "p_index": 7,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNETFLIXRANKMOVIE-26MAY18-PRE",
+          "k_suffix": "pre",
+          "k_outcome": "Pretty Woman",
+          "p_outcome": "Pretty Woman",
+          "p_index": 2,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNETFLIXRANKMOVIE-26MAY18-STR",
+          "k_suffix": "str",
+          "k_outcome": "Striking Distance",
+          "p_outcome": "Striking Distance",
+          "p_index": 18,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNETFLIXRANKMOVIE-26MAY18-CRA",
+          "k_suffix": "cra",
+          "k_outcome": "The Crash",
+          "p_outcome": "Other",
+          "p_index": 10,
+          "score": 0.571
+        },
+        {
+          "k_ticker": "KXNETFLIXRANKMOVIE-26MAY18-BLA",
+          "k_suffix": "bla",
+          "k_outcome": "Black Phone 2",
+          "p_outcome": "Black Phone 2",
+          "p_index": 11,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534571Z"
+    },
+    {
+      "name": "Which companies will the US take a stake in this year?",
+      "kalshi_event_ticker": "KXUSACOMPANYSTAKE-27JAN01",
+      "kalshi_ticker": "KXUSACOMPANYSTAKE-27JAN01",
+      "poly_slug": "which-companies-will-the-us-take-a-stake-in",
+      "category": "Companies",
+      "confidence": "HIGH",
+      "event_score": 0.886,
+      "mapping": {
+        "oai": "OpenAI",
+        "anth": "Anthropic",
+        "andu": "Anduril",
+        "pltr": "Palantir",
+        "tsm": "TSMC",
+        "nvda": "Nvidia",
+        "mu": "Micron",
+        "gfs": "GlobalFoundries",
+        "lmt": "Lockheed Martin",
+        "ba": "Boeing",
+        "ionq": "IonQ",
+        "rgti": "Rigetti",
+        "qbts": "D-Wave",
+        "fcx": "Freeport-McMoRan",
+        "lly": "Eli Lilly",
+        "pfe": "Pfizer"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXUSACOMPANYSTAKE-27JAN01-OAI",
+          "k_suffix": "oai",
+          "k_outcome": "OpenAI",
+          "p_outcome": "OpenAI",
+          "p_index": 1,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUSACOMPANYSTAKE-27JAN01-ANTH",
+          "k_suffix": "anth",
+          "k_outcome": "Anthropic",
+          "p_outcome": "Anthropic",
+          "p_index": 6,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUSACOMPANYSTAKE-27JAN01-ANDU",
+          "k_suffix": "andu",
+          "k_outcome": "Anduril",
+          "p_outcome": "Anduril",
+          "p_index": 9,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUSACOMPANYSTAKE-27JAN01-PLTR",
+          "k_suffix": "pltr",
+          "k_outcome": "Palantir",
+          "p_outcome": "Palantir",
+          "p_index": 11,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUSACOMPANYSTAKE-27JAN01-TSM",
+          "k_suffix": "tsm",
+          "k_outcome": "TSMC",
+          "p_outcome": "TSMC",
+          "p_index": 10,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUSACOMPANYSTAKE-27JAN01-NVDA",
+          "k_suffix": "nvda",
+          "k_outcome": "Nvidia",
+          "p_outcome": "Nvidia",
+          "p_index": 2,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUSACOMPANYSTAKE-27JAN01-MU",
+          "k_suffix": "mu",
+          "k_outcome": "Micron",
+          "p_outcome": "Micron",
+          "p_index": 5,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUSACOMPANYSTAKE-27JAN01-GFS",
+          "k_suffix": "gfs",
+          "k_outcome": "GlobalFoundries",
+          "p_outcome": "GlobalFoundries",
+          "p_index": 12,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUSACOMPANYSTAKE-27JAN01-LMT",
+          "k_suffix": "lmt",
+          "k_outcome": "Lockheed Martin",
+          "p_outcome": "Lockheed Martin",
+          "p_index": 3,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUSACOMPANYSTAKE-27JAN01-BA",
+          "k_suffix": "ba",
+          "k_outcome": "Boeing",
+          "p_outcome": "Boeing",
+          "p_index": 0,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUSACOMPANYSTAKE-27JAN01-IONQ",
+          "k_suffix": "ionq",
+          "k_outcome": "IonQ",
+          "p_outcome": "IonQ",
+          "p_index": 14,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUSACOMPANYSTAKE-27JAN01-RGTI",
+          "k_suffix": "rgti",
+          "k_outcome": "Rigetti Computing",
+          "p_outcome": "Rigetti",
+          "p_index": 16,
+          "score": 0.583
+        },
+        {
+          "k_ticker": "KXUSACOMPANYSTAKE-27JAN01-QBTS",
+          "k_suffix": "qbts",
+          "k_outcome": "D-Wave Quantum",
+          "p_outcome": "D-Wave",
+          "p_index": 15,
+          "score": 0.6
+        },
+        {
+          "k_ticker": "KXUSACOMPANYSTAKE-27JAN01-FCX",
+          "k_suffix": "fcx",
+          "k_outcome": "Freeport-McMoRan",
+          "p_outcome": "Freeport-McMoRan",
+          "p_index": 4,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUSACOMPANYSTAKE-27JAN01-LLY",
+          "k_suffix": "lly",
+          "k_outcome": "Eli Lilly",
+          "p_outcome": "Eli Lilly",
+          "p_index": 7,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXUSACOMPANYSTAKE-27JAN01-PFE",
+          "k_suffix": "pfe",
+          "k_outcome": "Pfizer",
+          "p_outcome": "Pfizer",
+          "p_index": 17,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534575Z"
+    },
+    {
+      "name": "CA-06 primary: first place",
+      "kalshi_event_ticker": "KXCAPRIMARY-06FIRST26",
+      "kalshi_ticker": "KXCAPRIMARY-06FIRST26",
+      "poly_slug": "ca-06-primary-winners",
+      "category": "Elections",
+      "confidence": "HIGH",
+      "event_score": 0.883,
+      "mapping": {
+        "kkil": "Kevin Kiley",
+        "ltom": "Lauren Babb Tomlinson",
+        "mgue": "Martha Guerrero",
+        "tho": "Thien Ho",
+        "rpan": "Richard Pan",
+        "msta": "Michael Stansfield",
+        "tvan": "Tyler Vandenberg"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXCAPRIMARY-06FIRST26-KKIL",
+          "k_suffix": "kkil",
+          "k_outcome": "Kevin Kiley",
+          "p_outcome": "Kevin Kiley",
+          "p_index": 3,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXCAPRIMARY-06FIRST26-LTOM",
+          "k_suffix": "ltom",
+          "k_outcome": "Lauren Babb Tomlinson",
+          "p_outcome": "Lauren Babb Tomlinson",
+          "p_index": 0,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXCAPRIMARY-06FIRST26-MGUE",
+          "k_suffix": "mgue",
+          "k_outcome": "Martha Guerrero",
+          "p_outcome": "Martha Guerrero",
+          "p_index": 4,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXCAPRIMARY-06FIRST26-THO",
+          "k_suffix": "tho",
+          "k_outcome": "Thien Ho",
+          "p_outcome": "Thien Ho",
+          "p_index": 2,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXCAPRIMARY-06FIRST26-RPAN",
+          "k_suffix": "rpan",
+          "k_outcome": "Richard Pan",
+          "p_outcome": "Richard Pan",
+          "p_index": 5,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXCAPRIMARY-06FIRST26-MSTA",
+          "k_suffix": "msta",
+          "k_outcome": "Michael Stansfield",
+          "p_outcome": "Michael Stansfield",
+          "p_index": 1,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXCAPRIMARY-06FIRST26-TVAN",
+          "k_suffix": "tvan",
+          "k_outcome": "Tyler Vandenberg",
+          "p_outcome": "Tyler Vandenberg",
+          "p_index": 6,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534578Z"
+    },
+    {
+      "name": "Who will be Trump's next Attorney General?",
+      "kalshi_event_ticker": "KXNEXTAG-29",
+      "kalshi_ticker": "KXNEXTAG-29",
+      "poly_slug": "who-will-trump-announce-as-next-attorney-general",
+      "category": "Politics",
+      "confidence": "HIGH",
+      "event_score": 0.882,
+      "mapping": {
+        "lzel": "Lee Zeldin",
+        "mgae": "Matt Gaetz",
+        "jcla": "Jay Clayton",
+        "abai": "Andrew Bailey",
+        "jpir": "Jeanine Pirro",
+        "mlee": "Mike Lee",
+        "tbla": "Todd Blanche",
+        "kpax": "Ken Paxton",
+        "esch": "Eric Schmitt",
+        "hdhi": "Harmeet Dhillon",
+        "tcru": "Ted Cruz",
+        "ahab": "Alina Habba",
+        "rdes": "Ron DeSantis"
+      },
+      "outcomes": [
+        {
+          "k_ticker": "KXNEXTAG-29-LZEL",
+          "k_suffix": "lzel",
+          "k_outcome": "Lee Zeldin",
+          "p_outcome": "Lee Zeldin",
+          "p_index": 0,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNEXTAG-29-MGAE",
+          "k_suffix": "mgae",
+          "k_outcome": "Matt Gaetz",
+          "p_outcome": "Matt Gaetz",
+          "p_index": 4,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNEXTAG-29-JCLA",
+          "k_suffix": "jcla",
+          "k_outcome": "Jay Clayton",
+          "p_outcome": "Jay Clayton",
+          "p_index": 8,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNEXTAG-29-ABAI",
+          "k_suffix": "abai",
+          "k_outcome": "Andrew Bailey",
+          "p_outcome": "Andrew Bailey",
+          "p_index": 14,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNEXTAG-29-JPIR",
+          "k_suffix": "jpir",
+          "k_outcome": "Jeanine Pirro",
+          "p_outcome": "Jeanine Pirro",
+          "p_index": 6,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNEXTAG-29-MLEE",
+          "k_suffix": "mlee",
+          "k_outcome": "Mike Lee",
+          "p_outcome": "Mike Lee",
+          "p_index": 7,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNEXTAG-29-TBLA",
+          "k_suffix": "tbla",
+          "k_outcome": "Todd Blanche",
+          "p_outcome": "Todd Blanche",
+          "p_index": 1,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNEXTAG-29-KPAX",
+          "k_suffix": "kpax",
+          "k_outcome": "Ken Paxton",
+          "p_outcome": "Ken Paxton",
+          "p_index": 3,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNEXTAG-29-ESCH",
+          "k_suffix": "esch",
+          "k_outcome": "Eric Schmitt",
+          "p_outcome": "Eric Schmitt",
+          "p_index": 11,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNEXTAG-29-HDHI",
+          "k_suffix": "hdhi",
+          "k_outcome": "Harmeet Dhillon",
+          "p_outcome": "Harmeet Dhillon",
+          "p_index": 9,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNEXTAG-29-TCRU",
+          "k_suffix": "tcru",
+          "k_outcome": "Ted Cruz",
+          "p_outcome": "Ted Cruz",
+          "p_index": 10,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNEXTAG-29-AHAB",
+          "k_suffix": "ahab",
+          "k_outcome": "Alina Habba",
+          "p_outcome": "Alina Habba",
+          "p_index": 12,
+          "score": 1.0
+        },
+        {
+          "k_ticker": "KXNEXTAG-29-RDES",
+          "k_suffix": "rdes",
+          "k_outcome": "Ron DeSantis",
+          "p_outcome": "Ron DeSantis",
+          "p_index": 5,
+          "score": 1.0
+        }
+      ],
+      "discovered_at": "2026-05-19T09:29:16.534582Z"
+    }
+  ]
+}
