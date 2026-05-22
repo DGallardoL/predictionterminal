@@ -39,7 +39,7 @@ from pfm.schemas import (
 )
 from pfm.sources.chain import segments_signature
 from pfm.sources.equity import EquityDataError
-from pfm.sources.kalshi import KalshiClient, KalshiError
+from pfm.sources.kalshi import KalshiClient, KalshiError, KalshiRateLimitError
 from pfm.sources.polymarket import (
     PolymarketClient,
     PolymarketError,
@@ -486,6 +486,16 @@ def _cached_factor_history(
         kalshi_client = _current_kalshi_client()
         try:
             df = _main_attr("fetch_kalshi_history")(kalshi_client, fc.slug, start=start, end=end)
+        except KalshiRateLimitError as e:
+            # Subclass of KalshiError — must be caught first. A 429 is transient
+            # upstream throttling, not a missing market; surfacing it as 404
+            # ("not found") is misleading. 503 + Retry-After tells the caller
+            # it's temporary and roughly when to retry.
+            raise HTTPException(
+                status_code=503,
+                detail=f"kalshi rate-limited (transient): {_short_err(e)}",
+                headers={"Retry-After": "30"},
+            ) from e
         except KalshiError as e:
             raise HTTPException(status_code=404, detail=str(e)) from e
         except httpx.HTTPError as e:

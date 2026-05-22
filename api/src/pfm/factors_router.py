@@ -54,7 +54,7 @@ from pfm.schemas import (
     RankResponse,
     StepwiseStep,
 )
-from pfm.sources.kalshi import KalshiClient, KalshiError
+from pfm.sources.kalshi import KalshiClient, KalshiError, KalshiRateLimitError
 from pfm.sources.kalshi import fetch_factor_history as fetch_kalshi_history
 from pfm.sources.polymarket import (
     PolymarketClient,
@@ -257,6 +257,12 @@ def preview_factor(
         kalshi = getattr(request.app.state, "kalshi", None) or KalshiClient()
         try:
             market = kalshi.get_market(body.slug)
+        except KalshiRateLimitError as e:
+            raise HTTPException(
+                status_code=503,
+                detail=f"kalshi rate-limited (transient): {_short_err(e)}",
+                headers={"Retry-After": "30"},
+            ) from e
         except KalshiError as e:
             raise HTTPException(status_code=404, detail=str(e)) from e
         except httpx.HTTPError as e:
@@ -264,6 +270,12 @@ def preview_factor(
 
         try:
             df = fetch_kalshi_history(kalshi, body.slug)
+        except KalshiRateLimitError as e:
+            raise HTTPException(
+                status_code=503,
+                detail=f"kalshi rate-limited (transient): {_short_err(e)}",
+                headers={"Retry-After": "30"},
+            ) from e
         except httpx.HTTPError as e:
             raise HTTPException(status_code=502, detail=f"kalshi history error: {e}") from e
 
