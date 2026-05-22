@@ -260,7 +260,7 @@ def preview_factor(
         except KalshiRateLimitError as e:
             raise HTTPException(
                 status_code=503,
-                detail=f"kalshi rate-limited (transient): {_short_err(e)}",
+                detail=f"kalshi rate-limited (transient): {e}",
                 headers={"Retry-After": "30"},
             ) from e
         except KalshiError as e:
@@ -273,7 +273,7 @@ def preview_factor(
         except KalshiRateLimitError as e:
             raise HTTPException(
                 status_code=503,
-                detail=f"kalshi rate-limited (transient): {_short_err(e)}",
+                detail=f"kalshi rate-limited (transient): {e}",
                 headers={"Retry-After": "30"},
             ) from e
         except httpx.HTTPError as e:
