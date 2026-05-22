@@ -120,7 +120,7 @@ def _tolerant_equal(a: Any, b: Any, *, rtol: float = 1e-3, atol: float = 1e-9) -
     if isinstance(a, list) and isinstance(b, list):
         if len(a) != len(b):
             return False
-        return all(_tolerant_equal(x, y, rtol=rtol, atol=atol) for x, y in zip(a, b))
+        return all(_tolerant_equal(x, y, rtol=rtol, atol=atol) for x, y in zip(a, b, strict=True))
     return a == b
 
 
