@@ -288,7 +288,7 @@ disagrees, the W11 numbers are authoritative.
 
 ### Status badges (shields.io)
 
-[![Build](https://github.com/{owner}/{repo}/actions/workflows/ci.yml/badge.svg)](https://github.com/{owner}/{repo}/actions/workflows/ci.yml)
+[![Build](https://github.com/DGallardoL/predictionterminal/actions/workflows/ci.yml/badge.svg)](https://github.com/DGallardoL/predictionterminal/actions/workflows/ci.yml)
 [![Coverage](https://img.shields.io/badge/coverage-72%25-brightgreen.svg)](#)
 [![OpenAPI endpoints](https://img.shields.io/badge/openapi-302%2B-blue.svg)](#)
 [![Factors](https://img.shields.io/badge/factors-1260-orange.svg)](#)
