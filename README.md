@@ -278,14 +278,6 @@ This is research code, not investment advice. See the disclaimer footer
 in the UI.
 
 ---
-
-## W11 Refresh — additional reference card
-
-The sections below are appended as part of task **W11-51** to keep the
-top-level README aligned with the wave-11 build artefacts. They duplicate
-some information from the (older) sections above on purpose; if a number
-disagrees, the W11 numbers are authoritative.
-
 ### Status badges (shields.io)
 
 [![Build](https://github.com/DGallardoL/predictionterminal/actions/workflows/ci.yml/badge.svg)](https://github.com/DGallardoL/predictionterminal/actions/workflows/ci.yml)
@@ -464,4 +456,3 @@ with substantial portions of the software.
 - **VADER** + the financial-lex overlay in `pfm.terminal.sentiment_nlp`
 - Damian's professors and reviewers, whose engineering-discipline
   expectations shaped the test, ADR, and CI structure of this POC
-
