@@ -36,7 +36,7 @@ backtested strategy in under five minutes.
 ## Try it locally (60 seconds)
 
 ```bash
-git clone https://github.com/youruser/proyectofuentes
+git clone https://github.com/DGallardoL/predictionterminal
 cd proyectofuentes
 docker-compose up -d
 open http://localhost:8080
