@@ -16,8 +16,11 @@ services:
 
   api:
     build:
-      context: ./api
-      dockerfile: Dockerfile
+      # Context is the REPO ROOT (not ./api): api/Dockerfile COPYs api/src,
+      # api/requirements.txt, web/ and arbstuff/, so it needs the whole repo.
+      # The root .dockerignore keeps the upload small. Must match how Fly builds.
+      context: .
+      dockerfile: api/Dockerfile
     container_name: pfm-api
     restart: unless-stopped
     environment:
