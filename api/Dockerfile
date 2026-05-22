@@ -1,6 +1,10 @@
 # syntax=docker/dockerfile:1.7
 # ---------- Stage 1: builder ----------
-FROM --platform=$BUILDPLATFORM python:3.12-slim AS builder
+# NOTE: no `--platform=$BUILDPLATFORM` — that var is only set by BuildKit/buildx,
+# so it breaks `docker-compose build` on the classic builder (empty platform =
+# parse error). Building for the host platform is exactly what we want for a
+# local `docker-compose up`; CI/Fly still build for their native/target arch.
+FROM python:3.12-slim AS builder
 
 ENV PIP_NO_CACHE_DIR=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
