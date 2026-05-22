@@ -61,6 +61,7 @@ Esto es lo más nuevo y vistoso para la demo. Es un **data hub** (NO ejecuta tra
 **Qué hace:** explora continuamente los mercados de Kalshi y Polymarket, encuentra pares que hablan del mismo evento ("¿gana X la nominación 2028?") y los muestra con su nivel de confianza.
 
 **Cómo funciona (para explicarlo):**
+
 - Un **crawler resumible** recorre miles de mercados paso a paso (guarda un checkpoint, no se limita a un número fijo).
 - Modo **"New events"**: cuando aparece un mercado nuevo en un venue, lo compara contra el universo del otro venue (no solo contra lo nuevo del otro). Cada candidato se marca con un tag **NEW**.
 - Modo **"Liquid"**: escanea el universo de mayor volumen de ambos venues.

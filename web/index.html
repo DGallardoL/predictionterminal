@@ -11727,6 +11727,7 @@
             <span class="ss-desc">Binance live · OBI · VWAP · whale · spread</span>
           </button>
           <button class="strat-section" data-section="mlhub" type="button" role="tab"
+                  style="display:none;"
                   title="ML Hub — unsupervised structure of the prediction-market universe. Descriptive, not forecasting.">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="8" r="2"/><circle cx="9" cy="18" r="2"/><circle cx="17" cy="17" r="2"/><line x1="6.8" y1="6.6" x2="17.2" y2="7.6"/><line x1="6.4" y1="7.7" x2="8.4" y2="16.2"/><line x1="10.9" y1="17.6" x2="15.2" y2="17.1"/></svg>
             <div class="ss-row">
@@ -23886,8 +23887,12 @@
       const dd = (d.risk && d.risk.max_dd != null) ? (+d.risk.max_dd * 100).toFixed(1) + "%"
         : (d.max_dd != null ? (+d.max_dd * 100).toFixed(1) + "%" : null);
       const best = (d.risk && d.risk.best_conditions) ? esc(d.risk.best_conditions) : null;
+      const beta = (d.beta_hedge ?? (d.rule && d.rule.beta));
+      const betaTxt = (beta != null && isFinite(+beta)) ? ` with β=${(+beta).toFixed(2)}` : "";
+      const adf = d.adf_pvalue;
+      const adfTxt = (adf != null && isFinite(+adf)) ? ` (ADF p=${(+adf).toFixed(3)}, so the spread is statistically mean-reverting, not just drifting)` : "";
       const p = [];
-      p.push(`This is a <b>pairs (relative-value) trade</b>: it follows the price <b>spread</b> between <b>${a}</b> and <b>${b}</b> — two prediction-market events that have historically moved together.`);
+      p.push(`<b>Model — cointegration pairs trade (mean reversion).</b> It does NOT bet on either event alone; it trades the <b>spread</b> = <code>price(${a}) − β·price(${b})</code>${betaTxt} between two prediction-market events that move together over time${adfTxt}. When the spread stretches away from its average, the trade bets it snaps back.`);
       if (entry != null) p.push(`When that spread stretches to <b>±${esc(entry)}σ</b> from its ${win ? esc(win) + "-day" : "rolling"} average, the strategy bets it snaps back: it <span style="color:var(--pos);font-weight:600;">enters</span>, takes profit near <b>±${esc(exit)}σ</b>, and <span style="color:var(--neg);font-weight:600;">stops out</span> at <b>±${esc(stop)}σ</b> if it keeps widening.`);
       p.push(`Historically the gap closes halfway in <b>${hl}</b>.`);
       p.push(`Tier <b>${esc(d.tier || "?")}</b> — ${tierTxt}.`);
@@ -24092,6 +24097,7 @@
         <section class="alphahub-fs-card alphahub-fs-card-wide">
           <h4>What this strategy is</h4>
           <p style="font-family:var(--sans,system-ui,sans-serif); font-size:13.5px; line-height:1.62; color:var(--ink-2); margin:0;">${_alphaPlainSummary(detail)}</p>
+          ${_alphaPositionBlock(detail)}
         </section>`;
 
       // Find the existing grid inside the fullscreen body and append our cards

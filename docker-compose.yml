@@ -53,6 +53,15 @@ services:
       PFM_FACTOR_PREWARM_TOP_N: "50"
       PFM_FACTOR_PREWARM_LOOKBACK_DAYS: "180"
       PFM_FACTOR_PREWARM_CONCURRENCY: "8"
+      # Cross-venue arb engine: start it WITH the app so the dashboard is
+      # "engine LIVE" from boot instead of falling back to arb_scanner.
+      # --mode og (REST) is stable; NO_DISCOVERY keeps the scan loop tight so
+      # dashboard_state.json stays fresher than the 180s staleness window; the
+      # Redis lock above elects a single worker to own the engine.
+      PFM_ARB_ENGINE_AUTOSTART: "1"
+      PFM_ARB_ENGINE_MODE: "og"
+      PFM_ARB_NO_DISCOVERY: "1"
+      PFM_ARB_POLL_INTERVAL: "60"
     ports:
       - "8000:8000"
     depends_on:
