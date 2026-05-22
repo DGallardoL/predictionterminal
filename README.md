@@ -37,7 +37,7 @@ backtested strategy in under five minutes.
 
 ```bash
 git clone https://github.com/DGallardoL/predictionterminal
-cd proyectofuentes
+cd predictionterminal
 docker-compose up -d
 open http://localhost:8080
 ```
