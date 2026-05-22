@@ -6596,6 +6596,20 @@
       max-height: 60px;
       overflow: hidden;
     }
+    /* Base height for the α Hub mini Plotly plots/sparklines so they render
+       OUTSIDE the .alphahub-card / [data-mode-pane="strategies"] scope too —
+       e.g. in the Terminal preview. Without an explicit height the
+       .js-plotly-plot element collapses to 0px and Plotly paints nothing. */
+    .ah-mini-plot, .ah-mini-spark {
+      height: 42px;
+      min-height: 42px;
+    }
+    .ah-mini-plot .plot-container, .ah-mini-spark .plot-container,
+    .ah-mini-plot .svg-container, .ah-mini-spark .svg-container,
+    .ah-mini-spark .js-plotly-plot {
+      height: 100% !important;
+      min-height: 42px !important;
+    }
 
     /* ─── Terminal detail · Analytics section (additive, clean palette) ─── */
     .term-analytics-section { margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06); }
