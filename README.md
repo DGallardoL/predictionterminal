@@ -20,7 +20,7 @@
 | Production deploy | [`DEPLOYMENT.md`](DEPLOYMENT.md) |
 | Feature walkthrough | [`docs/USER_GUIDE.md`](docs/USER_GUIDE.md) |
 | 15-minute demo script | [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md) |
-| Full audit (24 sub-agents) | [`AUDITORIA_2026-05-08.md`](AUDITORIA_2026-05-08.md) |
+| Documentation index | [`docs/README.md`](docs/README.md) |
 | Production checklist | [`docs/PRODUCTION_CHECKLIST.md`](docs/PRODUCTION_CHECKLIST.md) |
 | Release history | [`CHANGELOG.md`](CHANGELOG.md) |
 
