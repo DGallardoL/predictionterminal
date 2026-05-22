@@ -3,13 +3,13 @@ FROM nginx:1.27-alpine
 RUN apk add --no-cache curl
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY index.html /usr/share/nginx/html/index.html
-COPY config.js /usr/share/nginx/html/config.js
-COPY data/ /usr/share/nginx/html/data/
-# index.html links ~38 modular stylesheets and ~32 scripts from css/ and js/.
-# Without these the UI loads completely unstyled and non-functional (all 404).
-COPY css/ /usr/share/nginx/html/css/
-COPY js/ /usr/share/nginx/html/js/
+# Bundle the ENTIRE web/ tree into the served root. index.html pulls ~38 CSS +
+# ~32 JS modules from css/ and js/, plus root-level assets (plotly-theme.js,
+# cmdk.{js,css}, onboarding.js, realtime-tickers.js, *-premium.css), PWA icons,
+# manifest.json, components/, public/ and docs/. Copying everything (rather than
+# enumerating files) means a newly-referenced asset can never 404 in the image.
+# .dockerignore keeps the Dockerfile itself out of the served root.
+COPY . /usr/share/nginx/html/
 
 EXPOSE 80
 

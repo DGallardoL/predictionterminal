@@ -1,0 +1,5 @@
+# Keep the build/image plumbing out of the served web root. Everything else in
+# web/ (index.html, config.js, css/, js/, data/, components/, public/, icons,
+# manifest, embed-builder.html, docs/) IS served, so `COPY .` bundles it all.
+Dockerfile
+.dockerignore
