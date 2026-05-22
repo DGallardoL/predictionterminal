@@ -9,6 +9,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script src="config.js"></script>
+  <script>
+    // Resolve API-pointing nav/footer links (API · Schema · Status) against the
+    // runtime API base. These anchors are static <a href="/docs"> etc.; without
+    // this they hit the static-server origin and 404 whenever PFM_API_BASE is
+    // not "" (dev split -> :8000, docker-compose/prod -> /api). Static /docs/*.md
+    // links are deliberately left alone (no data-api-path marker).
+    (function () {
+      function resolveApiLinks() {
+        var base = (window.PFM_API_BASE != null) ? window.PFM_API_BASE : "";
+        document.querySelectorAll("a[data-api-path]").forEach(function (a) {
+          a.href = base + a.getAttribute("data-api-path");
+        });
+      }
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", resolveApiLinks);
+      } else {
+        resolveApiLinks();
+      }
+    })();
+  </script>
   <!-- TODO: add SRI hash via subresource integrity tool (e.g. srihash.org) -->
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8" crossorigin="anonymous"></script>
   <script src="plotly-theme.js"></script>
@@ -10703,9 +10723,9 @@
           <span class="pfm-cmdk-label">Search</span>
           <span class="pfm-cmdk-kbd"><kbd>⌘</kbd><kbd>K</kbd></span>
         </button>
-        <a href="/docs" target="_blank">API</a>
-        <a href="/openapi.json" target="_blank">Schema</a>
-        <a href="/health" target="_blank">Status</a>
+        <a href="/docs" data-api-path="/docs" target="_blank">API</a>
+        <a href="/openapi.json" data-api-path="/openapi.json" target="_blank">Schema</a>
+        <a href="/health" data-api-path="/health" target="_blank">Status</a>
         <button type="button" class="nav-share-btn" onclick="shareCurrentView()" title="Copy link to current view">↗ Share</button>
         <button type="button" id="pfm-bell-btn" class="pfm-nav-iconbtn" title="Notifications" aria-label="Notifications" onclick="window.pfmNotificationCenter && window.pfmNotificationCenter.toggle()">
           <span aria-hidden="true">Alerts</span>
@@ -14733,8 +14753,8 @@
     <footer>
       <span>Built with FastAPI · statsmodels · Plotly · Polymarket Gamma + CLOB</span>
       <span class="links">
-        <a href="/docs" target="_blank">API docs</a>
-        <a href="/openapi.json" target="_blank">OpenAPI</a>
+        <a href="/docs" data-api-path="/docs" target="_blank">API docs</a>
+        <a href="/openapi.json" data-api-path="/openapi.json" target="_blank">OpenAPI</a>
         <button type="button" class="pfm-replay-tour" onclick="window.pfmStartTour && window.pfmStartTour(true)">Replay tour</button>
       </span>
     </footer>
@@ -30746,7 +30766,7 @@
     Note: Educational tool. Not investment advice. Past performance does not predict future results.
     Generated <span id="ts-utc"></span> ·
     <a href="/docs/USER_GUIDE.md" target="_blank" rel="noopener">methodology</a> ·
-    <a href="/openapi.json" target="_blank" rel="noopener">API</a>
+    <a href="/openapi.json" data-api-path="/openapi.json" target="_blank" rel="noopener">API</a>
   </div>
 
   <!-- ─────────  Added behaviors: deep-link, share, Cmd-K, Graveyard, ts  ───────── -->
