@@ -2,14 +2,14 @@
 
 > **The Yahoo Finance of prediction markets, plus a quant strategies hub.**
 
-[![CI](https://github.com/{owner}/{repo}/actions/workflows/ci.yml/badge.svg)](https://github.com/{owner}/{repo}/actions/workflows/ci.yml)
+[![CI](https://github.com/DGallardoL/predictionterminal/actions/workflows/ci.yml/badge.svg)](https://github.com/DGallardoL/predictionterminal/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.12-blue)](#)
 [![Tests](https://img.shields.io/badge/tests-5668%2B%20passing-brightgreen)](#)
 [![Endpoints](https://img.shields.io/badge/endpoints-302%2B-blue)](#)
 [![Factors](https://img.shields.io/badge/factors-1260-orange)](#)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-<!-- CI badge: replace {owner}/{repo} with the actual GitHub path once the repo is public. -->
+<!-- CI badge points at DGallardoL/predictionterminal. -->
 
 
 [![Deploy to Fly.io](https://img.shields.io/badge/Deploy_to-Fly.io-blue)](https://fly.io/docs/launch/)
@@ -17,11 +17,12 @@
 
 | Read first | Where it lives |
 |---|---|
+| **Setup & run instructions** | [`INSTRUCCIONES.md`](INSTRUCCIONES.md) |
 | Production deploy | [`DEPLOYMENT.md`](DEPLOYMENT.md) |
 | Feature walkthrough | [`docs/USER_GUIDE.md`](docs/USER_GUIDE.md) |
-| 15-minute demo script | [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md) |
+| 15-minute demo script | [`docs/guides/DEMO_SCRIPT.md`](docs/guides/DEMO_SCRIPT.md) |
 | Documentation index | [`docs/README.md`](docs/README.md) |
-| Production checklist | [`docs/PRODUCTION_CHECKLIST.md`](docs/PRODUCTION_CHECKLIST.md) |
+| Production checklist | [`docs/operations/PRODUCTION_CHECKLIST.md`](docs/operations/PRODUCTION_CHECKLIST.md) |
 | Release history | [`CHANGELOG.md`](CHANGELOG.md) |
 
 ## Why this exists
@@ -35,10 +36,13 @@ backtested strategy in under five minutes.
 
 ## Try it locally (60 seconds)
 
+**Prerequisite:** Docker with Docker Compose (nothing else — no Python/Node).
+Full step-by-step + troubleshooting in [`INSTRUCCIONES.md`](INSTRUCCIONES.md).
+
 ```bash
 git clone https://github.com/DGallardoL/predictionterminal
 cd predictionterminal
-docker-compose up -d
+docker-compose up -d --build
 open http://localhost:8080
 ```
 
@@ -204,7 +208,7 @@ OOS, with realistic transaction costs and slippage):
 - **Bundle arbs — opportunistic only.** Σ(YES asks) < 1 events
   (Eurovision 2026, MLS Cup, Israel-strikes count). Run when surfaced.
 
-See [`docs/alpha-report-v18.md`](docs/alpha-report-v18.md) for the current
+See [`docs/alpha-report-v22.md`](docs/alpha-report-v22.md) for the current
 verdict and `GET /alpha-hub/graveyard` for the six retired strategies.
 
 ## Anti-alphas (failed validation — DO NOT deploy)
@@ -398,15 +402,15 @@ curl -s :8000/terminal/jumps/cluster | jq
 
 - [`docs/USER_GUIDE.md`](docs/USER_GUIDE.md) — end-user walkthrough of
   Regression / Strategies / Terminal modes
-- [`docs/API_REFERENCE.md`](docs/API_REFERENCE.md) — endpoint reference
+- [`docs/architecture/API_REFERENCE.md`](docs/architecture/API_REFERENCE.md) — endpoint reference
   (T44 deliverable)
-- [`docs/RUNBOOK.md`](docs/RUNBOOK.md) — operator runbook for the live
+- [`docs/operations/RUNBOOK.md`](docs/operations/RUNBOOK.md) — operator runbook for the live
   service (W11-49 deliverable)
 - [`docs/regression-methodology-improvements.md`](docs/regression-methodology-improvements.md)
   — HAC tuning, embargoed walk-forward, BH-FDR (T79 deliverable)
 - [`docs/binary-pricing-results.md`](docs/binary-pricing-results.md) —
   binary-contract pricing backtests and calibration (T83 deliverable)
-- [`docs/alpha-report-v18.md`](docs/alpha-report-v18.md) — current
+- [`docs/alpha-report-v22.md`](docs/alpha-report-v22.md) — current
   verdicts on deployable / paper-only / retired strategies (W11-48)
 - [`docs/ADRs/`](docs/ADRs/) — architecture decision records (9 + 4
   wave-11 additions on multi-session coordination, cache tiering, arb

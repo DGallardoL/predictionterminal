@@ -1,6 +1,6 @@
 # Deployment guide
 
-<!-- NOTE: see docs/DEPLOYMENT.md (canonical). This root-level copy is kept for
+<!-- NOTE: see docs/operations/DEPLOYMENT.md (canonical). This root-level copy is kept for
 discoverability from the repo home; the in-docs version is the source of truth
 when the two drift. -->
 

@@ -178,7 +178,7 @@ Before declaring "done," verify:
 - [ ] `.github/workflows/ci.yml` has all three jobs and looks correct
 - [ ] README has: badges section, quickstart, example curls, link to docs/
 - [ ] All 6–7 ADRs exist and are non-trivial (≥150 words each)
-- [ ] `docs/quants.md` has the full math with LaTeX
+- [ ] `docs/quant/quants.md` has the full math with LaTeX
 - [ ] `docs/USER_GUIDE.md` and the latest `docs/alpha-report-vN.md` are current
 - [ ] `factors.yml` totals match the "Scale" subsection (1,260 factors)
 
