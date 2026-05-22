@@ -26,12 +26,18 @@ POLYMARKET_GAMMA_URL = "https://gamma-api.polymarket.com"
 POLYMARKET_CLOB_URL = "https://clob.polymarket.com"
 PFM_ALERTS_DRY_RUN = "1"
 
-# Performance toggles — see api/src/pfm/main.py for the full list. Defaults
-# below match a 2-vCPU shared machine; bump TOP_N if you bump VM size.
-GUNICORN_WORKERS = "4"
+# Performance toggles — see api/src/pfm/main.py for the full list.
+# Tuned for the 1 GB / shared-2vCPU trial machine:
+#   * GUNICORN_WORKERS=1 — 4 workers each load pandas/statsmodels/312 modules
+#     and OOM/thrash on 1 GB. One worker fits, keeps a single consistent
+#     in-process prewarm cache (no Redis needed), and lets the cross-venue arb
+#     engine autostart (its no-Redis path only elects a leader when WORKERS=1).
+#   * Lighter prewarm so first-useful is fast and boot doesn't saturate the CPU
+#     or hammer Polymarket. Bump these (and memory_mb) if you scale the VM up.
+GUNICORN_WORKERS = "1"
 PFM_FACTOR_PREWARM_ENABLED = "1"
-PFM_FACTOR_PREWARM_TOP_N = "500"
-PFM_FACTOR_PREWARM_CONCURRENCY = "20"
+PFM_FACTOR_PREWARM_TOP_N = "150"
+PFM_FACTOR_PREWARM_CONCURRENCY = "8"
 PFM_FACTOR_PREWARM_LOOKBACK_DAYS = "180"
 PFM_GAMMA_PRICE_TTL_S = "300"
 PFM_GAMMA_PRICE_REFRESH_S = "60"
