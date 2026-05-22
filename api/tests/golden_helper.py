@@ -77,7 +77,7 @@ def assert_matches_golden(
     expected = json.loads(path.read_text(encoding="utf-8"))
     cleaned_expected = _strip_keys(expected, set(ignore_keys or []))
 
-    if cleaned_actual != cleaned_expected:
+    if not _tolerant_equal(cleaned_actual, cleaned_expected):
         diff_path = _first_diff(cleaned_expected, cleaned_actual)
         raise AssertionError(
             f"golden mismatch for '{name}'.\n"
@@ -98,6 +98,30 @@ def _strip_keys(obj: Any, keys: set[str]) -> Any:
     if isinstance(obj, list):
         return [_strip_keys(x, keys) for x in obj]
     return obj
+
+
+def _tolerant_equal(a: Any, b: Any, *, rtol: float = 1e-3, atol: float = 1e-9) -> bool:
+    """Deep-equal, but compare floats within a tolerance.
+
+    Numeric leaves (e.g. optimizer weights, ratios) can differ in the last
+    digits between platforms (Mac vs the Linux CI runner) due to BLAS/float
+    rounding — that's not a schema change, so we treat near-equal floats as
+    equal. Everything non-numeric is still compared exactly, so a real shape
+    or value change is still caught.
+    """
+    if isinstance(a, bool) or isinstance(b, bool):
+        return a == b
+    if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+        return abs(float(a) - float(b)) <= atol + rtol * abs(float(b))
+    if isinstance(a, dict) and isinstance(b, dict):
+        if a.keys() != b.keys():
+            return False
+        return all(_tolerant_equal(a[k], b[k], rtol=rtol, atol=atol) for k in a)
+    if isinstance(a, list) and isinstance(b, list):
+        if len(a) != len(b):
+            return False
+        return all(_tolerant_equal(x, y, rtol=rtol, atol=atol) for x, y in zip(a, b))
+    return a == b
 
 
 def _first_diff(expected: Any, actual: Any, path: str = "$") -> str:

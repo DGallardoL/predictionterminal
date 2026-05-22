@@ -66,10 +66,11 @@ jobs:
   test:
     name: Tests (pytest + coverage)
     runs-on: ubuntu-latest
-    # The full ~6k-test suite takes ~30-33 min on GitHub's 2-core runners
-    # (vs ~9 min locally). 30 min was too tight and the job hit the timeout
-    # and got cancelled; 55 gives comfortable margin.
-    timeout-minutes: 55
+    # The full ~6k-test suite ran ~30-33 min sequentially on GitHub's runners.
+    # We now parallelise with pytest-xdist (-n auto) + the faster sysmon
+    # coverage core (Python 3.12), which brings it down to ~10-12 min. 25 min
+    # leaves comfortable margin if a runner is slow or single-core.
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -93,8 +94,16 @@ jobs:
           # Perf benchmarks pin wall-clock budgets that flake on shared CI
           # runners (slower than dev machines); skip them in CI.
           PFM_SKIP_PERF_BENCH: "1"
+          # Use CPython 3.12's native sys.monitoring backend for coverage —
+          # far less per-line overhead than the C trace function.
+          COVERAGE_CORE: sysmon
         run: |
-          pytest --cov=pfm --cov-report=term-missing --cov-report=xml --cov-fail-under=70 -q
+          # -n auto: shard across all runner cores (pytest-xdist).
+          # --dist loadscope: keep tests from the same module on one worker so
+          # the few that touch shared state (arb dashboard_state, coordination
+          # files) don't race across workers.
+          pytest -n auto --dist loadscope \
+            --cov=pfm --cov-report=term-missing --cov-report=xml --cov-fail-under=70 -q
       - name: Upload coverage XML
         if: always()
         uses: actions/upload-artifact@v4
