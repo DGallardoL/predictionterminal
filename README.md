@@ -2,14 +2,17 @@
 
 > **The Yahoo Finance of prediction markets, plus a quant strategies hub.**
 
-[![CI](https://github.com/DGallardoL/predictionterminal/actions/workflows/ci.yml/badge.svg)](https://github.com/DGallardoL/predictionterminal/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.12-blue)](#)
-[![Tests](https://img.shields.io/badge/tests-5668%2B%20passing-brightgreen)](#)
+[![Tests](https://img.shields.io/badge/tests-5668%2B%20passing-brightgreen)](.github/workflows/ci.yml)
+[![CI](https://img.shields.io/badge/CI-on--demand%20%2F%20weekly-informational)](.github/workflows/ci.yml)
 [![Endpoints](https://img.shields.io/badge/endpoints-302%2B-blue)](#)
 [![Factors](https://img.shields.io/badge/factors-1260-orange)](#)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-<!-- CI badge points at DGallardoL/predictionterminal. -->
+<!-- CI (.github/workflows/ci.yml) is configured but its per-push trigger is
+     disabled: the full suite takes ~30 min, so it runs on a weekly schedule
+     and on-demand (workflow_dispatch / `gh workflow run CI`) instead of on
+     every commit. Run the tests locally with `cd api && pytest`. -->
 
 
 [![Deploy to Fly.io](https://img.shields.io/badge/Deploy_to-Fly.io-blue)](https://fly.io/docs/launch/)
@@ -280,7 +283,7 @@ in the UI.
 ---
 ### Status badges (shields.io)
 
-[![Build](https://github.com/DGallardoL/predictionterminal/actions/workflows/ci.yml/badge.svg)](https://github.com/DGallardoL/predictionterminal/actions/workflows/ci.yml)
+[![CI](https://img.shields.io/badge/CI-on--demand%20%2F%20weekly-informational.svg)](.github/workflows/ci.yml)
 [![Coverage](https://img.shields.io/badge/coverage-72%25-brightgreen.svg)](#)
 [![OpenAPI endpoints](https://img.shields.io/badge/openapi-302%2B-blue.svg)](#)
 [![Factors](https://img.shields.io/badge/factors-1260-orange.svg)](#)
